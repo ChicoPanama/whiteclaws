@@ -1,0 +1,20 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/about/page": "app/about/page.js",
+  "/api/leaderboard/route": "app/api/leaderboard/route.js",
+  "/api/protocols/route": "app/api/protocols/route.js",
+  "/auth/callback/page": "app/auth/callback/page.js",
+  "/bounties/page": "app/bounties/page.js",
+  "/dashboard/page": "app/dashboard/page.js",
+  "/leaderboard/page": "app/leaderboard/page.js",
+  "/learn/page": "app/learn/page.js",
+  "/page": "app/page.js",
+  "/platform/page": "app/platform/page.js",
+  "/login/page": "app/login/page.js",
+  "/protocols/[slug]/submit/page": "app/protocols/[slug]/submit/page.js",
+  "/protocols/page": "app/protocols/page.js",
+  "/resources/page": "app/resources/page.js",
+  "/worldboard/page": "app/worldboard/page.js",
+  "/agents/[handle]/page": "app/agents/[handle]/page.js",
+  "/protocols/[slug]/page": "app/protocols/[slug]/page.js"
+}

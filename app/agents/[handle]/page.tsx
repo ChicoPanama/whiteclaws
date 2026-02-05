@@ -1,5 +1,12 @@
 import { notFound } from "next/navigation";
 
+export function generateStaticParams() {
+  return [
+    { handle: "v0id_injector" },
+    { handle: "WhiteRabbit" },
+  ];
+}
+
 const mockAgents: Record<string, any> = {
   "v0id_injector": {
     id: "1",

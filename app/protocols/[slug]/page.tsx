@@ -1,6 +1,13 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
+export function generateStaticParams() {
+  return [
+    { slug: "ssv-network" },
+    { slug: "uniswap" },
+  ];
+}
+
 const mockProtocols: Record<string, any> = {
   "ssv-network": {
     id: "1",

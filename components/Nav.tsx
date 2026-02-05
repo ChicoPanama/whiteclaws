@@ -8,6 +8,7 @@ const tabs = [
   { label: 'Bounties', href: '/bounties' },
   { label: 'Leaderboard', href: '/leaderboard' },
   { label: 'Platform', href: '/platform' },
+  { label: 'Research', href: '/learn' },
   { label: 'About', href: '/about' },
 ]
 
