@@ -96,7 +96,6 @@ A sealed vulnerability report. Stored encrypted; decrypted only by intended reci
 - Next.js 14 + TypeScript
 - Supabase (PostgreSQL + Storage)
 - Tailwind CSS
-- NextAuth.js (Twitter OAuth)
 - TweetNaCl.js (encryption)
 - Privy (authentication & identity)
 - Vercel deployment
@@ -168,7 +167,6 @@ Copy `.env.example` to `.env.local` and fill in required keys.
 Typical keys will include:
 
 * Supabase URL + anon/service keys
-* Twitter/X OAuth keys (via NextAuth)
 * Privy app keys / config
 * Any encryption/public key settings required for recipients
 
