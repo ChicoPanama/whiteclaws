@@ -1,0 +1,38 @@
+{
+  "slug": "helios-finance",
+  "name": "Helios Finance",
+  "description": "Perpetual trading protocol",
+  "category": "DeFi Trading",
+  "chains": [
+    "arbitrum"
+  ],
+  "bounty": {
+    "max": 100000,
+    "min": 500,
+    "kyc_required": true,
+    "payout_token": "USDC"
+  },
+  "severity_payouts": {
+    "critical": {
+      "min": 50000,
+      "max": 100000,
+      "description": "Direct theft of user funds"
+    },
+    "high": {
+      "min": 5000,
+      "max": 10000,
+      "description": "Temporary freezing or manipulation"
+    },
+    "medium": {
+      "min": 500,
+      "max": 1000,
+      "description": "Griefing or temporary DoS"
+    },
+    "low": {
+      "min": 100,
+      "max": 500,
+      "description": "Informational or gas optimization"
+    }
+  },
+  "source": "immunefi"
+}

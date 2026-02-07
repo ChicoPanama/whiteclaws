@@ -1,0 +1,95 @@
+{
+  "slug": "example-protocol",
+  "name": "Example Protocol",
+  "description": "Short description of what this protocol does",
+  "url": "https://immunefi.com/bug-bounty/example-protocol",
+  "category": "DeFi",
+  
+  "bounty": {
+    "max_bounty": 1000000,
+    "min_bounty": 500,
+    "kyc_required": true,
+    "percentage_tvl": {
+      "critical": "10%",
+      "high": "5%"
+    }
+  },
+
+  "severity_payouts": {
+    "critical": {
+      "min": 100000,
+      "max": 1000000,
+      "description": "Direct theft of any user funds, draining liquidity pools, contract destruction",
+      "examples": [
+        "Theft of user funds",
+        "Freezing/burning of funds",
+        "Unauthorized minting",
+        "Governance manipulation"
+      ]
+    },
+    "high": {
+      "min": 10000,
+      "max": 100000,
+      "description": "Code significant impact affecting protocol availability or user funds",
+      "examples": [
+        "Temporary freezing of funds",
+        "Smart contract unable to operate",
+        "Price oracle manipulation",
+        "Flash loan attacks"
+      ]
+    },
+    "medium": {
+      "min": 1000,
+      "max": 10000,
+      "description": "Localized impact, single user or temporary denial of service",
+      "examples": [
+        "Gas griefing attacks",
+        "Block stuffing",
+        "Temporary DoS"
+      ]
+    },
+    "low": {
+      "min": 100,
+      "max": 1000,
+      "description": "Low impact, non-exploitable issues, information disclosure",
+      "examples": [
+        "Gas optimization",
+        "Code style issues",
+        "Informational findings"
+      ]
+    }
+  },
+
+  "scope": {
+    "in_scope": [],
+    "out_of_scope": [],
+    "contracts": []
+  },
+
+  "assets": [],
+
+  "program_rules": {
+    "eligibility": [
+      "KYC required for payouts over $10,000",
+      "No disclosure before fix",
+      "No public exploits",
+      "Report to Immunefi first"
+    ],
+    "format": "Standard Immunefi report format required",
+    "response_time": "Initial response within 24 hours"
+  },
+
+  "known_issues": [],
+
+  "audit_history": [],
+
+  "chains_supported": [],
+
+  "tvl": {
+    "amount": 0,
+    "verified": false
+  },
+
+  "updated_at": "2026-02-07T22:00:00Z",
+  "source": "immunefi"
+}

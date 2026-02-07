@@ -1,0 +1,38 @@
+{
+  "slug": "halogen",
+  "name": "Halogen",
+  "description": "Liquid staking derivatives",
+  "category": "DeFi Staking",
+  "chains": [
+    "ethereum"
+  ],
+  "bounty": {
+    "max": 50000,
+    "min": 500,
+    "kyc_required": true,
+    "payout_token": "USDC"
+  },
+  "severity_payouts": {
+    "critical": {
+      "min": 25000,
+      "max": 50000,
+      "description": "Direct theft of user funds"
+    },
+    "high": {
+      "min": 2500,
+      "max": 5000,
+      "description": "Temporary freezing or manipulation"
+    },
+    "medium": {
+      "min": 500,
+      "max": 500,
+      "description": "Griefing or temporary DoS"
+    },
+    "low": {
+      "min": 100,
+      "max": 500,
+      "description": "Informational or gas optimization"
+    }
+  },
+  "source": "immunefi"
+}

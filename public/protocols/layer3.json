@@ -1,0 +1,41 @@
+{
+  "slug": "layer3",
+  "name": "Layer3.xyz",
+  "description": "Web3 distribution and incentivization protocol",
+  "category": "Infrastructure",
+  "chains": [
+    "ethereum",
+    "base",
+    "arbitrum",
+    "optimism"
+  ],
+  "bounty": {
+    "max": 250000,
+    "min": 500,
+    "kyc_required": true,
+    "payout_token": "USDC"
+  },
+  "severity_payouts": {
+    "critical": {
+      "min": 125000,
+      "max": 250000,
+      "description": "Direct theft of user funds"
+    },
+    "high": {
+      "min": 12500,
+      "max": 25000,
+      "description": "Temporary freezing or manipulation"
+    },
+    "medium": {
+      "min": 500,
+      "max": 2500,
+      "description": "Griefing or temporary DoS"
+    },
+    "low": {
+      "min": 100,
+      "max": 500,
+      "description": "Informational or gas optimization"
+    }
+  },
+  "source": "immunefi"
+}

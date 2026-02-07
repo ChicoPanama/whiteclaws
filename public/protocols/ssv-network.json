@@ -1,0 +1,38 @@
+{
+  "slug": "ssv-network",
+  "name": "SSV Network",
+  "description": "Decentralized staking infrastructure for Ethereum validators",
+  "category": "Staking Infrastructure",
+  "chains": [
+    "ethereum"
+  ],
+  "bounty": {
+    "max": 1000000,
+    "min": 500,
+    "kyc_required": true,
+    "payout_token": "USDC"
+  },
+  "severity_payouts": {
+    "critical": {
+      "min": 500000,
+      "max": 1000000,
+      "description": "Direct theft of user funds"
+    },
+    "high": {
+      "min": 50000,
+      "max": 100000,
+      "description": "Temporary freezing or manipulation"
+    },
+    "medium": {
+      "min": 500,
+      "max": 10000,
+      "description": "Griefing or temporary DoS"
+    },
+    "low": {
+      "min": 100,
+      "max": 500,
+      "description": "Informational or gas optimization"
+    }
+  },
+  "source": "immunefi"
+}
