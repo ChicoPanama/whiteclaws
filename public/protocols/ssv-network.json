@@ -34,5 +34,68 @@
       "description": "Informational or gas optimization"
     }
   },
-  "source": "immunefi"
+  "source": "immunefi",
+  "contracts": [
+    {
+      "address": "0xDD9BC35aE942eF0cFa76930954a156B3fF30a4E1",
+      "name": "SSVNetwork",
+      "network": "ethereum",
+      "type": "Main Protocol"
+    },
+    {
+      "address": "0x9D65fF81a3c488d585bBfb0Bfe3c7707c7917f54",
+      "name": "SSVToken",
+      "network": "ethereum",
+      "type": "ERC-20 Token"
+    },
+    {
+      "address": "0xA87b94c596B23CEfe1Ce8d8B8a3c7F8f31fBA9c5",
+      "name": "OperatorLib",
+      "network": "ethereum",
+      "type": "Library"
+    }
+  ],
+  "o_scope": [],
+  "out_of_scope": [
+    "Third-party integrations not officially supported",
+    "Frontrunning that is economically irrational",
+    "Best practices without security impact",
+    "Precision loss in small fee calculations (design choice)",
+    "RegisterValidator gas costs",
+    "Operator self-delegation edge cases",
+    "Testnet contracts (Goerli, Sepolia, Mumbai)",
+    "Previously disclosed vulnerabilities",
+    "Frontend/UI bugs without contract impact",
+    "Issues in audit reports without fix"
+  ],
+  "scope": {
+    "in_scope": [
+      "Smart contracts in official repositories",
+      "Deployed contracts on supported chains",
+      "Bridging and cross-chain mechanisms",
+      "Governance and admin functionality"
+    ]
+  },
+  "scope_details": {
+    "in_scope": [
+      "Smart contracts in official repositories",
+      "Deployed contracts on supported chains",
+      "Bridging and cross-chain mechanisms",
+      "Governance and admin functionality"
+    ],
+    "out_of_scope": [
+      "Third-party integrations not officially supported",
+      "Frontrunning that is economically irrational",
+      "Best practices without security impact",
+      "Precision loss in small fee calculations (design choice)",
+      "RegisterValidator gas costs",
+      "Operator self-delegation edge cases",
+      "Testnet contracts (Goerli, Sepolia, Mumbai)",
+      "Previously disclosed vulnerabilities",
+      "Frontend/UI bugs without contract impact",
+      "Issues in audit reports without fix"
+    ],
+    "contract_count": 3,
+    "verified": true
+  }
 }

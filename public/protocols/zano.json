@@ -1,31 +1,31 @@
 {
-  "slug": "plume-network",
-  "name": "Plume Network",
-  "description": "Real World Asset tokenization platform",
-  "category": "RWA Tokenization",
+  "slug": "zano",
+  "name": "Zano",
+  "description": "Bounty program for Zano",
+  "category": "Privacy",
   "chains": [
-    "ethereum"
+    "zano"
   ],
   "bounty": {
-    "max": 500000,
+    "max": 50000,
     "min": 500,
-    "kyc_required": true,
+    "kyc_required": false,
     "payout_token": "USDC"
   },
   "severity_payouts": {
     "critical": {
-      "min": 250000,
-      "max": 500000,
-      "description": "Direct theft of user funds"
-    },
-    "high": {
       "min": 25000,
       "max": 50000,
-      "description": "Temporary freezing or manipulation"
+      "description": "Direct theft of user funds, contract destruction"
+    },
+    "high": {
+      "min": 2500,
+      "max": 5000,
+      "description": "Temporary freezing, governance manipulation"
     },
     "medium": {
       "min": 500,
-      "max": 5000,
+      "max": 500,
       "description": "Griefing or temporary DoS"
     },
     "low": {
@@ -34,8 +34,19 @@
       "description": "Informational or gas optimization"
     }
   },
-  "source": "immunefi",
+  "scope": {
+    "in_scope": [
+      "Smart contracts",
+      "Official repositories"
+    ],
+    "out_of_scope": [
+      "Third-party integrations",
+      "Testnets",
+      "Frontend only"
+    ]
+  },
   "contracts": [],
+  "source": "immunefi",
   "o_scope": [],
   "out_of_scope": [
     "Third-party integrations not officially supported",
@@ -46,20 +57,10 @@
     "Frontend/UI bugs without contract impact",
     "Issues in audit reports without fix"
   ],
-  "scope": {
-    "in_scope": [
-      "Smart contracts in official repositories",
-      "Deployed contracts on supported chains",
-      "Bridging and cross-chain mechanisms",
-      "Governance and admin functionality"
-    ]
-  },
   "scope_details": {
     "in_scope": [
-      "Smart contracts in official repositories",
-      "Deployed contracts on supported chains",
-      "Bridging and cross-chain mechanisms",
-      "Governance and admin functionality"
+      "Smart contracts",
+      "Official repositories"
     ],
     "out_of_scope": [
       "Third-party integrations not officially supported",

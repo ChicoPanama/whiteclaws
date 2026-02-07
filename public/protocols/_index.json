@@ -1,46 +1,86 @@
 {
   "protocols": [
     {
-      "slug": "ssv-network",
-      "name": "SSV Network",
-      "max_bounty": 1000000
+      "slug": "alchemix"
     },
     {
-      "slug": "layer3",
-      "name": "Layer3.xyz",
-      "max_bounty": 250000
+      "slug": "bitflow"
     },
     {
-      "slug": "cc-protocol",
-      "name": "CC Protocol",
-      "max_bounty": 100000
+      "slug": "cc-protocol"
     },
     {
-      "slug": "plume-network",
-      "name": "Plume Network",
-      "max_bounty": 500000
+      "slug": "dex-protocol"
     },
     {
-      "slug": "plaza-finance",
-      "name": "Plaza Finance",
-      "max_bounty": 100000
+      "slug": "ens"
     },
     {
-      "slug": "hoenn",
-      "name": "Hoenn",
-      "max_bounty": 50000
+      "slug": "ethena"
     },
     {
-      "slug": "helios-finance",
-      "name": "Helios Finance",
-      "max_bounty": 100000
+      "slug": "halogen"
     },
     {
-      "slug": "halogen",
-      "name": "Halogen",
-      "max_bounty": 50000
+      "slug": "hedera"
+    },
+    {
+      "slug": "helios-finance"
+    },
+    {
+      "slug": "hoenn"
+    },
+    {
+      "slug": "immunefi"
+    },
+    {
+      "slug": "infinex"
+    },
+    {
+      "slug": "intmax"
+    },
+    {
+      "slug": "inverse-finance"
+    },
+    {
+      "slug": "layer3"
+    },
+    {
+      "slug": "lombard-finance"
+    },
+    {
+      "slug": "origin-protocol"
+    },
+    {
+      "slug": "pinto"
+    },
+    {
+      "slug": "plaza-finance"
+    },
+    {
+      "slug": "plume-network"
+    },
+    {
+      "slug": "ref-finance"
+    },
+    {
+      "slug": "scroll"
+    },
+    {
+      "slug": "ssv-network"
+    },
+    {
+      "slug": "stackingdao"
+    },
+    {
+      "slug": "xion"
+    },
+    {
+      "slug": "zano"
+    },
+    {
+      "slug": "zest-protocol-v2"
     }
   ],
-  "total_max_bounty": 2150000,
-  "count": 8
+  "count": 27
 }

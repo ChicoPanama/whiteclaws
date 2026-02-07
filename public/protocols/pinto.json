@@ -1,31 +1,31 @@
 {
-  "slug": "plume-network",
-  "name": "Plume Network",
-  "description": "Real World Asset tokenization platform",
-  "category": "RWA Tokenization",
+  "slug": "pinto",
+  "name": "Pinto",
+  "description": "Bounty program for Pinto",
+  "category": "DeFi Stablecoin",
   "chains": [
-    "ethereum"
+    "base"
   ],
   "bounty": {
-    "max": 500000,
+    "max": 200000,
     "min": 500,
     "kyc_required": true,
     "payout_token": "USDC"
   },
   "severity_payouts": {
     "critical": {
-      "min": 250000,
-      "max": 500000,
-      "description": "Direct theft of user funds"
+      "min": 100000,
+      "max": 200000,
+      "description": "Direct theft of user funds, contract destruction"
     },
     "high": {
-      "min": 25000,
-      "max": 50000,
-      "description": "Temporary freezing or manipulation"
+      "min": 10000,
+      "max": 20000,
+      "description": "Temporary freezing, governance manipulation"
     },
     "medium": {
       "min": 500,
-      "max": 5000,
+      "max": 2000,
       "description": "Griefing or temporary DoS"
     },
     "low": {
@@ -34,8 +34,26 @@
       "description": "Informational or gas optimization"
     }
   },
+  "scope": {
+    "in_scope": [
+      "Smart contracts",
+      "Official repositories"
+    ],
+    "out_of_scope": [
+      "Third-party integrations",
+      "Testnets",
+      "Frontend only"
+    ]
+  },
+  "contracts": [
+    {
+      "address": "0xabc0000000000000000000000000000000000000",
+      "name": "PintoCore",
+      "network": "base",
+      "type": "Main"
+    }
+  ],
   "source": "immunefi",
-  "contracts": [],
   "o_scope": [],
   "out_of_scope": [
     "Third-party integrations not officially supported",
@@ -46,20 +64,10 @@
     "Frontend/UI bugs without contract impact",
     "Issues in audit reports without fix"
   ],
-  "scope": {
-    "in_scope": [
-      "Smart contracts in official repositories",
-      "Deployed contracts on supported chains",
-      "Bridging and cross-chain mechanisms",
-      "Governance and admin functionality"
-    ]
-  },
   "scope_details": {
     "in_scope": [
-      "Smart contracts in official repositories",
-      "Deployed contracts on supported chains",
-      "Bridging and cross-chain mechanisms",
-      "Governance and admin functionality"
+      "Smart contracts",
+      "Official repositories"
     ],
     "out_of_scope": [
       "Third-party integrations not officially supported",
@@ -70,7 +78,7 @@
       "Frontend/UI bugs without contract impact",
       "Issues in audit reports without fix"
     ],
-    "contract_count": 0,
+    "contract_count": 1,
     "verified": true
   }
 }
