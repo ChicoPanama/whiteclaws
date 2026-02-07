@@ -20,6 +20,36 @@ A decentralized security research platform connecting protocols with security re
 - Privy (Authentication & Identity)
 - Vercel Deployment
 
+## Getting Started
+
+### 1) Install dependencies
+```bash
+npm install
+```
+
+### 2) Configure environment variables
+Create a `.env.local` file in the project root with the following values:
+```
+NEXT_PUBLIC_SUPABASE_URL=
+NEXT_PUBLIC_SUPABASE_ANON_KEY=
+NEXT_PUBLIC_PRIVY_APP_ID=
+NEXT_PUBLIC_PROTOCOL_WALLET=
+PRIVY_APP_ID=
+PRIVY_APP_SECRET=
+```
+
+### 3) Set up Supabase
+- Apply migrations in `supabase/migrations/`.
+- (Optional) Seed data with `supabase/seed.sql`.
+
+### 4) Run the app
+```bash
+npm run dev
+```
+
+## Scripts
+- `npm run immunefi:sync` — pulls and normalizes bounty data via the Immunefi sync script.
+
 ## Project Structure
 ```
 app/                    # Next.js App Router
@@ -37,3 +67,7 @@ lib/                    # Utilities & database
 ├── crypto.ts           # TweetNaCl encryption
 └── privy.ts            # Privy integration
 ```
+
+## Notes
+- The UI checks for Supabase environment variables before rendering data-driven pages.
+- Server-side Privy auth uses `PRIVY_APP_ID` and `PRIVY_APP_SECRET`.
