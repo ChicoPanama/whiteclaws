@@ -1,4 +1,11 @@
 import Link from 'next/link'
+import { createClient } from '@/lib/supabase/server'
+
+export const dynamic = 'force-dynamic'
+
+const hasSupabaseConfig =
+  !!process.env.NEXT_PUBLIC_SUPABASE_URL &&
+  !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
 
 const mockProtocols = [
   {
@@ -21,13 +28,41 @@ const mockProtocols = [
   },
 ]
 
-export default function ProtocolsPage() {
+async function getProtocols() {
+  if (!hasSupabaseConfig) {
+    return mockProtocols
+  }
+
+  const supabase = createClient()
+  const { data, error } = await supabase
+    .from('protocols')
+    .select('id,name,slug,description,chains,max_bounty')
+    .order('name')
+
+  if (error) {
+    throw error
+  }
+
+  return (data ?? []).map((protocol) => ({
+    id: protocol.id,
+    name: protocol.name,
+    slug: protocol.slug,
+    description: protocol.description ?? 'No description provided.',
+    chain: protocol.chains?.[0] ?? 'Multi-chain',
+    bountyPool: protocol.max_bounty ?? 0,
+    severity: 'critical',
+  }))
+}
+
+export default async function ProtocolsPage() {
+  const protocols = await getProtocols()
+
   return (
     <div className="min-h-screen bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <h1 className="text-3xl font-bold text-white mb-8">Protocols</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {mockProtocols.map((protocol) => (
+          {protocols.map((protocol) => (
             <Link
               key={protocol.id}
               href={`/protocols/${protocol.slug}`}

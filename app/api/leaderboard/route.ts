@@ -1,7 +1,12 @@
 import { NextRequest, NextResponse } from "next/server";
+import { createClient } from "@/lib/supabase/server";
 
 // Force dynamic rendering for API route
 export const dynamic = 'force-dynamic';
+
+const hasSupabaseConfig =
+  !!process.env.NEXT_PUBLIC_SUPABASE_URL &&
+  !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
 // Mock data - replace with database queries
 const mockLeaderboard = [
@@ -76,13 +81,59 @@ export async function GET(request: NextRequest) {
   const period = searchParams.get("period") || "all"; // all, month, week
 
   try {
-    // In production, fetch from database with proper sorting
-    const leaderboard = mockLeaderboard.slice(0, limit);
+    if (!hasSupabaseConfig) {
+      // In production, fetch from database with proper sorting
+      const leaderboard = mockLeaderboard.slice(0, limit);
+
+      return NextResponse.json({
+        leaderboard,
+        period,
+        total: mockLeaderboard.length,
+      });
+    }
+
+    const supabase = createClient();
+    const { data, error } = await supabase
+      .from("agent_rankings")
+      .select(
+        `agent_id, points, rank, total_submissions, total_bounty_amount, users (id, handle, display_name, avatar_url, twitter_id, wallet_address, reputation_score)`
+      )
+      .order("points", { ascending: false })
+      .limit(limit);
+
+    if (error) {
+      throw error;
+    }
+
+    const leaderboard = (data ?? []).map((entry, index) => {
+      const user = Array.isArray(entry.users) ? entry.users[0] : entry.users;
+      return {
+        rank: entry.rank ?? index + 1,
+        agent: {
+          id: user?.id ?? entry.agent_id,
+          handle: user?.handle ?? "unknown",
+          display_name: user?.display_name ?? null,
+          bio: null,
+          avatar_url: user?.avatar_url ?? null,
+          twitter_handle: user?.twitter_id ?? null,
+          wallet_address: user?.wallet_address ?? null,
+          reputation_score: user?.reputation_score ?? entry.points ?? 0,
+          submissions_count: entry.total_submissions ?? 0,
+          rewards_earned: entry.total_bounty_amount ?? 0,
+          is_verified: false,
+          created_at: null,
+          updated_at: null,
+        },
+        score: entry.points ?? 0,
+        submissions: entry.total_submissions ?? 0,
+        rewards: entry.total_bounty_amount ?? 0,
+      };
+    });
 
     return NextResponse.json({
       leaderboard,
       period,
-      total: mockLeaderboard.length,
+      total: leaderboard.length,
     });
   } catch (error) {
     console.error("Error fetching leaderboard:", error);
