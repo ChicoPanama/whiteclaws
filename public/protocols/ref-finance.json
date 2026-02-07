@@ -36,42 +36,27 @@
   },
   "scope": {
     "in_scope": [
-      "Smart contracts",
-      "Official repositories"
+      "DEX",
+      "AMM",
+      "Farms"
     ],
     "out_of_scope": [
-      "Third-party integrations",
-      "Testnets",
-      "Frontend only"
+      "Near node"
     ]
   },
-  "contracts": [],
-  "source": "immunefi",
-  "o_scope": [],
-  "out_of_scope": [
-    "Third-party integrations not officially supported",
-    "Frontrunning that is economically irrational",
-    "Best practices without security impact",
-    "Testnet contracts (Goerli, Sepolia, Mumbai)",
-    "Previously disclosed vulnerabilities",
-    "Frontend/UI bugs without contract impact",
-    "Issues in audit reports without fix"
+  "contracts": [
+    {
+      "address": "factory.ref-finance.near",
+      "network": "near",
+      "name": "RefFactory",
+      "type": "DEX"
+    },
+    {
+      "address": "v2.ref-finance.near",
+      "network": "near",
+      "name": "RefExchange",
+      "type": "DEX"
+    }
   ],
-  "scope_details": {
-    "in_scope": [
-      "Smart contracts",
-      "Official repositories"
-    ],
-    "out_of_scope": [
-      "Third-party integrations not officially supported",
-      "Frontrunning that is economically irrational",
-      "Best practices without security impact",
-      "Testnet contracts (Goerli, Sepolia, Mumbai)",
-      "Previously disclosed vulnerabilities",
-      "Frontend/UI bugs without contract impact",
-      "Issues in audit reports without fix"
-    ],
-    "contract_count": 0,
-    "verified": true
-  }
+  "source": "immunefi"
 }

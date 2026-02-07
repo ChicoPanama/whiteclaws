@@ -36,42 +36,31 @@
   },
   "scope": {
     "in_scope": [
-      "Smart contracts",
-      "Official repositories"
+      "ENS registry",
+      "Name registrars",
+      "Resolvers",
+      "DNSSEC oracle"
     ],
     "out_of_scope": [
-      "Third-party integrations",
-      "Testnets",
-      "Frontend only"
+      "Frontend",
+      "Metadata service",
+      "DNS integration"
     ]
   },
-  "contracts": [],
-  "source": "immunefi",
-  "o_scope": [],
-  "out_of_scope": [
-    "Third-party integrations not officially supported",
-    "Frontrunning that is economically irrational",
-    "Best practices without security impact",
-    "Testnet contracts (Goerli, Sepolia, Mumbai)",
-    "Previously disclosed vulnerabilities",
-    "Frontend/UI bugs without contract impact",
-    "Issues in audit reports without fix"
+  "contracts": [
+    {
+      "address": "0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e",
+      "network": "ethereum",
+      "name": "ENSRegistry",
+      "type": "Core"
+    },
+    {
+      "address": "0x57f1887a8BF19b14fC0dF6Fd9B2acc9Af147eA85",
+      "network": "ethereum",
+      "name": "ENSBaseRegistrar",
+      "type": "Registrar"
+    }
   ],
-  "scope_details": {
-    "in_scope": [
-      "Smart contracts",
-      "Official repositories"
-    ],
-    "out_of_scope": [
-      "Third-party integrations not officially supported",
-      "Frontrunning that is economically irrational",
-      "Best practices without security impact",
-      "Testnet contracts (Goerli, Sepolia, Mumbai)",
-      "Previously disclosed vulnerabilities",
-      "Frontend/UI bugs without contract impact",
-      "Issues in audit reports without fix"
-    ],
-    "contract_count": 0,
-    "verified": true
-  }
+  "source": "immunefi",
+  "updated_at": "2026-02-07T23:10:00Z"
 }

@@ -37,42 +37,20 @@
   },
   "scope": {
     "in_scope": [
-      "Smart contracts",
-      "Official repositories"
+      "Bitcoin staking",
+      "LBTC"
     ],
     "out_of_scope": [
-      "Third-party integrations",
-      "Testnets",
-      "Frontend only"
+      "Custody"
     ]
   },
-  "contracts": [],
-  "source": "immunefi",
-  "o_scope": [],
-  "out_of_scope": [
-    "Third-party integrations not officially supported",
-    "Frontrunning that is economically irrational",
-    "Best practices without security impact",
-    "Testnet contracts (Goerli, Sepolia, Mumbai)",
-    "Previously disclosed vulnerabilities",
-    "Frontend/UI bugs without contract impact",
-    "Issues in audit reports without fix"
+  "contracts": [
+    {
+      "address": "TBD",
+      "network": "ethereum",
+      "name": "LombardBTC",
+      "type": "BTC Derivative"
+    }
   ],
-  "scope_details": {
-    "in_scope": [
-      "Smart contracts",
-      "Official repositories"
-    ],
-    "out_of_scope": [
-      "Third-party integrations not officially supported",
-      "Frontrunning that is economically irrational",
-      "Best practices without security impact",
-      "Testnet contracts (Goerli, Sepolia, Mumbai)",
-      "Previously disclosed vulnerabilities",
-      "Frontend/UI bugs without contract impact",
-      "Issues in audit reports without fix"
-    ],
-    "contract_count": 0,
-    "verified": true
-  }
+  "source": "immunefi"
 }

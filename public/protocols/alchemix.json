@@ -36,55 +36,39 @@
   },
   "scope": {
     "in_scope": [
-      "Smart contracts",
-      "Official repositories"
+      "Alchemist contracts",
+      "Transmuter contracts",
+      "Yield strategies",
+      "Debt positions",
+      "Token contracts"
     ],
     "out_of_scope": [
-      "Third-party integrations",
-      "Testnets",
-      "Frontend only"
+      "Frontend",
+      "Subgraph",
+      "Analytics",
+      "Third-party strategies"
     ]
   },
   "contracts": [
     {
-      "address": "0x5C6374a2ac4EBBA38D941dB5D405eF091D8A7746",
-      "name": "Alchemist",
+      "address": "0xC3f279090a0e534D4127d8Fe6605F860dcAF360f",
       "network": "ethereum",
-      "type": "Vault"
+      "name": "AlchemistV2",
+      "type": "Core"
     },
     {
-      "address": "0xC4C319E2D4d7C8d9C5f5B6a7e8d9C5f5B6a7e8d",
-      "name": "Transmuter",
+      "address": "0xE8eA477b43Db7C83dF5796344576Cd07A4A947b7",
       "network": "ethereum",
+      "name": "TransmuterV2",
       "type": "Yield"
+    },
+    {
+      "address": "0xd1BAA1Dc3eBD495A2fB6F4F5973722f3A7D89178",
+      "network": "ethereum",
+      "name": "AlchemixToken",
+      "type": "ERC20"
     }
   ],
   "source": "immunefi",
-  "o_scope": [],
-  "out_of_scope": [
-    "Third-party integrations not officially supported",
-    "Frontrunning that is economically irrational",
-    "Best practices without security impact",
-    "Testnet contracts (Goerli, Sepolia, Mumbai)",
-    "Previously disclosed vulnerabilities",
-    "Frontend/UI bugs without contract impact",
-    "Issues in audit reports without fix"
-  ],
-  "scope_details": {
-    "in_scope": [
-      "Smart contracts",
-      "Official repositories"
-    ],
-    "out_of_scope": [
-      "Third-party integrations not officially supported",
-      "Frontrunning that is economically irrational",
-      "Best practices without security impact",
-      "Testnet contracts (Goerli, Sepolia, Mumbai)",
-      "Previously disclosed vulnerabilities",
-      "Frontend/UI bugs without contract impact",
-      "Issues in audit reports without fix"
-    ],
-    "contract_count": 2,
-    "verified": true
-  }
+  "updated_at": "2026-02-07T23:10:00Z"
 }

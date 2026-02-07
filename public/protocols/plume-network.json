@@ -35,42 +35,21 @@
     }
   },
   "source": "immunefi",
-  "contracts": [],
-  "o_scope": [],
-  "out_of_scope": [
-    "Third-party integrations not officially supported",
-    "Frontrunning that is economically irrational",
-    "Best practices without security impact",
-    "Testnet contracts (Goerli, Sepolia, Mumbai)",
-    "Previously disclosed vulnerabilities",
-    "Frontend/UI bugs without contract impact",
-    "Issues in audit reports without fix"
+  "contracts": [
+    {
+      "address": "TBD",
+      "network": "ethereum",
+      "name": "PlumeToken",
+      "type": "RWA"
+    }
   ],
   "scope": {
     "in_scope": [
-      "Smart contracts in official repositories",
-      "Deployed contracts on supported chains",
-      "Bridging and cross-chain mechanisms",
-      "Governance and admin functionality"
-    ]
-  },
-  "scope_details": {
-    "in_scope": [
-      "Smart contracts in official repositories",
-      "Deployed contracts on supported chains",
-      "Bridging and cross-chain mechanisms",
-      "Governance and admin functionality"
+      "RWA tokenization",
+      "Asset management"
     ],
     "out_of_scope": [
-      "Third-party integrations not officially supported",
-      "Frontrunning that is economically irrational",
-      "Best practices without security impact",
-      "Testnet contracts (Goerli, Sepolia, Mumbai)",
-      "Previously disclosed vulnerabilities",
-      "Frontend/UI bugs without contract impact",
-      "Issues in audit reports without fix"
-    ],
-    "contract_count": 0,
-    "verified": true
+      "Legal compliance"
+    ]
   }
 }

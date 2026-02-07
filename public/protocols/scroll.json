@@ -36,49 +36,39 @@
   },
   "scope": {
     "in_scope": [
-      "Smart contracts",
-      "Official repositories"
+      "L1 contracts",
+      "L2 pre-deploys",
+      "Bridge contracts",
+      "zkEVM circuits",
+      "Sequencer messaging"
     ],
     "out_of_scope": [
-      "Third-party integrations",
-      "Testnets",
-      "Frontend only"
+      "Frontend",
+      "Explorer",
+      "Documentation",
+      "Relayer software"
     ]
   },
   "contracts": [
     {
-      "address": "0x0000000000000000000000000000000000000001",
-      "name": "ScrollGateway",
+      "address": "0x5300000000000000000000000000000000000004",
       "network": "ethereum",
+      "name": "L1ScrollMessenger",
       "type": "Bridge"
+    },
+    {
+      "address": "0x778625549534e1D17E9bc6c654b044252136CeE8",
+      "network": "ethereum",
+      "name": "ScrollChain",
+      "type": "Core"
+    },
+    {
+      "address": "0x64bD026b7493DD9534d65056B422e0e015f6D579",
+      "network": "ethereum",
+      "name": "L1ETHGateway",
+      "type": "Gateway"
     }
   ],
   "source": "immunefi",
-  "o_scope": [],
-  "out_of_scope": [
-    "Third-party integrations not officially supported",
-    "Frontrunning that is economically irrational",
-    "Best practices without security impact",
-    "Testnet contracts (Goerli, Sepolia, Mumbai)",
-    "Previously disclosed vulnerabilities",
-    "Frontend/UI bugs without contract impact",
-    "Issues in audit reports without fix"
-  ],
-  "scope_details": {
-    "in_scope": [
-      "Smart contracts",
-      "Official repositories"
-    ],
-    "out_of_scope": [
-      "Third-party integrations not officially supported",
-      "Frontrunning that is economically irrational",
-      "Best practices without security impact",
-      "Testnet contracts (Goerli, Sepolia, Mumbai)",
-      "Previously disclosed vulnerabilities",
-      "Frontend/UI bugs without contract impact",
-      "Issues in audit reports without fix"
-    ],
-    "contract_count": 1,
-    "verified": true
-  }
+  "updated_at": "2026-02-07T23:10:00Z"
 }
