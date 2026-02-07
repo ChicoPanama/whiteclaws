@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Button from "@/components/Button";
 import Input from "@/components/Input";
+import { encryptMessage, generateKeyPair } from "@/lib/crypto";
 
 const steps = [
   { id: 1, name: "Details", description: "Describe the vulnerability" },
@@ -14,10 +15,17 @@ const steps = [
 
 interface SubmissionWizardProps {
   protocolSlug: string;
+  protocolId: string;
+  protocolPublicKey?: string | null;
   onComplete?: () => void;
 }
 
-export default function SubmissionWizard({ protocolSlug, onComplete }: SubmissionWizardProps) {
+export default function SubmissionWizard({
+  protocolSlug,
+  protocolId,
+  protocolPublicKey,
+  onComplete,
+}: SubmissionWizardProps) {
   const [currentStep, setCurrentStep] = useState(1);
   const [formData, setFormData] = useState({
     title: "",
@@ -27,6 +35,9 @@ export default function SubmissionWizard({ protocolSlug, onComplete }: Submissio
     impact: "",
     files: null as FileList | null,
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
+  const [submitSuccess, setSubmitSuccess] = useState(false);
 
   const handleNext = () => {
     if (currentStep < 5) setCurrentStep(currentStep + 1);
@@ -37,9 +48,75 @@ export default function SubmissionWizard({ protocolSlug, onComplete }: Submissio
   };
 
   const handleSubmit = async () => {
-    // Encrypt and submit
-    console.log("Submitting:", formData);
-    if (onComplete) onComplete();
+    setSubmitError(null);
+    setSubmitSuccess(false);
+
+    if (!protocolPublicKey) {
+      setSubmitError("Protocol public key is missing. Unable to encrypt submission.");
+      return;
+    }
+
+    try {
+      setIsSubmitting(true);
+      const attachments: Array<{ name: string; content: string }> = [];
+
+      if (formData.files && formData.files.length > 0) {
+        const file = formData.files[0];
+        const buffer = await file.arrayBuffer();
+        const bytes = new Uint8Array(buffer);
+        const base64Content = btoa(
+          Array.from(bytes, (byte) => String.fromCharCode(byte)).join("")
+        );
+        attachments.push({ name: file.name, content: base64Content });
+      }
+
+      const payload = JSON.stringify({
+        title: formData.title,
+        description: formData.description,
+        severity: formData.severity,
+        evidence: formData.evidence,
+        impact: formData.impact,
+        attachments,
+        protocolSlug,
+      });
+
+      const senderKeyPair = generateKeyPair();
+      const { ciphertext, nonce } = encryptMessage(
+        payload,
+        protocolPublicKey,
+        senderKeyPair.secretKey
+      );
+
+      const response = await fetch("/api/findings", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          protocolId,
+          title: formData.title,
+          severity: formData.severity,
+          encryptedPayload: {
+            ciphertext,
+            nonce,
+            senderPublicKey: senderKeyPair.publicKey,
+          },
+        }),
+      });
+
+      if (!response.ok) {
+        const payload = await response.json();
+        throw new Error(payload?.error ?? "Failed to submit finding");
+      }
+
+      setSubmitSuccess(true);
+      if (onComplete) onComplete();
+    } catch (error) {
+      console.error("Submission error:", error);
+      setSubmitError(
+        error instanceof Error ? error.message : "Failed to submit finding"
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -77,6 +154,16 @@ export default function SubmissionWizard({ protocolSlug, onComplete }: Submissio
 
       {/* Form */}
       <div className="space-y-6">
+        {submitError && (
+          <div className="bg-red-900/50 border border-red-800 rounded-lg p-4 text-sm text-red-300">
+            {submitError}
+          </div>
+        )}
+        {submitSuccess && (
+          <div className="bg-green-900/40 border border-green-800 rounded-lg p-4 text-sm text-green-300">
+            Submission encrypted and queued for review.
+          </div>
+        )}
         {currentStep === 1 && (
           <div className="space-y-4">
             <h2 className="text-xl font-semibold text-white">Finding Details</h2>
@@ -205,8 +292,8 @@ export default function SubmissionWizard({ protocolSlug, onComplete }: Submissio
               Next
             </Button>
           ) : (
-            <Button variant="success" onClick={handleSubmit}>
-              Submit Finding
+            <Button variant="success" onClick={handleSubmit} disabled={isSubmitting}>
+              {isSubmitting ? "Encrypting..." : "Submit Finding"}
             </Button>
           )}
         </div>

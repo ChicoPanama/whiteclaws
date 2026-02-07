@@ -1,12 +1,17 @@
 "use client";
 
 import { useState, useRef } from "react";
-import { encryptMessage } from "@/lib/crypto";
+import { encryptMessage, generateKeyPair } from "@/lib/crypto";
 import Button from "@/components/Button";
 
 interface EncryptUploadProps {
   protocolPublicKey: string;
-  onEncrypted?: (data: { ciphertext: string; nonce: string; filename: string }) => void;
+  onEncrypted?: (data: {
+    ciphertext: string;
+    nonce: string;
+    filename: string;
+    senderPublicKey: string;
+  }) => void;
 }
 
 export default function EncryptUpload({ protocolPublicKey, onEncrypted }: EncryptUploadProps) {
@@ -38,55 +43,43 @@ export default function EncryptUpload({ protocolPublicKey, onEncrypted }: Encryp
       setProgress(0);
       setError(null);
 
-      // Simulate encryption progress
-      const interval = setInterval(() => {
-        setProgress(prev => {
-          if (prev >= 90) {
-            clearInterval(interval);
-            return 90;
-          }
-          return prev + 10;
-        });
-      }, 200);
-
-      // Read file content
       const reader = new FileReader();
-      reader.onload = async (e) => {
-        const content = e.target?.result as string;
-        
-        // Generate sender key pair (in real app, use stored keys)
-        const senderKeyPair = await window.crypto.subtle.generateKey(
-          { name: "RSA-OAEP", modulusLength: 2048, publicExponent: new Uint8Array([1, 0, 1]), hash: "SHA-256" },
-          true,
-          ["encrypt", "decrypt"]
-        );
-        
-        // For demo, we'll use a simplified encryption
-        // In real app, you'd use the protocol's public key
-        const encoder = new TextEncoder();
-        const data = encoder.encode(content);
-        
-        // Simulate encryption completion
-        setTimeout(() => {
-          clearInterval(interval);
+      reader.onload = (e) => {
+        try {
+          const buffer = e.target?.result as ArrayBuffer;
+          const bytes = new Uint8Array(buffer);
+          const base64Content = btoa(
+            Array.from(bytes, (byte) => String.fromCharCode(byte)).join("")
+          );
+
+          const senderKeyPair = generateKeyPair();
+          const { ciphertext, nonce } = encryptMessage(
+            base64Content,
+            protocolPublicKey,
+            senderKeyPair.secretKey
+          );
+
           setProgress(100);
-          
-          // Mock encrypted data
-          const mockEncrypted = {
-            ciphertext: btoa(content.substring(0, 100) + "..."), // Simplified
-            nonce: "mock-nonce-" + Date.now(),
-            filename: file.name
-          };
-          
+
           if (onEncrypted) {
-            onEncrypted(mockEncrypted);
+            onEncrypted({
+              ciphertext,
+              nonce,
+              filename: file.name,
+              senderPublicKey: senderKeyPair.publicKey,
+            });
           }
-          
+
           setIsEncrypting(false);
-        }, 500);
+        } catch (err) {
+          console.error("Encryption error:", err);
+          setError("Failed to encrypt file");
+          setIsEncrypting(false);
+          setProgress(0);
+        }
       };
-      
-      reader.readAsText(file);
+
+      reader.readAsArrayBuffer(file);
     } catch (err) {
       console.error("Encryption error:", err);
       setError("Failed to encrypt file");

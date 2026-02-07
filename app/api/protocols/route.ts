@@ -1,8 +1,12 @@
 import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
+import { createClient } from "@/lib/supabase/server";
 // Force dynamic rendering for API route
 export const dynamic = 'force-dynamic';
 
+const hasSupabaseConfig =
+  !!process.env.NEXT_PUBLIC_SUPABASE_URL &&
+  !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
 const protocolSchema = z.object({
   name: z.string().min(1),
@@ -62,18 +66,96 @@ export async function GET(request: NextRequest) {
   const slug = searchParams.get("slug");
 
   try {
+    if (!hasSupabaseConfig) {
+      if (slug) {
+        const protocol = mockProtocols.find((p) => p.slug === slug);
+        if (!protocol) {
+          return NextResponse.json(
+            { error: "Protocol not found" },
+            { status: 404 }
+          );
+        }
+        return NextResponse.json({ protocol });
+      }
+
+      return NextResponse.json({ protocols: mockProtocols });
+    }
+
+    const supabase = createClient();
+
     if (slug) {
-      const protocol = mockProtocols.find((p) => p.slug === slug);
-      if (!protocol) {
+      const { data, error } = await supabase
+        .from("protocols")
+        .select(
+          "id,name,slug,description,immunefi_url,logo_url,chains,max_bounty,tvl,is_active,created_at,updated_at"
+        )
+        .eq("slug", slug)
+        .maybeSingle();
+
+      if (error) {
+        throw error;
+      }
+
+      if (!data) {
         return NextResponse.json(
           { error: "Protocol not found" },
           { status: 404 }
         );
       }
+
+      const protocol = {
+        id: data.id,
+        name: data.name,
+        slug: data.slug,
+        description: data.description,
+        website_url: data.immunefi_url,
+        twitter_handle: null,
+        logo_url: data.logo_url,
+        category: null,
+        chain: data.chains?.[0] ?? null,
+        bountyPool: data.max_bounty ?? 0,
+        severity: null,
+        is_active: data.is_active,
+        submission_count: 0,
+        total_rewards_distributed: 0,
+        created_at: data.created_at,
+        updated_at: data.updated_at,
+      };
+
       return NextResponse.json({ protocol });
     }
 
-    return NextResponse.json({ protocols: mockProtocols });
+    const { data, error } = await supabase
+      .from("protocols")
+      .select(
+        "id,name,slug,description,immunefi_url,logo_url,chains,max_bounty,tvl,is_active,created_at,updated_at"
+      )
+      .order("name");
+
+    if (error) {
+      throw error;
+    }
+
+    const protocols = (data ?? []).map((protocol) => ({
+      id: protocol.id,
+      name: protocol.name,
+      slug: protocol.slug,
+      description: protocol.description,
+      website_url: protocol.immunefi_url,
+      twitter_handle: null,
+      logo_url: protocol.logo_url,
+      category: null,
+      chain: protocol.chains?.[0] ?? null,
+      bountyPool: protocol.max_bounty ?? 0,
+      severity: null,
+      is_active: protocol.is_active,
+      submission_count: 0,
+      total_rewards_distributed: 0,
+      created_at: protocol.created_at,
+      updated_at: protocol.updated_at,
+    }));
+
+    return NextResponse.json({ protocols });
   } catch (error) {
     console.error("Error fetching protocols:", error);
     return NextResponse.json(
@@ -88,18 +170,63 @@ export async function POST(request: NextRequest) {
     const body = await request.json();
     const validated = protocolSchema.parse(body);
 
-    // In production, save to database
-    const newProtocol = {
-      id: String(mockProtocols.length + 1),
-      ...validated,
-      is_active: true,
+    if (!hasSupabaseConfig) {
+      // In production, save to database
+      const newProtocol = {
+        id: String(mockProtocols.length + 1),
+        ...validated,
+        is_active: true,
+        submission_count: 0,
+        total_rewards_distributed: 0,
+        created_at: new Date().toISOString(),
+        updated_at: new Date().toISOString(),
+      };
+
+      return NextResponse.json({ protocol: newProtocol }, { status: 201 });
+    }
+
+    const supabase = createClient();
+    const { data, error } = await supabase
+      .from("protocols")
+      .insert({
+        name: validated.name,
+        slug: validated.slug,
+        description: validated.description ?? null,
+        immunefi_url: validated.website_url ?? null,
+        logo_url: validated.logo_url ?? null,
+        chains: validated.chain ? [validated.chain] : [],
+        max_bounty: validated.bountyPool ?? 0,
+        is_active: true,
+      })
+      .select(
+        "id,name,slug,description,immunefi_url,logo_url,chains,max_bounty,tvl,is_active,created_at,updated_at"
+      )
+      .single();
+
+    if (error) {
+      throw error;
+    }
+
+    const protocol = {
+      id: data.id,
+      name: data.name,
+      slug: data.slug,
+      description: data.description,
+      website_url: data.immunefi_url,
+      twitter_handle: null,
+      logo_url: data.logo_url,
+      category: null,
+      chain: data.chains?.[0] ?? null,
+      bountyPool: data.max_bounty ?? 0,
+      severity: null,
+      is_active: data.is_active,
       submission_count: 0,
       total_rewards_distributed: 0,
-      created_at: new Date().toISOString(),
-      updated_at: new Date().toISOString(),
+      created_at: data.created_at,
+      updated_at: data.updated_at,
     };
 
-    return NextResponse.json({ protocol: newProtocol }, { status: 201 });
+    return NextResponse.json({ protocol }, { status: 201 });
   } catch (error) {
     if (error instanceof z.ZodError) {
       return NextResponse.json(

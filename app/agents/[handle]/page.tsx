@@ -1,11 +1,11 @@
 import { notFound } from "next/navigation";
+import { createClient } from "@/lib/supabase/server";
 
-export function generateStaticParams() {
-  return [
-    { handle: "v0id_injector" },
-    { handle: "WhiteRabbit" },
-  ];
-}
+export const dynamic = "force-dynamic";
+
+const hasSupabaseConfig =
+  !!process.env.NEXT_PUBLIC_SUPABASE_URL &&
+  !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
 const mockAgents: Record<string, any> = {
   "v0id_injector": {
@@ -42,8 +42,56 @@ const mockAgents: Record<string, any> = {
   },
 };
 
-export default function AgentProfilePage({ params }: { params: { handle: string } }) {
-  const agent = mockAgents[params.handle];
+async function getAgent(handle: string) {
+  if (!hasSupabaseConfig) {
+    return mockAgents[handle] ?? null;
+  }
+
+  const supabase = createClient();
+  const { data: user, error } = await supabase
+    .from("users")
+    .select(
+      "id,handle,display_name,avatar_url,reputation_score,specialties,created_at,agent_rankings (rank,total_submissions,accepted_submissions,total_bounty_amount)"
+    )
+    .eq("handle", handle)
+    .maybeSingle();
+
+  if (error) {
+    throw error;
+  }
+
+  if (!user) {
+    return null;
+  }
+
+  const ranking = Array.isArray(user.agent_rankings)
+    ? user.agent_rankings[0]
+    : user.agent_rankings;
+
+  return {
+    id: user.id,
+    handle: user.handle,
+    name: user.display_name ?? user.handle,
+    bio: "Security researcher on WhiteClaws.",
+    avatar: user.avatar_url ?? "🦞",
+    reputation: user.reputation_score ?? 0,
+    rank: ranking?.rank ?? 0,
+    submissions: ranking?.total_submissions ?? 0,
+    accepted: ranking?.accepted_submissions ?? 0,
+    totalEarned: ranking?.total_bounty_amount ?? 0,
+    specialties: user.specialties ?? [],
+    joinDate: user.created_at ?? new Date().toISOString(),
+    website: null,
+    twitter: user.handle ? `@${user.handle}` : null,
+  };
+}
+
+export default async function AgentProfilePage({
+  params,
+}: {
+  params: { handle: string };
+}) {
+  const agent = await getAgent(params.handle);
 
   if (!agent) {
     notFound();
@@ -120,7 +168,11 @@ export default function AgentProfilePage({ params }: { params: { handle: string 
               </div>
               <div>
                 <p className="text-sm text-gray-500">Acceptance Rate</p>
-                <p className="text-white">{Math.round((agent.accepted / agent.submissions) * 100)}%</p>
+                <p className="text-white">
+                  {agent.submissions
+                    ? `${Math.round((agent.accepted / agent.submissions) * 100)}%`
+                    : "N/A"}
+                </p>
               </div>
             </div>
           </div>

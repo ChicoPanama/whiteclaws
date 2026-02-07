@@ -1,8 +1,80 @@
 import Link from 'next/link'
 import Footer from '@/components/Footer'
-import { bountyPrograms, leaderboard, platformFeatures, categories, recentFindings } from '@/lib/data'
+import { createClient } from '@/lib/supabase/server'
+import { platformFeatures, categories, recentFindings } from '@/lib/data'
 
-export default function Home() {
+export const dynamic = 'force-dynamic'
+
+const hasSupabaseConfig =
+  !!process.env.NEXT_PUBLIC_SUPABASE_URL &&
+  !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+
+async function getHomeData() {
+  if (!hasSupabaseConfig) {
+    const { bountyPrograms, leaderboard } = await import('@/lib/data')
+    return {
+      bountyPrograms,
+      leaderboard,
+    }
+  }
+
+  const supabase = createClient()
+  const [{ data: protocols, error: protocolError }, { data: rankings, error: rankingError }] =
+    await Promise.all([
+      supabase
+        .from('protocols')
+        .select('id,slug,name,chains,max_bounty,description')
+        .order('max_bounty', { ascending: false })
+        .limit(5),
+      supabase
+        .from('agent_rankings')
+        .select('points, total_bounty_amount, users (handle)')
+        .order('points', { ascending: false })
+        .limit(5),
+    ])
+
+  if (protocolError) {
+    throw protocolError
+  }
+
+  if (rankingError) {
+    throw rankingError
+  }
+
+  const bountyPrograms = (protocols ?? []).map((protocol) => ({
+    id: protocol.slug,
+    name: protocol.name,
+    icon: protocol.name.charAt(0),
+    category: 'Protocol',
+    tags: ['Immunefi'],
+    chains: protocol.chains?.length ? protocol.chains : ['Multi-chain'],
+    language: 'Solidity',
+    maxReward: `$${(protocol.max_bounty ?? 0).toLocaleString()}`,
+    maxRewardNum: protocol.max_bounty ?? 0,
+    liveSince: 'Live',
+    type: 'Smart Contract',
+  }))
+
+  const leaderboard = (rankings ?? []).map((entry, index) => {
+    const user = Array.isArray(entry.users) ? entry.users[0] : entry.users
+    return {
+      rank: index + 1,
+      name: user?.handle ?? 'unknown',
+      earned: `$${(entry.total_bounty_amount ?? 0).toLocaleString()}`,
+      findings: 0,
+      critical: 0,
+    }
+  })
+
+  return {
+    bountyPrograms,
+    leaderboard,
+  }
+}
+
+export default async function Home() {
+  const { bountyPrograms, leaderboard } = await getHomeData()
+
   return (
     <>
       {/* Announcement Bar */}

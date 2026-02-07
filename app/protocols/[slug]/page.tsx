@@ -1,19 +1,20 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { createClient } from "@/lib/supabase/server";
 
-export function generateStaticParams() {
-  return [
-    { slug: "ssv-network" },
-    { slug: "uniswap" },
-  ];
-}
+export const dynamic = "force-dynamic";
+
+const hasSupabaseConfig =
+  !!process.env.NEXT_PUBLIC_SUPABASE_URL &&
+  !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
 const mockProtocols: Record<string, any> = {
   "ssv-network": {
     id: "1",
     name: "SSV Network",
     slug: "ssv-network",
-    description: "Distributed validator infrastructure for Ethereum. Run validators in a distributed, fault-tolerant manner.",
+    description:
+      "Distributed validator infrastructure for Ethereum. Run validators in a distributed, fault-tolerant manner.",
     chain: "Ethereum",
     contractAddress: "0xDD9BC35aE942eF0cFa76930954a156B3fF30a4E1",
     website: "https://ssv.network",
@@ -28,7 +29,8 @@ const mockProtocols: Record<string, any> = {
     id: "2",
     name: "Uniswap",
     slug: "uniswap",
-    description: "Decentralized exchange protocol for automated token swaps. Leading AMM on Ethereum.",
+    description:
+      "Decentralized exchange protocol for automated token swaps. Leading AMM on Ethereum.",
     chain: "Ethereum",
     contractAddress: "0xE592427A0AEce92De3Edee1F18E0157C05861564",
     website: "https://uniswap.org",
@@ -41,8 +43,51 @@ const mockProtocols: Record<string, any> = {
   },
 };
 
-export default function ProtocolDetailPage({ params }: { params: { slug: string } }) {
-  const protocol = mockProtocols[params.slug];
+async function getProtocol(slug: string) {
+  if (!hasSupabaseConfig) {
+    return mockProtocols[slug] ?? null;
+  }
+
+  const supabase = createClient();
+  const { data, error } = await supabase
+    .from("protocols")
+    .select(
+      "id,name,slug,description,immunefi_url,chains,max_bounty,tvl,logo_url,contracts"
+    )
+    .eq("slug", slug)
+    .maybeSingle();
+
+  if (error) {
+    throw error;
+  }
+
+  if (!data) {
+    return null;
+  }
+
+  return {
+    id: data.id,
+    name: data.name,
+    slug: data.slug,
+    description: data.description ?? "No description provided.",
+    chain: data.chains?.[0] ?? "Multi-chain",
+    contractAddress: Array.isArray(data.contracts) ? data.contracts[0] : null,
+    website: data.immunefi_url ?? null,
+    twitter: null,
+    bountyPool: data.max_bounty ?? 0,
+    maxSeverity: "critical",
+    totalSubmissions: 0,
+    totalPaid: 0,
+    contractTypes: data.chains?.length ? data.chains : ["Smart Contract"],
+  };
+}
+
+export default async function ProtocolDetailPage({
+  params,
+}: {
+  params: { slug: string };
+}) {
+  const protocol = await getProtocol(params.slug);
 
   if (!protocol) {
     notFound();
@@ -97,19 +142,43 @@ export default function ProtocolDetailPage({ params }: { params: { slug: string 
         <div className="bg-gray-800 rounded-lg p-6 border border-gray-700 mb-8">
           <h2 className="text-xl font-semibold text-white mb-4">Contract</h2>
           <div className="space-y-2 text-sm">
-            <p><span className="text-gray-500">Address:</span> <span className="text-gray-300 font-mono">{protocol.contractAddress}</span></p>
-            <p><span className="text-gray-500">Type:</span> <span className="text-gray-300">{protocol.contractTypes.join(", ")}</span></p>
+            <p>
+              <span className="text-gray-500">Address:</span>{" "}
+              <span className="text-gray-300 font-mono">
+                {protocol.contractAddress ?? "Not provided"}
+              </span>
+            </p>
+            <p>
+              <span className="text-gray-500">Type:</span>{" "}
+              <span className="text-gray-300">
+                {protocol.contractTypes.join(", ")}
+              </span>
+            </p>
           </div>
         </div>
 
         {/* Links */}
         <div className="flex gap-4">
-          <a href={protocol.website} target="_blank" rel="noopener noreferrer" className="text-indigo-400 hover:text-indigo-300">
-            Website →
-          </a>
-          <a href={`https://twitter.com/${protocol.twitter.replace("@", "")}`} target="_blank" rel="noopener noreferrer" className="text-indigo-400 hover:text-indigo-300">
-            Twitter →
-          </a>
+          {protocol.website && (
+            <a
+              href={protocol.website}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-indigo-400 hover:text-indigo-300"
+            >
+              Website →
+            </a>
+          )}
+          {protocol.twitter && (
+            <a
+              href={`https://twitter.com/${protocol.twitter.replace("@", "")}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-indigo-400 hover:text-indigo-300"
+            >
+              Twitter →
+            </a>
+          )}
         </div>
       </div>
     </div>

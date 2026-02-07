@@ -1,8 +1,72 @@
-import Link from 'next/link'
 import Footer from '@/components/Footer'
-import { bountyPrograms } from '@/lib/data'
+import { createClient } from '@/lib/supabase/server'
 
-export default function BountiesPage() {
+export const dynamic = 'force-dynamic'
+
+const hasSupabaseConfig =
+  !!process.env.NEXT_PUBLIC_SUPABASE_URL &&
+  !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+
+const mockBounties = [
+  {
+    id: 'ssv-network',
+    name: 'SSV Network',
+    category: 'Infrastructure',
+    tags: ['DVT'],
+    chains: ['Ethereum'],
+    language: 'Solidity',
+    maxReward: '$1,000,000',
+    maxRewardNum: 1000000,
+    liveSince: 'Sep 2025',
+    type: 'Smart Contract',
+  },
+  {
+    id: 'uniswap',
+    name: 'Uniswap',
+    category: 'DeFi',
+    tags: ['DEX'],
+    chains: ['Ethereum'],
+    language: 'Solidity',
+    maxReward: '$2,500,000',
+    maxRewardNum: 2500000,
+    liveSince: 'Jan 2025',
+    type: 'Smart Contract',
+  },
+]
+
+async function getBounties() {
+  if (!hasSupabaseConfig) {
+    return mockBounties
+  }
+
+  const supabase = createClient()
+  const { data, error } = await supabase
+    .from('protocols')
+    .select('id,slug,name,chains,max_bounty,description')
+    .order('max_bounty', { ascending: false })
+
+  if (error) {
+    throw error
+  }
+
+  return (data ?? []).map((protocol) => ({
+    id: protocol.slug,
+    name: protocol.name,
+    icon: protocol.name.charAt(0),
+    category: 'Protocol',
+    tags: ['Immunefi'],
+    chains: protocol.chains?.length ? protocol.chains : ['Multi-chain'],
+    language: 'Solidity',
+    maxReward: `$${(protocol.max_bounty ?? 0).toLocaleString()}`,
+    maxRewardNum: protocol.max_bounty ?? 0,
+    liveSince: 'Live',
+    type: 'Smart Contract',
+  }))
+}
+
+export default async function BountiesPage() {
+  const bountyPrograms = await getBounties()
+
   return (
     <>
       <div className="explore-page">

@@ -1,4 +1,11 @@
 import Link from 'next/link'
+import { createClient } from '@/lib/supabase/server'
+
+export const dynamic = 'force-dynamic'
+
+const hasSupabaseConfig =
+  !!process.env.NEXT_PUBLIC_SUPABASE_URL &&
+  !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
 
 const mockThreads = [
   {
@@ -19,7 +26,38 @@ const mockThreads = [
   },
 ]
 
-export default function WorldBoardPage() {
+async function getThreads() {
+  if (!hasSupabaseConfig) {
+    return mockThreads
+  }
+
+  const supabase = createClient()
+  const { data, error } = await supabase
+    .from('messages')
+    .select('id,title,author_id,upvotes,created_at,users(handle)')
+    .is('protocol_id', null)
+    .order('created_at', { ascending: false })
+
+  if (error) {
+    throw error
+  }
+
+  return (data ?? []).map((thread) => {
+    const user = Array.isArray(thread.users) ? thread.users[0] : thread.users
+    return {
+      id: thread.id,
+      title: thread.title ?? 'Untitled thread',
+      author: user?.handle ?? 'unknown',
+      replies: 0,
+      upvotes: thread.upvotes ?? 0,
+      createdAt: new Date(thread.created_at).toLocaleDateString(),
+    }
+  })
+}
+
+export default async function WorldBoardPage() {
+  const threads = await getThreads()
+
   return (
     <div className="min-h-screen bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -30,10 +68,11 @@ export default function WorldBoardPage() {
           </button>
         </div>
         <div className="space-y-4">
-          {mockThreads.map((thread) => (
-            <div
+          {threads.map((thread) => (
+            <Link
               key={thread.id}
-              className="bg-gray-800 rounded-lg p-6 border border-gray-700 hover:border-gray-600 transition-colors"
+              href={`/worldboard/${thread.id}`}
+              className="block bg-gray-800 rounded-lg p-6 border border-gray-700 hover:border-gray-600 transition-colors"
             >
               <div className="flex justify-between items-start">
                 <div>
@@ -47,7 +86,7 @@ export default function WorldBoardPage() {
                   <span>{thread.replies} replies</span>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
