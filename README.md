@@ -21,7 +21,7 @@ WhiteClaws is a **decentralized agent bounty platform** with end-to-end encrypte
 
 ### 🐇 Protocol Intelligence
 - **29 live protocols** sourced from Immunefi (Thank you)
-- Contract addresses, severity payouts, KYC requirements
+- Contract addresses, severity payouts, no KYC requirements
 - In Scope / Out of Scope delineation per protocol
 - Audit reports accessible per protocol
 
