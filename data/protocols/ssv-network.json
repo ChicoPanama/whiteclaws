@@ -1,0 +1,212 @@
+{
+  "protocol_name": "SSV Network",
+  "slug": "ssv-network",
+  "source": "immunefi",
+  "status": "active",
+  "last_updated": "2026-02-08",
+  
+  "metadata": {
+    "name": "SSV Network",
+    "description": "SSV Network provides a robust and fault-tolerant method for staking on Ethereum, enabling the decentralized and secure operation of validators.",
+    "website": "https://ssv.network/",
+    "logo_url": "https://immunefi.com/images/projects/ssv-network.png",
+    "documentation": ["https://docs.ssv.network/"],
+    "whitepaper": "",
+    "github": "https://github.com/ssvlabs",
+    "twitter": "@ssv_network",
+    "discord": "https://discord.gg/ssv",
+    "launch_date": "2021",
+    "is_defi": true,
+    "is_gaming": false,
+    "is_nft": false
+  },
+  
+  "bounty": {
+    "min_bounty_usd": 1000,
+    "max_bounty_usd": 1000000,
+    "max_bounty_percentage_tvl": null,
+    "kyc_required": false,
+    "kyc_description": "KYC required for checks greater than $500,000 USD (USD, ETH)",
+    "eligibility": [
+      "All bug reports must be triaged and validated by Immunefi",
+      "Reports must include proof of concept",
+      "Detailed description of vulnerability and impact required",
+      "CVSS 3.0 severity score must be provided"
+    ],
+    "program_rules": {
+      "disclosure_policy": "SSV Labs discloses resolved vulnerabilities through security bulletins",
+      "duplicate_policy": "Reported vulnerabilities that are already known to SSV Labs are invalid",
+      "verification": "Critical and High vulnerabilities will be graded on a severity scale basis",
+      "scope_changes": "Projects reserves the right to change the bounties scope"
+    }
+  },
+  
+  "scope": {
+    "in_scope_summary": "SSV Network smart contracts: Core logic, Validator management, DAO contracts, SSVToken, EigenLayer integration",
+    "in_scope": [
+      "SSV Network smart contracts",
+      "SSV DAO contracts",
+      "SSVToken ($SSV)",
+      "Validator management logic",
+      "DVT (Distributed Validator Technology)",
+      "EigenLayer operators"
+    ],
+    "out_of_scope": [
+      "SSV Labs node implementation",
+      "Non-critical UI bugs",
+      "Outdated dependencies",
+      "Third-party dependencies",
+      "Smart contracts not yet deployed to mainnet",
+      "Known issues in audit reports",
+      "Gas optimization suggestions"
+    ],
+    "contracts": [
+      {
+        "network": "ethereum",
+        "address": "0xDD9BC35aE942eF0cFa76930954a156B3fF30a4E1",
+        "name": "SSVNetwork",
+        "description": "Core SSV Network contract",
+        "in_scope": true,
+        "lines_of_code": 2500,
+        "functions": ["registerValidator", "removeValidator", "updateOperatorFee", "enterLiquidation", "exitLiquidation", "withdraw"],
+        "is_proxy": false,
+        "upgradeable": true
+      },
+      {
+        "network": "ethereum",
+        "address": "0xafE9062124E416d2004459259Ed1e1989429c69C",
+        "name": "SSVToken",
+        "description": "SSV token contract",
+        "in_scope": true,
+        "lines_of_code": 200,
+        "functions": ["transfer", "transferFrom", "approve", "mint", "burn"],
+        "is_proxy": false,
+        "upgradeable": false
+      },
+      {
+        "network": "ethereum",
+        "address": "0x347Bf7c9b119929fA20B312a364DD4C4724Cb0CF",
+        "name": "SSVOperators",
+        "description": "Operator management contract",
+        "in_scope": true,
+        "lines_of_code": 800,
+        "functions": ["registerOperator", "removeOperator", "updateOperatorFee", "updateOperatorMetadata"],
+        "is_proxy": false,
+        "upgradeable": true
+      },
+      {
+        "network": "ethereum",
+        "address": "0xAE99534eDDe920028CDbE38C03289678546f11E8",
+        "name": "SSVDAO",
+        "description": "DAO governance contract",
+        "in_scope": true,
+        "lines_of_code": 300,
+        "functions": ["propose", "vote", "execute"],
+        "is_proxy": false,
+        "upgradeable": false
+      }
+    ]
+  },
+  
+  "assets": {
+    "tokens": [
+      {
+        "symbol": "SSV",
+        "name": "SSV Token",
+        "network": "ethereum",
+        "address": "0x9D65fF81a3c488d585bBfb0Bfe3c770d9c6491d0",
+        "type": "erc20",
+        "coingecko_id": "ssv-network"
+      }
+    ],
+    "tvl": {
+      "total": 1200000000,
+      "verified": true,
+      "source": "defillama"
+    },
+    "chains": ["ethereum", "holesky", "goerli"]
+  },
+  
+  "severity": {
+    "critical": {
+      "description": "Direct theft of user funds, permanent freezing",
+      "min_reward": 100000,
+      "max_reward": 1000000,
+      "percentage_tvl": null,
+      "examples": [
+        "Stealing user staked ETH",
+        "Governing attack forcing malicious upgrades",
+        "Minting infinite SSV tokens",
+        "Disabling all validators"
+      ]
+    },
+    "high": {
+      "description": "Protocol compromise without direct theft",
+      "min_reward": 10000,
+      "max_reward": 100000,
+      "percentage_tvl": null,
+      "examples": [
+        "Stealing operator earnings",
+        "Griefing validators",
+        "Oracle manipulation on operator scores",
+        "Bypassing withdrawal delays"
+      ]
+    },
+    "medium": {
+      "description": "Medium impact, temporary issues",
+      "min_reward": 1000,
+      "max_reward": 10000,
+      "examples": [
+        "Operator fee griefing",
+        "Validator registration griefing",
+        "Liquidation mechanism bypass",
+        "DOS on validator exits"
+      ]
+    },
+    "low": {
+      "description": "Low impact, informational",
+      "min_reward": 0,
+      "max_reward": 1000,
+      "examples": [
+        "Gas optimizations",
+        "Documentation errors",
+        "View function errors",
+        "Non-impacting design choices"
+      ]
+    }
+  },
+  
+  "audit_history": [
+    {
+      "auditor": "Zellic",
+      "date": "2024-12-05",
+      "scope": "SSV Network v2",
+      "url": ""
+    },
+    {
+      "auditor": "OpenZeppelin",
+      "date": "2024-03-20",
+      "scope": "Core contracts",
+      "url": ""
+    }
+  ],
+  
+  "previous_hacks": [],
+  
+  "attack_vectors": {
+    "known_patterns": ["Operator collusion", "Validator griefing", "Slashing cascade"],
+    "risk_areas": ["EigenLayer integration", "Liquidation mechanism", "Operator fee management"],
+    "fork_vulnerabilities": ["Similar to Rocket Pool/LIDO patterns"]
+  },
+  
+  "research_notes": {
+    "finding_opportunities": [
+      "Operator fee edge cases",
+      "Liquidation timing attacks",
+      "Validator clustering",
+      "EigenLayer slashing integration"
+    ],
+    "similar_protocols": ["Lido", "Rocket Pool", "EigenLayer"],
+    "red_flags": ["Complex operator registration", "Multiple contract upgrades", "DAO governance risks"]
+  }
+}

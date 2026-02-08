@@ -1,0 +1,136 @@
+{
+  "protocol_name": "Plume Network",
+  "slug": "plume-network",
+  "source": "immunefi",
+  "status": "active",
+  "last_updated": "2026-02-08",
+  
+  "metadata": {
+    "name": "Plume Network",
+    "description": "Plume is the first modular L1 blockchain for real world assets.",
+    "website": "https://www.plumenetwork.xyz/",
+    "logo_url": "/audits/004_Plume_Network.pdf",
+    "documentation": ["https://docs.plumenetwork.xyz/"],
+    "whitepaper": "",
+    "github": "https://github.com/plumenetwork",
+    "twitter": "@plumenetwork",
+    "discord": "https://discord.gg/plume",
+    "launch_date": "2024",
+    "is_defi": true,
+    "is_gaming": false,
+    "is_nft": true
+  },
+  
+  "bounty": {
+    "min_bounty_usd": 500,
+    "max_bounty_usd": 500000,
+    "max_bounty_percentage_tvl": null,
+    "kyc_required": true,
+    "kyc_description": "KYC required for payouts exceeding $10,000",
+    "eligibility": [
+      "Must provide detailed PoC",
+      "Vulnerability must be in deployed contracts",
+      "Must report via official Immunefi channel",
+      "No social engineering"
+    ],
+    "program_rules": {
+      "disclosure_policy": "Responsible disclosure required",
+      "duplicate_policy": "First valid report wins",
+      "verification": "All critical/high bugs require PoC",
+      "scope_changes": "Redemptions and staking features coming soon"
+    }
+  },
+  
+  "scope": {
+    "in_scope_summary": "Plume Network core contracts: RWA tokenization, staking, redemption, governance",
+    "in_scope": [
+      "RWA token contracts",
+      "Staking mechanisms",
+      "Redemption logic",
+      "Cross-chain bridges",
+      "Oracle integration",
+      "Governance contracts"
+    ],
+    "out_of_scope": [
+      "Frontend UI",
+      "Documentation",
+      "Testnet contracts",
+      "Third-party oracles",
+      "Known issues in audit"
+    ],
+    "contracts": []
+  },
+  
+  "assets": {
+    "tokens": [
+      {
+        "symbol": "PLUME",
+        "name": "Plume Token",
+        "network": "ethereum",
+        "address": "",
+        "type": "erc20"
+      }
+    ],
+    "tvl": {
+      "total": 500000000,
+      "verified": false,
+      "source": ""
+    },
+    "chains": ["ethereum", "arbitrum"]
+  },
+  
+  "severity": {
+    "critical": {
+      "description": "Unauthorized minting, theft, permanent lock",
+      "min_reward": 50000,
+      "max_reward": 500000,
+      "examples": ["Minting unlimited RWA tokens", "Theft of staked assets", "Bridge compromise"]
+    },
+    "high": {
+      "description": "Protocol compromise, manipulation",
+      "min_reward": 10000,
+      "max_reward": 50000,
+      "examples": ["RWA price manipulation", "Slashing bypass", "Oracle manipulation"]
+    },
+    "medium": {
+      "description": "Medium impact issues",
+      "min_reward": 2500,
+      "max_reward": 10000,
+      "examples": ["Griefing", "Temporary freezing", "Logic errors"]
+    },
+    "low": {
+      "description": "Low impact, informational",
+      "min_reward": 500,
+      "max_reward": 2500,
+      "examples": ["Gas optimizations", "Documentation errors"]
+    }
+  },
+  
+  "audit_history": [
+    {
+      "auditor": "Immunefi",
+      "date": "2025-07-14",
+      "scope": "Core protocol",
+      "url": "/audits/004_Plume_Network.pdf"
+    }
+  ],
+  
+  "previous_hacks": [],
+  
+  "attack_vectors": {
+    "known_patterns": ["RWA tokenization exploits", "Oracle manipulation", "Bridge attacks"],
+    "risk_areas": ["Cross-chain integration", "Oracle dependencies", "RWA custody"],
+    "fork_vulnerabilities": []
+  },
+  
+  "research_notes": {
+    "finding_opportunities": [
+      "RWA price discovery mechanisms",
+      "Cross-chain message validation",
+      "Staking/unstaking edge cases",
+      "Governance timelock bypasses"
+    ],
+    "similar_protocols": ["Centrifuge", "Goldfinch", "Maple"],
+    "red_flags": ["Complex RWA custody", "Multiple chain deployments", "Early stage protocol"]
+  }
+}

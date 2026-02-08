@@ -1,0 +1,159 @@
+{
+  "protocol_name": "",
+  "slug": "",
+  "source": "immunefi",
+  "status": "active",
+  "last_updated": "2026-02-08",
+  
+  "metadata": {
+    "name": "",
+    "description": "",
+    "website": "",
+    "logo_url": "",
+    "documentation": [],
+    "whitepaper": "",
+    "github": "",
+    "twitter": "",
+    "discord": "",
+    "launch_date": "",
+    "is_defi": false,
+    "is_gaming": false,
+    "is_nft": false
+  },
+  
+  "bounty": {
+    "min_bounty_usd": 0,
+    "max_bounty_usd": 0,
+    "max_bounty_percentage_tvl": 0,
+    "kyc_required": false,
+    "kyc_description": "",
+    "eligibility": [
+      "",
+      "",
+      ""
+    ],
+    "program_rules": {
+      "disclosure_policy": "Provide as much detail as possible in reports",
+      "duplicate_policy": "Duplicates will be closed as invalid",
+      "verification": "PoC may be required for critical/high bugs",
+      "scope_changes": "Defensive actions taken by project are considered in-scope"
+    }
+  },
+  
+  "scope": {
+    "in_scope_summary": "",
+    "in_scope": [],
+    "out_of_scope": [
+      "Known issues in audit reports",
+      ".test addresses and contracts",
+      "Non-impacting UX bugs",
+      "Postponed security fixes",
+      "Frontrunning attacks (usually see system design)",
+      "DoS attacks (info not publicly available)",
+      "Best practice advice"
+    ],
+    "contracts": [
+      {
+        "network": "",
+        "address": "",
+        "name": "",
+        "description": "",
+        "in_scope": true,
+        "lines_of_code": 0,
+        "functions": [],
+        "is_proxy": false,
+        "upgradeable": false
+      }
+    ]
+  },
+  
+  "assets": {
+    "tokens": [
+      {
+        "symbol": "",
+        "name": "",
+        "network": "",
+        "address": "",
+        "type": "erc20"
+      }
+    ],
+    "tvl": {
+      "total": 0,
+      "verified": false,
+      "source": ""
+    },
+    "chains": []
+  },
+  
+  "severity": {
+    "critical": {
+      "description": "Direct asset theft, freezing",
+      "min_reward": 100000,
+      "max_reward": 0,
+      "percentage_tvl": 10,
+      "examples": [
+        "Direct theft of any user funds",
+        "Rug pull / governance attack",
+        "Protocol insolvency",
+        "Permanent freezing of funds"
+      ]
+    },
+    "high": {
+      "description": "Threat to protocol solvency, not direct theft",
+      "min_reward": 10000,
+      "max_reward": 0,
+      "percentage_tvl": 1,
+      "examples": [
+        "Theft of yield but not principal",
+        "Protocol paused temporarily",
+        "Oracle manipulation",
+        "Sandwich attacks"
+      ]
+    },
+    "medium": {
+      "description": "Significant impact, not high severity",
+      "min_reward": 1000,
+      "max_reward": 0,
+      "examples": [
+        "Griefing attacks",
+        "Oracle delay",
+        "Edge case exploits",
+        "Gas griefing"
+      ]
+    },
+    "low": {
+      "description": "Low impact bugs, informational",
+      "min_reward": 0,
+      "max_reward": 0,
+      "examples": [
+        "Best practice violations",
+        "Comment/typo issues",
+        "Gas optimizations",
+        "Non-impacting design choices"
+      ]
+    }
+  },
+  
+  "audit_history": [
+    {
+      "auditor": "",
+      "date": "",
+      "scope": "",
+      "url": ""
+    }
+  ],
+  
+  "previous_hacks": [],
+  
+  "attack_vectors": {
+    "known_patterns": [],
+    "risk_areas": [],
+    "fork_vulnerabilities": []
+  },
+  
+  "research_notes": {
+    "finding_opportunities": [],
+    "similar_protocols": [],
+    "red_flags": []
+  }
+}
