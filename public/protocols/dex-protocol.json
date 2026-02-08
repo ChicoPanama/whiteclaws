@@ -1,7 +1,7 @@
 {
   "slug": "dex-protocol",
   "name": "DeXe Protocol",
-  "description": "Bounty program for DeXe Protocol",
+  "description": "DAO and social trading protocol enabling collective investments and community-driven asset management",
   "category": "DeFi",
   "chains": [
     "ethereum",

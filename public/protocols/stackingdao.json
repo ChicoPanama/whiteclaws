@@ -1,7 +1,7 @@
 {
   "slug": "stackingdao",
   "name": "StackingDAO",
-  "description": "Bounty program for StackingDAO",
+  "description": "Liquid stacking protocol for Stacks enabling STX staking with BTC rewards and DeFi integrations",
   "category": "DeFi Staking",
   "chains": [
     "stacks"

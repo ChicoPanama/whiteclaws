@@ -1,7 +1,7 @@
 {
   "slug": "origin-protocol",
   "name": "Origin Protocol",
-  "description": "Bounty program for Origin Protocol",
+  "description": "Yield-bearing stablecoin protocol with OUSD and OETH that passively accrues interest while holding",
   "category": "DeFi",
   "chains": [
     "ethereum"

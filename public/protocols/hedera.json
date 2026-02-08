@@ -1,7 +1,7 @@
 {
   "slug": "hedera",
   "name": "Hedera",
-  "description": "Bounty program for Hedera",
+  "description": "Enterprise-grade distributed ledger using hashgraph technology for high-speed, secure transactions",
   "category": "Infrastructure",
   "chains": [
     "hedera"

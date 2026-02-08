@@ -1,7 +1,7 @@
 {
   "slug": "immunefi",
   "name": "Immunefi",
-  "description": "Bounty program for Immunefi",
+  "description": "Leading blockchain security platform and bug bounty marketplace connecting projects with security researchers",
   "category": "Security Platform",
   "chains": [
     "ethereum"

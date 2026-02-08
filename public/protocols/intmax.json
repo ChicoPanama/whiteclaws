@@ -1,7 +1,7 @@
 {
   "slug": "intmax",
   "name": "INTMAX",
-  "description": "Bounty program for INTMAX",
+  "description": "Stateless ZK-rollup shifting data and computation to client with minimal on-chain footprint",
   "category": "Layer 2",
   "chains": [
     "ethereum"

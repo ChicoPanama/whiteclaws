@@ -1,7 +1,7 @@
 {
   "slug": "zest-protocol-v2",
   "name": "Zest Protocol V2",
-  "description": "Bounty program for Zest Protocol V2",
+  "description": "Bitcoin liquidity protocol enabling BTC earning and borrowing with vibrant lending ecosystem",
   "category": "DeFi Lending",
   "chains": [
     "stacks"

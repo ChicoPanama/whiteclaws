@@ -1,7 +1,7 @@
 {
   "slug": "ref-finance",
   "name": "Ref Finance",
-  "description": "Bounty program for Ref Finance",
+  "description": "Community-led multi-purpose DeFi platform on NEAR Protocol combining DEX, lending and synthetic assets",
   "category": "DEX",
   "chains": [
     "near"
