@@ -1,7 +1,7 @@
 {
   "slug": "xion",
   "name": "XION",
-  "description": "Bounty program for XION",
+  "description": "Generalized abstraction Layer 1 blockchain removing crypto complexities through protocol-level chain abstraction and smart accounts",
   "category": "Infrastructure",
   "chains": [
     "cosmos"

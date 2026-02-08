@@ -1,7 +1,7 @@
 {
   "slug": "ens",
   "name": "ENS",
-  "description": "Bounty program for ENS",
+  "description": "Ethereum Name Service - decentralized naming system mapping human-readable names to machine-readable Ethereum addresses",
   "category": "Naming",
   "chains": [
     "ethereum"

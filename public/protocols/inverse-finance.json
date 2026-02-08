@@ -1,7 +1,7 @@
 {
   "slug": "inverse-finance",
   "name": "Inverse Finance",
-  "description": "Bounty program for Inverse Finance",
+  "description": "Fixed-rate DeFi lending protocol with the DOLA stablecoin and novel Personal Collateral Escrow architecture",
   "category": "DeFi",
   "chains": [
     "ethereum"
