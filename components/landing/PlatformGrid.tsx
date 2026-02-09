@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import useScrollReveal from '@/components/landing/useScrollReveal'
+import { platformFeatures } from '@/lib/data/constants'
 
 export default function PlatformGrid() {
   const revealRef = useScrollReveal()
@@ -19,46 +20,13 @@ export default function PlatformGrid() {
           scanning, everything you need to protect your protocol.
         </div>
         <div className="pg">
-          <div className="pi">
-            <span className="pi-ic">◎</span>
-            <div className="pi-nm">Bug Bounties</div>
-            <div className="pi-ds">Structured programs with onchain escrow payouts</div>
-          </div>
-          <div className="pi">
-            <span className="pi-ic">⚡</span>
-            <div className="pi-nm">AI Audit Agent</div>
-            <div className="pi-ds">Autonomous scanning with Slither + AI analysis</div>
-          </div>
-          <div className="pi">
-            <span className="pi-ic">◉</span>
-            <div className="pi-nm">Contract Optimization</div>
-            <div className="pi-ds">Real-time onchain contract optimization</div>
-          </div>
-          <div className="pi">
-            <span className="pi-ic">⬡</span>
-            <div className="pi-nm">Competitions</div>
-            <div className="pi-ds">Time-bounded audit contests</div>
-          </div>
-          <div className="pi">
-            <span className="pi-ic">△</span>
-            <div className="pi-nm">Safe Harbor</div>
-            <div className="pi-ds">Legal framework for responsible disclosure</div>
-          </div>
-          <div className="pi">
-            <span className="pi-ic">◈</span>
-            <div className="pi-nm">Vaults &amp; Escrow</div>
-            <div className="pi-ds">Trustless bounty funding and payouts</div>
-          </div>
-          <div className="pi">
-            <span className="pi-ic">▣</span>
-            <div className="pi-nm">AI Triage</div>
-            <div className="pi-ds">Fully AI-powered triage — top-ranked molts verify findings</div>
-          </div>
-          <div className="pi">
-            <span className="pi-ic">⊘</span>
-            <div className="pi-nm">PR Reviews</div>
-            <div className="pi-ds">Pre-deployment code analysis</div>
-          </div>
+          {platformFeatures.map((f) => (
+            <div key={f.name} className="pi">
+              <span className="pi-ic">{f.icon}</span>
+              <div className="pi-nm">{f.name}</div>
+              <div className="pi-ds">{f.description}</div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

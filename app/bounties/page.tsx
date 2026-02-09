@@ -1,53 +1,46 @@
+import Nav from '@/components/landing/Nav'
 import Footer from '@/components/Footer'
-import { getBounties } from '@/lib/data/bounties'
+import { bounties } from '@/lib/data/constants'
 
-export const dynamic = 'force-dynamic'
+const filters = ['All', 'DeFi', 'L2 / L1', 'Bridge', 'Infrastructure']
 
-export default async function BountiesPage() {
-  const bountyPrograms = await getBounties()
-
+export default function BountiesPage() {
   return (
     <>
-      <div className="explore-page">
-        <h1>Explore Bounties</h1>
-        <p>Find the highest-value bug bounties across DeFi, L2s, bridges, and infrastructure.</p>
-
-        <div style={{ display: 'flex', gap: 8, marginBottom: 20 }}>
-          <input className="search-input" type="text" placeholder="Search protocols, chains, vulnerability types..." />
-          <button className="btn btn-secondary">Filters</button>
-          <button className="btn btn-secondary">Sort: Highest ↓</button>
+      <Nav />
+      <div className="section">
+        <div className="sh">
+          <h2>Explore Bounties</h2>
+          <span className="lk">{bounties.length} programs</span>
         </div>
-
-        <div className="filter-pills" style={{ marginBottom: 20 }}>
-          <button className="pill active">All</button>
-          <button className="pill">DeFi</button>
-          <button className="pill">L2 / L1</button>
-          <button className="pill">Bridge</button>
-          <button className="pill">Infrastructure</button>
-          <button className="pill">Smart Contract</button>
-          <button className="pill">Blockchain</button>
+        <p className="sd-text">
+          Find the highest-value bug bounties across DeFi, L2s, bridges, and infrastructure.
+        </p>
+        <div className="bfs">
+          {filters.map((f) => (
+            <button key={f} className="bf">{f}</button>
+          ))}
+          <span className="bsort">Highest ↓</span>
         </div>
-
-        <div className="explore-grid">
-          {bountyPrograms.map((b) => (
-            <div key={b.id} className="explore-card">
-              <div className="ec-head">
-                <div className="ec-icon">{b.icon}</div>
-                <div className="ec-name">
-                  <h4>{b.name}</h4>
-                  <span>{b.category} · {b.tags?.[0]} · Live since {b.liveSince}</span>
+        <div className="bl">
+          {bounties.map((b) => (
+            <div key={b.id} className="br">
+              <div className="bi">
+                <span style={{ fontSize: 14, fontWeight: 700 }}>{b.icon}</span>
+              </div>
+              <div className="bn-w">
+                <div className="bn">{b.name}</div>
+                <div className="bt">
+                  <span>{Array.isArray(b.category) ? b.category[0] : b.category}</span>
                 </div>
               </div>
-              <div className="ec-reward-bar">
-                <span className="ec-reward-label">Max Bounty</span>
-                <span className="ec-reward-value">{b.maxReward}</span>
-              </div>
-              <div className="ec-tags" style={{ display: 'flex', gap: 4, flexWrap: 'wrap' as const }}>
-                {b.chains.map((c: string) => (
-                  <span key={c} className="tag">{c}</span>
-                ))}
-                {b.language && <span className="tag">{b.language}</span>}
-                {b.type && <span className="tag">{b.type}</span>}
+              <div className="brt">
+                <div className="ba">{b.reward}</div>
+                <div className="bc">
+                  {b.chains.map((c) => (
+                    <span key={c} className="bch">{c}</span>
+                  ))}
+                </div>
               </div>
             </div>
           ))}
