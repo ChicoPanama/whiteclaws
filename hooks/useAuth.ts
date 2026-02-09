@@ -17,11 +17,22 @@ export function useAuth() {
     error: null,
   });
 
-  const supabase = createClient();
+  const hasSupabaseConfig =
+    !!process.env.NEXT_PUBLIC_SUPABASE_URL &&
+    !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+
+  const supabase = hasSupabaseConfig ? createClient() : null;
 
   useEffect(() => {
     // Get initial session
     const getSession = async () => {
+      if (!supabase) {
+        setState(prev => ({
+          ...prev,
+          loading: false,
+        }));
+        return;
+      }
       try {
         const { data: { session }, error } = await supabase.auth.getSession();
         
@@ -46,6 +57,8 @@ export function useAuth() {
     getSession();
 
     // Listen for auth changes
+    if (!supabase) return;
+
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
       (_event, session) => {
         setState(prev => ({
@@ -63,6 +76,9 @@ export function useAuth() {
 
   const signIn = useCallback(async (email: string, password: string) => {
     try {
+      if (!supabase) {
+        return { success: false, error: new Error('Supabase is not configured') };
+      }
       setState(prev => ({ ...prev, loading: true, error: null }));
       
       const { data, error } = await supabase.auth.signInWithPassword({
@@ -91,6 +107,9 @@ export function useAuth() {
 
   const signUp = useCallback(async (email: string, password: string, metadata?: object) => {
     try {
+      if (!supabase) {
+        return { success: false, error: new Error('Supabase is not configured') };
+      }
       setState(prev => ({ ...prev, loading: true, error: null }));
       
       const { data, error } = await supabase.auth.signUp({
@@ -122,6 +141,9 @@ export function useAuth() {
 
   const signOut = useCallback(async () => {
     try {
+      if (!supabase) {
+        return { success: false, error: new Error('Supabase is not configured') };
+      }
       setState(prev => ({ ...prev, loading: true }));
       
       const { error } = await supabase.auth.signOut();
@@ -147,6 +169,9 @@ export function useAuth() {
 
   const signInWithOAuth = useCallback(async (provider: 'twitter' | 'github') => {
     try {
+      if (!supabase) {
+        return { success: false, error: new Error('Supabase is not configured') };
+      }
       setState(prev => ({ ...prev, loading: true, error: null }));
       
       const { data, error } = await supabase.auth.signInWithOAuth({
