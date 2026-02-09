@@ -67,7 +67,7 @@ export default function SubmitPage() {
         }
         
         // Fallback: Load from Supabase
-        const { data } = await getSupabase()
+        const supa = getSupabase(); if (!supa) return; const { data } = await supa
           .from('protocols')
           .select('*')
           .eq('slug', protocolSlug)
@@ -120,7 +120,7 @@ export default function SubmitPage() {
       setIsSubmitting(true)
       
       // Store encrypted payload in Supabase
-      const { data: finding, error: insertError } = await getSupabase()
+      const supa2 = getSupabase(); if (!supa2) throw new Error("Supabase not configured"); const { data: finding, error: insertError } = await supa2
         .from('findings')
         .insert({
           protocol_id: protocol?.id || null,
@@ -145,7 +145,7 @@ export default function SubmitPage() {
       const encryptedBlob = new Blob([JSON.stringify(encrypted)], { type: 'application/json' })
       const filePath = `encrypted-reports/${finding.id}.json`
       
-      const { error: uploadError } = await getSupabase().storage
+      const { error: uploadError } = await (getSupabase() ?? {storage: {from: () => ({upload: async () => ({error: new Error("Supabase not configured")})})}}).storage
         .from('findings')
         .upload(filePath, encryptedBlob, {
           contentType: 'application/json',
