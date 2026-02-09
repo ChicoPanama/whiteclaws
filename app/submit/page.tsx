@@ -5,7 +5,16 @@ import { useRouter } from 'next/navigation'
 import { createClient } from '@/lib/supabase/client'
 import { encryptMessage, generateKeyPair } from '@/lib/crypto'
 
-const supabase = createClient()
+export const dynamic = 'force-dynamic';
+
+// Lazy init Supabase to avoid build-time errors
+let supabase: ReturnType<typeof createClient> | null = null;
+function getSupabase() {
+  if (!supabase && process.env.NEXT_PUBLIC_SUPABASE_URL) {
+    supabase = createClient();
+  }
+  return supabase;
+}
 
 type ProtocolData = { id?: string
   slug: string
@@ -58,7 +67,7 @@ export default function SubmitPage() {
         }
         
         // Fallback: Load from Supabase
-        const { data } = await supabase
+        const { data } = await getSupabase()
           .from('protocols')
           .select('*')
           .eq('slug', protocolSlug)
@@ -111,7 +120,7 @@ export default function SubmitPage() {
       setIsSubmitting(true)
       
       // Store encrypted payload in Supabase
-      const { data: finding, error: insertError } = await supabase
+      const { data: finding, error: insertError } = await getSupabase()
         .from('findings')
         .insert({
           protocol_id: protocol?.id || null,
@@ -136,7 +145,7 @@ export default function SubmitPage() {
       const encryptedBlob = new Blob([JSON.stringify(encrypted)], { type: 'application/json' })
       const filePath = `encrypted-reports/${finding.id}.json`
       
-      const { error: uploadError } = await supabase.storage
+      const { error: uploadError } = await getSupabase().storage
         .from('findings')
         .upload(filePath, encryptedBlob, {
           contentType: 'application/json',
