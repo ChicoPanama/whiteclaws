@@ -1,6 +1,11 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import Link from 'next/link'
+import PageShell from '@/components/shell/PageShell'
+import Button from '@/components/ui/Button'
+import Card from '@/components/ui/Card'
+import Input from '@/components/ui/Input'
 import { useWhiteClaws } from '@/lib/web3/hooks'
 import { getAccessStatus, mintAccess } from '@/lib/data/access'
 import { useAuth } from '@/hooks/useAuth'
@@ -36,41 +41,59 @@ export default function AccessPage() {
 
   if (!isAuthenticated) {
     return (
-      <div className="nb">
-        <h2>Log in required</h2>
-        <p>Sign in to manage access licensing for your agents.</p>
-        <a href="/login" className="btn btn-g" style={{ marginTop: 16, display: 'inline-flex' }}>
-          Log In →
-        </a>
-      </div>
+      <PageShell
+        title="Access license"
+        subtitle="Sign in to manage access licensing for your agents."
+        actions={
+          <Button as={Link} href="/login" variant="primary">
+            Log in
+          </Button>
+        }
+      >
+        <Card>
+          <div className="ui-card-title">Log in required</div>
+          <div className="ui-card-subtitle">
+            Sign in to manage access licensing for your agents.
+          </div>
+        </Card>
+      </PageShell>
     )
   }
 
   return (
-    <div className="nb">
-      <h3>Access License</h3>
-      <p>Access is provided via a non-transferable SBT license.</p>
-      <div className="nr" style={{ marginTop: 12 }}>
-        <button className="nbtn" onClick={connect} type="button">
-          {address ? 'Wallet Connected' : 'Connect Wallet'}
-        </button>
-        <span className="ni" style={{ display: 'flex', alignItems: 'center' }}>
-          {address ?? 'No wallet connected'}
-        </span>
-      </div>
-
-      <div style={{ marginTop: 16 }}>
-        <strong>Status:</strong>{' '}
-        {status === 'loading' ? 'Checking...' : hasAccess ? 'Access Active ✅' : 'Not licensed'}
-      </div>
-
-      {!hasAccess && (
-        <button className="btn btn-g" style={{ marginTop: 16 }} onClick={handleMint} type="button">
-          Mint Access SBT (burn ~$20 worth of token)
-        </button>
-      )}
-
-      {message && <p style={{ marginTop: 12 }}>{message}</p>}
-    </div>
+    <PageShell
+      title="Access license"
+      subtitle="Access is provided via a non-transferable SBT license."
+      actions={
+        <Button as={Link} href="/app/agents" variant="outline">
+          Manage agents
+        </Button>
+      }
+    >
+      <Card>
+        <div className="ui-card-title">Wallet connection</div>
+        <div className="ui-card-subtitle">
+          Connect a wallet to check the access license status for this workspace.
+        </div>
+        <div className="page-filters">
+          <Button onClick={connect} variant="ghost">
+            {address ? 'Wallet Connected' : 'Connect Wallet'}
+          </Button>
+          <Input value={address ?? ''} readOnly placeholder="No wallet connected" />
+        </div>
+        <div className="ui-card-meta">
+          <span>Status:</span>
+          <strong>
+            {status === 'loading' ? 'Checking...' : hasAccess ? 'Access Active ✅' : 'Not licensed'}
+          </strong>
+        </div>
+        {!hasAccess && (
+          <Button onClick={handleMint} variant="outline">
+            Mint Access SBT (burn ~$20 worth of token)
+          </Button>
+        )}
+        {message && <p className="ui-card-subtitle">{message}</p>}
+      </Card>
+    </PageShell>
   )
 }

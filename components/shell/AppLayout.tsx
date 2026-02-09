@@ -1,6 +1,7 @@
 import SiteNav from '@/components/nav/SiteNav'
 import LandingFooter from '@/components/landing/Footer'
 import Link from 'next/link'
+import Button from '@/components/ui/Button'
 
 const appLinks = [
   { label: 'Dashboard', href: '/app' },
@@ -16,9 +17,9 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
       <div className="section" style={{ paddingTop: 40, borderBottom: 'none' }}>
         <div className="flex flex-wrap gap-4 mb-8">
           {appLinks.map((link) => (
-            <Link key={link.href} href={link.href} className="btn btn-w">
+            <Button key={link.href} as={Link} href={link.href} variant="outline" size="sm">
               {link.label}
-            </Link>
+            </Button>
           ))}
         </div>
         {children}

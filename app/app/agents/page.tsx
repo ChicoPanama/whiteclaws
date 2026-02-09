@@ -1,6 +1,11 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import Link from 'next/link'
+import PageShell from '@/components/shell/PageShell'
+import Button from '@/components/ui/Button'
+import Card from '@/components/ui/Card'
+import Input from '@/components/ui/Input'
 import { createAgent, createWalletForAgent, getAgents, AgentRecord } from '@/lib/data/agents'
 import { useAuth } from '@/hooks/useAuth'
 
@@ -42,56 +47,75 @@ export default function AgentsPage() {
 
   if (!isAuthenticated) {
     return (
-      <div className="nb">
-        <h2>Log in required</h2>
-        <p>Sign in to create and manage agent wallets.</p>
-        <a href="/login" className="btn btn-g" style={{ marginTop: 16, display: 'inline-flex' }}>
-          Log In →
-        </a>
-      </div>
+      <PageShell
+        title="Agents"
+        subtitle="Sign in to create and manage agent wallets."
+        actions={
+          <Button as={Link} href="/login" variant="primary">
+            Log in
+          </Button>
+        }
+      >
+        <Card>
+          <div className="ui-card-title">Log in required</div>
+          <div className="ui-card-subtitle">Sign in to create and manage agent wallets.</div>
+        </Card>
+      </PageShell>
     )
   }
 
   return (
-    <div className="dg">
-      <div className="nb">
-        <h3>Create Agent</h3>
-        <p>Name and register a new agent before assigning an EVM wallet.</p>
-        <div className="nr">
-          <input
-            className="ni"
+    <PageShell
+      title="Agents"
+      subtitle="Provision and manage autonomous agents for continuous monitoring."
+      actions={
+        <Button as={Link} href="/app/access" variant="outline">
+          Access licensing
+        </Button>
+      }
+    >
+      <Card>
+        <div className="ui-card-title">Create agent</div>
+        <div className="ui-card-subtitle">
+          Name and register a new agent before assigning an EVM wallet.
+        </div>
+        <div className="page-filters">
+          <Input
             value={name}
             onChange={(event) => setName(event.target.value)}
             placeholder="Agent name"
+            aria-label="Agent name"
           />
-          <button className="nbtn" onClick={handleCreate} disabled={loading}>
-            Create
-          </button>
+          <Button onClick={handleCreate} disabled={loading}>
+            {loading ? 'Creating...' : 'Create'}
+          </Button>
         </div>
-      </div>
+      </Card>
 
-      {agents.map((agent) => (
-        <div key={agent.id} className="terminal">
-          <div className="tb">
-            <span className="td r"></span>
-            <span className="td y"></span>
-            <span className="td g"></span>
-            <span className="tl">{agent.name}</span>
-          </div>
-          <div className="tc">
-            <div>Status: {agent.status}</div>
-            <div>Wallet: {agent.walletAddress ?? 'Not created'}</div>
-            <button
-              className="tcopy"
-              type="button"
-              onClick={() => handleWallet(agent.id)}
-              disabled={loading || !!agent.walletAddress}
-            >
-              {agent.walletAddress ? 'Wallet Ready' : 'Create Agent Wallet'}
-            </button>
-          </div>
-        </div>
-      ))}
-    </div>
+      <div className="page-grid">
+        {agents.map((agent) => (
+          <Card key={agent.id} className="terminal">
+            <div className="tb">
+              <span className="td r"></span>
+              <span className="td y"></span>
+              <span className="td g"></span>
+              <span className="tl">{agent.name}</span>
+            </div>
+            <div className="tc">
+              <div>Status: {agent.status}</div>
+              <div>Wallet: {agent.walletAddress ?? 'Not created'}</div>
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => handleWallet(agent.id)}
+                disabled={loading || !!agent.walletAddress}
+              >
+                {agent.walletAddress ? 'Wallet Ready' : 'Create Agent Wallet'}
+              </Button>
+            </div>
+          </Card>
+        ))}
+      </div>
+    </PageShell>
   )
 }
