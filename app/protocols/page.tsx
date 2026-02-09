@@ -1,82 +1,51 @@
 import Link from 'next/link'
 import SiteLayout from '@/components/shell/SiteLayout'
-import { createClient } from '@/lib/supabase/server'
-
-export const dynamic = 'force-dynamic'
-
-const hasSupabaseConfig =
-  !!process.env.NEXT_PUBLIC_SUPABASE_URL &&
-  !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
-
-const mockProtocols = [
-  {
-    id: '1',
-    name: 'SSV Network',
-    slug: 'ssv-network',
-    description: 'Distributed validator infrastructure for Ethereum',
-    chain: 'Ethereum',
-    bountyPool: 1000000,
-  },
-  {
-    id: '2',
-    name: 'Uniswap',
-    slug: 'uniswap',
-    description: 'Decentralized exchange protocol',
-    chain: 'Ethereum',
-    bountyPool: 2500000,
-  },
-]
-
-async function getProtocols() {
-  if (!hasSupabaseConfig) {
-    return mockProtocols
-  }
-
-  const supabase = createClient()
-  const { data, error } = await supabase
-    .from('protocols')
-    .select('id,name,slug,description,chains,max_bounty')
-    .order('name')
-
-  if (error) {
-    throw error
-  }
-
-  return (data ?? []).map((protocol) => ({
-    id: protocol.id,
-    name: protocol.name,
-    slug: protocol.slug,
-    description: protocol.description ?? 'No description provided.',
-    chain: protocol.chains?.[0] ?? 'Multi-chain',
-    bountyPool: protocol.max_bounty ?? 0,
-  }))
-}
+import PageShell from '@/components/shell/PageShell'
+import Card from '@/components/ui/Card'
+import Button from '@/components/ui/Button'
+import { loadProjectsIndex } from '@/lib/content/fsIndex'
 
 export default async function ProtocolsPage() {
-  const protocols = await getProtocols()
+  const protocols = loadProjectsIndex().sort((a, b) => a.name.localeCompare(b.name))
 
   return (
     <SiteLayout>
-      <div className="section-reveal visible">
-        <div className="sh">
-          <span className="num">Protocols</span>
-          <h2>Active Programs</h2>
-          <span className="lk">Explore</span>
-        </div>
-        <div className="dg">
+      <PageShell
+        title="Active programs"
+        subtitle="Explore protocol profiles, scope coverage, and linked resources."
+        actions={
+          <Button as={Link} href="/bounties" variant="outline">
+            View bounties
+          </Button>
+        }
+      >
+        <div className="page-grid">
           {protocols.map((protocol) => (
-            <div key={protocol.id} className="nb">
-              <h3>{protocol.name}</h3>
-              <p>{protocol.description}</p>
-              <p style={{ marginTop: 12 }}>Chain: {protocol.chain}</p>
-              <p>Max bounty: ${protocol.bountyPool.toLocaleString()}</p>
-              <Link href={`/bounties/${protocol.slug}`} className="btn btn-w" style={{ marginTop: 16, display: 'inline-flex' }}>
-                View Bounty →
-              </Link>
-            </div>
+            <Card key={protocol.slug} as={Link} href={`/protocols/${protocol.slug}`} interactive>
+              <div className="ui-card-meta">
+                {protocol.tags.map((tag) => (
+                  <span key={tag} className="ui-card-badge">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+              <div className="ui-card-title">{protocol.name}</div>
+              <div className="ui-card-subtitle">{protocol.description || 'No description yet.'}</div>
+              <div className="ui-card-meta">
+                {protocol.chains.length > 0 ? (
+                  protocol.chains.map((chain) => (
+                    <span key={chain} className="ui-card-badge">
+                      {chain}
+                    </span>
+                  ))
+                ) : (
+                  <span className="ui-card-badge">Multi-chain</span>
+                )}
+              </div>
+            </Card>
           ))}
         </div>
-      </div>
+      </PageShell>
     </SiteLayout>
   )
 }
