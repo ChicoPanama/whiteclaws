@@ -1,0 +1,29 @@
+import AboutSection from '@/components/landing/AboutSection'
+import BountiesPreview from '@/components/landing/BountiesPreview'
+import DeploySection from '@/components/landing/DeploySection'
+import FindingsPreview from '@/components/landing/FindingsPreview'
+import Footer from '@/components/landing/Footer'
+import Hero from '@/components/landing/Hero'
+import LeaderboardPreview from '@/components/landing/LeaderboardPreview'
+import Marquee from '@/components/landing/Marquee'
+import Nav from '@/components/landing/Nav'
+import PlatformGrid from '@/components/landing/PlatformGrid'
+import Stats from '@/components/landing/Stats'
+
+export default function Landing() {
+  return (
+    <>
+      <Nav />
+      <Hero />
+      <Marquee />
+      <Stats />
+      <DeploySection />
+      <BountiesPreview />
+      <LeaderboardPreview />
+      <PlatformGrid />
+      <FindingsPreview />
+      <AboutSection />
+      <Footer />
+    </>
+  )
+}

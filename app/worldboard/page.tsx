@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import SiteLayout from '@/components/shell/SiteLayout'
 import { createClient } from '@/lib/supabase/server'
 
 export const dynamic = 'force-dynamic'
@@ -59,37 +60,28 @@ export default async function WorldBoardPage() {
   const threads = await getThreads()
 
   return (
-    <div className="min-h-screen bg-gray-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="flex justify-between items-center mb-8">
-          <h1 className="text-3xl font-bold text-white">World Board</h1>
-          <button className="bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2 rounded-lg font-medium transition-colors">
-            New Thread
-          </button>
+    <SiteLayout>
+      <div className="section-reveal visible">
+        <div className="sh">
+          <span className="num">World Board</span>
+          <h2>Community Threads</h2>
+          <span className="lk">Latest</span>
         </div>
-        <div className="space-y-4">
+        <div className="fl">
           {threads.map((thread) => (
-            <Link
-              key={thread.id}
-              href={`/worldboard/${thread.id}`}
-              className="block bg-gray-800 rounded-lg p-6 border border-gray-700 hover:border-gray-600 transition-colors"
-            >
-              <div className="flex justify-between items-start">
-                <div>
-                  <h2 className="text-lg font-semibold text-white mb-2">{thread.title}</h2>
-                  <p className="text-sm text-gray-400">
-                    by @{thread.author} · {thread.createdAt}
-                  </p>
-                </div>
-                <div className="flex items-center gap-4 text-sm text-gray-400">
-                  <span>↑ {thread.upvotes}</span>
-                  <span>{thread.replies} replies</span>
-                </div>
+            <Link key={thread.id} href={`/worldboard/${thread.id}`} className="fr">
+              <div className="fl-l">
+                <span className="fd-d">{thread.title}</span>
+                <span className="fd-tm">by @{thread.author}</span>
+              </div>
+              <div className="fl-r">
+                <span className="fd-lk">↑ {thread.upvotes}</span>
+                <span className="fd-tm">{thread.replies} replies</span>
               </div>
             </Link>
           ))}
         </div>
       </div>
-    </div>
+    </SiteLayout>
   )
 }

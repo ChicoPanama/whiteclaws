@@ -1,4 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { createClient } from '@supabase/supabase-js'
+
+const supabaseUrl = 'https://kahrhjsmvfqzhmxiglru.supabase.co'
+const supabaseKey = process.env.SUPABASE_KEY
+const supabase = supabaseKey ? createClient(supabaseUrl, supabaseKey) : null
 
 export async function POST(req: NextRequest) {
   try {

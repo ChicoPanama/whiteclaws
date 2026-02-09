@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import SiteLayout from '@/components/shell/SiteLayout'
 import { createClient } from '@/lib/supabase/server'
 
 export const dynamic = 'force-dynamic'
@@ -15,7 +16,6 @@ const mockProtocols = [
     description: 'Distributed validator infrastructure for Ethereum',
     chain: 'Ethereum',
     bountyPool: 1000000,
-    severity: 'critical',
   },
   {
     id: '2',
@@ -24,7 +24,6 @@ const mockProtocols = [
     description: 'Decentralized exchange protocol',
     chain: 'Ethereum',
     bountyPool: 2500000,
-    severity: 'critical',
   },
 ]
 
@@ -50,7 +49,6 @@ async function getProtocols() {
     description: protocol.description ?? 'No description provided.',
     chain: protocol.chains?.[0] ?? 'Multi-chain',
     bountyPool: protocol.max_bounty ?? 0,
-    severity: 'critical',
   }))
 }
 
@@ -58,31 +56,27 @@ export default async function ProtocolsPage() {
   const protocols = await getProtocols()
 
   return (
-    <div className="min-h-screen bg-gray-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <h1 className="text-3xl font-bold text-white mb-8">Protocols</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <SiteLayout>
+      <div className="section-reveal visible">
+        <div className="sh">
+          <span className="num">Protocols</span>
+          <h2>Active Programs</h2>
+          <span className="lk">Explore</span>
+        </div>
+        <div className="dg">
           {protocols.map((protocol) => (
-            <Link
-              key={protocol.id}
-              href={`/protocols/${protocol.slug}`}
-              className="block bg-gray-800 rounded-lg p-6 border border-gray-700 hover:border-gray-600 transition-colors"
-            >
-              <div className="flex justify-between items-start mb-4">
-                <h2 className="text-xl font-semibold text-white">{protocol.name}</h2>
-                <span className="bg-green-500/20 text-green-400 text-xs px-2 py-1 rounded">
-                  {protocol.severity}
-                </span>
-              </div>
-              <p className="text-gray-400 text-sm mb-4">{protocol.description}</p>
-              <div className="flex justify-between text-sm">
-                <span className="text-gray-500">{protocol.chain}</span>
-                <span className="text-white">${protocol.bountyPool.toLocaleString()}</span>
-              </div>
-            </Link>
+            <div key={protocol.id} className="nb">
+              <h3>{protocol.name}</h3>
+              <p>{protocol.description}</p>
+              <p style={{ marginTop: 12 }}>Chain: {protocol.chain}</p>
+              <p>Max bounty: ${protocol.bountyPool.toLocaleString()}</p>
+              <Link href={`/bounties/${protocol.slug}`} className="btn btn-w" style={{ marginTop: 16, display: 'inline-flex' }}>
+                View Bounty →
+              </Link>
+            </div>
           ))}
         </div>
       </div>
-    </div>
+    </SiteLayout>
   )
 }

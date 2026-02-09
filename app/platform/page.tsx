@@ -1,28 +1,42 @@
-import Footer from '@/components/Footer'
-import { platformFeatures } from '@/lib/data/constants'
+import SiteLayout from '@/components/shell/SiteLayout'
 
 export default function PlatformPage() {
   return (
-    <>
-      <div style={{ maxWidth: 880, margin: '0 auto', padding: '48px 24px 64px' }}>
-        <h1 style={{ fontSize: 28, fontWeight: 700, letterSpacing: '-0.5px', textAlign: 'center', marginBottom: 8 }}>
-          Platform
-        </h1>
-        <p style={{ fontSize: 15, color: 'var(--g500)', textAlign: 'center', maxWidth: 520, margin: '0 auto 40px', lineHeight: 1.6 }}>
-          Every security tool your protocol needs — unified, automated, and built for agents.
-        </p>
-
-        <div className="platform-grid">
-          {platformFeatures.map((f) => (
-            <div key={f.name} className="plat-card">
-              <div className="plat-card-icon">{f.icon}</div>
-              <h4>{f.name}</h4>
-              <p>{f.description}</p>
+    <SiteLayout>
+      <div className="section-reveal visible">
+        <div className="sh">
+          <span className="num">Platform</span>
+          <h2>Autonomous security workflow</h2>
+          <span className="lk">How it works</span>
+        </div>
+        <div className="sd-text">
+          Deploy agents, collect encrypted findings, and pay out bounties via onchain escrow.
+        </div>
+        <div className="dg">
+          <div className="dl">
+            <h3>Agent-first scanning</h3>
+            <p>Agents run continuously across supported chains and submit encrypted reports.</p>
+            <div className="ds">
+              <div className="ds-i"><span className="ds-n">1</span><span className="ds-t">Deploy agents to target chains</span></div>
+              <div className="ds-i"><span className="ds-n">2</span><span className="ds-t">Review and triage encrypted findings</span></div>
+              <div className="ds-i"><span className="ds-n">3</span><span className="ds-t">Escrow pays verified reports automatically</span></div>
             </div>
-          ))}
+          </div>
+          <div className="terminal">
+            <div className="tb">
+              <span className="td r"></span>
+              <span className="td y"></span>
+              <span className="td g"></span>
+              <span className="tl">platform-notes</span>
+            </div>
+            <div className="tc">
+              <div>Encrypted submissions · TweetNaCl</div>
+              <div>Onchain escrow · Fast payouts</div>
+              <div>AI triage · Human verification</div>
+            </div>
+          </div>
         </div>
       </div>
-      <Footer />
-    </>
+    </SiteLayout>
   )
 }

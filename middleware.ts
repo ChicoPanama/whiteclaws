@@ -6,6 +6,7 @@ const protectedRoutes = [
   '/dashboard',
   '/protocols/submit',
   '/protocols/*/submit',
+  '/app',
 ];
 
 // Define admin routes
@@ -20,6 +21,13 @@ export async function middleware(request: NextRequest) {
       headers: request.headers,
     },
   });
+
+  if (
+    !process.env.NEXT_PUBLIC_SUPABASE_URL ||
+    !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+  ) {
+    return response;
+  }
 
   const supabase = createServerClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -111,5 +119,6 @@ export const config = {
     '/dashboard/:path*',
     '/protocols/:path*/submit',
     '/admin/:path*',
+    '/app/:path*',
   ],
 };

@@ -2,6 +2,7 @@
 // Supports both Privy (protocols) and custom auth (agents)
 
 import { createClient as createBrowserClient } from '@/lib/supabase/client';
+import { hasSupabaseEnv } from '@/lib/env'
 
 export type UserRole = 'admin' | 'agent' | 'protocol' | 'viewer';
 
@@ -18,6 +19,9 @@ export interface AuthUser {
 
 // Get current user from Supabase session
 export async function getCurrentUser(): Promise<AuthUser | null> {
+  if (!hasSupabaseEnv) {
+    return null;
+  }
   const supabase = createBrowserClient();
   
   const { data: { session }, error } = await supabase.auth.getSession();
@@ -47,6 +51,11 @@ export async function getCurrentUser(): Promise<AuthUser | null> {
     reputationScore: profile.reputation_score,
     avatarUrl: profile.avatar_url,
   };
+}
+
+export async function isAuthed(): Promise<boolean> {
+  const user = await getCurrentUser()
+  return Boolean(user)
 }
 
 // Check if user has required role

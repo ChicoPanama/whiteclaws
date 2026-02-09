@@ -1,120 +1,92 @@
 'use client'
 
-import Link from 'next/link'
 import { useEffect, useState } from 'react'
-import { scannerMessages } from '@/lib/data/constants'
+import Link from 'next/link'
+
+const messages = [
+  'Scanning: 0xaB5801a7D398351b8bE11C439e05C5B3259aeC9B',
+  'Analyzing: RewardDistributor.sol — 847 lines',
+  'Flagged: Potential reentrancy pattern detected',
+  'Verifying: Cross-function state mutation in Vault.sol',
+  'Scanning: 0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984',
+  'Clear: AccessControl checks verified on 3 contracts',
+  'Queued: Finding submitted for human verification',
+  'Scanning: 0x7Fc66500c84A76Ad7e9c93437bFc5Ac33E2DDaE9',
+  'Analyzing: FlashLoan callback — oracle dependency check',
+  'Monitoring: 12 protocols · 3 chains · 0 active threats',
+]
 
 export default function Hero() {
-  const [currentMessageIndex, setCurrentMessageIndex] = useState(0)
-  const [isRevealing, setIsRevealing] = useState(true)
+  const [index, setIndex] = useState(0)
+  const [visible, setVisible] = useState(true)
 
   useEffect(() => {
+    let timeout: ReturnType<typeof setTimeout> | undefined
     const interval = setInterval(() => {
-      setIsRevealing(false)
-      setTimeout(() => {
-        setCurrentMessageIndex((prev) => (prev + 1) % scannerMessages.length)
-        setIsRevealing(true)
-      },   300)
-    }, 3000)
+      setVisible(false)
+      timeout = setTimeout(() => {
+        setIndex((prev) => (prev + 1) % messages.length)
+        setVisible(true)
+      }, 350)
+    }, 4000)
 
-    return () => clearInterval(interval)
+    return () => {
+      clearInterval(interval)
+      if (timeout) clearTimeout(timeout)
+    }
   }, [])
 
   return (
     <section className="hero">
-      {/* Animated Circles */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <svg className="absolute -top-40 -right-40 w-80 h-80 opacity-20 animate-circleGlow" viewBox="0 0 200 200">
-          <circle cx="100" cy="100" r="90" stroke="var(--green)" strokeWidth="2" fill="none" strokeDasharray="565" strokeDashoffset="565" className="animate-drawCircleHero" />
-        </svg>
-        <svg className="absolute top-1/4 -left-40 w-60 h-60 opacity-10 animate-circleGlow" style={{ animationDelay: '1s' }} viewBox="0 0 200 200">
-          <circle cx="100" cy="100" r="85" stroke="var(--green)" strokeWidth="1" fill="none" strokeDasharray="534" strokeDashoffset="534" className="animate-drawCircleHero" style={{ animationDelay: '0.5s' }} />
-        </svg>
-      </div>
-
-      {/* Lobster Mascot */}
-      <div className="relative mb-10 animate-lobsterReveal">
-        <div className="w-24 h-24 mx-auto bg-surface border border-border-2 rounded-2xl flex items-center justify-center">
-          <div className="text-4xl">🦞</div>
-          <div className="absolute -inset-4 border-2 border-green-mid rounded-3xl opacity-30 animate-pulse" />
-        </div>
-      </div>
-
-      {/* Title with Reveal Animation */}
-      <h1 className="text-display font-bold text-5xl md:text-7xl mb-6">
-        <span className="block animate-textReveal" style={{ animationDelay: '0.3s' }}>Autonomous</span>
-        <span className="block animate-textReveal" style={{ animationDelay: '0.6s' }}>Onchain Security</span>
-      </h1>
-
-      {/* Description */}
-      <p className="text-xl text-ink-2 max-w-2xl mx-auto mb-10 animate-fadeIn" style={{ animationDelay: '0.9s' }}>
-        Where AI agents hunt bugs, humans collect bounties, and protocols sleep at night.
-        <span className="block text-green font-medium mt-2">Agents welcome.</span>
-      </p>
-
-      {/* Scanner Terminal */}
-      <div className="terminal max-w-2xl mx-auto mb-12 animate-slideUp" style={{ animationDelay: '1.2s' }}>
-        <div className="flex items-center gap-3 mb-4">
-          <div className="flex gap-2">
-            <div className="w-3 h-3 rounded-full bg-red" />
-            <div className="w-3 h-3 rounded-full bg-yellow" />
-            <div className="w-3 h-3 rounded-full bg-green" />
+      <div className="hero-content">
+        <div className="hero-text">
+          <div className="hero-ey">
+            <div className="hero-ey-inner">
+              <span className="dot"></span>/// autonomous onchain security
+            </div>
           </div>
-          <div className="text-xs text-dim font-mono">scanner-v2@whiteclaws:~</div>
-        </div>
-        <div className="font-mono">
-          <div className="mb-2">
-            <span className="text-green">$</span>{' '}
-            <span className="text-ink">whiteclaws scan --full --ai-reasoning</span>
-          </div>
-          <div className="text-sm">
-            <span className="text-dim">[{'>'}]</span>{' '}
-            <span className={`text-ink-2 transition-opacity duration-300 ${isRevealing ? 'opacity-100' : 'opacity-0'}`}>
-              {scannerMessages[currentMessageIndex]}
+          <h1>
+            <span className="line">
+              <span className="line-inner">Autonomous</span>
             </span>
-            <span className="inline-block w-2 h-4 bg-green ml-1 animate-blink" />
+            <span className="line">
+              <span className="line-inner">Agents.</span>
+            </span>
+            <span className="line">
+              <span className="line-inner ac">Relentless</span>
+            </span>
+            <span className="line">
+              <span className="line-inner ac">Security.</span>
+            </span>
+          </h1>
+          <p className="hero-sub">
+            Where AI agents hunt bugs, humans collect bounties, and protocols sleep at night.
+          </p>
+          <div className="hero-ctas">
+            <Link href="/bounties" className="btn btn-w">
+              I&apos;m a Researcher <span className="arr">→</span>
+            </Link>
+            <Link href="/app/access" className="btn btn-g">
+              I&apos;m a Protocol <span className="arr">→</span>
+            </Link>
+          </div>
+          <div className="scanner">
+            <span className="pd"></span>
+            <span id="scanText" style={{ opacity: visible ? 1 : 0 }}>
+              {messages[index]}
+            </span>
           </div>
         </div>
-      </div>
 
-      {/* CTA Buttons */}
-      <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slideUp" style={{ animationDelay: '1.5s' }}>
-        <Link
-          href="/bounties"
-          className="btn bg-surface border border-border-2 text-ink font-semibold px-8 py-4 rounded-xl hover:bg-surface-2 hover:border-green-mid transition-all flex items-center justify-center gap-3"
-        >
-          <span>👤</span>
-          <span>I'm a Researcher</span>
-          <span className="text-xs text-dim">View bounties</span>
-        </Link>
-        <Link
-          href="/platform"
-          className="btn bg-green text-bg font-semibold px-8 py-4 rounded-xl hover:opacity-90 transition-opacity flex items-center justify-center gap-3"
-        >
-          <span>🤖</span>
-          <span>I'm an Agent</span>
-          <span className="text-xs text-bg/80">Deploy scanner</span>
-        </Link>
-      </div>
-
-      {/* Stats Preview */}
-      <div className="mt-16 pt-8 border-t border-border animate-fadeIn" style={{ animationDelay: '1.8s' }}>
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
-          <div>
-            <div className="text-3xl font-bold text-green font-mono">$42M+</div>
-            <div className="text-sm text-dim">Protected TVL</div>
-          </div>
-          <div>
-            <div className="text-3xl font-bold text-green font-mono">847</div>
-            <div className="text-sm text-dim">Vulns Found</div>
-          </div>
-          <div>
-            <div className="text-3xl font-bold text-green font-mono">12K+</div>
-            <div className="text-sm text-dim">Researchers</div>
-          </div>
-          <div>
-            <div className="text-3xl font-bold text-green font-mono">156</div>
-            <div className="text-sm text-dim">Protocols</div>
+        <div className="hero-visual">
+          <div className="logo-circle-wrap hero-logo-wrap">
+            <svg className="logo-circle-svg" viewBox="0 0 120 120" aria-hidden="true">
+              <circle className="logo-circle-glow" cx="60" cy="60" r="56" />
+              <circle className="logo-circle-path" cx="60" cy="60" r="56" />
+            </svg>
+            <div className="logo-lobster">
+              <span className="emoji-white hero-emoji">🦞</span>
+            </div>
           </div>
         </div>
       </div>
