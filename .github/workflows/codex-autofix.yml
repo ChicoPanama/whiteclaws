@@ -1,0 +1,61 @@
+name: Codex Autofix
+
+on:
+  workflow_run:
+    workflows:
+      - CI Build
+      - Vercel Preview Deploy
+      - Vercel Production Deploy
+    types:
+      - completed
+
+jobs:
+  autofix:
+    if: ${{ github.event.workflow_run.conclusion == 'failure' }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Fetch latest Vercel deployment events
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+        run: |
+          set -euo pipefail
+          DEPLOY_JSON=$(curl -sS "https://api.vercel.com/v6/deployments?project=${VERCEL_PROJECT_ID}&limit=1" \
+            -H "Authorization: Bearer ${VERCEL_TOKEN}")
+          DEPLOY_ID=$(echo "$DEPLOY_JSON" | jq -r '.deployments[0].uid')
+          curl -sS "https://api.vercel.com/v3/deployments/${DEPLOY_ID}/events" \
+            -H "Authorization: Bearer ${VERCEL_TOKEN}" > vercel-events.json
+          jq -r '.[]?.payload?.text // empty' vercel-events.json > vercel-events.log
+
+      - name: Upload Vercel events
+        uses: actions/upload-artifact@v4
+        with:
+          name: vercel-events
+          path: |
+            vercel-events.json
+            vercel-events.log
+
+      - name: Run Codex Autofix
+        uses: openai/codex-action@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          prompt: |
+            The workflow failed. Use the attached vercel-events.log to identify the first real error and apply the minimal fix.
+            Do not change architecture. Do not add pages/.
+            Ensure missing env vars are guarded.
+
+      - name: Create PR for fixes
+        uses: peter-evans/create-pull-request@v6
+        with:
+          title: "Autofix: resolve CI/Vercel failure"
+          commit-message: "Autofix: resolve CI/Vercel failure"
+          branch: "codex-autofix/${{ github.run_id }}"
+          body: |
+            Automated fix for a failed CI/Vercel run.
+            Logs: see vercel-events artifact in the triggering workflow.
