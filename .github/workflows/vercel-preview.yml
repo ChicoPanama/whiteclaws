@@ -30,6 +30,11 @@ jobs:
           VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
         run: |
           set -o pipefail
+          if [ -z "${VERCEL_TOKEN}" ]; then
+            echo "Vercel token not available; skipping preview deploy."
+            echo "url=" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
           DEPLOY_OUTPUT=$(npx vercel deploy --token "$VERCEL_TOKEN" --yes --confirm)
           echo "${DEPLOY_OUTPUT}"
           DEPLOY_URL=$(echo "$DEPLOY_OUTPUT" | tail -n 1)
