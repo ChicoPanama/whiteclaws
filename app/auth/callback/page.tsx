@@ -6,9 +6,18 @@ import { createClient } from '@/lib/supabase/client';
 
 export default function AuthCallbackPage() {
   const router = useRouter();
+  const hasSupabaseConfig =
+    !!process.env.NEXT_PUBLIC_SUPABASE_URL &&
+    !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
   useEffect(() => {
     const handleAuthCallback = async () => {
+      if (!hasSupabaseConfig) {
+        console.warn('Supabase is not configured. Skipping auth callback.');
+        router.push('/login?error=supabase');
+        return;
+      }
+
       const supabase = createClient();
       
       // Exchange the code for a session

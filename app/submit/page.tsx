@@ -5,12 +5,16 @@ import { useRouter } from 'next/navigation'
 import { createClient } from '@/lib/supabase/client'
 import { encryptMessage, generateKeyPair } from '@/lib/crypto'
 
-export const dynamic = 'force-dynamic';
+export const dynamic = 'force-dynamic'
+
+const hasSupabaseConfig =
+  !!process.env.NEXT_PUBLIC_SUPABASE_URL &&
+  !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
 
 // Lazy init Supabase to avoid build-time errors
 let supabase: ReturnType<typeof createClient> | null = null;
 function getSupabase() {
-  if (!supabase && process.env.NEXT_PUBLIC_SUPABASE_URL) {
+  if (!supabase && hasSupabaseConfig) {
     supabase = createClient();
   }
   return supabase;
@@ -67,7 +71,9 @@ export default function SubmitPage() {
         }
         
         // Fallback: Load from Supabase
-        const supa = getSupabase(); if (!supa) return; const { data } = await supa
+        const supa = getSupabase()
+        if (!supa) return
+        const { data } = await supa
           .from('protocols')
           .select('*')
           .eq('slug', protocolSlug)
@@ -120,7 +126,9 @@ export default function SubmitPage() {
       setIsSubmitting(true)
       
       // Store encrypted payload in Supabase
-      const supa2 = getSupabase(); if (!supa2) throw new Error("Supabase not configured"); const { data: finding, error: insertError } = await supa2
+      const supa2 = getSupabase()
+      if (!supa2) throw new Error('Supabase not configured')
+      const { data: finding, error: insertError } = await supa2
         .from('findings')
         .insert({
           protocol_id: protocol?.id || null,
@@ -145,7 +153,9 @@ export default function SubmitPage() {
       const encryptedBlob = new Blob([JSON.stringify(encrypted)], { type: 'application/json' })
       const filePath = `encrypted-reports/${finding.id}.json`
       
-      const { error: uploadError } = await (getSupabase() ?? {storage: {from: () => ({upload: async () => ({error: new Error("Supabase not configured")})})}}).storage
+      const supa3 = getSupabase()
+      if (!supa3) throw new Error('Supabase not configured')
+      const { error: uploadError } = await supa3.storage
         .from('findings')
         .upload(filePath, encryptedBlob, {
           contentType: 'application/json',
