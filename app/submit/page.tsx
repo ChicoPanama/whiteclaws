@@ -1,13 +1,13 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { useRouter, useSearchParams } from 'next/navigation'
+import { useRouter } from 'next/navigation'
 import { createClient } from '@/lib/supabase/client'
 import { encryptMessage, generateKeyPair } from '@/lib/crypto'
 
 const supabase = createClient()
 
-type ProtocolData = {
+type ProtocolData = { id?: string
   slug: string
   name: string
   description: string
@@ -21,8 +21,13 @@ type ProtocolData = {
 
 export default function SubmitPage() {
   const router = useRouter()
-  const params = useSearchParams()
-  const protocolSlug = params.get('protocol') || ''
+  const [protocolSlug, setProtocolSlug] = useState('')
+  
+  // Get protocol from URL on client side only
+  useEffect(() => {
+    const searchParams = new URLSearchParams(window.location.search)
+    setProtocolSlug(searchParams.get('protocol') || '')
+  }, [])
   
   const [protocol, setProtocol] = useState<ProtocolData | null>(null)
   const [formData, setFormData] = useState({

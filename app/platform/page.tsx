@@ -1,5 +1,5 @@
 import Footer from '@/components/Footer'
-import { platformFeatures } from '@/lib/data'
+import { platformFeatures } from '@/lib/data/constants'
 
 export default function PlatformPage() {
   return (
@@ -17,8 +17,7 @@ export default function PlatformPage() {
             <div key={f.name} className="plat-card">
               <div className="plat-card-icon">{f.icon}</div>
               <h4>{f.name}</h4>
-              <p>{f.desc}</p>
-              <span className="plat-tag">{f.tag}</span>
+              <p>{f.description}</p>
             </div>
           ))}
         </div>

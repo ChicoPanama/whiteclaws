@@ -1,3 +1,12 @@
+import { Bounty, LeaderboardEntry, PlatformFeature } from './data/types';
+import { 
+  bounties as bountyConstants,
+  leaderboard as leaderboardConstants,
+  platformFeatures as platformFeatureConstants,
+  findings as findingConstants
+} from './data/constants';
+
+// Keep existing interfaces for backward compatibility
 export interface BountyProgram {
   id: string
   name: string
@@ -18,195 +27,52 @@ export interface BountyProgram {
   triaged?: boolean
 }
 
-export const bountyPrograms: BountyProgram[] = [
-  {
-    id: 'ssv-network',
-    name: 'SSV Network',
-    icon: 'S',
-    category: 'Infrastructure',
-    tags: ['DVT', 'Staking', 'Smart Contract'],
-    chains: ['ETH'],
-    language: 'Solidity',
-    maxReward: '$1,000,000',
-    maxRewardNum: 1000000,
-    liveSince: 'Sep 2025',
-    type: 'Smart Contract',
-    vaultAddress: '0x2Be7549f1B58Fc3E81427a09E61e6D0B050A4C1D',
-    vaultTvl: '$236,390',
-    platform: 'Immunefi',
-  },
-  {
-    id: 'ens',
-    name: 'ENS',
-    icon: 'E',
-    category: 'Infrastructure',
-    tags: ['Naming', 'Smart Contract'],
-    chains: ['ETH'],
-    language: 'Solidity',
-    maxReward: '$250,000',
-    maxRewardNum: 250000,
-    liveSince: 'Dec 2025',
-    type: 'Smart Contract',
-    vaultTvl: '$103,100',
-    platform: 'Immunefi',
-  },
-  {
-    id: 'xion',
-    name: 'XION',
-    icon: 'X',
-    category: 'L2 / L1',
-    tags: ['Chain Abstraction', 'Blockchain/DLT'],
-    chains: ['XION'],
-    language: 'Rust',
-    maxReward: '$250,000',
-    maxRewardNum: 250000,
-    liveSince: 'Aug 2025',
-    type: 'Blockchain/DLT',
-    vaultTvl: '$99,300',
-    totalPaid: '$170,000',
-    resolutionTime: '3 days',
-    platform: 'Immunefi',
-    triaged: true,
-  },
-  {
-    id: 'pinto',
-    name: 'Pinto',
-    icon: 'P',
-    category: 'DeFi',
-    tags: ['Stablecoin', 'AMO', 'Smart Contract'],
-    chains: ['Base'],
-    language: 'Solidity',
-    maxReward: '$100,000',
-    maxRewardNum: 100000,
-    liveSince: 'Dec 2025',
-    type: 'Smart Contract',
-    vaultTvl: '$46,700',
-    totalPaid: '$47,600',
-    resolutionTime: '19 hours',
-    platform: 'Immunefi',
-    triaged: true,
-  },
-  {
-    id: 'inverse-finance',
-    name: 'Inverse Finance',
-    icon: 'I',
-    category: 'DeFi',
-    tags: ['Lending', 'Yield', 'Smart Contract'],
-    chains: ['ETH'],
-    language: 'Solidity',
-    maxReward: '$100,000',
-    maxRewardNum: 100000,
-    liveSince: 'Dec 2025',
-    type: 'Smart Contract',
-    vaultTvl: '$40,900',
-    platform: 'Immunefi',
-  },
-  {
-    id: 'lombard-finance',
-    name: 'Lombard Finance',
-    icon: 'L',
-    category: 'DeFi',
-    tags: ['Bitcoin staking', 'Liquid Staking', 'Smart Contract'],
-    chains: ['ETH', 'BTC'],
-    language: 'Solidity',
-    maxReward: '$250,000',
-    maxRewardNum: 250000,
-    liveSince: 'Jan 2025',
-    type: 'Smart Contract',
-    vaultTvl: '$39,900',
-    platform: 'Immunefi',
-    triaged: true,
-  },
-  {
-    id: 'hedera',
-    name: 'Hedera',
-    icon: 'H',
-    category: 'L2 / L1',
-    tags: ['Enterprise', 'Hashgraph', 'Blockchain/DLT'],
-    chains: ['HBAR'],
-    language: 'Java',
-    maxReward: '$30,000',
-    maxRewardNum: 30000,
-    liveSince: 'Mar 2025',
-    type: 'Blockchain/DLT',
-    vaultTvl: '$26,800',
-    platform: 'Immunefi',
-    triaged: true,
-  },
-  {
-    id: 'intmax',
-    name: 'INTMAX',
-    icon: 'IN',
-    category: 'L2 / L1',
-    tags: ['ZK Rollup', 'Stateless', 'Smart Contract'],
-    chains: ['ETH'],
-    language: 'Rust',
-    maxReward: '$10,000',
-    maxRewardNum: 10000,
-    liveSince: 'Jun 2025',
-    type: 'Smart Contract',
-    vaultTvl: '$23,900',
-    platform: 'Immunefi',
-    triaged: true,
-  },
-  {
-    id: 'alchemix',
-    name: 'Alchemix',
-    icon: 'A',
-    category: 'DeFi',
-    tags: ['Self-repaying loans', 'Yield', 'Smart Contract'],
-    chains: ['ETH', 'OP'],
-    language: 'Solidity',
-    maxReward: '$300,000',
-    maxRewardNum: 300000,
-    liveSince: 'Mar 2025',
-    type: 'Smart Contract',
-    vaultTvl: '$18,600',
-    totalPaid: '$205,000',
-    resolutionTime: '3 days',
-    platform: 'Immunefi',
-    triaged: true,
-  },
-  {
-    id: 'dexe-protocol',
-    name: 'DeXe Protocol',
-    icon: 'D',
-    category: 'DeFi',
-    tags: ['DAO Infrastructure', 'Social Trading', 'Smart Contract'],
-    chains: ['ETH', 'BSC'],
-    language: 'Solidity',
-    maxReward: '$500,000',
-    maxRewardNum: 500000,
-    liveSince: 'Nov 2024',
-    type: 'Smart Contract',
-    vaultTvl: '$16,100',
-    platform: 'Immunefi',
-  },
-]
+// Map new Bounty type to existing BountyProgram interface
+export const bountyPrograms: BountyProgram[] = bountyConstants.map(bounty => ({
+  id: bounty.id,
+  name: bounty.name,
+  icon: bounty.icon || '',
+  category: Array.isArray(bounty.category) ? bounty.category[0] : bounty.category,
+  tags: [],
+  chains: bounty.chains,
+  language: 'Solidity',
+  maxReward: bounty.reward || '$0',
+  maxRewardNum: parseInt((bounty.reward || '$0').replace(/[^0-9]/g, '')) || 0,
+  liveSince: 'Live',
+  type: 'Smart Contract',
+}));
 
-export const leaderboard = [
-  { rank: 1, name: 'pwned_admin', earned: '$2,847,000', findings: 47, critical: 12 },
-  { rank: 2, name: '0xshadow', earned: '$1,923,500', findings: 38, critical: 9 },
-  { rank: 3, name: 'reentrancy_queen', earned: '$1,456,200', findings: 31, critical: 7 },
-  { rank: 4, name: 'defi_doctor', earned: '$987,300', findings: 28, critical: 5 },
-  { rank: 5, name: 'flash_loan_fury', earned: '$845,000', findings: 22, critical: 4 },
-  { rank: 6, name: 'bytecode_bandit', earned: '$723,800', findings: 19, critical: 3 },
-  { rank: 7, name: 'slither_sensei', earned: '$612,400', findings: 17, critical: 3 },
-  { rank: 8, name: 'mythril_monk', earned: '$498,000', findings: 15, critical: 2 },
-  { rank: 9, name: 'oracle_oracle', earned: '$389,200', findings: 13, critical: 2 },
-  { rank: 10, name: 'gas_goblin', earned: '$312,500', findings: 11, critical: 1 },
-]
+export interface LeaderboardEntryOld {
+  rank: number;
+  name: string;
+  earned: string;
+  findings: number;
+  critical: number;
+}
 
-export const platformFeatures = [
-  { icon: '🎯', name: 'Bug Bounty Programs', desc: 'Launch managed bounty programs. 12,000+ researchers. Escrowed payments. Full lifecycle triage and verification.', tag: 'Core' },
-  { icon: '🤖', name: 'AI Audit Agent', desc: 'Autonomous agents that scan your codebase continuously. Slither + Mythril + AI reasoning. Runs 24/7 via Clawd.', tag: 'Agent' },
-  { icon: '📡', name: 'Onchain Monitoring', desc: 'Real-time transaction surveillance with anomaly detection across all EVM chains. Alerts before funds drain.', tag: 'Defense' },
-  { icon: '🏆', name: 'Audit Competitions', desc: 'Time-boxed competitive audits. Multiple researchers review code simultaneously. Faster coverage, diverse perspectives.', tag: 'Core' },
-  { icon: '🛡️', name: 'Safe Harbor', desc: 'Legal framework for whitehats to rescue funds during active exploits. Redirect recovered assets to protocol vaults.', tag: 'Legal' },
-  { icon: '🔒', name: 'Vaults & Escrow', desc: 'Onchain escrow for bounty payments. Transparent, trustless, immediate payouts upon verified findings.', tag: 'Infra' },
-  { icon: '📋', name: 'Managed Triage', desc: 'Expert in-house triage team. 27,000+ reports reviewed. Only validated findings reach your team.', tag: 'Service' },
-  { icon: '🔍', name: 'PR Reviews', desc: 'Automated security review on every pull request. Catch vulnerabilities before they ship to production.', tag: 'CI/CD' },
-]
+// Map new LeaderboardEntry type to existing format
+export const leaderboard: LeaderboardEntryOld[] = leaderboardConstants.map(entry => ({
+  rank: entry.rank,
+  name: entry.name,
+  earned: entry.earned,
+  findings: 0,
+  critical: 0
+}));
+
+export interface PlatformFeatureOld {
+  icon: string;
+  name: string;
+  desc: string;
+  tag: string;
+}
+
+// Map new PlatformFeature type to existing format
+export const platformFeatures: PlatformFeatureOld[] = platformFeatureConstants.map(feature => ({
+  icon: feature.icon,
+  name: feature.name,
+  desc: feature.description,
+  tag: 'Core'
+}));
 
 export const categories = [
   { name: 'Smart Contract', count: 94 },
@@ -216,10 +82,15 @@ export const categories = [
   { name: 'Infrastructure', count: 4 },
 ]
 
-export const recentFindings = [
-  { severity: 'critical', text: 'Reentrancy in reward distributor', time: '2h ago' },
-  { severity: 'high', text: 'Integer overflow in staking checkpoint', time: '6h ago' },
-  { severity: 'medium', text: 'Unchecked return value on external call', time: '1d ago' },
-  { severity: 'medium', text: 'Flash loan oracle manipulation vector', time: '2d ago' },
-  { severity: 'low', text: 'Gas optimization in batch transfer', time: '3d ago' },
-]
+export interface RecentFinding {
+  severity: 'critical' | 'high' | 'medium' | 'low';
+  text: string;
+  time: string;
+}
+
+// Map new Finding type to existing format
+export const recentFindings: RecentFinding[] = findingConstants.map(finding => ({
+  severity: finding.severity,
+  text: finding.description,
+  time: finding.timeAgo
+}));

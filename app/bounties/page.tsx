@@ -12,6 +12,7 @@ const mockBounties = [
     id: 'ssv-network',
     name: 'SSV Network',
     category: 'Infrastructure',
+    icon: 'S',
     tags: ['DVT'],
     chains: ['Ethereum'],
     language: 'Solidity',
@@ -24,6 +25,7 @@ const mockBounties = [
     id: 'uniswap',
     name: 'Uniswap',
     category: 'DeFi',
+    icon: 'U',
     tags: ['DEX'],
     chains: ['Ethereum'],
     language: 'Solidity',
@@ -104,7 +106,7 @@ export default async function BountiesPage() {
                 <span className="ec-reward-value">{b.maxReward}</span>
               </div>
               <div className="ec-tags" style={{ display: 'flex', gap: 4, flexWrap: 'wrap' as const }}>
-                {b.chains.map((c) => (
+                {b.chains.map((c: string) => (
                   <span key={c} className="tag">{c}</span>
                 ))}
                 <span className="tag">{b.language}</span>

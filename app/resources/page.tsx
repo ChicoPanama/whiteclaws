@@ -34,6 +34,7 @@ const mockAudits = [
     downloads: 45,
     description: 'Security audit for Oak Network PaymentTreasury',
     tags: ['immunefi', 'audit', 'oak-network'],
+    url: '/resources/audit-1',
   },
 ]
 
@@ -118,7 +119,7 @@ export default async function ResourcesPage() {
                   </div>
                   <p className="text-gray-400 text-sm mb-4">{audit.description}</p>
                   <div className="flex flex-wrap gap-2 mb-4">
-                    {audit.tags?.map((tag) => (
+                    {audit.tags?.map((tag: string) => (
                       <span
                         key={tag}
                         className="bg-gray-700 text-gray-300 text-xs px-2 py-1 rounded"
@@ -161,7 +162,7 @@ export default async function ResourcesPage() {
                 </div>
                 <p className="text-gray-400 text-sm mb-4">{resource.description}</p>
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {resource.tags?.map((tag) => (
+                  {resource.tags?.map((tag: string) => (
                     <span
                       key={tag}
                       className="bg-gray-700 text-gray-300 text-xs px-2 py-1 rounded"
