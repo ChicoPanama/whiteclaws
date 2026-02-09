@@ -14,7 +14,7 @@ function isFileSync(filePath: string) {
   }
 }
 
-function listFiles(dir: string, extensions: string[]) {
+function listFiles(dir: string, extensions: string[]): string[] {
   if (!fs.existsSync(dir)) return []
   const entries = fs.readdirSync(dir, { withFileTypes: true })
   return entries.flatMap((entry) => {
