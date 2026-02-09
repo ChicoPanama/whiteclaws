@@ -6,6 +6,7 @@ const protectedRoutes = [
   '/dashboard',
   '/protocols/submit',
   '/protocols/*/submit',
+  '/app',
 ];
 
 // Define admin routes
@@ -111,5 +112,6 @@ export const config = {
     '/dashboard/:path*',
     '/protocols/:path*/submit',
     '/admin/:path*',
+    '/app/:path*',
   ],
 };
