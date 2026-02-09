@@ -4,6 +4,8 @@ import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { createClient } from '@/lib/supabase/client'
 import { encryptMessage, generateKeyPair } from '@/lib/crypto'
+import Nav from '@/components/landing/Nav'
+import Footer from '@/components/Footer'
 
 export const dynamic = 'force-dynamic';
 
@@ -174,9 +176,11 @@ export default function SubmitPage() {
   
   if (submittedId) {
     return (
-      <div className="min-h-screen bg-gray-900">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="bg-green-900/20 border border-green-700 rounded-lg p-8 text-center">
+      <>
+        <Nav />
+        <div className="min-h-screen bg-gray-900">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div className="bg-green-900/20 border border-green-700 rounded-lg p-8 text-center">
             <span className="text-6xl mb-4 block">✅</span>
             <h2 className="text-2xl font-bold text-white mb-2">Submission Complete!</h2>
             <p className="text-gray-400 mb-4">
@@ -206,13 +210,17 @@ export default function SubmitPage() {
           </div>
         </div>
       </div>
+        <Footer />
+      </>
     )
   }
   
   return (
-    <div className="min-h-screen bg-gray-900">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Header with Protocol Info */}
+    <>
+      <Nav />
+      <div className="min-h-screen bg-gray-900">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          {/* Header with Protocol Info */}
         <div className="mb-8">
           <div className="flex items-center gap-3 mb-4">
             <span className="text-4xl">🐇</span>
@@ -370,5 +378,7 @@ export default function SubmitPage() {
         </form>
       </div>
     </div>
+      <Footer />
+    </>
   )
 }

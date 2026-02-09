@@ -1203,29 +1203,150 @@ a { color: inherit; text-decoration: none; }
 /* =============================================
    RESPONSIVE
    ============================================= */
+
+/* Tablet */
 @media (max-width: 900px) {
-  .nav { padding: 0 24px; height: 60px; }
+  /* Nav: shrink padding, hide links, show hamburger space */
+  .nav { padding: 0 20px; height: 56px; }
   .nav-links { display: none; }
-  .hero { padding: 60px 24px 40px; min-height: auto; }
-  .hero-content { flex-direction: column; gap: 40px; }
-  .hero h1 { font-size: clamp(36px, 8vw, 52px); }
+  .nav-right .btn { padding: 8px 16px; font-size: .8rem; }
+  .nav-tag { display: none; }
+
+  /* Hero: stack vertically */
+  .hero { padding: 48px 20px 32px; min-height: auto; }
+  .hero-content { flex-direction: column; gap: 32px; }
+  .hero h1 { font-size: clamp(32px, 7vw, 48px); }
+  .hero-sub { font-size: 1rem; max-width: 100%; }
   .hero-visual { display: flex; justify-content: center; }
   .hero-logo-wrap { width: 80px; height: 80px; }
   .hero-logo-wrap .logo-lobster svg { width: 40px; height: 40px; }
+
+  /* Stats: 2 columns */
   .stats { grid-template-columns: repeat(2, 1fr); }
-  .stat { padding: 28px 24px; }
-  .section { padding: 64px 24px; }
-  .dg, .ag { grid-template-columns: 1fr; gap: 32px; }
+  .stat { padding: 24px 20px; }
+  .stat-v { font-size: 1.8rem; }
+
+  /* Sections: reduce padding */
+  .section { padding: 48px 20px; }
+  .sh { margin-bottom: 32px; gap: 12px; }
+  .sh h2 { font-size: 1.6rem; }
+  .sd-text { font-size: .95rem; margin-bottom: 32px; }
+
+  /* Bounty rows: keep horizontal but tighter */
+  .br { gap: 12px; padding: 14px 0; }
+  .ba { font-size: .82rem; }
+  .bn { font-size: .85rem; }
+  .bt span { font-size: .62rem; }
+  .bch { font-size: .55rem; padding: 2px 6px; }
+
+  /* Filter strip: horizontal scroll */
+  .bfs { overflow-x: auto; flex-wrap: nowrap; -webkit-overflow-scrolling: touch; padding-bottom: 4px; }
+  .bfs::-webkit-scrollbar { display: none; }
+  .bf { white-space: nowrap; flex-shrink: 0; }
+
+  /* Leaderboard: tighter */
+  .lr { gap: 12px; }
+  .lnm { font-size: .8rem; }
+  .lvl { font-size: .8rem; }
+
+  /* Platform grid: 2 columns */
   .pg { grid-template-columns: repeat(2, 1fr); }
-  .footer { padding: 32px 24px; flex-direction: column; text-align: center; }
+
+  /* Findings: stack on smaller tablets */
+  .fr { flex-wrap: wrap; gap: 8px; }
+  .fl-r { width: 100%; justify-content: space-between; }
+  .fd-lk { opacity: 1; }
+  .fd-d { white-space: normal; }
+
+  /* Deploy/About grid: single column */
+  .dg, .ag { grid-template-columns: 1fr; gap: 32px; }
+
+  /* Footer */
+  .footer { padding: 32px 20px; flex-direction: column; text-align: center; gap: 12px; }
+  .footer-r { justify-content: center; }
+
+  /* Scanner text */
   #scanText { min-width: auto; font-size: .7rem; }
 }
 
+/* Phone */
 @media (max-width: 520px) {
-  .stats { grid-template-columns: 1fr 1fr; }
-  .pg { grid-template-columns: 1fr 1fr; }
+  /* Nav: minimal */
+  .nav { padding: 0 16px; height: 52px; }
+  .nav-brand { font-size: .95rem; gap: 8px; }
+  .logo-circle-wrap { width: 36px; height: 36px; }
+  .nav-right .btn { padding: 6px 12px; font-size: .75rem; }
+
+  /* Hero */
+  .hero { padding: 32px 16px 24px; }
+  .hero h1 { font-size: clamp(28px, 8vw, 36px); margin-bottom: 20px; }
+  .hero-sub { font-size: .9rem; margin-bottom: 28px; }
   .hero-ctas { flex-direction: column; }
   .hero-ctas .btn { width: 100%; justify-content: center; }
+  .hero-ey { font-size: .65rem; }
+  .scanner { padding: 8px 12px; font-size: .65rem; }
+
+  /* Stats: 2 columns, smaller */
+  .stats { grid-template-columns: 1fr 1fr; }
+  .stat { padding: 20px 16px; }
+  .stat-v { font-size: 1.5rem; }
+  .stat-l { font-size: .7rem; }
+
+  /* Sections */
+  .section { padding: 36px 16px; }
+  .sh { margin-bottom: 24px; flex-direction: column; gap: 8px; }
+  .sh h2 { font-size: 1.35rem; }
+  .sh .num { font-size: .65rem; }
+  .sd-text { font-size: .88rem; margin-bottom: 24px; }
+
+  /* Bounty rows: stack reward below name */
+  .br { flex-wrap: wrap; gap: 10px; padding: 12px 0; }
+  .bn-w { min-width: calc(100% - 52px); }
+  .brt { width: 100%; text-align: left; padding-left: 52px; display: flex; align-items: center; gap: 12px; }
+  .ba { font-size: .82rem; }
+  .bc { margin-top: 0; justify-content: flex-start; }
+
+  /* Filter strip */
+  .bfs { gap: 4px; margin-bottom: 16px; }
+  .bf { padding: 5px 12px; font-size: .72rem; }
+  .bsort { font-size: .65rem; }
+
+  /* Leaderboard rows */
+  .lr { gap: 10px; padding: 12px 0; }
+  .lrk { width: 24px; font-size: .7rem; }
+  .lav { width: 28px; height: 28px; font-size: .65rem; }
+  .lnm { font-size: .75rem; }
+  .lvl { font-size: .75rem; }
+
+  /* Platform grid: single column on tiny screens, 2-col otherwise */
+  .pg { grid-template-columns: 1fr 1fr; }
+  .pi { padding: 20px 16px; }
+  .pi-ic { font-size: 1.1rem; margin-bottom: 10px; }
+  .pi-nm { font-size: .82rem; }
+  .pi-ds { font-size: .72rem; }
+
+  /* Findings: fully stacked */
+  .fr { flex-direction: column; align-items: flex-start; gap: 8px; padding: 12px 0; }
+  .fl-l { flex-wrap: wrap; gap: 8px; }
+  .fl-r { width: 100%; }
+  .fd-d { white-space: normal; font-size: .82rem; }
+  .fd-lk { opacity: 1; }
+  .fsv { font-size: .6rem; padding: 3px 8px; }
+
+  /* Footer */
+  .footer { padding: 24px 16px; }
+  .footer-l { font-size: .7rem; }
+  .footer-r { flex-wrap: wrap; justify-content: center; gap: 16px; }
+  .footer-r a { font-size: .7rem; }
+
+  /* Terminal */
+  .terminal { border-radius: 8px; }
+  .tc { padding: 16px; font-size: .72rem; line-height: 1.8; }
+
+  /* About sections */
+  .about-section { margin-bottom: 24px; }
+  .about-section h3 { font-size: 1rem; }
+  .about-section p { font-size: .88rem; }
 }
 .footer-build {
   margin-left: 12px;

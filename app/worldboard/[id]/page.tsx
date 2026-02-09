@@ -1,5 +1,7 @@
 import { notFound } from 'next/navigation'
 import { createClient } from '@/lib/supabase/server'
+import Nav from '@/components/landing/Nav'
+import Footer from '@/components/Footer'
 
 export const dynamic = 'force-dynamic'
 
@@ -60,8 +62,10 @@ export default async function WorldBoardThreadPage({
   }
 
   return (
-    <div className="min-h-screen bg-gray-900">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-6">
+    <>
+      <Nav />
+      <div className="min-h-screen bg-gray-900">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-6">
         <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
           <h1 className="text-2xl font-bold text-white mb-2">{thread.title}</h1>
           <p className="text-sm text-gray-400">
@@ -78,5 +82,7 @@ export default async function WorldBoardThreadPage({
         </div>
       </div>
     </div>
+      <Footer />
+    </>
   )
 }

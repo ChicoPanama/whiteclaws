@@ -1,9 +1,13 @@
 import { Suspense } from 'react';
 import LoginForm from './LoginForm';
+import Nav from '@/components/landing/Nav';
+import Footer from '@/components/Footer';
 
 export default function LoginPage() {
   return (
-    <Suspense fallback={
+    <>
+      <Nav />
+      <Suspense fallback={
       <div className="min-h-screen bg-gray-900 flex items-center justify-center py-12 px-4">
         <div className="max-w-md w-full text-center">
           <div className="animate-pulse">
@@ -15,5 +19,7 @@ export default function LoginPage() {
     }>
       <LoginForm />
     </Suspense>
+      <Footer />
+    </>
   );
 }

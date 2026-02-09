@@ -1,6 +1,8 @@
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { createClient } from '@/lib/supabase/server'
+import Nav from '@/components/landing/Nav'
+import Footer from '@/components/Footer'
 
 export const dynamic = 'force-dynamic'
 
@@ -62,8 +64,10 @@ export default async function ResourceDetailPage({
   }
 
   return (
-    <div className="min-h-screen bg-gray-900">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-6">
+    <>
+      <Nav />
+      <div className="min-h-screen bg-gray-900">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-6">
         <Link href="/resources" className="text-indigo-400 hover:text-indigo-300 text-sm">
           ← Back to resources
         </Link>
@@ -94,5 +98,7 @@ export default async function ResourceDetailPage({
         </div>
       </div>
     </div>
+      <Footer />
+    </>
   )
 }

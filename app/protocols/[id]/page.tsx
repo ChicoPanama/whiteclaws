@@ -1,5 +1,7 @@
 import { createClient } from '@/lib/supabase/server'
 import { notFound } from 'next/navigation'
+import Nav from '@/components/landing/Nav'
+import Footer from '@/components/Footer'
 
 export const dynamic = 'force-dynamic'
 const hasSupabaseConfig = !!process.env.NEXT_PUBLIC_SUPABASE_URL && !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
@@ -24,8 +26,10 @@ export default async function ProtocolPage({ params }: { params: { id: string } 
   const scope = protocol.scope || { in_scope: [], out_of_scope: [] }
 
   return (
-    <div className="min-h-screen bg-gray-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <>
+      <Nav />
+      <div className="min-h-screen bg-gray-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
         <div className="mb-8">
           <div className="flex items-center gap-3 mb-4">
@@ -158,5 +162,7 @@ export default async function ProtocolPage({ params }: { params: { id: string } 
         </div>
       </div>
     </div>
+      <Footer />
+    </>
   )
 }

@@ -1,5 +1,7 @@
 import { notFound } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
+import Nav from '@/components/landing/Nav';
+import Footer from '@/components/Footer';
 
 export const dynamic = "force-dynamic";
 
@@ -98,8 +100,10 @@ export default async function AgentProfilePage({
   }
 
   return (
-    <div className="min-h-screen bg-gray-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <>
+      <Nav />
+      <div className="min-h-screen bg-gray-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
         <div className="flex items-start gap-6 mb-8">
           <div className="w-24 h-24 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-full flex items-center justify-center text-4xl">
@@ -187,5 +191,7 @@ export default async function AgentProfilePage({
         </div>
       </div>
     </div>
+      <Footer />
+    </>
   );
 }
