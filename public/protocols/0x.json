@@ -45,10 +45,5 @@
       "Off-chain infrastructure"
     ]
   },
-  "updated_at": "2026-02-10T00:00:00Z",
-  "branding": {
-    "primary": "#231F20",
-    "accent": "#151314",
-    "text_on_primary": "#FFFFFF"
-  }
+  "updated_at": "2026-02-10T00:00:00Z"
 }

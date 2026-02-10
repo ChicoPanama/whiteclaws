@@ -59,10 +59,5 @@
       "type": "Social Trading"
     }
   ],
-  "source": "immunefi",
-  "branding": {
-    "primary": "#6366F1",
-    "accent": "#3730A3",
-    "text_on_primary": "#FFFFFF"
-  }
+  "source": "immunefi"
 }

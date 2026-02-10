@@ -73,10 +73,5 @@
       "updateGuardianSet"
     ]
   },
-  "updated_at": "2026-02-10T00:00:00Z",
-  "branding": {
-    "primary": "#A45EFF",
-    "accent": "#623899",
-    "text_on_primary": "#FFFFFF"
-  }
+  "updated_at": "2026-02-10T00:00:00Z"
 }

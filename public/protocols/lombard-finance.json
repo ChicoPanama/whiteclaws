@@ -55,8 +55,8 @@
   ],
   "source": "immunefi",
   "branding": {
-    "primary": "#6366F1",
-    "accent": "#3730A3",
+    "primary": "#142C2E",
+    "accent": "#0C1A1C",
     "text_on_primary": "#FFFFFF"
   }
 }
