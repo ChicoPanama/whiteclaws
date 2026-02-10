@@ -6,10 +6,10 @@ import { createClient } from '@/lib/supabase/client'
 import { encryptMessage, generateKeyPair } from '@/lib/crypto'
 import Nav from '@/components/landing/Nav'
 import Footer from '@/components/Footer'
+import ProtocolIcon from '@/components/ProtocolIcon'
 
 export const dynamic = 'force-dynamic';
 
-// Lazy init Supabase to avoid build-time errors
 let supabase: ReturnType<typeof createClient> | null = null;
 function getSupabase() {
   if (!supabase && process.env.NEXT_PUBLIC_SUPABASE_URL) {
@@ -18,33 +18,44 @@ function getSupabase() {
   return supabase;
 }
 
-type ProtocolData = { id?: string
+type ProtocolData = {
+  id?: string
   slug: string
   name: string
   description: string
   category: string
   chains: string[]
+  logo_url?: string
+  branding?: { primary: string; accent: string; text_on_primary: string }
   bounty: { max: number; min: number; kyc_required: boolean; payout_token: string }
   severity_payouts: Record<string, any>
   contracts: Array<{ address: string; network: string; name: string; type: string }>
   scope: { in_scope: string[]; out_of_scope: string[] }
 }
 
+const SEV_CONFIG = {
+  critical: { label: 'Critical', dot: '#FF4747', bg: 'rgba(255,71,71,0.06)', border: 'rgba(255,71,71,0.2)', activeBg: 'rgba(255,71,71,0.15)' },
+  high:     { label: 'High',     dot: '#FF8C42', bg: 'rgba(255,140,66,0.06)', border: 'rgba(255,140,66,0.2)', activeBg: 'rgba(255,140,66,0.15)' },
+  medium:   { label: 'Medium',   dot: '#FFD166', bg: 'rgba(255,209,102,0.06)', border: 'rgba(255,209,102,0.2)', activeBg: 'rgba(255,209,102,0.15)' },
+  low:      { label: 'Low',      dot: '#60A5FA', bg: 'rgba(96,165,250,0.06)', border: 'rgba(96,165,250,0.2)', activeBg: 'rgba(96,165,250,0.15)' },
+} as const
+
+type Severity = keyof typeof SEV_CONFIG
+
 export default function SubmitPage() {
   const router = useRouter()
   const [protocolSlug, setProtocolSlug] = useState('')
-  
-  // Get protocol from URL on client side only
+
   useEffect(() => {
     const searchParams = new URLSearchParams(window.location.search)
     setProtocolSlug(searchParams.get('protocol') || '')
   }, [])
-  
+
   const [protocol, setProtocol] = useState<ProtocolData | null>(null)
   const [formData, setFormData] = useState({
     title: '',
     description: '',
-    severity: 'medium',
+    severity: 'medium' as Severity,
     steps: '',
     poc_code: '',
     impact_analysis: ''
@@ -53,51 +64,36 @@ export default function SubmitPage() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submittedId, setSubmittedId] = useState<string | null>(null)
   const [error, setError] = useState<string | null>(null)
-  
-  // Load protocol data
+
   useEffect(() => {
     async function loadProtocol() {
       if (!protocolSlug) return
-      
       try {
-        // Try to load from JSON file first
         const response = await fetch(`/protocols/${protocolSlug}.json`)
         if (response.ok) {
           const data = await response.json()
           setProtocol(data)
           return
         }
-        
-        // Fallback: Load from Supabase
-        const supa = getSupabase(); if (!supa) return; const { data } = await supa
-          .from('protocols')
-          .select('*')
-          .eq('slug', protocolSlug)
-          .single()
-        
+        const supa = getSupabase(); if (!supa) return;
+        const { data } = await supa.from('protocols').select('*').eq('slug', protocolSlug).single()
         if (data) setProtocol(data)
       } catch (err) {
         console.error('Failed to load protocol:', err)
       }
     }
-    
     loadProtocol()
   }, [protocolSlug])
-  
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setError(null)
     setIsEncrypting(true)
-    
+
     try {
-      // Generate encryption keys
       const { publicKey: senderPublicKey, secretKey: senderSecretKey } = generateKeyPair()
-      
-      // For demo: Use a hardcoded recipient public key (protocol's key)
-      // In production: protocol.public_key from database
       const recipientPublicKey = 'w3J/6zqIjRjUo4WYgEqKF5j4QkBKK6DQr3a72wP8qzI='
-      
-      // Create full report
+
       const report = {
         title: formData.title,
         description: formData.description,
@@ -110,19 +106,19 @@ export default function SubmitPage() {
         submitted_at: new Date().toISOString(),
         researcher: 'Anonymous'
       }
-      
-      // Encrypt
+
       const encrypted = encryptMessage(
         JSON.stringify(report),
         recipientPublicKey,
         senderSecretKey
       )
-      
+
       setIsEncrypting(false)
       setIsSubmitting(true)
-      
-      // Store encrypted payload in Supabase
-      const supa2 = getSupabase(); if (!supa2) throw new Error("Supabase not configured"); const { data: finding, error: insertError } = await supa2
+
+      const supa2 = getSupabase();
+      if (!supa2) throw new Error("Supabase not configured");
+      const { data: finding, error: insertError } = await supa2
         .from('findings')
         .insert({
           protocol_id: protocol?.id || null,
@@ -140,25 +136,20 @@ export default function SubmitPage() {
         })
         .select()
         .single()
-      
+
       if (insertError) throw insertError
-      
-      // Store encrypted content in Supabase Storage
+
       const encryptedBlob = new Blob([JSON.stringify(encrypted)], { type: 'application/json' })
       const filePath = `encrypted-reports/${finding.id}.json`
-      
-      const { error: uploadError } = await (getSupabase() ?? {storage: {from: () => ({upload: async () => ({error: new Error("Supabase not configured")})})}}).storage
+
+      const { error: uploadError } = await (getSupabase() ?? { storage: { from: () => ({ upload: async () => ({ error: new Error("Supabase not configured") }) }) } }).storage
         .from('findings')
-        .upload(filePath, encryptedBlob, {
-          contentType: 'application/json',
-          upsert: true
-        })
-      
+        .upload(filePath, encryptedBlob, { contentType: 'application/json', upsert: true })
+
       if (uploadError) throw uploadError
-      
+
       setSubmittedId(finding.id)
       setIsSubmitting(false)
-      
     } catch (err: any) {
       console.error('Submission failed:', err)
       setError(err.message || 'Submission failed. Please try again.')
@@ -166,218 +157,232 @@ export default function SubmitPage() {
       setIsSubmitting(false)
     }
   }
-  
-  const severityColors: Record<string, string> = {
-    critical: 'bg-red-600',
-    high: 'bg-orange-500',
-    medium: 'bg-yellow-500',
-    low: 'bg-blue-500'
-  }
-  
+
+  /* ─── SUCCESS STATE ─── */
   if (submittedId) {
     return (
       <>
         <Nav />
-        <div className="min-h-screen bg-gray-900">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <div className="bg-green-900/20 border border-green-700 rounded-lg p-8 text-center">
-            <span className="text-6xl mb-4 block">✅</span>
-            <h2 className="text-2xl font-bold text-white mb-2">Submission Complete!</h2>
-            <p className="text-gray-400 mb-4">
-              Your finding has been <span className="text-green-400 font-semibold">encrypted</span> and submitted{protocol && <> to <span className="text-green-400 font-semibold">{protocol.name}</span></>}.
-            </p>
-            <div className="bg-gray-800 rounded-lg p-4 max-w-md mx-auto mb-6 text-left">
-              <p className="text-gray-400 text-sm mb-2">Submission ID:</p>
-              <p className="text-white font-mono text-lg">{submittedId}</p>
-            </div>
-            <p className="text-gray-400 mb-6">
-              The protocol team will review your encrypted report. You'll be notified when they respond.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button
-                onClick={() => router.push('/protocols')}
-                className="bg-gray-700 hover:bg-gray-600 text-white px-6 py-3 rounded-lg transition-colors"
-              >
-                Browse More Protocols
-              </button>
-              <button
-                onClick={() => router.push('/dashboard')}
-                className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg transition-colors"
-              >
-                View Dashboard →
-              </button>
+        <div className="sf-page">
+          <div className="sf-wrap">
+            <div className="sf-success">
+              <div className="sf-success-icon">✓</div>
+              <h2 className="sf-success-title">Submission Encrypted</h2>
+              <p className="sf-success-desc">
+                Your finding has been encrypted and submitted
+                {protocol && <> to <strong>{protocol.name}</strong></>}.
+              </p>
+              <div className="sf-success-id">
+                <span className="sf-success-id-label">Submission ID</span>
+                <code className="sf-success-id-value">{submittedId}</code>
+              </div>
+              <p className="sf-success-note">
+                The protocol team will review your encrypted report.
+              </p>
+              <div className="sf-success-actions">
+                <button onClick={() => router.push('/bounties')} className="sf-btn-secondary">
+                  Browse Bounties
+                </button>
+                <button onClick={() => router.push('/dashboard')} className="sf-btn-primary">
+                  View Dashboard →
+                </button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
         <Footer />
       </>
     )
   }
-  
+
+  /* ─── FORM STATE ─── */
+  const activeSev = SEV_CONFIG[formData.severity]
+
   return (
     <>
       <Nav />
-      <div className="min-h-screen bg-gray-900">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          {/* Header with Protocol Info */}
-        <div className="mb-8">
-          <div className="flex items-center gap-3 mb-4">
-            <span className="text-4xl">🐇</span>
-            <h1 className="text-3xl font-bold text-white">Submit Finding</h1>
+      <div className="sf-page">
+        <div className="sf-wrap">
+
+          <a href="/bounties" className="sf-back">← All Bounties</a>
+
+          {/* Header */}
+          <div className="sf-header">
+            <h1 className="sf-title">Submit Finding</h1>
+            <p className="sf-subtitle">Encrypted vulnerability report</p>
           </div>
-          
+
+          {/* Protocol card */}
           {protocol ? (
-            <div className="bg-gray-800 rounded-lg p-4 border border-gray-700 mb-4">
-              <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
+            <div className="sf-protocol">
+              <div className="sf-protocol-left">
+                <ProtocolIcon name={protocol.name} logo_url={protocol.logo_url} size={40} />
                 <div>
-                  <h2 className="text-xl font-semibold text-white">{protocol.name}</h2>
-                  <p className="text-gray-400 text-sm">{protocol.description}</p>
-                </div>
-                <div className="flex items-center gap-2">
-                  <span className="bg-green-900 text-green-300 px-3 py-1 rounded-full text-sm font-medium">
-                    ${protocol.bounty.max.toLocaleString()} max bounty
-                  </span>
-                  {protocol.bounty.kyc_required && (
-                    <span className="bg-yellow-900 text-yellow-300 px-3 py-1 rounded-full text-sm">
-                      🔒 KYC
-                    </span>
-                  )}
+                  <h2 className="sf-protocol-name">{protocol.name}</h2>
+                  <p className="sf-protocol-desc">{protocol.description}</p>
                 </div>
               </div>
-            </div>
-          ) : (
-            <p className="text-gray-400">
-              {protocolSlug ? `Loading ${protocolSlug}...` : 'Submit vulnerability to WhiteClaws bounty programs'}
-            </p>
-          )}
-        </div>
-        
-        {error && (
-          <div className="bg-red-900/20 border border-red-700 rounded-lg p-4 mb-6">
-            <p className="text-red-300">{error}</p>
-          </div>
-        )}
-        
-        {/* Severity Selection */}
-        <div className="mb-8">
-          <label className="block text-white font-semibold mb-3">Severity</label>
-          <div className="grid grid-cols-4 gap-3">
-            {(['critical', 'high', 'medium', 'low'] as const).map((sev) => (
-              <button
-                key={sev}
-                type="button"
-                onClick={() => setFormData({...formData, severity: sev})}
-                className={`p-4 rounded-lg font-semibold capitalize transition-all text-center ${
-                  formData.severity === sev 
-                    ? `${severityColors[sev]} text-white` 
-                    : 'bg-gray-800 text-gray-400 hover:bg-gray-700'
-                }`}
-              >
-                {sev}
-                <br />
-                <span className="text-xs opacity-70">
-                  ${protocol?.severity_payouts?.[sev]?.max?.toLocaleString?.() || '???'}
+              <div className="sf-protocol-right">
+                <span className="sf-protocol-bounty">
+                  ${protocol.bounty.max.toLocaleString()} max
                 </span>
-              </button>
-            ))}
+                {protocol.bounty.kyc_required && (
+                  <span className="sf-protocol-kyc">KYC</span>
+                )}
+              </div>
+            </div>
+          ) : protocolSlug ? (
+            <div className="sf-protocol sf-protocol-loading">
+              <span className="sf-protocol-name">Loading {protocolSlug}...</span>
+            </div>
+          ) : null}
+
+          {error && (
+            <div className="sf-error">
+              <span className="sf-error-icon">!</span>
+              <p>{error}</p>
+            </div>
+          )}
+
+          {/* Severity selector */}
+          <div className="sf-field">
+            <label className="sf-label">
+              <span className="sf-label-num">01</span>
+              Severity
+            </label>
+            <div className="sf-sev-grid">
+              {(Object.keys(SEV_CONFIG) as Severity[]).map((sev) => {
+                const c = SEV_CONFIG[sev]
+                const isActive = formData.severity === sev
+                return (
+                  <button
+                    key={sev}
+                    type="button"
+                    onClick={() => setFormData({ ...formData, severity: sev })}
+                    className={`sf-sev-btn ${isActive ? 'active' : ''}`}
+                    style={{
+                      background: isActive ? c.activeBg : c.bg,
+                      borderColor: isActive ? c.dot : c.border,
+                      color: isActive ? c.dot : 'var(--muted)',
+                    }}
+                  >
+                    <span className="sf-sev-dot" style={{ background: c.dot, opacity: isActive ? 1 : 0.4 }} />
+                    <span className="sf-sev-name">{c.label}</span>
+                    <span className="sf-sev-amount">
+                      ${protocol?.severity_payouts?.[sev]?.max?.toLocaleString?.() || '—'}
+                    </span>
+                  </button>
+                )
+              })}
+            </div>
           </div>
-        </div>
-        
-        <form onSubmit={handleSubmit} className="space-y-6">
-          {/* Title */}
-          <div>
-            <label className="block text-white font-semibold mb-2">Title</label>
-            <input
-              type="text"
-              value={formData.title}
-              onChange={(e) => setFormData({...formData, title: e.target.value})}
-              className="w-full bg-gray-800 border border-gray-700 rounded-lg p-3 text-white"
-              placeholder="Brief description of the vulnerability"
-              required
-            />
-          </div>
-          
-          {/* Description */}
-          <div>
-            <label className="block text-white font-semibold mb-2">Description</label>
-            <textarea
-              value={formData.description}
-              onChange={(e) => setFormData({...formData, description: e.target.value})}
-              className="w-full bg-gray-800 border border-gray-700 rounded-lg p-3 text-white h-32"
-              placeholder="Detailed explanation of the vulnerability and impact"
-              required
-            />
-          </div>
-          
-          {/* Steps to Reproduce */}
-          <div>
-            <label className="block text-white font-semibold mb-2">Steps to Reproduce</label>
-            <textarea
-              value={formData.steps}
-              onChange={(e) => setFormData({...formData, steps: e.target.value})}
-              className="w-full bg-gray-800 border border-gray-700 rounded-lg p-3 text-white h-40 font-mono text-sm"
-              placeholder="1. Step one...\n2. Step two...\n3. etc."
-              required
-            />
-          </div>
-          
-          {/* PoC Code (optional) */}
-          <div>
-            <label className="block text-white font-semibold mb-2">Proof of Concept Code (optional)</label>
-            <textarea
-              value={formData.poc_code}
-              onChange={(e) => setFormData({...formData, poc_code: e.target.value})}
-              className="w-full bg-gray-800 border border-gray-700 rounded-lg p-3 text-white h-32 font-mono text-sm"
-              placeholder="Solidity/Foundry test code demonstrating the exploit"
-            />
-          </div>
-          
-          {/* Impact Analysis */}
-          <div>
-            <label className="block text-white font-semibold mb-2">Impact Analysis</label>
-            <textarea
-              value={formData.impact_analysis}
-              onChange={(e) => setFormData({...formData, impact_analysis: e.target.value})}
-              className="w-full bg-gray-800 border border-gray-700 rounded-lg p-3 text-white h-32"
-              placeholder="Financial impact, user impact, protocol risk, and remediation suggestions"
-            />
-          </div>
-          
-          {/* Security & Encryption Notice */}
-          <div className="bg-blue-900/20 border border-blue-700 rounded-lg p-4">
-            <div className="flex items-start gap-3">
-              <span className="text-2xl mt-1">🔐</span>
+
+          <form onSubmit={handleSubmit}>
+            {/* Title */}
+            <div className="sf-field">
+              <label className="sf-label">
+                <span className="sf-label-num">02</span>
+                Title
+              </label>
+              <input
+                type="text"
+                value={formData.title}
+                onChange={(e) => setFormData({ ...formData, title: e.target.value })}
+                className="sf-input"
+                placeholder="Brief description of the vulnerability"
+                required
+              />
+            </div>
+
+            {/* Description */}
+            <div className="sf-field">
+              <label className="sf-label">
+                <span className="sf-label-num">03</span>
+                Description
+              </label>
+              <textarea
+                value={formData.description}
+                onChange={(e) => setFormData({ ...formData, description: e.target.value })}
+                className="sf-textarea"
+                rows={5}
+                placeholder="Detailed explanation of the vulnerability and impact"
+                required
+              />
+            </div>
+
+            {/* Steps to Reproduce */}
+            <div className="sf-field">
+              <label className="sf-label">
+                <span className="sf-label-num">04</span>
+                Steps to Reproduce
+              </label>
+              <textarea
+                value={formData.steps}
+                onChange={(e) => setFormData({ ...formData, steps: e.target.value })}
+                className="sf-textarea sf-textarea-mono"
+                rows={6}
+                placeholder={"1. Deploy contract with...\n2. Call function...\n3. Observe that..."}
+                required
+              />
+            </div>
+
+            {/* PoC Code */}
+            <div className="sf-field">
+              <label className="sf-label">
+                <span className="sf-label-num">05</span>
+                Proof of Concept
+                <span className="sf-label-opt">optional</span>
+              </label>
+              <textarea
+                value={formData.poc_code}
+                onChange={(e) => setFormData({ ...formData, poc_code: e.target.value })}
+                className="sf-textarea sf-textarea-mono"
+                rows={5}
+                placeholder="Solidity / Foundry test code demonstrating the exploit"
+              />
+            </div>
+
+            {/* Impact Analysis */}
+            <div className="sf-field">
+              <label className="sf-label">
+                <span className="sf-label-num">06</span>
+                Impact Analysis
+              </label>
+              <textarea
+                value={formData.impact_analysis}
+                onChange={(e) => setFormData({ ...formData, impact_analysis: e.target.value })}
+                className="sf-textarea"
+                rows={4}
+                placeholder="Financial impact, user risk, protocol exposure, and remediation suggestions"
+              />
+            </div>
+
+            {/* Encryption notice */}
+            <div className="sf-encrypt-notice">
+              <div className="sf-encrypt-icon">⛓</div>
               <div>
-                <p className="text-white font-semibold">Client-Side Encryption with TweetNaCl</p>
-                <p className="text-gray-400 text-sm mt-1">
-                  Your entire report is encrypted <span className="text-green-400 font-semibold">in your browser</span> before being sent.
-                  Only the intended protocol team can decrypt it using their private key.
-                </p>
-                <p className="text-gray-500 text-xs mt-2">
-                  Technology: TweetNaCl (NaCl crypto library) • End-to-end encryption • Zero-knowledge to WhiteClaws
+                <p className="sf-encrypt-title">End-to-End Encrypted</p>
+                <p className="sf-encrypt-desc">
+                  Your report is encrypted in-browser with TweetNaCl before transmission.
+                  Only the protocol team's private key can decrypt it. Zero knowledge to WhiteClaws.
                 </p>
               </div>
             </div>
-          </div>
-          
-          {/* Submit Button */}
-          <button
-            type="submit"
-            disabled={isEncrypting || isSubmitting}
-            className={`w-full py-4 rounded-lg font-semibold text-lg transition-all ${
-              isEncrypting || isSubmitting
-                ? 'bg-green-600 text-white opacity-70'
-                : 'bg-green-500 hover:bg-green-600 text-white'
-            }`}
-          >
-            {isEncrypting ? '🔐 Encrypting...' : 
-             isSubmitting ? '📤 Submitting...' : 
-             '🔐 Encrypt & Submit'}
-          </button>
-        </form>
+
+            {/* Submit */}
+            <button
+              type="submit"
+              disabled={isEncrypting || isSubmitting}
+              className="sf-submit"
+            >
+              {isEncrypting ? 'Encrypting...' :
+                isSubmitting ? 'Submitting...' :
+                  'Encrypt & Submit →'}
+            </button>
+          </form>
+
+        </div>
       </div>
-    </div>
       <Footer />
     </>
   )
