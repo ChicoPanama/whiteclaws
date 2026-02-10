@@ -24,6 +24,7 @@ export default function Nav() {
         <div className="nav-links">
           <Link href="/bounties">Bounties</Link>
           <Link href="/researchers">Researchers</Link>
+          <Link href="/agents">Agents</Link>
           <Link href="/platform">Platform</Link>
           <Link href="/docs">Docs</Link>
         </div>
@@ -33,8 +34,8 @@ export default function Nav() {
         <Link href={isAuthenticated ? '/app' : '/login'} className="btn btn-g">
           {isAuthenticated ? 'Dashboard' : 'Log In'}
         </Link>
-        <Link href="/app/access" className="btn btn-w">
-          Get Protected <span className="arr">→</span>
+        <Link href="/bounties" className="btn btn-w">
+          Get Started <span className="arr">→</span>
         </Link>
       </div>
     </nav>

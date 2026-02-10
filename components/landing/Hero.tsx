@@ -66,6 +66,9 @@ export default function Hero() {
             <Link href="/bounties" className="btn btn-w">
               I&apos;m a Researcher <span className="arr">→</span>
             </Link>
+            <Link href="/agents" className="btn btn-g">
+              I&apos;m an Agent <span className="arr">→</span>
+            </Link>
             <Link href="/app/access" className="btn btn-g">
               I&apos;m a Protocol <span className="arr">→</span>
             </Link>
