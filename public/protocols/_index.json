@@ -1,86 +1,53 @@
 {
   "protocols": [
-    {
-      "slug": "alchemix"
-    },
-    {
-      "slug": "bitflow"
-    },
-    {
-      "slug": "cc-protocol"
-    },
-    {
-      "slug": "dex-protocol"
-    },
-    {
-      "slug": "ens"
-    },
-    {
-      "slug": "ethena"
-    },
-    {
-      "slug": "halogen"
-    },
-    {
-      "slug": "hedera"
-    },
-    {
-      "slug": "helios-finance"
-    },
-    {
-      "slug": "hoenn"
-    },
-    {
-      "slug": "immunefi"
-    },
-    {
-      "slug": "infinex"
-    },
-    {
-      "slug": "intmax"
-    },
-    {
-      "slug": "inverse-finance"
-    },
-    {
-      "slug": "layer3"
-    },
-    {
-      "slug": "lombard-finance"
-    },
-    {
-      "slug": "origin-protocol"
-    },
-    {
-      "slug": "pinto"
-    },
-    {
-      "slug": "plaza-finance"
-    },
-    {
-      "slug": "plume-network"
-    },
-    {
-      "slug": "ref-finance"
-    },
-    {
-      "slug": "scroll"
-    },
-    {
-      "slug": "ssv-network"
-    },
-    {
-      "slug": "stackingdao"
-    },
-    {
-      "slug": "xion"
-    },
-    {
-      "slug": "zano"
-    },
-    {
-      "slug": "zest-protocol-v2"
-    }
+    { "slug": "aave" },
+    { "slug": "alchemix" },
+    { "slug": "arbitrum" },
+    { "slug": "axelarnetwork" },
+    { "slug": "balancer" },
+    { "slug": "bitflow" },
+    { "slug": "cc-protocol" },
+    { "slug": "chainlink" },
+    { "slug": "compoundfinance" },
+    { "slug": "cowprotocol" },
+    { "slug": "dex-protocol" },
+    { "slug": "eigenlayer" },
+    { "slug": "ens" },
+    { "slug": "ethena" },
+    { "slug": "gmx" },
+    { "slug": "halogen" },
+    { "slug": "hedera" },
+    { "slug": "helios-finance" },
+    { "slug": "hoenn" },
+    { "slug": "hyperlane" },
+    { "slug": "immunefi" },
+    { "slug": "infinex" },
+    { "slug": "intmax" },
+    { "slug": "inverse-finance" },
+    { "slug": "layer3" },
+    { "slug": "layerzero" },
+    { "slug": "lido" },
+    { "slug": "lombard-finance" },
+    { "slug": "olympus" },
+    { "slug": "optimism" },
+    { "slug": "origin-protocol" },
+    { "slug": "pancakeswap" },
+    { "slug": "pinto" },
+    { "slug": "plaza-finance" },
+    { "slug": "plume-network" },
+    { "slug": "polygon" },
+    { "slug": "ref-finance" },
+    { "slug": "reserve" },
+    { "slug": "scroll" },
+    { "slug": "sky" },
+    { "slug": "ssv-network" },
+    { "slug": "stackingdao" },
+    { "slug": "stargate" },
+    { "slug": "starknet" },
+    { "slug": "wormhole" },
+    { "slug": "xion" },
+    { "slug": "zano" },
+    { "slug": "zest-protocol-v2" }
   ],
-  "count": 27
+  "count": 48
 }

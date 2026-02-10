@@ -1,0 +1,75 @@
+{
+  "slug": "balancer",
+  "name": "Balancer",
+  "description": "Programmable liquidity protocol with weighted pools and flash loans",
+  "category": "DEX",
+  "logo_url": null,
+  "chains": [
+    "ethereum",
+    "arbitrum",
+    "polygon",
+    "base",
+    "optimism"
+  ],
+  "bounty": {
+    "max": 1000000,
+    "min": 1000,
+    "kyc_required": true,
+    "payout_token": "USDC"
+  },
+  "severity_payouts": {
+    "critical": {
+      "min": 250000,
+      "max": 1000000,
+      "description": "Direct theft of pool assets or vault drainage"
+    },
+    "high": {
+      "min": 50000,
+      "max": 250000,
+      "description": "Pool manipulation or flash loan exploit"
+    },
+    "medium": {
+      "min": 5000,
+      "max": 50000,
+      "description": "Fee calculation errors or pool imbalance"
+    },
+    "low": {
+      "min": 1000,
+      "max": 5000,
+      "description": "Informational findings"
+    }
+  },
+  "source": "immunefi",
+  "contracts": [
+    {
+      "address": "0xBA12222222228d8Ba445958a75a0704d566BF2C8",
+      "network": "ethereum",
+      "name": "Balancer Vault",
+      "type": "Core"
+    }
+  ],
+  "scope": {
+    "in_scope": [
+      "Balancer Vault V2/V3",
+      "Weighted and stable pool contracts",
+      "Flash loan implementation",
+      "Rate providers"
+    ],
+    "out_of_scope": [
+      "Frontend interface",
+      "veBAL governance",
+      "Third-party pool implementations"
+    ],
+    "functions_critical": [
+      "swap",
+      "joinPool",
+      "exitPool"
+    ],
+    "functions_high": [
+      "flashLoan",
+      "setSwapFeePercentage",
+      "managePoolBalance"
+    ]
+  },
+  "updated_at": "2026-02-10T00:00:00Z"
+}

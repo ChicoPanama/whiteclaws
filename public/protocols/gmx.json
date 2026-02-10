@@ -1,0 +1,72 @@
+{
+  "slug": "gmx",
+  "name": "GMX",
+  "description": "Decentralized perpetual exchange with low swap fees and zero price impact trades",
+  "category": "DeFi Trading",
+  "logo_url": null,
+  "chains": [
+    "arbitrum",
+    "base"
+  ],
+  "bounty": {
+    "max": 5000000,
+    "min": 1000,
+    "kyc_required": true,
+    "payout_token": "USDC"
+  },
+  "severity_payouts": {
+    "critical": {
+      "min": 1000000,
+      "max": 5000000,
+      "description": "Direct theft of user funds or GLP/GM pool drainage"
+    },
+    "high": {
+      "min": 100000,
+      "max": 500000,
+      "description": "Price manipulation or liquidation exploit"
+    },
+    "medium": {
+      "min": 10000,
+      "max": 100000,
+      "description": "Fee calculation errors or order execution issues"
+    },
+    "low": {
+      "min": 1000,
+      "max": 10000,
+      "description": "Informational findings"
+    }
+  },
+  "source": "immunefi",
+  "contracts": [
+    {
+      "address": "0x489ee077994B6658eAfA855C308275EAd8097C4A",
+      "network": "arbitrum",
+      "name": "GMX Vault",
+      "type": "Core"
+    }
+  ],
+  "scope": {
+    "in_scope": [
+      "GMX V2 Synthetics contracts",
+      "Market and position management",
+      "Oracle and pricing logic",
+      "Deposit and withdrawal handlers"
+    ],
+    "out_of_scope": [
+      "Frontend interface",
+      "Off-chain keeper bots",
+      "GMX V1 legacy contracts"
+    ],
+    "functions_critical": [
+      "executeDeposit",
+      "executeWithdrawal",
+      "executeOrder"
+    ],
+    "functions_high": [
+      "liquidatePosition",
+      "setPrices",
+      "createOrder"
+    ]
+  },
+  "updated_at": "2026-02-10T00:00:00Z"
+}

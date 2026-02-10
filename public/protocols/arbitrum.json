@@ -1,0 +1,72 @@
+{
+  "slug": "arbitrum",
+  "name": "Arbitrum",
+  "description": "Leading Ethereum Layer 2 scaling solution using optimistic rollup technology",
+  "category": "Layer 2",
+  "logo_url": null,
+  "chains": [
+    "arbitrum",
+    "ethereum"
+  ],
+  "bounty": {
+    "max": 2000000,
+    "min": 1000,
+    "kyc_required": true,
+    "payout_token": "USDC"
+  },
+  "severity_payouts": {
+    "critical": {
+      "min": 500000,
+      "max": 2000000,
+      "description": "Direct theft of bridged assets or rollup state manipulation"
+    },
+    "high": {
+      "min": 100000,
+      "max": 500000,
+      "description": "Sequencer manipulation or withdrawal bypass"
+    },
+    "medium": {
+      "min": 10000,
+      "max": 100000,
+      "description": "Protocol disruption or delayed finality exploit"
+    },
+    "low": {
+      "min": 1000,
+      "max": 10000,
+      "description": "Informational findings"
+    }
+  },
+  "source": "immunefi",
+  "contracts": [
+    {
+      "address": "0x1c479675ad559DC151F6Ec7ed3FbF8ceE79582B6",
+      "network": "ethereum",
+      "name": "Arbitrum Rollup",
+      "type": "Core"
+    }
+  ],
+  "scope": {
+    "in_scope": [
+      "Rollup core contracts",
+      "Bridge and inbox contracts",
+      "Fraud proof system",
+      "Sequencer inbox"
+    ],
+    "out_of_scope": [
+      "Frontend explorer",
+      "Arbitrum Nova chain",
+      "Third-party dApps on Arbitrum"
+    ],
+    "functions_critical": [
+      "processIncomingMessages",
+      "confirmNode",
+      "forceInclusion"
+    ],
+    "functions_high": [
+      "createChallenge",
+      "outboxExecute",
+      "setSequencer"
+    ]
+  },
+  "updated_at": "2026-02-10T00:00:00Z"
+}

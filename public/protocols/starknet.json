@@ -1,0 +1,71 @@
+{
+  "slug": "starknet",
+  "name": "StarkNet",
+  "description": "Permissionless decentralized ZK-Rollup operating as an L2 network over Ethereum",
+  "category": "Layer 2",
+  "logo_url": null,
+  "chains": [
+    "ethereum"
+  ],
+  "bounty": {
+    "max": 1000000,
+    "min": 1000,
+    "kyc_required": true,
+    "payout_token": "USDC"
+  },
+  "severity_payouts": {
+    "critical": {
+      "min": 250000,
+      "max": 1000000,
+      "description": "ZK proof forgery or bridged asset theft"
+    },
+    "high": {
+      "min": 50000,
+      "max": 250000,
+      "description": "State transition manipulation or sequencer exploit"
+    },
+    "medium": {
+      "min": 10000,
+      "max": 50000,
+      "description": "Protocol disruption or proof verification bypass"
+    },
+    "low": {
+      "min": 1000,
+      "max": 10000,
+      "description": "Informational findings"
+    }
+  },
+  "source": "immunefi",
+  "contracts": [
+    {
+      "address": "0xc662c410C0ECf747543f5bA90660f6ABeBD9C8c4",
+      "network": "ethereum",
+      "name": "StarkNet Core Contract",
+      "type": "Core"
+    }
+  ],
+  "scope": {
+    "in_scope": [
+      "StarkNet core contract on L1",
+      "StarkNet bridge contracts",
+      "STARK verifier",
+      "State update mechanism"
+    ],
+    "out_of_scope": [
+      "Frontend explorer",
+      "Off-chain sequencer",
+      "Cairo language compiler"
+    ],
+    "functions_critical": [
+      "updateState",
+      "deposit",
+      "withdraw"
+    ],
+    "functions_high": [
+      "verifyProof",
+      "registerAppGovernor",
+      "setOperator"
+    ]
+  },
+  "updated_at": "2026-02-10T00:00:00Z"
+}

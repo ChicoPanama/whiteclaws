@@ -1,0 +1,72 @@
+{
+  "slug": "polygon",
+  "name": "Polygon",
+  "description": "Ethereum scaling platform with multiple solutions including PoS, zkEVM, and CDK",
+  "category": "Layer 2",
+  "logo_url": null,
+  "chains": [
+    "polygon",
+    "ethereum"
+  ],
+  "bounty": {
+    "max": 1000000,
+    "min": 1000,
+    "kyc_required": true,
+    "payout_token": "USDC"
+  },
+  "severity_payouts": {
+    "critical": {
+      "min": 250000,
+      "max": 1000000,
+      "description": "Direct theft of bridged assets or chain state manipulation"
+    },
+    "high": {
+      "min": 50000,
+      "max": 250000,
+      "description": "Validator manipulation or checkpoint bypass"
+    },
+    "medium": {
+      "min": 10000,
+      "max": 50000,
+      "description": "Protocol disruption or gas estimation exploit"
+    },
+    "low": {
+      "min": 1000,
+      "max": 10000,
+      "description": "Informational findings"
+    }
+  },
+  "source": "immunefi",
+  "contracts": [
+    {
+      "address": "0xA0c68C638235ee32657e8f720a23ceC1bFc77C77",
+      "network": "ethereum",
+      "name": "Polygon Bridge",
+      "type": "Core"
+    }
+  ],
+  "scope": {
+    "in_scope": [
+      "Polygon PoS bridge contracts",
+      "zkEVM bridge and rollup",
+      "Validator and staking contracts",
+      "Checkpoint mechanism"
+    ],
+    "out_of_scope": [
+      "Frontend explorer",
+      "Off-chain validator nodes",
+      "Third-party dApps"
+    ],
+    "functions_critical": [
+      "depositFor",
+      "exit",
+      "submitCheckpoint"
+    ],
+    "functions_high": [
+      "stake",
+      "unstake",
+      "claimRewards"
+    ]
+  },
+  "updated_at": "2026-02-10T00:00:00Z"
+}

@@ -35,6 +35,7 @@ const CHAIN_MAP: Record<string, string> = {
   cosmos: 'ATOM',
   near: 'NEAR',
   zano: 'ZANO',
+  solana: 'SOL',
 }
 
 export function normalizeChain(raw: string): string {

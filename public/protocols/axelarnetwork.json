@@ -1,0 +1,75 @@
+{
+  "slug": "axelarnetwork",
+  "name": "Axelar Network",
+  "description": "Universal cross-chain communication network connecting Web3 ecosystems",
+  "category": "Bridge",
+  "logo_url": null,
+  "chains": [
+    "ethereum",
+    "arbitrum",
+    "optimism",
+    "polygon",
+    "base"
+  ],
+  "bounty": {
+    "max": 2250000,
+    "min": 1000,
+    "kyc_required": true,
+    "payout_token": "USDC"
+  },
+  "severity_payouts": {
+    "critical": {
+      "min": 500000,
+      "max": 2250000,
+      "description": "Cross-chain message forgery or gateway exploit"
+    },
+    "high": {
+      "min": 100000,
+      "max": 500000,
+      "description": "Validator set manipulation or token minting bypass"
+    },
+    "medium": {
+      "min": 10000,
+      "max": 100000,
+      "description": "GMP routing errors or gas estimation exploit"
+    },
+    "low": {
+      "min": 1000,
+      "max": 10000,
+      "description": "Informational findings"
+    }
+  },
+  "source": "immunefi",
+  "contracts": [
+    {
+      "address": "0x4F4495243837681061C4743b74B3eEdf548D56A5",
+      "network": "ethereum",
+      "name": "Axelar Gateway",
+      "type": "Core"
+    }
+  ],
+  "scope": {
+    "in_scope": [
+      "Axelar Gateway contracts",
+      "General Message Passing (GMP)",
+      "Interchain Token Service",
+      "Gas service contracts"
+    ],
+    "out_of_scope": [
+      "Frontend applications",
+      "Axelar validator nodes",
+      "Satellite UI"
+    ],
+    "functions_critical": [
+      "callContract",
+      "validateContractCall",
+      "execute"
+    ],
+    "functions_high": [
+      "deployInterchainToken",
+      "setChainConfig",
+      "approveMessages"
+    ]
+  },
+  "updated_at": "2026-02-10T00:00:00Z"
+}

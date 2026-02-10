@@ -1,0 +1,77 @@
+{
+  "slug": "wormhole",
+  "name": "Wormhole",
+  "description": "Generic cross-chain message passing protocol connecting multiple blockchains",
+  "category": "Bridge",
+  "logo_url": null,
+  "chains": [
+    "ethereum",
+    "solana",
+    "bsc",
+    "polygon",
+    "arbitrum",
+    "optimism",
+    "base"
+  ],
+  "bounty": {
+    "max": 5000000,
+    "min": 1000,
+    "kyc_required": true,
+    "payout_token": "USDC"
+  },
+  "severity_payouts": {
+    "critical": {
+      "min": 1000000,
+      "max": 5000000,
+      "description": "Direct theft of user funds or cross-chain exploit"
+    },
+    "high": {
+      "min": 100000,
+      "max": 500000,
+      "description": "Temporary freezing of funds or guardian manipulation"
+    },
+    "medium": {
+      "min": 10000,
+      "max": 100000,
+      "description": "Protocol disruption or message spoofing"
+    },
+    "low": {
+      "min": 1000,
+      "max": 10000,
+      "description": "Informational findings"
+    }
+  },
+  "source": "immunefi",
+  "contracts": [
+    {
+      "address": "0x98f3c9e6E3fAce36bAAd05FE09d375Ef1464288B",
+      "network": "ethereum",
+      "name": "Wormhole Core Bridge",
+      "type": "Core"
+    }
+  ],
+  "scope": {
+    "in_scope": [
+      "Core bridge contracts",
+      "Guardian verification",
+      "Token bridge",
+      "VAA parsing and validation"
+    ],
+    "out_of_scope": [
+      "Frontend portal",
+      "Off-chain guardian nodes",
+      "Third-party relayers"
+    ],
+    "functions_critical": [
+      "publishMessage",
+      "parseAndVerifyVM",
+      "completeTransfer"
+    ],
+    "functions_high": [
+      "submitContractUpgrade",
+      "registerChain",
+      "updateGuardianSet"
+    ]
+  },
+  "updated_at": "2026-02-10T00:00:00Z"
+}

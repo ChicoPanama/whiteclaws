@@ -1,0 +1,73 @@
+{
+  "slug": "cowprotocol",
+  "name": "CoW Protocol",
+  "description": "MEV-protected trading protocol using batch auctions for optimal execution",
+  "category": "DEX",
+  "logo_url": null,
+  "chains": [
+    "ethereum",
+    "arbitrum",
+    "base"
+  ],
+  "bounty": {
+    "max": 1000000,
+    "min": 1000,
+    "kyc_required": true,
+    "payout_token": "USDC"
+  },
+  "severity_payouts": {
+    "critical": {
+      "min": 250000,
+      "max": 1000000,
+      "description": "Direct theft of user funds or settlement manipulation"
+    },
+    "high": {
+      "min": 50000,
+      "max": 250000,
+      "description": "Order spoofing or solver collusion exploit"
+    },
+    "medium": {
+      "min": 5000,
+      "max": 50000,
+      "description": "Fee extraction or batch auction disruption"
+    },
+    "low": {
+      "min": 1000,
+      "max": 5000,
+      "description": "Informational findings"
+    }
+  },
+  "source": "immunefi",
+  "contracts": [
+    {
+      "address": "0x9008D19f58AAbD9eD0D60971565AA8510560ab41",
+      "network": "ethereum",
+      "name": "CoW Protocol Settlement",
+      "type": "Core"
+    }
+  ],
+  "scope": {
+    "in_scope": [
+      "Settlement contract",
+      "Order signing and validation",
+      "Batch auction logic",
+      "Programmatic order framework"
+    ],
+    "out_of_scope": [
+      "Frontend interface",
+      "Off-chain solver infrastructure",
+      "CoW AMM pools"
+    ],
+    "functions_critical": [
+      "settle",
+      "preSignature",
+      "invalidateOrder"
+    ],
+    "functions_high": [
+      "setRelayerApproval",
+      "vaultRelayer",
+      "filledAmount"
+    ]
+  },
+  "updated_at": "2026-02-10T00:00:00Z"
+}
