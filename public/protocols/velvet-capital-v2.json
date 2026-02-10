@@ -3,7 +3,7 @@
   "name": "Velvet Capital V2",
   "description": "Velvet Capital V2 bug bounty program on Immunefi",
   "category": "DeFi",
-  "logo_url": null,
+  "logo_url": "https://icons.llamao.fi/icons/protocols/velvet-v2?w=48&h=48",
   "chains": [
     "ethereum"
   ],

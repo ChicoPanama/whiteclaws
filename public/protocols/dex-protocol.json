@@ -3,7 +3,7 @@
   "name": "DeXe Protocol",
   "description": "DAO and social trading protocol enabling collective investments and community-driven asset management",
   "category": "DeFi",
-  "logo_url": null,
+  "logo_url": "https://icons.llamao.fi/icons/protocols/dexe-protocol?w=48&h=48",
   "chains": [
     "ethereum",
     "bsc"

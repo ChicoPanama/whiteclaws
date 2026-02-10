@@ -3,7 +3,7 @@
   "name": "CC Protocol",
   "description": "Cross-chain lending protocol",
   "category": "DeFi Lending",
-  "logo_url": null,
+  "logo_url": "https://avatars.githubusercontent.com/u/243570915?s=200&v=4",
   "chains": [
     "ethereum"
   ],

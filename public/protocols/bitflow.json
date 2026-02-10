@@ -3,7 +3,7 @@
   "name": "Bitflow",
   "description": "Decentralized exchange for Bitcoiners built on Stacks, enabling BTC-denominated trading and earning with Bitcoin blockchain security",
   "category": "DEX",
-  "logo_url": null,
+  "logo_url": "https://icons.llamao.fi/icons/protocols/bitflow?w=48&h=48",
   "chains": [
     "stacks"
   ],

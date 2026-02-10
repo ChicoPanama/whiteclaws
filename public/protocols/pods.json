@@ -3,7 +3,7 @@
   "name": "Pods",
   "description": "Pods bug bounty program on Immunefi",
   "category": "DeFi",
-  "logo_url": null,
+  "logo_url": "https://icons.llamao.fi/icons/protocols/pods?w=48&h=48",
   "chains": [
     "ethereum"
   ],

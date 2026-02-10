@@ -3,7 +3,7 @@
   "name": "Openzeppelin Stellar",
   "description": "Openzeppelin Stellar bug bounty program on Immunefi",
   "category": "DeFi",
-  "logo_url": null,
+  "logo_url": "https://icons.llamao.fi/icons/protocols/openzeppelin?w=48&h=48",
   "chains": [
     "ethereum"
   ],

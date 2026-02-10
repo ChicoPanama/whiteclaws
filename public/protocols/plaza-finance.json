@@ -3,7 +3,7 @@
   "name": "Plaza Finance",
   "description": "Yield optimization protocol",
   "category": "DeFi Yield",
-  "logo_url": null,
+  "logo_url": "https://icons.llamao.fi/icons/protocols/plaza-finance?w=48&h=48",
   "chains": [
     "ethereum",
     "base"

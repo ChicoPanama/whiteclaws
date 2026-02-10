@@ -3,7 +3,7 @@
   "name": "Zest Protocol V2",
   "description": "Bitcoin liquidity protocol enabling BTC earning and borrowing with vibrant lending ecosystem",
   "category": "DeFi Lending",
-  "logo_url": null,
+  "logo_url": "https://icons.llamao.fi/icons/protocols/zest?w=48&h=48",
   "chains": [
     "stacks"
   ],
