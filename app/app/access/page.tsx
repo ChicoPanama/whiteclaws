@@ -3,8 +3,6 @@
 import { useEffect, useState } from 'react'
 import { useWhiteClaws } from '@/lib/web3/hooks'
 import { getAccessStatus, mintAccess } from '@/lib/web3/access'
-import Nav from '@/components/landing/Nav'
-import Footer from '@/components/Footer'
 
 export default function AccessPage() {
   const { isConnected, address, connect } = useWhiteClaws()
@@ -15,75 +13,69 @@ export default function AccessPage() {
   useEffect(() => {
     if (!address) return
 
-    const fetchStatus = async () => {
+    const check = async () => {
       setStatus('loading')
-      const result = await getAccessStatus(address)
-      setHasAccess(result.hasAccess)
+      try {
+        const result = await getAccessStatus(address)
+        setHasAccess(result.hasAccess)
+      } catch {}
       setStatus('ready')
     }
-
-    fetchStatus()
+    check()
   }, [address])
 
   const handleMint = async () => {
     if (!address) return
     setMessage(null)
-    setStatus('loading')
-    const response = await mintAccess(address)
-    if (response.ok) {
-      setMessage('Access request submitted successfully.')
-    } else {
-      setMessage(response.error ?? 'Failed to submit access request.')
+    try {
+      const result = await mintAccess(address)
+      if (result.ok) {
+        setHasAccess(true)
+        setMessage('Access granted!')
+      } else {
+        setMessage(result.error || 'Mint failed')
+      }
+    } catch {
+      setMessage('Transaction failed')
     }
-    const refreshed = await getAccessStatus(address)
-    setHasAccess(refreshed.hasAccess)
-    setStatus('ready')
   }
 
   return (
-    <>
-      <Nav />
-      <div className="space-y-8">
-      <div>
-        <h1 className="text-3xl font-bold">Access License</h1>
-        <p className="text-gray-400 mt-2">Access is provided via a non-transferable SBT license.</p>
+    <div className="ap-content">
+      <div className="ap-page-header">
+        <h1 className="ap-page-title">Protocol Access</h1>
+        <p className="ap-page-desc">Connect your wallet to verify or mint your access token (SBT).</p>
       </div>
 
-      <div className="bg-gray-900 border border-gray-800 rounded-xl p-6 space-y-4">
-        <div className="flex items-center justify-between">
-          <div>
-            <p className="text-sm text-gray-400">Wallet</p>
-            <p className="font-mono text-sm">{address ?? 'Not connected'}</p>
+      <div className="ap-card">
+        {!isConnected ? (
+          <div className="ap-card-center">
+            <p className="ap-card-text">Connect your wallet to check access status.</p>
+            <button onClick={connect} className="ap-btn-primary">
+              Connect Wallet
+            </button>
           </div>
-          <button
-            className="bg-gray-800 border border-gray-700 px-4 py-2 rounded-lg text-sm"
-            onClick={connect}
-          >
-            {isConnected ? 'Connected' : 'Connect Wallet'}
-          </button>
-        </div>
-
-        <div className="bg-gray-950 border border-gray-800 rounded-lg p-4">
-          <p className="text-sm text-gray-400">Status</p>
-          <p className="text-lg font-semibold mt-1">
-            {status === 'loading' ? 'Checking...' : hasAccess ? 'Access Active ✅' : 'Not licensed'}
-          </p>
-        </div>
-
-        {!hasAccess && (
-          <button
-            className="bg-green-500 text-black px-4 py-2 rounded-lg text-sm font-semibold"
-            onClick={handleMint}
-            disabled={!address || status === 'loading'}
-          >
-            Mint Access SBT (burn ~$20 worth of token)
-          </button>
+        ) : status === 'loading' ? (
+          <div className="ap-card-center">
+            <div className="ap-spinner" />
+            <p className="ap-card-text">Checking access for {address?.slice(0, 6)}...{address?.slice(-4)}</p>
+          </div>
+        ) : hasAccess ? (
+          <div className="ap-card-center">
+            <div className="ap-status-badge ap-status-active">Access Active</div>
+            <p className="ap-card-text">Your wallet {address?.slice(0, 6)}...{address?.slice(-4)} has a valid access SBT.</p>
+          </div>
+        ) : (
+          <div className="ap-card-center">
+            <div className="ap-status-badge ap-status-inactive">No Access</div>
+            <p className="ap-card-text">Mint an access SBT to enable protocol features.</p>
+            <button onClick={handleMint} className="ap-btn-primary">
+              Mint Access SBT
+            </button>
+          </div>
         )}
-
-        {message && <p className="text-sm text-gray-300">{message}</p>}
+        {message && <p className="ap-message">{message}</p>}
       </div>
     </div>
-      <Footer />
-    </>
   )
 }
