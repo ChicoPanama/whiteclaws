@@ -1,0 +1,45 @@
+{
+  "slug": "renzoprotocol",
+  "name": "Renzo Protocol",
+  "description": "Renzo Protocol bug bounty program on Immunefi",
+  "category": "DeFi Staking",
+  "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/5vS0LqsY8aTwXw4AXCjNrB/3a1542886af81a0885485f9187ecb693/2.0_Renzo_Black_Logo__1_.png",
+  "chains": [
+    "ethereum"
+  ],
+  "bounty": {
+    "max": 500000,
+    "min": 500,
+    "kyc_required": false,
+    "payout_token": "USDC"
+  },
+  "severity_payouts": {
+    "critical": {
+      "min": 125000,
+      "max": 500000,
+      "description": "Direct theft of user funds or protocol insolvency"
+    },
+    "high": {
+      "min": 5000,
+      "max": 50000,
+      "description": "Temporary freezing of funds or manipulation"
+    },
+    "medium": {
+      "min": 500,
+      "max": 5000,
+      "description": "Griefing or protocol disruption"
+    }
+  },
+  "source": "immunefi",
+  "contracts": [],
+  "scope": {
+    "in_scope": [
+      "Smart contracts in scope per Immunefi listing"
+    ],
+    "out_of_scope": [
+      "Frontend applications",
+      "Off-chain infrastructure"
+    ]
+  },
+  "updated_at": "2026-02-10T00:00:00Z"
+}

@@ -1,0 +1,45 @@
+{
+  "slug": "listadao",
+  "name": "Lista DAO",
+  "description": "Lista DAO bug bounty program on Immunefi",
+  "category": "DeFi",
+  "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/5aOBSUu0V6jW0Op03W4NDF/beec6ccbe2927310dffb147f24fdb902/Twitter_profile_400x400.png",
+  "chains": [
+    "bsc"
+  ],
+  "bounty": {
+    "max": 1000000,
+    "min": 1000,
+    "kyc_required": false,
+    "payout_token": "USDC"
+  },
+  "severity_payouts": {
+    "critical": {
+      "min": 250000,
+      "max": 1000000,
+      "description": "Direct theft of user funds or protocol insolvency"
+    },
+    "high": {
+      "min": 10000,
+      "max": 100000,
+      "description": "Temporary freezing of funds or manipulation"
+    },
+    "medium": {
+      "min": 1000,
+      "max": 10000,
+      "description": "Griefing or protocol disruption"
+    }
+  },
+  "source": "immunefi",
+  "contracts": [],
+  "scope": {
+    "in_scope": [
+      "Smart contracts in scope per Immunefi listing"
+    ],
+    "out_of_scope": [
+      "Frontend applications",
+      "Off-chain infrastructure"
+    ]
+  },
+  "updated_at": "2026-02-10T00:00:00Z"
+}

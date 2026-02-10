@@ -1,0 +1,46 @@
+{
+  "slug": "decentraland",
+  "name": "Decentraland",
+  "description": "Decentraland bug bounty program on Immunefi",
+  "category": "Gaming/NFT",
+  "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/CXsZzmFYIOc6VRsmn4i4P/aa9602446e06cec6320bbab0f437ea98/decentraland-mana-logo_copy.png",
+  "chains": [
+    "ethereum",
+    "polygon"
+  ],
+  "bounty": {
+    "max": 500000,
+    "min": 500,
+    "kyc_required": false,
+    "payout_token": "USDC"
+  },
+  "severity_payouts": {
+    "critical": {
+      "min": 125000,
+      "max": 500000,
+      "description": "Direct theft of user funds or protocol insolvency"
+    },
+    "high": {
+      "min": 5000,
+      "max": 50000,
+      "description": "Temporary freezing of funds or manipulation"
+    },
+    "medium": {
+      "min": 500,
+      "max": 5000,
+      "description": "Griefing or protocol disruption"
+    }
+  },
+  "source": "immunefi",
+  "contracts": [],
+  "scope": {
+    "in_scope": [
+      "Smart contracts in scope per Immunefi listing"
+    ],
+    "out_of_scope": [
+      "Frontend applications",
+      "Off-chain infrastructure"
+    ]
+  },
+  "updated_at": "2026-02-10T00:00:00Z"
+}

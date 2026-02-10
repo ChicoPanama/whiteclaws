@@ -1,0 +1,45 @@
+{
+  "slug": "tinyman",
+  "name": "Tinyman",
+  "description": "Tinyman bug bounty program on Immunefi",
+  "category": "DeFi",
+  "logo_url": null,
+  "chains": [
+    "ethereum"
+  ],
+  "bounty": {
+    "max": 100000,
+    "min": 500,
+    "kyc_required": false,
+    "payout_token": "USDC"
+  },
+  "severity_payouts": {
+    "critical": {
+      "min": 25000,
+      "max": 100000,
+      "description": "Direct theft of user funds or protocol insolvency"
+    },
+    "high": {
+      "min": 1000,
+      "max": 10000,
+      "description": "Temporary freezing of funds or manipulation"
+    },
+    "medium": {
+      "min": 500,
+      "max": 1000,
+      "description": "Griefing or protocol disruption"
+    }
+  },
+  "source": "immunefi",
+  "contracts": [],
+  "scope": {
+    "in_scope": [
+      "Smart contracts in scope per Immunefi listing"
+    ],
+    "out_of_scope": [
+      "Frontend applications",
+      "Off-chain infrastructure"
+    ]
+  },
+  "updated_at": "2026-02-10T00:00:00Z"
+}

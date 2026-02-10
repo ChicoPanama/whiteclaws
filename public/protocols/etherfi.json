@@ -1,0 +1,45 @@
+{
+  "slug": "etherfi",
+  "name": "Ether.fi",
+  "description": "Ether.fi bug bounty program on Immunefi",
+  "category": "DeFi Staking",
+  "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/6uARdqsJxpv7UY78Xbg27/bce4b93c8e971a1a55315d80310f1b9f/ether_fi1677585111698.png",
+  "chains": [
+    "ethereum"
+  ],
+  "bounty": {
+    "max": 300000,
+    "min": 500,
+    "kyc_required": false,
+    "payout_token": "USDC"
+  },
+  "severity_payouts": {
+    "critical": {
+      "min": 75000,
+      "max": 300000,
+      "description": "Direct theft of user funds or protocol insolvency"
+    },
+    "high": {
+      "min": 3000,
+      "max": 30000,
+      "description": "Temporary freezing of funds or manipulation"
+    },
+    "medium": {
+      "min": 500,
+      "max": 3000,
+      "description": "Griefing or protocol disruption"
+    }
+  },
+  "source": "immunefi",
+  "contracts": [],
+  "scope": {
+    "in_scope": [
+      "Smart contracts in scope per Immunefi listing"
+    ],
+    "out_of_scope": [
+      "Frontend applications",
+      "Off-chain infrastructure"
+    ]
+  },
+  "updated_at": "2026-02-10T00:00:00Z"
+}

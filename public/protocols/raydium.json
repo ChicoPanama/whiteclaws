@@ -1,0 +1,45 @@
+{
+  "slug": "raydium",
+  "name": "Raydium",
+  "description": "Raydium bug bounty program on Immunefi",
+  "category": "DEX",
+  "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/4X5hbah3bOvGiEZIPrFmeW/30eb4e2d5a47c3eca8d10b3fcff3ee7c/Raydium_logo.jpeg",
+  "chains": [
+    "solana"
+  ],
+  "bounty": {
+    "max": 505000,
+    "min": 505,
+    "kyc_required": false,
+    "payout_token": "USDC"
+  },
+  "severity_payouts": {
+    "critical": {
+      "min": 126250,
+      "max": 505000,
+      "description": "Direct theft of user funds or protocol insolvency"
+    },
+    "high": {
+      "min": 5050,
+      "max": 50500,
+      "description": "Temporary freezing of funds or manipulation"
+    },
+    "medium": {
+      "min": 505,
+      "max": 5050,
+      "description": "Griefing or protocol disruption"
+    }
+  },
+  "source": "immunefi",
+  "contracts": [],
+  "scope": {
+    "in_scope": [
+      "Smart contracts in scope per Immunefi listing"
+    ],
+    "out_of_scope": [
+      "Frontend applications",
+      "Off-chain infrastructure"
+    ]
+  },
+  "updated_at": "2026-02-10T00:00:00Z"
+}

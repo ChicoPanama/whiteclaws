@@ -1,0 +1,45 @@
+{
+  "slug": "staderforeth",
+  "name": "Stader for ETH",
+  "description": "Stader for ETH bug bounty program on Immunefi",
+  "category": "DeFi Staking",
+  "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/1iQDInT514hzL2832OmJSQ/81275804e386d69c44048a90c690eecb/j-TUyZEq_400x400.jpg",
+  "chains": [
+    "ethereum"
+  ],
+  "bounty": {
+    "max": 1000000,
+    "min": 1000,
+    "kyc_required": false,
+    "payout_token": "USDC"
+  },
+  "severity_payouts": {
+    "critical": {
+      "min": 250000,
+      "max": 1000000,
+      "description": "Direct theft of user funds or protocol insolvency"
+    },
+    "high": {
+      "min": 10000,
+      "max": 100000,
+      "description": "Temporary freezing of funds or manipulation"
+    },
+    "medium": {
+      "min": 1000,
+      "max": 10000,
+      "description": "Griefing or protocol disruption"
+    }
+  },
+  "source": "immunefi",
+  "contracts": [],
+  "scope": {
+    "in_scope": [
+      "Smart contracts in scope per Immunefi listing"
+    ],
+    "out_of_scope": [
+      "Frontend applications",
+      "Off-chain infrastructure"
+    ]
+  },
+  "updated_at": "2026-02-10T00:00:00Z"
+}

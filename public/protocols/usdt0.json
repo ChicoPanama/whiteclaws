@@ -1,0 +1,45 @@
+{
+  "slug": "usdt0",
+  "name": "USDT0",
+  "description": "USDT0 bug bounty program on Immunefi",
+  "category": "DeFi",
+  "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/4qpRnmuoUMcdOxUOuFQUeN/278e2ad4821b6e2dadf60d84e3a4bb4f/USDT0.png",
+  "chains": [
+    "ethereum"
+  ],
+  "bounty": {
+    "max": 6000000,
+    "min": 6000,
+    "kyc_required": false,
+    "payout_token": "USDC"
+  },
+  "severity_payouts": {
+    "critical": {
+      "min": 1500000,
+      "max": 6000000,
+      "description": "Direct theft of user funds or protocol insolvency"
+    },
+    "high": {
+      "min": 60000,
+      "max": 600000,
+      "description": "Temporary freezing of funds or manipulation"
+    },
+    "medium": {
+      "min": 6000,
+      "max": 60000,
+      "description": "Griefing or protocol disruption"
+    }
+  },
+  "source": "immunefi",
+  "contracts": [],
+  "scope": {
+    "in_scope": [
+      "Smart contracts in scope per Immunefi listing"
+    ],
+    "out_of_scope": [
+      "Frontend applications",
+      "Off-chain infrastructure"
+    ]
+  },
+  "updated_at": "2026-02-10T00:00:00Z"
+}

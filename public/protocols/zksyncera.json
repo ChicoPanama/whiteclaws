@@ -1,0 +1,45 @@
+{
+  "slug": "zksyncera",
+  "name": "ZKsync Era",
+  "description": "ZKsync Era bug bounty program on Immunefi",
+  "category": "Layer 2",
+  "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/5C91MGheTJXJfhYXd7Jjry/89c1af83fcb8de564462eb5e0e727012/era-arrows-white__1_.png",
+  "chains": [
+    "ethereum"
+  ],
+  "bounty": {
+    "max": 1100000,
+    "min": 1100,
+    "kyc_required": false,
+    "payout_token": "USDC"
+  },
+  "severity_payouts": {
+    "critical": {
+      "min": 275000,
+      "max": 1100000,
+      "description": "Direct theft of user funds or protocol insolvency"
+    },
+    "high": {
+      "min": 11000,
+      "max": 110000,
+      "description": "Temporary freezing of funds or manipulation"
+    },
+    "medium": {
+      "min": 1100,
+      "max": 11000,
+      "description": "Griefing or protocol disruption"
+    }
+  },
+  "source": "immunefi",
+  "contracts": [],
+  "scope": {
+    "in_scope": [
+      "Smart contracts in scope per Immunefi listing"
+    ],
+    "out_of_scope": [
+      "Frontend applications",
+      "Off-chain infrastructure"
+    ]
+  },
+  "updated_at": "2026-02-10T00:00:00Z"
+}

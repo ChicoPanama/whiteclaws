@@ -1,0 +1,49 @@
+{
+  "slug": "celer",
+  "name": "Celer",
+  "description": "Celer bug bounty program on Immunefi",
+  "category": "Bridge",
+  "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/13hITYqQMxBrQvjeOzbRhl/b7ca8569a07d3a2212aeac6a92244110/Celer_Logo.jpeg",
+  "chains": [
+    "ethereum",
+    "arbitrum",
+    "bsc",
+    "optimism",
+    "polygon"
+  ],
+  "bounty": {
+    "max": 2000000,
+    "min": 2000,
+    "kyc_required": false,
+    "payout_token": "USDC"
+  },
+  "severity_payouts": {
+    "critical": {
+      "min": 500000,
+      "max": 2000000,
+      "description": "Direct theft of user funds or protocol insolvency"
+    },
+    "high": {
+      "min": 20000,
+      "max": 200000,
+      "description": "Temporary freezing of funds or manipulation"
+    },
+    "medium": {
+      "min": 2000,
+      "max": 20000,
+      "description": "Griefing or protocol disruption"
+    }
+  },
+  "source": "immunefi",
+  "contracts": [],
+  "scope": {
+    "in_scope": [
+      "Smart contracts in scope per Immunefi listing"
+    ],
+    "out_of_scope": [
+      "Frontend applications",
+      "Off-chain infrastructure"
+    ]
+  },
+  "updated_at": "2026-02-10T00:00:00Z"
+}

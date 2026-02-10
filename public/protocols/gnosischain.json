@@ -1,0 +1,46 @@
+{
+  "slug": "gnosischain",
+  "name": "Gnosis Chain",
+  "description": "Gnosis Chain bug bounty program on Immunefi",
+  "category": "L2 / L1",
+  "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/6ibSou9KOCjwRMOviQ4op0/76c3c2bda63a9c0c8c8432d71f234f8c/Aatar_green_white.png",
+  "chains": [
+    "ethereum",
+    "bsc"
+  ],
+  "bounty": {
+    "max": 2000000,
+    "min": 2000,
+    "kyc_required": false,
+    "payout_token": "USDC"
+  },
+  "severity_payouts": {
+    "critical": {
+      "min": 500000,
+      "max": 2000000,
+      "description": "Direct theft of user funds or protocol insolvency"
+    },
+    "high": {
+      "min": 20000,
+      "max": 200000,
+      "description": "Temporary freezing of funds or manipulation"
+    },
+    "medium": {
+      "min": 2000,
+      "max": 20000,
+      "description": "Griefing or protocol disruption"
+    }
+  },
+  "source": "immunefi",
+  "contracts": [],
+  "scope": {
+    "in_scope": [
+      "Smart contracts in scope per Immunefi listing"
+    ],
+    "out_of_scope": [
+      "Frontend applications",
+      "Off-chain infrastructure"
+    ]
+  },
+  "updated_at": "2026-02-10T00:00:00Z"
+}

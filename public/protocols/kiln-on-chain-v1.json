@@ -1,0 +1,45 @@
+{
+  "slug": "kiln-on-chain-v1",
+  "name": "Kiln On-Chain v1",
+  "description": "Kiln On-Chain v1 bug bounty program on Immunefi",
+  "category": "DeFi Staking",
+  "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/1SEs1ui9Ficgtj8iEcEZKG/204a23e8cfb04126d1a48548947cb448/Kiln_Defi.png",
+  "chains": [
+    "ethereum"
+  ],
+  "bounty": {
+    "max": 1000000,
+    "min": 1000,
+    "kyc_required": false,
+    "payout_token": "USDC"
+  },
+  "severity_payouts": {
+    "critical": {
+      "min": 250000,
+      "max": 1000000,
+      "description": "Direct theft of user funds or protocol insolvency"
+    },
+    "high": {
+      "min": 10000,
+      "max": 100000,
+      "description": "Temporary freezing of funds or manipulation"
+    },
+    "medium": {
+      "min": 1000,
+      "max": 10000,
+      "description": "Griefing or protocol disruption"
+    }
+  },
+  "source": "immunefi",
+  "contracts": [],
+  "scope": {
+    "in_scope": [
+      "Smart contracts in scope per Immunefi listing"
+    ],
+    "out_of_scope": [
+      "Frontend applications",
+      "Off-chain infrastructure"
+    ]
+  },
+  "updated_at": "2026-02-10T00:00:00Z"
+}

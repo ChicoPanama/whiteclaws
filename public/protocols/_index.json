@@ -1,53 +1,1373 @@
 {
   "protocols": [
-    { "slug": "aave" },
-    { "slug": "alchemix" },
-    { "slug": "arbitrum" },
-    { "slug": "axelarnetwork" },
-    { "slug": "balancer" },
-    { "slug": "bitflow" },
-    { "slug": "cc-protocol" },
-    { "slug": "chainlink" },
-    { "slug": "compoundfinance" },
-    { "slug": "cowprotocol" },
-    { "slug": "dex-protocol" },
-    { "slug": "eigenlayer" },
-    { "slug": "ens" },
-    { "slug": "ethena" },
-    { "slug": "gmx" },
-    { "slug": "halogen" },
-    { "slug": "hedera" },
-    { "slug": "helios-finance" },
-    { "slug": "hoenn" },
-    { "slug": "hyperlane" },
-    { "slug": "immunefi" },
-    { "slug": "infinex" },
-    { "slug": "intmax" },
-    { "slug": "inverse-finance" },
-    { "slug": "layer3" },
-    { "slug": "layerzero" },
-    { "slug": "lido" },
-    { "slug": "lombard-finance" },
-    { "slug": "olympus" },
-    { "slug": "optimism" },
-    { "slug": "origin-protocol" },
-    { "slug": "pancakeswap" },
-    { "slug": "pinto" },
-    { "slug": "plaza-finance" },
-    { "slug": "plume-network" },
-    { "slug": "polygon" },
-    { "slug": "ref-finance" },
-    { "slug": "reserve" },
-    { "slug": "scroll" },
-    { "slug": "sky" },
-    { "slug": "ssv-network" },
-    { "slug": "stackingdao" },
-    { "slug": "stargate" },
-    { "slug": "starknet" },
-    { "slug": "wormhole" },
-    { "slug": "xion" },
-    { "slug": "zano" },
-    { "slug": "zest-protocol-v2" }
+    {
+      "slug": "0x"
+    },
+    {
+      "slug": "88mphv3"
+    },
+    {
+      "slug": "aave"
+    },
+    {
+      "slug": "acala"
+    },
+    {
+      "slug": "aera"
+    },
+    {
+      "slug": "aevo"
+    },
+    {
+      "slug": "alchemix"
+    },
+    {
+      "slug": "aleo"
+    },
+    {
+      "slug": "alephzero"
+    },
+    {
+      "slug": "alex"
+    },
+    {
+      "slug": "aloeprotocol"
+    },
+    {
+      "slug": "alongside"
+    },
+    {
+      "slug": "alpacafinance"
+    },
+    {
+      "slug": "alpen-labs"
+    },
+    {
+      "slug": "alphaventuredao"
+    },
+    {
+      "slug": "ambire"
+    },
+    {
+      "slug": "angleprotocol"
+    },
+    {
+      "slug": "ankr"
+    },
+    {
+      "slug": "antefinance"
+    },
+    {
+      "slug": "anvil"
+    },
+    {
+      "slug": "apecoinmainnet"
+    },
+    {
+      "slug": "arbitrum"
+    },
+    {
+      "slug": "arborfinance"
+    },
+    {
+      "slug": "arcade"
+    },
+    {
+      "slug": "arkadiko"
+    },
+    {
+      "slug": "arkham"
+    },
+    {
+      "slug": "aspida"
+    },
+    {
+      "slug": "astarnetwork"
+    },
+    {
+      "slug": "aster"
+    },
+    {
+      "slug": "astroport"
+    },
+    {
+      "slug": "aurafinance"
+    },
+    {
+      "slug": "autonolas"
+    },
+    {
+      "slug": "avail"
+    },
+    {
+      "slug": "avalabs"
+    },
+    {
+      "slug": "avalanche"
+    },
+    {
+      "slug": "axelarnetwork"
+    },
+    {
+      "slug": "axiom"
+    },
+    {
+      "slug": "baanx"
+    },
+    {
+      "slug": "babylon-labs"
+    },
+    {
+      "slug": "badger"
+    },
+    {
+      "slug": "balancer"
+    },
+    {
+      "slug": "balmy"
+    },
+    {
+      "slug": "bankx"
+    },
+    {
+      "slug": "baofinance"
+    },
+    {
+      "slug": "basilisk"
+    },
+    {
+      "slug": "beanstalk"
+    },
+    {
+      "slug": "beefyfinance"
+    },
+    {
+      "slug": "beethovenx"
+    },
+    {
+      "slug": "beets"
+    },
+    {
+      "slug": "benddao"
+    },
+    {
+      "slug": "benqi"
+    },
+    {
+      "slug": "berachain"
+    },
+    {
+      "slug": "berachain-webapps"
+    },
+    {
+      "slug": "beradrome"
+    },
+    {
+      "slug": "betafinance"
+    },
+    {
+      "slug": "biconomy"
+    },
+    {
+      "slug": "bifi"
+    },
+    {
+      "slug": "bifrostfinance"
+    },
+    {
+      "slug": "bitcoinsv"
+    },
+    {
+      "slug": "bitflow"
+    },
+    {
+      "slug": "bitswift"
+    },
+    {
+      "slug": "blackwing"
+    },
+    {
+      "slug": "blockpinetwork"
+    },
+    {
+      "slug": "blockwallet"
+    },
+    {
+      "slug": "bobanetwork"
+    },
+    {
+      "slug": "bondprotocol"
+    },
+    {
+      "slug": "bonfida"
+    },
+    {
+      "slug": "bprotocol"
+    },
+    {
+      "slug": "burrow"
+    },
+    {
+      "slug": "buttonwood"
+    },
+    {
+      "slug": "c3"
+    },
+    {
+      "slug": "capyfi"
+    },
+    {
+      "slug": "carbonbancor"
+    },
+    {
+      "slug": "cardanofoundation"
+    },
+    {
+      "slug": "cc-protocol"
+    },
+    {
+      "slug": "celer"
+    },
+    {
+      "slug": "ceres"
+    },
+    {
+      "slug": "chainlink"
+    },
+    {
+      "slug": "charm"
+    },
+    {
+      "slug": "comdex"
+    },
+    {
+      "slug": "composablefinance"
+    },
+    {
+      "slug": "compoundfinance"
+    },
+    {
+      "slug": "connext"
+    },
+    {
+      "slug": "contrax"
+    },
+    {
+      "slug": "coreum"
+    },
+    {
+      "slug": "cove"
+    },
+    {
+      "slug": "cowprotocol"
+    },
+    {
+      "slug": "cyan"
+    },
+    {
+      "slug": "daimo"
+    },
+    {
+      "slug": "daimo-pay"
+    },
+    {
+      "slug": "darwinia"
+    },
+    {
+      "slug": "davos"
+    },
+    {
+      "slug": "debridge"
+    },
+    {
+      "slug": "decentraland"
+    },
+    {
+      "slug": "defisaver"
+    },
+    {
+      "slug": "defly"
+    },
+    {
+      "slug": "degate"
+    },
+    {
+      "slug": "delv"
+    },
+    {
+      "slug": "deriprotocol"
+    },
+    {
+      "slug": "dex-protocol"
+    },
+    {
+      "slug": "dexeprotocol"
+    },
+    {
+      "slug": "dforce"
+    },
+    {
+      "slug": "dfxfinance"
+    },
+    {
+      "slug": "dhedge"
+    },
+    {
+      "slug": "dodo"
+    },
+    {
+      "slug": "dodov3"
+    },
+    {
+      "slug": "driftprotocol"
+    },
+    {
+      "slug": "drips"
+    },
+    {
+      "slug": "duetfinance"
+    },
+    {
+      "slug": "ebtc"
+    },
+    {
+      "slug": "eckodao"
+    },
+    {
+      "slug": "eclipse"
+    },
+    {
+      "slug": "eco"
+    },
+    {
+      "slug": "econia"
+    },
+    {
+      "slug": "eigenlayer"
+    },
+    {
+      "slug": "elixirprotocol"
+    },
+    {
+      "slug": "enosys"
+    },
+    {
+      "slug": "ens"
+    },
+    {
+      "slug": "ensuro"
+    },
+    {
+      "slug": "enzyme-onyx"
+    },
+    {
+      "slug": "enzymefinance"
+    },
+    {
+      "slug": "ethena"
+    },
+    {
+      "slug": "etherfi"
+    },
+    {
+      "slug": "euphrates"
+    },
+    {
+      "slug": "exactly"
+    },
+    {
+      "slug": "exodus"
+    },
+    {
+      "slug": "extrafinance"
+    },
+    {
+      "slug": "farcaster"
+    },
+    {
+      "slug": "fassets"
+    },
+    {
+      "slug": "fbtc"
+    },
+    {
+      "slug": "felix"
+    },
+    {
+      "slug": "filecoin"
+    },
+    {
+      "slug": "firedancer"
+    },
+    {
+      "slug": "flamingofinance"
+    },
+    {
+      "slug": "flarenetwork"
+    },
+    {
+      "slug": "flexytech"
+    },
+    {
+      "slug": "floki"
+    },
+    {
+      "slug": "fluxfinance"
+    },
+    {
+      "slug": "foil"
+    },
+    {
+      "slug": "folksfinance"
+    },
+    {
+      "slug": "forta"
+    },
+    {
+      "slug": "foundation"
+    },
+    {
+      "slug": "furucombo"
+    },
+    {
+      "slug": "furucombofunds"
+    },
+    {
+      "slug": "gainsnetwork"
+    },
+    {
+      "slug": "galagames"
+    },
+    {
+      "slug": "gamma"
+    },
+    {
+      "slug": "gammaswap"
+    },
+    {
+      "slug": "gear"
+    },
+    {
+      "slug": "gearbox"
+    },
+    {
+      "slug": "geniusyield"
+    },
+    {
+      "slug": "gerowallet"
+    },
+    {
+      "slug": "ghostmarket"
+    },
+    {
+      "slug": "glodollar"
+    },
+    {
+      "slug": "gmx"
+    },
+    {
+      "slug": "gnosischain"
+    },
+    {
+      "slug": "gogopool"
+    },
+    {
+      "slug": "goldfinch"
+    },
+    {
+      "slug": "granite-protocol"
+    },
+    {
+      "slug": "gysr"
+    },
+    {
+      "slug": "hakkafinance"
+    },
+    {
+      "slug": "halogen"
+    },
+    {
+      "slug": "harvest"
+    },
+    {
+      "slug": "hashflow"
+    },
+    {
+      "slug": "hathornetwork"
+    },
+    {
+      "slug": "haven1"
+    },
+    {
+      "slug": "hedera"
+    },
+    {
+      "slug": "helios-finance"
+    },
+    {
+      "slug": "hibachi"
+    },
+    {
+      "slug": "hoenn"
+    },
+    {
+      "slug": "horizen"
+    },
+    {
+      "slug": "hourglass"
+    },
+    {
+      "slug": "hydradx"
+    },
+    {
+      "slug": "hydration"
+    },
+    {
+      "slug": "hydro"
+    },
+    {
+      "slug": "hyperlane"
+    },
+    {
+      "slug": "ichi"
+    },
+    {
+      "slug": "icon"
+    },
+    {
+      "slug": "idex"
+    },
+    {
+      "slug": "idlefinance"
+    },
+    {
+      "slug": "illuvium"
+    },
+    {
+      "slug": "immunefi"
+    },
+    {
+      "slug": "immutable"
+    },
+    {
+      "slug": "impossible-cloud-network"
+    },
+    {
+      "slug": "impossiblefinance"
+    },
+    {
+      "slug": "indexcoop"
+    },
+    {
+      "slug": "infinex"
+    },
+    {
+      "slug": "injective"
+    },
+    {
+      "slug": "instadapp"
+    },
+    {
+      "slug": "integral"
+    },
+    {
+      "slug": "integriteenetwork"
+    },
+    {
+      "slug": "interlay"
+    },
+    {
+      "slug": "intmax"
+    },
+    {
+      "slug": "inverse-finance"
+    },
+    {
+      "slug": "ion-protocol"
+    },
+    {
+      "slug": "ipor"
+    },
+    {
+      "slug": "jito"
+    },
+    {
+      "slug": "jito-bam-client"
+    },
+    {
+      "slug": "jito-foundation"
+    },
+    {
+      "slug": "justlenddao"
+    },
+    {
+      "slug": "kadena"
+    },
+    {
+      "slug": "kamino"
+    },
+    {
+      "slug": "keep3rnetwork"
+    },
+    {
+      "slug": "kelp-dao"
+    },
+    {
+      "slug": "kiln"
+    },
+    {
+      "slug": "kiln-defi"
+    },
+    {
+      "slug": "kiln-on-chain-v1"
+    },
+    {
+      "slug": "kiln-webapp"
+    },
+    {
+      "slug": "kinesis-bridge-on-kadena"
+    },
+    {
+      "slug": "kwenta"
+    },
+    {
+      "slug": "landx"
+    },
+    {
+      "slug": "layer3"
+    },
+    {
+      "slug": "layerzero"
+    },
+    {
+      "slug": "lendr"
+    },
+    {
+      "slug": "lido"
+    },
+    {
+      "slug": "lidoonpolygon"
+    },
+    {
+      "slug": "lifi"
+    },
+    {
+      "slug": "light-protocol"
+    },
+    {
+      "slug": "linea"
+    },
+    {
+      "slug": "liquidswap"
+    },
+    {
+      "slug": "listadao"
+    },
+    {
+      "slug": "livepeer"
+    },
+    {
+      "slug": "localtraders"
+    },
+    {
+      "slug": "lombard-finance"
+    },
+    {
+      "slug": "lossless"
+    },
+    {
+      "slug": "lybrafinance"
+    },
+    {
+      "slug": "lyra"
+    },
+    {
+      "slug": "magpiexyz"
+    },
+    {
+      "slug": "mantlelsp"
+    },
+    {
+      "slug": "maple"
+    },
+    {
+      "slug": "marinade"
+    },
+    {
+      "slug": "mars"
+    },
+    {
+      "slug": "marsecosystem"
+    },
+    {
+      "slug": "mayaprotocol"
+    },
+    {
+      "slug": "meanfinance"
+    },
+    {
+      "slug": "metalswap"
+    },
+    {
+      "slug": "metastreet"
+    },
+    {
+      "slug": "metastreet-yield-pass"
+    },
+    {
+      "slug": "meth"
+    },
+    {
+      "slug": "metis"
+    },
+    {
+      "slug": "metronome"
+    },
+    {
+      "slug": "monero-oxide"
+    },
+    {
+      "slug": "moneyonchain"
+    },
+    {
+      "slug": "moonbeamnetwork"
+    },
+    {
+      "slug": "moonwell"
+    },
+    {
+      "slug": "morpho"
+    },
+    {
+      "slug": "mountainprotocol"
+    },
+    {
+      "slug": "mtpelerin"
+    },
+    {
+      "slug": "mux"
+    },
+    {
+      "slug": "myntandzero"
+    },
+    {
+      "slug": "native"
+    },
+    {
+      "slug": "nayms"
+    },
+    {
+      "slug": "neo"
+    },
+    {
+      "slug": "neutron"
+    },
+    {
+      "slug": "nexusmutual"
+    },
+    {
+      "slug": "nftfi"
+    },
+    {
+      "slug": "nftfitestnetrefi"
+    },
+    {
+      "slug": "nftx"
+    },
+    {
+      "slug": "nodle"
+    },
+    {
+      "slug": "nomad"
+    },
+    {
+      "slug": "notional"
+    },
+    {
+      "slug": "nucleus"
+    },
+    {
+      "slug": "oasis"
+    },
+    {
+      "slug": "obyte"
+    },
+    {
+      "slug": "oceanprotocol"
+    },
+    {
+      "slug": "octopusnetwork"
+    },
+    {
+      "slug": "ofza-1"
+    },
+    {
+      "slug": "olafinance"
+    },
+    {
+      "slug": "olympus"
+    },
+    {
+      "slug": "omni-network"
+    },
+    {
+      "slug": "omron"
+    },
+    {
+      "slug": "ondofinance"
+    },
+    {
+      "slug": "openzeppelin"
+    },
+    {
+      "slug": "openzeppelin-stellar"
+    },
+    {
+      "slug": "optimism"
+    },
+    {
+      "slug": "opyngamma"
+    },
+    {
+      "slug": "opynsqueeth"
+    },
+    {
+      "slug": "orca"
+    },
+    {
+      "slug": "orderlynetwork"
+    },
+    {
+      "slug": "origin-protocol"
+    },
+    {
+      "slug": "origindefi"
+    },
+    {
+      "slug": "ostium"
+    },
+    {
+      "slug": "overlay"
+    },
+    {
+      "slug": "pact"
+    },
+    {
+      "slug": "pancakeswap"
+    },
+    {
+      "slug": "pantos"
+    },
+    {
+      "slug": "paradex"
+    },
+    {
+      "slug": "paragonsdao"
+    },
+    {
+      "slug": "parallel"
+    },
+    {
+      "slug": "parallelwallet"
+    },
+    {
+      "slug": "pareto"
+    },
+    {
+      "slug": "paribus"
+    },
+    {
+      "slug": "pendle"
+    },
+    {
+      "slug": "perennial"
+    },
+    {
+      "slug": "perpetual"
+    },
+    {
+      "slug": "pikaprotocol"
+    },
+    {
+      "slug": "pillar"
+    },
+    {
+      "slug": "pinto"
+    },
+    {
+      "slug": "plaza-finance"
+    },
+    {
+      "slug": "plume-network"
+    },
+    {
+      "slug": "pnetwork"
+    },
+    {
+      "slug": "pods"
+    },
+    {
+      "slug": "polkastarter"
+    },
+    {
+      "slug": "polygon"
+    },
+    {
+      "slug": "polygonzkevm"
+    },
+    {
+      "slug": "polymarket"
+    },
+    {
+      "slug": "polymesh"
+    },
+    {
+      "slug": "poolshark"
+    },
+    {
+      "slug": "pooltogether"
+    },
+    {
+      "slug": "popsicle"
+    },
+    {
+      "slug": "portfinance"
+    },
+    {
+      "slug": "pragmaoracle"
+    },
+    {
+      "slug": "predyfinance"
+    },
+    {
+      "slug": "primitive"
+    },
+    {
+      "slug": "print3r"
+    },
+    {
+      "slug": "pstake"
+    },
+    {
+      "slug": "pstakeoncosmos"
+    },
+    {
+      "slug": "pushprotocol"
+    },
+    {
+      "slug": "pythnetwork"
+    },
+    {
+      "slug": "qblockchain"
+    },
+    {
+      "slug": "quadrata"
+    },
+    {
+      "slug": "radiant"
+    },
+    {
+      "slug": "rai"
+    },
+    {
+      "slug": "rangeprotocol"
+    },
+    {
+      "slug": "raydium"
+    },
+    {
+      "slug": "reaperfarm"
+    },
+    {
+      "slug": "ref-finance"
+    },
+    {
+      "slug": "renzoprotocol"
+    },
+    {
+      "slug": "reserve"
+    },
+    {
+      "slug": "resolv"
+    },
+    {
+      "slug": "resonate"
+    },
+    {
+      "slug": "revert"
+    },
+    {
+      "slug": "revest"
+    },
+    {
+      "slug": "rhinofi"
+    },
+    {
+      "slug": "ribbon"
+    },
+    {
+      "slug": "ringdao"
+    },
+    {
+      "slug": "rocketpool"
+    },
+    {
+      "slug": "router"
+    },
+    {
+      "slug": "royco"
+    },
+    {
+      "slug": "rubic"
+    },
+    {
+      "slug": "ruscet"
+    },
+    {
+      "slug": "rysk"
+    },
+    {
+      "slug": "scroll"
+    },
+    {
+      "slug": "sectorfinance"
+    },
+    {
+      "slug": "securefi"
+    },
+    {
+      "slug": "segmentfinance"
+    },
+    {
+      "slug": "sei"
+    },
+    {
+      "slug": "serai"
+    },
+    {
+      "slug": "shellprotocol"
+    },
+    {
+      "slug": "sherlock"
+    },
+    {
+      "slug": "silofinance"
+    },
+    {
+      "slug": "silofinance-v2"
+    },
+    {
+      "slug": "singularitydao"
+    },
+    {
+      "slug": "skatefi"
+    },
+    {
+      "slug": "sky"
+    },
+    {
+      "slug": "smardex"
+    },
+    {
+      "slug": "sns"
+    },
+    {
+      "slug": "sommelier"
+    },
+    {
+      "slug": "sora"
+    },
+    {
+      "slug": "sovryn"
+    },
+    {
+      "slug": "sparklend"
+    },
+    {
+      "slug": "spectral"
+    },
+    {
+      "slug": "spookyswap"
+    },
+    {
+      "slug": "spool"
+    },
+    {
+      "slug": "spot"
+    },
+    {
+      "slug": "ssv-network"
+    },
+    {
+      "slug": "stackingdao"
+    },
+    {
+      "slug": "stacks"
+    },
+    {
+      "slug": "staderforbnb"
+    },
+    {
+      "slug": "staderforeth"
+    },
+    {
+      "slug": "staderforpolygon"
+    },
+    {
+      "slug": "stafi"
+    },
+    {
+      "slug": "stakeeasy"
+    },
+    {
+      "slug": "stakelink"
+    },
+    {
+      "slug": "stakestone"
+    },
+    {
+      "slug": "stakewise"
+    },
+    {
+      "slug": "stargate"
+    },
+    {
+      "slug": "starkex"
+    },
+    {
+      "slug": "starknet"
+    },
+    {
+      "slug": "starknet-staking"
+    },
+    {
+      "slug": "stellar"
+    },
+    {
+      "slug": "stellaswap"
+    },
+    {
+      "slug": "strikefinance"
+    },
+    {
+      "slug": "sturdy"
+    },
+    {
+      "slug": "summerfi"
+    },
+    {
+      "slug": "superbots"
+    },
+    {
+      "slug": "superfluid"
+    },
+    {
+      "slug": "superform"
+    },
+    {
+      "slug": "sushiswap"
+    },
+    {
+      "slug": "swappi"
+    },
+    {
+      "slug": "sweateconomy"
+    },
+    {
+      "slug": "swell"
+    },
+    {
+      "slug": "symbiosis"
+    },
+    {
+      "slug": "symbiotic"
+    },
+    {
+      "slug": "synfutures"
+    },
+    {
+      "slug": "synthetix"
+    },
+    {
+      "slug": "teahousefinance"
+    },
+    {
+      "slug": "templar-protocol"
+    },
+    {
+      "slug": "termstructurelabs"
+    },
+    {
+      "slug": "tetu"
+    },
+    {
+      "slug": "thala-protocol"
+    },
+    {
+      "slug": "thegraph"
+    },
+    {
+      "slug": "thesandbox"
+    },
+    {
+      "slug": "thorchain"
+    },
+    {
+      "slug": "thresholdnetwork"
+    },
+    {
+      "slug": "thusd"
+    },
+    {
+      "slug": "tidal"
+    },
+    {
+      "slug": "timelessandbunni"
+    },
+    {
+      "slug": "tinyman"
+    },
+    {
+      "slug": "tinymanv2"
+    },
+    {
+      "slug": "tokemak"
+    },
+    {
+      "slug": "toucan"
+    },
+    {
+      "slug": "traderjoe"
+    },
+    {
+      "slug": "tranchess"
+    },
+    {
+      "slug": "tropykus"
+    },
+    {
+      "slug": "trufin"
+    },
+    {
+      "slug": "uniswaponzksync"
+    },
+    {
+      "slug": "universalpage"
+    },
+    {
+      "slug": "unstoppablewallet"
+    },
+    {
+      "slug": "usdn"
+    },
+    {
+      "slug": "usdt0"
+    },
+    {
+      "slug": "usx"
+    },
+    {
+      "slug": "utix"
+    },
+    {
+      "slug": "vaultcraft"
+    },
+    {
+      "slug": "vechain"
+    },
+    {
+      "slug": "velodromefinance"
+    },
+    {
+      "slug": "velvet-capital-v2"
+    },
+    {
+      "slug": "velvetcapital"
+    },
+    {
+      "slug": "vesper"
+    },
+    {
+      "slug": "vesu"
+    },
+    {
+      "slug": "virtuals-protocol"
+    },
+    {
+      "slug": "voltz"
+    },
+    {
+      "slug": "waymont"
+    },
+    {
+      "slug": "wepiggy"
+    },
+    {
+      "slug": "wildcatprotocol"
+    },
+    {
+      "slug": "wombatexchange"
+    },
+    {
+      "slug": "woofi"
+    },
+    {
+      "slug": "wormhole"
+    },
+    {
+      "slug": "xion"
+    },
+    {
+      "slug": "xoxno"
+    },
+    {
+      "slug": "xterio"
+    },
+    {
+      "slug": "yamatoprotocol"
+    },
+    {
+      "slug": "yearnfinance"
+    },
+    {
+      "slug": "yelay"
+    },
+    {
+      "slug": "yieldnest"
+    },
+    {
+      "slug": "yo-protocol"
+    },
+    {
+      "slug": "zano"
+    },
+    {
+      "slug": "zenlink"
+    },
+    {
+      "slug": "zerion"
+    },
+    {
+      "slug": "zerolend"
+    },
+    {
+      "slug": "zest-protocol-v2"
+    },
+    {
+      "slug": "zksync"
+    },
+    {
+      "slug": "zksync-os"
+    },
+    {
+      "slug": "zksyncera"
+    },
+    {
+      "slug": "zkverify"
+    },
+    {
+      "slug": "zodiac"
+    }
   ],
-  "count": 48
+  "count": 456
 }
