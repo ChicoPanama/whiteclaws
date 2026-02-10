@@ -10,17 +10,12 @@ import pLimit from 'p-limit'
  * 1. Try stats().dominant — works for most logos
  * 2. If dominant is near-white/black/gray, sample raw pixels
  *    and find the most saturated color cluster
- * 3. Only fall back to default if logo is genuinely monochrome
+ * 3. If logo is genuinely monochrome, remove branding block
+ *    so the page renders in base dark theme with transparent effects
  *
  * No hardcoded color tables. Every protocol gets its color
  * from its own logo.
  */
-
-const DEFAULT_BRANDING = {
-  primary: '#6366F1',
-  accent: '#3730A3',
-  text_on_primary: '#FFFFFF',
-}
 
 const FORCE = process.argv.includes('--force')
 const CONCURRENCY = 5
@@ -186,11 +181,13 @@ async function main() {
       extracted++
       console.log(`[${processed}/${slugs.length}] ${slug} — ${branding.primary}`)
     } else {
-      // Genuinely couldn't extract — use default
-      await fs.writeFile(fp, JSON.stringify({ ...json, branding: DEFAULT_BRANDING }, null, 2) + '\n')
+      // No usable color — remove any existing branding so CSS fallbacks handle it
+      // Page renders in base dark theme with transparent effects, no forced color
+      const { branding: _removed, ...rest } = json
+      await fs.writeFile(fp, JSON.stringify(rest, null, 2) + '\n')
       processed++
       defaulted++
-      console.log(`[${processed}/${slugs.length}] ${slug} — default (no usable color)`)
+      console.log(`[${processed}/${slugs.length}] ${slug} — no color (transparent)`)
     }
 
     await sleep(DELAY_MS)
@@ -199,7 +196,7 @@ async function main() {
   console.log(`\nDone.`)
   console.log(`  Extracted: ${extracted}`)
   console.log(`  Kept:      ${kept}`)
-  console.log(`  Default:   ${defaulted}`)
+  console.log(`  No color:  ${defaulted}`)
   console.log(`  Total:     ${slugs.length}`)
 }
 

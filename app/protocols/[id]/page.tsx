@@ -10,7 +10,7 @@ import ProtocolDetailClient from '@/components/protocol/ProtocolDetailClient'
 export const dynamic = 'force-dynamic'
 const hasSupabaseConfig = !!process.env.NEXT_PUBLIC_SUPABASE_URL && !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
 
-const defaultBranding = { primary: '#6366F1', accent: '#3730A3', text_on_primary: '#FFFFFF' }
+
 
 const CHAIN_SHORT: Record<string, string> = {
   ethereum: 'ETH', arbitrum: 'ARB', optimism: 'OP', polygon: 'MATIC',
@@ -36,21 +36,24 @@ export default async function ProtocolPage({ params }: { params: { id: string } 
   const severity = protocol.severity_payouts || {}
   const contracts = protocol.contracts || []
   const scope = protocol.scope || { in_scope: [], out_of_scope: [] }
-  const brand = protocol.branding || defaultBranding
+  const brand = protocol.branding
 
   const chains: string[] = protocol.chains || []
   const maxChainShow = 8
   const visibleChains = chains.slice(0, maxChainShow)
   const extraChains = chains.length - maxChainShow
 
-  const brandStyles = {
+  // Only set brand CSS variables when the protocol has extracted colors.
+  // When absent, CSS fallbacks kick in (--surface, --border, --ink, etc.)
+  // so the page renders cleanly in the base dark theme with no forced color.
+  const brandStyles = brand ? {
     '--brand': brand.primary,
     '--brand-accent': brand.accent,
     '--brand-text': brand.text_on_primary,
     '--brand-glow': `${brand.primary}12`,
     '--brand-border': `${brand.primary}30`,
     '--brand-surface': `${brand.accent}20`,
-  } as CSSProperties
+  } as CSSProperties : {} as CSSProperties
 
   return (
     <>
