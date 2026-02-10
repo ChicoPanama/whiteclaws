@@ -3,7 +3,7 @@
   "name": "Scroll",
   "description": "Native zkEVM Layer 2 scaling solution for Ethereum using zero-knowledge rollups for secure, low-cost transactions",
   "category": "Layer 2",
-  "logo_url": null,
+  "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/IzdR0T8CiuGHqOpDEOGaJ/dadd27860fb4f34caa41477494233b28/Fq5O0LeN_400x400.jpg",
   "chains": [
     "ethereum"
   ],

@@ -3,7 +3,7 @@
   "name": "CoW Protocol",
   "description": "MEV-protected trading protocol using batch auctions for optimal execution",
   "category": "DEX",
-  "logo_url": null,
+  "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/2SCCBIzc5z3ZxUhwhW1NSK/c6616b0b6f3bbacfebd5a6ea18f929dd/CoW-Protocol-icon-circle-light-purple.png",
   "chains": [
     "ethereum",
     "arbitrum",

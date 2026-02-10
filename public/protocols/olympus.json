@@ -3,7 +3,7 @@
   "name": "Olympus",
   "description": "Decentralized reserve currency protocol with protocol-owned liquidity",
   "category": "DeFi",
-  "logo_url": null,
+  "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/7csKh5iZlfBPWyb3cJUY5h/1b7fd615e0a6edce69010e2913edbef6/final_logo_01_07_22_OLYMPUS.png",
   "chains": [
     "ethereum",
     "arbitrum"

@@ -3,7 +3,7 @@
   "name": "EigenLayer",
   "description": "Restaking protocol enabling staked ETH to secure additional services",
   "category": "DeFi Staking",
-  "logo_url": null,
+  "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/1fGXCRkOEb10n2rbNzZuEx/e1a710a7a3af9141424011913bbc58be/Eigenlayer_logo.jpeg",
   "chains": [
     "ethereum"
   ],

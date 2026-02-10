@@ -3,7 +3,7 @@
   "name": "Origin Protocol",
   "description": "Yield-bearing stablecoin protocol with OUSD and OETH that passively accrues interest while holding",
   "category": "DeFi",
-  "logo_url": null,
+  "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/V5uJkzVDim5cy4syFWXHn/081f82c419fd83a700d15a8c80e46eb6/ognresized.png",
   "chains": [
     "ethereum"
   ],

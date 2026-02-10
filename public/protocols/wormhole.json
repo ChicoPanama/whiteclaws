@@ -3,7 +3,7 @@
   "name": "Wormhole",
   "description": "Generic cross-chain message passing protocol connecting multiple blockchains",
   "category": "Bridge",
-  "logo_url": null,
+  "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/zjpjBpSpX6wiIdgfoLeKc/b7c1a836bbc7a4a850623ddee15f3158/wormhole-logo-full-color-rgb-2000px_72ppi__1_.png",
   "chains": [
     "ethereum",
     "solana",

@@ -3,7 +3,7 @@
   "name": "Alchemix",
   "description": "Self-repaying DeFi lending protocol allowing users to borrow against yield-bearing collateral that automatically pays off loans",
   "category": "DeFi Lending",
-  "logo_url": null,
+  "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/2NgcBC2slhGYI8qYGnTsCw/0616521e1a588b3a5373af0215dd2a2b/Alchemix-logo.png",
   "chains": [
     "ethereum"
   ],

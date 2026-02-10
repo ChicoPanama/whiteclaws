@@ -3,7 +3,7 @@
   "name": "Axelar Network",
   "description": "Universal cross-chain communication network connecting Web3 ecosystems",
   "category": "Bridge",
-  "logo_url": null,
+  "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/50nSUkPKWY77vhNfAtPIXc/4200a486fe40455e51f74d3bd242d735/Axelar_Logo_Symbol_Black_3x.png",
   "chains": [
     "ethereum",
     "arbitrum",

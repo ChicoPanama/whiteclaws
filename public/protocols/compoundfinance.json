@@ -3,7 +3,7 @@
   "name": "Compound Finance",
   "description": "Algorithmic money market protocol for lending and borrowing crypto assets",
   "category": "DeFi Lending",
-  "logo_url": null,
+  "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/5pzaBv2Ygrx3DN9sctxd0a/dcb98ece577d2c0ac8b6ea637e9a3069/Compound.png",
   "chains": [
     "ethereum",
     "arbitrum",

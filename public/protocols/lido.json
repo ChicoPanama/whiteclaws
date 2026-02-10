@@ -3,7 +3,7 @@
   "name": "Lido",
   "description": "Liquid staking protocol for Ethereum allowing users to stake ETH without locking assets",
   "category": "DeFi Staking",
-  "logo_url": null,
+  "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/62hsATkPdR14taAS7FTlXW/2b3efcb09394982db6e67d0b028a271c/G2czctJJ_400x400.png",
   "chains": [
     "ethereum"
   ],

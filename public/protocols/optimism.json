@@ -3,7 +3,7 @@
   "name": "Optimism",
   "description": "Ethereum Layer 2 scaling solution using optimistic rollups with the OP Stack",
   "category": "Layer 2",
-  "logo_url": null,
+  "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/iGySa7GVnISWqfSbIR9N4/2867df922f76c0f722543bdddd6e080b/Optimism_Logo.jpeg",
   "chains": [
     "optimism",
     "ethereum"

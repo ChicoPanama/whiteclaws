@@ -3,7 +3,7 @@
   "name": "Balancer",
   "description": "Programmable liquidity protocol with weighted pools and flash loans",
   "category": "DEX",
-  "logo_url": null,
+  "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/5RONBs8MvUillmn49FRQ8G/58ec9b1dcf5079426bebf218c3948166/Balancer_Logo.png",
   "chains": [
     "ethereum",
     "arbitrum",
