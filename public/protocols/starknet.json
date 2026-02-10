@@ -3,7 +3,7 @@
   "name": "StarkNet",
   "description": "Permissionless decentralized ZK-Rollup operating as an L2 network over Ethereum",
   "category": "Layer 2",
-  "logo_url": null,
+  "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/4ZifqdIHOxX3ckxGAMiQc6/4158480f9932b5fe099a1236902cd588/starknet.png",
   "chains": [
     "ethereum"
   ],

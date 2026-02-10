@@ -3,7 +3,7 @@
   "name": "Strikefinance",
   "description": "Strikefinance bug bounty program on Immunefi",
   "category": "DeFi",
-  "logo_url": null,
+  "logo_url": "https://icons.llamao.fi/icons/protocols/strike?w=48&h=48",
   "chains": [
     "ethereum"
   ],

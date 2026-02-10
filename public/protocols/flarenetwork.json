@@ -3,7 +3,7 @@
   "name": "Flarenetwork",
   "description": "Flarenetwork bug bounty program on Immunefi",
   "category": "DeFi",
-  "logo_url": null,
+  "logo_url": "https://assets.coingecko.com/coins/images/28624/small/FLR-icon200x200.png",
   "chains": [
     "ethereum"
   ],

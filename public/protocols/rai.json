@@ -3,7 +3,7 @@
   "name": "Rai",
   "description": "Rai bug bounty program on Immunefi",
   "category": "DeFi",
-  "logo_url": null,
+  "logo_url": "https://assets.coingecko.com/coins/images/14004/small/RAI-logo-coin.png",
   "chains": [
     "ethereum"
   ],

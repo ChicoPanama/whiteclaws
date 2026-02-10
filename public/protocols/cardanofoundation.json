@@ -3,7 +3,7 @@
   "name": "Cardanofoundation",
   "description": "Cardanofoundation bug bounty program on Immunefi",
   "category": "DeFi",
-  "logo_url": null,
+  "logo_url": "https://assets.coingecko.com/coins/images/975/small/cardano.png",
   "chains": [
     "ethereum"
   ],

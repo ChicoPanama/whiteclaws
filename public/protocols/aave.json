@@ -3,7 +3,7 @@
   "name": "AAVE",
   "description": "Decentralized non-custodial liquidity protocol for earning interest and borrowing assets",
   "category": "DeFi Lending",
-  "logo_url": null,
+  "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/5nVG9oUSZ05hb2dlIuqPU6/5d6e4c5db151fdd8fb48448990056e05/Screenshot_2024-08-12_at_5.37.45___PM.png",
   "chains": [
     "ethereum",
     "arbitrum",

@@ -3,7 +3,7 @@
   "name": "Spool",
   "description": "Spool bug bounty program on Immunefi",
   "category": "DeFi",
-  "logo_url": null,
+  "logo_url": "https://assets.coingecko.com/coins/images/21532/small/spool.png",
   "chains": [
     "ethereum"
   ],

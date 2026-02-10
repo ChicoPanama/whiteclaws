@@ -3,7 +3,7 @@
   "name": "Icon",
   "description": "Icon bug bounty program on Immunefi",
   "category": "DeFi",
-  "logo_url": null,
+  "logo_url": "https://assets.coingecko.com/coins/images/1060/small/icon-icx-logo.png",
   "chains": [
     "ethereum"
   ],

@@ -3,7 +3,7 @@
   "name": "Tokemak",
   "description": "Tokemak bug bounty program on Immunefi",
   "category": "DeFi",
-  "logo_url": null,
+  "logo_url": "https://assets.coingecko.com/coins/images/17495/small/tokemak-avatar-200px-black.png",
   "chains": [
     "ethereum"
   ],

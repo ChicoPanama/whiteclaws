@@ -3,7 +3,7 @@
   "name": "Tetu",
   "description": "Tetu bug bounty program on Immunefi",
   "category": "DeFi",
-  "logo_url": null,
+  "logo_url": "https://icons.llamao.fi/icons/protocols/tetu?w=48&h=48",
   "chains": [
     "ethereum"
   ],

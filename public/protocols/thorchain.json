@@ -3,7 +3,7 @@
   "name": "THORChain",
   "description": "THORChain bug bounty program on Immunefi",
   "category": "DEX",
-  "logo_url": null,
+  "logo_url": "https://assets.coingecko.com/coins/images/6595/small/Rune200x200.png",
   "chains": [
     "ethereum"
   ],

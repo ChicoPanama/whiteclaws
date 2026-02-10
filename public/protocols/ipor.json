@@ -3,7 +3,7 @@
   "name": "IPOR",
   "description": "IPOR bug bounty program on Immunefi",
   "category": "DeFi",
-  "logo_url": null,
+  "logo_url": "https://assets.coingecko.com/coins/images/28642/small/ipor_logo.png",
   "chains": [
     "ethereum",
     "arbitrum"

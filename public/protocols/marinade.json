@@ -3,7 +3,7 @@
   "name": "Marinade",
   "description": "Marinade bug bounty program on Immunefi",
   "category": "DeFi",
-  "logo_url": null,
+  "logo_url": "https://assets.coingecko.com/coins/images/18867/small/mnde.png",
   "chains": [
     "ethereum"
   ],

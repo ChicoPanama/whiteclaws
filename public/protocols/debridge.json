@@ -3,7 +3,7 @@
   "name": "deBridge",
   "description": "deBridge bug bounty program on Immunefi",
   "category": "Bridge",
-  "logo_url": null,
+  "logo_url": "https://assets.coingecko.com/coins/images/34508/small/dbr.png",
   "chains": [
     "ethereum",
     "arbitrum",

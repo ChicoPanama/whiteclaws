@@ -3,7 +3,7 @@
   "name": "Hedera",
   "description": "Enterprise-grade distributed ledger using hashgraph technology for high-speed, secure transactions",
   "category": "Infrastructure",
-  "logo_url": null,
+  "logo_url": "https://assets.coingecko.com/coins/images/3688/small/hbar.png",
   "chains": [
     "hedera"
   ],

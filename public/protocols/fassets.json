@@ -3,7 +3,7 @@
   "name": "Fassets",
   "description": "Fassets bug bounty program on Immunefi",
   "category": "DeFi",
-  "logo_url": null,
+  "logo_url": "https://icons.llamao.fi/icons/protocols/fassets?w=48&h=48",
   "chains": [
     "ethereum"
   ],

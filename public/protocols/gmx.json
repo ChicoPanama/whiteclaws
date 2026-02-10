@@ -3,7 +3,7 @@
   "name": "GMX",
   "description": "Decentralized perpetual exchange with low swap fees and zero price impact trades",
   "category": "DeFi Trading",
-  "logo_url": null,
+  "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/3MNDLo0J4LVTW2PgGVCsrb/1b8813ff88a37704386e3c81237dfbbc/GMX_logo.jpeg",
   "chains": [
     "arbitrum",
     "base"

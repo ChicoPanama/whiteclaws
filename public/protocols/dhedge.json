@@ -3,7 +3,7 @@
   "name": "dHEDGE",
   "description": "dHEDGE bug bounty program on Immunefi",
   "category": "DeFi",
-  "logo_url": null,
+  "logo_url": "https://assets.coingecko.com/coins/images/12508/small/dHEDGE.png",
   "chains": [
     "ethereum",
     "optimism",

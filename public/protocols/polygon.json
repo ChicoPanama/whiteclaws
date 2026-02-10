@@ -3,7 +3,7 @@
   "name": "Polygon",
   "description": "Ethereum scaling platform with multiple solutions including PoS, zkEVM, and CDK",
   "category": "Layer 2",
-  "logo_url": null,
+  "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/8EEzTabH4B0Palx5UgpL8/4d800cd963e02d33e39872b4030e7e2f/Polygon__1_.jpeg",
   "chains": [
     "polygon",
     "ethereum"

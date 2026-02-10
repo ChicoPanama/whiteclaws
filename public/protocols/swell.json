@@ -3,7 +3,7 @@
   "name": "Swell",
   "description": "Swell bug bounty program on Immunefi",
   "category": "DeFi Staking",
-  "logo_url": null,
+  "logo_url": "https://assets.coingecko.com/coins/images/34724/small/swell.png",
   "chains": [
     "ethereum"
   ],

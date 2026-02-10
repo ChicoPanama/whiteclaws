@@ -3,7 +3,7 @@
   "name": "Hashflow",
   "description": "Hashflow bug bounty program on Immunefi",
   "category": "DEX",
-  "logo_url": null,
+  "logo_url": "https://assets.coingecko.com/coins/images/26136/small/hashflow-icon-cmc.png",
   "chains": [
     "ethereum",
     "arbitrum",

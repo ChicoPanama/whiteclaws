@@ -3,7 +3,7 @@
   "name": "Exactly",
   "description": "Exactly bug bounty program on Immunefi",
   "category": "DeFi Lending",
-  "logo_url": null,
+  "logo_url": "https://assets.coingecko.com/coins/images/31156/small/exa.png",
   "chains": [
     "ethereum",
     "optimism"

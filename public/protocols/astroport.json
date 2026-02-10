@@ -3,7 +3,7 @@
   "name": "Astroport",
   "description": "Astroport bug bounty program on Immunefi",
   "category": "DeFi",
-  "logo_url": null,
+  "logo_url": "https://assets.coingecko.com/coins/images/26044/small/astroport.png",
   "chains": [
     "ethereum"
   ],

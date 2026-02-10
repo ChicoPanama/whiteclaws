@@ -3,7 +3,7 @@
   "name": "Ref Finance",
   "description": "Community-led multi-purpose DeFi platform on NEAR Protocol combining DEX, lending and synthetic assets",
   "category": "DEX",
-  "logo_url": null,
+  "logo_url": "https://icons.llamao.fi/icons/protocols/ref-finance?w=48&h=48",
   "chains": [
     "near"
   ],

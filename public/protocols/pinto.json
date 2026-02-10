@@ -3,7 +3,7 @@
   "name": "Pinto",
   "description": "Credit-based stable asset protocol on Base providing low-volatility money without traditional collateral requirements",
   "category": "DeFi Stablecoin",
-  "logo_url": null,
+  "logo_url": "https://icons.llamao.fi/icons/protocols/pinto?w=48&h=48",
   "chains": [
     "base"
   ],

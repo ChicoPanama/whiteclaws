@@ -3,7 +3,7 @@
   "name": "Badger",
   "description": "Badger bug bounty program on Immunefi",
   "category": "DeFi Yield",
-  "logo_url": null,
+  "logo_url": "https://assets.coingecko.com/coins/images/13287/small/badger_dao_logo.jpg",
   "chains": [
     "ethereum",
     "arbitrum"

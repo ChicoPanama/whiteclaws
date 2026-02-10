@@ -3,7 +3,7 @@
   "name": "WOOFi",
   "description": "WOOFi bug bounty program on Immunefi",
   "category": "DEX",
-  "logo_url": null,
+  "logo_url": "https://assets.coingecko.com/coins/images/12921/small/WOO_Logos.png",
   "chains": [
     "ethereum",
     "arbitrum",

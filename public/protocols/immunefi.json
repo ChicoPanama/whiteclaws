@@ -3,7 +3,7 @@
   "name": "Immunefi",
   "description": "Leading blockchain security platform and bug bounty marketplace connecting projects with security researchers",
   "category": "Security Platform",
-  "logo_url": null,
+  "logo_url": "https://assets.coingecko.com/coins/images/20819/small/immunefi.png",
   "chains": [
     "ethereum"
   ],

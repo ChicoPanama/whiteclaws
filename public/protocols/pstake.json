@@ -3,7 +3,7 @@
   "name": "Pstake",
   "description": "Pstake bug bounty program on Immunefi",
   "category": "DeFi",
-  "logo_url": null,
+  "logo_url": "https://assets.coingecko.com/coins/images/23931/small/pSTAKE.png",
   "chains": [
     "ethereum"
   ],

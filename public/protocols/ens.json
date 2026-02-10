@@ -3,7 +3,7 @@
   "name": "ENS",
   "description": "Ethereum Name Service - decentralized naming system mapping human-readable names to machine-readable Ethereum addresses",
   "category": "Naming",
-  "logo_url": null,
+  "logo_url": "https://assets.coingecko.com/coins/images/19785/small/acatxTm8_400x400.jpg",
   "chains": [
     "ethereum"
   ],

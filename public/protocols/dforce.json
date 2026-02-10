@@ -3,7 +3,7 @@
   "name": "dForce",
   "description": "dForce bug bounty program on Immunefi",
   "category": "DeFi",
-  "logo_url": null,
+  "logo_url": "https://assets.coingecko.com/coins/images/9709/small/xlGxxIjI_400x400.jpg",
   "chains": [
     "ethereum",
     "arbitrum",

@@ -3,7 +3,7 @@
   "name": "Polygonzkevm",
   "description": "Polygonzkevm bug bounty program on Immunefi",
   "category": "DeFi",
-  "logo_url": null,
+  "logo_url": "https://assets.coingecko.com/coins/images/4713/small/matic-token-icon.png",
   "chains": [
     "ethereum"
   ],

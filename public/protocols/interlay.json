@@ -3,7 +3,7 @@
   "name": "Interlay",
   "description": "Interlay bug bounty program on Immunefi",
   "category": "DeFi",
-  "logo_url": null,
+  "logo_url": "https://assets.coingecko.com/coins/images/26180/small/interlay.png",
   "chains": [
     "ethereum"
   ],

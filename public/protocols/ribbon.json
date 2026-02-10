@@ -3,7 +3,7 @@
   "name": "Ribbon",
   "description": "Ribbon bug bounty program on Immunefi",
   "category": "DeFi",
-  "logo_url": null,
+  "logo_url": "https://assets.coingecko.com/coins/images/15823/small/RBN_64x64.png",
   "chains": [
     "ethereum"
   ],

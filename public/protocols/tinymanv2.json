@@ -3,7 +3,7 @@
   "name": "Tinymanv2",
   "description": "Tinymanv2 bug bounty program on Immunefi",
   "category": "DeFi",
-  "logo_url": null,
+  "logo_url": "https://assets.coingecko.com/coins/images/23290/small/tinyman.png",
   "chains": [
     "ethereum"
   ],

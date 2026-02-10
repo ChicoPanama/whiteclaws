@@ -3,7 +3,7 @@
   "name": "Fbtc",
   "description": "Fbtc bug bounty program on Immunefi",
   "category": "DeFi",
-  "logo_url": null,
+  "logo_url": "https://avatars.githubusercontent.com/u/169960161?s=200&v=4",
   "chains": [
     "ethereum"
   ],

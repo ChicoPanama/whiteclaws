@@ -3,7 +3,7 @@
   "name": "PancakeSwap",
   "description": "Leading multi-chain decentralized exchange with AMM, farming, and lottery features",
   "category": "DEX",
-  "logo_url": null,
+  "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/2xJOw4FpKeRGxyQOV0RG0G/58c413a9b3969ddbd605bea881c02e72/Pancakeswap-logo.jpg",
   "chains": [
     "bsc",
     "ethereum",

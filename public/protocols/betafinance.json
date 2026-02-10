@@ -3,7 +3,7 @@
   "name": "Betafinance",
   "description": "Betafinance bug bounty program on Immunefi",
   "category": "DeFi",
-  "logo_url": null,
+  "logo_url": "https://assets.coingecko.com/coins/images/18715/small/beta.png",
   "chains": [
     "ethereum"
   ],

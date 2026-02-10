@@ -3,7 +3,7 @@
   "name": "Stacks",
   "description": "Stacks bug bounty program on Immunefi",
   "category": "DeFi",
-  "logo_url": null,
+  "logo_url": "https://assets.coingecko.com/coins/images/2069/small/Stacks_logo_full.png",
   "chains": [
     "ethereum"
   ],

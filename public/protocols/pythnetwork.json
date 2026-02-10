@@ -3,7 +3,7 @@
   "name": "Pyth Network",
   "description": "Pyth Network bug bounty program on Immunefi",
   "category": "Infrastructure",
-  "logo_url": null,
+  "logo_url": "https://assets.coingecko.com/coins/images/31924/small/pyth.png",
   "chains": [
     "solana",
     "ethereum",

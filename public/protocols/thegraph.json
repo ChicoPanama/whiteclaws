@@ -3,7 +3,7 @@
   "name": "The Graph",
   "description": "The Graph bug bounty program on Immunefi",
   "category": "Infrastructure",
-  "logo_url": null,
+  "logo_url": "https://assets.coingecko.com/coins/images/13397/small/Graph_Token.png",
   "chains": [
     "ethereum",
     "arbitrum"

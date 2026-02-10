@@ -3,7 +3,7 @@
   "name": "Nomad",
   "description": "Nomad bug bounty program on Immunefi",
   "category": "DeFi",
-  "logo_url": null,
+  "logo_url": "https://assets.coingecko.com/coins/images/26854/small/nomad.png",
   "chains": [
     "ethereum"
   ],

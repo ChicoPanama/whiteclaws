@@ -3,7 +3,7 @@
   "name": "Smardex",
   "description": "Smardex bug bounty program on Immunefi",
   "category": "DeFi",
-  "logo_url": null,
+  "logo_url": "https://assets.coingecko.com/coins/images/29470/small/sdex.png",
   "chains": [
     "ethereum"
   ],

@@ -3,7 +3,7 @@
   "name": "Lossless",
   "description": "Lossless bug bounty program on Immunefi",
   "category": "DeFi",
-  "logo_url": null,
+  "logo_url": "https://assets.coingecko.com/coins/images/15653/small/lossless.png",
   "chains": [
     "ethereum"
   ],

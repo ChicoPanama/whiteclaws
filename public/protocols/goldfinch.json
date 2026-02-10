@@ -3,7 +3,7 @@
   "name": "Goldfinch",
   "description": "Goldfinch bug bounty program on Immunefi",
   "category": "DeFi Lending",
-  "logo_url": null,
+  "logo_url": "https://assets.coingecko.com/coins/images/19081/small/GFI.png",
   "chains": [
     "ethereum"
   ],

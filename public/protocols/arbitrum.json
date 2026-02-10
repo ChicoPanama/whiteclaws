@@ -3,7 +3,7 @@
   "name": "Arbitrum",
   "description": "Leading Ethereum Layer 2 scaling solution using optimistic rollup technology",
   "category": "Layer 2",
-  "logo_url": null,
+  "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/4R1H4ktLiQcp601gnixkJa/20dc4d9cf5229ae712f1413d9afced4f/Arbitrum.jpeg",
   "chains": [
     "arbitrum",
     "ethereum"

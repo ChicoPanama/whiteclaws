@@ -3,7 +3,7 @@
   "name": "Livepeer",
   "description": "Livepeer bug bounty program on Immunefi",
   "category": "Infrastructure",
-  "logo_url": null,
+  "logo_url": "https://assets.coingecko.com/coins/images/7137/small/livepeer.png",
   "chains": [
     "ethereum",
     "arbitrum"

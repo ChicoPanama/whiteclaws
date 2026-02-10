@@ -3,7 +3,7 @@
   "name": "SynFutures",
   "description": "SynFutures bug bounty program on Immunefi",
   "category": "DeFi Trading",
-  "logo_url": null,
+  "logo_url": "https://assets.coingecko.com/coins/images/36052/small/f.png",
   "chains": [
     "ethereum",
     "blast"
