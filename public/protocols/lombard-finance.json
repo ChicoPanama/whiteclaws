@@ -53,5 +53,10 @@
       "type": "BTC Derivative"
     }
   ],
-  "source": "immunefi"
+  "source": "immunefi",
+  "branding": {
+    "primary": "#6366F1",
+    "accent": "#3730A3",
+    "text_on_primary": "#FFFFFF"
+  }
 }

@@ -8,6 +8,11 @@ export interface ProtocolJSON {
   category: string
   chains: string[]
   logo_url?: string | null
+  branding?: {
+    primary: string
+    accent: string
+    text_on_primary: string
+  }
   bounty: {
     max: number
     min: number
