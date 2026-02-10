@@ -43,8 +43,8 @@
   },
   "updated_at": "2026-02-10T00:00:00Z",
   "branding": {
-    "primary": "#4F46E5",
-    "accent": "#302A89",
-    "text_on_primary": "#FFFFFF"
+    "primary": "#91C4FD",
+    "accent": "#577698",
+    "text_on_primary": "#000000"
   }
 }

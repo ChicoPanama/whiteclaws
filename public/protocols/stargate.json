@@ -72,10 +72,5 @@
       "createPool"
     ]
   },
-  "updated_at": "2026-02-10T00:00:00Z",
-  "branding": {
-    "primary": "#B0B0B0",
-    "accent": "#696969",
-    "text_on_primary": "#000000"
-  }
+  "updated_at": "2026-02-10T00:00:00Z"
 }

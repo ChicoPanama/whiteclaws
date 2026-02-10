@@ -72,10 +72,5 @@
       "setReceiveVersion"
     ]
   },
-  "updated_at": "2026-02-10T00:00:00Z",
-  "branding": {
-    "primary": "#F0F0F0",
-    "accent": "#909090",
-    "text_on_primary": "#000000"
-  }
+  "updated_at": "2026-02-10T00:00:00Z"
 }

@@ -74,8 +74,8 @@
   },
   "updated_at": "2026-02-10T00:00:00Z",
   "branding": {
-    "primary": "#375BD2",
-    "accent": "#21377E",
+    "primary": "#265DE2",
+    "accent": "#173888",
     "text_on_primary": "#FFFFFF"
   }
 }

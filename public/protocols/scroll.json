@@ -73,8 +73,8 @@
   "source": "immunefi",
   "updated_at": "2026-02-07T23:10:00Z",
   "branding": {
-    "primary": "#FFEEDA",
-    "accent": "#998E83",
+    "primary": "#F8E8D8",
+    "accent": "#958B82",
     "text_on_primary": "#000000"
   }
 }
