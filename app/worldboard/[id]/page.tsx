@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation'
 import { createClient } from '@/lib/supabase/server'
 import Nav from '@/components/landing/Nav'
 import Footer from '@/components/Footer'
+import Link from 'next/link'
 
 export const dynamic = 'force-dynamic'
 
@@ -13,8 +14,7 @@ const mockThread = {
   id: '1',
   title: 'New pattern discovery: Flashloan + Oracle manipulation',
   author: 'WhiteRabbit',
-  content:
-    'Found an interesting combination attack vector involving flashloans and oracle price manipulation...',
+  content: 'Found an interesting combination attack vector involving flashloans and oracle price manipulation...',
   createdAt: '2 hours ago',
   upvotes: 45,
 }
@@ -31,21 +31,13 @@ async function getThread(id: string) {
     .eq('id', id)
     .maybeSingle()
 
-  if (error) {
-    throw error
-  }
-
-  if (!data) {
-    return null
-  }
+  if (error) throw error
+  if (!data) return null
 
   const user = Array.isArray(data.users) ? data.users[0] : data.users
   return {
-    id: data.id,
-    title: data.title ?? 'Untitled thread',
-    content: data.content,
-    upvotes: data.upvotes ?? 0,
-    author: user?.handle ?? 'unknown',
+    id: data.id, title: data.title ?? 'Untitled thread', content: data.content,
+    upvotes: data.upvotes ?? 0, author: user?.handle ?? 'unknown',
     createdAt: new Date(data.created_at).toLocaleString(),
   }
 }
@@ -56,32 +48,30 @@ export default async function WorldBoardThreadPage({
   params: { id: string }
 }) {
   const thread = await getThread(params.id)
-
-  if (!thread) {
-    notFound()
-  }
+  if (!thread) notFound()
 
   return (
     <>
       <Nav />
-      <div className="min-h-screen bg-gray-900">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-6">
-        <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
-          <h1 className="text-2xl font-bold text-white mb-2">{thread.title}</h1>
-          <p className="text-sm text-gray-400">
-            by @{thread.author} · {thread.createdAt}
-          </p>
-          <p className="text-gray-300 mt-4">{thread.content}</p>
-          <div className="flex items-center gap-3 text-sm text-gray-400 mt-4">
-            <span>↑ {thread.upvotes}</span>
-            <span>Replies coming soon</span>
+      <div className="pr-page">
+        <div className="pr-wrap" style={{ maxWidth: 720 }}>
+          <Link href="/worldboard" className="sf-back">← Back to Worldboard</Link>
+
+          <div className="pr-card">
+            <h1 className="pr-name" style={{ fontSize: '1.4rem', marginBottom: 4 }}>{thread.title}</h1>
+            <p className="pr-handle">by @{thread.author} · {thread.createdAt}</p>
+            <p className="pr-bio" style={{ margin: '16px 0' }}>{thread.content}</p>
+            <div className="pr-info-row">
+              <span className="pr-info-label">↑ {thread.upvotes}</span>
+              <span className="pr-info-label">Replies coming soon</span>
+            </div>
+          </div>
+
+          <div className="pr-card">
+            <p className="pr-empty">Thread replies and live updates will appear here once messaging is enabled.</p>
           </div>
         </div>
-        <div className="bg-gray-800 rounded-lg p-6 border border-gray-700 text-gray-400 text-sm">
-          Thread replies and live updates will appear here once messaging is enabled.
-        </div>
       </div>
-    </div>
       <Footer />
     </>
   )

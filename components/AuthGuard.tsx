@@ -3,7 +3,6 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/hooks/useAuth';
-import Button from './Button';
 
 interface AuthGuardProps {
   children: React.ReactNode;
@@ -11,10 +10,10 @@ interface AuthGuardProps {
   requireAgent?: boolean;
 }
 
-export default function AuthGuard({ 
-  children, 
+export default function AuthGuard({
+  children,
   fallback,
-  requireAgent = false 
+  requireAgent = false
 }: AuthGuardProps) {
   const { user, loading, isAuthenticated } = useAuth();
   const router = useRouter();
@@ -28,34 +27,37 @@ export default function AuthGuard({
 
   if (loading) {
     return (
-      <div className="flex items-center justify-center min-h-[400px]">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-indigo-500"></div>
+      <div className="lg-page">
+        <div className="lg-wrap" style={{ textAlign: 'center' }}>
+          <div className="ap-spinner" />
+        </div>
       </div>
     );
   }
 
   if (!isAuthenticated) {
-    if (fallback) {
-      return <>{fallback}</>;
-    }
+    if (fallback) return <>{fallback}</>;
     return (
-      <div className="flex flex-col items-center justify-center min-h-[400px] space-y-4">
-        <p className="text-gray-400">Please sign in to access this page</p>
-        <Button onClick={() => router.push('/login')}>
-          Sign In
-        </Button>
+      <div className="lg-page">
+        <div className="lg-wrap" style={{ textAlign: 'center' }}>
+          <p className="ap-card-text">Please sign in to access this page</p>
+          <button onClick={() => router.push('/login')} className="ap-btn-primary" style={{ marginTop: 16 }}>
+            Sign In
+          </button>
+        </div>
       </div>
     );
   }
 
-  // Check if agent role is required
   if (requireAgent && !user?.user_metadata?.is_agent) {
     return (
-      <div className="flex flex-col items-center justify-center min-h-[400px] space-y-4">
-        <p className="text-gray-400">This page requires agent access</p>
-        <Button onClick={() => router.push('/apply')}>
-          Apply as Agent
-        </Button>
+      <div className="lg-page">
+        <div className="lg-wrap" style={{ textAlign: 'center' }}>
+          <p className="ap-card-text">This page requires agent access</p>
+          <button onClick={() => router.push('/agents')} className="ap-btn-primary" style={{ marginTop: 16 }}>
+            View Agents
+          </button>
+        </div>
       </div>
     );
   }
