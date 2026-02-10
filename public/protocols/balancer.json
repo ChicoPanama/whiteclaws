@@ -71,5 +71,10 @@
       "managePoolBalance"
     ]
   },
-  "updated_at": "2026-02-10T00:00:00Z"
+  "updated_at": "2026-02-10T00:00:00Z",
+  "branding": {
+    "primary": "#1E1E1E",
+    "accent": "#121212",
+    "text_on_primary": "#FFFFFF"
+  }
 }

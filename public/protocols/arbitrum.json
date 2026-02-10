@@ -68,5 +68,10 @@
       "setSequencer"
     ]
   },
-  "updated_at": "2026-02-10T00:00:00Z"
+  "updated_at": "2026-02-10T00:00:00Z",
+  "branding": {
+    "primary": "#28A0F0",
+    "accent": "#186090",
+    "text_on_primary": "#FFFFFF"
+  }
 }

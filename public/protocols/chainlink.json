@@ -72,5 +72,10 @@
       "setConfig"
     ]
   },
-  "updated_at": "2026-02-10T00:00:00Z"
+  "updated_at": "2026-02-10T00:00:00Z",
+  "branding": {
+    "primary": "#375BD2",
+    "accent": "#21377E",
+    "text_on_primary": "#FFFFFF"
+  }
 }

@@ -67,5 +67,10 @@
       "slashShares"
     ]
   },
-  "updated_at": "2026-02-10T00:00:00Z"
+  "updated_at": "2026-02-10T00:00:00Z",
+  "branding": {
+    "primary": "#1A0578",
+    "accent": "#0F0348",
+    "text_on_primary": "#FFFFFF"
+  }
 }

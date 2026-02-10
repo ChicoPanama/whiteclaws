@@ -67,5 +67,10 @@
       "setWithdrawalCredentials"
     ]
   },
-  "updated_at": "2026-02-10T00:00:00Z"
+  "updated_at": "2026-02-10T00:00:00Z",
+  "branding": {
+    "primary": "#00A3FF",
+    "accent": "#006299",
+    "text_on_primary": "#000000"
+  }
 }

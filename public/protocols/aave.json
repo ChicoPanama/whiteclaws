@@ -71,5 +71,10 @@
       "repay"
     ]
   },
-  "updated_at": "2026-02-10T00:00:00Z"
+  "updated_at": "2026-02-10T00:00:00Z",
+  "branding": {
+    "primary": "#B6509E",
+    "accent": "#6D2E5E",
+    "text_on_primary": "#FFFFFF"
+  }
 }

@@ -63,5 +63,10 @@
     }
   ],
   "source": "immunefi",
-  "updated_at": "2026-02-07T23:10:00Z"
+  "updated_at": "2026-02-07T23:10:00Z",
+  "branding": {
+    "primary": "#7B3FE4",
+    "accent": "#4A2689",
+    "text_on_primary": "#FFFFFF"
+  }
 }

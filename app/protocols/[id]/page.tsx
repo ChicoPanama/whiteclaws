@@ -1,3 +1,4 @@
+import type { CSSProperties } from 'react'
 import { notFound } from 'next/navigation'
 import Nav from '@/components/landing/Nav'
 import Footer from '@/components/Footer'
@@ -7,6 +8,12 @@ import { createClient } from '@/lib/supabase/server'
 
 export const dynamic = 'force-dynamic'
 const hasSupabaseConfig = !!process.env.NEXT_PUBLIC_SUPABASE_URL && !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+
+const defaultBranding = {
+  primary: '#6366F1',
+  accent: '#3730A3',
+  text_on_primary: '#FFFFFF',
+}
 
 async function getProtocol(slug: string) {
   if (!hasSupabaseConfig) {
@@ -25,140 +32,158 @@ export default async function ProtocolPage({ params }: { params: { id: string } 
   const severity = protocol.severity_payouts || {}
   const contracts = protocol.contracts || []
   const scope = protocol.scope || { in_scope: [], out_of_scope: [] }
+  const branding = protocol.branding || defaultBranding
+
+  const brandStyles = {
+    '--brand': branding.primary,
+    '--brand-accent': branding.accent,
+    '--brand-text': branding.text_on_primary,
+    '--brand-glow': `${branding.primary}15`,
+    '--brand-border': `${branding.primary}40`,
+    '--brand-surface': `${branding.accent}30`,
+  } as CSSProperties
 
   return (
     <>
       <Nav />
-      <div className="min-h-screen bg-gray-900">
+      <div className="protocol-page min-h-screen" style={brandStyles}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Header */}
-        <div className="mb-8">
-          <div className="flex items-center gap-3 mb-4">
-            <ProtocolIcon name={protocol.name} logo_url={protocol.logo_url} size={48} />
-            <h1 className="text-4xl font-bold text-white">{protocol.name}</h1>
-          </div>
-          <p className="text-xl text-gray-400">{protocol.description}</p>
-        </div>
-
-        {/* Bounty Card */}
-        <div className="bg-gray-800 rounded-lg p-6 mb-8 border border-gray-700">
-          <div className="flex items-center gap-2 mb-4">
-            <span className="text-2xl">💰</span>
-            <h2 className="text-2xl font-semibold text-white">Bounty Rewards</h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-            <div className="bg-gray-700 rounded-lg p-4">
-              <p className="text-gray-400 text-sm">Maximum</p>
-              <p className="text-3xl font-bold text-green-400">${bounty.max?.toLocaleString()}</p>
-            </div>
-            <div className="bg-gray-700 rounded-lg p-4">
-              <p className="text-gray-400 text-sm">Minimum</p>
-              <p className="text-3xl font-bold text-blue-400">${bounty.min?.toLocaleString()}</p>
-            </div>
-          </div>
-          <div className="flex flex-wrap gap-2">
-            {protocol.chains?.map((chain: string) => (
-              <span key={chain} className="bg-blue-900 text-blue-300 px-3 py-1 rounded-full text-sm">{chain}</span>
-            ))}
-            <span className="bg-purple-900 text-purple-300 px-3 py-1 rounded-full text-sm">{protocol.category}</span>
-            {bounty.kyc_required && <span className="bg-yellow-900 text-yellow-300 px-3 py-1 rounded-full text-sm">KYC</span>}
-          </div>
-        </div>
-
-        {/* Severity Payouts */}
-        <div className="mb-8">
-          <div className="flex items-center gap-2 mb-4">
-            <span className="text-2xl">🎚️</span>
-            <h2 className="text-2xl font-semibold text-white">Severity Payouts</h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {Object.entries(severity).map(([level, data]: [string, any]) => (
-              <div key={level} className={`rounded-lg p-4 border ${
-                level === 'critical' ? 'bg-red-900/20 border-red-700' :
-                level === 'high' ? 'bg-orange-900/20 border-orange-700' :
-                level === 'medium' ? 'bg-yellow-900/20 border-yellow-700' :
-                'bg-blue-900/20 border-blue-700'
-              }`}>
-                <div className="flex justify-between items-center mb-2">
-                  <span className="text-xl font-semibold text-white capitalize">{level}</span>
-                  <span className="text-lg font-bold text-green-400">${data.max?.toLocaleString?.() || data.max}</span>
-                </div>
-                <p className="text-gray-400 text-sm">{data.description}</p>
+          <div className="protocol-header mb-8 p-6 rounded-2xl border">
+            <div className="flex items-center gap-4 mb-4">
+              <div className="protocol-icon-chip">
+                <ProtocolIcon name={protocol.name} logo_url={protocol.logo_url} size={56} />
               </div>
-            ))}
+              <div>
+                <h1 className="text-4xl font-bold">{protocol.name}</h1>
+                <p className="text-sm opacity-85">Protocol bounty details</p>
+              </div>
+            </div>
+            <p className="text-lg opacity-90">{protocol.description || 'No protocol description provided.'}</p>
           </div>
-        </div>
 
-        {/* Contracts Section */}
-        {contracts.length > 0 && (
+          <div className="protocol-bounty-card rounded-xl p-6 mb-8 border">
+            <div className="flex items-center gap-2 mb-4">
+              <span className="text-2xl">💰</span>
+              <h2 className="text-2xl font-semibold">Bounty Rewards</h2>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+              <div className="rounded-lg p-4 protocol-bounty-max">
+                <p className="text-sm">Maximum</p>
+                <p className="text-3xl font-bold">${bounty.max?.toLocaleString()}</p>
+              </div>
+              <div className="rounded-lg p-4 protocol-bounty-max">
+                <p className="text-sm">Minimum</p>
+                <p className="text-3xl font-bold">${bounty.min?.toLocaleString()}</p>
+              </div>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              {protocol.chains?.map((chain: string) => (
+                <span key={chain} className="protocol-chain-badge px-3 py-1 rounded-full text-sm">
+                  {chain}
+                </span>
+              ))}
+              <span className="protocol-category-badge px-3 py-1 rounded-full text-sm">{protocol.category}</span>
+              {bounty.kyc_required && <span className="protocol-category-badge px-3 py-1 rounded-full text-sm">KYC</span>}
+            </div>
+          </div>
+
+          <div className="mb-8">
+            <div className="flex items-center gap-2 mb-4">
+              <span className="text-2xl">🎚️</span>
+              <h2 className="text-2xl font-semibold">Severity Payouts</h2>
+            </div>
+            {Object.keys(severity).length > 0 ? (
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {Object.entries(severity).map(([level, data]: [string, any]) => (
+                  <div key={level} className={`protocol-severity-card ${level} rounded-lg p-4 border`}>
+                    <div className="flex justify-between items-center mb-2">
+                      <span className="text-xl font-semibold capitalize">{level}</span>
+                      <span className="text-lg font-bold">${data.max?.toLocaleString?.() || data.max}</span>
+                    </div>
+                    <p className="text-sm opacity-90">{data.description || 'No severity description provided.'}</p>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <div className="protocol-bounty-card rounded-lg p-4 border">No severity payout data available.</div>
+            )}
+          </div>
+
           <div className="mb-8">
             <div className="flex items-center gap-2 mb-4">
               <span className="text-2xl">📜</span>
-              <h2 className="text-2xl font-semibold text-white">In Scope Contracts</h2>
-              <span className="bg-gray-700 text-gray-300 text-sm px-2 py-1 rounded-full">{contracts.length}</span>
+              <h2 className="text-2xl font-semibold">In Scope Contracts</h2>
+              <span className="protocol-category-badge text-sm px-2 py-1 rounded-full">{contracts.length}</span>
             </div>
-            <div className="space-y-3">
-              {contracts.map((contract: any, i: number) => (
-                <div key={i} className="bg-gray-800 rounded-lg p-4 border border-gray-700 flex justify-between items-center">
-                  <div>
-                    <p className="text-white font-medium">{contract.name}</p>
-                    <p className="text-gray-400 text-sm font-mono">{contract.address.slice(0, 20)}...</p>
-                    <p className="text-gray-500 text-xs">{contract.network}</p>
+            {contracts.length > 0 ? (
+              <div className="space-y-3">
+                {contracts.map((contract: any, i: number) => (
+                  <div key={i} className="protocol-contract-row rounded-lg p-4 border flex justify-between items-center gap-4">
+                    <div>
+                      <p className="font-medium">{contract.name}</p>
+                      <p className="text-sm">{contract.address?.slice?.(0, 20)}...</p>
+                      <p className="text-xs opacity-75">{contract.network}</p>
+                    </div>
+                    <span className="protocol-contract-type text-xs px-2 py-1 rounded">{contract.type}</span>
                   </div>
-                  <span className="bg-blue-900 text-blue-300 text-xs px-2 py-1 rounded">{contract.type}</span>
-                </div>
-              ))}
-            </div>
+                ))}
+              </div>
+            ) : (
+              <div className="protocol-bounty-card rounded-lg p-4 border">No in-scope contracts listed.</div>
+            )}
           </div>
-        )}
 
-        {/* Scope Section */}
-        {scope.in_scope?.length > 0 && (
           <div className="mb-8">
             <div className="flex items-center gap-2 mb-4">
               <span className="text-2xl">✅</span>
-              <h2 className="text-2xl font-semibold text-white">In Scope</h2>
+              <h2 className="text-2xl font-semibold">In Scope</h2>
             </div>
-            <ul className="bg-gray-800 rounded-lg p-4 border border-gray-700 space-y-2">
-              {scope.in_scope.map((item: string, i: number) => (
-                <li key={i} className="text-gray-300 flex items-start gap-2">
-                  <span className="text-green-400">✓</span> {item}
-                </li>
-              ))}
+            <ul className="protocol-scope-list rounded-lg p-4 border space-y-2">
+              {scope.in_scope?.length > 0 ? (
+                scope.in_scope.map((item: string, i: number) => (
+                  <li key={i} className="flex items-start gap-2">
+                    <span>✓</span> {item}
+                  </li>
+                ))
+              ) : (
+                <li>No in-scope items provided.</li>
+              )}
             </ul>
           </div>
-        )}
 
-        {/* Out of Scope Section */}
-        {scope.out_of_scope?.length > 0 && (
           <div className="mb-8">
             <div className="flex items-center gap-2 mb-4">
               <span className="text-2xl">❌</span>
-              <h2 className="text-2xl font-semibold text-white">Out of Scope</h2>
+              <h2 className="text-2xl font-semibold">Out of Scope</h2>
             </div>
-            <ul className="bg-gray-800 rounded-lg p-4 border border-gray-700 space-y-2">
-              {scope.out_of_scope.map((item: string, i: number) => (
-                <li key={i} className="text-gray-400 flex items-start gap-2">
-                  <span className="text-red-400">×</span> {item}
-                </li>
-              ))}
+            <ul className="protocol-scope-list rounded-lg p-4 border space-y-2">
+              {scope.out_of_scope?.length > 0 ? (
+                scope.out_of_scope.map((item: string, i: number) => (
+                  <li key={i} className="flex items-start gap-2">
+                    <span>×</span> {item}
+                  </li>
+                ))
+              ) : (
+                <li>No out-of-scope items provided.</li>
+              )}
             </ul>
           </div>
-        )}
 
-        {/* Action Buttons */}
-        <div className="flex flex-wrap gap-4">
-          <a href={`/submit?protocol=${protocol.slug}`}
-            className="bg-green-600 hover:bg-green-700 text-white font-semibold px-8 py-4 rounded-lg transition-colors text-lg">
-            Submit Finding →
-          </a>
-          <a href={`https://immunefi.com/bug-bounty/${protocol.slug}`} target="_blank" rel="noopener noreferrer"
-            className="bg-gray-700 hover:bg-gray-600 text-white font-semibold px-6 py-4 rounded-lg transition-colors">
-            View on Immunefi ↗
-          </a>
+          <div className="flex flex-wrap gap-4">
+            <a href={`/submit?protocol=${protocol.slug}`} className="protocol-submit-btn font-semibold px-8 py-4 rounded-lg text-lg">
+              Submit Finding →
+            </a>
+            <a
+              href={`https://immunefi.com/bug-bounty/${protocol.slug}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="protocol-secondary-btn font-semibold px-6 py-4 rounded-lg"
+            >
+              View on Immunefi ↗
+            </a>
+          </div>
         </div>
       </div>
-    </div>
       <Footer />
     </>
   )

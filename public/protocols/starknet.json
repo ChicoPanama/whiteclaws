@@ -67,5 +67,10 @@
       "setOperator"
     ]
   },
-  "updated_at": "2026-02-10T00:00:00Z"
+  "updated_at": "2026-02-10T00:00:00Z",
+  "branding": {
+    "primary": "#EC796B",
+    "accent": "#8D4940",
+    "text_on_primary": "#FFFFFF"
+  }
 }

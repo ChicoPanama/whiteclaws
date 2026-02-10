@@ -68,5 +68,10 @@
       "createOrder"
     ]
   },
-  "updated_at": "2026-02-10T00:00:00Z"
+  "updated_at": "2026-02-10T00:00:00Z",
+  "branding": {
+    "primary": "#2D42FC",
+    "accent": "#1B2897",
+    "text_on_primary": "#FFFFFF"
+  }
 }
