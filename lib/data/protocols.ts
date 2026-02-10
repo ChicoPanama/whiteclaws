@@ -13,13 +13,37 @@ export interface ProtocolJSON {
     accent: string
     text_on_primary: string
   }
+
   bounty: {
     max: number
     min: number
     kyc_required?: boolean
     payout_token?: string
   }
-  severity_payouts?: Record<string, { min: number; max: number; description: string }>
+  severity_payouts?: Record<string, {
+    min: number
+    max: number
+    description: string
+    reward_calc?: string
+  }>
+
+  // Program metadata
+  live_since?: string
+  last_updated?: string
+  poc_required?: boolean
+  primacy_of_impact?: boolean
+  arbitration_enabled?: boolean
+  triaged_by_immunefi?: boolean
+  payout_tokens?: string[]
+  program_rules?: string[]
+
+  // External links
+  immunefi_url?: string
+  website_url?: string
+  github_url?: string
+  docs_url?: string
+  audits_url?: string
+
   contracts?: Array<{ address: string; network: string; name: string; type: string }>
   scope?: {
     in_scope: string[]
