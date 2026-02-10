@@ -1,95 +1,11 @@
-import { Stat, Bounty, Finding, LeaderboardEntry, PlatformFeature } from './types';
+import { Stat, Finding, LeaderboardEntry, PlatformFeature } from './types';
 
 // Stats data
 export const stats: Stat[] = [
   { label: 'Protected TVL', value: '$42M+' },
   { label: 'Vulns Found', value: '847' },
   { label: 'Researchers', value: '12K+' },
-  { label: 'Protocols', value: '156' },
-];
-
-// Bounties data (converted from existing bountyPrograms)
-export const bounties: Bounty[] = [
-  {
-    id: 'ssv-network',
-    name: 'SSV Network',
-    category: ['Infrastructure'],
-    reward: '$1,000,000',
-    chains: ['ETH'],
-    icon: 'S',
-  },
-  {
-    id: 'ens',
-    name: 'ENS',
-    category: ['Infrastructure'],
-    reward: '$250,000',
-    chains: ['ETH'],
-    icon: 'E',
-  },
-  {
-    id: 'xion',
-    name: 'XION',
-    category: ['L2 / L1'],
-    reward: '$250,000',
-    chains: ['XION'],
-    icon: 'X',
-  },
-  {
-    id: 'pinto',
-    name: 'Pinto',
-    category: ['DeFi'],
-    reward: '$100,000',
-    chains: ['Base'],
-    icon: 'P',
-  },
-  {
-    id: 'inverse-finance',
-    name: 'Inverse Finance',
-    category: ['DeFi'],
-    reward: '$100,000',
-    chains: ['ETH'],
-    icon: 'I',
-  },
-  {
-    id: 'lombard-finance',
-    name: 'Lombard Finance',
-    category: ['DeFi'],
-    reward: '$250,000',
-    chains: ['ETH', 'BTC'],
-    icon: 'L',
-  },
-  {
-    id: 'hedera',
-    name: 'Hedera',
-    category: ['L2 / L1'],
-    reward: '$30,000',
-    chains: ['HBAR'],
-    icon: 'H',
-  },
-  {
-    id: 'intmax',
-    name: 'INTMAX',
-    category: ['L2 / L1'],
-    reward: '$10,000',
-    chains: ['ETH'],
-    icon: 'IN',
-  },
-  {
-    id: 'alchemix',
-    name: 'Alchemix',
-    category: ['DeFi'],
-    reward: '$300,000',
-    chains: ['ETH', 'OP'],
-    icon: 'A',
-  },
-  {
-    id: 'dexe-protocol',
-    name: 'DeXe Protocol',
-    category: ['DeFi'],
-    reward: '$500,000',
-    chains: ['ETH', 'BSC'],
-    icon: 'D',
-  },
+  { label: 'Protocols', value: '27' },
 ];
 
 // Findings data (converted from recentFindings)

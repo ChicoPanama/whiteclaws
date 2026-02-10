@@ -3,6 +3,7 @@
   "name": "Inverse Finance",
   "description": "Fixed-rate DeFi lending protocol with the DOLA stablecoin and novel Personal Collateral Escrow architecture",
   "category": "DeFi",
+  "logo_url": null,
   "chains": [
     "ethereum"
   ],

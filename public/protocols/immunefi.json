@@ -3,6 +3,7 @@
   "name": "Immunefi",
   "description": "Leading blockchain security platform and bug bounty marketplace connecting projects with security researchers",
   "category": "Security Platform",
+  "logo_url": null,
   "chains": [
     "ethereum"
   ],

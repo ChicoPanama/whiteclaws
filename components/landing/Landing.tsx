@@ -9,8 +9,9 @@ import Marquee from '@/components/landing/Marquee'
 import Nav from '@/components/landing/Nav'
 import PlatformGrid from '@/components/landing/PlatformGrid'
 import Stats from '@/components/landing/Stats'
+import type { Bounty } from '@/lib/data/types'
 
-export default function Landing() {
+export default function Landing({ bounties }: { bounties: Bounty[] }) {
   return (
     <>
       <Nav />
@@ -18,7 +19,7 @@ export default function Landing() {
       <Marquee />
       <Stats />
       <DeploySection />
-      <BountiesPreview />
+      <BountiesPreview bounties={bounties} />
       <LeaderboardPreview />
       <PlatformGrid />
       <FindingsPreview />

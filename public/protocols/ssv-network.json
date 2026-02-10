@@ -3,6 +3,7 @@
   "name": "SSV Network",
   "description": "Decentralized staking infrastructure for Ethereum validators",
   "category": "Staking Infrastructure",
+  "logo_url": null,
   "chains": [
     "ethereum"
   ],

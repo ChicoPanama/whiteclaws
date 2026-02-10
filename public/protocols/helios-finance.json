@@ -3,6 +3,7 @@
   "name": "Helios Finance",
   "description": "Perpetual trading protocol",
   "category": "DeFi Trading",
+  "logo_url": null,
   "chains": [
     "arbitrum"
   ],

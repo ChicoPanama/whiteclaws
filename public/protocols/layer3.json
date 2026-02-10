@@ -3,6 +3,7 @@
   "name": "Layer3.xyz",
   "description": "Web3 distribution and incentivization protocol",
   "category": "Infrastructure",
+  "logo_url": null,
   "chains": [
     "ethereum",
     "base",

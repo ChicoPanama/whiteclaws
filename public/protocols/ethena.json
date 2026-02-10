@@ -3,6 +3,7 @@
   "name": "Ethena",
   "description": "Crypto-native synthetic dollar stablecoin (USDe) using delta-hedging strategy with staked ETH and short futures positions",
   "category": "DeFi Stablecoin",
+  "logo_url": null,
   "chains": [
     "ethereum"
   ],

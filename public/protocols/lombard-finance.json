@@ -3,6 +3,7 @@
   "name": "Lombard Finance",
   "description": "Liquid staked Bitcoin (LBTC) protocol allowing users to stake BTC on Babylon while retaining liquidity and earning yields",
   "category": "DeFi",
+  "logo_url": null,
   "chains": [
     "ethereum",
     "base"

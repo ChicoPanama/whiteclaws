@@ -3,17 +3,22 @@
 import Link from 'next/link'
 import { useState } from 'react'
 import useScrollReveal from '@/components/landing/useScrollReveal'
-import { bounties } from '@/lib/data/constants'
+import ProtocolIcon from '@/components/ProtocolIcon'
+import type { Bounty } from '@/lib/data/types'
 
 const filters = ['All', 'DeFi', 'L2 / L1', 'Bridge', 'Infra']
 
-export default function BountiesPreview() {
+export default function BountiesPreview({ bounties }: { bounties: Bounty[] }) {
   const [activeFilter, setActiveFilter] = useState(filters[0])
   const revealRef = useScrollReveal()
 
   const filtered = activeFilter === 'All'
     ? bounties
-    : bounties.filter((b) => b.category.includes(activeFilter))
+    : bounties.filter((b) => {
+        const target = activeFilter === 'Infra' ? 'Infrastructure' : activeFilter
+        const cats = Array.isArray(b.category) ? b.category : [b.category]
+        return cats.some((c) => c === target)
+      })
 
   return (
     <section className="section">
@@ -38,9 +43,9 @@ export default function BountiesPreview() {
         </div>
         <div className="bl">
           {filtered.slice(0, 6).map((b) => (
-            <div key={b.id} className="br">
+            <Link key={b.id} href={`/protocols/${b.id}`} className="br" style={{ textDecoration: 'none', color: 'inherit' }}>
               <div className="bi">
-                <span style={{ fontSize: 14, fontWeight: 700 }}>{b.icon}</span>
+                <ProtocolIcon name={b.name} logo_url={b.logo_url} size={36} />
               </div>
               <div className="bn-w">
                 <div className="bn">{b.name}</div>
@@ -56,7 +61,7 @@ export default function BountiesPreview() {
                   ))}
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

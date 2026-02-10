@@ -1,5 +1,7 @@
 import Landing from '@/components/landing/Landing'
+import { getJSONBounties } from '@/lib/data/bounties'
 
 export default function Home() {
-  return <Landing />
+  const bounties = getJSONBounties()
+  return <Landing bounties={bounties} />
 }

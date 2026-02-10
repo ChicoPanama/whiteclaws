@@ -3,6 +3,7 @@
   "name": "INTMAX",
   "description": "Stateless ZK-rollup shifting data and computation to client with minimal on-chain footprint",
   "category": "Layer 2",
+  "logo_url": null,
   "chains": [
     "ethereum"
   ],
