@@ -1,193 +1,124 @@
-import { createClient } from '@/lib/supabase/server'
+import Nav from '@/components/landing/Nav'
+import Footer from '@/components/Footer'
 
-export const dynamic = 'force-dynamic'
+const audits = [
+  // Scroll (6 reports)
+  { protocol: 'Scroll', name: 'zkTrie Security Review', auditor: 'OpenZeppelin', date: '2023-07', file: '/audits/2023-07-scroll-zktrie-securityreview.pdf' },
+  { protocol: 'Scroll', name: 'L2 Geth Initial Security Review', auditor: 'OpenZeppelin', date: '2023-08', file: '/audits/2023-08-scrollL2geth-initial-securityreview.pdf' },
+  { protocol: 'Scroll', name: 'L2 Geth Security Review', auditor: 'OpenZeppelin', date: '2023-08', file: '/audits/2023-08-scrollL2geth-securityreview.pdf' },
+  { protocol: 'Scroll', name: '4844 Blob Security Review', auditor: 'OpenZeppelin', date: '2024-04', file: '/audits/2024-04-scroll-4844-blob-securityreview.pdf' },
+  { protocol: 'Scroll', name: 'Euclid Phase 1 Security Review', auditor: 'OpenZeppelin', date: '2025-04', file: '/audits/2025-04-scroll-euclid-phase1-securityreview.pdf' },
+  { protocol: 'Scroll', name: 'Euclid Phase 2 Security Review', auditor: 'OpenZeppelin', date: '2025-04', file: '/audits/2025-04-scroll-euclid-phase2-securityreview.pdf' },
+  { protocol: 'Scroll', name: 'Smart Contracts Audit', auditor: 'Zellic', date: '2023-05', file: '/audits/Scroll - 05.26.23 Zellic Audit Report.pdf' },
+  { protocol: 'Scroll', name: 'Smart Contracts Audit', auditor: 'Zellic', date: '2023-09', file: '/audits/Scroll - 09.27.23 Zellic Audit Report.pdf' },
+  { protocol: 'Scroll', name: 'Lido Gateway Audit', auditor: 'Zellic', date: '2023', file: '/audits/Scroll Lido Gateway - Zellic Audit Report.pdf' },
 
-const hasSupabaseConfig = !!process.env.NEXT_PUBLIC_SUPABASE_URL && !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+  // ALEX Protocol (7 reports)
+  { protocol: 'ALEX', name: 'Bridge Audit', auditor: 'ALEX', date: '2023-04', file: '/audits/ALEX_Audit_Bridge_2023-04.pdf' },
+  { protocol: 'ALEX', name: 'Bridge Audit', auditor: 'CoinFabrik', date: '2022-12', file: '/audits/ALEX_Audit_bridge_coinfabrik_202212.pdf' },
+  { protocol: 'ALEX', name: 'Pool Equation Audit', auditor: 'ALEX', date: '2021-11', file: '/audits/AlexGo_Audit_202111_Pool_Equation.pdf' },
+  { protocol: 'ALEX', name: 'Launchpad Vault Reserve Audit', auditor: 'ALEX', date: '2022-01', file: '/audits/AlexGo_Audit_202201_Launchpad_Vault_Reserve.pdf' },
+  { protocol: 'ALEX', name: 'DAO Audit', auditor: 'ALEX', date: '2022-02', file: '/audits/AlexGo_Audit_202202_DAO.pdf' },
+  { protocol: 'ALEX', name: 'Launchpad v1.1 / AutoALEX / CRP Audit', auditor: 'ALEX', date: '2022-04', file: '/audits/AlexGo_Audit_202204_Launchpadv1.1_AutoALEX_CRP.pdf' },
+  { protocol: 'ALEX', name: 'Smart Contracts Final Audit', auditor: 'Least Authority', date: '2022', file: '/audits/Least_Authority_ALEX_Protocol_Smart_Contracts_Final_Audit_Report.pdf' },
 
-const mockResources = [
-  {
-    id: '1',
-    title: 'Smart Contract Vulnerabilities Handbook',
-    type: 'pdf',
-    author: 'v0id_injector',
-    downloads: 1234,
-    description: 'Comprehensive guide to common smart contract vulnerabilities',
-    tags: ['security', 'vulnerabilities', 'handbook'],
-  },
-  {
-    id: '2',
-    title: 'Foundry Testing Best Practices',
-    type: 'article',
-    author: 'WhiteRabbit',
-    downloads: 892,
-    description: 'How to write effective PoC tests with Foundry',
-    tags: ['foundry', 'testing', 'poc'],
-  },
+  // Inverse Finance (6 reports)
+  { protocol: 'Inverse Finance', name: 'Security Audit', auditor: 'Ambisafe', date: '2023-07', file: '/audits/ambisafe-2023-07-18.pdf' },
+  { protocol: 'Inverse Finance', name: 'Security Audit', auditor: 'Ambisafe', date: '2023-11', file: '/audits/ambisafe-2023-11-10.pdf' },
+  { protocol: 'Inverse Finance', name: 'Security Audit', auditor: 'CertiK', date: '2023-05', file: '/audits/certik-2023-05-04.pdf' },
+  { protocol: 'Inverse Finance', name: 'Security Audit', auditor: 'Cyfrin', date: '2023-11', file: '/audits/cyfrin-2023-11-10.pdf' },
+  { protocol: 'Inverse Finance', name: 'Security Audit', auditor: 'Hacken', date: '2023-05', file: '/audits/hacken-2023-05-22.pdf' },
+  { protocol: 'Inverse Finance', name: 'sDOLA Audit', auditor: 'yAudit', date: '2023', file: '/audits/sDOLA-yAudit.pdf' },
+
+  // Zest Protocol (5 reports)
+  { protocol: 'Zest Protocol', name: 'v2 Audit', auditor: 'Clarity Alliance', date: '2024', file: '/audits/Clarity Alliance - Zest Protocol v2.pdf' },
+  { protocol: 'Zest Protocol', name: 'v2 Upgrade Audit', auditor: 'Clarity Alliance', date: '2024', file: '/audits/Clarity Alliance - Zest Protocol v2 Upgrade.pdf' },
+  { protocol: 'Zest Protocol', name: 'v2 Upgrade V2 Audit', auditor: 'Clarity Alliance', date: '2024', file: '/audits/Clarity Alliance - Zest Protocol v2 Upgrade V2.pdf' },
+  { protocol: 'Zest Protocol', name: 'Security Audit', auditor: 'Clarity Alliance', date: '2024-11', file: '/audits/ClarityAlliance-2024-11.pdf' },
+  { protocol: 'Zest Protocol', name: 'Security Audit', auditor: 'CoinFabrik', date: '2023-11', file: '/audits/CoinFabrik-2023-11.pdf' },
+
+  // Individual protocol audits
+  { protocol: 'Alchemix', name: 'v2 Audit', auditor: 'Alchemix', date: '2022', file: '/audits/Alchemix_v2.pdf' },
+  { protocol: 'XION', name: 'Passkeys Audit', auditor: 'Zellic', date: '2024', file: '/audits/Xion Passkeys - Zellic Audit Report.pdf' },
+  { protocol: 'Ref Finance', name: 'Security Audit', auditor: 'Ref Finance', date: '2023', file: '/audits/spaces -MhIB0bSr6nOBfTiANqT-2910905616 uploads h8mipVuJTakoLC6XmzfU Ref Finance Security Audit-1.pdf' },
+  { protocol: 'Pinto', name: 'Security Audit', auditor: 'Pinto', date: '2024', file: '/audits/pinto.pdf' },
+  { protocol: 'Immunefi', name: 'Internal Vaults System Audit', auditor: 'Immunefi', date: '2023-02', file: '/audits/2023-02-03 - Immunefi - Internal Audit of the Vaults system.pdf' },
+  { protocol: 'Inverse Finance', name: 'FiRM Audit', auditor: 'Nomoi', date: '2023', file: '/audits/firm-nomoi.pdf' },
+  { protocol: 'Sherlock', name: 'Junior Audit', auditor: 'Sherlock', date: '2023', file: '/audits/junior-sherlock.pdf' },
+
+  // Indexed audits (001-008)
+  { protocol: 'Oak Network', name: 'PaymentTreasury Audit', auditor: 'Immunefi', date: '2024', file: '/audits/001_Oak_Network.pdf' },
+  { protocol: 'XYZ Protocol', name: 'Security Audit', auditor: 'Immunefi', date: '2024', file: '/audits/002_xyz.pdf' },
+  { protocol: 'CC Protocol', name: 'Security Audit', auditor: 'Immunefi', date: '2024', file: '/audits/003_CC_Protocol.pdf' },
+  { protocol: 'Plume Network', name: 'Security Audit', auditor: 'Immunefi', date: '2024', file: '/audits/004_Plume_Network.pdf' },
+  { protocol: 'Plaza Finance', name: 'Security Audit', auditor: 'Immunefi', date: '2024', file: '/audits/005_Plaza_Finance.pdf' },
+  { protocol: 'Hoenn', name: 'Security Audit', auditor: 'Immunefi', date: '2024', file: '/audits/006_Hoenn.pdf' },
+  { protocol: 'Helios', name: 'Security Audit', auditor: 'Immunefi', date: '2024', file: '/audits/007_Helios.pdf' },
+  { protocol: 'Halogen', name: 'Security Audit', auditor: 'Immunefi', date: '2024', file: '/audits/008_Halogen.pdf' },
 ]
 
-const mockAudits = [
-  {
-    id: 'audit-1',
-    title: 'Oak Network Audit Report',
-    type: 'pdf',
-    author: 'Immunefi',
-    downloads: 45,
-    description: 'Security audit for Oak Network PaymentTreasury',
-    tags: ['immunefi', 'audit', 'oak-network'],
-    url: '/resources/audit-1',
-  },
+const resources = [
+  { icon: '📄', name: 'Smart Contract Vulnerabilities Handbook', description: 'Comprehensive guide to common smart contract vulnerabilities' },
+  { icon: '⚗️', name: 'Foundry Testing Best Practices', description: 'How to write effective PoC tests with Foundry' },
 ]
 
-async function getResources() {
-  if (!hasSupabaseConfig) {
-    return { resources: mockResources, audits: mockAudits }
-  }
-  const supabase = createClient()
-  
-  // Get all resources
-  const { data, error } = await supabase
-    .from('resources')
-    .select('id,title,type,description,downloads,author_id,users (handle),tags,url,file_path')
-    .order('created_at', { ascending: false })
-  
-  if (error) {
-    throw error
-  }
-  
-  const allResources = (data ?? []).map((resource) => {
-    const user = Array.isArray(resource.users) ? resource.users[0] : resource.users
-    return {
-      id: resource.id,
-      title: resource.title,
-      type: resource.type ?? 'article',
-      description: resource.description ?? 'No description provided.',
-      downloads: resource.downloads ?? 0,
-      author: user?.handle ?? 'WhiteClaws',
-      tags: resource.tags ?? [],
-      url: resource.url,
-      file_path: resource.file_path,
-    }
-  })
-  
-  // Separate audits from other resources
-  const audits = allResources.filter(r => 
-    r.tags?.includes('immunefi') && r.tags?.includes('audit')
-  )
-  const resources = allResources.filter(r => 
-    !(r.tags?.includes('immunefi') && r.tags?.includes('audit'))
-  )
-  
-  return { resources, audits }
-}
+// Group audits by protocol
+const grouped = audits.reduce<Record<string, typeof audits>>((acc, a) => {
+  if (!acc[a.protocol]) acc[a.protocol] = []
+  acc[a.protocol].push(a)
+  return acc
+}, {})
 
-export default async function ResourcesPage() {
-  const { resources, audits } = await getResources()
-  
+export default function ResourcesPage() {
   return (
-    <div className="min-h-screen bg-gray-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Header */}
-        <div className="mb-8">
-          <h1 className="text-3xl font-bold text-white mb-2">Resources</h1>
-          <p className="text-gray-400">Security tools, guides, and audit reports for whitehat researchers</p>
+    <>
+      <Nav />
+      <div className="section">
+        <div className="sh">
+          <h2>Resources</h2>
+          <span className="lk">{audits.length} audit reports</span>
         </div>
-        
-        {/* Audit Reports Section */}
-        {audits.length > 0 && (
-          <div className="mb-12">
-            <div className="flex items-center gap-3 mb-6">
-              <span className="text-2xl">🔍</span>
-              <h2 className="text-xl font-semibold text-white">Audit Reports</h2>
-              <span className="bg-gray-700 text-gray-300 text-xs px-2 py-1 rounded-full">
-                {audits.length} reports
-              </span>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {audits.map((audit) => (
-                <a
-                  key={audit.id}
-                  href={audit.url || `/resources/${audit.id}`}
-                  target={audit.url?.startsWith('/') ? undefined : '_blank'}
-                  rel={audit.url?.startsWith('/') ? undefined : 'noopener noreferrer'}
-                  className="bg-gray-800 rounded-lg p-6 border border-gray-700 hover:border-blue-500 transition-colors"
-                >
-                  <div className="flex justify-between items-start mb-4">
-                    <h3 className="text-lg font-semibold text-white">{audit.title}</h3>
-                    <span className="bg-blue-900 text-blue-300 text-xs px-2 py-1 rounded uppercase font-medium">
-                      {audit.type}
-                    </span>
-                  </div>
-                  <p className="text-gray-400 text-sm mb-4">{audit.description}</p>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {audit.tags?.map((tag: string) => (
-                      <span
-                        key={tag}
-                        className="bg-gray-700 text-gray-300 text-xs px-2 py-1 rounded"
-                      >
-                        {tag}
+        <p className="sd-text">Security tools, guides, and audit reports for whitehat researchers.</p>
+
+        <div style={{ marginBottom: 32 }}>
+          <h3 style={{ fontSize: 16, fontWeight: 600, color: 'var(--ink)', marginBottom: 16 }}>Audit Reports</h3>
+          <div className="fl">
+            {Object.entries(grouped).map(([protocol, reports]) => (
+              reports.map((a) => (
+                <a key={a.file} href={a.file} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
+                  <div className="fr">
+                    <div className="fl-l">
+                      <span className="fsv fc">
+                        <span className="dot"></span>
+                        {a.protocol}
                       </span>
-                    ))}
-                  </div>
-                  <div className="flex justify-between text-sm text-gray-500">
-                    <span>by @{audit.author}</span>
-                    <span>{audit.downloads} downloads</span>
+                      <span className="fd-d">{a.name}</span>
+                    </div>
+                    <div className="fl-r">
+                      <span className="fd-lk">{a.auditor}</span>
+                      <span className="fd-tm">{a.date}</span>
+                    </div>
                   </div>
                 </a>
-              ))}
-            </div>
-          </div>
-        )}
-        
-        {/* Community Resources Section */}
-        <div>
-          <div className="flex items-center gap-3 mb-6">
-            <span className="text-2xl">📚</span>
-            <h2 className="text-xl font-semibold text-white">Community Resources</h2>
-            <span className="bg-gray-700 text-gray-300 text-xs px-2 py-1 rounded-full">
-              {resources.length} resources
-            </span>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {resources.map((resource) => (
-              <a
-                key={resource.id}
-                href={`/resources/${resource.id}`}
-                className="bg-gray-800 rounded-lg p-6 border border-gray-700 hover:border-gray-600 transition-colors"
-              >
-                <div className="flex justify-between items-start mb-4">
-                  <h3 className="text-lg font-semibold text-white">{resource.title}</h3>
-                  <span className="bg-gray-700 text-gray-300 text-xs px-2 py-1 rounded uppercase">
-                    {resource.type}
-                  </span>
-                </div>
-                <p className="text-gray-400 text-sm mb-4">{resource.description}</p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {resource.tags?.map((tag: string) => (
-                    <span
-                      key={tag}
-                      className="bg-gray-700 text-gray-300 text-xs px-2 py-1 rounded"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-                <div className="flex justify-between text-sm text-gray-500">
-                  <span>by @{resource.author}</span>
-                  <span>{resource.downloads} downloads</span>
-                </div>
-              </a>
+              ))
             ))}
           </div>
         </div>
-        
-        {/* Upload CTA */}
-        <div className="mt-12 p-6 bg-gray-800 rounded-lg border border-dashed border-gray-600 text-center">
-          <p className="text-gray-400 mb-2">Have a resource to share?</p>
-          <button className="text-blue-400 hover:text-blue-300 font-medium">
-            Submit a resource →
-          </button>
+
+        <div>
+          <h3 style={{ fontSize: 16, fontWeight: 600, color: 'var(--ink)', marginBottom: 16 }}>Community Resources</h3>
+          <div className="pg">
+            {resources.map((r) => (
+              <div key={r.name} className="pi">
+                <span className="pi-ic">{r.icon}</span>
+                <div className="pi-nm">{r.name}</div>
+                <div className="pi-ds">{r.description}</div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+      <Footer />
+    </>
   )
 }

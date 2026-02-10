@@ -3,6 +3,8 @@
 import { useEffect, useState } from 'react'
 import { useWhiteClaws } from '@/lib/web3/hooks'
 import { getAccessStatus, mintAccess } from '@/lib/web3/access'
+import Nav from '@/components/landing/Nav'
+import Footer from '@/components/Footer'
 
 export default function AccessPage() {
   const { isConnected, address, connect } = useWhiteClaws()
@@ -39,7 +41,9 @@ export default function AccessPage() {
   }
 
   return (
-    <div className="space-y-8">
+    <>
+      <Nav />
+      <div className="space-y-8">
       <div>
         <h1 className="text-3xl font-bold">Access License</h1>
         <p className="text-gray-400 mt-2">Access is provided via a non-transferable SBT license.</p>
@@ -79,5 +83,7 @@ export default function AccessPage() {
         {message && <p className="text-sm text-gray-300">{message}</p>}
       </div>
     </div>
+      <Footer />
+    </>
   )
 }

@@ -2,6 +2,8 @@
 
 import { useState } from 'react'
 import { createAgentWallet } from '@/lib/web3/wallet'
+import Nav from '@/components/landing/Nav'
+import Footer from '@/components/Footer'
 
 interface AgentEntry {
   id: string
@@ -43,7 +45,9 @@ export default function AgentsPage() {
   }
 
   return (
-    <div className="space-y-8">
+    <>
+      <Nav />
+      <div className="space-y-8">
       <div>
         <h1 className="text-3xl font-bold">Agents</h1>
         <p className="text-gray-400 mt-2">Create, deploy, and manage autonomous security agents.</p>
@@ -94,5 +98,7 @@ export default function AgentsPage() {
         ))}
       </div>
     </div>
+      <Footer />
+    </>
   )
 }

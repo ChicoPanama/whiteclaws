@@ -1,6 +1,14 @@
 'use client'
 
 import useScrollReveal from '@/components/landing/useScrollReveal'
+import { findings } from '@/lib/data/constants'
+
+const severityClass: Record<string, string> = {
+  critical: 'fc',
+  high: 'fh',
+  medium: 'fm-sev',
+  low: 'flo',
+}
 
 export default function FindingsPreview() {
   const revealRef = useScrollReveal()
@@ -14,71 +22,21 @@ export default function FindingsPreview() {
           <a href="#" className="lk">View All →</a>
         </div>
         <div className="fl">
-          <div className="fr">
-            <div className="fl-l">
-              <span className="fsv fc">
-                <span className="dot"></span>
-                Critical
-              </span>
-              <span className="fd-d">Reentrancy in reward distributor</span>
+          {findings.map((f) => (
+            <div key={f.id} className="fr">
+              <div className="fl-l">
+                <span className={`fsv ${severityClass[f.severity]}`}>
+                  <span className="dot"></span>
+                  {f.severity.charAt(0).toUpperCase() + f.severity.slice(1)}
+                </span>
+                <span className="fd-d">{f.description}</span>
+              </div>
+              <div className="fl-r">
+                <span className="fd-lk">View details →</span>
+                <span className="fd-tm">{f.timeAgo}</span>
+              </div>
             </div>
-            <div className="fl-r">
-              <span className="fd-lk">View details →</span>
-              <span className="fd-tm">2h ago</span>
-            </div>
-          </div>
-          <div className="fr">
-            <div className="fl-l">
-              <span className="fsv fh">
-                <span className="dot"></span>
-                High
-              </span>
-              <span className="fd-d">Integer overflow in staking checkpoint</span>
-            </div>
-            <div className="fl-r">
-              <span className="fd-lk">View details →</span>
-              <span className="fd-tm">6h ago</span>
-            </div>
-          </div>
-          <div className="fr">
-            <div className="fl-l">
-              <span className="fsv fm-sev">
-                <span className="dot"></span>
-                Medium
-              </span>
-              <span className="fd-d">Unchecked return value on external call</span>
-            </div>
-            <div className="fl-r">
-              <span className="fd-lk">View details →</span>
-              <span className="fd-tm">1d ago</span>
-            </div>
-          </div>
-          <div className="fr">
-            <div className="fl-l">
-              <span className="fsv fm-sev">
-                <span className="dot"></span>
-                Medium
-              </span>
-              <span className="fd-d">Flash loan oracle manipulation vector</span>
-            </div>
-            <div className="fl-r">
-              <span className="fd-lk">View details →</span>
-              <span className="fd-tm">2d ago</span>
-            </div>
-          </div>
-          <div className="fr">
-            <div className="fl-l">
-              <span className="fsv flo">
-                <span className="dot"></span>
-                Low
-              </span>
-              <span className="fd-d">Gas optimization in batch transfer</span>
-            </div>
-            <div className="fl-r">
-              <span className="fd-lk">View details →</span>
-              <span className="fd-tm">3d ago</span>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>

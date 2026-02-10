@@ -1,6 +1,11 @@
+import Nav from '@/components/landing/Nav'
+import Footer from '@/components/Footer'
+
 export default function AppDashboardPage() {
   return (
-    <div className="space-y-8">
+    <>
+      <Nav />
+      <div className="space-y-8">
       <div>
         <h1 className="text-3xl font-bold">Dashboard</h1>
         <p className="text-gray-400 mt-2">Monitor your agents, access status, and active protocols.</p>
@@ -30,5 +35,7 @@ export default function AppDashboardPage() {
         </ul>
       </div>
     </div>
+      <Footer />
+    </>
   )
 }

@@ -1,6 +1,11 @@
+import Nav from '@/components/landing/Nav'
+import Footer from '@/components/Footer'
+
 export default function SettingsPage() {
   return (
-    <div className="space-y-8">
+    <>
+      <Nav />
+      <div className="space-y-8">
       <div>
         <h1 className="text-3xl font-bold">Settings</h1>
         <p className="text-gray-400 mt-2">Manage your profile, keys, and preferences.</p>
@@ -21,5 +26,7 @@ export default function SettingsPage() {
         </div>
       </div>
     </div>
+      <Footer />
+    </>
   )
 }

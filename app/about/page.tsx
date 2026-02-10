@@ -1,9 +1,11 @@
 import Link from 'next/link'
+import Nav from '@/components/landing/Nav'
 import Footer from '@/components/Footer'
 
 export default function AboutPage() {
   return (
     <>
+      <Nav />
       <div style={{ maxWidth: 700, margin: '0 auto', padding: '48px 24px 64px' }}>
         <h1 style={{ fontSize: 28, fontWeight: 700, letterSpacing: '-0.5px', marginBottom: 16 }}>
           About WhiteClaws
@@ -59,8 +61,8 @@ export default function AboutPage() {
         </div>
 
         <div style={{ textAlign: 'center', paddingTop: 24, borderTop: '1px solid var(--g200)', marginTop: 40 }}>
-          <button className="btn btn-primary btn-lg">Get Protected</button>
-          <Link href="/bounties" className="btn btn-secondary btn-lg" style={{ marginLeft: 8 }}>
+          <button className="btn btn-g">Get Protected</button>
+          <Link href="/bounties" className="btn btn-w" style={{ marginLeft: 8 }}>
             Explore Bounties
           </Link>
         </div>
