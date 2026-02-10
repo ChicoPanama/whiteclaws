@@ -3,6 +3,7 @@
   "name": "Plume Network",
   "description": "Real World Asset tokenization platform",
   "category": "RWA Tokenization",
+  "logo_url": null,
   "chains": [
     "ethereum"
   ],

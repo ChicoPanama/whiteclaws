@@ -3,6 +3,7 @@
   "name": "Infinex",
   "description": "Multichain wallet, portfolio manager and trading terminal with CEX-like experience onchain",
   "category": "DeFi",
+  "logo_url": null,
   "chains": [
     "ethereum"
   ],

@@ -3,6 +3,7 @@
   "name": "Hoenn",
   "description": "Blockchain gaming platform",
   "category": "Gaming/NFT",
+  "logo_url": null,
   "chains": [
     "ethereum",
     "polygon"

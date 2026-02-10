@@ -3,6 +3,7 @@
   "name": "Ref Finance",
   "description": "Community-led multi-purpose DeFi platform on NEAR Protocol combining DEX, lending and synthetic assets",
   "category": "DEX",
+  "logo_url": null,
   "chains": [
     "near"
   ],

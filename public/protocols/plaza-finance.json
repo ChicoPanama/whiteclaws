@@ -3,6 +3,7 @@
   "name": "Plaza Finance",
   "description": "Yield optimization protocol",
   "category": "DeFi Yield",
+  "logo_url": null,
   "chains": [
     "ethereum",
     "base"

@@ -3,6 +3,7 @@
   "name": "Halogen",
   "description": "Liquid staking derivatives",
   "category": "DeFi Staking",
+  "logo_url": null,
   "chains": [
     "ethereum"
   ],

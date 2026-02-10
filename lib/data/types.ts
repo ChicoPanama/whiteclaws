@@ -10,6 +10,7 @@ export interface Bounty {
   reward?: string;
   chains: string[];
   icon?: string;
+  logo_url?: string | null;
   tags?: string[];
   liveSince?: string;
   language?: string;

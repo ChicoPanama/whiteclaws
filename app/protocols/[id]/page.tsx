@@ -1,15 +1,16 @@
-import { createClient } from '@/lib/supabase/server'
 import { notFound } from 'next/navigation'
 import Nav from '@/components/landing/Nav'
 import Footer from '@/components/Footer'
+import ProtocolIcon from '@/components/ProtocolIcon'
+import { getProtocolBySlug } from '@/lib/data/protocols'
+import { createClient } from '@/lib/supabase/server'
 
 export const dynamic = 'force-dynamic'
 const hasSupabaseConfig = !!process.env.NEXT_PUBLIC_SUPABASE_URL && !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
 
 async function getProtocol(slug: string) {
   if (!hasSupabaseConfig) {
-    const protocol = await import(`@/public/protocols/${slug}.json`).catch(() => null)
-    return protocol?.default || protocol || null
+    return getProtocolBySlug(slug)
   }
   const supabase = createClient()
   const { data } = await supabase.from('protocols').select('*').eq('slug', slug).single()
@@ -19,7 +20,7 @@ async function getProtocol(slug: string) {
 export default async function ProtocolPage({ params }: { params: { id: string } }) {
   const protocol = await getProtocol(params.id)
   if (!protocol) notFound()
-  
+
   const bounty = protocol.bounty || { max: 0, min: 0, kyc_required: false }
   const severity = protocol.severity_payouts || {}
   const contracts = protocol.contracts || []
@@ -33,7 +34,7 @@ export default async function ProtocolPage({ params }: { params: { id: string } 
         {/* Header */}
         <div className="mb-8">
           <div className="flex items-center gap-3 mb-4">
-            <span className="text-4xl">🎯</span>
+            <ProtocolIcon name={protocol.name} logo_url={protocol.logo_url} size={48} />
             <h1 className="text-4xl font-bold text-white">{protocol.name}</h1>
           </div>
           <p className="text-xl text-gray-400">{protocol.description}</p>
@@ -60,7 +61,7 @@ export default async function ProtocolPage({ params }: { params: { id: string } 
               <span key={chain} className="bg-blue-900 text-blue-300 px-3 py-1 rounded-full text-sm">{chain}</span>
             ))}
             <span className="bg-purple-900 text-purple-300 px-3 py-1 rounded-full text-sm">{protocol.category}</span>
-            {bounty.kyc_required && <span className="bg-yellow-900 text-yellow-300 px-3 py-1 rounded-full text-sm">🔒 KYC</span>}
+            {bounty.kyc_required && <span className="bg-yellow-900 text-yellow-300 px-3 py-1 rounded-full text-sm">KYC</span>}
           </div>
         </div>
 
@@ -145,19 +146,15 @@ export default async function ProtocolPage({ params }: { params: { id: string } 
           </div>
         )}
 
-        {/* Task 3: Submit Button */}
+        {/* Action Buttons */}
         <div className="flex flex-wrap gap-4">
           <a href={`/submit?protocol=${protocol.slug}`}
             className="bg-green-600 hover:bg-green-700 text-white font-semibold px-8 py-4 rounded-lg transition-colors text-lg">
-            🐇 Submit Finding →
+            Submit Finding →
           </a>
           <a href={`https://immunefi.com/bug-bounty/${protocol.slug}`} target="_blank" rel="noopener noreferrer"
             className="bg-gray-700 hover:bg-gray-600 text-white font-semibold px-6 py-4 rounded-lg transition-colors">
             View on Immunefi ↗
-          </a>
-          <a href={`/audits/${protocol.slug}`}
-            className="bg-blue-700 hover:bg-blue-600 text-white font-semibold px-6 py-4 rounded-lg transition-colors">
-            📄 Audit Report
           </a>
         </div>
       </div>

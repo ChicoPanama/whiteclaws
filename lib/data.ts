@@ -1,6 +1,6 @@
 import { Bounty, LeaderboardEntry, PlatformFeature } from './data/types';
-import { 
-  bounties as bountyConstants,
+import { getJSONBounties } from './data/bounties';
+import {
   leaderboard as leaderboardConstants,
   platformFeatures as platformFeatureConstants,
   findings as findingConstants
@@ -27,19 +27,19 @@ export interface BountyProgram {
   triaged?: boolean
 }
 
-// Map new Bounty type to existing BountyProgram interface
-export const bountyPrograms: BountyProgram[] = bountyConstants.map(bounty => ({
+// Map dynamic bounties to existing BountyProgram interface
+export const bountyPrograms: BountyProgram[] = getJSONBounties().map(bounty => ({
   id: bounty.id,
   name: bounty.name,
   icon: bounty.icon || '',
   category: Array.isArray(bounty.category) ? bounty.category[0] : bounty.category,
-  tags: [],
+  tags: bounty.tags || [],
   chains: bounty.chains,
-  language: 'Solidity',
+  language: bounty.language || 'Solidity',
   maxReward: bounty.reward || '$0',
-  maxRewardNum: parseInt((bounty.reward || '$0').replace(/[^0-9]/g, '')) || 0,
-  liveSince: 'Live',
-  type: 'Smart Contract',
+  maxRewardNum: bounty.maxRewardNum || 0,
+  liveSince: bounty.liveSince || 'Live',
+  type: bounty.type || 'Smart Contract',
 }));
 
 export interface LeaderboardEntryOld {

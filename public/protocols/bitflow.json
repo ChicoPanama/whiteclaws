@@ -3,6 +3,7 @@
   "name": "Bitflow",
   "description": "Decentralized exchange for Bitcoiners built on Stacks, enabling BTC-denominated trading and earning with Bitcoin blockchain security",
   "category": "DEX",
+  "logo_url": null,
   "chains": [
     "stacks"
   ],

@@ -3,6 +3,7 @@
   "name": "StackingDAO",
   "description": "Liquid stacking protocol for Stacks enabling STX staking with BTC rewards and DeFi integrations",
   "category": "DeFi Staking",
+  "logo_url": null,
   "chains": [
     "stacks"
   ],
