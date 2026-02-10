@@ -1,0 +1,45 @@
+{
+  "slug": "rocketpool",
+  "name": "Rocket Pool",
+  "description": "Rocket Pool bug bounty program on Immunefi",
+  "category": "DeFi Staking",
+  "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/3q1XTgKfkqJW9nCVPRp7r5/8afa695989d14412d92dc2e26d4c1a47/Rocket_Pool__1_.jpeg",
+  "chains": [
+    "ethereum"
+  ],
+  "bounty": {
+    "max": 500000,
+    "min": 500,
+    "kyc_required": false,
+    "payout_token": "USDC"
+  },
+  "severity_payouts": {
+    "critical": {
+      "min": 125000,
+      "max": 500000,
+      "description": "Direct theft of user funds or protocol insolvency"
+    },
+    "high": {
+      "min": 5000,
+      "max": 50000,
+      "description": "Temporary freezing of funds or manipulation"
+    },
+    "medium": {
+      "min": 500,
+      "max": 5000,
+      "description": "Griefing or protocol disruption"
+    }
+  },
+  "source": "immunefi",
+  "contracts": [],
+  "scope": {
+    "in_scope": [
+      "Smart contracts in scope per Immunefi listing"
+    ],
+    "out_of_scope": [
+      "Frontend applications",
+      "Off-chain infrastructure"
+    ]
+  },
+  "updated_at": "2026-02-10T00:00:00Z"
+}

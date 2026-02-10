@@ -1,0 +1,45 @@
+{
+  "slug": "sparklend",
+  "name": "Spark",
+  "description": "Spark bug bounty program on Immunefi",
+  "category": "DeFi Lending",
+  "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/6PSQWUew0V3et86JKkvxs0/152af27a6fa55003a4cc5511f0641d17/badge__1_.png",
+  "chains": [
+    "ethereum"
+  ],
+  "bounty": {
+    "max": 5000000,
+    "min": 5000,
+    "kyc_required": false,
+    "payout_token": "USDC"
+  },
+  "severity_payouts": {
+    "critical": {
+      "min": 1250000,
+      "max": 5000000,
+      "description": "Direct theft of user funds or protocol insolvency"
+    },
+    "high": {
+      "min": 50000,
+      "max": 500000,
+      "description": "Temporary freezing of funds or manipulation"
+    },
+    "medium": {
+      "min": 5000,
+      "max": 50000,
+      "description": "Griefing or protocol disruption"
+    }
+  },
+  "source": "immunefi",
+  "contracts": [],
+  "scope": {
+    "in_scope": [
+      "Smart contracts in scope per Immunefi listing"
+    ],
+    "out_of_scope": [
+      "Frontend applications",
+      "Off-chain infrastructure"
+    ]
+  },
+  "updated_at": "2026-02-10T00:00:00Z"
+}

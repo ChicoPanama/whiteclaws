@@ -1,0 +1,72 @@
+{
+  "slug": "optimism",
+  "name": "Optimism",
+  "description": "Ethereum Layer 2 scaling solution using optimistic rollups with the OP Stack",
+  "category": "Layer 2",
+  "logo_url": null,
+  "chains": [
+    "optimism",
+    "ethereum"
+  ],
+  "bounty": {
+    "max": 2000042,
+    "min": 1000,
+    "kyc_required": true,
+    "payout_token": "USDC"
+  },
+  "severity_payouts": {
+    "critical": {
+      "min": 500000,
+      "max": 2000042,
+      "description": "Direct theft of bridged assets or rollup state corruption"
+    },
+    "high": {
+      "min": 100000,
+      "max": 500000,
+      "description": "Sequencer manipulation or fault proof bypass"
+    },
+    "medium": {
+      "min": 10000,
+      "max": 100000,
+      "description": "Protocol disruption or gas estimation exploit"
+    },
+    "low": {
+      "min": 1000,
+      "max": 10000,
+      "description": "Informational findings"
+    }
+  },
+  "source": "immunefi",
+  "contracts": [
+    {
+      "address": "0x25ace71c97B33Cc4729CF772ae268934F7ab5fA1",
+      "network": "ethereum",
+      "name": "L1CrossDomainMessenger",
+      "type": "Core"
+    }
+  ],
+  "scope": {
+    "in_scope": [
+      "OP Stack smart contracts",
+      "L1 and L2 bridge contracts",
+      "Fault proof system",
+      "Cross-domain messaging"
+    ],
+    "out_of_scope": [
+      "Frontend explorer",
+      "Off-chain sequencer",
+      "Third-party OP Stack chains"
+    ],
+    "functions_critical": [
+      "proveWithdrawalTransaction",
+      "finalizeWithdrawalTransaction",
+      "depositTransaction"
+    ],
+    "functions_high": [
+      "relayMessage",
+      "setGasConfig",
+      "disputeGame"
+    ]
+  },
+  "updated_at": "2026-02-10T00:00:00Z"
+}

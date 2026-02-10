@@ -1,0 +1,72 @@
+{
+  "slug": "olympus",
+  "name": "Olympus",
+  "description": "Decentralized reserve currency protocol with protocol-owned liquidity",
+  "category": "DeFi",
+  "logo_url": null,
+  "chains": [
+    "ethereum",
+    "arbitrum"
+  ],
+  "bounty": {
+    "max": 3333333,
+    "min": 1000,
+    "kyc_required": true,
+    "payout_token": "USDC"
+  },
+  "severity_payouts": {
+    "critical": {
+      "min": 1000000,
+      "max": 3333333,
+      "description": "Direct theft of treasury assets or OHM supply manipulation"
+    },
+    "high": {
+      "min": 100000,
+      "max": 500000,
+      "description": "Bond pricing exploit or staking reward manipulation"
+    },
+    "medium": {
+      "min": 10000,
+      "max": 100000,
+      "description": "Treasury accounting errors or protocol disruption"
+    },
+    "low": {
+      "min": 1000,
+      "max": 10000,
+      "description": "Informational findings"
+    }
+  },
+  "source": "immunefi",
+  "contracts": [
+    {
+      "address": "0x64aa3364F17a4D01c6f1751Fd97C2BD3D7e7f1D5",
+      "network": "ethereum",
+      "name": "OHM Token",
+      "type": "Core"
+    }
+  ],
+  "scope": {
+    "in_scope": [
+      "OHM token and minting",
+      "Treasury and reserve management",
+      "Bond depository contracts",
+      "Staking and reward distribution"
+    ],
+    "out_of_scope": [
+      "Frontend interface",
+      "Off-chain governance",
+      "Cross-chain OHM deployments"
+    ],
+    "functions_critical": [
+      "deposit",
+      "redeem",
+      "mint"
+    ],
+    "functions_high": [
+      "stake",
+      "unstake",
+      "manage"
+    ]
+  },
+  "updated_at": "2026-02-10T00:00:00Z"
+}

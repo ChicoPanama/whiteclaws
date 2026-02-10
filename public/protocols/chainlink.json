@@ -1,0 +1,76 @@
+{
+  "slug": "chainlink",
+  "name": "Chainlink",
+  "description": "Decentralized oracle network providing tamper-proof data feeds for smart contracts",
+  "category": "Infrastructure",
+  "logo_url": null,
+  "chains": [
+    "ethereum",
+    "arbitrum",
+    "optimism",
+    "polygon",
+    "bsc",
+    "base"
+  ],
+  "bounty": {
+    "max": 3000000,
+    "min": 1000,
+    "kyc_required": true,
+    "payout_token": "USDC"
+  },
+  "severity_payouts": {
+    "critical": {
+      "min": 1000000,
+      "max": 3000000,
+      "description": "Oracle price feed manipulation or CCIP exploit"
+    },
+    "high": {
+      "min": 100000,
+      "max": 500000,
+      "description": "VRF randomness prediction or automation bypass"
+    },
+    "medium": {
+      "min": 10000,
+      "max": 100000,
+      "description": "Data feed delays or reporting errors"
+    },
+    "low": {
+      "min": 1000,
+      "max": 10000,
+      "description": "Informational findings"
+    }
+  },
+  "source": "immunefi",
+  "contracts": [
+    {
+      "address": "0x47Fb2585D2C56Fe188D0E6ec628a38b74fCeeeDf",
+      "network": "ethereum",
+      "name": "Chainlink Feed Registry",
+      "type": "Core"
+    }
+  ],
+  "scope": {
+    "in_scope": [
+      "Price feed aggregator contracts",
+      "CCIP cross-chain protocol",
+      "VRF v2 contracts",
+      "Automation (Keepers) contracts"
+    ],
+    "out_of_scope": [
+      "Frontend applications",
+      "Off-chain node software",
+      "Third-party oracle consumers"
+    ],
+    "functions_critical": [
+      "transmit",
+      "latestRoundData",
+      "ccipSend"
+    ],
+    "functions_high": [
+      "requestRandomWords",
+      "performUpkeep",
+      "setConfig"
+    ]
+  },
+  "updated_at": "2026-02-10T00:00:00Z"
+}

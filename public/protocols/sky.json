@@ -1,0 +1,71 @@
+{
+  "slug": "sky",
+  "name": "Sky",
+  "description": "Decentralized stablecoin protocol (formerly MakerDAO) issuing USDS and DAI",
+  "category": "DeFi Stablecoin",
+  "logo_url": null,
+  "chains": [
+    "ethereum"
+  ],
+  "bounty": {
+    "max": 10000000,
+    "min": 1000,
+    "kyc_required": true,
+    "payout_token": "USDC"
+  },
+  "severity_payouts": {
+    "critical": {
+      "min": 2000000,
+      "max": 10000000,
+      "description": "DAI/USDS depeg exploit or vault drainage"
+    },
+    "high": {
+      "min": 100000,
+      "max": 1000000,
+      "description": "Oracle manipulation or liquidation bypass"
+    },
+    "medium": {
+      "min": 10000,
+      "max": 100000,
+      "description": "Stability fee manipulation or governance exploit"
+    },
+    "low": {
+      "min": 1000,
+      "max": 10000,
+      "description": "Informational findings"
+    }
+  },
+  "source": "immunefi",
+  "contracts": [
+    {
+      "address": "0x35D1b3F3D7966A1DFe207aa4514C12a259A0492B",
+      "network": "ethereum",
+      "name": "MCD Vat",
+      "type": "Core"
+    }
+  ],
+  "scope": {
+    "in_scope": [
+      "Maker/Sky core vault engine",
+      "DAI and USDS token contracts",
+      "Liquidation engine",
+      "Oracle security module"
+    ],
+    "out_of_scope": [
+      "Frontend interface",
+      "Off-chain keepers",
+      "Spark Protocol (separate program)"
+    ],
+    "functions_critical": [
+      "frob",
+      "grab",
+      "heal"
+    ],
+    "functions_high": [
+      "bark",
+      "take",
+      "file"
+    ]
+  },
+  "updated_at": "2026-02-10T00:00:00Z"
+}

@@ -1,0 +1,72 @@
+{
+  "slug": "reserve",
+  "name": "Reserve",
+  "description": "Asset-backed stablecoin protocol enabling permissionless stablecoin creation",
+  "category": "DeFi Stablecoin",
+  "logo_url": null,
+  "chains": [
+    "ethereum",
+    "base"
+  ],
+  "bounty": {
+    "max": 10000000,
+    "min": 1000,
+    "kyc_required": true,
+    "payout_token": "USDC"
+  },
+  "severity_payouts": {
+    "critical": {
+      "min": 2000000,
+      "max": 10000000,
+      "description": "Direct theft of collateral or RToken depeg exploit"
+    },
+    "high": {
+      "min": 100000,
+      "max": 500000,
+      "description": "Basket manipulation or revenue distribution exploit"
+    },
+    "medium": {
+      "min": 10000,
+      "max": 100000,
+      "description": "Governance manipulation or trading disruption"
+    },
+    "low": {
+      "min": 1000,
+      "max": 10000,
+      "description": "Informational findings"
+    }
+  },
+  "source": "immunefi",
+  "contracts": [
+    {
+      "address": "0x320623b8E4fF03373931769A31Fc52A4E78B5d70",
+      "network": "ethereum",
+      "name": "Reserve RToken Main",
+      "type": "Core"
+    }
+  ],
+  "scope": {
+    "in_scope": [
+      "RToken deployment and management",
+      "Basket handler and collateral",
+      "Revenue trading contracts",
+      "Backing manager"
+    ],
+    "out_of_scope": [
+      "Frontend interface",
+      "Off-chain monitoring",
+      "Individual deployed RTokens"
+    ],
+    "functions_critical": [
+      "issue",
+      "redeem",
+      "manageTokens"
+    ],
+    "functions_high": [
+      "claimRewards",
+      "settleTrade",
+      "refreshBasket"
+    ]
+  },
+  "updated_at": "2026-02-10T00:00:00Z"
+}

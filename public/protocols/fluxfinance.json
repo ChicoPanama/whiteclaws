@@ -1,0 +1,45 @@
+{
+  "slug": "fluxfinance",
+  "name": "Flux Finance",
+  "description": "Flux Finance bug bounty program on Immunefi",
+  "category": "DeFi Lending",
+  "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/4aokvelvaJE4fFquv6ScJb/7533cb65195c3bb2c9707a314aba7776/2023-02-07_08_Small.png",
+  "chains": [
+    "ethereum"
+  ],
+  "bounty": {
+    "max": 550000,
+    "min": 550,
+    "kyc_required": false,
+    "payout_token": "USDC"
+  },
+  "severity_payouts": {
+    "critical": {
+      "min": 137500,
+      "max": 550000,
+      "description": "Direct theft of user funds or protocol insolvency"
+    },
+    "high": {
+      "min": 5500,
+      "max": 55000,
+      "description": "Temporary freezing of funds or manipulation"
+    },
+    "medium": {
+      "min": 550,
+      "max": 5500,
+      "description": "Griefing or protocol disruption"
+    }
+  },
+  "source": "immunefi",
+  "contracts": [],
+  "scope": {
+    "in_scope": [
+      "Smart contracts in scope per Immunefi listing"
+    ],
+    "out_of_scope": [
+      "Frontend applications",
+      "Off-chain infrastructure"
+    ]
+  },
+  "updated_at": "2026-02-10T00:00:00Z"
+}

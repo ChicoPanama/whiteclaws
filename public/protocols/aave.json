@@ -1,0 +1,75 @@
+{
+  "slug": "aave",
+  "name": "AAVE",
+  "description": "Decentralized non-custodial liquidity protocol for earning interest and borrowing assets",
+  "category": "DeFi Lending",
+  "logo_url": null,
+  "chains": [
+    "ethereum",
+    "arbitrum",
+    "optimism",
+    "polygon",
+    "base"
+  ],
+  "bounty": {
+    "max": 1000000,
+    "min": 1000,
+    "kyc_required": true,
+    "payout_token": "USDC"
+  },
+  "severity_payouts": {
+    "critical": {
+      "min": 250000,
+      "max": 1000000,
+      "description": "Direct theft of user funds or protocol insolvency"
+    },
+    "high": {
+      "min": 50000,
+      "max": 250000,
+      "description": "Temporary freezing of funds or oracle manipulation"
+    },
+    "medium": {
+      "min": 5000,
+      "max": 50000,
+      "description": "Interest rate manipulation or accounting errors"
+    },
+    "low": {
+      "min": 1000,
+      "max": 5000,
+      "description": "Informational findings"
+    }
+  },
+  "source": "immunefi",
+  "contracts": [
+    {
+      "address": "0x87870Bca3F3fD6335C3F4ce8392D69350B4fA4E2",
+      "network": "ethereum",
+      "name": "Aave V3 Pool",
+      "type": "Core"
+    }
+  ],
+  "scope": {
+    "in_scope": [
+      "Aave V3 Pool contracts",
+      "Lending and borrowing logic",
+      "Liquidation mechanism",
+      "Flash loan implementation"
+    ],
+    "out_of_scope": [
+      "Frontend interface",
+      "Governance voting UI",
+      "Aave V2 legacy contracts"
+    ],
+    "functions_critical": [
+      "supply",
+      "borrow",
+      "liquidationCall"
+    ],
+    "functions_high": [
+      "flashLoan",
+      "setUserUseReserveAsCollateral",
+      "repay"
+    ]
+  },
+  "updated_at": "2026-02-10T00:00:00Z"
+}

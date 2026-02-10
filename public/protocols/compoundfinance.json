@@ -1,0 +1,74 @@
+{
+  "slug": "compoundfinance",
+  "name": "Compound Finance",
+  "description": "Algorithmic money market protocol for lending and borrowing crypto assets",
+  "category": "DeFi Lending",
+  "logo_url": null,
+  "chains": [
+    "ethereum",
+    "arbitrum",
+    "base",
+    "polygon"
+  ],
+  "bounty": {
+    "max": 1000000,
+    "min": 500,
+    "kyc_required": true,
+    "payout_token": "USDC"
+  },
+  "severity_payouts": {
+    "critical": {
+      "min": 250000,
+      "max": 1000000,
+      "description": "Direct theft of user funds or protocol insolvency"
+    },
+    "high": {
+      "min": 50000,
+      "max": 250000,
+      "description": "Interest rate manipulation or collateral bypass"
+    },
+    "medium": {
+      "min": 5000,
+      "max": 50000,
+      "description": "Accounting errors or liquidation miscalculation"
+    },
+    "low": {
+      "min": 500,
+      "max": 5000,
+      "description": "Informational findings"
+    }
+  },
+  "source": "immunefi",
+  "contracts": [
+    {
+      "address": "0xc3d688B66703497DAA19211EEdff47f25384cdc3",
+      "network": "ethereum",
+      "name": "Compound V3 (cUSDCv3)",
+      "type": "Core"
+    }
+  ],
+  "scope": {
+    "in_scope": [
+      "Compound V3 Comet contracts",
+      "Lending and borrowing logic",
+      "Liquidation mechanism",
+      "Price feed integration"
+    ],
+    "out_of_scope": [
+      "Frontend interface",
+      "Compound V2 legacy markets",
+      "Governance proposals"
+    ],
+    "functions_critical": [
+      "supply",
+      "withdraw",
+      "absorb"
+    ],
+    "functions_high": [
+      "buyCollateral",
+      "setBaseTrackingBorrowSpeed",
+      "pause"
+    ]
+  },
+  "updated_at": "2026-02-10T00:00:00Z"
+}

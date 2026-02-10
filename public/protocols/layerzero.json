@@ -1,0 +1,76 @@
+{
+  "slug": "layerzero",
+  "name": "LayerZero",
+  "description": "Omnichain interoperability protocol enabling cross-chain messaging",
+  "category": "Bridge",
+  "logo_url": null,
+  "chains": [
+    "ethereum",
+    "arbitrum",
+    "optimism",
+    "polygon",
+    "bsc",
+    "base"
+  ],
+  "bounty": {
+    "max": 15000000,
+    "min": 1000,
+    "kyc_required": true,
+    "payout_token": "USDC"
+  },
+  "severity_payouts": {
+    "critical": {
+      "min": 5000000,
+      "max": 15000000,
+      "description": "Direct theft of user funds or protocol insolvency"
+    },
+    "high": {
+      "min": 100000,
+      "max": 1000000,
+      "description": "Temporary freezing of funds or message manipulation"
+    },
+    "medium": {
+      "min": 10000,
+      "max": 100000,
+      "description": "Griefing or protocol disruption"
+    },
+    "low": {
+      "min": 1000,
+      "max": 10000,
+      "description": "Informational findings"
+    }
+  },
+  "source": "immunefi",
+  "contracts": [
+    {
+      "address": "0x66A71Dcef29A0fFBDBE3c6a460a3B5BC225Cd675",
+      "network": "ethereum",
+      "name": "LayerZero Endpoint",
+      "type": "Core"
+    }
+  ],
+  "scope": {
+    "in_scope": [
+      "LayerZero Endpoint contracts",
+      "Ultra Light Node (ULN)",
+      "Cross-chain messaging layer",
+      "Oracle and Relayer contracts"
+    ],
+    "out_of_scope": [
+      "Frontend applications",
+      "Third-party integrations",
+      "Off-chain relayer infrastructure"
+    ],
+    "functions_critical": [
+      "send",
+      "receivePayload",
+      "validateTransactionProof"
+    ],
+    "functions_high": [
+      "setConfig",
+      "setSendVersion",
+      "setReceiveVersion"
+    ]
+  },
+  "updated_at": "2026-02-10T00:00:00Z"
+}

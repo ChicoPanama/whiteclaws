@@ -5,7 +5,7 @@ export const stats: Stat[] = [
   { label: 'Protected TVL', value: '$42M+' },
   { label: 'Vulns Found', value: '847' },
   { label: 'Researchers', value: '12K+' },
-  { label: 'Protocols', value: '27' },
+  { label: 'Protocols', value: '456' },
 ];
 
 // Findings data (converted from recentFindings)

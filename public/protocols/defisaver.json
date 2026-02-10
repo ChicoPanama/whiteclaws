@@ -1,0 +1,45 @@
+{
+  "slug": "defisaver",
+  "name": "DeFi Saver",
+  "description": "DeFi Saver bug bounty program on Immunefi",
+  "category": "DeFi",
+  "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/1S8ggfDmWMZTN2T6wcMNaS/b56ce9699295511536c8e970e550ee9c/Defisaver-logo.jpg",
+  "chains": [
+    "ethereum"
+  ],
+  "bounty": {
+    "max": 350000,
+    "min": 500,
+    "kyc_required": false,
+    "payout_token": "USDC"
+  },
+  "severity_payouts": {
+    "critical": {
+      "min": 87500,
+      "max": 350000,
+      "description": "Direct theft of user funds or protocol insolvency"
+    },
+    "high": {
+      "min": 3500,
+      "max": 35000,
+      "description": "Temporary freezing of funds or manipulation"
+    },
+    "medium": {
+      "min": 500,
+      "max": 3500,
+      "description": "Griefing or protocol disruption"
+    }
+  },
+  "source": "immunefi",
+  "contracts": [],
+  "scope": {
+    "in_scope": [
+      "Smart contracts in scope per Immunefi listing"
+    ],
+    "out_of_scope": [
+      "Frontend applications",
+      "Off-chain infrastructure"
+    ]
+  },
+  "updated_at": "2026-02-10T00:00:00Z"
+}

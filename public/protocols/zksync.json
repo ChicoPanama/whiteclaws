@@ -1,0 +1,45 @@
+{
+  "slug": "zksync",
+  "name": "ZKsync Lite",
+  "description": "ZKsync Lite bug bounty program on Immunefi",
+  "category": "Layer 2",
+  "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/BVBU3VYmZ7reZRrExTrGp/ba2e745ef785db7f3bae88ea8ba8523f/ZKTokenBlack.png",
+  "chains": [
+    "ethereum"
+  ],
+  "bounty": {
+    "max": 2300000,
+    "min": 2300,
+    "kyc_required": false,
+    "payout_token": "USDC"
+  },
+  "severity_payouts": {
+    "critical": {
+      "min": 575000,
+      "max": 2300000,
+      "description": "Direct theft of user funds or protocol insolvency"
+    },
+    "high": {
+      "min": 23000,
+      "max": 230000,
+      "description": "Temporary freezing of funds or manipulation"
+    },
+    "medium": {
+      "min": 2300,
+      "max": 23000,
+      "description": "Griefing or protocol disruption"
+    }
+  },
+  "source": "immunefi",
+  "contracts": [],
+  "scope": {
+    "in_scope": [
+      "Smart contracts in scope per Immunefi listing"
+    ],
+    "out_of_scope": [
+      "Frontend applications",
+      "Off-chain infrastructure"
+    ]
+  },
+  "updated_at": "2026-02-10T00:00:00Z"
+}

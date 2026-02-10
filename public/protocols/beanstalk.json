@@ -1,0 +1,45 @@
+{
+  "slug": "beanstalk",
+  "name": "Beanstalk",
+  "description": "Beanstalk bug bounty program on Immunefi",
+  "category": "DeFi",
+  "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/3H8XDjXYI9JfMPAHZRNEGw/0652faecfc8a425182a7567cc93f00e5/Beanstalk_logo.jpeg",
+  "chains": [
+    "ethereum"
+  ],
+  "bounty": {
+    "max": 1100000,
+    "min": 1100,
+    "kyc_required": false,
+    "payout_token": "USDC"
+  },
+  "severity_payouts": {
+    "critical": {
+      "min": 275000,
+      "max": 1100000,
+      "description": "Direct theft of user funds or protocol insolvency"
+    },
+    "high": {
+      "min": 11000,
+      "max": 110000,
+      "description": "Temporary freezing of funds or manipulation"
+    },
+    "medium": {
+      "min": 1100,
+      "max": 11000,
+      "description": "Griefing or protocol disruption"
+    }
+  },
+  "source": "immunefi",
+  "contracts": [],
+  "scope": {
+    "in_scope": [
+      "Smart contracts in scope per Immunefi listing"
+    ],
+    "out_of_scope": [
+      "Frontend applications",
+      "Off-chain infrastructure"
+    ]
+  },
+  "updated_at": "2026-02-10T00:00:00Z"
+}

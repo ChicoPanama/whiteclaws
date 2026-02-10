@@ -1,0 +1,45 @@
+{
+  "slug": "sweateconomy",
+  "name": "Sweat Economy",
+  "description": "Sweat Economy bug bounty program on Immunefi",
+  "category": "DeFi",
+  "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/4cIP56xUCfhgaqmMzDeCMD/03d7201e7ff61ab8816864799a459338/SWEAT_CIRCLE_LOGO.png",
+  "chains": [
+    "near"
+  ],
+  "bounty": {
+    "max": 2000000,
+    "min": 2000,
+    "kyc_required": false,
+    "payout_token": "USDC"
+  },
+  "severity_payouts": {
+    "critical": {
+      "min": 500000,
+      "max": 2000000,
+      "description": "Direct theft of user funds or protocol insolvency"
+    },
+    "high": {
+      "min": 20000,
+      "max": 200000,
+      "description": "Temporary freezing of funds or manipulation"
+    },
+    "medium": {
+      "min": 2000,
+      "max": 20000,
+      "description": "Griefing or protocol disruption"
+    }
+  },
+  "source": "immunefi",
+  "contracts": [],
+  "scope": {
+    "in_scope": [
+      "Smart contracts in scope per Immunefi listing"
+    ],
+    "out_of_scope": [
+      "Frontend applications",
+      "Off-chain infrastructure"
+    ]
+  },
+  "updated_at": "2026-02-10T00:00:00Z"
+}

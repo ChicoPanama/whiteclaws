@@ -1,0 +1,76 @@
+{
+  "slug": "stargate",
+  "name": "Stargate",
+  "description": "Fully composable native asset bridge built on LayerZero",
+  "category": "Bridge",
+  "logo_url": null,
+  "chains": [
+    "ethereum",
+    "arbitrum",
+    "optimism",
+    "polygon",
+    "bsc",
+    "base"
+  ],
+  "bounty": {
+    "max": 10000000,
+    "min": 1000,
+    "kyc_required": true,
+    "payout_token": "USDC"
+  },
+  "severity_payouts": {
+    "critical": {
+      "min": 2000000,
+      "max": 10000000,
+      "description": "Direct theft of user funds or liquidity pool drainage"
+    },
+    "high": {
+      "min": 100000,
+      "max": 500000,
+      "description": "Temporary freezing of funds or bridge manipulation"
+    },
+    "medium": {
+      "min": 10000,
+      "max": 100000,
+      "description": "Griefing or liquidity accounting errors"
+    },
+    "low": {
+      "min": 1000,
+      "max": 10000,
+      "description": "Informational findings"
+    }
+  },
+  "source": "immunefi",
+  "contracts": [
+    {
+      "address": "0x8731d54E9D02c286767d56ac03e8037C07e01e98",
+      "network": "ethereum",
+      "name": "Stargate Router",
+      "type": "Core"
+    }
+  ],
+  "scope": {
+    "in_scope": [
+      "Stargate Router contracts",
+      "Liquidity pool contracts",
+      "Bridge and swap logic",
+      "Fee calculation"
+    ],
+    "out_of_scope": [
+      "Frontend applications",
+      "LayerZero core contracts",
+      "Third-party integrations"
+    ],
+    "functions_critical": [
+      "swap",
+      "addLiquidity",
+      "redeemLocal"
+    ],
+    "functions_high": [
+      "setFees",
+      "setWeightForChainPath",
+      "createPool"
+    ]
+  },
+  "updated_at": "2026-02-10T00:00:00Z"
+}

@@ -1,0 +1,45 @@
+{
+  "slug": "kamino",
+  "name": "Kamino",
+  "description": "Kamino bug bounty program on Immunefi",
+  "category": "DeFi Lending",
+  "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/5ihJVSKL2zDj7D7tTDzXBA/b293116bce7222a8cdbe0d2b03295a09/8bUg0jRH_400x400.png",
+  "chains": [
+    "solana"
+  ],
+  "bounty": {
+    "max": 1500000,
+    "min": 1500,
+    "kyc_required": false,
+    "payout_token": "USDC"
+  },
+  "severity_payouts": {
+    "critical": {
+      "min": 375000,
+      "max": 1500000,
+      "description": "Direct theft of user funds or protocol insolvency"
+    },
+    "high": {
+      "min": 15000,
+      "max": 150000,
+      "description": "Temporary freezing of funds or manipulation"
+    },
+    "medium": {
+      "min": 1500,
+      "max": 15000,
+      "description": "Griefing or protocol disruption"
+    }
+  },
+  "source": "immunefi",
+  "contracts": [],
+  "scope": {
+    "in_scope": [
+      "Smart contracts in scope per Immunefi listing"
+    ],
+    "out_of_scope": [
+      "Frontend applications",
+      "Off-chain infrastructure"
+    ]
+  },
+  "updated_at": "2026-02-10T00:00:00Z"
+}

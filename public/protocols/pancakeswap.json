@@ -1,0 +1,74 @@
+{
+  "slug": "pancakeswap",
+  "name": "PancakeSwap",
+  "description": "Leading multi-chain decentralized exchange with AMM, farming, and lottery features",
+  "category": "DEX",
+  "logo_url": null,
+  "chains": [
+    "bsc",
+    "ethereum",
+    "arbitrum",
+    "base"
+  ],
+  "bounty": {
+    "max": 1000000,
+    "min": 1000,
+    "kyc_required": true,
+    "payout_token": "USDC"
+  },
+  "severity_payouts": {
+    "critical": {
+      "min": 250000,
+      "max": 1000000,
+      "description": "Direct theft of LP funds or pool drainage"
+    },
+    "high": {
+      "min": 50000,
+      "max": 250000,
+      "description": "Price manipulation or swap calculation exploit"
+    },
+    "medium": {
+      "min": 5000,
+      "max": 50000,
+      "description": "Fee accounting errors or yield farming disruption"
+    },
+    "low": {
+      "min": 1000,
+      "max": 5000,
+      "description": "Informational findings"
+    }
+  },
+  "source": "immunefi",
+  "contracts": [
+    {
+      "address": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+      "network": "bsc",
+      "name": "PancakeSwap V3 Factory",
+      "type": "Core"
+    }
+  ],
+  "scope": {
+    "in_scope": [
+      "PancakeSwap V3 core contracts",
+      "MasterChef V3 farming",
+      "Router and swap logic",
+      "Position manager"
+    ],
+    "out_of_scope": [
+      "Frontend interface",
+      "PancakeSwap V2 legacy",
+      "Lottery and prediction contracts"
+    ],
+    "functions_critical": [
+      "swap",
+      "mint",
+      "burn"
+    ],
+    "functions_high": [
+      "collect",
+      "increaseLiquidity",
+      "decreaseLiquidity"
+    ]
+  },
+  "updated_at": "2026-02-10T00:00:00Z"
+}

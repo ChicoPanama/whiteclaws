@@ -1,0 +1,71 @@
+{
+  "slug": "lido",
+  "name": "Lido",
+  "description": "Liquid staking protocol for Ethereum allowing users to stake ETH without locking assets",
+  "category": "DeFi Staking",
+  "logo_url": null,
+  "chains": [
+    "ethereum"
+  ],
+  "bounty": {
+    "max": 2000000,
+    "min": 1000,
+    "kyc_required": true,
+    "payout_token": "USDC"
+  },
+  "severity_payouts": {
+    "critical": {
+      "min": 500000,
+      "max": 2000000,
+      "description": "Direct theft of staked ETH or stETH depeg exploit"
+    },
+    "high": {
+      "min": 100000,
+      "max": 500000,
+      "description": "Oracle manipulation or withdrawal queue bypass"
+    },
+    "medium": {
+      "min": 10000,
+      "max": 100000,
+      "description": "Reward accounting errors or staking disruption"
+    },
+    "low": {
+      "min": 1000,
+      "max": 10000,
+      "description": "Informational findings"
+    }
+  },
+  "source": "immunefi",
+  "contracts": [
+    {
+      "address": "0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84",
+      "network": "ethereum",
+      "name": "Lido stETH",
+      "type": "Core"
+    }
+  ],
+  "scope": {
+    "in_scope": [
+      "stETH token contract",
+      "Withdrawal queue",
+      "Node operator registry",
+      "Oracle reporting"
+    ],
+    "out_of_scope": [
+      "Frontend applications",
+      "wstETH wrapper on L2s",
+      "Off-chain oracle nodes"
+    ],
+    "functions_critical": [
+      "submit",
+      "handleOracleReport",
+      "requestWithdrawals"
+    ],
+    "functions_high": [
+      "claimWithdrawals",
+      "addNodeOperator",
+      "setWithdrawalCredentials"
+    ]
+  },
+  "updated_at": "2026-02-10T00:00:00Z"
+}
