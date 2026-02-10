@@ -1,8 +1,8 @@
 'use client'
 
 import { useState } from 'react'
+import type { CSSProperties } from 'react'
 
-/* ─── EXPLORER URLS ─── */
 const EXPLORERS: Record<string, string> = {
   ethereum: 'https://etherscan.io/address/',
   arbitrum: 'https://arbiscan.io/address/',
@@ -30,55 +30,29 @@ const CHAIN_SHORT: Record<string, string> = {
   scroll: 'SCROLL', linea: 'LINEA', zksync: 'zkSync',
 }
 
-const SEV_COLORS: Record<string, { dot: string; bg: string; border: string }> = {
+const SEV: Record<string, { dot: string; bg: string; border: string }> = {
   critical: { dot: '#FF4747', bg: 'rgba(255,71,71,0.06)', border: 'rgba(255,71,71,0.18)' },
   high:     { dot: '#FF8C42', bg: 'rgba(255,140,66,0.06)', border: 'rgba(255,140,66,0.18)' },
   medium:   { dot: '#FFD166', bg: 'rgba(255,209,102,0.06)', border: 'rgba(255,209,102,0.18)' },
   low:      { dot: '#60A5FA', bg: 'rgba(96,165,250,0.06)', border: 'rgba(96,165,250,0.18)' },
 }
 
-/* ─── COPY BUTTON ─── */
 function CopyBtn({ text }: { text: string }) {
   const [ok, setOk] = useState(false)
   return (
-    <button
-      className="pd-copy"
-      onClick={(e) => {
-        e.stopPropagation()
-        navigator.clipboard.writeText(text)
-        setOk(true)
-        setTimeout(() => setOk(false), 1500)
-      }}
-    >
-      {ok ? '✓' : '⎘'}
-    </button>
+    <button className="pd-copy" onClick={(e) => {
+      e.stopPropagation(); navigator.clipboard.writeText(text)
+      setOk(true); setTimeout(() => setOk(false), 1500)
+    }}>{ok ? '✓' : '⎘'}</button>
   )
 }
 
-/* ─── TYPES ─── */
-interface SeverityData {
-  min: number
-  max: number
-  description: string
-  reward_calc?: string
-}
-
-interface ContractData {
-  address: string
-  network: string
-  name: string
-  type: string
-}
-
-interface ScopeData {
-  in_scope: string[]
-  out_of_scope: string[]
-  functions_critical?: string[]
-  functions_high?: string[]
-}
+interface SevData { min: number; max: number; description: string; reward_calc?: string }
+interface ContractData { address: string; network: string; name: string; type: string }
+interface ScopeData { in_scope: string[]; out_of_scope: string[]; functions_critical?: string[]; functions_high?: string[] }
 
 interface Props {
-  severity: Record<string, SeverityData>
+  severity: Record<string, SevData>
   contracts: ContractData[]
   scope: ScopeData
   slug: string
@@ -86,12 +60,9 @@ interface Props {
   program_rules?: string[]
 }
 
-export default function ProtocolDetailClient({
-  severity, contracts, scope, slug, immunefi_url, program_rules
-}: Props) {
+export default function ProtocolDetailClient({ severity, contracts, scope, slug, immunefi_url, program_rules }: Props) {
   const [expanded, setExpanded] = useState<string | null>('critical')
   const [tab, setTab] = useState<'scope' | 'contracts'>('scope')
-
   const sevEntries = Object.entries(severity)
   const hasContracts = contracts.length > 0
   const hasCritFns = (scope.functions_critical?.length ?? 0) > 0
@@ -99,47 +70,35 @@ export default function ProtocolDetailClient({
 
   return (
     <>
-      {/* ─── SEVERITY TIERS ─── */}
+      {/* SEVERITY TIERS */}
       {sevEntries.length > 0 && (
         <section className="pd-section">
-          <h2 className="pd-heading">
-            <span className="pd-num">01</span>
-            Severity Tiers
-          </h2>
-
-          {/* Spectrum bar */}
+          <h2 className="pd-heading"><span className="pd-num">01</span>Severity Tiers</h2>
           <div className="pd-sev-bar">
             {sevEntries.map(([level]) => {
-              const c = SEV_COLORS[level] || SEV_COLORS.low
+              const c = SEV[level] || SEV.low
               return <div key={level} className="pd-sev-bar-seg" style={{ background: c.dot }} />
             })}
           </div>
-
           <div className="pd-sev-stack">
             {sevEntries.map(([level, data]) => {
-              const c = SEV_COLORS[level] || SEV_COLORS.low
+              const c = SEV[level] || SEV.low
               const isOpen = expanded === level
+              const cardStyle: CSSProperties = { background: c.bg, borderColor: c.border }
               return (
-                <button
-                  key={level}
-                  type="button"
-                  className={`pd-sev-card ${isOpen ? 'open' : ''}`}
-                  style={{ background: c.bg, borderColor: c.border } as React.CSSProperties}
-                  onClick={() => setExpanded(isOpen ? null : level)}
-                >
+                <button key={level} type="button" className={`pd-sev-card ${isOpen ? 'open' : ''}`}
+                  style={cardStyle}
+                  onClick={() => setExpanded(isOpen ? null : level)}>
                   <div className="pd-sev-top">
                     <div className="pd-sev-label">
                       <span className="pd-sev-dot" style={{ background: c.dot }} />
-                      <span className="pd-sev-level" style={{ color: c.dot }}>
-                        {level.toUpperCase()}
-                      </span>
+                      <span className="pd-sev-level" style={{ color: c.dot }}>{level.toUpperCase()}</span>
                     </div>
                     <div className="pd-sev-amount">
                       <span className="pd-sev-max">${data.max?.toLocaleString()}</span>
                       <span className="pd-sev-suffix">max</span>
                     </div>
                   </div>
-
                   {isOpen && (
                     <div className="pd-sev-detail" style={{ borderColor: c.border }}>
                       <p className="pd-sev-desc">{data.description}</p>
@@ -147,9 +106,7 @@ export default function ProtocolDetailClient({
                         <span>Min: <strong>${data.min?.toLocaleString()}</strong></span>
                         <span>Max: <strong>${data.max?.toLocaleString()}</strong></span>
                       </div>
-                      {data.reward_calc && (
-                        <p className="pd-sev-calc">ⓘ {data.reward_calc}</p>
-                      )}
+                      {data.reward_calc && <p className="pd-sev-calc">ⓘ {data.reward_calc}</p>}
                     </div>
                   )}
                 </button>
@@ -159,171 +116,102 @@ export default function ProtocolDetailClient({
         </section>
       )}
 
-      {/* ─── PROGRAM RULES ─── */}
+      {/* PROGRAM RULES */}
       {program_rules && program_rules.length > 0 && (
         <section className="pd-rules">
           <h3 className="pd-rules-title">⚠ Program-Specific Rules</h3>
           <ol className="pd-rules-list">
             {program_rules.map((rule, i) => (
-              <li key={i}>
-                <span className="pd-rules-num">{String(i + 1).padStart(2, '0')}</span>
-                {rule}
-              </li>
+              <li key={i}><span className="pd-rules-num">{String(i+1).padStart(2,'0')}</span>{rule}</li>
             ))}
           </ol>
         </section>
       )}
 
-      {/* ─── TAB NAV ─── */}
+      {/* TAB NAV */}
       <div className="pd-tabs">
-        <button
-          type="button"
-          className={`pd-tab ${tab === 'scope' ? 'active' : ''}`}
-          onClick={() => setTab('scope')}
-        >
-          Scope
-        </button>
-        <button
-          type="button"
-          className={`pd-tab ${tab === 'contracts' ? 'active' : ''}`}
-          onClick={() => setTab('contracts')}
-        >
+        <button type="button" className={`pd-tab ${tab === 'scope' ? 'active' : ''}`} onClick={() => setTab('scope')}>Scope</button>
+        <button type="button" className={`pd-tab ${tab === 'contracts' ? 'active' : ''}`} onClick={() => setTab('contracts')}>
           Contracts{hasContracts ? ` (${contracts.length})` : ''}
         </button>
       </div>
 
-      {/* ─── SCOPE TAB ─── */}
+      {/* SCOPE TAB */}
       {tab === 'scope' && (
         <section className="pd-scope-grid">
-          {/* In Scope */}
           <div className="pd-scope-panel pd-scope-in">
             <h3 className="pd-scope-title in">✓ IN SCOPE</h3>
             <ul className="pd-scope-list">
-              {scope.in_scope.length > 0 ? (
-                scope.in_scope.map((item, i) => (
-                  <li key={i}>
-                    <span className="pd-scope-bullet in">●</span>
-                    {item}
-                  </li>
-                ))
-              ) : (
-                <li className="pd-empty">Check Immunefi for full scope details.</li>
-              )}
+              {scope.in_scope.length > 0 ? scope.in_scope.map((item, i) => (
+                <li key={i}><span className="pd-scope-bullet in">●</span>{item}</li>
+              )) : <li className="pd-empty">Check Immunefi for full scope details.</li>}
             </ul>
-
-            {/* Critical functions */}
             {hasCritFns && (
               <div className="pd-fn-section">
                 <span className="pd-fn-label critical">CRITICAL FUNCTIONS</span>
                 <div className="pd-fn-tags">
-                  {scope.functions_critical!.map(fn => (
-                    <code key={fn} className="pd-fn-tag critical">{fn}()</code>
-                  ))}
+                  {scope.functions_critical!.map(fn => <code key={fn} className="pd-fn-tag critical">{fn}()</code>)}
                 </div>
               </div>
             )}
-
-            {/* High functions */}
             {hasHighFns && (
               <div className="pd-fn-section">
                 <span className="pd-fn-label high">HIGH FUNCTIONS</span>
                 <div className="pd-fn-tags">
-                  {scope.functions_high!.map(fn => (
-                    <code key={fn} className="pd-fn-tag high">{fn}()</code>
-                  ))}
+                  {scope.functions_high!.map(fn => <code key={fn} className="pd-fn-tag high">{fn}()</code>)}
                 </div>
               </div>
             )}
           </div>
-
-          {/* Out of Scope */}
           <div className="pd-scope-panel pd-scope-out">
             <h3 className="pd-scope-title out">✕ OUT OF SCOPE</h3>
             <ul className="pd-scope-list">
-              {scope.out_of_scope.length > 0 ? (
-                scope.out_of_scope.map((item, i) => (
-                  <li key={i}>
-                    <span className="pd-scope-bullet out">●</span>
-                    {item}
-                  </li>
-                ))
-              ) : (
-                <li className="pd-empty">No exclusions listed.</li>
-              )}
+              {scope.out_of_scope.length > 0 ? scope.out_of_scope.map((item, i) => (
+                <li key={i}><span className="pd-scope-bullet out">●</span>{item}</li>
+              )) : <li className="pd-empty">No exclusions listed.</li>}
             </ul>
           </div>
         </section>
       )}
 
-      {/* ─── CONTRACTS TAB ─── */}
+      {/* CONTRACTS TAB */}
       {tab === 'contracts' && (
         <section className="pd-contracts">
-          {hasContracts ? (
-            contracts.map((c, i) => {
-              const explorer = EXPLORERS[c.network?.toLowerCase()]
-              return (
-                <div key={i} className="pd-contract">
-                  <div className="pd-contract-info">
-                    <div className="pd-contract-head">
-                      <span className="pd-contract-name">{c.name}</span>
-                      <span className="pd-contract-type">{c.type}</span>
-                    </div>
-                    <div className="pd-contract-addr-row">
-                      <code className="pd-contract-addr">{c.address}</code>
-                      <CopyBtn text={c.address} />
-                    </div>
-                    <span className="pd-contract-net">
-                      {CHAIN_SHORT[c.network?.toLowerCase()] || c.network?.toUpperCase()}
-                    </span>
+          {hasContracts ? contracts.map((c, i) => {
+            const explorer = EXPLORERS[c.network?.toLowerCase()]
+            return (
+              <div key={i} className="pd-contract">
+                <div className="pd-contract-info">
+                  <div className="pd-contract-head">
+                    <span className="pd-contract-name">{c.name}</span>
+                    <span className="pd-contract-type">{c.type}</span>
                   </div>
-                  {explorer && (
-                    <a
-                      href={`${explorer}${c.address}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="pd-contract-link"
-                    >
-                      Explorer ↗
-                    </a>
-                  )}
+                  <div className="pd-contract-addr-row">
+                    <code className="pd-contract-addr">{c.address}</code>
+                    <CopyBtn text={c.address} />
+                  </div>
+                  <span className="pd-contract-net">{CHAIN_SHORT[c.network?.toLowerCase()] || c.network?.toUpperCase()}</span>
                 </div>
-              )
-            })
-          ) : (
+                {explorer && (
+                  <a href={`${explorer}${c.address}`} target="_blank" rel="noopener noreferrer" className="pd-contract-link">Explorer ↗</a>
+                )}
+              </div>
+            )
+          }) : (
             <div className="pd-empty-block">
               <p>No specific contracts listed in scope.</p>
-              <p className="pd-empty-hint">
-                Check the{' '}
-                <a
-                  href={immunefi_url || `https://immunefi.com/bug-bounty/${slug}/scope`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Immunefi scope page ↗
-                </a>
-                {' '}for the full asset list.
-              </p>
+              <p className="pd-empty-hint">Check the <a href={immunefi_url || `https://immunefi.com/bug-bounty/${slug}/scope`} target="_blank" rel="noopener noreferrer">Immunefi scope page ↗</a> for the full asset list.</p>
             </div>
           )}
         </section>
       )}
 
-      {/* ─── CTA ─── */}
+      {/* CTA */}
       <div className="pd-cta">
-        <a href={`/submit?protocol=${slug}`} className="pd-btn-primary">
-          Submit Finding →
-        </a>
-        <a
-          href={immunefi_url || `https://immunefi.com/bug-bounty/${slug}`}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="pd-btn-secondary"
-        >
-          View on Immunefi ↗
-        </a>
+        <a href={`/submit?protocol=${slug}`} className="pd-btn-primary">Submit Finding →</a>
+        <a href={immunefi_url || `https://immunefi.com/bug-bounty/${slug}`} target="_blank" rel="noopener noreferrer" className="pd-btn-secondary">View on Immunefi ↗</a>
       </div>
 
-      {/* ─── META FOOTER ─── */}
       <div className="pd-meta">
         <span>Source: Immunefi</span>
         <span>Always verify scope on Immunefi before submission.</span>
