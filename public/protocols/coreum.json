@@ -3,7 +3,7 @@
   "name": "Coreum",
   "description": "Coreum bug bounty program on Immunefi",
   "category": "DeFi",
-  "logo_url": null,
+  "logo_url": "https://assets.coingecko.com/coins/images/29600/small/coreum.png",
   "chains": [
     "ethereum"
   ],

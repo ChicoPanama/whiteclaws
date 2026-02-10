@@ -3,7 +3,7 @@
   "name": "Lyra",
   "description": "Lyra bug bounty program on Immunefi",
   "category": "DeFi Trading",
-  "logo_url": null,
+  "logo_url": "https://assets.coingecko.com/coins/images/21490/small/lyra.png",
   "chains": [
     "ethereum",
     "optimism",

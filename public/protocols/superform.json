@@ -3,7 +3,7 @@
   "name": "Superform",
   "description": "Superform bug bounty program on Immunefi",
   "category": "DeFi Yield",
-  "logo_url": null,
+  "logo_url": "https://assets.coingecko.com/coins/images/34819/small/superform.png",
   "chains": [
     "ethereum",
     "arbitrum",

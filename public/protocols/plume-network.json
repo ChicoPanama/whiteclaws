@@ -3,7 +3,7 @@
   "name": "Plume Network",
   "description": "Real World Asset tokenization platform",
   "category": "RWA Tokenization",
-  "logo_url": null,
+  "logo_url": "https://assets.coingecko.com/coins/images/37210/small/plume.png",
   "chains": [
     "ethereum"
   ],

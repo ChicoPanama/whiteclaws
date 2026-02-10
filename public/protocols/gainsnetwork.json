@@ -3,7 +3,7 @@
   "name": "Gains Network",
   "description": "Gains Network bug bounty program on Immunefi",
   "category": "DeFi Trading",
-  "logo_url": null,
+  "logo_url": "https://assets.coingecko.com/coins/images/19737/small/logo.png",
   "chains": [
     "arbitrum",
     "polygon"

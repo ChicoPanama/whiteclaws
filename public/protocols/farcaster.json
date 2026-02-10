@@ -3,7 +3,7 @@
   "name": "Farcaster",
   "description": "Farcaster bug bounty program on Immunefi",
   "category": "DeFi",
-  "logo_url": null,
+  "logo_url": "https://assets.coingecko.com/coins/images/36498/small/farcaster.png",
   "chains": [
     "ethereum"
   ],

@@ -3,7 +3,7 @@
   "name": "XION",
   "description": "Generalized abstraction Layer 1 blockchain removing crypto complexities through protocol-level chain abstraction and smart accounts",
   "category": "Infrastructure",
-  "logo_url": null,
+  "logo_url": "https://assets.coingecko.com/coins/images/37562/small/xion.png",
   "chains": [
     "cosmos"
   ],

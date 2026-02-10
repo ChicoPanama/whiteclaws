@@ -3,7 +3,7 @@
   "name": "Velodrome Finance",
   "description": "Velodrome Finance bug bounty program on Immunefi",
   "category": "DEX",
-  "logo_url": null,
+  "logo_url": "https://assets.coingecko.com/coins/images/25783/small/velo.png",
   "chains": [
     "optimism",
     "base"

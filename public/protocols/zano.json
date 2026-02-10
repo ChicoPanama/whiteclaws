@@ -3,7 +3,7 @@
   "name": "Zano",
   "description": "Privacy-focused Layer 1 blockchain with enterprise-grade anonymity and Zarcanum technology",
   "category": "Privacy",
-  "logo_url": null,
+  "logo_url": "https://assets.coingecko.com/coins/images/5756/small/zano.png",
   "chains": [
     "zano"
   ],

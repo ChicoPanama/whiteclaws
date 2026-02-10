@@ -3,7 +3,7 @@
   "name": "Forta",
   "description": "Forta bug bounty program on Immunefi",
   "category": "Security Platform",
-  "logo_url": null,
+  "logo_url": "https://assets.coingecko.com/coins/images/25060/small/forta.png",
   "chains": [
     "ethereum",
     "polygon"

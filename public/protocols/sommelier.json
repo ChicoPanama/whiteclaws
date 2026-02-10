@@ -3,7 +3,7 @@
   "name": "Sommelier",
   "description": "Sommelier bug bounty program on Immunefi",
   "category": "DeFi Yield",
-  "logo_url": null,
+  "logo_url": "https://assets.coingecko.com/coins/images/23227/small/somm_new.png",
   "chains": [
     "ethereum"
   ],

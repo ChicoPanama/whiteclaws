@@ -3,7 +3,7 @@
   "name": "Connext",
   "description": "Connext bug bounty program on Immunefi",
   "category": "Bridge",
-  "logo_url": null,
+  "logo_url": "https://assets.coingecko.com/coins/images/31137/small/next.png",
   "chains": [
     "ethereum",
     "arbitrum",

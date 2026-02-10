@@ -3,7 +3,7 @@
   "name": "Polkastarter",
   "description": "Polkastarter bug bounty program on Immunefi",
   "category": "DeFi",
-  "logo_url": null,
+  "logo_url": "https://assets.coingecko.com/coins/images/12504/small/polkastarter.png",
   "chains": [
     "ethereum"
   ],

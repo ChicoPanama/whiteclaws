@@ -3,7 +3,7 @@
   "name": "Kelp DAO",
   "description": "Kelp DAO bug bounty program on Immunefi",
   "category": "DeFi Staking",
-  "logo_url": null,
+  "logo_url": "https://assets.coingecko.com/coins/images/34783/small/kelp_dao.png",
   "chains": [
     "ethereum"
   ],

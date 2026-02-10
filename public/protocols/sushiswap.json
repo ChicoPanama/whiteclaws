@@ -3,7 +3,7 @@
   "name": "SushiSwap",
   "description": "SushiSwap bug bounty program on Immunefi",
   "category": "DEX",
-  "logo_url": null,
+  "logo_url": "https://assets.coingecko.com/coins/images/12271/small/512x512_Logo_no_chop.png",
   "chains": [
     "ethereum",
     "arbitrum",

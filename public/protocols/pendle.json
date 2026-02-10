@@ -3,7 +3,7 @@
   "name": "Pendle",
   "description": "Pendle bug bounty program on Immunefi",
   "category": "DeFi Yield",
-  "logo_url": null,
+  "logo_url": "https://assets.coingecko.com/coins/images/15069/small/Pendle_Logo_Normal-03.png",
   "chains": [
     "ethereum",
     "arbitrum"

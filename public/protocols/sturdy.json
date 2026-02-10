@@ -3,7 +3,7 @@
   "name": "Sturdy",
   "description": "Sturdy bug bounty program on Immunefi",
   "category": "DeFi",
-  "logo_url": null,
+  "logo_url": "https://assets.coingecko.com/coins/images/29250/small/sturdy.png",
   "chains": [
     "ethereum"
   ],

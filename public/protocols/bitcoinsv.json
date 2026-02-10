@@ -3,7 +3,7 @@
   "name": "Bitcoinsv",
   "description": "Bitcoinsv bug bounty program on Immunefi",
   "category": "DeFi",
-  "logo_url": null,
+  "logo_url": "https://assets.coingecko.com/coins/images/6799/small/BSV.png",
   "chains": [
     "ethereum"
   ],

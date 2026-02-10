@@ -3,7 +3,7 @@
   "name": "Kwenta",
   "description": "Kwenta bug bounty program on Immunefi",
   "category": "DeFi Trading",
-  "logo_url": null,
+  "logo_url": "https://assets.coingecko.com/coins/images/25729/small/kwenta.png",
   "chains": [
     "optimism",
     "base"
