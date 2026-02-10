@@ -1,0 +1,38 @@
+{
+  "downloaded": [
+    {
+      "title": "Smart Contract Security AuditThe standard for smart contract security",
+      "url": "https://www.openzeppelin.com/security-audits",
+      "pdf_url": "https://www.openzeppelin.com/security-audits",
+      "file": "dex_Smart_Contract_Security_AuditThe_standard_for_smar.pdf"
+    },
+    {
+      "title": "OIF Broadcaster Audit\u2192",
+      "url": "https://www.openzeppelin.com/news/oif-broadcaster-audit",
+      "pdf_url": "https://ethereum.github.io/yellowpaper/paper.pdf",
+      "file": "dex_OIF_Broadcaster_Audit_.pdf"
+    },
+    {
+      "title": "Explore all Security Services\u2192",
+      "url": "https://www.openzeppelin.com/security-services",
+      "pdf_url": "https://www.openzeppelin.com/security-audits",
+      "file": "dex_Explore_all_Security_Services_.pdf"
+    },
+    {
+      "title": "Featured Research",
+      "url": "https://www.openzeppelin.com/news/web3-security-auditors-2025-rewind",
+      "pdf_url": "https://github.com/verichains/public-audit-reports/blob/main/Bybit%20Incident%20Investigation%20-%20Preliminary%20Report%20v1.0%20(for%20public%20release).pdf",
+      "file": "dex_Featured_Research.pdf"
+    }
+  ],
+  "failed": [
+    {
+      "url": "https://www.openzeppelin.com/www.openzeppelin.com/research#security-audits",
+      "title": "Related Content",
+      "section": "dex"
+    }
+  ],
+  "total_found": 5,
+  "total_downloaded": 4,
+  "total_failed": 1
+}

@@ -187,3 +187,93 @@ export const scannerMessages: string[] = [
   'Cross-referencing with known exploits...',
   'Generating security report...',
 ];
+
+// OpenZeppelin Learn Entries
+export const openZeppelinResearch: ResearchDoc[] = [
+  {
+    id: 'oz-deflationary-token',
+    title: 'Deflationary Token AMM Exploit — MetaPool Case Study',
+    category: 'Token Manipulation',
+    bountyValue: '$100K-500K',
+    description: 'MetaPool exploited via deflationary token manipulation in AMM pools. Attacker used repeated skim() calls following burn transfers to inflate share prices artificially.',
+    link: '/learn/oz-deflationary-token',
+    icon: '🔥',
+    chains: ['BSC', 'ETH'],
+    findings: 1,
+    date: '2025-08-06',
+  },
+  {
+    id: 'oz-erc4626-override',
+    title: 'ERC-4626 Override Leading to Free Mint',
+    category: 'Access Control',
+    bountyValue: '$50K-100K',
+    description: 'MetaPool mpETH vault allowed free minting when internal _deposit() was overridden without protecting mint() entry point. Inheritance bypass pattern.',
+    link: '/learn/oz-erc4626-override',
+    icon: '🏦',
+    chains: ['ETH'],
+    findings: 1,
+    date: '2025-08-06',
+  },
+  {
+    id: 'oz-permit2-dos',
+    title: 'Permit2 DoS via Nonce Desynchronization',
+    category: 'Denial of Service',
+    bountyValue: '$10K-25K',
+    description: 'Across Protocol vulnerability where attackers could invalidate nonces on Permit2, causing DoS for legitimate users via nonce tracking desync.',
+    link: '/learn/oz-permit2-dos',
+    icon: '⛔',
+    chains: ['ETH'],
+    findings: 1,
+    date: '2025-08-06',
+  },
+  {
+    id: 'oz-rust-target',
+    title: 'Rust Unsafe Behavior Across Compiler Targets',
+    category: 'Compilation Bug',
+    bountyValue: '$100K+',
+    description: 'Solana programs vulnerable to target-dependent undefined behavior. x86_64 assumptions fail on BPF/SBF targets due to memory alignment and optimization differences.',
+    link: '/learn/oz-rust-target',
+    icon: '🦀',
+    chains: ['Solana'],
+    findings: 1,
+    date: '2025-01-16',
+  },
+  {
+    id: 'oz-balancer-exploit',
+    title: 'Balancer V2 Exploit Deep Dive',
+    category: 'Flash Loan + Reentrancy',
+    bountyValue: '$200K-500K',
+    description: 'Comprehensive analysis of Balancer V2 exploit involving flash loan manipulation, protocol accounting errors, and reentrancy through external callback hooks.',
+    link: '/learn/oz-balancer-exploit',
+    icon: '⚖️',
+    chains: ['ETH'],
+    findings: 3,
+    date: '2025-01-12',
+  },
+  {
+    id: 'oz-erc4626-rate',
+    title: 'ERC-4626 Exchange Rate Manipulation',
+    category: 'Exchange Rate Manipulation',
+    bountyValue: '$50K-200K',
+    description: 'ERC-4626 vaults vulnerable to share price manipulation via direct asset donations. Attacker inflates exchange rate, benefiting existing holders at new depositors expense.',
+    link: '/learn/oz-erc4626-rate',
+    icon: '📈',
+    chains: ['ETH'],
+    findings: 1,
+    date: '2025-01-12',
+  },
+];
+
+// Research doc type (add to types.ts)
+export interface ResearchDoc {
+  id: string;
+  title: string;
+  category: string;
+  bountyValue: string;
+  description: string;
+  link: string;
+  icon: string;
+  chains: string[];
+  findings: number | string;
+  date: string;
+}

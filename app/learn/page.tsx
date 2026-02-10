@@ -1,5 +1,6 @@
 import Nav from '@/components/landing/Nav'
 import Footer from '@/components/Footer'
+import { openZeppelinResearch } from '@/lib/data/constants'
 
 const researchDocs = [
   { icon: '🔄', name: 'SSV Network Security Assessment', description: 'Complete analysis of SSV Network distributed validator technology vulnerabilities.' },
