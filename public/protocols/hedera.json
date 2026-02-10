@@ -49,8 +49,8 @@
   "contracts": [],
   "source": "immunefi",
   "branding": {
-    "primary": "#6366F1",
-    "accent": "#3730A3",
+    "primary": "#222222",
+    "accent": "#141414",
     "text_on_primary": "#FFFFFF"
   }
 }
