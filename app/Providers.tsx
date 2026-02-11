@@ -27,7 +27,7 @@ export default function Providers({ children }: { children: React.ReactNode }) {
       config={{
         appearance: {
           theme: 'dark',
-          accentColor: '#00e59b',
+          accentColor: '#89E06D',
           logo: '/lobster.png',
         },
         loginMethods: ['email', 'wallet', 'twitter', 'github'],
