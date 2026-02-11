@@ -6,21 +6,14 @@ export const dynamic = 'force-dynamic'
 
 /**
  * POST /api/agents/submit
- * Submit a vulnerability finding as an authenticated agent.
- * Requires API key auth via Authorization: Bearer wc_xxx_yyy
- *
+ * Submit a vulnerability finding. Requires API key auth.
  * Body: {
- *   protocol_slug: string,
- *   title: string,
- *   severity: 'critical' | 'high' | 'medium' | 'low',
- *   description?: string,
- *   encrypted_report?: { ciphertext, nonce, senderPublicKey },
- *   proof_of_concept?: string,
+ *   protocol_slug, title, severity, scope_version?,
+ *   description?, encrypted_report?, poc_url?
  * }
  */
 export async function POST(req: NextRequest) {
   try {
-    // Authenticate via API key
     const apiKey = extractApiKey(req)
     if (!apiKey) {
       return NextResponse.json(
@@ -30,49 +23,51 @@ export async function POST(req: NextRequest) {
     }
 
     const auth = await verifyApiKey(apiKey)
-    if (!auth.valid) {
-      return NextResponse.json({ error: auth.error || 'Invalid API key' }, { status: 401 })
-    }
-
-    // Check scope
+    if (!auth.valid) return NextResponse.json({ error: auth.error }, { status: 401 })
     if (!auth.scopes?.includes('agent:submit')) {
       return NextResponse.json({ error: 'API key lacks agent:submit scope' }, { status: 403 })
     }
 
     const body = await req.json()
-    const { protocol_slug, title, severity, description, encrypted_report, proof_of_concept } = body
+    const { protocol_slug, title, severity, scope_version, description, encrypted_report, poc_url } = body
 
-    // Validate
-    if (!protocol_slug || typeof protocol_slug !== 'string') {
-      return NextResponse.json({ error: 'protocol_slug is required' }, { status: 400 })
-    }
-    if (!title || typeof title !== 'string' || title.length < 5) {
-      return NextResponse.json({ error: 'title is required (min 5 chars)' }, { status: 400 })
-    }
+    if (!protocol_slug) return NextResponse.json({ error: 'protocol_slug required' }, { status: 400 })
+    if (!title || title.length < 5) return NextResponse.json({ error: 'title required (min 5 chars)' }, { status: 400 })
     if (!['critical', 'high', 'medium', 'low'].includes(severity)) {
-      return NextResponse.json(
-        { error: 'severity must be critical, high, medium, or low' },
-        { status: 400 }
-      )
+      return NextResponse.json({ error: 'severity must be critical|high|medium|low' }, { status: 400 })
     }
 
     const supabase = createClient()
 
     // Resolve protocol
     const { data: protocol } = await supabase
-      .from('protocols')
-      .select('id, slug, name')
-      .eq('slug', protocol_slug)
-      .maybeSingle()
+      .from('protocols').select('id, slug, name').eq('slug', protocol_slug).maybeSingle()
+    if (!protocol) return NextResponse.json({ error: `Protocol '${protocol_slug}' not found` }, { status: 404 })
 
-    if (!protocol) {
-      return NextResponse.json({ error: `Protocol '${protocol_slug}' not found` }, { status: 404 })
+    // Check for active program
+    const { data: program } = await supabase
+      .from('programs').select('id, status, scope_version, cooldown_hours, poc_required')
+      .eq('protocol_id', protocol.id).maybeSingle()
+
+    if (program && program.status !== 'active') {
+      return NextResponse.json({ error: 'Bounty program is not active' }, { status: 400 })
     }
 
-    // Build encrypted report URL (or store inline)
-    let encryptedReportUrl: string | null = null
-    if (encrypted_report) {
-      encryptedReportUrl = JSON.stringify(encrypted_report)
+    // Cooldown check — one submission per protocol per cooldown period
+    if (program?.cooldown_hours) {
+      const cooldownSince = new Date(Date.now() - program.cooldown_hours * 3600 * 1000).toISOString()
+      const { count } = await supabase
+        .from('findings')
+        .select('id', { count: 'exact', head: true })
+        .eq('researcher_id', auth.userId)
+        .eq('protocol_id', protocol.id)
+        .gte('created_at', cooldownSince)
+
+      if ((count || 0) > 0) {
+        return NextResponse.json({
+          error: `Cooldown active. You can submit again to ${protocol_slug} in ${program.cooldown_hours}h.`,
+        }, { status: 429 })
+      }
     }
 
     // Insert finding
@@ -80,10 +75,14 @@ export async function POST(req: NextRequest) {
       .from('findings')
       .insert({
         protocol_id: protocol.id,
+        program_id: program?.id || null,
         researcher_id: auth.userId,
         title,
         severity,
-        encrypted_report_url: encryptedReportUrl,
+        description: description || null,
+        scope_version: scope_version || program?.scope_version || null,
+        encrypted_report: encrypted_report || null,
+        poc_url: poc_url || null,
         status: 'submitted',
       })
       .select('id, title, severity, status, created_at')
@@ -91,16 +90,18 @@ export async function POST(req: NextRequest) {
 
     if (insertError) throw insertError
 
-    // Update agent submission count
-    await supabase.rpc('increment_submissions', { agent_user_id: auth.userId }).catch(() => {
-      // RPC might not exist yet — update manually
-      return supabase
-        .from('agent_rankings')
-        .update({
-          total_submissions: supabase.rpc ? undefined : 0, // will be handled by trigger
-        })
+    // Increment agent submission count
+    const { data: ranking } = await supabase
+      .from('agent_rankings')
+      .select('total_submissions')
+      .eq('agent_id', auth.userId)
+      .maybeSingle()
+
+    if (ranking) {
+      await supabase.from('agent_rankings')
+        .update({ total_submissions: (ranking.total_submissions || 0) + 1 })
         .eq('agent_id', auth.userId)
-    })
+    }
 
     return NextResponse.json({
       finding: {
@@ -112,7 +113,7 @@ export async function POST(req: NextRequest) {
         status: finding.status,
         created_at: finding.created_at,
       },
-      message: 'Finding submitted successfully. It will be triaged by the protocol team.',
+      message: 'Finding submitted. It will be triaged by the protocol team.',
     }, { status: 201 })
   } catch (error) {
     console.error('Agent submission error:', error)
