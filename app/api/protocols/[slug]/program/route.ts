@@ -9,31 +9,37 @@ async function verifyProtocolAccess(req: NextRequest, slug: string, requiredScop
   if (!apiKey) return { error: 'Missing API key', status: 401 }
 
   const auth = await verifyApiKey(apiKey)
-  if (!auth.valid) return { error: auth.error, status: 401 }
+  if (!auth.valid) return { error: auth.error || 'Invalid key', status: 401 }
 
   for (const scope of requiredScopes) {
     if (!auth.scopes?.includes(scope)) return { error: `Missing scope: ${scope}`, status: 403 }
   }
 
   const supabase = createClient()
+
+  // Look up protocol by slug
+  const { data: protocol } = await supabase
+    .from('protocols')
+    .select('id')
+    .eq('slug', slug)
+    .maybeSingle()
+
+  if (!protocol) return { error: 'Protocol not found', status: 404 }
+
+  // Check membership
   const { data: membership } = await supabase
     .from('protocol_members')
-    .select('role, protocol_id, protocols!inner(slug)')
+    .select('role')
     .eq('user_id', auth.userId)
-    .eq('protocols.slug', slug)
+    .eq('protocol_id', protocol.id)
     .maybeSingle()
 
   if (!membership) return { error: 'Not a member of this protocol', status: 403 }
 
-  return { userId: auth.userId, protocolId: membership.protocol_id, role: membership.role }
+  return { userId: auth.userId, protocolId: protocol.id, role: membership.role }
 }
 
-/**
- * POST /api/protocols/[slug]/program — create bounty program
- * PATCH /api/protocols/[slug]/program — update program (pause, resume, update payouts)
- * GET /api/protocols/[slug]/program — get program details
- */
-export async function GET(req: NextRequest, { params }: { params: { slug: string } }) {
+export async function GET(_req: NextRequest, { params }: { params: { slug: string } }) {
   const supabase = createClient()
 
   const { data: protocol } = await supabase
@@ -67,7 +73,7 @@ export async function GET(req: NextRequest, { params }: { params: { slug: string
 
 export async function PATCH(req: NextRequest, { params }: { params: { slug: string } }) {
   const access = await verifyProtocolAccess(req, params.slug, ['protocol:write'])
-  if ('error' in access) return NextResponse.json({ error: access.error }, { status: access.status })
+  if ('error' in access) return NextResponse.json({ error: access.error }, { status: access.status as number })
 
   const body = await req.json()
   const supabase = createClient()
@@ -76,7 +82,7 @@ export async function PATCH(req: NextRequest, { params }: { params: { slug: stri
     'payout_currency', 'min_payout', 'max_payout', 'encryption_public_key', 'payout_wallet',
     'exclusions', 'cooldown_hours']
 
-  const updates: Record<string, any> = {}
+  const updates: Record<string, unknown> = {}
   for (const key of allowed) {
     if (body[key] !== undefined) updates[key] = body[key]
   }
@@ -92,7 +98,7 @@ export async function PATCH(req: NextRequest, { params }: { params: { slug: stri
     .select('id, status, max_payout, min_payout, payout_currency, updated_at')
     .single()
 
-  if (error) throw error
+  if (error) return NextResponse.json({ error: 'Update failed' }, { status: 500 })
 
   return NextResponse.json({ program, message: 'Program updated' })
 }

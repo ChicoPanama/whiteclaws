@@ -6,7 +6,6 @@ export const dynamic = 'force-dynamic'
 /**
  * GET /api/bounties — list active bounty programs
  * Public endpoint. Primary discovery for agents.
- * Filters: ?chain=base&min_bounty=1000&max_bounty=1000000&category=DeFi&limit=50
  */
 export async function GET(req: NextRequest) {
   const { searchParams } = new URL(req.url)
@@ -19,13 +18,10 @@ export async function GET(req: NextRequest) {
 
   const supabase = createClient()
 
+  // Get programs with protocol data via join
   let query = supabase
     .from('programs')
-    .select(`
-      id, status, poc_required, kyc_required, payout_currency, min_payout, max_payout,
-      scope_version, cooldown_hours, created_at,
-      protocol:protocol_id (slug, name, description, category, chains, max_bounty, logo_url)
-    `)
+    .select('id, status, poc_required, kyc_required, payout_currency, min_payout, max_payout, scope_version, cooldown_hours, created_at, protocol_id')
     .eq('status', 'active')
     .order('max_payout', { ascending: false })
     .range(offset, offset + limit - 1)
@@ -34,37 +30,47 @@ export async function GET(req: NextRequest) {
   if (maxBounty) query = query.lte('max_payout', parseInt(maxBounty))
 
   const { data: programs, error } = await query
-  if (error) throw error
+  if (error) return NextResponse.json({ error: 'Query failed' }, { status: 500 })
 
-  let results = (programs || []).map((p: any) => ({
-    program_id: p.id,
-    slug: p.protocol?.slug,
-    name: p.protocol?.name,
-    description: p.protocol?.description,
-    category: p.protocol?.category,
-    chains: p.protocol?.chains || [],
-    logo_url: p.protocol?.logo_url,
-    max_bounty: Number(p.max_payout),
-    min_bounty: Number(p.min_payout),
-    payout_currency: p.payout_currency,
-    poc_required: p.poc_required,
-    kyc_required: p.kyc_required,
-    scope_version: p.scope_version,
-    cooldown_hours: p.cooldown_hours,
-  }))
+  if (!programs || programs.length === 0) {
+    return NextResponse.json({ bounties: [], count: 0, offset, limit })
+  }
 
-  // Client-side filters for chain and category (Supabase can't filter nested JSONB arrays easily)
+  // Fetch protocol details for these programs
+  const protocolIds = [...new Set(programs.map(p => p.protocol_id))]
+  const { data: protocols } = await supabase
+    .from('protocols')
+    .select('id, slug, name, description, category, chains, max_bounty, logo_url')
+    .in('id', protocolIds)
+
+  const protoMap = new Map((protocols || []).map(p => [p.id, p]))
+
+  let results = programs.map(p => {
+    const proto = protoMap.get(p.protocol_id)
+    return {
+      program_id: p.id,
+      slug: proto?.slug,
+      name: proto?.name,
+      description: proto?.description,
+      category: proto?.category,
+      chains: proto?.chains || [],
+      logo_url: proto?.logo_url,
+      max_bounty: Number(p.max_payout),
+      min_bounty: Number(p.min_payout),
+      payout_currency: p.payout_currency,
+      poc_required: p.poc_required,
+      kyc_required: p.kyc_required,
+      scope_version: p.scope_version,
+      cooldown_hours: p.cooldown_hours,
+    }
+  })
+
   if (chain) {
-    results = results.filter((r: any) => r.chains.includes(chain.toLowerCase()))
+    results = results.filter(r => (r.chains as string[]).includes(chain.toLowerCase()))
   }
   if (category) {
-    results = results.filter((r: any) => r.category?.toLowerCase().includes(category.toLowerCase()))
+    results = results.filter(r => r.category?.toLowerCase().includes(category.toLowerCase()))
   }
 
-  return NextResponse.json({
-    bounties: results,
-    count: results.length,
-    offset,
-    limit,
-  })
+  return NextResponse.json({ bounties: results, count: results.length, offset, limit })
 }
