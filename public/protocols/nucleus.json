@@ -1,7 +1,7 @@
 {
   "slug": "nucleus",
   "name": "Nucleus",
-  "description": "Nucleus bug bounty program",
+  "description": "Nucleus bug bounty program.",
   "category": "Infrastructure",
   "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/2qCwSDuVU4ePltEqcJE5cc/73041be9b5fc4d3993c94d4574dcfb93/Nucleus.png",
   "chains": [
@@ -30,21 +30,15 @@
       "description": "Griefing or protocol disruption"
     }
   },
-  "source": "immunefi",
+  "source": "whiteclaws",
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Core protocol smart contracts",
-      "Access control and upgrade mechanisms",
-      "Token management and distribution",
-      "Integration endpoints and adapters",
-      "Emergency and recovery functions"
+      "Smart contracts in scope per program listing"
     ],
     "out_of_scope": [
-      "Frontend and developer portal",
-      "Off-chain infrastructure and APIs",
-      "Documentation and SDK",
-      "Third-party integrations"
+      "Frontend applications",
+      "Off-chain infrastructure"
     ]
   },
   "updated_at": "2025-01-22T15:06:11.937Z",
@@ -55,8 +49,8 @@
   },
   "live_since": "2024-12-05T14:58:00.000Z",
   "poc_required": true,
-  "immunefi_tags": [
-    "Immunefi Standard",
+  "program_tags": [
+    "Verified Program",
     "KYC Not Required",
     "PoC Required",
     "Arbitration"

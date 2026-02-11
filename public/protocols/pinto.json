@@ -52,7 +52,7 @@
       "type": "Stablecoin"
     }
   ],
-  "source": "immunefi",
+  "source": "whiteclaws",
   "branding": {
     "primary": "#1C5639",
     "accent": "#113422",
@@ -62,11 +62,11 @@
   "updated_at": "2025-12-15T09:38:12.606Z",
   "poc_required": true,
   "triaged": true,
-  "immunefi_tags": [
-    "Immunefi Standard",
+  "program_tags": [
+    "Verified Program",
     "KYC Not Required",
     "PoC Required",
-    "Triaged by Immunefi",
+    "Triaged",
     "Vaults"
   ]
 }

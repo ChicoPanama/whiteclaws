@@ -1,7 +1,7 @@
 {
   "slug": "renzoprotocol",
   "name": "Renzo Protocol",
-  "description": "Renzo Protocol bug bounty program",
+  "description": "Renzo Protocol bug bounty program.",
   "category": "DeFi Staking",
   "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/5vS0LqsY8aTwXw4AXCjNrB/3a1542886af81a0885485f9187ecb693/2.0_Renzo_Black_Logo__1_.png",
   "chains": [
@@ -30,21 +30,15 @@
       "description": "Griefing or protocol disruption"
     }
   },
-  "source": "immunefi",
+  "source": "whiteclaws",
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Staking pool and delegation contracts",
-      "Reward calculation and distribution logic",
-      "Unstaking cooldown and withdrawal queues",
-      "Validator set management",
-      "Slashing protection mechanisms"
+      "Smart contracts in scope per program listing"
     ],
     "out_of_scope": [
-      "Frontend staking interface",
-      "Validator node infrastructure",
-      "Off-chain monitoring and alerting",
-      "Third-party liquid staking wrappers"
+      "Frontend applications",
+      "Off-chain infrastructure"
     ]
   },
   "updated_at": "2025-05-16T15:21:39.874Z",
@@ -55,7 +49,7 @@
   },
   "live_since": "2023-12-14T21:00:00.000Z",
   "poc_required": true,
-  "immunefi_tags": [
+  "program_tags": [
     "KYC Required",
     "PoC Required"
   ]

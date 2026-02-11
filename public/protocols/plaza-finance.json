@@ -36,7 +36,7 @@
       "description": "Informational or gas optimization"
     }
   },
-  "source": "immunefi",
+  "source": "whiteclaws",
   "contracts": [
     {
       "address": "TBD",
@@ -47,17 +47,10 @@
   ],
   "scope": {
     "in_scope": [
-      "Vault strategy and deposit/withdraw logic",
-      "Yield optimization and compounding contracts",
-      "Reward harvesting and distribution",
-      "Strategy migration and emergency withdrawal",
-      "Share price and accounting calculations"
+      "Yield vaults"
     ],
     "out_of_scope": [
-      "Frontend and dashboard UI",
-      "Off-chain yield monitoring",
-      "External protocol strategies not in scope",
-      "Historical data aggregation"
+      "Frontend"
     ]
   },
   "branding": {

@@ -7,6 +7,22 @@ const hasSupabaseConfig =
   !!process.env.NEXT_PUBLIC_SUPABASE_URL &&
   !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
 
+function categoryTags(category: string): string[] {
+  const cat = (category || '').toLowerCase()
+  if (cat.includes('lending')) return ['Lending', 'Smart Contract']
+  if (cat.includes('dex') || cat.includes('trading')) return ['DEX', 'Smart Contract']
+  if (cat.includes('bridge')) return ['Bridge', 'Cross-Chain']
+  if (cat.includes('staking')) return ['Staking', 'Smart Contract']
+  if (cat.includes('yield')) return ['Yield', 'Smart Contract']
+  if (cat.includes('stablecoin')) return ['Stablecoin', 'Smart Contract']
+  if (cat.includes('l2') || cat.includes('l1') || cat.includes('layer')) return ['L1/L2', 'Infrastructure']
+  if (cat.includes('infrastructure') || cat.includes('oracle')) return ['Infrastructure']
+  if (cat.includes('gaming') || cat.includes('nft')) return ['Gaming/NFT']
+  if (cat.includes('privacy')) return ['Privacy', 'Smart Contract']
+  if (cat.includes('rwa')) return ['RWA', 'Smart Contract']
+  return ['Smart Contract']
+}
+
 export function getJSONBounties(): Bounty[] {
   const protocols = getProtocolsFromJSON()
   return protocols.map((p) => ({
@@ -15,7 +31,7 @@ export function getJSONBounties(): Bounty[] {
     icon: p.name.charAt(0),
     logo_url: p.logo_url || null,
     category: normalizeCategory(p.category),
-    tags: ['Immunefi'],
+    tags: categoryTags(p.category),
     chains: p.chains?.length ? p.chains.map(normalizeChain) : ['Multi-chain'],
     language: 'Solidity',
     maxReward: `$${(p.bounty?.max ?? 0).toLocaleString()}`,
@@ -45,7 +61,7 @@ export async function getBounties(): Promise<Bounty[]> {
     icon: protocol.name.charAt(0),
     logo_url: protocol.logo_url || null,
     category: normalizeCategory(protocol.category ?? 'Protocol'),
-    tags: ['Immunefi'],
+    tags: categoryTags(protocol.category ?? ''),
     chains: protocol.chains?.length ? protocol.chains.map(normalizeChain) : ['Multi-chain'],
     language: 'Solidity',
     maxReward: `$${(protocol.max_bounty ?? 0).toLocaleString()}`,

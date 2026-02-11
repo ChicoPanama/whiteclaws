@@ -1,7 +1,7 @@
 {
   "slug": "impossible-cloud-network",
   "name": "Impossible Cloud Network",
-  "description": "Impossible Cloud Network bug bounty program",
+  "description": "Impossible Cloud Network bug bounty program.",
   "category": "DeFi",
   "logo_url": null,
   "chains": [
@@ -30,30 +30,24 @@
       "description": "Griefing or protocol disruption"
     }
   },
-  "source": "immunefi",
+  "source": "whiteclaws",
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Core protocol smart contracts",
-      "Token transfer and approval logic",
-      "Access control and privilege management",
-      "Emergency pause and recovery mechanisms",
-      "Fee calculation and distribution logic"
+      "Smart contracts in scope per program listing"
     ],
     "out_of_scope": [
-      "Frontend and UI components",
-      "Off-chain infrastructure and indexers",
-      "Third-party integrations not deployed by protocol",
-      "Known issues documented in audit reports"
+      "Frontend applications",
+      "Off-chain infrastructure"
     ]
   },
   "updated_at": "2025-10-06T09:55:29.333Z",
   "live_since": "2025-09-09T09:35:00.000Z",
   "poc_required": true,
   "triaged": true,
-  "immunefi_tags": [
+  "program_tags": [
     "KYC Required",
     "PoC Not Required",
-    "Triaged by Immunefi"
+    "Triaged"
   ]
 }

@@ -1,7 +1,7 @@
 {
   "slug": "gnosischain",
   "name": "Gnosis Chain",
-  "description": "Gnosis Chain bug bounty program",
+  "description": "Gnosis Chain bug bounty program.",
   "category": "L2 / L1",
   "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/6ibSou9KOCjwRMOviQ4op0/76c3c2bda63a9c0c8c8432d71f234f8c/Aatar_green_white.png",
   "chains": [
@@ -31,21 +31,15 @@
       "description": "Griefing or protocol disruption"
     }
   },
-  "source": "immunefi",
+  "source": "whiteclaws",
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Consensus and block production logic",
-      "State transition and proof verification",
-      "Token bridging and native asset management",
-      "Transaction sequencing and ordering",
-      "Precompile and system contracts"
+      "Smart contracts in scope per program listing"
     ],
     "out_of_scope": [
-      "Block explorers and indexers",
-      "Client software and node implementations",
-      "Testnet infrastructure",
-      "Documentation and developer tooling"
+      "Frontend applications",
+      "Off-chain infrastructure"
     ]
   },
   "updated_at": "2024-11-18T12:02:21.416Z",
@@ -56,8 +50,8 @@
   },
   "live_since": "2022-02-11T04:00:00.000Z",
   "poc_required": true,
-  "immunefi_tags": [
-    "Immunefi Standard",
+  "program_tags": [
+    "Verified Program",
     "KYC Not Required",
     "PoC Required"
   ]

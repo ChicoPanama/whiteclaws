@@ -33,12 +33,12 @@ export interface ProtocolJSON {
   poc_required?: boolean
   primacy_of_impact?: boolean
   arbitration_enabled?: boolean
-  triaged_by_immunefi?: boolean
+  triaged?: boolean
   payout_tokens?: string[]
   program_rules?: string[]
 
   // External links
-  immunefi_url?: string
+  external_url?: string
   website_url?: string
   github_url?: string
   docs_url?: string

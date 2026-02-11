@@ -1,7 +1,7 @@
 {
   "slug": "exactly",
   "name": "Exactly",
-  "description": "Exactly bug bounty program",
+  "description": "Exactly bug bounty program.",
   "category": "DeFi Lending",
   "logo_url": "https://assets.coingecko.com/coins/images/31156/small/exa.png",
   "chains": [
@@ -31,29 +31,22 @@
       "description": "Griefing or protocol disruption"
     }
   },
-  "source": "immunefi",
+  "source": "whiteclaws",
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Lending pool and reserve contracts",
-      "Interest rate calculation models",
-      "Liquidation engine and thresholds",
-      "Flash loan implementation",
-      "Collateral factor and risk parameter logic",
-      "Oracle price feed integration"
+      "Smart contracts in scope per program listing"
     ],
     "out_of_scope": [
-      "Frontend and UI components",
-      "Governance voting interface",
-      "Off-chain keeper infrastructure",
-      "Deprecated protocol versions"
+      "Frontend applications",
+      "Off-chain infrastructure"
     ]
   },
   "updated_at": "2026-01-08T12:50:54.426Z",
   "live_since": "2022-12-08T21:00:00.000Z",
   "poc_required": true,
-  "immunefi_tags": [
-    "Immunefi Standard",
+  "program_tags": [
+    "Verified Program",
     "KYC Required",
     "PoC Required"
   ]

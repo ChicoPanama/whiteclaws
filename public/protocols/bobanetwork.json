@@ -1,7 +1,7 @@
 {
   "slug": "bobanetwork",
   "name": "Boba Network",
-  "description": "Boba Network bug bounty program",
+  "description": "Boba Network bug bounty program.",
   "category": "Layer 2",
   "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/2wV1YzHxDN4EUqz1RJuw6E/a8d877797715ffa2e502bd56e411899b/Boba_Network_logo.jpeg",
   "chains": [
@@ -31,21 +31,15 @@
       "description": "Griefing or protocol disruption"
     }
   },
-  "source": "immunefi",
+  "source": "whiteclaws",
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Rollup contracts and proof verification",
-      "Canonical bridge and token mapping",
-      "Sequencer and batch submission logic",
-      "Fraud proof / validity proof mechanisms",
-      "L2 system contracts and precompiles"
+      "Smart contracts in scope per program listing"
     ],
     "out_of_scope": [
-      "Block explorers and indexers",
-      "Off-chain sequencer infrastructure",
-      "Testnet deployments",
-      "Third-party bridges"
+      "Frontend applications",
+      "Off-chain infrastructure"
     ]
   },
   "updated_at": "2025-02-20T08:09:27.758Z",
@@ -56,8 +50,8 @@
   },
   "live_since": "2023-01-13T21:00:00.000Z",
   "poc_required": true,
-  "immunefi_tags": [
-    "Immunefi Standard",
+  "program_tags": [
+    "Verified Program",
     "KYC Required",
     "PoC Required"
   ]

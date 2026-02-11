@@ -1,7 +1,7 @@
 {
   "slug": "openzeppelin-stellar",
   "name": "Openzeppelin Stellar",
-  "description": "Openzeppelin Stellar bug bounty program",
+  "description": "Openzeppelin Stellar bug bounty program.",
   "category": "DeFi",
   "logo_url": "https://icons.llamao.fi/icons/protocols/openzeppelin?w=48&h=48",
   "chains": [
@@ -30,27 +30,21 @@
       "description": "Griefing or protocol disruption"
     }
   },
-  "source": "immunefi",
+  "source": "whiteclaws",
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Core protocol smart contracts",
-      "Token transfer and approval logic",
-      "Access control and privilege management",
-      "Emergency pause and recovery mechanisms",
-      "Fee calculation and distribution logic"
+      "Smart contracts in scope per program listing"
     ],
     "out_of_scope": [
-      "Frontend and UI components",
-      "Off-chain infrastructure and indexers",
-      "Third-party integrations not deployed by protocol",
-      "Known issues documented in audit reports"
+      "Frontend applications",
+      "Off-chain infrastructure"
     ]
   },
   "updated_at": "2025-05-26T13:40:14.441Z",
   "live_since": "2025-05-08T02:51:06.000Z",
   "poc_required": true,
-  "immunefi_tags": [
+  "program_tags": [
     "KYC Required",
     "PoC Not Required"
   ]

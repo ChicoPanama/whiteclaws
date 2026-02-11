@@ -7,14 +7,16 @@ const researchDocs = [
   { icon: '🌉', name: 'CrossChainHunter Bridge Analysis', description: 'Analysis of $4.7B bridge attack class identifying critical fraud proof bypass vulnerabilities.' },
   { icon: '🏛️', name: 'Governance Attacks Database', description: 'Comprehensive database of governance vulnerabilities, attack vectors, and real-world exploits.' },
   { icon: '📋', name: 'DeFi Security Research Framework', description: 'Defensive security research methodology for responsible vulnerability disclosure.' },
-  { icon: '💰', name: 'Immunefi Bug Bounty Analysis', description: 'Analysis of 272 active Immunefi bounty programs with real vault addresses and TVL tracking.' },
-  { icon: '📊', name: '430+ Hack Pattern Database', description: 'Database of 430+ historical hacks and exploits across DeFi ecosystem.' },
+  { icon: '💰', name: 'WhiteClaws Bounty Intelligence', description: 'Analysis of 450+ active bounty programs with real vault addresses, TVL tracking, and severity tiers.' },
+  { icon: '📊', name: '430+ Hack Pattern Database', description: 'Database of 430+ historical hacks and exploits across the DeFi ecosystem.' },
 ]
 
 const externalResources = [
-  { icon: '📚', name: 'Immunefi Web3 Security Library', description: 'Official Immunefi GitHub repository with vulnerability classifications and tutorials.' },
-  { icon: '⚗️', name: 'Immunefi Forge PoC Templates', description: 'Reusable Proof of Concept examples for EVM-based vulnerabilities.' },
-  { icon: '🐛', name: 'Immunefi Bug Fix Writeups', description: 'Documentation of critical bug fixes identified on Immunefi.' },
+  { icon: '📚', name: 'OpenZeppelin Security Library', description: 'Industry-standard smart contract security patterns, audited implementations, and best practices.' },
+  { icon: '⚗️', name: 'Foundry PoC Templates', description: 'Reusable Proof of Concept frameworks for EVM-based vulnerability verification using Forge.' },
+  { icon: '🐛', name: 'DeFi Hack Postmortems', description: 'Detailed breakdowns of major DeFi exploits with root cause analysis and prevention strategies.' },
+  { icon: '🔍', name: 'Slither Static Analysis', description: 'Trail of Bits Solidity static analysis framework for automated vulnerability detection.' },
+  { icon: '🛡️', name: 'Smart Contract Weakness Classification', description: 'SWC Registry — comprehensive taxonomy of known smart contract vulnerabilities and test cases.' },
 ]
 
 export default function LearnPage() {
@@ -43,7 +45,7 @@ export default function LearnPage() {
             <h2>External Resources</h2>
           </div>
           <p className="sd-text">
-            Curated security research repositories and learning materials from the wider security community.
+            Curated security research tools and libraries from the wider security community.
           </p>
           <div className="pg">
             {externalResources.map((resource) => (

@@ -53,7 +53,7 @@
       "type": "BTC Derivative"
     }
   ],
-  "source": "immunefi",
+  "source": "whiteclaws",
   "branding": {
     "primary": "#142C2E",
     "accent": "#0C1A1C",
@@ -63,11 +63,11 @@
   "updated_at": "2025-01-17T14:25:50.616Z",
   "poc_required": true,
   "triaged": true,
-  "immunefi_tags": [
-    "Immunefi Standard",
+  "program_tags": [
+    "Verified Program",
     "KYC Required",
     "PoC Required",
-    "Triaged by Immunefi",
+    "Triaged",
     "Arbitration",
     "Vaults"
   ]

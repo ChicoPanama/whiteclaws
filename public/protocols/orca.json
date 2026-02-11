@@ -1,7 +1,7 @@
 {
   "slug": "orca",
   "name": "Orca",
-  "description": "Orca bug bounty program",
+  "description": "Orca bug bounty program.",
   "category": "DEX",
   "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/6p07t55yWuOlsHLiQV9xsM/61c489fc59e7233557039a6965c76000/Screenshot_2024-11-11_at_11.35.18___PM.png",
   "chains": [
@@ -30,21 +30,15 @@
       "description": "Griefing or protocol disruption"
     }
   },
-  "source": "immunefi",
+  "source": "whiteclaws",
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Automated market maker (AMM) core contracts",
-      "Liquidity pool creation and management",
-      "Swap routing and execution logic",
-      "Fee tier and reward distribution",
-      "Position management (LP tokens / NFTs)"
+      "Smart contracts in scope per program listing"
     ],
     "out_of_scope": [
-      "Frontend and aggregator integrations",
-      "Off-chain order matching systems",
-      "Analytics and charting infrastructure",
-      "Third-party router contracts"
+      "Frontend applications",
+      "Off-chain infrastructure"
     ]
   },
   "updated_at": "2026-01-08T09:23:39.950Z",
@@ -55,8 +49,8 @@
   },
   "live_since": "2022-05-19T17:30:00.000Z",
   "poc_required": true,
-  "immunefi_tags": [
-    "Immunefi Standard",
+  "program_tags": [
+    "Verified Program",
     "KYC Not Required",
     "PoC Required"
   ]

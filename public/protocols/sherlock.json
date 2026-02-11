@@ -1,7 +1,7 @@
 {
   "slug": "sherlock",
   "name": "Sherlock",
-  "description": "Sherlock bug bounty program",
+  "description": "Sherlock bug bounty program.",
   "category": "Security Platform",
   "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/7aux7xm6bBE32KgmsF1XGi/db78d0f1bdfc7b2f47b41a7b5b2aa7df/Screenshot_2024-11-15_at_1.16.08___AM.png",
   "chains": [
@@ -30,21 +30,15 @@
       "description": "Griefing or protocol disruption"
     }
   },
-  "source": "immunefi",
+  "source": "whiteclaws",
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Core protocol smart contracts",
-      "Token management and transfer logic",
-      "Access control and privilege management",
-      "Emergency functions and recovery mechanisms",
-      "Integration points and external calls"
+      "Smart contracts in scope per program listing"
     ],
     "out_of_scope": [
-      "Frontend and UI components",
-      "Off-chain infrastructure",
-      "Third-party integrations",
-      "Known issues from prior audits"
+      "Frontend applications",
+      "Off-chain infrastructure"
     ]
   },
   "updated_at": "2025-07-22T17:19:13.131Z",
@@ -55,8 +49,8 @@
   },
   "live_since": "2021-10-12T15:00:00.000Z",
   "poc_required": true,
-  "immunefi_tags": [
-    "Immunefi Standard",
+  "program_tags": [
+    "Verified Program",
     "KYC Not Required",
     "PoC Required"
   ]

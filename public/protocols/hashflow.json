@@ -1,7 +1,7 @@
 {
   "slug": "hashflow",
   "name": "Hashflow",
-  "description": "Hashflow bug bounty program",
+  "description": "Hashflow bug bounty program.",
   "category": "DEX",
   "logo_url": "https://assets.coingecko.com/coins/images/26136/small/hashflow-icon-cmc.png",
   "chains": [
@@ -35,28 +35,22 @@
       "description": "Griefing or protocol disruption"
     }
   },
-  "source": "immunefi",
+  "source": "whiteclaws",
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Automated market maker (AMM) core contracts",
-      "Liquidity pool creation and management",
-      "Swap routing and execution logic",
-      "Fee tier and reward distribution",
-      "Position management (LP tokens / NFTs)"
+      "Smart contracts in scope per program listing"
     ],
     "out_of_scope": [
-      "Frontend and aggregator integrations",
-      "Off-chain order matching systems",
-      "Analytics and charting infrastructure",
-      "Third-party router contracts"
+      "Frontend applications",
+      "Off-chain infrastructure"
     ]
   },
   "updated_at": "2024-11-18T13:12:04.976Z",
   "live_since": "2022-03-29T20:00:00.000Z",
   "poc_required": true,
-  "immunefi_tags": [
-    "Immunefi Standard",
+  "program_tags": [
+    "Verified Program",
     "KYC Not Required",
     "PoC Required"
   ]

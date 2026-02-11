@@ -1,7 +1,7 @@
 {
   "slug": "silofinance-v2",
   "name": "Silo Finance V2",
-  "description": "Silo Finance V2 bug bounty program",
+  "description": "Silo Finance V2 bug bounty program.",
   "category": "DeFi Lending",
   "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/24De5VCsfH9jV4NpjRiQ6W/244ff375931983ac032a372d5e399906/Screenshot_2024-11-15_at_12.54.01___AM.png",
   "chains": [
@@ -30,29 +30,22 @@
       "description": "Griefing or protocol disruption"
     }
   },
-  "source": "immunefi",
+  "source": "whiteclaws",
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Lending pool and reserve contracts",
-      "Interest rate calculation models",
-      "Liquidation engine and thresholds",
-      "Flash loan implementation",
-      "Collateral factor and risk parameter logic",
-      "Oracle price feed integration"
+      "Smart contracts in scope per program listing"
     ],
     "out_of_scope": [
-      "Frontend and UI components",
-      "Governance voting interface",
-      "Off-chain keeper infrastructure",
-      "Deprecated protocol versions"
+      "Frontend applications",
+      "Off-chain infrastructure"
     ]
   },
   "updated_at": "2025-07-04T16:03:01.654Z",
   "live_since": "2022-08-30T17:30:00.000Z",
   "poc_required": true,
-  "immunefi_tags": [
-    "Immunefi Standard",
+  "program_tags": [
+    "Verified Program",
     "KYC Required",
     "PoC Required"
   ]

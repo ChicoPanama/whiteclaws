@@ -1,7 +1,7 @@
 {
   "slug": "livepeer",
   "name": "Livepeer",
-  "description": "Livepeer bug bounty program",
+  "description": "Livepeer bug bounty program.",
   "category": "Infrastructure",
   "logo_url": "https://assets.coingecko.com/coins/images/7137/small/livepeer.png",
   "chains": [
@@ -31,28 +31,22 @@
       "description": "Griefing or protocol disruption"
     }
   },
-  "source": "immunefi",
+  "source": "whiteclaws",
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Core protocol smart contracts",
-      "Access control and upgrade mechanisms",
-      "Token management and distribution",
-      "Integration endpoints and adapters",
-      "Emergency and recovery functions"
+      "Smart contracts in scope per program listing"
     ],
     "out_of_scope": [
-      "Frontend and developer portal",
-      "Off-chain infrastructure and APIs",
-      "Documentation and SDK",
-      "Third-party integrations"
+      "Frontend applications",
+      "Off-chain infrastructure"
     ]
   },
   "updated_at": "2024-11-18T11:27:27.461Z",
   "live_since": "2022-02-25T04:00:00.000Z",
   "poc_required": true,
-  "immunefi_tags": [
-    "Immunefi Standard",
+  "program_tags": [
+    "Verified Program",
     "KYC Required",
     "PoC Required"
   ]

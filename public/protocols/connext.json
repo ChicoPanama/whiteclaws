@@ -1,7 +1,7 @@
 {
   "slug": "connext",
   "name": "Connext",
-  "description": "Connext bug bounty program",
+  "description": "Connext bug bounty program.",
   "category": "Bridge",
   "logo_url": "https://assets.coingecko.com/coins/images/31137/small/next.png",
   "chains": [
@@ -34,28 +34,22 @@
       "description": "Griefing or protocol disruption"
     }
   },
-  "source": "immunefi",
+  "source": "whiteclaws",
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Cross-chain message passing contracts",
-      "Token lock and mint/burn logic",
-      "Validator/relayer signature verification",
-      "Replay protection and nonce management",
-      "Emergency pause and fund recovery"
+      "Smart contracts in scope per program listing"
     ],
     "out_of_scope": [
-      "Frontend bridge interface",
-      "Off-chain relayer infrastructure",
-      "Destination chain gas estimation",
-      "Third-party bridge aggregators"
+      "Frontend applications",
+      "Off-chain infrastructure"
     ]
   },
   "updated_at": "2025-11-11T23:11:20.953Z",
   "live_since": "2021-12-21T15:00:00.000Z",
   "poc_required": true,
-  "immunefi_tags": [
-    "Immunefi Standard",
+  "program_tags": [
+    "Verified Program",
     "KYC Not Required",
     "PoC Required"
   ]

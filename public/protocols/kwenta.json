@@ -1,7 +1,7 @@
 {
   "slug": "kwenta",
   "name": "Kwenta",
-  "description": "Kwenta bug bounty program",
+  "description": "Kwenta bug bounty program.",
   "category": "DeFi Trading",
   "logo_url": "https://assets.coingecko.com/coins/images/25729/small/kwenta.png",
   "chains": [
@@ -31,21 +31,15 @@
       "description": "Griefing or protocol disruption"
     }
   },
-  "source": "immunefi",
+  "source": "whiteclaws",
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Perpetual and margin trading contracts",
-      "Order execution and matching logic",
-      "Funding rate calculations",
-      "Liquidation engine and insurance fund",
-      "Position management and PnL accounting"
+      "Smart contracts in scope per program listing"
     ],
     "out_of_scope": [
-      "Trading UI and charting",
-      "Off-chain order book infrastructure",
-      "Market data feeds and indexers",
-      "Social trading features"
+      "Frontend applications",
+      "Off-chain infrastructure"
     ]
   },
   "updated_at": "2026-02-10T00:00:00Z"

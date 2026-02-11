@@ -35,7 +35,7 @@
       "description": "Informational findings"
     }
   },
-  "source": "immunefi",
+  "source": "whiteclaws",
   "contracts": [
     {
       "address": "0xc662c410C0ECf747543f5bA90660f6ABeBD9C8c4",
@@ -75,8 +75,8 @@
   },
   "live_since": "2022-10-19T06:30:00.000Z",
   "poc_required": true,
-  "immunefi_tags": [
-    "Immunefi Standard",
+  "program_tags": [
+    "Verified Program",
     "KYC Required",
     "PoC Required"
   ]

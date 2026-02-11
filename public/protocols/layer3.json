@@ -38,7 +38,7 @@
       "description": "Informational or gas optimization"
     }
   },
-  "source": "immunefi",
+  "source": "whiteclaws",
   "contracts": [
     {
       "address": "TBD",

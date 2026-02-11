@@ -47,7 +47,7 @@
     ]
   },
   "contracts": [],
-  "source": "immunefi",
+  "source": "whiteclaws",
   "branding": {
     "primary": "#08C8A8",
     "accent": "#057865",
@@ -56,8 +56,8 @@
   "live_since": "2025-11-26T04:27:00.000Z",
   "updated_at": "2025-12-08T07:57:57.211Z",
   "poc_required": true,
-  "immunefi_tags": [
-    "Immunefi Standard",
+  "program_tags": [
+    "Verified Program",
     "KYC Not Required",
     "PoC Required",
     "Arbitration",

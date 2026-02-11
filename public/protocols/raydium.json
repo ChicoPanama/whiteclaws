@@ -1,7 +1,7 @@
 {
   "slug": "raydium",
   "name": "Raydium",
-  "description": "Raydium bug bounty program",
+  "description": "Raydium bug bounty program.",
   "category": "DEX",
   "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/4X5hbah3bOvGiEZIPrFmeW/30eb4e2d5a47c3eca8d10b3fcff3ee7c/Raydium_logo.jpeg",
   "chains": [
@@ -30,21 +30,15 @@
       "description": "Griefing or protocol disruption"
     }
   },
-  "source": "immunefi",
+  "source": "whiteclaws",
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Automated market maker (AMM) core contracts",
-      "Liquidity pool creation and management",
-      "Swap routing and execution logic",
-      "Fee tier and reward distribution",
-      "Position management (LP tokens / NFTs)"
+      "Smart contracts in scope per program listing"
     ],
     "out_of_scope": [
-      "Frontend and aggregator integrations",
-      "Off-chain order matching systems",
-      "Analytics and charting infrastructure",
-      "Third-party router contracts"
+      "Frontend applications",
+      "Off-chain infrastructure"
     ]
   },
   "updated_at": "2024-10-26T18:28:25.269Z",
@@ -55,8 +49,8 @@
   },
   "live_since": "2023-04-25T12:00:00.000Z",
   "poc_required": true,
-  "immunefi_tags": [
-    "Immunefi Standard",
+  "program_tags": [
+    "Verified Program",
     "KYC Not Required",
     "PoC Required"
   ]

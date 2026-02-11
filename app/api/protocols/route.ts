@@ -87,7 +87,7 @@ export async function GET(request: NextRequest) {
       const { data, error } = await supabase
         .from("protocols")
         .select(
-          "id,name,slug,description,immunefi_url,logo_url,chains,max_bounty,tvl,is_active,created_at,updated_at"
+          "id,name,slug,description,external_url,logo_url,chains,max_bounty,tvl,is_active,created_at,updated_at"
         )
         .eq("slug", slug)
         .maybeSingle();
@@ -108,7 +108,7 @@ export async function GET(request: NextRequest) {
         name: data.name,
         slug: data.slug,
         description: data.description,
-        website_url: data.immunefi_url,
+        website_url: data.external_url,
         twitter_handle: null,
         logo_url: data.logo_url,
         category: null,
@@ -128,7 +128,7 @@ export async function GET(request: NextRequest) {
     const { data, error } = await supabase
       .from("protocols")
       .select(
-        "id,name,slug,description,immunefi_url,logo_url,chains,max_bounty,tvl,is_active,created_at,updated_at"
+        "id,name,slug,description,external_url,logo_url,chains,max_bounty,tvl,is_active,created_at,updated_at"
       )
       .order("name");
 
@@ -141,7 +141,7 @@ export async function GET(request: NextRequest) {
       name: protocol.name,
       slug: protocol.slug,
       description: protocol.description,
-      website_url: protocol.immunefi_url,
+      website_url: protocol.external_url,
       twitter_handle: null,
       logo_url: protocol.logo_url,
       category: null,
@@ -192,14 +192,14 @@ export async function POST(request: NextRequest) {
         name: validated.name,
         slug: validated.slug,
         description: validated.description ?? null,
-        immunefi_url: validated.website_url ?? null,
+        external_url: validated.website_url ?? null,
         logo_url: validated.logo_url ?? null,
         chains: validated.chain ? [validated.chain] : [],
         max_bounty: validated.bountyPool ?? 0,
         is_active: true,
       })
       .select(
-        "id,name,slug,description,immunefi_url,logo_url,chains,max_bounty,tvl,is_active,created_at,updated_at"
+        "id,name,slug,description,external_url,logo_url,chains,max_bounty,tvl,is_active,created_at,updated_at"
       )
       .single();
 
@@ -212,7 +212,7 @@ export async function POST(request: NextRequest) {
       name: data.name,
       slug: data.slug,
       description: data.description,
-      website_url: data.immunefi_url,
+      website_url: data.external_url,
       twitter_handle: null,
       logo_url: data.logo_url,
       category: null,

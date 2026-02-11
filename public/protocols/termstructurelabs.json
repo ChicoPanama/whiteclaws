@@ -1,7 +1,7 @@
 {
   "slug": "termstructurelabs",
   "name": "Termstructurelabs",
-  "description": "Termstructurelabs bug bounty program",
+  "description": "Termstructurelabs bug bounty program.",
   "category": "DeFi",
   "logo_url": "https://icons.llamao.fi/icons/protocols/term-structure?w=48&h=48",
   "chains": [
@@ -30,21 +30,15 @@
       "description": "Griefing or protocol disruption"
     }
   },
-  "source": "immunefi",
+  "source": "whiteclaws",
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Core protocol smart contracts",
-      "Token transfer and approval logic",
-      "Access control and privilege management",
-      "Emergency pause and recovery mechanisms",
-      "Fee calculation and distribution logic"
+      "Smart contracts in scope per program listing"
     ],
     "out_of_scope": [
-      "Frontend and UI components",
-      "Off-chain infrastructure and indexers",
-      "Third-party integrations not deployed by protocol",
-      "Known issues documented in audit reports"
+      "Frontend applications",
+      "Off-chain infrastructure"
     ]
   },
   "updated_at": "2025-12-05T11:31:49.943Z",
@@ -56,12 +50,12 @@
   "live_since": "2024-06-12T03:22:00.000Z",
   "poc_required": true,
   "triaged": true,
-  "immunefi_tags": [
-    "Immunefi Standard",
+  "program_tags": [
+    "Verified Program",
     "KYC Not Required",
     "PoC Required",
     "Primacy of Impact",
-    "Triaged by Immunefi",
+    "Triaged",
     "Arbitration"
   ]
 }

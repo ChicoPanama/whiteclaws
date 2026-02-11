@@ -1,7 +1,7 @@
 {
   "slug": "aurafinance",
   "name": "Aura Finance",
-  "description": "Aura Finance bug bounty program",
+  "description": "Aura Finance bug bounty program.",
   "category": "DeFi Yield",
   "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/5K5gW86YPxCmDeFWSeD5fi/f83f639d8527d85e7243e4e4331aa2ed/Aura_Finance_logo.jpeg",
   "chains": [
@@ -30,21 +30,15 @@
       "description": "Griefing or protocol disruption"
     }
   },
-  "source": "immunefi",
+  "source": "whiteclaws",
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Vault strategy and deposit/withdraw logic",
-      "Yield optimization and compounding contracts",
-      "Reward harvesting and distribution",
-      "Strategy migration and emergency withdrawal",
-      "Share price and accounting calculations"
+      "Smart contracts in scope per program listing"
     ],
     "out_of_scope": [
-      "Frontend and dashboard UI",
-      "Off-chain yield monitoring",
-      "External protocol strategies not in scope",
-      "Historical data aggregation"
+      "Frontend applications",
+      "Off-chain infrastructure"
     ]
   },
   "updated_at": "2024-10-31T15:48:35.456Z",
@@ -55,8 +49,8 @@
   },
   "live_since": "2022-06-16T19:00:00.000Z",
   "poc_required": true,
-  "immunefi_tags": [
-    "Immunefi Standard",
+  "program_tags": [
+    "Verified Program",
     "KYC Not Required",
     "PoC Required"
   ]

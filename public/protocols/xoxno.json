@@ -1,7 +1,7 @@
 {
   "slug": "xoxno",
   "name": "Xoxno",
-  "description": "Xoxno bug bounty program",
+  "description": "Xoxno bug bounty program.",
   "category": "DeFi",
   "logo_url": "https://icons.llamao.fi/icons/protocols/xoxno?w=48&h=48",
   "chains": [
@@ -30,21 +30,15 @@
       "description": "Griefing or protocol disruption"
     }
   },
-  "source": "immunefi",
+  "source": "whiteclaws",
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Core protocol smart contracts",
-      "Token transfer and approval logic",
-      "Access control and privilege management",
-      "Emergency pause and recovery mechanisms",
-      "Fee calculation and distribution logic"
+      "Smart contracts in scope per program listing"
     ],
     "out_of_scope": [
-      "Frontend and UI components",
-      "Off-chain infrastructure and indexers",
-      "Third-party integrations not deployed by protocol",
-      "Known issues documented in audit reports"
+      "Frontend applications",
+      "Off-chain infrastructure"
     ]
   },
   "updated_at": "2025-09-22T09:39:53.581Z",
@@ -55,7 +49,7 @@
   },
   "live_since": "2025-09-16T08:00:31.000Z",
   "poc_required": true,
-  "immunefi_tags": [
+  "program_tags": [
     "KYC Required",
     "PoC Required"
   ]

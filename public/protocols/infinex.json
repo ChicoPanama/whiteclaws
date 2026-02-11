@@ -52,7 +52,7 @@
       "type": "Account"
     }
   ],
-  "source": "immunefi",
+  "source": "whiteclaws",
   "branding": {
     "primary": "#FF723B",
     "accent": "#994423",
@@ -62,12 +62,12 @@
   "updated_at": "2025-01-17T14:46:24.399Z",
   "poc_required": true,
   "triaged": true,
-  "immunefi_tags": [
-    "Immunefi Standard",
+  "program_tags": [
+    "Verified Program",
     "KYC Not Required",
     "PoC Required",
     "Primacy of Impact",
-    "Triaged by Immunefi",
+    "Triaged",
     "Arbitration",
     "Vaults"
   ]
