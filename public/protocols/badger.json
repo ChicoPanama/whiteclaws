@@ -1,7 +1,7 @@
 {
   "slug": "badger",
   "name": "Badger",
-  "description": "Badger bug bounty program",
+  "description": "Badger bug bounty program.",
   "category": "DeFi Yield",
   "logo_url": "https://assets.coingecko.com/coins/images/13287/small/badger_dao_logo.jpg",
   "chains": [
@@ -31,21 +31,15 @@
       "description": "Griefing or protocol disruption"
     }
   },
-  "source": "immunefi",
+  "source": "whiteclaws",
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Vault strategy and deposit/withdraw logic",
-      "Yield optimization and compounding contracts",
-      "Reward harvesting and distribution",
-      "Strategy migration and emergency withdrawal",
-      "Share price and accounting calculations"
+      "Smart contracts in scope per program listing"
     ],
     "out_of_scope": [
-      "Frontend and dashboard UI",
-      "Off-chain yield monitoring",
-      "External protocol strategies not in scope",
-      "Historical data aggregation"
+      "Frontend applications",
+      "Off-chain infrastructure"
     ]
   },
   "updated_at": "2026-02-10T00:00:00Z",

@@ -1,7 +1,7 @@
 {
   "slug": "hibachi",
   "name": "Hibachi",
-  "description": "Hibachi bug bounty program",
+  "description": "Hibachi bug bounty program.",
   "category": "DeFi",
   "logo_url": "https://icons.llamao.fi/icons/protocols/hibachi?w=48&h=48",
   "chains": [
@@ -30,21 +30,15 @@
       "description": "Griefing or protocol disruption"
     }
   },
-  "source": "immunefi",
+  "source": "whiteclaws",
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Core protocol smart contracts",
-      "Token transfer and approval logic",
-      "Access control and privilege management",
-      "Emergency pause and recovery mechanisms",
-      "Fee calculation and distribution logic"
+      "Smart contracts in scope per program listing"
     ],
     "out_of_scope": [
-      "Frontend and UI components",
-      "Off-chain infrastructure and indexers",
-      "Third-party integrations not deployed by protocol",
-      "Known issues documented in audit reports"
+      "Frontend applications",
+      "Off-chain infrastructure"
     ]
   },
   "updated_at": "2025-04-08T14:37:35.770Z",
@@ -55,8 +49,8 @@
   },
   "live_since": "2025-01-08T14:58:00.000Z",
   "poc_required": true,
-  "immunefi_tags": [
-    "Immunefi Standard",
+  "program_tags": [
+    "Verified Program",
     "KYC Required",
     "PoC Required"
   ]

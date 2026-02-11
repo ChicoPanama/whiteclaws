@@ -2,7 +2,6 @@
   "slug": "example-protocol",
   "name": "Example Protocol",
   "description": "Short description of what this protocol does",
-  "url": "https://immunefi.com/bug-bounty/example-protocol",
   "category": "DeFi",
   "bounty": {
     "max_bounty": 1000000,
@@ -58,19 +57,8 @@
     }
   },
   "scope": {
-    "in_scope": [
-      "Core protocol smart contracts",
-      "Token transfer and approval logic",
-      "Access control and privilege management",
-      "Emergency pause and recovery mechanisms",
-      "Fee calculation and distribution logic"
-    ],
-    "out_of_scope": [
-      "Frontend and UI components",
-      "Off-chain infrastructure and indexers",
-      "Third-party integrations not deployed by protocol",
-      "Known issues documented in audit reports"
-    ],
+    "in_scope": [],
+    "out_of_scope": [],
     "contracts": []
   },
   "assets": [],
@@ -92,5 +80,5 @@
     "verified": false
   },
   "updated_at": "2026-02-07T22:00:00Z",
-  "source": "immunefi"
+  "source": "whiteclaws"
 }

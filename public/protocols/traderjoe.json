@@ -1,7 +1,7 @@
 {
   "slug": "traderjoe",
   "name": "Trader Joe",
-  "description": "Trader Joe bug bounty program",
+  "description": "Trader Joe bug bounty program.",
   "category": "DEX",
   "logo_url": "https://assets.coingecko.com/coins/images/17569/small/JoeToken.png",
   "chains": [
@@ -32,21 +32,15 @@
       "description": "Griefing or protocol disruption"
     }
   },
-  "source": "immunefi",
+  "source": "whiteclaws",
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Automated market maker (AMM) core contracts",
-      "Liquidity pool creation and management",
-      "Swap routing and execution logic",
-      "Fee tier and reward distribution",
-      "Position management (LP tokens / NFTs)"
+      "Smart contracts in scope per program listing"
     ],
     "out_of_scope": [
-      "Frontend and aggregator integrations",
-      "Off-chain order matching systems",
-      "Analytics and charting infrastructure",
-      "Third-party router contracts"
+      "Frontend applications",
+      "Off-chain infrastructure"
     ]
   },
   "updated_at": "2024-12-03T10:45:13.860Z",
@@ -57,8 +51,8 @@
   },
   "live_since": "2023-05-12T19:00:00.000Z",
   "poc_required": true,
-  "immunefi_tags": [
-    "Immunefi Standard",
+  "program_tags": [
+    "Verified Program",
     "KYC Not Required",
     "PoC Required",
     "Primacy of Impact"

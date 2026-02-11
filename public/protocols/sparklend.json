@@ -1,7 +1,7 @@
 {
   "slug": "sparklend",
   "name": "Spark",
-  "description": "Spark bug bounty program",
+  "description": "Spark bug bounty program.",
   "category": "DeFi Lending",
   "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/6PSQWUew0V3et86JKkvxs0/152af27a6fa55003a4cc5511f0641d17/badge__1_.png",
   "chains": [
@@ -30,22 +30,15 @@
       "description": "Griefing or protocol disruption"
     }
   },
-  "source": "immunefi",
+  "source": "whiteclaws",
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Lending pool and reserve contracts",
-      "Interest rate calculation models",
-      "Liquidation engine and thresholds",
-      "Flash loan implementation",
-      "Collateral factor and risk parameter logic",
-      "Oracle price feed integration"
+      "Smart contracts in scope per program listing"
     ],
     "out_of_scope": [
-      "Frontend and UI components",
-      "Governance voting interface",
-      "Off-chain keeper infrastructure",
-      "Deprecated protocol versions"
+      "Frontend applications",
+      "Off-chain infrastructure"
     ]
   },
   "updated_at": "2025-12-05T22:26:14.869Z",
@@ -57,11 +50,11 @@
   "live_since": "2023-11-01T15:00:00.000Z",
   "poc_required": true,
   "triaged": true,
-  "immunefi_tags": [
-    "Immunefi Standard",
+  "program_tags": [
+    "Verified Program",
     "KYC Not Required",
     "PoC Required",
     "Primacy of Impact",
-    "Triaged by Immunefi"
+    "Triaged"
   ]
 }

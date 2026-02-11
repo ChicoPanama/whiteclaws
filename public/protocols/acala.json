@@ -1,7 +1,7 @@
 {
   "slug": "acala",
   "name": "Acala",
-  "description": "Acala bug bounty program",
+  "description": "Acala bug bounty program.",
   "category": "DeFi",
   "logo_url": "https://assets.coingecko.com/coins/images/20634/small/aca.png",
   "chains": [
@@ -30,28 +30,22 @@
       "description": "Griefing or protocol disruption"
     }
   },
-  "source": "immunefi",
+  "source": "whiteclaws",
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Core protocol smart contracts",
-      "Token transfer and approval logic",
-      "Access control and privilege management",
-      "Emergency pause and recovery mechanisms",
-      "Fee calculation and distribution logic"
+      "Smart contracts in scope per program listing"
     ],
     "out_of_scope": [
-      "Frontend and UI components",
-      "Off-chain infrastructure and indexers",
-      "Third-party integrations not deployed by protocol",
-      "Known issues documented in audit reports"
+      "Frontend applications",
+      "Off-chain infrastructure"
     ]
   },
   "updated_at": "2025-11-13T22:34:38.927Z",
   "live_since": "2021-12-14T02:00:00.000Z",
   "poc_required": true,
-  "immunefi_tags": [
-    "Immunefi Standard",
+  "program_tags": [
+    "Verified Program",
     "KYC Not Required",
     "PoC Required"
   ]

@@ -1,7 +1,7 @@
 {
   "slug": "dexeprotocol",
   "name": "DeXe Protocol",
-  "description": "DeXe Protocol bug bounty program",
+  "description": "DeXe Protocol bug bounty program.",
   "category": "Infrastructure",
   "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/5ZQ0i4NAKMQyO19x7Z65k8/257b06a35dfa48dcdb2ec16351267695/71133570.png",
   "chains": [
@@ -30,28 +30,22 @@
       "description": "Griefing or protocol disruption"
     }
   },
-  "source": "immunefi",
+  "source": "whiteclaws",
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Core protocol smart contracts",
-      "Access control and upgrade mechanisms",
-      "Token management and distribution",
-      "Integration endpoints and adapters",
-      "Emergency and recovery functions"
+      "Smart contracts in scope per program listing"
     ],
     "out_of_scope": [
-      "Frontend and developer portal",
-      "Off-chain infrastructure and APIs",
-      "Documentation and SDK",
-      "Third-party integrations"
+      "Frontend applications",
+      "Off-chain infrastructure"
     ]
   },
   "updated_at": "2024-11-13T15:46:02.266Z",
   "live_since": "2024-01-23T20:00:00.000Z",
   "poc_required": true,
-  "immunefi_tags": [
-    "Immunefi Standard",
+  "program_tags": [
+    "Verified Program",
     "KYC Required",
     "PoC Required",
     "Primacy of Impact",

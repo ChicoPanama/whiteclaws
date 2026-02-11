@@ -1,7 +1,7 @@
 {
   "slug": "velodromefinance",
   "name": "Velodrome Finance",
-  "description": "Velodrome Finance bug bounty program",
+  "description": "Velodrome Finance bug bounty program.",
   "category": "DEX",
   "logo_url": "https://assets.coingecko.com/coins/images/25783/small/velo.png",
   "chains": [
@@ -31,21 +31,15 @@
       "description": "Griefing or protocol disruption"
     }
   },
-  "source": "immunefi",
+  "source": "whiteclaws",
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Automated market maker (AMM) core contracts",
-      "Liquidity pool creation and management",
-      "Swap routing and execution logic",
-      "Fee tier and reward distribution",
-      "Position management (LP tokens / NFTs)"
+      "Smart contracts in scope per program listing"
     ],
     "out_of_scope": [
-      "Frontend and aggregator integrations",
-      "Off-chain order matching systems",
-      "Analytics and charting infrastructure",
-      "Third-party router contracts"
+      "Frontend applications",
+      "Off-chain infrastructure"
     ]
   },
   "updated_at": "2024-11-29T16:06:24.836Z",
@@ -56,8 +50,8 @@
   },
   "live_since": "2023-06-29T09:00:00.000Z",
   "poc_required": true,
-  "immunefi_tags": [
-    "Immunefi Standard",
+  "program_tags": [
+    "Verified Program",
     "KYC Required",
     "PoC Required",
     "Primacy of Impact"

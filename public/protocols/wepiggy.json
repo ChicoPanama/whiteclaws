@@ -1,7 +1,7 @@
 {
   "slug": "wepiggy",
   "name": "Wepiggy",
-  "description": "Wepiggy bug bounty program",
+  "description": "Wepiggy bug bounty program.",
   "category": "DeFi",
   "logo_url": "https://assets.coingecko.com/coins/images/18157/small/wepiggy.png",
   "chains": [
@@ -30,28 +30,22 @@
       "description": "Griefing or protocol disruption"
     }
   },
-  "source": "immunefi",
+  "source": "whiteclaws",
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Core protocol smart contracts",
-      "Token transfer and approval logic",
-      "Access control and privilege management",
-      "Emergency pause and recovery mechanisms",
-      "Fee calculation and distribution logic"
+      "Smart contracts in scope per program listing"
     ],
     "out_of_scope": [
-      "Frontend and UI components",
-      "Off-chain infrastructure and indexers",
-      "Third-party integrations not deployed by protocol",
-      "Known issues documented in audit reports"
+      "Frontend applications",
+      "Off-chain infrastructure"
     ]
   },
   "updated_at": "2024-11-29T14:29:02.338Z",
   "live_since": "2022-01-29T03:30:00.000Z",
   "poc_required": true,
-  "immunefi_tags": [
-    "Immunefi Standard",
+  "program_tags": [
+    "Verified Program",
     "KYC Required",
     "PoC Required"
   ]

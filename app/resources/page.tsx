@@ -42,19 +42,19 @@ const audits = [
   { protocol: 'XION', name: 'Passkeys Audit', auditor: 'Zellic', date: '2024', file: '/audits/Xion Passkeys - Zellic Audit Report.pdf' },
   { protocol: 'Ref Finance', name: 'Security Audit', auditor: 'Ref Finance', date: '2023', file: '/audits/spaces -MhIB0bSr6nOBfTiANqT-2910905616 uploads h8mipVuJTakoLC6XmzfU Ref Finance Security Audit-1.pdf' },
   { protocol: 'Pinto', name: 'Security Audit', auditor: 'Pinto', date: '2024', file: '/audits/pinto.pdf' },
-  { protocol: 'Immunefi', name: 'Internal Vaults System Audit', auditor: 'Immunefi', date: '2023-02', file: '/audits/2023-02-03 - Immunefi - Internal Audit of the Vaults system.pdf' },
+  { protocol: 'Vault System', name: 'Internal Vaults System Audit', auditor: 'Community Audit', date: '2023-02', file: '/audits/2023-02-03 - WhiteClaws - Internal Audit of the Vaults system.pdf' },
   { protocol: 'Inverse Finance', name: 'FiRM Audit', auditor: 'Nomoi', date: '2023', file: '/audits/firm-nomoi.pdf' },
   { protocol: 'Sherlock', name: 'Junior Audit', auditor: 'Sherlock', date: '2023', file: '/audits/junior-sherlock.pdf' },
 
   // Indexed audits (001-008)
-  { protocol: 'Oak Network', name: 'PaymentTreasury Audit', auditor: 'Immunefi', date: '2024', file: '/audits/001_Oak_Network.pdf' },
-  { protocol: 'XYZ Protocol', name: 'Security Audit', auditor: 'Immunefi', date: '2024', file: '/audits/002_xyz.pdf' },
-  { protocol: 'CC Protocol', name: 'Security Audit', auditor: 'Immunefi', date: '2024', file: '/audits/003_CC_Protocol.pdf' },
-  { protocol: 'Plume Network', name: 'Security Audit', auditor: 'Immunefi', date: '2024', file: '/audits/004_Plume_Network.pdf' },
-  { protocol: 'Plaza Finance', name: 'Security Audit', auditor: 'Immunefi', date: '2024', file: '/audits/005_Plaza_Finance.pdf' },
-  { protocol: 'Hoenn', name: 'Security Audit', auditor: 'Immunefi', date: '2024', file: '/audits/006_Hoenn.pdf' },
-  { protocol: 'Helios', name: 'Security Audit', auditor: 'Immunefi', date: '2024', file: '/audits/007_Helios.pdf' },
-  { protocol: 'Halogen', name: 'Security Audit', auditor: 'Immunefi', date: '2024', file: '/audits/008_Halogen.pdf' },
+  { protocol: 'Oak Network', name: 'PaymentTreasury Audit', auditor: 'Community Audit', date: '2024', file: '/audits/001_Oak_Network.pdf' },
+  { protocol: 'XYZ Protocol', name: 'Security Audit', auditor: 'Community Audit', date: '2024', file: '/audits/002_xyz.pdf' },
+  { protocol: 'CC Protocol', name: 'Security Audit', auditor: 'Community Audit', date: '2024', file: '/audits/003_CC_Protocol.pdf' },
+  { protocol: 'Plume Network', name: 'Security Audit', auditor: 'Community Audit', date: '2024', file: '/audits/004_Plume_Network.pdf' },
+  { protocol: 'Plaza Finance', name: 'Security Audit', auditor: 'Community Audit', date: '2024', file: '/audits/005_Plaza_Finance.pdf' },
+  { protocol: 'Hoenn', name: 'Security Audit', auditor: 'Community Audit', date: '2024', file: '/audits/006_Hoenn.pdf' },
+  { protocol: 'Helios', name: 'Security Audit', auditor: 'Community Audit', date: '2024', file: '/audits/007_Helios.pdf' },
+  { protocol: 'Halogen', name: 'Security Audit', auditor: 'Community Audit', date: '2024', file: '/audits/008_Halogen.pdf' },
 ]
 
 const resources = [

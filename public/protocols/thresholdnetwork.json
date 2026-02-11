@@ -1,7 +1,7 @@
 {
   "slug": "thresholdnetwork",
   "name": "Threshold Network",
-  "description": "Threshold Network bug bounty program",
+  "description": "Threshold Network bug bounty program.",
   "category": "Bridge",
   "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/5sXJAYkgjf0BtH2uarlVA3/1f1993cf792814921c5c289b57004768/token-symbol-purple.svg",
   "chains": [
@@ -35,21 +35,15 @@
       "description": "Griefing or protocol disruption"
     }
   },
-  "source": "immunefi",
+  "source": "whiteclaws",
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Cross-chain message passing contracts",
-      "Token lock and mint/burn logic",
-      "Validator/relayer signature verification",
-      "Replay protection and nonce management",
-      "Emergency pause and fund recovery"
+      "Smart contracts in scope per program listing"
     ],
     "out_of_scope": [
-      "Frontend bridge interface",
-      "Off-chain relayer infrastructure",
-      "Destination chain gas estimation",
-      "Third-party bridge aggregators"
+      "Frontend applications",
+      "Off-chain infrastructure"
     ]
   },
   "updated_at": "2025-12-23T10:59:02.388Z",
@@ -60,8 +54,8 @@
   },
   "live_since": "2023-04-28T09:00:00.000Z",
   "poc_required": true,
-  "immunefi_tags": [
-    "Immunefi Standard",
+  "program_tags": [
+    "Verified Program",
     "KYC Not Required",
     "PoC Required"
   ]

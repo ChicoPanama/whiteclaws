@@ -1,7 +1,7 @@
 {
   "slug": "instadapp",
   "name": "Instadapp",
-  "description": "Instadapp bug bounty program",
+  "description": "Instadapp bug bounty program.",
   "category": "DeFi",
   "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/7jHZEinQjaABm48Sct1BZs/3d224c5a05bff575e14b98970f939667/Instadapp.jpeg",
   "chains": [
@@ -32,21 +32,15 @@
       "description": "Griefing or protocol disruption"
     }
   },
-  "source": "immunefi",
+  "source": "whiteclaws",
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Core protocol smart contracts",
-      "Token transfer and approval logic",
-      "Access control and privilege management",
-      "Emergency pause and recovery mechanisms",
-      "Fee calculation and distribution logic"
+      "Smart contracts in scope per program listing"
     ],
     "out_of_scope": [
-      "Frontend and UI components",
-      "Off-chain infrastructure and indexers",
-      "Third-party integrations not deployed by protocol",
-      "Known issues documented in audit reports"
+      "Frontend applications",
+      "Off-chain infrastructure"
     ]
   },
   "updated_at": "2024-12-15T14:36:28.594Z",
@@ -57,8 +51,8 @@
   },
   "live_since": "2021-09-20T01:30:00.000Z",
   "poc_required": true,
-  "immunefi_tags": [
-    "Immunefi Standard",
+  "program_tags": [
+    "Verified Program",
     "KYC Not Required",
     "PoC Required"
   ]

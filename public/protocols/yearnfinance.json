@@ -1,7 +1,7 @@
 {
   "slug": "yearnfinance",
   "name": "Yearn Finance",
-  "description": "Yearn Finance bug bounty program",
+  "description": "Yearn Finance bug bounty program.",
   "category": "DeFi Yield",
   "logo_url": "https://assets.coingecko.com/coins/images/11849/small/yfi-192x192.png",
   "chains": [
@@ -30,21 +30,15 @@
       "description": "Griefing or protocol disruption"
     }
   },
-  "source": "immunefi",
+  "source": "whiteclaws",
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Vault strategy and deposit/withdraw logic",
-      "Yield optimization and compounding contracts",
-      "Reward harvesting and distribution",
-      "Strategy migration and emergency withdrawal",
-      "Share price and accounting calculations"
+      "Smart contracts in scope per program listing"
     ],
     "out_of_scope": [
-      "Frontend and dashboard UI",
-      "Off-chain yield monitoring",
-      "External protocol strategies not in scope",
-      "Historical data aggregation"
+      "Frontend applications",
+      "Off-chain infrastructure"
     ]
   },
   "updated_at": "2026-01-08T09:22:38.933Z",
@@ -55,8 +49,8 @@
   },
   "live_since": "2021-07-01T07:00:00.000Z",
   "poc_required": true,
-  "immunefi_tags": [
-    "Immunefi Standard",
+  "program_tags": [
+    "Verified Program",
     "KYC Not Required",
     "PoC Not Required"
   ]

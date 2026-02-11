@@ -1,7 +1,7 @@
 {
   "slug": "staderforeth",
   "name": "Stader for ETH",
-  "description": "Stader for ETH bug bounty program",
+  "description": "Stader for ETH bug bounty program.",
   "category": "DeFi Staking",
   "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/1iQDInT514hzL2832OmJSQ/81275804e386d69c44048a90c690eecb/j-TUyZEq_400x400.jpg",
   "chains": [
@@ -30,21 +30,15 @@
       "description": "Griefing or protocol disruption"
     }
   },
-  "source": "immunefi",
+  "source": "whiteclaws",
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Staking pool and delegation contracts",
-      "Reward calculation and distribution logic",
-      "Unstaking cooldown and withdrawal queues",
-      "Validator set management",
-      "Slashing protection mechanisms"
+      "Smart contracts in scope per program listing"
     ],
     "out_of_scope": [
-      "Frontend staking interface",
-      "Validator node infrastructure",
-      "Off-chain monitoring and alerting",
-      "Third-party liquid staking wrappers"
+      "Frontend applications",
+      "Off-chain infrastructure"
     ]
   },
   "updated_at": "2025-01-01T19:57:21.288Z",
@@ -55,8 +49,8 @@
   },
   "live_since": "2023-07-08T11:00:00.000Z",
   "poc_required": true,
-  "immunefi_tags": [
-    "Immunefi Standard",
+  "program_tags": [
+    "Verified Program",
     "KYC Not Required",
     "PoC Required",
     "Primacy of Impact"

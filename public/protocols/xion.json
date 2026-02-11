@@ -47,15 +47,15 @@
     ]
   },
   "contracts": [],
-  "source": "immunefi",
+  "source": "whiteclaws",
   "live_since": "2025-05-08T05:53:52.000Z",
   "updated_at": "2025-08-12T07:17:36.269Z",
   "poc_required": true,
   "triaged": true,
-  "immunefi_tags": [
+  "program_tags": [
     "KYC Required",
     "PoC Required",
-    "Triaged by Immunefi",
+    "Triaged",
     "Arbitration",
     "Vaults"
   ]

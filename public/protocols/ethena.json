@@ -62,17 +62,17 @@
       "type": "Staking"
     }
   ],
-  "source": "immunefi",
+  "source": "whiteclaws",
   "updated_at": "2025-05-20T06:39:16.014Z",
   "live_since": "2024-04-04T16:46:29.000Z",
   "poc_required": true,
   "triaged": true,
-  "immunefi_tags": [
-    "Immunefi Standard",
+  "program_tags": [
+    "Verified Program",
     "KYC Required",
     "PoC Required",
     "Primacy of Impact",
-    "Triaged by Immunefi",
+    "Triaged",
     "Arbitration",
     "Vaults"
   ]

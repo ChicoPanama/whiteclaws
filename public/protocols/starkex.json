@@ -1,7 +1,7 @@
 {
   "slug": "starkex",
   "name": "StarkEx",
-  "description": "StarkEx bug bounty program",
+  "description": "StarkEx bug bounty program.",
   "category": "Layer 2",
   "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/6t4qbnsCLpWXBvsPoQ5s2g/17cf9df21e075276f7522e2ca3c67e9c/StarkEx-symbol.png",
   "chains": [
@@ -30,21 +30,15 @@
       "description": "Griefing or protocol disruption"
     }
   },
-  "source": "immunefi",
+  "source": "whiteclaws",
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Rollup contracts and proof verification",
-      "Canonical bridge and token mapping",
-      "Sequencer and batch submission logic",
-      "Fraud proof / validity proof mechanisms",
-      "L2 system contracts and precompiles"
+      "Smart contracts in scope per program listing"
     ],
     "out_of_scope": [
-      "Block explorers and indexers",
-      "Off-chain sequencer infrastructure",
-      "Testnet deployments",
-      "Third-party bridges"
+      "Frontend applications",
+      "Off-chain infrastructure"
     ]
   },
   "updated_at": "2024-12-03T07:23:55.210Z",
@@ -56,10 +50,10 @@
   "live_since": "2023-06-27T08:00:00.000Z",
   "poc_required": true,
   "triaged": true,
-  "immunefi_tags": [
-    "Immunefi Standard",
+  "program_tags": [
+    "Verified Program",
     "KYC Required",
     "PoC Required",
-    "Triaged by Immunefi"
+    "Triaged"
   ]
 }

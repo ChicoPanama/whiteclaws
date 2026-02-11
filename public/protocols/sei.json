@@ -1,7 +1,7 @@
 {
   "slug": "sei",
   "name": "Sei",
-  "description": "Sei bug bounty program",
+  "description": "Sei bug bounty program.",
   "category": "L2 / L1",
   "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/1lOFdVmQG8KNmJhGtr8lhs/40400407c90b0736a8e506b081b70887/Sei_Labs_Logo.png",
   "chains": [
@@ -30,21 +30,15 @@
       "description": "Griefing or protocol disruption"
     }
   },
-  "source": "immunefi",
+  "source": "whiteclaws",
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Consensus and block production logic",
-      "State transition and proof verification",
-      "Token bridging and native asset management",
-      "Transaction sequencing and ordering",
-      "Precompile and system contracts"
+      "Smart contracts in scope per program listing"
     ],
     "out_of_scope": [
-      "Block explorers and indexers",
-      "Client software and node implementations",
-      "Testnet infrastructure",
-      "Documentation and developer tooling"
+      "Frontend applications",
+      "Off-chain infrastructure"
     ]
   },
   "updated_at": "2025-09-24T07:00:31.265Z",
@@ -56,12 +50,12 @@
   "live_since": "2023-11-30T09:00:00.000Z",
   "poc_required": true,
   "triaged": true,
-  "immunefi_tags": [
-    "Immunefi Standard",
+  "program_tags": [
+    "Verified Program",
     "KYC Required",
     "PoC Required",
     "Primacy of Impact",
-    "Triaged by Immunefi",
+    "Triaged",
     "Arbitration"
   ]
 }

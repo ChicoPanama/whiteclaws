@@ -1,7 +1,7 @@
 {
   "slug": "kiln",
   "name": "Kiln On-Chain v2",
-  "description": "Kiln On-Chain v2 bug bounty program",
+  "description": "Kiln On-Chain v2 bug bounty program.",
   "category": "DeFi Staking",
   "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/2iDDxMXgRnP06wYCjb4T3E/5c65c546efd0c74e47ac0db66e773bb5/Kiln_Defi.png",
   "chains": [
@@ -30,21 +30,15 @@
       "description": "Griefing or protocol disruption"
     }
   },
-  "source": "immunefi",
+  "source": "whiteclaws",
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Staking pool and delegation contracts",
-      "Reward calculation and distribution logic",
-      "Unstaking cooldown and withdrawal queues",
-      "Validator set management",
-      "Slashing protection mechanisms"
+      "Smart contracts in scope per program listing"
     ],
     "out_of_scope": [
-      "Frontend staking interface",
-      "Validator node infrastructure",
-      "Off-chain monitoring and alerting",
-      "Third-party liquid staking wrappers"
+      "Frontend applications",
+      "Off-chain infrastructure"
     ]
   },
   "updated_at": "2025-04-25T14:09:38.170Z",
@@ -55,8 +49,8 @@
   },
   "live_since": "2023-08-21T10:00:00.000Z",
   "poc_required": true,
-  "immunefi_tags": [
-    "Immunefi Standard",
+  "program_tags": [
+    "Verified Program",
     "KYC Required",
     "PoC Required",
     "Arbitration"

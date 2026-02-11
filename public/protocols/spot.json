@@ -1,7 +1,7 @@
 {
   "slug": "spot",
   "name": "Spot",
-  "description": "Spot bug bounty program",
+  "description": "Spot bug bounty program.",
   "category": "DeFi",
   "logo_url": "https://icons.llamao.fi/icons/protocols/spot-cash?w=48&h=48",
   "chains": [
@@ -30,28 +30,22 @@
       "description": "Griefing or protocol disruption"
     }
   },
-  "source": "immunefi",
+  "source": "whiteclaws",
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Core protocol smart contracts",
-      "Token transfer and approval logic",
-      "Access control and privilege management",
-      "Emergency pause and recovery mechanisms",
-      "Fee calculation and distribution logic"
+      "Smart contracts in scope per program listing"
     ],
     "out_of_scope": [
-      "Frontend and UI components",
-      "Off-chain infrastructure and indexers",
-      "Third-party integrations not deployed by protocol",
-      "Known issues documented in audit reports"
+      "Frontend applications",
+      "Off-chain infrastructure"
     ]
   },
   "updated_at": "2024-11-14T20:35:54.712Z",
   "live_since": "2022-12-22T23:00:00.000Z",
   "poc_required": true,
-  "immunefi_tags": [
-    "Immunefi Standard",
+  "program_tags": [
+    "Verified Program",
     "KYC Not Required",
     "PoC Required"
   ]

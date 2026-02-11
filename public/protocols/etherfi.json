@@ -1,7 +1,7 @@
 {
   "slug": "etherfi",
   "name": "Ether.fi",
-  "description": "Ether.fi bug bounty program",
+  "description": "Ether.fi bug bounty program.",
   "category": "DeFi Staking",
   "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/6uARdqsJxpv7UY78Xbg27/bce4b93c8e971a1a55315d80310f1b9f/ether_fi1677585111698.png",
   "chains": [
@@ -30,21 +30,15 @@
       "description": "Griefing or protocol disruption"
     }
   },
-  "source": "immunefi",
+  "source": "whiteclaws",
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Staking pool and delegation contracts",
-      "Reward calculation and distribution logic",
-      "Unstaking cooldown and withdrawal queues",
-      "Validator set management",
-      "Slashing protection mechanisms"
+      "Smart contracts in scope per program listing"
     ],
     "out_of_scope": [
-      "Frontend staking interface",
-      "Validator node infrastructure",
-      "Off-chain monitoring and alerting",
-      "Third-party liquid staking wrappers"
+      "Frontend applications",
+      "Off-chain infrastructure"
     ]
   },
   "updated_at": "2025-12-15T11:39:59.841Z",
@@ -56,11 +50,11 @@
   "live_since": "2024-03-27T01:30:00.000Z",
   "poc_required": true,
   "triaged": true,
-  "immunefi_tags": [
-    "Immunefi Standard",
+  "program_tags": [
+    "Verified Program",
     "KYC Required",
     "PoC Required",
     "Primacy of Impact",
-    "Triaged by Immunefi"
+    "Triaged"
   ]
 }

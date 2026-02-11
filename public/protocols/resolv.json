@@ -1,7 +1,7 @@
 {
   "slug": "resolv",
   "name": "Resolv",
-  "description": "Resolv bug bounty program",
+  "description": "Resolv bug bounty program.",
   "category": "DeFi",
   "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/PVFDul5ntVzCg90oXYIWi/5ccd470c276900e19c507f93174d4eb0/1gDrgTdA_400x400.png",
   "chains": [
@@ -30,21 +30,15 @@
       "description": "Griefing or protocol disruption"
     }
   },
-  "source": "immunefi",
+  "source": "whiteclaws",
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Core protocol smart contracts",
-      "Token transfer and approval logic",
-      "Access control and privilege management",
-      "Emergency pause and recovery mechanisms",
-      "Fee calculation and distribution logic"
+      "Smart contracts in scope per program listing"
     ],
     "out_of_scope": [
-      "Frontend and UI components",
-      "Off-chain infrastructure and indexers",
-      "Third-party integrations not deployed by protocol",
-      "Known issues documented in audit reports"
+      "Frontend applications",
+      "Off-chain infrastructure"
     ]
   },
   "updated_at": "2025-07-21T08:06:44.968Z",
@@ -56,10 +50,10 @@
   "live_since": "2025-03-31T03:00:08.000Z",
   "poc_required": true,
   "triaged": true,
-  "immunefi_tags": [
-    "Immunefi Standard",
+  "program_tags": [
+    "Verified Program",
     "KYC Required",
     "PoC Required",
-    "Triaged by Immunefi"
+    "Triaged"
   ]
 }

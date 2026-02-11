@@ -1,7 +1,7 @@
 {
   "slug": "babylon-labs",
   "name": "Babylon Labs",
-  "description": "Babylon Labs bug bounty program",
+  "description": "Babylon Labs bug bounty program.",
   "category": "Infrastructure",
   "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/5ZuVO0D8rx9fzSoB5UVsx4/e5f38f1b93be6cb32b6255c21f6db81c/NEW_Babylon_Labs.png",
   "chains": [
@@ -30,21 +30,15 @@
       "description": "Griefing or protocol disruption"
     }
   },
-  "source": "immunefi",
+  "source": "whiteclaws",
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Core protocol smart contracts",
-      "Access control and upgrade mechanisms",
-      "Token management and distribution",
-      "Integration endpoints and adapters",
-      "Emergency and recovery functions"
+      "Smart contracts in scope per program listing"
     ],
     "out_of_scope": [
-      "Frontend and developer portal",
-      "Off-chain infrastructure and APIs",
-      "Documentation and SDK",
-      "Third-party integrations"
+      "Frontend applications",
+      "Off-chain infrastructure"
     ]
   },
   "updated_at": "2025-12-08T07:59:36.838Z",
@@ -56,12 +50,12 @@
   "live_since": "2024-09-16T15:00:00.000Z",
   "poc_required": true,
   "triaged": true,
-  "immunefi_tags": [
-    "Immunefi Standard",
+  "program_tags": [
+    "Verified Program",
     "KYC Required",
     "PoC Required",
     "Primacy of Impact",
-    "Triaged by Immunefi",
+    "Triaged",
     "Arbitration"
   ]
 }

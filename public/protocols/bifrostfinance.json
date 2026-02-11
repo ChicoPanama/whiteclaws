@@ -1,7 +1,7 @@
 {
   "slug": "bifrostfinance",
   "name": "Bifrost",
-  "description": "Bifrost bug bounty program",
+  "description": "Bifrost bug bounty program.",
   "category": "DeFi Staking",
   "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/1tNOIPGrvNlWWhK1FBWj8w/c7bc0dad9e9b986ff06d577092790508/Bifrost_logo.jpeg",
   "chains": [
@@ -30,21 +30,15 @@
       "description": "Griefing or protocol disruption"
     }
   },
-  "source": "immunefi",
+  "source": "whiteclaws",
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Staking pool and delegation contracts",
-      "Reward calculation and distribution logic",
-      "Unstaking cooldown and withdrawal queues",
-      "Validator set management",
-      "Slashing protection mechanisms"
+      "Smart contracts in scope per program listing"
     ],
     "out_of_scope": [
-      "Frontend staking interface",
-      "Validator node infrastructure",
-      "Off-chain monitoring and alerting",
-      "Third-party liquid staking wrappers"
+      "Frontend applications",
+      "Off-chain infrastructure"
     ]
   },
   "updated_at": "2025-11-11T12:17:49.083Z",
@@ -55,8 +49,8 @@
   },
   "live_since": "2022-06-29T03:00:00.000Z",
   "poc_required": true,
-  "immunefi_tags": [
-    "Immunefi Standard",
+  "program_tags": [
+    "Verified Program",
     "KYC Not Required",
     "PoC Required"
   ]
