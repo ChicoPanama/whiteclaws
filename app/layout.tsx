@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Syne, Instrument_Sans, JetBrains_Mono, Space_Grotesk } from 'next/font/google'
-import PrivyProvider from '@/components/PrivyProvider'
 import './globals.css'
+import Providers from './Providers'
 
 const syne = Syne({
   subsets: ['latin'],
@@ -40,9 +40,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${syne.variable} ${instrumentSans.variable} ${jetbrainsMono.variable} ${spaceGrotesk.variable}`}>
       <body className="font-sans antialiased">
-        <PrivyProvider>
+        <Providers>
           {children}
-        </PrivyProvider>
+        </Providers>
       </body>
     </html>
   )
