@@ -5,78 +5,34 @@ import { extractApiKey, verifyApiKey } from '@/lib/auth/api-key'
 export const dynamic = 'force-dynamic'
 
 /**
+ * POST /api/findings/[id]/comment — add comment to finding
  * GET /api/findings/[id]/comment — list comments
- * POST /api/findings/[id]/comment — add comment
+ * Auth: protocol member OR finding researcher
  */
-export async function GET(req: NextRequest, { params }: { params: { id: string } }) {
-  try {
-    const apiKey = extractApiKey(req)
-    if (!apiKey) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
-    const auth = await verifyApiKey(apiKey)
-    if (!auth.valid) return NextResponse.json({ error: auth.error }, { status: 401 })
-
-    const supabase = createClient()
-
-    // Verify user is either the researcher or a protocol member
-    const { data: finding } = await supabase
-      .from('findings')
-      .select('id, researcher_id, protocol_id')
-      .eq('id', params.id)
-      .maybeSingle()
-    if (!finding) return NextResponse.json({ error: 'Finding not found' }, { status: 404 })
-
-    const isResearcher = finding.researcher_id === auth.userId
-    const { data: member } = await supabase
-      .from('protocol_members')
-      .select('role')
-      .eq('protocol_id', finding.protocol_id)
-      .eq('user_id', auth.userId)
-      .maybeSingle()
-
-    if (!isResearcher && !member) {
-      return NextResponse.json({ error: 'Access denied' }, { status: 403 })
-    }
-
-    let query = supabase
-      .from('finding_comments')
-      .select('id, content, is_internal, created_at, user:user_id (handle, display_name)')
-      .eq('finding_id', params.id)
-      .order('created_at', { ascending: true })
-
-    // Researchers can't see internal comments
-    if (isResearcher && !member) {
-      query = query.eq('is_internal', false)
-    }
-
-    const { data: comments, error } = await query
-    if (error) throw error
-
-    return NextResponse.json({ comments: comments || [] })
-  } catch (error) {
-    console.error('Comments error:', error)
-    return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
-  }
-}
-
 export async function POST(req: NextRequest, { params }: { params: { id: string } }) {
+  const apiKey = extractApiKey(req)
+  if (!apiKey) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+
+  const auth = await verifyApiKey(apiKey)
+  if (!auth.valid) return NextResponse.json({ error: auth.error }, { status: 401 })
+
   try {
-    const apiKey = extractApiKey(req)
-    if (!apiKey) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
-    const auth = await verifyApiKey(apiKey)
-    if (!auth.valid) return NextResponse.json({ error: auth.error }, { status: 401 })
-
-    const supabase = createClient()
     const body = await req.json()
+    const { content, is_internal } = body
 
-    if (!body.content || typeof body.content !== 'string') {
+    if (!content || typeof content !== 'string' || content.length < 1) {
       return NextResponse.json({ error: 'content is required' }, { status: 400 })
     }
 
+    const supabase = createClient()
+
+    // Verify access: must be protocol member or researcher
     const { data: finding } = await supabase
       .from('findings')
-      .select('id, researcher_id, protocol_id')
+      .select('id, protocol_id, researcher_id')
       .eq('id', params.id)
       .maybeSingle()
+
     if (!finding) return NextResponse.json({ error: 'Finding not found' }, { status: 404 })
 
     const isResearcher = finding.researcher_id === auth.userId
@@ -88,16 +44,19 @@ export async function POST(req: NextRequest, { params }: { params: { id: string 
       .maybeSingle()
 
     if (!isResearcher && !member) {
-      return NextResponse.json({ error: 'Access denied' }, { status: 403 })
+      return NextResponse.json({ error: 'Not authorized to comment on this finding' }, { status: 403 })
     }
+
+    // Only protocol members can post internal comments
+    const internal = is_internal && !!member
 
     const { data: comment, error } = await supabase
       .from('finding_comments')
       .insert({
         finding_id: params.id,
         user_id: auth.userId,
-        content: body.content,
-        is_internal: body.is_internal && !!member ? true : false,
+        content,
+        is_internal: internal,
       })
       .select('id, content, is_internal, created_at')
       .single()
@@ -109,4 +68,50 @@ export async function POST(req: NextRequest, { params }: { params: { id: string 
     console.error('Comment error:', error)
     return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
   }
+}
+
+export async function GET(req: NextRequest, { params }: { params: { id: string } }) {
+  const apiKey = extractApiKey(req)
+  if (!apiKey) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+
+  const auth = await verifyApiKey(apiKey)
+  if (!auth.valid) return NextResponse.json({ error: auth.error }, { status: 401 })
+
+  const supabase = createClient()
+
+  const { data: finding } = await supabase
+    .from('findings')
+    .select('id, protocol_id, researcher_id')
+    .eq('id', params.id)
+    .maybeSingle()
+
+  if (!finding) return NextResponse.json({ error: 'Finding not found' }, { status: 404 })
+
+  const isResearcher = finding.researcher_id === auth.userId
+  const { data: member } = await supabase
+    .from('protocol_members')
+    .select('role')
+    .eq('protocol_id', finding.protocol_id)
+    .eq('user_id', auth.userId)
+    .maybeSingle()
+
+  if (!isResearcher && !member) {
+    return NextResponse.json({ error: 'Not authorized' }, { status: 403 })
+  }
+
+  // Protocol members see internal comments, researchers don't
+  let query = supabase
+    .from('finding_comments')
+    .select('id, content, is_internal, created_at, user:users!user_id(handle, display_name)')
+    .eq('finding_id', params.id)
+    .order('created_at', { ascending: true })
+
+  if (!member) {
+    query = query.eq('is_internal', false)
+  }
+
+  const { data: comments, error } = await query
+  if (error) throw error
+
+  return NextResponse.json({ comments: comments || [] })
 }

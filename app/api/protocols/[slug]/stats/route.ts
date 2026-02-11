@@ -4,84 +4,84 @@ import { createClient } from '@/lib/supabase/admin'
 export const dynamic = 'force-dynamic'
 
 /**
- * GET /api/protocols/[slug]/stats — public protocol stats
+ * GET /api/protocols/[slug]/stats — public program stats
  */
 export async function GET(req: NextRequest, { params }: { params: { slug: string } }) {
   const supabase = createClient()
 
   const { data: protocol } = await supabase
     .from('protocols')
-    .select('id, slug, name, max_bounty, category, chains')
+    .select('id, name, slug')
     .eq('slug', params.slug)
     .maybeSingle()
 
   if (!protocol) return NextResponse.json({ error: 'Protocol not found' }, { status: 404 })
 
+  // Get program
   const { data: program } = await supabase
     .from('programs')
-    .select('id, status, min_payout, max_payout, payout_currency, response_sla_hours, created_at')
+    .select('id, status, max_payout, min_payout, payout_currency, created_at')
     .eq('protocol_id', protocol.id)
-    .order('created_at', { ascending: false })
-    .limit(1)
+    .neq('status', 'ended')
     .maybeSingle()
 
-  if (!program) {
-    return NextResponse.json({
-      protocol: { slug: protocol.slug, name: protocol.name },
-      stats: { total_findings: 0, accepted: 0, total_paid: 0, avg_response_hours: null },
-    })
+  // Count findings by status
+  const { data: findings } = await supabase
+    .from('findings')
+    .select('status, severity, payout_amount, paid_at, created_at, triaged_at')
+    .eq('protocol_id', protocol.id)
+
+  const stats = {
+    total_findings: 0,
+    submitted: 0,
+    triaged: 0,
+    accepted: 0,
+    rejected: 0,
+    paid: 0,
+    total_paid_amount: 0,
+    avg_response_hours: 0,
+    by_severity: { critical: 0, high: 0, medium: 0, low: 0 } as Record<string, number>,
   }
 
-  // Count findings by status
-  const { count: totalFindings } = await supabase
-    .from('findings')
-    .select('id', { count: 'exact', head: true })
-    .eq('protocol_id', protocol.id)
+  if (findings) {
+    stats.total_findings = findings.length
+    let totalResponseTime = 0
+    let responseCounted = 0
 
-  const { count: accepted } = await supabase
-    .from('findings')
-    .select('id', { count: 'exact', head: true })
-    .eq('protocol_id', protocol.id)
-    .in('status', ['accepted', 'paid'])
+    for (const f of findings) {
+      if (f.status === 'submitted') stats.submitted++
+      else if (f.status === 'triaged') stats.triaged++
+      else if (f.status === 'accepted') stats.accepted++
+      else if (f.status === 'rejected' || f.status === 'duplicate') stats.rejected++
+      else if (f.status === 'paid') {
+        stats.paid++
+        stats.total_paid_amount += Number(f.payout_amount) || 0
+      }
 
-  const { count: paid } = await supabase
-    .from('findings')
-    .select('id', { count: 'exact', head: true })
-    .eq('protocol_id', protocol.id)
-    .eq('status', 'paid')
+      if (f.severity && stats.by_severity[f.severity] !== undefined) {
+        stats.by_severity[f.severity]++
+      }
 
-  // Sum payouts
-  const { data: payoutData } = await supabase
-    .from('findings')
-    .select('payout_amount')
-    .eq('protocol_id', protocol.id)
-    .eq('status', 'paid')
-    .not('payout_amount', 'is', null)
+      if (f.triaged_at && f.created_at) {
+        const diff = new Date(f.triaged_at).getTime() - new Date(f.created_at).getTime()
+        totalResponseTime += diff
+        responseCounted++
+      }
+    }
 
-  const totalPaid = (payoutData || []).reduce((sum, f) => sum + (Number(f.payout_amount) || 0), 0)
+    if (responseCounted > 0) {
+      stats.avg_response_hours = Math.round(totalResponseTime / responseCounted / 3600000)
+    }
+  }
 
   return NextResponse.json({
-    protocol: {
-      slug: protocol.slug,
-      name: protocol.name,
-      category: protocol.category,
-      chains: protocol.chains,
-      max_bounty: protocol.max_bounty,
-    },
-    program: {
+    protocol: { name: protocol.name, slug: protocol.slug },
+    program: program ? {
       status: program.status,
-      payout_currency: program.payout_currency,
-      min_payout: program.min_payout,
       max_payout: program.max_payout,
-      response_sla_hours: program.response_sla_hours,
-      live_since: program.created_at,
-    },
-    stats: {
-      total_findings: totalFindings || 0,
-      accepted: accepted || 0,
-      paid: paid || 0,
-      total_paid: totalPaid,
       payout_currency: program.payout_currency,
-    },
+      live_since: program.created_at,
+    } : null,
+    stats,
   })
 }
