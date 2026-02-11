@@ -36,7 +36,7 @@ export async function GET(req: NextRequest, { params }: { params: { id: string }
 
     let query = supabase
       .from('finding_comments')
-      .select('id, content, is_internal, created_at, user_id')
+      .select('id, content, is_internal, created_at, user:user_id (id, handle, display_name)')
       .eq('finding_id', params.id)
       .order('created_at', { ascending: true })
 
