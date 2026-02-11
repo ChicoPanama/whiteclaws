@@ -1,29 +1,11 @@
 'use client';
 
-import { useState, useCallback } from 'react';
+import { useState } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { useAuth } from '@/hooks/useAuth';
 
-// Privy login hook — gracefully no-ops if PrivyProvider not mounted
-function usePrivyLogin() {
-  try {
-    // Dynamic import pattern — won't break if Privy isn't configured
-    const privy = require('@privy-io/react-auth');
-    return privy.useLogin?.() ?? null;
-  } catch {
-    return null;
-  }
-}
-
-function usePrivyState() {
-  try {
-    const privy = require('@privy-io/react-auth');
-    return privy.usePrivy?.() ?? { authenticated: false, ready: false };
-  } catch {
-    return { authenticated: false, ready: false };
-  }
-}
+const HAS_PRIVY = !!process.env.NEXT_PUBLIC_PRIVY_APP_ID;
 
 export default function LoginForm() {
   const router = useRouter();
@@ -34,22 +16,11 @@ export default function LoginForm() {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
-  const privyLogin = usePrivyLogin();
-  const privyState = usePrivyState();
-  const hasPrivy = !!process.env.NEXT_PUBLIC_PRIVY_APP_ID;
-
-  const handleWalletLogin = useCallback(() => {
-    if (privyLogin?.login) {
-      privyLogin.login();
-    } else {
-      setError('Wallet connection not configured yet');
-    }
-  }, [privyLogin]);
-
-  // Redirect on Privy auth
-  if (privyState.authenticated) {
-    router.push(callbackUrl);
-  }
+  const handleWalletLogin = () => {
+    // Phase 4: This will use Privy's login modal when configured.
+    // For now, show a helpful message.
+    setError('Wallet connection coming soon. Use email or social login for now.');
+  };
 
   const handleEmailLogin = async (e: React.FormEvent) => {
     e.preventDefault();
