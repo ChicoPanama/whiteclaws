@@ -37,8 +37,20 @@ export function getJSONBounties(): Bounty[] {
     maxReward: `$${(p.bounty?.max ?? 0).toLocaleString()}`,
     maxRewardNum: p.bounty?.max ?? 0,
     reward: `$${(p.bounty?.max ?? 0).toLocaleString()}`,
-    liveSince: 'Live',
+    liveSince: p.live_since
+      ? new Date(p.live_since).toLocaleDateString('en-US', { year: 'numeric', month: 'short' })
+      : 'Live',
     type: 'Smart Contract',
+    // Rich fields
+    description: p.description || '',
+    kycRequired: p.bounty?.kyc_required ?? false,
+    pocRequired: p.poc_required ?? false,
+    triaged: p.triaged ?? false,
+    payoutToken: p.bounty?.payout_token || 'USDC',
+    severityMax: p.severity_payouts?.critical?.max ?? 0,
+    severityHigh: p.severity_payouts?.high?.max ?? 0,
+    scopeCount: p.scope?.in_scope?.length ?? 0,
+    contractCount: p.contracts?.length ?? 0,
   }))
 }
 
@@ -69,5 +81,6 @@ export async function getBounties(): Promise<Bounty[]> {
     reward: `$${(protocol.max_bounty ?? 0).toLocaleString()}`,
     liveSince: 'Live',
     type: 'Smart Contract',
+    description: protocol.description || '',
   }))
 }
