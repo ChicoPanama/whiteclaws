@@ -1,92 +1,89 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { createAdminClient } from '@/lib/supabase/admin'
-import { generateApiKey } from '@/lib/auth/apikey'
+import { createClient } from '@/lib/supabase/admin'
+import { generateApiKey } from '@/lib/auth/api-key'
 
 export const dynamic = 'force-dynamic'
 
 /**
  * POST /api/agents/register
- *
- * Register a new AI security agent.
- * Returns the API key ONCE — caller must save it.
- *
- * Body: {
- *   handle: string        — unique (lowercase, alphanumeric + underscores)
- *   name: string          — display name
- *   bio?: string
- *   specialties?: string[]
- *   wallet_address?: string
- * }
+ * Register a new agent. Returns agent record + one-time API key.
+ * Body: { handle, name, wallet_address?, specialties?, bio? }
  */
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json()
-    const { handle, name, bio, specialties, wallet_address } = body
+    const { handle, name, wallet_address, specialties, bio } = body
 
-    if (!handle || !/^[a-z0-9_]{3,30}$/.test(handle)) {
-      return NextResponse.json(
-        { error: 'handle must be 3-30 lowercase alphanumeric chars or underscores' },
-        { status: 400 }
-      )
+    if (!handle || typeof handle !== 'string' || handle.length < 2) {
+      return NextResponse.json({ error: 'handle is required (min 2 chars)' }, { status: 400 })
     }
-
     if (!name || typeof name !== 'string') {
       return NextResponse.json({ error: 'name is required' }, { status: 400 })
     }
 
-    const supabase = createAdminClient()
+    const cleanHandle = handle.toLowerCase().replace(/[^a-z0-9_-]/g, '')
+    if (cleanHandle !== handle.toLowerCase()) {
+      return NextResponse.json(
+        { error: 'handle must be alphanumeric with underscores/hyphens only' },
+        { status: 400 }
+      )
+    }
 
-    // Check existing
+    const supabase = createClient()
+
     const { data: existing } = await supabase
       .from('users')
       .select('id')
-      .eq('handle', handle)
-      .single()
+      .eq('handle', cleanHandle)
+      .maybeSingle()
 
     if (existing) {
       return NextResponse.json({ error: 'Handle already taken' }, { status: 409 })
     }
 
-    // Generate API key
-    const { raw, hash, prefix } = generateApiKey()
-
-    // Create agent
-    const { data: agent, error } = await supabase
+    const { data: agent, error: createError } = await supabase
       .from('users')
       .insert({
-        handle,
+        handle: cleanHandle,
         display_name: name,
-        bio: bio || null,
-        specialties: specialties || [],
         wallet_address: wallet_address || null,
         is_agent: true,
+        specialties: Array.isArray(specialties) ? specialties : [],
+        bio: bio || `${name} — AI security agent on WhiteClaws.`,
         status: 'active',
-        api_key_hash: hash,
-        api_key_prefix: prefix,
         reputation_score: 0,
       })
-      .select('id, handle, display_name')
+      .select('id, handle, display_name, is_agent, specialties, created_at')
       .single()
 
-    if (error) {
-      if (error.code === '23505') {
-        return NextResponse.json({ error: 'Handle already taken' }, { status: 409 })
+    if (createError) {
+      if (createError.code === '23505') {
+        return NextResponse.json({ error: 'Handle or wallet already registered' }, { status: 409 })
       }
-      throw error
+      throw createError
     }
 
-    // Create initial ranking
     await supabase.from('agent_rankings').insert({
       agent_id: agent.id,
       rank: 0, points: 0,
-      total_submissions: 0, accepted_submissions: 0,
-      total_bounty_amount: 0,
+      total_submissions: 0, accepted_submissions: 0, total_bounty_amount: 0,
     })
 
+    const { key, keyPrefix } = await generateApiKey(agent.id, 'default', [
+      'agent:read', 'agent:submit',
+    ])
+
     return NextResponse.json({
-      agent: { id: agent.id, handle: agent.handle, name: agent.display_name },
-      api_key: raw,
-      message: 'Agent registered. Save this API key — it will not be shown again.',
+      agent: {
+        id: agent.id,
+        handle: agent.handle,
+        name: agent.display_name,
+        specialties: agent.specialties,
+        created_at: agent.created_at,
+      },
+      api_key: key,
+      api_key_prefix: keyPrefix,
+      message: 'Save your API key now — it will not be shown again. Use: Authorization: Bearer <key>',
     }, { status: 201 })
   } catch (error) {
     console.error('Agent registration error:', error)

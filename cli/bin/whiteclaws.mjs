@@ -1,29 +1,46 @@
 #!/usr/bin/env node
+/**
+ * WhiteClaws CLI — Agent security operations tool.
+ * Compatible with OpenClawd agent skill files.
+ *
+ * Usage:
+ *   whiteclaws login <api-key>
+ *   whiteclaws register --handle <handle> --name <name>
+ *   whiteclaws status
+ *   whiteclaws scan <protocol-slug>
+ *   whiteclaws submit <finding.json>
+ *   whiteclaws keys list|create|revoke
+ */
 
 import { Command } from 'commander'
-import { readFileSync, writeFileSync, existsSync } from 'fs'
-import { join } from 'path'
+import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'fs'
 import { homedir } from 'os'
+import { join } from 'path'
 
-const CONFIG_PATH = join(homedir(), '.whiteclaws.json')
+const CONFIG_DIR = join(homedir(), '.whiteclaws')
+const CONFIG_FILE = join(CONFIG_DIR, 'config.json')
 const API_BASE = process.env.WHITECLAWS_API_URL || 'https://whiteclaws-dun.vercel.app'
 
-// ─── Config helpers ───
+// ── Config helpers ──
 
 function loadConfig() {
-  if (!existsSync(CONFIG_PATH)) return {}
-  try { return JSON.parse(readFileSync(CONFIG_PATH, 'utf8')) }
-  catch { return {} }
+  try {
+    return JSON.parse(readFileSync(CONFIG_FILE, 'utf-8'))
+  } catch {
+    return {}
+  }
 }
 
 function saveConfig(config) {
-  writeFileSync(CONFIG_PATH, JSON.stringify(config, null, 2) + '\n', { mode: 0o600 })
+  if (!existsSync(CONFIG_DIR)) mkdirSync(CONFIG_DIR, { recursive: true })
+  writeFileSync(CONFIG_FILE, JSON.stringify(config, null, 2))
 }
 
 function getApiKey() {
-  const key = process.env.WHITECLAWS_API_KEY || loadConfig().api_key
+  const config = loadConfig()
+  const key = process.env.WHITECLAWS_API_KEY || config.api_key
   if (!key) {
-    console.error('❌ No API key. Run: whiteclaws login <key>')
+    console.error('❌ No API key configured. Run: whiteclaws login <api-key>')
     process.exit(1)
   }
   return key
@@ -36,59 +53,68 @@ async function api(method, path, body = null) {
     headers: {
       'Authorization': `Bearer ${key}`,
       'Content-Type': 'application/json',
+      'User-Agent': 'whiteclaws-cli/0.1.0',
     },
   }
   if (body) opts.body = JSON.stringify(body)
-  
-  const res = await fetch(`${API_BASE}${path}`, opts)
-  const data = await res.json()
-  
+
+  const url = `${API_BASE}${path}`
+  const res = await fetch(url, opts)
+  const data = await res.json().catch(() => ({}))
+
   if (!res.ok) {
-    console.error(`❌ ${res.status}: ${data.error || JSON.stringify(data)}`)
+    console.error(`❌ ${res.status}: ${data.error || 'Unknown error'}`)
     process.exit(1)
   }
   return data
 }
 
-// ─── Commands ───
+// ── Commands ──
 
 const program = new Command()
+program
   .name('whiteclaws')
-  .description('WhiteClaws Security Platform CLI')
+  .description('WhiteClaws CLI — Agent security operations')
   .version('0.1.0')
 
-// login
+// LOGIN
 program
   .command('login <api-key>')
-  .description('Save API key for authentication')
+  .description('Save API key for future requests')
   .action((apiKey) => {
-    if (!apiKey.startsWith('wc_live_')) {
-      console.error('❌ Invalid key format. Keys start with wc_live_')
+    if (!apiKey.startsWith('wc_')) {
+      console.error('❌ Invalid key format. Keys start with wc_')
       process.exit(1)
     }
     const config = loadConfig()
     config.api_key = apiKey
     saveConfig(config)
-    console.log('✅ API key saved to ~/.whiteclaws.json')
+    console.log(`✅ API key saved (${apiKey.slice(0, 10)}...)`)
+    console.log(`   Config: ${CONFIG_FILE}`)
   })
 
-// register
+// REGISTER
 program
   .command('register')
   .description('Register a new agent')
-  .requiredOption('--handle <handle>', 'Agent handle (lowercase, 3-30 chars)')
+  .requiredOption('--handle <handle>', 'Unique agent handle')
   .requiredOption('--name <name>', 'Display name')
-  .option('--bio <bio>', 'Agent description')
-  .option('--specialties <list>', 'Comma-separated specialties')
+  .option('--wallet <address>', 'Wallet address')
+  .option('--specialties <items>', 'Comma-separated specialties')
+  .option('--bio <text>', 'Agent description')
   .action(async (opts) => {
     const body = {
       handle: opts.handle,
       name: opts.name,
-      bio: opts.bio || undefined,
-      specialties: opts.specialties ? opts.specialties.split(',').map(s => s.trim()) : undefined,
+      wallet_address: opts.wallet || null,
+      specialties: opts.specialties ? opts.specialties.split(',').map((s) => s.trim()) : [],
+      bio: opts.bio || null,
     }
 
-    const res = await fetch(`${API_BASE}/api/agents/register/`, {
+    console.log(`🔵 Registering agent @${opts.handle}...`)
+
+    const url = `${API_BASE}/api/agents/register/`
+    const res = await fetch(url, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(body),
@@ -100,104 +126,132 @@ program
       process.exit(1)
     }
 
-    console.log(`\n🦞 Agent registered!`)
-    console.log(`   Handle: ${data.agent.handle}`)
-    console.log(`   ID:     ${data.agent.id}`)
-    console.log(`\n🔑 API Key (save this — shown only once):`)
-    console.log(`   ${data.api_key}`)
-    console.log(`\nRun: whiteclaws login ${data.api_key}`)
+    // Auto-save API key
+    const config = loadConfig()
+    config.api_key = data.api_key
+    config.handle = data.agent.handle
+    config.agent_id = data.agent.id
+    saveConfig(config)
+
+    console.log(`\n🟢 Agent registered!`)
+    console.log(`   Handle:  @${data.agent.handle}`)
+    console.log(`   ID:      ${data.agent.id}`)
+    console.log(`   API Key: ${data.api_key}`)
+    console.log(`\n   ⚠️  Save this API key — it won't be shown again.`)
+    console.log(`   Key saved to ${CONFIG_FILE}`)
   })
 
-// status
+// STATUS
 program
   .command('status')
-  .description('Check agent status and recent submissions')
+  .description('Check agent status and stats')
   .action(async () => {
-    const data = await api('GET', '/api/agents/status/')
-    
-    console.log(`\n🦞 ${data.agent.name} (@${data.agent.handle})`)
-    console.log(`   Status: ${data.agent.status}`)
-    console.log(`   Reputation: ${data.agent.reputation}`)
-    console.log(`\n📊 Stats:`)
-    console.log(`   Rank: #${data.stats.rank}`)
-    console.log(`   Submissions: ${data.stats.total_submissions}`)
-    console.log(`   Accepted: ${data.stats.accepted_submissions}`)
-    console.log(`   Earned: $${data.stats.total_bounty_amount.toLocaleString()}`)
-    
-    if (data.recent_findings?.length > 0) {
-      console.log(`\n📋 Recent Findings:`)
-      for (const f of data.recent_findings) {
-        const date = new Date(f.created_at).toLocaleDateString()
-        console.log(`   [${f.severity.toUpperCase()}] ${f.title} — ${f.status} (${date})`)
-      }
+    const config = loadConfig()
+    const handle = config.handle
+
+    if (!handle) {
+      console.log('🔵 Checking API key...')
+      const data = await api('GET', '/api/agents/keys/')
+      console.log(`✅ API key valid. ${data.keys?.length || 0} key(s) on account.`)
+      return
     }
+
+    const data = await api('GET', `/api/agents?handle=${handle}`)
+    const agent = data.agent
+
+    console.log(`\n🦞 Agent: ${agent.name} (@${agent.handle})`)
+    console.log(`   Reputation:   ${agent.reputation?.toLocaleString() || 0}`)
+    console.log(`   Rank:         #${agent.rank || '—'}`)
+    console.log(`   Submissions:  ${agent.total_submissions || 0}`)
+    console.log(`   Accepted:     ${agent.accepted_submissions || 0}`)
+    console.log(`   Earned:       $${(agent.total_bounty_amount || 0).toLocaleString()}`)
+    console.log(`   Status:       ${agent.status || 'active'}`)
   })
 
-// submit
+// SCAN (triggers White-Rabbit style scan)
 program
-  .command('submit')
-  .description('Submit a vulnerability finding')
-  .requiredOption('--protocol <slug>', 'Protocol slug (e.g. aave)')
-  .requiredOption('--title <title>', 'Finding title')
-  .requiredOption('--severity <level>', 'critical | high | medium | low')
-  .option('--description <desc>', 'Finding description')
-  .option('--file <path>', 'JSON finding file to submit')
-  .option('--chain <chain>', 'Chain where vulnerability exists')
-  .option('--contract <address>', 'Affected contract address')
-  .action(async (opts) => {
-    let body = {
-      protocol_slug: opts.protocol,
-      title: opts.title,
-      severity: opts.severity,
-      description: opts.description,
-      chain: opts.chain,
-      contract_address: opts.contract,
+  .command('scan <protocol>')
+  .description('Scan a protocol for vulnerabilities')
+  .option('--depth <level>', 'Scan depth: quick|standard|deep', 'standard')
+  .action(async (protocol, opts) => {
+    console.log(`🔵 Initiating ${opts.depth} scan of ${protocol}...`)
+    console.log(`   This is a placeholder — full scanning requires White-Rabbit agent.`)
+    console.log(`   To run a real scan, deploy White-Rabbit with this CLI's API key.`)
+    console.log(`\n   Protocol: ${protocol}`)
+    console.log(`   Depth:    ${opts.depth}`)
+    console.log(`   Status:   ⚪ Not implemented in CLI (use White-Rabbit agent)`)
+  })
+
+// SUBMIT
+program
+  .command('submit <file>')
+  .description('Submit a vulnerability finding from JSON file')
+  .action(async (file) => {
+    if (!existsSync(file)) {
+      console.error(`❌ File not found: ${file}`)
+      process.exit(1)
     }
 
-    // If file provided, merge its contents
-    if (opts.file) {
-      try {
-        const fileData = JSON.parse(readFileSync(opts.file, 'utf8'))
-        body = { ...body, ...fileData }
-      } catch (e) {
-        console.error(`❌ Failed to read file: ${e.message}`)
+    let finding
+    try {
+      finding = JSON.parse(readFileSync(file, 'utf-8'))
+    } catch {
+      console.error('❌ Invalid JSON file')
+      process.exit(1)
+    }
+
+    const required = ['protocol_slug', 'title', 'severity']
+    for (const field of required) {
+      if (!finding[field]) {
+        console.error(`❌ Missing required field: ${field}`)
         process.exit(1)
       }
     }
 
-    const data = await api('POST', '/api/agents/submit/', body)
-    
-    console.log(`\n✅ Finding submitted!`)
-    console.log(`   ID: ${data.finding.id}`)
-    console.log(`   Protocol: ${data.finding.protocol}`)
-    console.log(`   Severity: ${data.finding.severity}`)
-    console.log(`   Status: ${data.finding.status}`)
+    console.log(`🔵 Submitting finding: ${finding.title}`)
+    console.log(`   Protocol: ${finding.protocol_slug}`)
+    console.log(`   Severity: ${finding.severity}`)
+
+    const data = await api('POST', '/api/agents/submit/', finding)
+
+    console.log(`\n🟢 Finding submitted!`)
+    console.log(`   ID:       ${data.finding.id}`)
+    console.log(`   Status:   ${data.finding.status}`)
+    console.log(`   Protocol: ${data.finding.protocol_name}`)
   })
 
-// rotate-key
-program
-  .command('rotate-key')
-  .description('Rotate your API key (old key is immediately invalidated)')
-  .action(async () => {
-    const data = await api('POST', '/api/agents/rotate-key/')
-    
-    const config = loadConfig()
-    config.api_key = data.api_key
-    saveConfig(config)
-    
-    console.log(`\n🔑 New API key (saved to ~/.whiteclaws.json):`)
-    console.log(`   ${data.api_key}`)
+// KEYS
+const keys = program.command('keys').description('Manage API keys')
+
+keys.command('list').action(async () => {
+  const data = await api('GET', '/api/agents/keys/')
+  if (!data.keys?.length) {
+    console.log('No API keys found.')
+    return
+  }
+  console.log(`\n   ${'Prefix'.padEnd(16)} ${'Name'.padEnd(15)} ${'Active'.padEnd(8)} Last Used`)
+  console.log('   ' + '-'.repeat(60))
+  for (const k of data.keys) {
+    const active = k.active ? '✅' : '❌'
+    const lastUsed = k.last_used_at ? new Date(k.last_used_at).toLocaleDateString() : 'Never'
+    console.log(`   ${k.key_prefix.padEnd(16)} ${k.name.padEnd(15)} ${active.padEnd(8)} ${lastUsed}`)
+  }
+})
+
+keys.command('create')
+  .option('--name <name>', 'Key name', 'cli-key')
+  .action(async (opts) => {
+    const data = await api('POST', '/api/agents/keys/', { name: opts.name })
+    console.log(`\n🟢 New API key created!`)
+    console.log(`   Key:    ${data.key}`)
+    console.log(`   Prefix: ${data.key_prefix}`)
+    console.log(`   Name:   ${data.name}`)
+    console.log(`\n   ⚠️  Save this key — it won't be shown again.`)
   })
 
-// scan (triggers remote scan — placeholder for Phase 6)
-program
-  .command('scan <protocol>')
-  .description('Trigger a vulnerability scan on a protocol')
-  .action(async (protocol) => {
-    console.log(`\n🔍 Scanning ${protocol}...`)
-    console.log(`   ⚠️  Remote scanning not yet available.`)
-    console.log(`   Use White-Rabbit directly for scanning.`)
-    console.log(`   Submit findings via: whiteclaws submit --protocol ${protocol} --title "..." --severity critical`)
-  })
+keys.command('revoke <key-id>').action(async (keyId) => {
+  await api('DELETE', '/api/agents/keys/', { key_id: keyId })
+  console.log(`✅ Key ${keyId} revoked.`)
+})
 
 program.parse()

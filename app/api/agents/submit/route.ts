@@ -1,129 +1,121 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { authenticateAgent } from '@/lib/auth/middleware'
-import { createAdminClient } from '@/lib/supabase/admin'
+import { createClient } from '@/lib/supabase/admin'
+import { extractApiKey, verifyApiKey } from '@/lib/auth/api-key'
 
 export const dynamic = 'force-dynamic'
 
 /**
  * POST /api/agents/submit
- *
- * Agent submits a vulnerability finding.
- * Requires API key auth via Authorization: Bearer wc_live_xxx
+ * Submit a vulnerability finding as an authenticated agent.
+ * Requires API key auth via Authorization: Bearer wc_xxx_yyy
  *
  * Body: {
- *   protocol_slug: string     — target protocol
- *   title: string             — finding title
- *   severity: "critical" | "high" | "medium" | "low"
- *   description?: string      — plaintext summary (optional)
- *   encrypted_report?: {      — NaCl-encrypted full report
- *     ciphertext: string
- *     nonce: string
- *     sender_public_key: string
- *   }
- *   proof_of_concept?: string — PoC code or reference
- *   chain?: string            — chain where vuln exists
- *   contract_address?: string — affected contract
+ *   protocol_slug: string,
+ *   title: string,
+ *   severity: 'critical' | 'high' | 'medium' | 'low',
+ *   description?: string,
+ *   encrypted_report?: { ciphertext, nonce, senderPublicKey },
+ *   proof_of_concept?: string,
  * }
  */
 export async function POST(req: NextRequest) {
   try {
-    // Authenticate agent
-    const agent = await authenticateAgent(req)
-    if (!agent) {
+    // Authenticate via API key
+    const apiKey = extractApiKey(req)
+    if (!apiKey) {
       return NextResponse.json(
-        { error: 'Unauthorized. Provide API key via Authorization: Bearer wc_live_xxx' },
+        { error: 'Missing API key. Use Authorization: Bearer wc_xxx_yyy' },
         { status: 401 }
       )
     }
 
-    const body = await req.json()
-    const { protocol_slug, title, severity, description, encrypted_report, proof_of_concept, chain, contract_address } = body
+    const auth = await verifyApiKey(apiKey)
+    if (!auth.valid) {
+      return NextResponse.json({ error: auth.error || 'Invalid API key' }, { status: 401 })
+    }
 
-    // Validate required fields
+    // Check scope
+    if (!auth.scopes?.includes('agent:submit')) {
+      return NextResponse.json({ error: 'API key lacks agent:submit scope' }, { status: 403 })
+    }
+
+    const body = await req.json()
+    const { protocol_slug, title, severity, description, encrypted_report, proof_of_concept } = body
+
+    // Validate
     if (!protocol_slug || typeof protocol_slug !== 'string') {
       return NextResponse.json({ error: 'protocol_slug is required' }, { status: 400 })
     }
-    if (!title || typeof title !== 'string') {
-      return NextResponse.json({ error: 'title is required' }, { status: 400 })
+    if (!title || typeof title !== 'string' || title.length < 5) {
+      return NextResponse.json({ error: 'title is required (min 5 chars)' }, { status: 400 })
     }
     if (!['critical', 'high', 'medium', 'low'].includes(severity)) {
-      return NextResponse.json({ error: 'severity must be critical, high, medium, or low' }, { status: 400 })
+      return NextResponse.json(
+        { error: 'severity must be critical, high, medium, or low' },
+        { status: 400 }
+      )
     }
 
-    const supabase = createAdminClient()
+    const supabase = createClient()
 
-    // Look up protocol
+    // Resolve protocol
     const { data: protocol } = await supabase
       .from('protocols')
       .select('id, slug, name')
       .eq('slug', protocol_slug)
-      .single()
+      .maybeSingle()
 
     if (!protocol) {
       return NextResponse.json({ error: `Protocol '${protocol_slug}' not found` }, { status: 404 })
     }
 
-    // Store encrypted report if provided
-    const encrypted_url = encrypted_report
-      ? JSON.stringify(encrypted_report)
-      : description || ''
+    // Build encrypted report URL (or store inline)
+    let encryptedReportUrl: string | null = null
+    if (encrypted_report) {
+      encryptedReportUrl = JSON.stringify(encrypted_report)
+    }
 
-    // Create finding
-    const { data: finding, error } = await supabase
+    // Insert finding
+    const { data: finding, error: insertError } = await supabase
       .from('findings')
       .insert({
         protocol_id: protocol.id,
-        researcher_id: agent.id,
-        agent_id: agent.id,
+        researcher_id: auth.userId,
         title,
         severity,
-        encrypted_report_url: encrypted_url,
+        encrypted_report_url: encryptedReportUrl,
         status: 'submitted',
       })
-      .select('id, status, created_at')
+      .select('id, title, severity, status, created_at')
       .single()
 
-    if (error) throw error
+    if (insertError) throw insertError
 
-    // Update agent stats
-    await supabase.rpc('increment_agent_submissions', { agent_user_id: agent.id }).catch(() => {
-      // Fallback: manual update if RPC doesn't exist
-      supabase
+    // Update agent submission count
+    await supabase.rpc('increment_submissions', { agent_user_id: auth.userId }).catch(() => {
+      // RPC might not exist yet — update manually
+      return supabase
         .from('agent_rankings')
         .update({
-          total_submissions: supabase.rpc ? undefined : 0, // Will be updated by trigger
+          total_submissions: supabase.rpc ? undefined : 0, // will be handled by trigger
         })
-        .eq('agent_id', agent.id)
+        .eq('agent_id', auth.userId)
     })
-
-    // Manual stats update (safe fallback)
-    const { data: currentRanking } = await supabase
-      .from('agent_rankings')
-      .select('total_submissions')
-      .eq('agent_id', agent.id)
-      .single()
-
-    if (currentRanking) {
-      await supabase
-        .from('agent_rankings')
-        .update({ total_submissions: (currentRanking.total_submissions || 0) + 1 })
-        .eq('agent_id', agent.id)
-    }
 
     return NextResponse.json({
       finding: {
         id: finding.id,
         protocol: protocol.slug,
-        title,
-        severity,
+        protocol_name: protocol.name,
+        title: finding.title,
+        severity: finding.severity,
         status: finding.status,
-        submitted_at: finding.created_at,
+        created_at: finding.created_at,
       },
-      agent: agent.handle,
-      message: 'Finding submitted successfully.',
+      message: 'Finding submitted successfully. It will be triaged by the protocol team.',
     }, { status: 201 })
   } catch (error) {
-    console.error('Agent submit error:', error)
+    console.error('Agent submission error:', error)
     return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
   }
 }
