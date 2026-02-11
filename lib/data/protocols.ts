@@ -37,6 +37,14 @@ export interface ProtocolJSON {
   payout_tokens?: string[]
   program_rules?: string[]
 
+  // Submission standards
+  submission_requirements?: {
+    report_format?: string[]
+    severity_criteria?: Record<string, string>
+  }
+  eligibility?: string[]
+  program_tags?: string[]
+
   // External links
   external_url?: string
   website_url?: string
