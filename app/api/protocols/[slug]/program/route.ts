@@ -4,42 +4,42 @@ import { extractApiKey, verifyApiKey } from '@/lib/auth/api-key'
 
 export const dynamic = 'force-dynamic'
 
-async function verifyProtocolAccess(req: NextRequest, slug: string, requiredScopes: string[]) {
+async function verifyProtocolAccess(req: NextRequest, slug: string, requiredScope: string) {
   const apiKey = extractApiKey(req)
   if (!apiKey) return { error: 'Missing API key', status: 401 }
 
   const auth = await verifyApiKey(apiKey)
-  if (!auth.valid) return { error: auth.error || 'Invalid key', status: 401 }
-
-  for (const scope of requiredScopes) {
-    if (!auth.scopes?.includes(scope)) return { error: `Missing scope: ${scope}`, status: 403 }
-  }
+  if (!auth.valid) return { error: auth.error, status: 401 }
+  if (!auth.scopes?.includes(requiredScope)) return { error: `Requires ${requiredScope} scope`, status: 403 }
 
   const supabase = createClient()
 
-  // Look up protocol by slug
   const { data: protocol } = await supabase
     .from('protocols')
-    .select('id')
+    .select('id, slug, name')
     .eq('slug', slug)
     .maybeSingle()
 
   if (!protocol) return { error: 'Protocol not found', status: 404 }
 
-  // Check membership
   const { data: membership } = await supabase
     .from('protocol_members')
     .select('role')
-    .eq('user_id', auth.userId)
     .eq('protocol_id', protocol.id)
+    .eq('user_id', auth.userId)
     .maybeSingle()
 
   if (!membership) return { error: 'Not a member of this protocol', status: 403 }
 
-  return { userId: auth.userId, protocolId: protocol.id, role: membership.role }
+  return { auth, protocol, membership, supabase }
 }
 
-export async function GET(_req: NextRequest, { params }: { params: { slug: string } }) {
+/**
+ * POST /api/protocols/[slug]/program — create bounty program
+ * PATCH /api/protocols/[slug]/program — update program (pause, resume, end, update payouts)
+ * GET /api/protocols/[slug]/program — get program details
+ */
+export async function GET(req: NextRequest, { params }: { params: { slug: string } }) {
   const supabase = createClient()
 
   const { data: protocol } = await supabase
@@ -58,7 +58,7 @@ export async function GET(_req: NextRequest, { params }: { params: { slug: strin
     .limit(1)
     .maybeSingle()
 
-  if (!program) return NextResponse.json({ error: 'No program found' }, { status: 404 })
+  if (!program) return NextResponse.json({ error: 'No bounty program found' }, { status: 404 })
 
   const { data: scope } = await supabase
     .from('program_scopes')
@@ -72,17 +72,27 @@ export async function GET(_req: NextRequest, { params }: { params: { slug: strin
 }
 
 export async function PATCH(req: NextRequest, { params }: { params: { slug: string } }) {
-  const access = await verifyProtocolAccess(req, params.slug, ['protocol:write'])
-  if ('error' in access) return NextResponse.json({ error: access.error }, { status: access.status as number })
+  const access = await verifyProtocolAccess(req, params.slug, 'protocol:write')
+  if ('error' in access) return NextResponse.json({ error: access.error }, { status: access.status })
 
+  const { supabase, protocol } = access
   const body = await req.json()
-  const supabase = createClient()
+
+  const { data: program } = await supabase
+    .from('programs')
+    .select('id')
+    .eq('protocol_id', protocol.id)
+    .order('created_at', { ascending: false })
+    .limit(1)
+    .maybeSingle()
+
+  if (!program) return NextResponse.json({ error: 'No program found' }, { status: 404 })
 
   const allowed = ['status', 'duplicate_policy', 'response_sla_hours', 'poc_required', 'kyc_required',
     'payout_currency', 'min_payout', 'max_payout', 'encryption_public_key', 'payout_wallet',
     'exclusions', 'cooldown_hours']
 
-  const updates: Record<string, unknown> = {}
+  const updates: Record<string, any> = {}
   for (const key of allowed) {
     if (body[key] !== undefined) updates[key] = body[key]
   }
@@ -91,14 +101,14 @@ export async function PATCH(req: NextRequest, { params }: { params: { slug: stri
     return NextResponse.json({ error: 'No valid fields to update' }, { status: 400 })
   }
 
-  const { data: program, error } = await supabase
+  const { data, error } = await supabase
     .from('programs')
     .update(updates)
-    .eq('protocol_id', access.protocolId)
-    .select('id, status, max_payout, min_payout, payout_currency, updated_at')
+    .eq('id', program.id)
+    .select('id, status, payout_currency, min_payout, max_payout, updated_at')
     .single()
 
-  if (error) return NextResponse.json({ error: 'Update failed' }, { status: 500 })
+  if (error) throw error
 
-  return NextResponse.json({ program, message: 'Program updated' })
+  return NextResponse.json({ program: data, message: 'Program updated' })
 }

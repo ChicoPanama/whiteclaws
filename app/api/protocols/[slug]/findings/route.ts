@@ -4,6 +4,10 @@ import { extractApiKey, verifyApiKey } from '@/lib/auth/api-key'
 
 export const dynamic = 'force-dynamic'
 
+/**
+ * GET /api/protocols/[slug]/findings — list findings (protocol team auth required)
+ * Query params: status, severity, limit, offset
+ */
 export async function GET(req: NextRequest, { params }: { params: { slug: string } }) {
   const apiKey = extractApiKey(req)
   if (!apiKey) return NextResponse.json({ error: 'Missing API key' }, { status: 401 })
@@ -15,7 +19,7 @@ export async function GET(req: NextRequest, { params }: { params: { slug: string
 
   const { data: protocol } = await supabase
     .from('protocols')
-    .select('id')
+    .select('id, slug, name')
     .eq('slug', params.slug)
     .maybeSingle()
 
@@ -24,8 +28,8 @@ export async function GET(req: NextRequest, { params }: { params: { slug: string
   const { data: membership } = await supabase
     .from('protocol_members')
     .select('role')
-    .eq('user_id', auth.userId)
     .eq('protocol_id', protocol.id)
+    .eq('user_id', auth.userId)
     .maybeSingle()
 
   if (!membership) return NextResponse.json({ error: 'Not a member of this protocol' }, { status: 403 })
@@ -34,19 +38,31 @@ export async function GET(req: NextRequest, { params }: { params: { slug: string
   const status = searchParams.get('status')
   const severity = searchParams.get('severity')
   const limit = Math.min(parseInt(searchParams.get('limit') || '50'), 100)
+  const offset = parseInt(searchParams.get('offset') || '0')
 
   let query = supabase
     .from('findings')
-    .select('id, title, severity, status, scope_version, created_at, triaged_at, accepted_at, rejected_at, paid_at, payout_amount, payout_currency, duplicate_of, researcher_id')
+    .select(`
+      id, title, severity, status, scope_version, duplicate_of,
+      triage_notes, triaged_at, accepted_at, rejected_at, rejection_reason,
+      payout_amount, payout_currency, paid_at, poc_url, created_at,
+      researcher:researcher_id (id, handle, display_name, is_agent)
+    `)
     .eq('protocol_id', protocol.id)
     .order('created_at', { ascending: false })
-    .limit(limit)
+    .range(offset, offset + limit - 1)
 
   if (status) query = query.eq('status', status)
   if (severity) query = query.eq('severity', severity)
 
   const { data: findings, error } = await query
-  if (error) return NextResponse.json({ error: 'Query failed' }, { status: 500 })
+  if (error) throw error
 
-  return NextResponse.json({ findings: findings || [], count: findings?.length || 0 })
+  return NextResponse.json({
+    protocol: { slug: protocol.slug, name: protocol.name },
+    findings: findings || [],
+    count: findings?.length || 0,
+    offset,
+    limit,
+  })
 }

@@ -11,45 +11,77 @@ export async function GET(req: NextRequest, { params }: { params: { slug: string
 
   const { data: protocol } = await supabase
     .from('protocols')
-    .select('id, slug, name, max_bounty')
+    .select('id, slug, name, max_bounty, category, chains')
     .eq('slug', params.slug)
     .maybeSingle()
 
   if (!protocol) return NextResponse.json({ error: 'Protocol not found' }, { status: 404 })
 
-  const { data: findings } = await supabase
-    .from('findings')
-    .select('status, severity, payout_amount, created_at, triaged_at')
+  const { data: program } = await supabase
+    .from('programs')
+    .select('id, status, min_payout, max_payout, payout_currency, response_sla_hours, created_at')
     .eq('protocol_id', protocol.id)
+    .order('created_at', { ascending: false })
+    .limit(1)
+    .maybeSingle()
 
-  const all = findings || []
-  const accepted = all.filter(f => f.status === 'accepted' || f.status === 'paid')
-  const paid = all.filter(f => f.status === 'paid')
-  const totalPaid = paid.reduce((sum, f) => sum + (Number(f.payout_amount) || 0), 0)
-
-  // Average response time (submitted -> triaged)
-  const triaged = all.filter(f => f.triaged_at)
-  const avgResponseHrs = triaged.length > 0
-    ? triaged.reduce((sum, f) => {
-        const diff = new Date(f.triaged_at!).getTime() - new Date(f.created_at).getTime()
-        return sum + diff / 3600000
-      }, 0) / triaged.length
-    : null
-
-  const bySeverity: Record<string, number> = {}
-  for (const f of all) {
-    bySeverity[f.severity] = (bySeverity[f.severity] || 0) + 1
+  if (!program) {
+    return NextResponse.json({
+      protocol: { slug: protocol.slug, name: protocol.name },
+      stats: { total_findings: 0, accepted: 0, total_paid: 0, avg_response_hours: null },
+    })
   }
 
+  // Count findings by status
+  const { count: totalFindings } = await supabase
+    .from('findings')
+    .select('id', { count: 'exact', head: true })
+    .eq('protocol_id', protocol.id)
+
+  const { count: accepted } = await supabase
+    .from('findings')
+    .select('id', { count: 'exact', head: true })
+    .eq('protocol_id', protocol.id)
+    .in('status', ['accepted', 'paid'])
+
+  const { count: paid } = await supabase
+    .from('findings')
+    .select('id', { count: 'exact', head: true })
+    .eq('protocol_id', protocol.id)
+    .eq('status', 'paid')
+
+  // Sum payouts
+  const { data: payoutData } = await supabase
+    .from('findings')
+    .select('payout_amount')
+    .eq('protocol_id', protocol.id)
+    .eq('status', 'paid')
+    .not('payout_amount', 'is', null)
+
+  const totalPaid = (payoutData || []).reduce((sum, f) => sum + (Number(f.payout_amount) || 0), 0)
+
   return NextResponse.json({
-    protocol: { slug: protocol.slug, name: protocol.name },
+    protocol: {
+      slug: protocol.slug,
+      name: protocol.name,
+      category: protocol.category,
+      chains: protocol.chains,
+      max_bounty: protocol.max_bounty,
+    },
+    program: {
+      status: program.status,
+      payout_currency: program.payout_currency,
+      min_payout: program.min_payout,
+      max_payout: program.max_payout,
+      response_sla_hours: program.response_sla_hours,
+      live_since: program.created_at,
+    },
     stats: {
-      total_findings: all.length,
-      accepted: accepted.length,
-      paid: paid.length,
+      total_findings: totalFindings || 0,
+      accepted: accepted || 0,
+      paid: paid || 0,
       total_paid: totalPaid,
-      avg_response_hours: avgResponseHrs ? Math.round(avgResponseHrs) : null,
-      by_severity: bySeverity,
+      payout_currency: program.payout_currency,
     },
   })
 }
