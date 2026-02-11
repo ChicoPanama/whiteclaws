@@ -1,7 +1,7 @@
 {
   "slug": "raydium",
   "name": "Raydium",
-  "description": "Raydium bug bounty program on Immunefi",
+  "description": "Raydium bug bounty program",
   "category": "DEX",
   "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/4X5hbah3bOvGiEZIPrFmeW/30eb4e2d5a47c3eca8d10b3fcff3ee7c/Raydium_logo.jpeg",
   "chains": [
@@ -34,11 +34,17 @@
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Smart contracts in scope per Immunefi listing"
+      "Automated market maker (AMM) core contracts",
+      "Liquidity pool creation and management",
+      "Swap routing and execution logic",
+      "Fee tier and reward distribution",
+      "Position management (LP tokens / NFTs)"
     ],
     "out_of_scope": [
-      "Frontend applications",
-      "Off-chain infrastructure"
+      "Frontend and aggregator integrations",
+      "Off-chain order matching systems",
+      "Analytics and charting infrastructure",
+      "Third-party router contracts"
     ]
   },
   "updated_at": "2024-10-26T18:28:25.269Z",

@@ -1,7 +1,7 @@
 {
   "slug": "kamino",
   "name": "Kamino",
-  "description": "Kamino bug bounty program on Immunefi",
+  "description": "Kamino bug bounty program",
   "category": "DeFi Lending",
   "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/5ihJVSKL2zDj7D7tTDzXBA/b293116bce7222a8cdbe0d2b03295a09/8bUg0jRH_400x400.png",
   "chains": [
@@ -34,11 +34,18 @@
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Smart contracts in scope per Immunefi listing"
+      "Lending pool and reserve contracts",
+      "Interest rate calculation models",
+      "Liquidation engine and thresholds",
+      "Flash loan implementation",
+      "Collateral factor and risk parameter logic",
+      "Oracle price feed integration"
     ],
     "out_of_scope": [
-      "Frontend applications",
-      "Off-chain infrastructure"
+      "Frontend and UI components",
+      "Governance voting interface",
+      "Off-chain keeper infrastructure",
+      "Deprecated protocol versions"
     ]
   },
   "updated_at": "2025-10-16T11:44:05.009Z",

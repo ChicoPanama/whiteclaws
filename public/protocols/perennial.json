@@ -1,7 +1,7 @@
 {
   "slug": "perennial",
   "name": "Perennial",
-  "description": "Perennial bug bounty program on Immunefi",
+  "description": "Perennial bug bounty program",
   "category": "DeFi Trading",
   "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/4ycrPoQ936fnEBbl69XK77/824a5bb3ea88e9ebcb7a2b0bd01e746c/perennial_logo.jpeg",
   "chains": [
@@ -34,11 +34,17 @@
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Smart contracts in scope per Immunefi listing"
+      "Perpetual and margin trading contracts",
+      "Order execution and matching logic",
+      "Funding rate calculations",
+      "Liquidation engine and insurance fund",
+      "Position management and PnL accounting"
     ],
     "out_of_scope": [
-      "Frontend applications",
-      "Off-chain infrastructure"
+      "Trading UI and charting",
+      "Off-chain order book infrastructure",
+      "Market data feeds and indexers",
+      "Social trading features"
     ]
   },
   "updated_at": "2024-11-15T11:09:05.556Z",

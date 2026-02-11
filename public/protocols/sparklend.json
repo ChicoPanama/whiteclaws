@@ -1,7 +1,7 @@
 {
   "slug": "sparklend",
   "name": "Spark",
-  "description": "Spark bug bounty program on Immunefi",
+  "description": "Spark bug bounty program",
   "category": "DeFi Lending",
   "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/6PSQWUew0V3et86JKkvxs0/152af27a6fa55003a4cc5511f0641d17/badge__1_.png",
   "chains": [
@@ -34,11 +34,18 @@
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Smart contracts in scope per Immunefi listing"
+      "Lending pool and reserve contracts",
+      "Interest rate calculation models",
+      "Liquidation engine and thresholds",
+      "Flash loan implementation",
+      "Collateral factor and risk parameter logic",
+      "Oracle price feed integration"
     ],
     "out_of_scope": [
-      "Frontend applications",
-      "Off-chain infrastructure"
+      "Frontend and UI components",
+      "Governance voting interface",
+      "Off-chain keeper infrastructure",
+      "Deprecated protocol versions"
     ]
   },
   "updated_at": "2025-12-05T22:26:14.869Z",

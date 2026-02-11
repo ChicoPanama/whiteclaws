@@ -1,7 +1,7 @@
 {
   "slug": "ankr",
   "name": "Ankr",
-  "description": "Ankr bug bounty program on Immunefi",
+  "description": "Ankr bug bounty program",
   "category": "Infrastructure",
   "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/3LohZrbHuhcG4MgU2zrH4A/39bca0e7dc6e249cee3706c8c0021929/Ankr_logo.jpeg",
   "chains": [
@@ -36,11 +36,17 @@
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Smart contracts in scope per Immunefi listing"
+      "Core protocol smart contracts",
+      "Access control and upgrade mechanisms",
+      "Token management and distribution",
+      "Integration endpoints and adapters",
+      "Emergency and recovery functions"
     ],
     "out_of_scope": [
-      "Frontend applications",
-      "Off-chain infrastructure"
+      "Frontend and developer portal",
+      "Off-chain infrastructure and APIs",
+      "Documentation and SDK",
+      "Third-party integrations"
     ]
   },
   "updated_at": "2025-01-24T16:10:55.590Z",

@@ -1,7 +1,7 @@
 {
   "slug": "bobanetwork",
   "name": "Boba Network",
-  "description": "Boba Network bug bounty program on Immunefi",
+  "description": "Boba Network bug bounty program",
   "category": "Layer 2",
   "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/2wV1YzHxDN4EUqz1RJuw6E/a8d877797715ffa2e502bd56e411899b/Boba_Network_logo.jpeg",
   "chains": [
@@ -35,11 +35,17 @@
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Smart contracts in scope per Immunefi listing"
+      "Rollup contracts and proof verification",
+      "Canonical bridge and token mapping",
+      "Sequencer and batch submission logic",
+      "Fraud proof / validity proof mechanisms",
+      "L2 system contracts and precompiles"
     ],
     "out_of_scope": [
-      "Frontend applications",
-      "Off-chain infrastructure"
+      "Block explorers and indexers",
+      "Off-chain sequencer infrastructure",
+      "Testnet deployments",
+      "Third-party bridges"
     ]
   },
   "updated_at": "2025-02-20T08:09:27.758Z",

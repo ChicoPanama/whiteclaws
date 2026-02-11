@@ -1,7 +1,7 @@
 {
   "slug": "sei",
   "name": "Sei",
-  "description": "Sei bug bounty program on Immunefi",
+  "description": "Sei bug bounty program",
   "category": "L2 / L1",
   "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/1lOFdVmQG8KNmJhGtr8lhs/40400407c90b0736a8e506b081b70887/Sei_Labs_Logo.png",
   "chains": [
@@ -34,11 +34,17 @@
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Smart contracts in scope per Immunefi listing"
+      "Consensus and block production logic",
+      "State transition and proof verification",
+      "Token bridging and native asset management",
+      "Transaction sequencing and ordering",
+      "Precompile and system contracts"
     ],
     "out_of_scope": [
-      "Frontend applications",
-      "Off-chain infrastructure"
+      "Block explorers and indexers",
+      "Client software and node implementations",
+      "Testnet infrastructure",
+      "Documentation and developer tooling"
     ]
   },
   "updated_at": "2025-09-24T07:00:31.265Z",

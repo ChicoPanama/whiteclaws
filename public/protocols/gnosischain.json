@@ -1,7 +1,7 @@
 {
   "slug": "gnosischain",
   "name": "Gnosis Chain",
-  "description": "Gnosis Chain bug bounty program on Immunefi",
+  "description": "Gnosis Chain bug bounty program",
   "category": "L2 / L1",
   "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/6ibSou9KOCjwRMOviQ4op0/76c3c2bda63a9c0c8c8432d71f234f8c/Aatar_green_white.png",
   "chains": [
@@ -35,11 +35,17 @@
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Smart contracts in scope per Immunefi listing"
+      "Consensus and block production logic",
+      "State transition and proof verification",
+      "Token bridging and native asset management",
+      "Transaction sequencing and ordering",
+      "Precompile and system contracts"
     ],
     "out_of_scope": [
-      "Frontend applications",
-      "Off-chain infrastructure"
+      "Block explorers and indexers",
+      "Client software and node implementations",
+      "Testnet infrastructure",
+      "Documentation and developer tooling"
     ]
   },
   "updated_at": "2024-11-18T12:02:21.416Z",

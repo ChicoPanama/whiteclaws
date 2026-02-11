@@ -1,7 +1,7 @@
 {
   "slug": "symbiotic",
   "name": "Symbiotic",
-  "description": "Symbiotic bug bounty program on Immunefi",
+  "description": "Symbiotic bug bounty program",
   "category": "DeFi Staking",
   "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/3JOu1jGRL3ble8qzc1DwcS/cc699f3aea75cafc031a7fa283606620/symbiotic.png",
   "chains": [
@@ -34,11 +34,17 @@
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Smart contracts in scope per Immunefi listing"
+      "Staking pool and delegation contracts",
+      "Reward calculation and distribution logic",
+      "Unstaking cooldown and withdrawal queues",
+      "Validator set management",
+      "Slashing protection mechanisms"
     ],
     "out_of_scope": [
-      "Frontend applications",
-      "Off-chain infrastructure"
+      "Frontend staking interface",
+      "Validator node infrastructure",
+      "Off-chain monitoring and alerting",
+      "Third-party liquid staking wrappers"
     ]
   },
   "updated_at": "2025-08-04T07:27:41.138Z",

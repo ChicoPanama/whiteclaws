@@ -1,7 +1,7 @@
 {
   "slug": "resolv",
   "name": "Resolv",
-  "description": "Resolv bug bounty program on Immunefi",
+  "description": "Resolv bug bounty program",
   "category": "DeFi",
   "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/PVFDul5ntVzCg90oXYIWi/5ccd470c276900e19c507f93174d4eb0/1gDrgTdA_400x400.png",
   "chains": [
@@ -34,11 +34,17 @@
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Smart contracts in scope per Immunefi listing"
+      "Core protocol smart contracts",
+      "Token transfer and approval logic",
+      "Access control and privilege management",
+      "Emergency pause and recovery mechanisms",
+      "Fee calculation and distribution logic"
     ],
     "out_of_scope": [
-      "Frontend applications",
-      "Off-chain infrastructure"
+      "Frontend and UI components",
+      "Off-chain infrastructure and indexers",
+      "Third-party integrations not deployed by protocol",
+      "Known issues documented in audit reports"
     ]
   },
   "updated_at": "2025-07-21T08:06:44.968Z",

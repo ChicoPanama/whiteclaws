@@ -1,7 +1,7 @@
 {
   "slug": "parallel",
   "name": "Parallel",
-  "description": "Parallel bug bounty program on Immunefi",
+  "description": "Parallel bug bounty program",
   "category": "DeFi Lending",
   "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/2cR3OuUeSXBHqSGDcezrsX/90bffee28924be018f95fac32470840b/Parallel_Protocol.png",
   "chains": [
@@ -39,11 +39,18 @@
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Smart contracts in scope per Immunefi listing"
+      "Lending pool and reserve contracts",
+      "Interest rate calculation models",
+      "Liquidation engine and thresholds",
+      "Flash loan implementation",
+      "Collateral factor and risk parameter logic",
+      "Oracle price feed integration"
     ],
     "out_of_scope": [
-      "Frontend applications",
-      "Off-chain infrastructure"
+      "Frontend and UI components",
+      "Governance voting interface",
+      "Off-chain keeper infrastructure",
+      "Deprecated protocol versions"
     ]
   },
   "updated_at": "2025-11-06T09:59:47.380Z",

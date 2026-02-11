@@ -1,7 +1,7 @@
 {
   "slug": "alphaventuredao",
   "name": "Alpha Venture DAO",
-  "description": "Alpha Venture DAO bug bounty program on Immunefi",
+  "description": "Alpha Venture DAO bug bounty program",
   "category": "DeFi",
   "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/71pklpx3jRf9XgK7fxlT8n/c7c77d4bcca1ee5dd85284c4c1f95c01/Alphafinance-logo.png",
   "chains": [
@@ -36,11 +36,17 @@
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Smart contracts in scope per Immunefi listing"
+      "Core protocol smart contracts",
+      "Token transfer and approval logic",
+      "Access control and privilege management",
+      "Emergency pause and recovery mechanisms",
+      "Fee calculation and distribution logic"
     ],
     "out_of_scope": [
-      "Frontend applications",
-      "Off-chain infrastructure"
+      "Frontend and UI components",
+      "Off-chain infrastructure and indexers",
+      "Third-party integrations not deployed by protocol",
+      "Known issues documented in audit reports"
     ]
   },
   "updated_at": "2025-09-19T13:28:17.902Z",

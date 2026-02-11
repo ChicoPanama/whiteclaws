@@ -1,7 +1,7 @@
 {
   "slug": "nucleus",
   "name": "Nucleus",
-  "description": "Nucleus bug bounty program on Immunefi",
+  "description": "Nucleus bug bounty program",
   "category": "Infrastructure",
   "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/2qCwSDuVU4ePltEqcJE5cc/73041be9b5fc4d3993c94d4574dcfb93/Nucleus.png",
   "chains": [
@@ -34,11 +34,17 @@
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Smart contracts in scope per Immunefi listing"
+      "Core protocol smart contracts",
+      "Access control and upgrade mechanisms",
+      "Token management and distribution",
+      "Integration endpoints and adapters",
+      "Emergency and recovery functions"
     ],
     "out_of_scope": [
-      "Frontend applications",
-      "Off-chain infrastructure"
+      "Frontend and developer portal",
+      "Off-chain infrastructure and APIs",
+      "Documentation and SDK",
+      "Third-party integrations"
     ]
   },
   "updated_at": "2025-01-22T15:06:11.937Z",

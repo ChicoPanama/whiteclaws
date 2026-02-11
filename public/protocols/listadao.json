@@ -1,7 +1,7 @@
 {
   "slug": "listadao",
   "name": "Lista DAO",
-  "description": "Lista DAO bug bounty program on Immunefi",
+  "description": "Lista DAO bug bounty program",
   "category": "DeFi",
   "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/5aOBSUu0V6jW0Op03W4NDF/beec6ccbe2927310dffb147f24fdb902/Twitter_profile_400x400.png",
   "chains": [
@@ -34,11 +34,17 @@
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Smart contracts in scope per Immunefi listing"
+      "Core protocol smart contracts",
+      "Token transfer and approval logic",
+      "Access control and privilege management",
+      "Emergency pause and recovery mechanisms",
+      "Fee calculation and distribution logic"
     ],
     "out_of_scope": [
-      "Frontend applications",
-      "Off-chain infrastructure"
+      "Frontend and UI components",
+      "Off-chain infrastructure and indexers",
+      "Third-party integrations not deployed by protocol",
+      "Known issues documented in audit reports"
     ]
   },
   "updated_at": "2025-05-27T10:34:19.548Z",

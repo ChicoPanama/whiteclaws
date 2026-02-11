@@ -1,7 +1,7 @@
 {
   "slug": "etherfi",
   "name": "Ether.fi",
-  "description": "Ether.fi bug bounty program on Immunefi",
+  "description": "Ether.fi bug bounty program",
   "category": "DeFi Staking",
   "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/6uARdqsJxpv7UY78Xbg27/bce4b93c8e971a1a55315d80310f1b9f/ether_fi1677585111698.png",
   "chains": [
@@ -34,11 +34,17 @@
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Smart contracts in scope per Immunefi listing"
+      "Staking pool and delegation contracts",
+      "Reward calculation and distribution logic",
+      "Unstaking cooldown and withdrawal queues",
+      "Validator set management",
+      "Slashing protection mechanisms"
     ],
     "out_of_scope": [
-      "Frontend applications",
-      "Off-chain infrastructure"
+      "Frontend staking interface",
+      "Validator node infrastructure",
+      "Off-chain monitoring and alerting",
+      "Third-party liquid staking wrappers"
     ]
   },
   "updated_at": "2025-12-15T11:39:59.841Z",

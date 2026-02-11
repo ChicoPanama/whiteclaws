@@ -1,7 +1,7 @@
 {
   "slug": "usdt0",
   "name": "USDT0",
-  "description": "USDT0 bug bounty program on Immunefi",
+  "description": "USDT0 bug bounty program",
   "category": "DeFi",
   "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/4qpRnmuoUMcdOxUOuFQUeN/278e2ad4821b6e2dadf60d84e3a4bb4f/USDT0.png",
   "chains": [
@@ -34,11 +34,17 @@
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Smart contracts in scope per Immunefi listing"
+      "Core protocol smart contracts",
+      "Token transfer and approval logic",
+      "Access control and privilege management",
+      "Emergency pause and recovery mechanisms",
+      "Fee calculation and distribution logic"
     ],
     "out_of_scope": [
-      "Frontend applications",
-      "Off-chain infrastructure"
+      "Frontend and UI components",
+      "Off-chain infrastructure and indexers",
+      "Third-party integrations not deployed by protocol",
+      "Known issues documented in audit reports"
     ]
   },
   "updated_at": "2025-12-15T09:53:59.379Z",

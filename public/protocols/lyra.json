@@ -1,7 +1,7 @@
 {
   "slug": "lyra",
   "name": "Lyra",
-  "description": "Lyra bug bounty program on Immunefi",
+  "description": "Lyra bug bounty program",
   "category": "DeFi Trading",
   "logo_url": "https://assets.coingecko.com/coins/images/21490/small/lyra.png",
   "chains": [
@@ -36,11 +36,17 @@
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Smart contracts in scope per Immunefi listing"
+      "Perpetual and margin trading contracts",
+      "Order execution and matching logic",
+      "Funding rate calculations",
+      "Liquidation engine and insurance fund",
+      "Position management and PnL accounting"
     ],
     "out_of_scope": [
-      "Frontend applications",
-      "Off-chain infrastructure"
+      "Trading UI and charting",
+      "Off-chain order book infrastructure",
+      "Market data feeds and indexers",
+      "Social trading features"
     ]
   },
   "updated_at": "2024-11-18T16:15:09.624Z",

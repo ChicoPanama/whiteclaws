@@ -1,7 +1,7 @@
 {
   "slug": "starkex",
   "name": "StarkEx",
-  "description": "StarkEx bug bounty program on Immunefi",
+  "description": "StarkEx bug bounty program",
   "category": "Layer 2",
   "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/6t4qbnsCLpWXBvsPoQ5s2g/17cf9df21e075276f7522e2ca3c67e9c/StarkEx-symbol.png",
   "chains": [
@@ -34,11 +34,17 @@
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Smart contracts in scope per Immunefi listing"
+      "Rollup contracts and proof verification",
+      "Canonical bridge and token mapping",
+      "Sequencer and batch submission logic",
+      "Fraud proof / validity proof mechanisms",
+      "L2 system contracts and precompiles"
     ],
     "out_of_scope": [
-      "Frontend applications",
-      "Off-chain infrastructure"
+      "Block explorers and indexers",
+      "Off-chain sequencer infrastructure",
+      "Testnet deployments",
+      "Third-party bridges"
     ]
   },
   "updated_at": "2024-12-03T07:23:55.210Z",

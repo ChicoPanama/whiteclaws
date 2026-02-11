@@ -1,7 +1,7 @@
 {
   "slug": "rhinofi",
   "name": "Rhino.fi",
-  "description": "Rhino.fi bug bounty program on Immunefi",
+  "description": "Rhino.fi bug bounty program",
   "category": "DeFi",
   "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/25ePrKVjMVEAkF7o1FWQYk/ca279ddf668dfa794424e918034346a5/rhino.fi_logo.jpeg",
   "chains": [
@@ -38,11 +38,17 @@
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Smart contracts in scope per Immunefi listing"
+      "Core protocol smart contracts",
+      "Token transfer and approval logic",
+      "Access control and privilege management",
+      "Emergency pause and recovery mechanisms",
+      "Fee calculation and distribution logic"
     ],
     "out_of_scope": [
-      "Frontend applications",
-      "Off-chain infrastructure"
+      "Frontend and UI components",
+      "Off-chain infrastructure and indexers",
+      "Third-party integrations not deployed by protocol",
+      "Known issues documented in audit reports"
     ]
   },
   "updated_at": "2025-11-25T09:48:05.429Z",

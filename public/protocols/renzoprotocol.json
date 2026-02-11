@@ -1,7 +1,7 @@
 {
   "slug": "renzoprotocol",
   "name": "Renzo Protocol",
-  "description": "Renzo Protocol bug bounty program on Immunefi",
+  "description": "Renzo Protocol bug bounty program",
   "category": "DeFi Staking",
   "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/5vS0LqsY8aTwXw4AXCjNrB/3a1542886af81a0885485f9187ecb693/2.0_Renzo_Black_Logo__1_.png",
   "chains": [
@@ -34,11 +34,17 @@
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Smart contracts in scope per Immunefi listing"
+      "Staking pool and delegation contracts",
+      "Reward calculation and distribution logic",
+      "Unstaking cooldown and withdrawal queues",
+      "Validator set management",
+      "Slashing protection mechanisms"
     ],
     "out_of_scope": [
-      "Frontend applications",
-      "Off-chain infrastructure"
+      "Frontend staking interface",
+      "Validator node infrastructure",
+      "Off-chain monitoring and alerting",
+      "Third-party liquid staking wrappers"
     ]
   },
   "updated_at": "2025-05-16T15:21:39.874Z",
