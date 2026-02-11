@@ -77,17 +77,17 @@ export async function POST(req: NextRequest) {
     if (error) throw error
 
     // Update agent submission count
-    await supabase.rpc('increment_agent_submissions', { agent_user_id: agent.userId })
-      .then(() => {})
-      .catch(() => {
-        // RPC may not exist yet — silently fail, update manually
-        supabase
+    try {
+      await supabase.rpc('increment_agent_submissions', { agent_user_id: agent.userId })
+    } catch {
+      // RPC may not exist yet — silently fail
+      try {
+        await supabase
           .from('agent_rankings')
-          .update({
-            total_submissions: supabase.rpc ? undefined : 0, // fallback
-          })
+          .update({ total_submissions: 0 })
           .eq('agent_id', agent.userId)
-      })
+      } catch { /* noop */ }
+    }
 
     return NextResponse.json({
       ok: true,
