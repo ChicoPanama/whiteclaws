@@ -1,7 +1,7 @@
 {
   "slug": "example-protocol",
   "name": "Example Protocol",
-  "description": "Short description of what this protocol does",
+  "description": "Example Protocol is a DeFi protocol deployed on multi-chain. Security researchers can submit vulnerability reports through the WhiteClaws platform.",
   "category": "DeFi",
   "bounty": {
     "max_bounty": 1000000,
@@ -57,8 +57,20 @@
     }
   },
   "scope": {
-    "in_scope": [],
-    "out_of_scope": [],
+    "in_scope": [
+      "Core protocol smart contracts",
+      "Token contracts (ERC-20, ERC-721, etc.)",
+      "Access control and admin functions",
+      "Proxy and upgrade patterns",
+      "Integration and adapter contracts"
+    ],
+    "out_of_scope": [
+      "Frontend and UI applications",
+      "Off-chain backend infrastructure",
+      "Third-party integrations and dependencies",
+      "Issues from outdated compiler versions already documented",
+      "Centralization risks acknowledged in documentation"
+    ],
     "contracts": []
   },
   "assets": [],
@@ -80,5 +92,26 @@
     "verified": false
   },
   "updated_at": "2026-02-07T22:00:00Z",
-  "source": "whiteclaws"
+  "source": "whiteclaws",
+  "submission_requirements": {
+    "report_format": [
+      "Descriptive title with severity classification",
+      "Detailed vulnerability description including affected functions",
+      "Step-by-step reproduction instructions",
+      "Proof of Concept (code or transaction simulation)",
+      "Impact analysis with realistic attack scenario",
+      "Suggested fix or mitigation"
+    ],
+    "severity_criteria": {
+      "critical": "Direct loss of funds, protocol insolvency, or permanent freezing of funds exceeding $1M",
+      "high": "Temporary freezing of funds, manipulation of protocol parameters, or theft below critical threshold",
+      "medium": "Griefing attacks, gas optimization issues with material impact, or accounting discrepancies",
+      "low": "Informational findings, best practice violations, or low-impact edge cases"
+    }
+  },
+  "eligibility": [
+    "KYC verification required before payout",
+    "Submissions from current or former employees/contractors of the protocol team are not eligible",
+    "Findings must be original work \u2014 no re-submission of known issues"
+  ]
 }

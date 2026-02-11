@@ -1,7 +1,7 @@
 {
   "slug": "utix",
   "name": "Utix",
-  "description": "Utix bug bounty program.",
+  "description": "Utix is a Infrastructure protocol deployed on ethereum. Bug bounty program with rewards up to $500,000 for verified smart contract vulnerabilities.",
   "category": "Infrastructure",
   "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/11JCYUuvvCgVwDyzMmDklA/79a4bfd3682951f96d5ca851f6d9abdb/10_copy.png",
   "chains": [
@@ -34,7 +34,11 @@
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Smart contracts in scope per program listing"
+      "Core protocol smart contracts",
+      "Data feed and oracle contracts",
+      "Access control and permissions",
+      "Proxy and upgrade mechanism",
+      "Integration adapters"
     ],
     "out_of_scope": [
       "Frontend applications",
@@ -53,5 +57,34 @@
     "Verified Program",
     "KYC Not Required",
     "PoC Required"
+  ],
+  "program_rules": [
+    "Proof of Concept is required for all submissions. Reports without a working PoC demonstrating the vulnerability will not be considered.",
+    "KYC is not required for this program. Pseudonymous submissions are accepted.",
+    "Only previously unreported vulnerabilities are eligible. Duplicate submissions will be closed.",
+    "Vulnerabilities must be reported through the WhiteClaws platform. Public disclosure before resolution disqualifies the submission.",
+    "Testing must not disrupt live protocol operations. Use mainnet forks or testnets for Proof of Concept execution."
+  ],
+  "submission_requirements": {
+    "report_format": [
+      "Descriptive title with severity classification",
+      "Detailed vulnerability description including affected functions",
+      "Step-by-step reproduction instructions",
+      "Proof of Concept (code or transaction simulation)",
+      "Impact analysis with realistic attack scenario",
+      "Suggested fix or mitigation"
+    ],
+    "severity_criteria": {
+      "critical": "Direct loss of funds, protocol insolvency, or permanent freezing of funds exceeding $1M",
+      "high": "Temporary freezing of funds, manipulation of protocol parameters, or theft below critical threshold",
+      "medium": "Griefing attacks, gas optimization issues with material impact, or accounting discrepancies",
+      "low": "Informational findings, best practice violations, or low-impact edge cases"
+    }
+  },
+  "eligibility": [
+    "Open to all researchers \u2014 pseudonymous submissions accepted",
+    "Proof of Concept demonstrating exploitability is mandatory",
+    "Submissions from current or former employees/contractors of the protocol team are not eligible",
+    "Findings must be original work \u2014 no re-submission of known issues"
   ]
 }

@@ -1,7 +1,7 @@
 {
   "slug": "decentraland",
   "name": "Decentraland",
-  "description": "Decentraland bug bounty program.",
+  "description": "Decentraland is a Gaming/NFT protocol deployed on ethereum, polygon. Bug bounty program with rewards up to $500,000 for verified smart contract vulnerabilities.",
   "category": "Gaming/NFT",
   "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/CXsZzmFYIOc6VRsmn4i4P/aa9602446e06cec6320bbab0f437ea98/decentraland-mana-logo_copy.png",
   "chains": [
@@ -35,7 +35,11 @@
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Smart contracts in scope per program listing"
+      "NFT minting and transfer contracts",
+      "Game logic smart contracts",
+      "Marketplace and auction contracts",
+      "Royalty distribution mechanism",
+      "Token gating and access control"
     ],
     "out_of_scope": [
       "Frontend applications",
@@ -54,5 +58,34 @@
     "Verified Program",
     "KYC Required",
     "PoC Required"
+  ],
+  "program_rules": [
+    "Proof of Concept is required for all submissions. Reports without a working PoC demonstrating the vulnerability will not be considered.",
+    "KYC verification is required before bounty payout. Researchers must complete identity verification to receive rewards.",
+    "Only previously unreported vulnerabilities are eligible. Duplicate submissions will be closed.",
+    "Vulnerabilities must be reported through the WhiteClaws platform. Public disclosure before resolution disqualifies the submission.",
+    "Testing must not disrupt live protocol operations. Use mainnet forks or testnets for Proof of Concept execution."
+  ],
+  "submission_requirements": {
+    "report_format": [
+      "Descriptive title with severity classification",
+      "Detailed vulnerability description including affected functions",
+      "Step-by-step reproduction instructions",
+      "Proof of Concept (code or transaction simulation)",
+      "Impact analysis with realistic attack scenario",
+      "Suggested fix or mitigation"
+    ],
+    "severity_criteria": {
+      "critical": "Direct loss of funds, protocol insolvency, or permanent freezing of funds exceeding $1M",
+      "high": "Temporary freezing of funds, manipulation of protocol parameters, or theft below critical threshold",
+      "medium": "Griefing attacks, gas optimization issues with material impact, or accounting discrepancies",
+      "low": "Informational findings, best practice violations, or low-impact edge cases"
+    }
+  },
+  "eligibility": [
+    "KYC verification required before payout",
+    "Proof of Concept demonstrating exploitability is mandatory",
+    "Submissions from current or former employees/contractors of the protocol team are not eligible",
+    "Findings must be original work \u2014 no re-submission of known issues"
   ]
 }

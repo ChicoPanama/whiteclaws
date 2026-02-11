@@ -50,30 +50,40 @@ function CopyBtn({ text }: { text: string }) {
 interface SevData { min: number; max: number; description: string; reward_calc?: string }
 interface ContractData { address: string; network: string; name: string; type: string }
 interface ScopeData { in_scope: string[]; out_of_scope: string[]; functions_critical?: string[]; functions_high?: string[] }
+interface SubmissionReqs {
+  report_format?: string[]
+  severity_criteria?: Record<string, string>
+}
 
 interface Props {
   severity: Record<string, SevData>
   contracts: ContractData[]
   scope: ScopeData
   slug: string
-  immunefi_url?: string
   program_rules?: string[]
+  submission_requirements?: SubmissionReqs
+  eligibility?: string[]
 }
 
-export default function ProtocolDetailClient({ severity, contracts, scope, slug, program_rules }: Props) {
+export default function ProtocolDetailClient({
+  severity, contracts, scope, slug, program_rules, submission_requirements, eligibility
+}: Props) {
   const [expanded, setExpanded] = useState<string | null>('critical')
-  const [tab, setTab] = useState<'scope' | 'contracts'>('scope')
+  const [tab, setTab] = useState<'scope' | 'contracts' | 'submission'>('scope')
   const sevEntries = Object.entries(severity)
   const hasContracts = contracts.length > 0
   const hasCritFns = (scope.functions_critical?.length ?? 0) > 0
   const hasHighFns = (scope.functions_high?.length ?? 0) > 0
+  const hasSubmission = submission_requirements?.report_format && submission_requirements.report_format.length > 0
+  const hasEligibility = eligibility && eligibility.length > 0
+  const hasRules = program_rules && program_rules.length > 0
 
   return (
     <>
-      {/* SEVERITY TIERS */}
+      {/* ─── 01: SEVERITY TIERS ─── */}
       {sevEntries.length > 0 && (
         <section className="pd-section">
-          <h2 className="pd-heading"><span className="pd-num">01</span>Severity Tiers</h2>
+          <h2 className="pd-heading"><span className="pd-num">01</span>Severity & Rewards</h2>
           <div className="pd-sev-bar">
             {sevEntries.map(([level]) => {
               const c = SEV[level] || SEV.low
@@ -116,27 +126,35 @@ export default function ProtocolDetailClient({ severity, contracts, scope, slug,
         </section>
       )}
 
-      {/* PROGRAM RULES */}
-      {program_rules && program_rules.length > 0 && (
-        <section className="pd-rules">
-          <h3 className="pd-rules-title">⚠ Program Rules</h3>
+      {/* ─── 02: PROGRAM RULES ─── */}
+      {hasRules && (
+        <section className="pd-section">
+          <h2 className="pd-heading"><span className="pd-num">02</span>Program Rules</h2>
           <ol className="pd-rules-list">
-            {program_rules.map((rule, i) => (
-              <li key={i}><span className="pd-rules-num">{String(i+1).padStart(2,'0')}</span>{rule}</li>
+            {program_rules!.map((rule, i) => (
+              <li key={i}>
+                <span className="pd-rules-num">{String(i + 1).padStart(2, '0')}</span>
+                {rule}
+              </li>
             ))}
           </ol>
         </section>
       )}
 
-      {/* TAB NAV */}
+      {/* ─── 03: TAB NAV — Scope / Contracts / Submission Format ─── */}
       <div className="pd-tabs">
-        <button type="button" className={`pd-tab ${tab === 'scope' ? 'active' : ''}`} onClick={() => setTab('scope')}>Scope</button>
+        <button type="button" className={`pd-tab ${tab === 'scope' ? 'active' : ''}`} onClick={() => setTab('scope')}>
+          Scope
+        </button>
         <button type="button" className={`pd-tab ${tab === 'contracts' ? 'active' : ''}`} onClick={() => setTab('contracts')}>
           Contracts{hasContracts ? ` (${contracts.length})` : ''}
         </button>
+        <button type="button" className={`pd-tab ${tab === 'submission' ? 'active' : ''}`} onClick={() => setTab('submission')}>
+          Submission Format
+        </button>
       </div>
 
-      {/* SCOPE TAB */}
+      {/* ─── SCOPE TAB ─── */}
       {tab === 'scope' && (
         <section className="pd-scope-grid">
           <div className="pd-scope-panel pd-scope-in">
@@ -144,7 +162,7 @@ export default function ProtocolDetailClient({ severity, contracts, scope, slug,
             <ul className="pd-scope-list">
               {scope.in_scope.length > 0 ? scope.in_scope.map((item, i) => (
                 <li key={i}><span className="pd-scope-bullet in">●</span>{item}</li>
-              )) : <li className="pd-empty">Scope details being verified by WhiteClaws agents.</li>}
+              )) : <li className="pd-empty">Scope details pending verification.</li>}
             </ul>
             {hasCritFns && (
               <div className="pd-fn-section">
@@ -174,7 +192,7 @@ export default function ProtocolDetailClient({ severity, contracts, scope, slug,
         </section>
       )}
 
-      {/* CONTRACTS TAB */}
+      {/* ─── CONTRACTS TAB ─── */}
       {tab === 'contracts' && (
         <section className="pd-contracts">
           {hasContracts ? contracts.map((c, i) => {
@@ -199,22 +217,82 @@ export default function ProtocolDetailClient({ severity, contracts, scope, slug,
             )
           }) : (
             <div className="pd-empty-block">
-              <p>Contract scope being mapped by WhiteClaws agents.</p>
-              <p className="pd-empty-hint">Verified contract addresses will appear here as agents complete their analysis.</p>
+              <p>Contract addresses are being mapped for this program.</p>
+              <p className="pd-empty-hint">Verified addresses will appear here as security researchers complete scope analysis. You can still submit findings referencing specific contracts.</p>
             </div>
           )}
         </section>
       )}
 
-      {/* CTA */}
+      {/* ─── SUBMISSION FORMAT TAB ─── */}
+      {tab === 'submission' && (
+        <section className="pd-submission">
+          {hasSubmission && (
+            <div className="pd-sub-section">
+              <h3 className="pd-sub-title">📋 Report Requirements</h3>
+              <p className="pd-sub-intro">
+                All submissions must follow this format to be eligible for review and payout.
+                Incomplete reports may be closed without evaluation.
+              </p>
+              <ol className="pd-sub-list">
+                {submission_requirements!.report_format!.map((item, i) => (
+                  <li key={i}>
+                    <span className="pd-sub-num">{String(i + 1).padStart(2, '0')}</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ol>
+            </div>
+          )}
+
+          {submission_requirements?.severity_criteria && (
+            <div className="pd-sub-section">
+              <h3 className="pd-sub-title">🎯 Severity Classification Guide</h3>
+              <div className="pd-sev-criteria">
+                {Object.entries(submission_requirements.severity_criteria).map(([level, desc]) => {
+                  const c = SEV[level] || SEV.low
+                  return (
+                    <div key={level} className="pd-sev-crit-row" style={{ borderLeftColor: c.dot }}>
+                      <span className="pd-sev-crit-level" style={{ color: c.dot }}>{level.toUpperCase()}</span>
+                      <span className="pd-sev-crit-desc">{desc}</span>
+                    </div>
+                  )
+                })}
+              </div>
+            </div>
+          )}
+
+          {hasEligibility && (
+            <div className="pd-sub-section">
+              <h3 className="pd-sub-title">🔑 Eligibility</h3>
+              <ul className="pd-elig-list">
+                {eligibility!.map((item, i) => (
+                  <li key={i}>
+                    <span className="pd-elig-check">✓</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {!hasSubmission && !hasEligibility && (
+            <div className="pd-empty-block">
+              <p>Submission format requirements are being standardized for this program.</p>
+            </div>
+          )}
+        </section>
+      )}
+
+      {/* ─── CTA ─── */}
       <div className="pd-cta">
         <a href={`/submit?protocol=${slug}`} className="pd-btn-primary">Submit Finding →</a>
         <a href="/bounties" className="pd-btn-secondary">← Browse All Programs</a>
       </div>
 
       <div className="pd-meta">
-        <span>Bounty program indexed by WhiteClaws</span>
-        <span>Scope and payouts may be updated as agents verify on-chain data.</span>
+        <span>Bounty program indexed and verified by WhiteClaws</span>
+        <span>Program data sourced from on-chain analysis and public bounty disclosures.</span>
       </div>
     </>
   )

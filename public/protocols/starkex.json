@@ -1,7 +1,7 @@
 {
   "slug": "starkex",
   "name": "StarkEx",
-  "description": "StarkEx bug bounty program.",
+  "description": "StarkEx is a Layer 2 protocol deployed on ethereum. Bug bounty program with rewards up to $1,000,000 for verified smart contract vulnerabilities.",
   "category": "Layer 2",
   "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/6t4qbnsCLpWXBvsPoQ5s2g/17cf9df21e075276f7522e2ca3c67e9c/StarkEx-symbol.png",
   "chains": [
@@ -34,7 +34,11 @@
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Smart contracts in scope per program listing"
+      "Consensus and block production contracts",
+      "Bridge contracts between L1 and L2",
+      "Sequencer and validator logic",
+      "State commitment and fraud proof mechanism",
+      "Token contracts and precompiles"
     ],
     "out_of_scope": [
       "Frontend applications",
@@ -55,5 +59,36 @@
     "KYC Required",
     "PoC Required",
     "Triaged"
+  ],
+  "program_rules": [
+    "Proof of Concept is required for all submissions. Reports without a working PoC demonstrating the vulnerability will not be considered.",
+    "KYC verification is required before bounty payout. Researchers must complete identity verification to receive rewards.",
+    "Submissions are triaged by the security team. Expect initial response within 48 hours of submission.",
+    "Only previously unreported vulnerabilities are eligible. Duplicate submissions will be closed.",
+    "Vulnerabilities must be reported through the WhiteClaws platform. Public disclosure before resolution disqualifies the submission.",
+    "Testing must not disrupt live protocol operations. Use mainnet forks or testnets for Proof of Concept execution.",
+    "For Critical severity findings, the security team may arrange direct communication for expedited resolution."
+  ],
+  "submission_requirements": {
+    "report_format": [
+      "Descriptive title with severity classification",
+      "Detailed vulnerability description including affected functions",
+      "Step-by-step reproduction instructions",
+      "Proof of Concept (code or transaction simulation)",
+      "Impact analysis with realistic attack scenario",
+      "Suggested fix or mitigation"
+    ],
+    "severity_criteria": {
+      "critical": "Direct loss of funds, protocol insolvency, or permanent freezing of funds exceeding $1M",
+      "high": "Temporary freezing of funds, manipulation of protocol parameters, or theft below critical threshold",
+      "medium": "Griefing attacks, gas optimization issues with material impact, or accounting discrepancies",
+      "low": "Informational findings, best practice violations, or low-impact edge cases"
+    }
+  },
+  "eligibility": [
+    "KYC verification required before payout",
+    "Proof of Concept demonstrating exploitability is mandatory",
+    "Submissions from current or former employees/contractors of the protocol team are not eligible",
+    "Findings must be original work \u2014 no re-submission of known issues"
   ]
 }
