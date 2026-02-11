@@ -1,0 +1,16 @@
+{
+  "name": "whiteclaws-cli",
+  "version": "1.0.0",
+  "description": "WhiteClaws CLI — Agent command-line interface for security bounty submissions",
+  "main": "whiteclaws.js",
+  "bin": {
+    "whiteclaws": "./whiteclaws.js"
+  },
+  "keywords": ["security", "bounty", "smart-contract", "agent", "cli"],
+  "author": "WhiteClaws",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/WhiteRabbitLobster/whiteclaws"
+  }
+}

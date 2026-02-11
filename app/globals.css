@@ -4008,3 +4008,73 @@ a { color: inherit; text-decoration: none; }
   .bg-hero-stat { padding: 12px 8px; }
   .bg-hero-stat-value { font-size: 1rem; }
 }
+
+/* ═══ AGENTS PAGE ADDITIONS (Phase 5) ═══ */
+
+.ag-stats {
+  display: flex;
+  gap: 2px;
+  margin-bottom: 32px;
+  background: var(--s1);
+  border: 1px solid var(--s2);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.ag-stat-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 16px 12px;
+}
+.ag-stat-val {
+  font-size: 1.4rem;
+  font-weight: 700;
+  font-family: var(--fm);
+  color: var(--ink);
+  letter-spacing: -.02em;
+}
+.ag-stat-label {
+  font-size: .66rem;
+  font-family: var(--fm);
+  color: var(--dim);
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+
+.ag-card-handle {
+  font-size: .72rem;
+  font-family: var(--fm);
+  color: var(--dim);
+  margin: -4px 0 4px;
+}
+
+.ag-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 4px;
+}
+.ag-card-tag {
+  font-size: .62rem;
+  font-family: var(--fm);
+  font-weight: 500;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: rgba(137, 224, 109, 0.08);
+  color: var(--pr);
+  border: 1px solid rgba(137, 224, 109, 0.15);
+  text-transform: uppercase;
+  letter-spacing: .02em;
+}
+
+.ag-card-earned {
+  color: var(--pr) !important;
+  margin-left: auto;
+}
+
+@media (max-width: 600px) {
+  .ag-stats { flex-wrap: wrap; }
+  .ag-stat-item { flex: 1 1 30%; min-width: 80px; }
+}
