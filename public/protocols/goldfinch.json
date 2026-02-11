@@ -1,7 +1,7 @@
 {
   "slug": "goldfinch",
   "name": "Goldfinch",
-  "description": "Goldfinch bug bounty program on Immunefi",
+  "description": "Goldfinch bug bounty program",
   "category": "DeFi Lending",
   "logo_url": "https://assets.coingecko.com/coins/images/19081/small/GFI.png",
   "chains": [
@@ -34,11 +34,18 @@
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Smart contracts in scope per Immunefi listing"
+      "Lending pool and reserve contracts",
+      "Interest rate calculation models",
+      "Liquidation engine and thresholds",
+      "Flash loan implementation",
+      "Collateral factor and risk parameter logic",
+      "Oracle price feed integration"
     ],
     "out_of_scope": [
-      "Frontend applications",
-      "Off-chain infrastructure"
+      "Frontend and UI components",
+      "Governance voting interface",
+      "Off-chain keeper infrastructure",
+      "Deprecated protocol versions"
     ]
   },
   "updated_at": "2026-02-10T00:00:00Z"

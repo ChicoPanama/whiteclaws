@@ -1,7 +1,7 @@
 {
   "slug": "zksync",
   "name": "ZKsync Lite",
-  "description": "ZKsync Lite bug bounty program on Immunefi",
+  "description": "ZKsync Lite bug bounty program",
   "category": "Layer 2",
   "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/BVBU3VYmZ7reZRrExTrGp/ba2e745ef785db7f3bae88ea8ba8523f/ZKTokenBlack.png",
   "chains": [
@@ -34,11 +34,17 @@
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Smart contracts in scope per Immunefi listing"
+      "Rollup contracts and proof verification",
+      "Canonical bridge and token mapping",
+      "Sequencer and batch submission logic",
+      "Fraud proof / validity proof mechanisms",
+      "L2 system contracts and precompiles"
     ],
     "out_of_scope": [
-      "Frontend applications",
-      "Off-chain infrastructure"
+      "Block explorers and indexers",
+      "Off-chain sequencer infrastructure",
+      "Testnet deployments",
+      "Third-party bridges"
     ]
   },
   "updated_at": "2025-12-15T09:53:34.504Z",

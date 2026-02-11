@@ -1,7 +1,7 @@
 {
   "slug": "sherlock",
   "name": "Sherlock",
-  "description": "Sherlock bug bounty program on Immunefi",
+  "description": "Sherlock bug bounty program",
   "category": "Security Platform",
   "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/7aux7xm6bBE32KgmsF1XGi/db78d0f1bdfc7b2f47b41a7b5b2aa7df/Screenshot_2024-11-15_at_1.16.08___AM.png",
   "chains": [
@@ -34,11 +34,17 @@
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Smart contracts in scope per Immunefi listing"
+      "Core protocol smart contracts",
+      "Token management and transfer logic",
+      "Access control and privilege management",
+      "Emergency functions and recovery mechanisms",
+      "Integration points and external calls"
     ],
     "out_of_scope": [
-      "Frontend applications",
-      "Off-chain infrastructure"
+      "Frontend and UI components",
+      "Off-chain infrastructure",
+      "Third-party integrations",
+      "Known issues from prior audits"
     ]
   },
   "updated_at": "2025-07-22T17:19:13.131Z",

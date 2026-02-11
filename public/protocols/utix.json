@@ -1,7 +1,7 @@
 {
   "slug": "utix",
   "name": "Utix",
-  "description": "Utix bug bounty program on Immunefi",
+  "description": "Utix bug bounty program",
   "category": "Infrastructure",
   "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/11JCYUuvvCgVwDyzMmDklA/79a4bfd3682951f96d5ca851f6d9abdb/10_copy.png",
   "chains": [
@@ -34,11 +34,17 @@
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Smart contracts in scope per Immunefi listing"
+      "Core protocol smart contracts",
+      "Access control and upgrade mechanisms",
+      "Token management and distribution",
+      "Integration endpoints and adapters",
+      "Emergency and recovery functions"
     ],
     "out_of_scope": [
-      "Frontend applications",
-      "Off-chain infrastructure"
+      "Frontend and developer portal",
+      "Off-chain infrastructure and APIs",
+      "Documentation and SDK",
+      "Third-party integrations"
     ]
   },
   "updated_at": "2025-01-24T16:07:08.781Z",

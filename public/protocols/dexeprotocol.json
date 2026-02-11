@@ -1,7 +1,7 @@
 {
   "slug": "dexeprotocol",
   "name": "DeXe Protocol",
-  "description": "DeXe Protocol bug bounty program on Immunefi",
+  "description": "DeXe Protocol bug bounty program",
   "category": "Infrastructure",
   "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/5ZQ0i4NAKMQyO19x7Z65k8/257b06a35dfa48dcdb2ec16351267695/71133570.png",
   "chains": [
@@ -34,11 +34,17 @@
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Smart contracts in scope per Immunefi listing"
+      "Core protocol smart contracts",
+      "Access control and upgrade mechanisms",
+      "Token management and distribution",
+      "Integration endpoints and adapters",
+      "Emergency and recovery functions"
     ],
     "out_of_scope": [
-      "Frontend applications",
-      "Off-chain infrastructure"
+      "Frontend and developer portal",
+      "Off-chain infrastructure and APIs",
+      "Documentation and SDK",
+      "Third-party integrations"
     ]
   },
   "updated_at": "2024-11-13T15:46:02.266Z",

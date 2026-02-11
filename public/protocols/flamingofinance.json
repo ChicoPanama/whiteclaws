@@ -1,7 +1,7 @@
 {
   "slug": "flamingofinance",
   "name": "Flamingo Finance",
-  "description": "Flamingo Finance bug bounty program on Immunefi",
+  "description": "Flamingo Finance bug bounty program",
   "category": "DeFi",
   "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/2F4VGKaboWEaBfj1yfdpj/5597728d3c7bbd22b3814cb79d71ccde/Flamingo_Finance_logo.jpeg",
   "chains": [
@@ -34,11 +34,17 @@
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Smart contracts in scope per Immunefi listing"
+      "Core protocol smart contracts",
+      "Token transfer and approval logic",
+      "Access control and privilege management",
+      "Emergency pause and recovery mechanisms",
+      "Fee calculation and distribution logic"
     ],
     "out_of_scope": [
-      "Frontend applications",
-      "Off-chain infrastructure"
+      "Frontend and UI components",
+      "Off-chain infrastructure and indexers",
+      "Third-party integrations not deployed by protocol",
+      "Known issues documented in audit reports"
     ]
   },
   "updated_at": "2024-11-18T13:21:31.231Z",

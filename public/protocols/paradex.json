@@ -1,7 +1,7 @@
 {
   "slug": "paradex",
   "name": "Paradex",
-  "description": "Paradex bug bounty program on Immunefi",
+  "description": "Paradex bug bounty program",
   "category": "DeFi Trading",
   "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/2jxO6gDlNVXPLn4MT1JLtQ/fd3d05358610c2b50b679fa2812fe9f6/EnotVJl3_400x400.png",
   "chains": [
@@ -34,11 +34,17 @@
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Smart contracts in scope per Immunefi listing"
+      "Perpetual and margin trading contracts",
+      "Order execution and matching logic",
+      "Funding rate calculations",
+      "Liquidation engine and insurance fund",
+      "Position management and PnL accounting"
     ],
     "out_of_scope": [
-      "Frontend applications",
-      "Off-chain infrastructure"
+      "Trading UI and charting",
+      "Off-chain order book infrastructure",
+      "Market data feeds and indexers",
+      "Social trading features"
     ]
   },
   "updated_at": "2025-08-25T08:51:35.494Z",

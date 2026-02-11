@@ -1,7 +1,7 @@
 {
   "slug": "kiln",
   "name": "Kiln On-Chain v2",
-  "description": "Kiln On-Chain v2 bug bounty program on Immunefi",
+  "description": "Kiln On-Chain v2 bug bounty program",
   "category": "DeFi Staking",
   "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/2iDDxMXgRnP06wYCjb4T3E/5c65c546efd0c74e47ac0db66e773bb5/Kiln_Defi.png",
   "chains": [
@@ -34,11 +34,17 @@
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Smart contracts in scope per Immunefi listing"
+      "Staking pool and delegation contracts",
+      "Reward calculation and distribution logic",
+      "Unstaking cooldown and withdrawal queues",
+      "Validator set management",
+      "Slashing protection mechanisms"
     ],
     "out_of_scope": [
-      "Frontend applications",
-      "Off-chain infrastructure"
+      "Frontend staking interface",
+      "Validator node infrastructure",
+      "Off-chain monitoring and alerting",
+      "Third-party liquid staking wrappers"
     ]
   },
   "updated_at": "2025-04-25T14:09:38.170Z",

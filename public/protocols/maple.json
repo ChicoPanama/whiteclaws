@@ -1,7 +1,7 @@
 {
   "slug": "maple",
   "name": "Maple",
-  "description": "Maple bug bounty program on Immunefi",
+  "description": "Maple bug bounty program",
   "category": "DeFi Lending",
   "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/eUOQ1h8f4Rp7j6crz0YSq/669fab983d425d27fad87560219065a5/Maple_Logo.jpg",
   "chains": [
@@ -34,11 +34,18 @@
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Smart contracts in scope per Immunefi listing"
+      "Lending pool and reserve contracts",
+      "Interest rate calculation models",
+      "Liquidation engine and thresholds",
+      "Flash loan implementation",
+      "Collateral factor and risk parameter logic",
+      "Oracle price feed integration"
     ],
     "out_of_scope": [
-      "Frontend applications",
-      "Off-chain infrastructure"
+      "Frontend and UI components",
+      "Governance voting interface",
+      "Off-chain keeper infrastructure",
+      "Deprecated protocol versions"
     ]
   },
   "updated_at": "2025-11-28T15:40:33.159Z",

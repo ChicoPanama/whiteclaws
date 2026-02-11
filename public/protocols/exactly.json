@@ -1,7 +1,7 @@
 {
   "slug": "exactly",
   "name": "Exactly",
-  "description": "Exactly bug bounty program on Immunefi",
+  "description": "Exactly bug bounty program",
   "category": "DeFi Lending",
   "logo_url": "https://assets.coingecko.com/coins/images/31156/small/exa.png",
   "chains": [
@@ -35,11 +35,18 @@
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Smart contracts in scope per Immunefi listing"
+      "Lending pool and reserve contracts",
+      "Interest rate calculation models",
+      "Liquidation engine and thresholds",
+      "Flash loan implementation",
+      "Collateral factor and risk parameter logic",
+      "Oracle price feed integration"
     ],
     "out_of_scope": [
-      "Frontend applications",
-      "Off-chain infrastructure"
+      "Frontend and UI components",
+      "Governance voting interface",
+      "Off-chain keeper infrastructure",
+      "Deprecated protocol versions"
     ]
   },
   "updated_at": "2026-01-08T12:50:54.426Z",

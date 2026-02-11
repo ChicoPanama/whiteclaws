@@ -1,7 +1,7 @@
 {
   "slug": "celer",
   "name": "Celer",
-  "description": "Celer bug bounty program on Immunefi",
+  "description": "Celer bug bounty program",
   "category": "Bridge",
   "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/13hITYqQMxBrQvjeOzbRhl/b7ca8569a07d3a2212aeac6a92244110/Celer_Logo.jpeg",
   "chains": [
@@ -38,11 +38,17 @@
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Smart contracts in scope per Immunefi listing"
+      "Cross-chain message passing contracts",
+      "Token lock and mint/burn logic",
+      "Validator/relayer signature verification",
+      "Replay protection and nonce management",
+      "Emergency pause and fund recovery"
     ],
     "out_of_scope": [
-      "Frontend applications",
-      "Off-chain infrastructure"
+      "Frontend bridge interface",
+      "Off-chain relayer infrastructure",
+      "Destination chain gas estimation",
+      "Third-party bridge aggregators"
     ]
   },
   "updated_at": "2024-11-04T14:43:54.551Z",

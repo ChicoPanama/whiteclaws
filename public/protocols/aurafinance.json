@@ -1,7 +1,7 @@
 {
   "slug": "aurafinance",
   "name": "Aura Finance",
-  "description": "Aura Finance bug bounty program on Immunefi",
+  "description": "Aura Finance bug bounty program",
   "category": "DeFi Yield",
   "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/5K5gW86YPxCmDeFWSeD5fi/f83f639d8527d85e7243e4e4331aa2ed/Aura_Finance_logo.jpeg",
   "chains": [
@@ -34,11 +34,17 @@
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Smart contracts in scope per Immunefi listing"
+      "Vault strategy and deposit/withdraw logic",
+      "Yield optimization and compounding contracts",
+      "Reward harvesting and distribution",
+      "Strategy migration and emergency withdrawal",
+      "Share price and accounting calculations"
     ],
     "out_of_scope": [
-      "Frontend applications",
-      "Off-chain infrastructure"
+      "Frontend and dashboard UI",
+      "Off-chain yield monitoring",
+      "External protocol strategies not in scope",
+      "Historical data aggregation"
     ]
   },
   "updated_at": "2024-10-31T15:48:35.456Z",

@@ -1,7 +1,7 @@
 {
   "slug": "ondofinance",
   "name": "Ondo Finance",
-  "description": "Ondo Finance bug bounty program on Immunefi",
+  "description": "Ondo Finance bug bounty program",
   "category": "RWA Tokenization",
   "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/2dR2c08kamplNaWIiF37h6/c269496e763806bbbd815efa7c662590/ondo-logo.svg",
   "chains": [
@@ -34,11 +34,17 @@
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Smart contracts in scope per Immunefi listing"
+      "Asset tokenization and issuance contracts",
+      "Compliance and KYC gate logic",
+      "Dividend and yield distribution",
+      "Redemption and settlement mechanisms",
+      "Oracle and price feed integration"
     ],
     "out_of_scope": [
-      "Frontend applications",
-      "Off-chain infrastructure"
+      "Frontend and investor portal",
+      "Off-chain custody and legal structure",
+      "Regulatory compliance documentation",
+      "Third-party KYC providers"
     ]
   },
   "updated_at": "2025-12-19T08:24:42.247Z",

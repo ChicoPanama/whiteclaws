@@ -1,7 +1,7 @@
 {
   "slug": "kelp-dao",
   "name": "Kelp DAO",
-  "description": "Kelp DAO bug bounty program on Immunefi",
+  "description": "Kelp DAO bug bounty program",
   "category": "DeFi Staking",
   "logo_url": "https://assets.coingecko.com/coins/images/34783/small/kelp_dao.png",
   "chains": [
@@ -34,11 +34,17 @@
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Smart contracts in scope per Immunefi listing"
+      "Staking pool and delegation contracts",
+      "Reward calculation and distribution logic",
+      "Unstaking cooldown and withdrawal queues",
+      "Validator set management",
+      "Slashing protection mechanisms"
     ],
     "out_of_scope": [
-      "Frontend applications",
-      "Off-chain infrastructure"
+      "Frontend staking interface",
+      "Validator node infrastructure",
+      "Off-chain monitoring and alerting",
+      "Third-party liquid staking wrappers"
     ]
   },
   "updated_at": "2025-03-21T10:29:19.016Z",

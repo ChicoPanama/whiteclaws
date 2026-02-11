@@ -58,8 +58,19 @@
     }
   },
   "scope": {
-    "in_scope": [],
-    "out_of_scope": [],
+    "in_scope": [
+      "Core protocol smart contracts",
+      "Token transfer and approval logic",
+      "Access control and privilege management",
+      "Emergency pause and recovery mechanisms",
+      "Fee calculation and distribution logic"
+    ],
+    "out_of_scope": [
+      "Frontend and UI components",
+      "Off-chain infrastructure and indexers",
+      "Third-party integrations not deployed by protocol",
+      "Known issues documented in audit reports"
+    ],
     "contracts": []
   },
   "assets": [],

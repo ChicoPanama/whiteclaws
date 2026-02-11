@@ -1,7 +1,7 @@
 {
   "slug": "sushiswap",
   "name": "SushiSwap",
-  "description": "SushiSwap bug bounty program on Immunefi",
+  "description": "SushiSwap bug bounty program",
   "category": "DEX",
   "logo_url": "https://assets.coingecko.com/coins/images/12271/small/512x512_Logo_no_chop.png",
   "chains": [
@@ -39,11 +39,17 @@
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Smart contracts in scope per Immunefi listing"
+      "Automated market maker (AMM) core contracts",
+      "Liquidity pool creation and management",
+      "Swap routing and execution logic",
+      "Fee tier and reward distribution",
+      "Position management (LP tokens / NFTs)"
     ],
     "out_of_scope": [
-      "Frontend applications",
-      "Off-chain infrastructure"
+      "Frontend and aggregator integrations",
+      "Off-chain order matching systems",
+      "Analytics and charting infrastructure",
+      "Third-party router contracts"
     ]
   },
   "updated_at": "2025-10-16T22:38:56.122Z",

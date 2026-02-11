@@ -1,7 +1,7 @@
 {
   "slug": "beefyfinance",
   "name": "Beefy Finance",
-  "description": "Beefy Finance bug bounty program on Immunefi",
+  "description": "Beefy Finance bug bounty program",
   "category": "DeFi Yield",
   "logo_url": "https://assets.coingecko.com/coins/images/12704/small/bifi.png",
   "chains": [
@@ -40,11 +40,17 @@
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Smart contracts in scope per Immunefi listing"
+      "Vault strategy and deposit/withdraw logic",
+      "Yield optimization and compounding contracts",
+      "Reward harvesting and distribution",
+      "Strategy migration and emergency withdrawal",
+      "Share price and accounting calculations"
     ],
     "out_of_scope": [
-      "Frontend applications",
-      "Off-chain infrastructure"
+      "Frontend and dashboard UI",
+      "Off-chain yield monitoring",
+      "External protocol strategies not in scope",
+      "Historical data aggregation"
     ]
   },
   "updated_at": "2024-12-02T18:46:02.247Z",

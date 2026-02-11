@@ -1,7 +1,7 @@
 {
   "slug": "filecoin",
   "name": "Filecoin",
-  "description": "Filecoin bug bounty program on Immunefi",
+  "description": "Filecoin bug bounty program",
   "category": "Infrastructure",
   "logo_url": "https://assets.coingecko.com/coins/images/12817/small/filecoin.png",
   "chains": [
@@ -34,11 +34,17 @@
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Smart contracts in scope per Immunefi listing"
+      "Core protocol smart contracts",
+      "Access control and upgrade mechanisms",
+      "Token management and distribution",
+      "Integration endpoints and adapters",
+      "Emergency and recovery functions"
     ],
     "out_of_scope": [
-      "Frontend applications",
-      "Off-chain infrastructure"
+      "Frontend and developer portal",
+      "Off-chain infrastructure and APIs",
+      "Documentation and SDK",
+      "Third-party integrations"
     ]
   },
   "updated_at": "2025-05-19T08:40:02.167Z",

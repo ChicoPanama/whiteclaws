@@ -1,7 +1,7 @@
 {
   "slug": "stakestone",
   "name": "StakeStone",
-  "description": "StakeStone bug bounty program on Immunefi",
+  "description": "StakeStone bug bounty program",
   "category": "DeFi Staking",
   "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/lTWhtXDyfizGgVkU5Myjr/f2b9c05def378a446671efd050d90389/StakeStone.png",
   "chains": [
@@ -35,11 +35,17 @@
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Smart contracts in scope per Immunefi listing"
+      "Staking pool and delegation contracts",
+      "Reward calculation and distribution logic",
+      "Unstaking cooldown and withdrawal queues",
+      "Validator set management",
+      "Slashing protection mechanisms"
     ],
     "out_of_scope": [
-      "Frontend applications",
-      "Off-chain infrastructure"
+      "Frontend staking interface",
+      "Validator node infrastructure",
+      "Off-chain monitoring and alerting",
+      "Third-party liquid staking wrappers"
     ]
   },
   "updated_at": "2025-02-03T07:42:52.842Z",

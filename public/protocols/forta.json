@@ -1,7 +1,7 @@
 {
   "slug": "forta",
   "name": "Forta",
-  "description": "Forta bug bounty program on Immunefi",
+  "description": "Forta bug bounty program",
   "category": "Security Platform",
   "logo_url": "https://assets.coingecko.com/coins/images/25060/small/forta.png",
   "chains": [
@@ -35,11 +35,17 @@
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Smart contracts in scope per Immunefi listing"
+      "Core protocol smart contracts",
+      "Token management and transfer logic",
+      "Access control and privilege management",
+      "Emergency functions and recovery mechanisms",
+      "Integration points and external calls"
     ],
     "out_of_scope": [
-      "Frontend applications",
-      "Off-chain infrastructure"
+      "Frontend and UI components",
+      "Off-chain infrastructure",
+      "Third-party integrations",
+      "Known issues from prior audits"
     ]
   },
   "updated_at": "2025-08-08T14:10:55.619Z",

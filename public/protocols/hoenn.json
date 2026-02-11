@@ -36,5 +36,20 @@
       "description": "Informational or gas optimization"
     }
   },
-  "source": "immunefi"
+  "source": "immunefi",
+  "scope": {
+    "in_scope": [
+      "NFT minting and transfer contracts",
+      "Game economy and reward distribution",
+      "Marketplace and trading logic",
+      "Access control and admin functions",
+      "Random number generation and fairness"
+    ],
+    "out_of_scope": [
+      "Game client and UI",
+      "Off-chain game servers",
+      "Asset rendering and metadata hosting",
+      "Social and community features"
+    ]
+  }
 }

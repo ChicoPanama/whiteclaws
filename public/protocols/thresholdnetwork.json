@@ -1,7 +1,7 @@
 {
   "slug": "thresholdnetwork",
   "name": "Threshold Network",
-  "description": "Threshold Network bug bounty program on Immunefi",
+  "description": "Threshold Network bug bounty program",
   "category": "Bridge",
   "logo_url": "https://images.ctfassets.net/t3wqy70tc3bv/5sXJAYkgjf0BtH2uarlVA3/1f1993cf792814921c5c289b57004768/token-symbol-purple.svg",
   "chains": [
@@ -39,11 +39,17 @@
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Smart contracts in scope per Immunefi listing"
+      "Cross-chain message passing contracts",
+      "Token lock and mint/burn logic",
+      "Validator/relayer signature verification",
+      "Replay protection and nonce management",
+      "Emergency pause and fund recovery"
     ],
     "out_of_scope": [
-      "Frontend applications",
-      "Off-chain infrastructure"
+      "Frontend bridge interface",
+      "Off-chain relayer infrastructure",
+      "Destination chain gas estimation",
+      "Third-party bridge aggregators"
     ]
   },
   "updated_at": "2025-12-23T10:59:02.388Z",

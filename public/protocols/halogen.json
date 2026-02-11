@@ -35,5 +35,20 @@
       "description": "Informational or gas optimization"
     }
   },
-  "source": "immunefi"
+  "source": "immunefi",
+  "scope": {
+    "in_scope": [
+      "Staking pool and delegation contracts",
+      "Reward calculation and distribution logic",
+      "Unstaking cooldown and withdrawal queues",
+      "Validator set management",
+      "Slashing protection mechanisms"
+    ],
+    "out_of_scope": [
+      "Frontend staking interface",
+      "Validator node infrastructure",
+      "Off-chain monitoring and alerting",
+      "Third-party liquid staking wrappers"
+    ]
+  }
 }

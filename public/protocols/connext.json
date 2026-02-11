@@ -1,7 +1,7 @@
 {
   "slug": "connext",
   "name": "Connext",
-  "description": "Connext bug bounty program on Immunefi",
+  "description": "Connext bug bounty program",
   "category": "Bridge",
   "logo_url": "https://assets.coingecko.com/coins/images/31137/small/next.png",
   "chains": [
@@ -38,11 +38,17 @@
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Smart contracts in scope per Immunefi listing"
+      "Cross-chain message passing contracts",
+      "Token lock and mint/burn logic",
+      "Validator/relayer signature verification",
+      "Replay protection and nonce management",
+      "Emergency pause and fund recovery"
     ],
     "out_of_scope": [
-      "Frontend applications",
-      "Off-chain infrastructure"
+      "Frontend bridge interface",
+      "Off-chain relayer infrastructure",
+      "Destination chain gas estimation",
+      "Third-party bridge aggregators"
     ]
   },
   "updated_at": "2025-11-11T23:11:20.953Z",

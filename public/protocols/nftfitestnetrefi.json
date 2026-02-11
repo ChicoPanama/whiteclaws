@@ -1,7 +1,7 @@
 {
   "slug": "nftfitestnetrefi",
   "name": "Nftfitestnetrefi",
-  "description": "Nftfitestnetrefi bug bounty program on Immunefi",
+  "description": "Nftfitestnetrefi bug bounty program",
   "category": "DeFi",
   "logo_url": null,
   "chains": [
@@ -34,11 +34,17 @@
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Smart contracts in scope per Immunefi listing"
+      "Core protocol smart contracts",
+      "Token transfer and approval logic",
+      "Access control and privilege management",
+      "Emergency pause and recovery mechanisms",
+      "Fee calculation and distribution logic"
     ],
     "out_of_scope": [
-      "Frontend applications",
-      "Off-chain infrastructure"
+      "Frontend and UI components",
+      "Off-chain infrastructure and indexers",
+      "Third-party integrations not deployed by protocol",
+      "Known issues documented in audit reports"
     ]
   },
   "updated_at": "2024-11-09T20:21:46.614Z",

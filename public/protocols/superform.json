@@ -1,7 +1,7 @@
 {
   "slug": "superform",
   "name": "Superform",
-  "description": "Superform bug bounty program on Immunefi",
+  "description": "Superform bug bounty program",
   "category": "DeFi Yield",
   "logo_url": "https://assets.coingecko.com/coins/images/34819/small/superform.png",
   "chains": [
@@ -40,11 +40,17 @@
   "contracts": [],
   "scope": {
     "in_scope": [
-      "Smart contracts in scope per Immunefi listing"
+      "Vault strategy and deposit/withdraw logic",
+      "Yield optimization and compounding contracts",
+      "Reward harvesting and distribution",
+      "Strategy migration and emergency withdrawal",
+      "Share price and accounting calculations"
     ],
     "out_of_scope": [
-      "Frontend applications",
-      "Off-chain infrastructure"
+      "Frontend and dashboard UI",
+      "Off-chain yield monitoring",
+      "External protocol strategies not in scope",
+      "Historical data aggregation"
     ]
   },
   "updated_at": "2025-12-02T23:23:33.810Z",

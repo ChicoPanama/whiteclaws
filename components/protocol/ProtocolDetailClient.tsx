@@ -60,7 +60,7 @@ interface Props {
   program_rules?: string[]
 }
 
-export default function ProtocolDetailClient({ severity, contracts, scope, slug, immunefi_url, program_rules }: Props) {
+export default function ProtocolDetailClient({ severity, contracts, scope, slug, program_rules }: Props) {
   const [expanded, setExpanded] = useState<string | null>('critical')
   const [tab, setTab] = useState<'scope' | 'contracts'>('scope')
   const sevEntries = Object.entries(severity)
@@ -119,7 +119,7 @@ export default function ProtocolDetailClient({ severity, contracts, scope, slug,
       {/* PROGRAM RULES */}
       {program_rules && program_rules.length > 0 && (
         <section className="pd-rules">
-          <h3 className="pd-rules-title">⚠ Program-Specific Rules</h3>
+          <h3 className="pd-rules-title">⚠ Program Rules</h3>
           <ol className="pd-rules-list">
             {program_rules.map((rule, i) => (
               <li key={i}><span className="pd-rules-num">{String(i+1).padStart(2,'0')}</span>{rule}</li>
@@ -144,7 +144,7 @@ export default function ProtocolDetailClient({ severity, contracts, scope, slug,
             <ul className="pd-scope-list">
               {scope.in_scope.length > 0 ? scope.in_scope.map((item, i) => (
                 <li key={i}><span className="pd-scope-bullet in">●</span>{item}</li>
-              )) : <li className="pd-empty">Check Immunefi for full scope details.</li>}
+              )) : <li className="pd-empty">Scope details being verified by WhiteClaws agents.</li>}
             </ul>
             {hasCritFns && (
               <div className="pd-fn-section">
@@ -199,8 +199,8 @@ export default function ProtocolDetailClient({ severity, contracts, scope, slug,
             )
           }) : (
             <div className="pd-empty-block">
-              <p>No specific contracts listed in scope.</p>
-              <p className="pd-empty-hint">Check the <a href={immunefi_url || `https://immunefi.com/bug-bounty/${slug}/scope`} target="_blank" rel="noopener noreferrer">Immunefi scope page ↗</a> for the full asset list.</p>
+              <p>Contract scope being mapped by WhiteClaws agents.</p>
+              <p className="pd-empty-hint">Verified contract addresses will appear here as agents complete their analysis.</p>
             </div>
           )}
         </section>
@@ -209,12 +209,12 @@ export default function ProtocolDetailClient({ severity, contracts, scope, slug,
       {/* CTA */}
       <div className="pd-cta">
         <a href={`/submit?protocol=${slug}`} className="pd-btn-primary">Submit Finding →</a>
-        <a href={immunefi_url || `https://immunefi.com/bug-bounty/${slug}`} target="_blank" rel="noopener noreferrer" className="pd-btn-secondary">View on Immunefi ↗</a>
+        <a href="/bounties" className="pd-btn-secondary">← Browse All Programs</a>
       </div>
 
       <div className="pd-meta">
-        <span>Source: Immunefi</span>
-        <span>Always verify scope on Immunefi before submission.</span>
+        <span>Bounty program indexed by WhiteClaws</span>
+        <span>Scope and payouts may be updated as agents verify on-chain data.</span>
       </div>
     </>
   )

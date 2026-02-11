@@ -35,5 +35,20 @@
       "description": "Informational or gas optimization"
     }
   },
-  "source": "immunefi"
+  "source": "immunefi",
+  "scope": {
+    "in_scope": [
+      "Perpetual and margin trading contracts",
+      "Order execution and matching logic",
+      "Funding rate calculations",
+      "Liquidation engine and insurance fund",
+      "Position management and PnL accounting"
+    ],
+    "out_of_scope": [
+      "Trading UI and charting",
+      "Off-chain order book infrastructure",
+      "Market data feeds and indexers",
+      "Social trading features"
+    ]
+  }
 }
