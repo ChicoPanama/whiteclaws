@@ -4,15 +4,15 @@
  * Tries in order:
  *   1. API Key (Authorization: Bearer wc_xxx or X-API-Key: wc_xxx)
  *   2. Wallet Signature (X-Wallet-Address + X-Wallet-Signature + X-Wallet-Timestamp)
- *   3. SIWE Token (X-SIWE-Token — reserved for future session tokens)
+ *   3. SIWE Token (reserved for future session tokens)
  *
  * Every method resolves to the same Identity interface.
- * Existing routes keep working — this is additive, not a replacement.
  */
 
 import { extractApiKey, verifyApiKey } from '@/lib/auth/api-key'
 import { verifyWalletSignature, hasWalletSignatureHeaders } from '@/lib/auth/wallet-signature'
 import { resolveWalletUser } from '@/lib/auth/siwe'
+import { createClient } from '@/lib/supabase/admin'
 
 export interface Identity {
   userId: string
@@ -24,7 +24,7 @@ export interface Identity {
 
 /**
  * Resolve identity from any supported auth method.
- * Returns null for unauthenticated requests (fine for public endpoints).
+ * Returns null for unauthenticated requests.
  */
 export async function resolveIdentity(req: Request): Promise<Identity | null> {
   // Method 1: API Key — most common, backward compatible
@@ -32,14 +32,12 @@ export async function resolveIdentity(req: Request): Promise<Identity | null> {
   if (apiKey) {
     const auth = await verifyApiKey(apiKey)
     if (auth.valid && auth.userId) {
-      // Fetch handle for the identity
-      const { createClient } = await import('@/lib/supabase/admin')
       const supabase = createClient()
-      const { data: user } = await supabase
+      const { data: user } = await (supabase
         .from('users')
         .select('handle, wallet_address')
         .eq('id', auth.userId)
-        .single()
+        .single() as any)
 
       return {
         userId: auth.userId,
@@ -62,28 +60,13 @@ export async function resolveIdentity(req: Request): Promise<Identity | null> {
           handle: userInfo.handle,
           address: walletAuth.address,
           method: 'wallet_signature',
-          scopes: ['agent:read', 'agent:submit'], // Default scopes for wallet auth
+          scopes: ['agent:read', 'agent:submit'],
         }
       }
-      // Valid signature but unknown wallet — return partial identity
-      // The route can decide what to do (e.g., allow read-only access)
-      return null
     }
   }
 
   return null
-}
-
-/**
- * Require authentication — returns Identity or throws 401-compatible error.
- * Use in routes that must be authenticated.
- */
-export async function requireIdentity(req: Request): Promise<Identity> {
-  const identity = await resolveIdentity(req)
-  if (!identity) {
-    throw new AuthError('Authentication required. Use API key, wallet signature, or SIWE.', 401)
-  }
-  return identity
 }
 
 /**

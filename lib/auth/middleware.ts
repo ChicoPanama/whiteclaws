@@ -34,7 +34,7 @@ export async function authenticateAgent(req: Request): Promise<AuthenticatedAgen
   try {
     const supabase = createAdminClient()
     const { data: user, error } = await supabase
-      .from('users')
+      .from('users' as any)
       .select('id, handle, display_name, is_agent, reputation_score, status')
       .eq('id', auth.userId)
       .single()

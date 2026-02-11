@@ -35,7 +35,7 @@ function generateNonce(): string {
  */
 function cleanupNonces() {
   const now = Date.now()
-  for (const [nonce, data] of nonceStore) {
+  for (const [nonce, data] of Array.from(nonceStore.entries())) {
     if (now - data.createdAt > NONCE_EXPIRY_MS * 2) {
       nonceStore.delete(nonce)
     }
@@ -132,7 +132,7 @@ export async function resolveWalletUser(address: string): Promise<{
 
   // Check existing user
   const { data: existing } = await supabase
-    .from('users')
+    .from('users' as any)
     .select('id, handle')
     .eq('wallet_address', normalizedAddress)
     .maybeSingle()
@@ -143,7 +143,7 @@ export async function resolveWalletUser(address: string): Promise<{
 
   // Also check payout_wallet
   const { data: byPayout } = await supabase
-    .from('users')
+    .from('users' as any)
     .select('id, handle')
     .eq('payout_wallet', normalizedAddress)
     .maybeSingle()
