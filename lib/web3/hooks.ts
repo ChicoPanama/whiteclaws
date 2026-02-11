@@ -1,12 +1,11 @@
 /**
  * Web3 Hooks
- * Uses Privy for wallet connection when configured,
- * falls back to stub implementations otherwise.
+ * Clean stub implementations. Will be upgraded to use Privy/wagmi
+ * once NEXT_PUBLIC_PRIVY_APP_ID is configured (Phase 4).
  */
 
-import { useState, useCallback, useEffect } from 'react'
+import { useState, useCallback } from 'react'
 
-// Types
 export interface WhiteClawsState {
   isConnected: boolean
   address: string | null
@@ -21,70 +20,30 @@ export interface AccessStatusState {
 }
 
 /**
- * Try to use Privy hooks when available.
- * Returns null if Privy is not configured or not in context.
- */
-function usePrivySafe() {
-  try {
-    const privy = require('@privy-io/react-auth')
-    const state = privy.usePrivy?.()
-    // Only return if we're inside a mounted PrivyProvider
-    if (state && typeof state.ready === 'boolean') return state
-    return null
-  } catch {
-    return null
-  }
-}
-
-/**
- * Hook for WhiteClaws wallet connection
- * Uses Privy if configured, otherwise returns safe stubs
+ * Hook for wallet connection.
+ * Phase 4 will replace with Privy wallet hooks.
  */
 export function useWhiteClaws(): WhiteClawsState {
-  const privy = usePrivySafe()
-  const [stubConnected, setStubConnected] = useState(false)
-  const [stubAddress, setStubAddress] = useState<string | null>(null)
+  const [isConnected, setIsConnected] = useState(false)
+  const [address, setAddress] = useState<string | null>(null)
 
-  // If Privy is available, derive state from it
-  if (privy && privy.ready) {
-    const wallet = privy.user?.wallet
-    return {
-      isConnected: privy.authenticated && !!wallet,
-      address: wallet?.address ?? null,
-      connect: async () => {
-        if (!privy.authenticated) {
-          privy.login?.()
-        }
-      },
-      disconnect: async () => {
-        privy.logout?.()
-      },
-    }
-  }
-
-  // Stub fallback
   const connect = useCallback(async () => {
-    console.log('[WhiteClaws] No wallet provider configured. Set NEXT_PUBLIC_PRIVY_APP_ID.')
-    setStubConnected(true)
-    setStubAddress('0x' + '0'.repeat(40))
+    // Stub: simulates connection
+    setIsConnected(true)
+    setAddress('0x' + '0'.repeat(40))
   }, [])
 
   const disconnect = useCallback(async () => {
-    setStubConnected(false)
-    setStubAddress(null)
+    setIsConnected(false)
+    setAddress(null)
   }, [])
 
-  return {
-    isConnected: stubConnected,
-    address: stubAddress,
-    connect,
-    disconnect,
-  }
+  return { isConnected, address, connect, disconnect }
 }
 
 /**
- * Hook for checking access token/SBT status
- * Will read from contract once deployed (Phase 4)
+ * Hook for checking access token/SBT status.
+ * Phase 4 will replace with on-chain contract read.
  */
 export function useAccessStatus(): AccessStatusState {
   const [hasAccess, setHasAccess] = useState(false)
@@ -95,7 +54,6 @@ export function useAccessStatus(): AccessStatusState {
     setIsLoading(true)
 
     try {
-      // Try API endpoint (works if Supabase is configured)
       const res = await fetch(`/api/access/status?address=${address}`, { cache: 'no-store' })
       if (res.ok) {
         const data = await res.json()
@@ -104,10 +62,9 @@ export function useAccessStatus(): AccessStatusState {
         return data.hasAccess ?? false
       }
     } catch {
-      // API not available — fall through
+      // API not available
     }
 
-    // Stub: no access
     setHasAccess(false)
     setIsLoading(false)
     return false
@@ -117,8 +74,8 @@ export function useAccessStatus(): AccessStatusState {
 }
 
 /**
- * Hook for wcToken balance
- * Will read from ERC-20 contract once deployed (Phase 4)
+ * Hook for wcToken balance.
+ * Phase 4 will replace with ERC-20 read via viem.
  */
 export function useTokenBalance(): {
   balance: string
@@ -129,7 +86,6 @@ export function useTokenBalance(): {
   const [isLoading, setIsLoading] = useState(false)
 
   const refetch = useCallback(async () => {
-    // Phase 4: implement actual ERC-20 balance read via viem
     setIsLoading(true)
     await new Promise(resolve => setTimeout(resolve, 50))
     setBalance('0')
