@@ -43,9 +43,6 @@ export default async function ProtocolPage({ params }: { params: { id: string } 
   const visibleChains = chains.slice(0, maxChainShow)
   const extraChains = chains.length - maxChainShow
 
-  // Only set brand CSS variables when the protocol has extracted colors.
-  // When absent, CSS fallbacks kick in (--surface, --border, --ink, etc.)
-  // so the page renders cleanly in the base dark theme with no forced color.
   const brandStyles = brand ? {
     '--brand': brand.primary,
     '--brand-accent': brand.accent,
@@ -55,18 +52,21 @@ export default async function ProtocolPage({ params }: { params: { id: string } 
     '--brand-surface': `${brand.accent}20`,
   } as CSSProperties : {} as CSSProperties
 
+  // Format live_since date
+  const liveSince = protocol.live_since
+    ? new Date(protocol.live_since).toLocaleDateString('en-US', { year: 'numeric', month: 'short' })
+    : null
+
   return (
     <>
       <Nav />
       <div className="pd-page" style={brandStyles}>
         <div className="pd-wrap">
 
-          {/* ─── BACK NAV ─── */}
           <a href="/bounties" className="pd-back">← All Bounties</a>
 
           {/* ─── HERO HEADER ─── */}
           <header className="pd-hero">
-            {/* Decorative orb */}
             <div className="pd-hero-orb" />
 
             <div className="pd-hero-top">
@@ -93,9 +93,19 @@ export default async function ProtocolPage({ params }: { params: { id: string } 
                 <span className="pd-badge">+{extraChains} more</span>
               )}
               <span className="pd-badge brand">{protocol.category}</span>
-              {bounty.kyc_required && <span className="pd-badge warn">KYC</span>}
+              {bounty.kyc_required && <span className="pd-badge warn">KYC Required</span>}
               {protocol.poc_required && <span className="pd-badge info">PoC Required</span>}
+              {protocol.triaged && <span className="pd-badge info">Triaged</span>}
             </div>
+
+            {/* Program tags */}
+            {protocol.program_tags && protocol.program_tags.length > 0 && (
+              <div className="pd-hero-tags">
+                {protocol.program_tags.map((tag: string) => (
+                  <span key={tag} className="pd-tag">{tag}</span>
+                ))}
+              </div>
+            )}
           </header>
 
           {/* ─── STATS BAR ─── */}
@@ -122,6 +132,12 @@ export default async function ProtocolPage({ params }: { params: { id: string } 
               <span className="pd-stat-label">Chains</span>
               <span className="pd-stat-value">{chains.length || '—'}</span>
             </div>
+            {liveSince && (
+              <div className="pd-stat">
+                <span className="pd-stat-label">Live Since</span>
+                <span className="pd-stat-value">{liveSince}</span>
+              </div>
+            )}
           </div>
 
           {/* ─── INTERACTIVE SECTIONS ─── */}
@@ -131,6 +147,8 @@ export default async function ProtocolPage({ params }: { params: { id: string } 
             scope={scope}
             slug={protocol.slug}
             program_rules={protocol.program_rules}
+            submission_requirements={protocol.submission_requirements}
+            eligibility={protocol.eligibility}
           />
 
         </div>

@@ -2058,6 +2058,143 @@ a { color: inherit; text-decoration: none; }
   color: var(--dim);
 }
 
+/* ─── PROGRAM TAGS ─── */
+.pd-hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+.pd-tag {
+  font-family: var(--fm);
+  font-size: .58rem;
+  font-weight: 600;
+  letter-spacing: .03em;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: rgba(137,224,109,.08);
+  color: var(--green);
+  border: 1px solid rgba(137,224,109,.18);
+}
+
+/* ─── SUBMISSION FORMAT TAB ─── */
+.pd-submission {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.pd-sub-section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+}
+.pd-sub-title {
+  font-family: var(--fd);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 0 0 8px;
+}
+.pd-sub-intro {
+  font-family: var(--fm);
+  font-size: .78rem;
+  color: var(--dim);
+  line-height: 1.6;
+  margin: 0 0 18px;
+}
+.pd-sub-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  counter-reset: none;
+}
+.pd-sub-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-family: var(--fm);
+  font-size: .82rem;
+  color: var(--ink);
+  line-height: 1.5;
+  padding: 10px 14px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+.pd-sub-num {
+  font-family: var(--fd);
+  font-size: .68rem;
+  font-weight: 700;
+  color: var(--green);
+  min-width: 24px;
+  flex-shrink: 0;
+  padding-top: 1px;
+}
+
+/* Severity criteria guide */
+.pd-sev-criteria {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.pd-sev-crit-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 12px 14px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-left: 3px solid;
+  border-radius: 8px;
+}
+.pd-sev-crit-level {
+  font-family: var(--fd);
+  font-size: .68rem;
+  font-weight: 800;
+  letter-spacing: .04em;
+  min-width: 70px;
+  flex-shrink: 0;
+  padding-top: 1px;
+}
+.pd-sev-crit-desc {
+  font-family: var(--fm);
+  font-size: .78rem;
+  color: var(--dim);
+  line-height: 1.5;
+}
+
+/* Eligibility */
+.pd-elig-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.pd-elig-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-family: var(--fm);
+  font-size: .82rem;
+  color: var(--ink);
+  line-height: 1.5;
+  padding: 10px 14px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+.pd-elig-check {
+  color: var(--green);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
 /* ─── RESPONSIVE ─── */
 @media (max-width: 768px) {
   .pd-wrap { padding: 0 16px 32px; }
