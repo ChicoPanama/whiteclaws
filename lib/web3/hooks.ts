@@ -1,16 +1,19 @@
 /**
- * Web3 Hooks
- * Clean stub implementations. Will be upgraded to use Privy/wagmi
- * once NEXT_PUBLIC_PRIVY_APP_ID is configured (Phase 4).
+ * Web3 Hooks — Privy-backed wallet connection + Supabase access checks.
+ * Gracefully degrades when NEXT_PUBLIC_PRIVY_APP_ID is not set.
  */
 
-import { useState, useCallback } from 'react'
+'use client'
 
+import { useState, useCallback, useEffect } from 'react'
+
+// ─── Types ───
 export interface WhiteClawsState {
   isConnected: boolean
   address: string | null
   connect: () => Promise<void>
   disconnect: () => Promise<void>
+  isLoading: boolean
 }
 
 export interface AccessStatusState {
@@ -19,31 +22,55 @@ export interface AccessStatusState {
   checkAccess: (address?: string) => Promise<boolean>
 }
 
-/**
- * Hook for wallet connection.
- * Phase 4 will replace with Privy wallet hooks.
- */
-export function useWhiteClaws(): WhiteClawsState {
-  const [isConnected, setIsConnected] = useState(false)
-  const [address, setAddress] = useState<string | null>(null)
+// ─── Privy helpers (lazy import to avoid crash when not configured) ───
+function usePrivySafe() {
+  try {
+    const privy = require('@privy-io/react-auth')
+    return privy.usePrivy()
+  } catch {
+    return { authenticated: false, user: null, login: () => {}, logout: () => {}, ready: false }
+  }
+}
 
-  const connect = useCallback(async () => {
-    // Stub: simulates connection
-    setIsConnected(true)
-    setAddress('0x' + '0'.repeat(40))
-  }, [])
-
-  const disconnect = useCallback(async () => {
-    setIsConnected(false)
-    setAddress(null)
-  }, [])
-
-  return { isConnected, address, connect, disconnect }
+function useWalletsSafe() {
+  try {
+    const privy = require('@privy-io/react-auth')
+    return privy.useWallets()
+  } catch {
+    return { wallets: [] }
+  }
 }
 
 /**
- * Hook for checking access token/SBT status.
- * Phase 4 will replace with on-chain contract read.
+ * Wallet connection hook — uses Privy when configured.
+ */
+export function useWhiteClaws(): WhiteClawsState {
+  const { authenticated, user, login, logout, ready } = usePrivySafe()
+  const { wallets } = useWalletsSafe()
+
+  const address = wallets?.[0]?.address || user?.wallet?.address || null
+  const isConnected = authenticated && !!address
+
+  const connect = useCallback(async () => {
+    login()
+  }, [login])
+
+  const disconnect = useCallback(async () => {
+    logout()
+  }, [logout])
+
+  return {
+    isConnected,
+    address,
+    connect,
+    disconnect,
+    isLoading: !ready,
+  }
+}
+
+/**
+ * Access status hook — checks Supabase for access records.
+ * Will check on-chain SBT once contract is deployed.
  */
 export function useAccessStatus(): AccessStatusState {
   const [hasAccess, setHasAccess] = useState(false)
@@ -57,39 +84,39 @@ export function useAccessStatus(): AccessStatusState {
       const res = await fetch(`/api/access/status?address=${address}`, { cache: 'no-store' })
       if (res.ok) {
         const data = await res.json()
-        setHasAccess(data.hasAccess ?? false)
+        const result = data.hasAccess ?? false
+        setHasAccess(result)
         setIsLoading(false)
-        return data.hasAccess ?? false
+        return result
       }
     } catch {
-      // API not available
+      // API not available — fall through
     }
 
-    setHasAccess(false)
+    // Default: grant access if wallet is connected (open beta)
+    setHasAccess(true)
     setIsLoading(false)
-    return false
+    return true
   }, [])
 
   return { hasAccess, isLoading, checkAccess }
 }
 
 /**
- * Hook for wcToken balance.
- * Phase 4 will replace with ERC-20 read via viem.
+ * Token balance hook — placeholder until wcToken contract is deployed.
+ * Will use viem readContract for ERC-20 balance.
  */
 export function useTokenBalance(): {
   balance: string
   isLoading: boolean
   refetch: () => Promise<void>
 } {
-  const [balance, setBalance] = useState('0')
-  const [isLoading, setIsLoading] = useState(false)
+  const [balance] = useState('0')
+  const [isLoading] = useState(false)
 
   const refetch = useCallback(async () => {
-    setIsLoading(true)
-    await new Promise(resolve => setTimeout(resolve, 50))
-    setBalance('0')
-    setIsLoading(false)
+    // Phase 4B: Once wcToken is deployed, use:
+    // const result = await readContract({ address: CONTRACTS.wcToken, abi: erc20Abi, functionName: 'balanceOf', args: [address] })
   }, [])
 
   return { balance, isLoading, refetch }
