@@ -24,3 +24,6 @@ export function createClient() {
 
   return adminClient
 }
+
+// Alias for backward compatibility
+export const createAdminClient = createClient
