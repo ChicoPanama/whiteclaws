@@ -9,99 +9,99 @@ export const dynamic = 'force-dynamic'
  * Submit a vulnerability finding. Requires API key auth.
  * Body: {
  *   protocol_slug, title, severity, scope_version?,
- *   description?, encrypted_report?, poc_url?
+ *   description?, encrypted_report?: { ciphertext, nonce, sender_pubkey },
+ *   poc_url?
  * }
  */
 export async function POST(req: NextRequest) {
   try {
     const apiKey = extractApiKey(req)
-    if (!apiKey) {
-      return NextResponse.json(
-        { error: 'Missing API key. Use Authorization: Bearer wc_xxx_yyy' },
-        { status: 401 }
-      )
-    }
+    if (!apiKey) return NextResponse.json({ error: 'Missing API key. Use Authorization: Bearer wc_xxx' }, { status: 401 })
 
     const auth = await verifyApiKey(apiKey)
     if (!auth.valid) return NextResponse.json({ error: auth.error }, { status: 401 })
-    if (!auth.scopes?.includes('agent:submit')) {
-      return NextResponse.json({ error: 'API key lacks agent:submit scope' }, { status: 403 })
-    }
+    if (!auth.scopes?.includes('agent:submit')) return NextResponse.json({ error: 'Missing agent:submit scope' }, { status: 403 })
 
     const body = await req.json()
     const { protocol_slug, title, severity, scope_version, description, encrypted_report, poc_url } = body
 
-    if (!protocol_slug) return NextResponse.json({ error: 'protocol_slug required' }, { status: 400 })
-    if (!title || title.length < 5) return NextResponse.json({ error: 'title required (min 5 chars)' }, { status: 400 })
+    if (!protocol_slug) return NextResponse.json({ error: 'protocol_slug is required' }, { status: 400 })
+    if (!title || title.length < 5) return NextResponse.json({ error: 'title is required (min 5 chars)' }, { status: 400 })
     if (!['critical', 'high', 'medium', 'low'].includes(severity)) {
-      return NextResponse.json({ error: 'severity must be critical|high|medium|low' }, { status: 400 })
+      return NextResponse.json({ error: 'severity must be critical, high, medium, or low' }, { status: 400 })
     }
 
     const supabase = createClient()
 
-    // Resolve protocol
+    // Resolve protocol + active program
     const { data: protocol } = await supabase
-      .from('protocols').select('id, slug, name').eq('slug', protocol_slug).maybeSingle()
+      .from('protocols')
+      .select('id, slug, name')
+      .eq('slug', protocol_slug)
+      .maybeSingle()
+
     if (!protocol) return NextResponse.json({ error: `Protocol '${protocol_slug}' not found` }, { status: 404 })
 
-    // Check for active program
     const { data: program } = await supabase
-      .from('programs').select('id, status, scope_version, cooldown_hours, poc_required')
-      .eq('protocol_id', protocol.id).maybeSingle()
+      .from('programs')
+      .select('id, status, scope_version, poc_required, cooldown_hours')
+      .eq('protocol_id', protocol.id)
+      .eq('status', 'active')
+      .maybeSingle()
 
-    if (program && program.status !== 'active') {
-      return NextResponse.json({ error: 'Bounty program is not active' }, { status: 400 })
+    if (!program) return NextResponse.json({ error: 'No active bounty program for this protocol' }, { status: 404 })
+
+    // Check PoC requirement
+    if (program.poc_required && !poc_url && !encrypted_report) {
+      return NextResponse.json({ error: 'This program requires a proof of concept (poc_url or encrypted_report)' }, { status: 400 })
     }
 
-    // Cooldown check — one submission per protocol per cooldown period
-    if (program?.cooldown_hours) {
-      const cooldownSince = new Date(Date.now() - program.cooldown_hours * 3600 * 1000).toISOString()
-      const { count } = await supabase
-        .from('findings')
-        .select('id', { count: 'exact', head: true })
-        .eq('researcher_id', auth.userId)
-        .eq('protocol_id', protocol.id)
-        .gte('created_at', cooldownSince)
+    // Check cooldown — agent can't submit to same protocol within cooldown_hours
+    const cooldownDate = new Date(Date.now() - (program.cooldown_hours || 24) * 3600000).toISOString()
+    const { data: recentSubmission } = await supabase
+      .from('findings')
+      .select('id, created_at')
+      .eq('researcher_id', auth.userId)
+      .eq('protocol_id', protocol.id)
+      .gte('created_at', cooldownDate)
+      .limit(1)
+      .maybeSingle()
 
-      if ((count || 0) > 0) {
-        return NextResponse.json({
-          error: `Cooldown active. You can submit again to ${protocol_slug} in ${program.cooldown_hours}h.`,
-        }, { status: 429 })
-      }
+    if (recentSubmission) {
+      return NextResponse.json({
+        error: `Cooldown active. You submitted to ${protocol_slug} within the last ${program.cooldown_hours}h. Try again later.`,
+        last_submission: recentSubmission.created_at,
+      }, { status: 429 })
     }
+
+    // Check for duplicate title (basic)
+    const { data: duplicate } = await supabase
+      .from('findings')
+      .select('id, title')
+      .eq('protocol_id', protocol.id)
+      .ilike('title', title)
+      .limit(1)
+      .maybeSingle()
 
     // Insert finding
     const { data: finding, error: insertError } = await supabase
       .from('findings')
       .insert({
         protocol_id: protocol.id,
-        program_id: program?.id || null,
+        program_id: program.id,
         researcher_id: auth.userId,
         title,
         severity,
-        description: description || null,
-        scope_version: scope_version || program?.scope_version || null,
+        scope_version: scope_version || program.scope_version,
+        encrypted_report_url: encrypted_report ? JSON.stringify(encrypted_report) : null,
         encrypted_report: encrypted_report || null,
         poc_url: poc_url || null,
         status: 'submitted',
       })
-      .select('id, title, severity, status, created_at')
+      .select('id, title, severity, status, scope_version, created_at')
       .single()
 
     if (insertError) throw insertError
-
-    // Increment agent submission count
-    const { data: ranking } = await supabase
-      .from('agent_rankings')
-      .select('total_submissions')
-      .eq('agent_id', auth.userId)
-      .maybeSingle()
-
-    if (ranking) {
-      await supabase.from('agent_rankings')
-        .update({ total_submissions: (ranking.total_submissions || 0) + 1 })
-        .eq('agent_id', auth.userId)
-    }
 
     return NextResponse.json({
       finding: {
@@ -111,7 +111,9 @@ export async function POST(req: NextRequest) {
         title: finding.title,
         severity: finding.severity,
         status: finding.status,
+        scope_version: finding.scope_version,
         created_at: finding.created_at,
+        possible_duplicate: duplicate ? { id: duplicate.id, title: duplicate.title } : null,
       },
       message: 'Finding submitted. It will be triaged by the protocol team.',
     }, { status: 201 })
