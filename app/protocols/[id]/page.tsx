@@ -130,7 +130,6 @@ export default async function ProtocolPage({ params }: { params: { id: string } 
             contracts={contracts}
             scope={scope}
             slug={protocol.slug}
-            immunefi_url={protocol.immunefi_url}
             program_rules={protocol.program_rules}
           />
 
