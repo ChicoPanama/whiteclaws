@@ -9,7 +9,7 @@ async function verifyProtocolAccess(req: NextRequest, slug: string, requiredScop
   if (!apiKey) return { error: 'Missing API key', status: 401 }
 
   const auth = await verifyApiKey(apiKey)
-  if (!auth.valid) return { error: auth.error, status: 401 }
+  if (!auth.valid || !auth.userId) return { error: auth.error, status: 401 }
   if (!auth.scopes?.includes(requiredScope)) return { error: `Requires ${requiredScope} scope`, status: 403 }
 
   const supabase = createClient()
