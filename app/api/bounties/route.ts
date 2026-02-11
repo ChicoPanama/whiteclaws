@@ -80,6 +80,9 @@ export async function GET(req: NextRequest) {
     }
   })
 
+  // Filter out entries with missing protocol data
+  results = results.filter(r => r.slug && r.name)
+
   if (chain) {
     results = results.filter(r => (r.chains as string[]).includes(chain.toLowerCase()))
   }

@@ -1,14 +1,16 @@
 import { NextResponse } from 'next/server'
 import { createClient } from '@/lib/supabase/admin'
-import { leaderboard as mockLeaderboard } from '@/lib/data/constants'
 
 export const dynamic = 'force-dynamic'
 
+/**
+ * GET /api/leaderboard — agent rankings by bounty earnings
+ * Public endpoint. No fake fallback data.
+ */
 export async function GET() {
   try {
     const supabase = createClient()
 
-    // Try to get real data from agent_rankings
     const { data: rankings, error } = await supabase
       .from('agent_rankings')
       .select(`
@@ -19,24 +21,16 @@ export async function GET() {
       .order('total_bounty_amount', { ascending: false })
       .limit(50)
 
-    if (error || !rankings || rankings.length === 0) {
-      // Fallback to mock data
+    if (error) {
+      console.error('Leaderboard query error:', error)
       return NextResponse.json({
         success: true,
-        data: {
-          entries: mockLeaderboard,
-          metadata: {
-            totalBounties: mockLeaderboard.length,
-            totalEarned: '$8.4M+',
-            activeResearchers: 1247,
-            season: 'S1 2026',
-          },
-        },
+        data: { entries: [], metadata: { totalBounties: 0, totalEarned: '$0', activeResearchers: 0, season: 'S1 2026' } },
         timestamp: new Date().toISOString(),
       })
     }
 
-    const entries = rankings.map((r, i) => {
+    const entries = (rankings || []).map((r, i) => {
       const user = r.user as { handle?: string; display_name?: string; avatar_url?: string } | null
       return {
         rank: r.rank || i + 1,
@@ -54,6 +48,11 @@ export async function GET() {
     })
 
     const totalEarned = entries.reduce((sum, e) => sum + e.earnedNum, 0)
+    const totalEarnedStr = totalEarned >= 1_000_000
+      ? `$${(totalEarned / 1e6).toFixed(1)}M`
+      : totalEarned >= 1_000
+        ? `$${(totalEarned / 1e3).toFixed(0)}K`
+        : `$${totalEarned}`
 
     return NextResponse.json({
       success: true,
@@ -61,7 +60,7 @@ export async function GET() {
         entries,
         metadata: {
           totalBounties: entries.length,
-          totalEarned: `$${(totalEarned / 1e6).toFixed(1)}M+`,
+          totalEarned: totalEarnedStr,
           activeResearchers: entries.length,
           season: 'S1 2026',
         },
@@ -71,7 +70,7 @@ export async function GET() {
   } catch (error) {
     console.error('Leaderboard API error:', error)
     return NextResponse.json(
-      { success: false, error: 'Failed to fetch leaderboard data', timestamp: new Date().toISOString() },
+      { success: false, error: 'Failed to fetch leaderboard', timestamp: new Date().toISOString() },
       { status: 500 },
     )
   }

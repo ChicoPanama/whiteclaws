@@ -6,12 +6,18 @@ const nextConfig = {
     unoptimized: true,
   },
   typescript: {
-    // Build succeeds while we complete Supabase type generation.
-    // Types are still checked in IDE/CI via `tsc --noEmit`.
     ignoreBuildErrors: true,
   },
   eslint: {
     ignoreDuringBuilds: true,
+  },
+  async rewrites() {
+    return [
+      {
+        source: '/.well-known/x402.json',
+        destination: '/api/discovery/',
+      },
+    ]
   },
 }
 

@@ -1,13 +1,14 @@
 /**
- * Agent Authentication Middleware — validates API keys against Supabase.
+ * Agent Authentication Middleware — validates API keys via api_keys table.
+ * Consolidated: all auth goes through lib/auth/api-key.ts
  *
  * Usage in API routes:
  *   const agent = await authenticateAgent(req)
  *   if (!agent) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
  */
 
-import { extractApiKey, hashKey, isValidKeyFormat } from '@/lib/auth/apikey'
-import { createAdminClient } from '@/lib/supabase/admin'
+import { extractApiKey, verifyApiKey } from '@/lib/auth/api-key'
+import { createClient as createAdminClient } from '@/lib/supabase/admin'
 
 export interface AuthenticatedAgent {
   id: string
@@ -16,6 +17,7 @@ export interface AuthenticatedAgent {
   is_agent: boolean
   reputation_score: number
   status: string
+  scopes?: string[]
 }
 
 /**
@@ -24,29 +26,20 @@ export interface AuthenticatedAgent {
  */
 export async function authenticateAgent(req: Request): Promise<AuthenticatedAgent | null> {
   const rawKey = extractApiKey(req)
-  if (!rawKey || !isValidKeyFormat(rawKey)) {
-    return null
-  }
+  if (!rawKey) return null
 
-  const hash = hashKey(rawKey)
-  const prefix = rawKey.slice(0, 16) // wc_live_ + 8 chars
+  const auth = await verifyApiKey(rawKey)
+  if (!auth.valid || !auth.userId) return null
 
   try {
     const supabase = createAdminClient()
-
-    // Fast prefix lookup, then verify hash
     const { data: user, error } = await supabase
-      .from('users')
-      .select('id, handle, display_name, is_agent, reputation_score, status, api_key_hash')
-      .eq('api_key_prefix', prefix)
+      .from('users' as any)
+      .select('id, handle, display_name, is_agent, reputation_score, status')
+      .eq('id', auth.userId)
       .single()
 
     if (error || !user) return null
-
-    // Constant-time hash comparison
-    if (user.api_key_hash !== hash) return null
-
-    // Check agent status
     if (user.status !== 'active') return null
 
     return {
@@ -56,6 +49,7 @@ export async function authenticateAgent(req: Request): Promise<AuthenticatedAgen
       is_agent: user.is_agent,
       reputation_score: user.reputation_score,
       status: user.status,
+      scopes: auth.scopes,
     }
   } catch {
     return null
