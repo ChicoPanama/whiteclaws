@@ -6,90 +6,57 @@ export const dynamic = 'force-dynamic'
 
 /**
  * POST /api/protocols/register
- * Protocol team registers their project. Creates protocol + owner + program.
- * Returns API key for managing program and triaging findings.
- *
- * Body: { name, slug, website_url?, github_url?, docs_url?, contact_email,
- *         chains?, category?, logo_url?, max_bounty?, description? }
+ * Protocol team registers their project. Creates protocol + program + owner membership + API key.
+ * Body: { name, slug?, website_url?, github_url?, docs_url?, contact_email?, chains?[], category?, max_bounty?, logo_url? }
  */
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json()
-    const { name, slug, website_url, github_url, docs_url, contact_email,
-            chains, category, logo_url, max_bounty, description, wallet_address } = body
+    const { name, website_url, github_url, docs_url, contact_email, chains, category, max_bounty, logo_url } = body
 
-    if (!name || typeof name !== 'string') {
-      return NextResponse.json({ error: 'name is required' }, { status: 400 })
-    }
-    if (!slug || typeof slug !== 'string') {
-      return NextResponse.json({ error: 'slug is required' }, { status: 400 })
-    }
-    if (!contact_email || typeof contact_email !== 'string') {
-      return NextResponse.json({ error: 'contact_email is required' }, { status: 400 })
+    if (!name || typeof name !== 'string' || name.length < 2) {
+      return NextResponse.json({ error: 'name is required (min 2 chars)' }, { status: 400 })
     }
 
-    const cleanSlug = slug.toLowerCase().replace(/[^a-z0-9-]/g, '')
+    const slug = (body.slug || name).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '')
+    if (!slug) {
+      return NextResponse.json({ error: 'Could not generate valid slug' }, { status: 400 })
+    }
+
     const supabase = createClient()
 
-    // Check for duplicate slug
+    // Check duplicate slug
     const { data: existing } = await supabase
       .from('protocols')
       .select('id')
-      .eq('slug', cleanSlug)
+      .eq('slug', slug)
       .maybeSingle()
 
     if (existing) {
-      return NextResponse.json({ error: 'Protocol slug already taken' }, { status: 409 })
+      return NextResponse.json({ error: `Protocol slug '${slug}' already exists` }, { status: 409 })
     }
 
-    // Create owner user (or find existing by wallet/email)
-    let ownerId: string
-    if (wallet_address) {
-      const { data: existingUser } = await supabase
-        .from('users')
-        .select('id')
-        .eq('wallet_address', wallet_address)
-        .maybeSingle()
+    // Create user for protocol owner
+    const { data: owner, error: ownerErr } = await supabase
+      .from('users')
+      .insert({
+        handle: `protocol_${slug}`,
+        display_name: `${name} Team`,
+        is_agent: false,
+        status: 'active',
+      })
+      .select('id')
+      .single()
 
-      if (existingUser) {
-        ownerId = existingUser.id
-      } else {
-        const { data: newUser, error: userErr } = await supabase
-          .from('users')
-          .insert({
-            handle: `protocol_${cleanSlug}`,
-            display_name: `${name} Team`,
-            wallet_address,
-            is_agent: false,
-            status: 'active',
-          })
-          .select('id')
-          .single()
-        if (userErr) throw userErr
-        ownerId = newUser.id
-      }
-    } else {
-      const { data: newUser, error: userErr } = await supabase
-        .from('users')
-        .insert({
-          handle: `protocol_${cleanSlug}`,
-          display_name: `${name} Team`,
-          is_agent: false,
-          status: 'active',
-        })
-        .select('id')
-        .single()
-      if (userErr) throw userErr
-      ownerId = newUser.id
-    }
+    if (ownerErr) throw ownerErr
 
     // Create protocol
     const { data: protocol, error: protoErr } = await supabase
       .from('protocols')
       .insert({
-        slug: cleanSlug,
+        slug,
         name,
-        description: description || `${name} bug bounty program`,
+        description: body.description || `${name} bug bounty program on WhiteClaws`,
         category: category || 'DeFi',
         chains: Array.isArray(chains) ? chains : ['ethereum'],
         max_bounty: max_bounty || 100000,
@@ -97,19 +64,19 @@ export async function POST(req: NextRequest) {
         website_url: website_url || null,
         github_url: github_url || null,
         docs_url: docs_url || null,
-        contact_email,
+        contact_email: contact_email || null,
+        owner_id: owner.id,
         verified: false,
-        owner_id: ownerId,
       })
       .select('id, slug, name')
       .single()
 
     if (protoErr) throw protoErr
 
-    // Create protocol_member (owner)
+    // Create protocol_members entry
     await supabase.from('protocol_members').insert({
       protocol_id: protocol.id,
-      user_id: ownerId,
+      user_id: owner.id,
       role: 'owner',
     })
 
@@ -127,24 +94,24 @@ export async function POST(req: NextRequest) {
       .select('id')
       .single()
 
-    // Create initial scope
+    // Create initial scope v1
     if (program) {
       await supabase.from('program_scopes').insert({
         program_id: program.id,
         version: 1,
-        in_scope: ['Smart contracts — details to be specified'],
-        out_of_scope: ['Frontend applications', 'Off-chain infrastructure'],
+        in_scope: body.in_scope || ['Smart contracts'],
+        out_of_scope: body.out_of_scope || ['Frontend applications', 'Off-chain infrastructure'],
         severity_definitions: {
-          critical: { min: Math.floor((max_bounty || 100000) * 0.25), max: max_bounty || 100000, description: 'Direct theft of user funds or protocol insolvency' },
-          high: { min: 1000, max: Math.floor((max_bounty || 100000) * 0.1), description: 'Temporary freezing of funds or manipulation' },
+          critical: { min: Math.max(Math.floor((max_bounty || 100000) * 0.25), 1000), max: max_bounty || 100000, description: 'Direct theft of user funds or protocol insolvency' },
+          high: { min: 1000, max: Math.max(Math.floor((max_bounty || 100000) * 0.1), 5000), description: 'Temporary freezing of funds or manipulation' },
           medium: { min: 500, max: 1000, description: 'Griefing or protocol disruption' },
           low: { min: 100, max: 500, description: 'Informational or best practice issues' },
         },
       })
     }
 
-    // Generate API key for protocol management
-    const { key, keyPrefix } = await generateApiKey(ownerId, `${cleanSlug}-protocol`, [
+    // Generate API key for protocol team
+    const { key, keyPrefix } = await generateApiKey(owner.id, 'protocol-admin', [
       'protocol:read', 'protocol:write', 'protocol:triage',
     ])
 

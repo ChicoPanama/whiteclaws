@@ -4,6 +4,10 @@ import { extractApiKey, verifyApiKey } from '@/lib/auth/api-key'
 
 export const dynamic = 'force-dynamic'
 
+/**
+ * GET /api/protocols/[slug]/findings — list findings for this protocol (auth required)
+ * Query params: ?status=submitted&severity=critical&limit=50
+ */
 export async function GET(req: NextRequest, { params }: { params: { slug: string } }) {
   const apiKey = extractApiKey(req)
   if (!apiKey) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
@@ -13,16 +17,15 @@ export async function GET(req: NextRequest, { params }: { params: { slug: string
 
   const supabase = createClient()
 
-  // Get protocol
+  // Verify protocol membership
   const { data: protocol } = await supabase
     .from('protocols')
-    .select('id')
+    .select('id, slug, name')
     .eq('slug', params.slug)
-    .maybeSingle()
+    .single()
 
   if (!protocol) return NextResponse.json({ error: 'Protocol not found' }, { status: 404 })
 
-  // Verify membership
   const { data: member } = await supabase
     .from('protocol_members')
     .select('role')
@@ -32,6 +35,7 @@ export async function GET(req: NextRequest, { params }: { params: { slug: string
 
   if (!member) return NextResponse.json({ error: 'Not a member of this protocol' }, { status: 403 })
 
+  // Build query
   const { searchParams } = new URL(req.url)
   const status = searchParams.get('status')
   const severity = searchParams.get('severity')
@@ -40,9 +44,11 @@ export async function GET(req: NextRequest, { params }: { params: { slug: string
   let query = supabase
     .from('findings')
     .select(`
-      id, title, severity, status, scope_version,
-      created_at, triaged_at, accepted_at, rejected_at, paid_at,
-      payout_amount, payout_currency, duplicate_of, researcher_id
+      id, title, severity, status, scope_version, poc_url,
+      payout_amount, payout_currency, paid_at, duplicate_of,
+      triage_notes, triaged_at, accepted_at, rejected_at, rejection_reason,
+      created_at, updated_at,
+      researcher:users!researcher_id(handle, display_name, is_agent)
     `)
     .eq('protocol_id', protocol.id)
     .order('created_at', { ascending: false })
@@ -52,13 +58,10 @@ export async function GET(req: NextRequest, { params }: { params: { slug: string
   if (severity) query = query.eq('severity', severity)
 
   const { data: findings, error } = await query
-
-  if (error) {
-    console.error('Findings query error:', error)
-    return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
-  }
+  if (error) throw error
 
   return NextResponse.json({
+    protocol: { slug: protocol.slug, name: protocol.name },
     findings: findings || [],
     count: findings?.length || 0,
   })
