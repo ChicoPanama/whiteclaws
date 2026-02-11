@@ -4,11 +4,7 @@ import { extractApiKey, verifyApiKey } from '@/lib/auth/api-key'
 
 export const dynamic = 'force-dynamic'
 
-/**
- * GET /api/protocols/[slug]/scope — get current scope (public, agents use this)
- * POST /api/protocols/[slug]/scope — publish new scope version (auth required)
- */
-export async function GET(req: NextRequest, { params }: { params: { slug: string } }) {
+export async function GET(_req: NextRequest, { params }: { params: { slug: string } }) {
   const supabase = createClient()
 
   const { data: protocol } = await supabase
@@ -69,11 +65,19 @@ export async function POST(req: NextRequest, { params }: { params: { slug: strin
 
   const supabase = createClient()
 
+  const { data: protocol } = await supabase
+    .from('protocols')
+    .select('id')
+    .eq('slug', params.slug)
+    .maybeSingle()
+
+  if (!protocol) return NextResponse.json({ error: 'Protocol not found' }, { status: 404 })
+
   const { data: membership } = await supabase
     .from('protocol_members')
-    .select('protocol_id, protocols!inner(slug)')
+    .select('role')
     .eq('user_id', auth.userId)
-    .eq('protocols.slug', params.slug)
+    .eq('protocol_id', protocol.id)
     .maybeSingle()
 
   if (!membership) return NextResponse.json({ error: 'Not a member of this protocol' }, { status: 403 })
@@ -81,7 +85,7 @@ export async function POST(req: NextRequest, { params }: { params: { slug: strin
   const { data: program } = await supabase
     .from('programs')
     .select('id, scope_version')
-    .eq('protocol_id', membership.protocol_id)
+    .eq('protocol_id', protocol.id)
     .maybeSingle()
 
   if (!program) return NextResponse.json({ error: 'No program found' }, { status: 404 })
@@ -102,16 +106,9 @@ export async function POST(req: NextRequest, { params }: { params: { slug: strin
     .select('id, version')
     .single()
 
-  if (error) throw error
+  if (error) return NextResponse.json({ error: 'Failed to create scope' }, { status: 500 })
 
-  // Update program scope_version
-  await supabase
-    .from('programs')
-    .update({ scope_version: newVersion })
-    .eq('id', program.id)
+  await supabase.from('programs').update({ scope_version: newVersion }).eq('id', program.id)
 
-  return NextResponse.json({
-    scope: { id: scope.id, version: scope.version },
-    message: `Scope v${newVersion} published`,
-  }, { status: 201 })
+  return NextResponse.json({ scope: { id: scope.id, version: scope.version }, message: `Scope v${newVersion} published` }, { status: 201 })
 }
