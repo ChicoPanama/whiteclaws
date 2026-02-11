@@ -4,10 +4,6 @@ import { extractApiKey, verifyApiKey } from '@/lib/auth/api-key'
 
 export const dynamic = 'force-dynamic'
 
-/**
- * GET /api/protocols/[slug]/scope — get current scope (public, agents call this)
- * POST /api/protocols/[slug]/scope — publish new scope version (auth required)
- */
 export async function GET(req: NextRequest, { params }: { params: { slug: string } }) {
   const supabase = createClient()
 
@@ -70,12 +66,20 @@ export async function POST(req: NextRequest, { params }: { params: { slug: strin
     const body = await req.json()
     const supabase = createClient()
 
+    const { data: protocol } = await supabase
+      .from('protocols')
+      .select('id')
+      .eq('slug', params.slug)
+      .maybeSingle()
+
+    if (!protocol) return NextResponse.json({ error: 'Protocol not found' }, { status: 404 })
+
     // Verify membership
     const { data: member } = await supabase
       .from('protocol_members')
-      .select('protocol_id, protocols!inner(slug)')
+      .select('role')
+      .eq('protocol_id', protocol.id)
       .eq('user_id', auth.userId)
-      .eq('protocols.slug', params.slug)
       .maybeSingle()
 
     if (!member) return NextResponse.json({ error: 'Not authorized' }, { status: 403 })
@@ -83,7 +87,7 @@ export async function POST(req: NextRequest, { params }: { params: { slug: strin
     const { data: program } = await supabase
       .from('programs')
       .select('id, scope_version')
-      .eq('protocol_id', member.protocol_id)
+      .eq('protocol_id', protocol.id)
       .eq('status', 'active')
       .maybeSingle()
 
@@ -106,7 +110,6 @@ export async function POST(req: NextRequest, { params }: { params: { slug: strin
 
     if (error) throw error
 
-    // Update program scope_version
     await supabase
       .from('programs')
       .update({ scope_version: newVersion })

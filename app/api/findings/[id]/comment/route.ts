@@ -4,11 +4,6 @@ import { extractApiKey, verifyApiKey } from '@/lib/auth/api-key'
 
 export const dynamic = 'force-dynamic'
 
-/**
- * POST /api/findings/[id]/comment — add comment to finding
- * GET /api/findings/[id]/comment — list comments
- * Auth: protocol member OR finding researcher
- */
 export async function POST(req: NextRequest, { params }: { params: { id: string } }) {
   const apiKey = extractApiKey(req)
   if (!apiKey) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
@@ -26,7 +21,6 @@ export async function POST(req: NextRequest, { params }: { params: { id: string 
 
     const supabase = createClient()
 
-    // Verify access: must be protocol member or researcher
     const { data: finding } = await supabase
       .from('findings')
       .select('id, protocol_id, researcher_id')
@@ -47,8 +41,7 @@ export async function POST(req: NextRequest, { params }: { params: { id: string 
       return NextResponse.json({ error: 'Not authorized to comment on this finding' }, { status: 403 })
     }
 
-    // Only protocol members can post internal comments
-    const internal = is_internal && !!member
+    const internal = is_internal === true && !!member
 
     const { data: comment, error } = await supabase
       .from('finding_comments')
@@ -99,10 +92,9 @@ export async function GET(req: NextRequest, { params }: { params: { id: string }
     return NextResponse.json({ error: 'Not authorized' }, { status: 403 })
   }
 
-  // Protocol members see internal comments, researchers don't
   let query = supabase
     .from('finding_comments')
-    .select('id, content, is_internal, created_at, user:users!user_id(handle, display_name)')
+    .select('id, content, is_internal, created_at, user_id')
     .eq('finding_id', params.id)
     .order('created_at', { ascending: true })
 
@@ -111,7 +103,10 @@ export async function GET(req: NextRequest, { params }: { params: { id: string }
   }
 
   const { data: comments, error } = await query
-  if (error) throw error
+  if (error) {
+    console.error('Comments query error:', error)
+    return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
+  }
 
   return NextResponse.json({ comments: comments || [] })
 }

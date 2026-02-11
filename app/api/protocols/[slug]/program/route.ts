@@ -4,12 +4,22 @@ import { extractApiKey, verifyApiKey } from '@/lib/auth/api-key'
 
 export const dynamic = 'force-dynamic'
 
+async function getProtocolId(slug: string) {
+  const supabase = createClient()
+  const { data } = await supabase
+    .from('protocols')
+    .select('id')
+    .eq('slug', slug)
+    .maybeSingle()
+  return data?.id || null
+}
+
 async function verifyProtocolAccess(req: NextRequest, slug: string, requiredScopes: string[]) {
   const apiKey = extractApiKey(req)
   if (!apiKey) return { error: 'Missing API key', status: 401 }
 
   const auth = await verifyApiKey(apiKey)
-  if (!auth.valid) return { error: auth.error, status: 401 }
+  if (!auth.valid) return { error: auth.error || 'Invalid key', status: 401 }
 
   for (const scope of requiredScopes) {
     if (!auth.scopes?.includes(scope)) {
@@ -17,26 +27,25 @@ async function verifyProtocolAccess(req: NextRequest, slug: string, requiredScop
     }
   }
 
+  const protocolId = await getProtocolId(slug)
+  if (!protocolId) return { error: 'Protocol not found', status: 404 }
+
   const supabase = createClient()
   const { data: member } = await supabase
     .from('protocol_members')
-    .select('role, protocol_id, protocols!inner(slug)')
+    .select('role')
+    .eq('protocol_id', protocolId)
     .eq('user_id', auth.userId)
-    .eq('protocols.slug', slug)
     .maybeSingle()
 
   if (!member) return { error: 'Not a member of this protocol', status: 403 }
 
-  return { userId: auth.userId, role: member.role, protocolId: member.protocol_id }
+  return { userId: auth.userId, role: member.role, protocolId }
 }
 
-/**
- * POST /api/protocols/[slug]/program — create bounty program
- * PATCH /api/protocols/[slug]/program — update program settings
- */
 export async function POST(req: NextRequest, { params }: { params: { slug: string } }) {
   const access = await verifyProtocolAccess(req, params.slug, ['protocol:write'])
-  if ('error' in access) return NextResponse.json({ error: access.error }, { status: access.status })
+  if ('error' in access) return NextResponse.json({ error: access.error }, { status: access.status as number })
 
   try {
     const body = await req.json()
@@ -83,7 +92,7 @@ export async function POST(req: NextRequest, { params }: { params: { slug: strin
 
 export async function PATCH(req: NextRequest, { params }: { params: { slug: string } }) {
   const access = await verifyProtocolAccess(req, params.slug, ['protocol:write'])
-  if ('error' in access) return NextResponse.json({ error: access.error }, { status: access.status })
+  if ('error' in access) return NextResponse.json({ error: access.error }, { status: access.status as number })
 
   try {
     const body = await req.json()
@@ -94,7 +103,7 @@ export async function PATCH(req: NextRequest, { params }: { params: { slug: stri
       'kyc_required', 'payout_currency', 'min_payout', 'max_payout',
       'encryption_public_key', 'payout_wallet', 'exclusions', 'cooldown_hours',
     ]
-    const updates: Record<string, any> = {}
+    const updates: Record<string, unknown> = {}
     for (const field of allowedFields) {
       if (body[field] !== undefined) updates[field] = body[field]
     }
@@ -122,19 +131,14 @@ export async function PATCH(req: NextRequest, { params }: { params: { slug: stri
 }
 
 export async function GET(req: NextRequest, { params }: { params: { slug: string } }) {
+  const protocolId = await getProtocolId(params.slug)
+  if (!protocolId) return NextResponse.json({ error: 'Protocol not found' }, { status: 404 })
+
   const supabase = createClient()
-  const { data: protocol } = await supabase
-    .from('protocols')
-    .select('id')
-    .eq('slug', params.slug)
-    .maybeSingle()
-
-  if (!protocol) return NextResponse.json({ error: 'Protocol not found' }, { status: 404 })
-
   const { data: program } = await supabase
     .from('programs')
     .select('*')
-    .eq('protocol_id', protocol.id)
+    .eq('protocol_id', protocolId)
     .neq('status', 'ended')
     .order('created_at', { ascending: false })
     .limit(1)
