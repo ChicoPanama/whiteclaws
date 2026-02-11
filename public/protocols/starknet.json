@@ -67,10 +67,17 @@
       "setOperator"
     ]
   },
-  "updated_at": "2026-02-10T00:00:00Z",
+  "updated_at": "2024-12-03T07:17:20.945Z",
   "branding": {
     "primary": "#080848",
     "accent": "#05052B",
     "text_on_primary": "#FFFFFF"
-  }
+  },
+  "live_since": "2022-10-19T06:30:00.000Z",
+  "poc_required": true,
+  "immunefi_tags": [
+    "Immunefi Standard",
+    "KYC Required",
+    "PoC Required"
+  ]
 }

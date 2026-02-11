@@ -11,7 +11,7 @@
   "bounty": {
     "max": 300000,
     "min": 500,
-    "kyc_required": false,
+    "kyc_required": true,
     "payout_token": "USDC"
   },
   "severity_payouts": {
@@ -42,10 +42,19 @@
       "Off-chain infrastructure"
     ]
   },
-  "updated_at": "2026-02-10T00:00:00Z",
+  "updated_at": "2025-02-03T07:42:52.842Z",
   "branding": {
     "primary": "#FFF9DA",
     "accent": "#999583",
     "text_on_primary": "#000000"
-  }
+  },
+  "live_since": "2024-09-12T14:36:25.000Z",
+  "poc_required": true,
+  "immunefi_tags": [
+    "Immunefi Standard",
+    "KYC Required",
+    "PoC Required",
+    "Primacy of Impact",
+    "Arbitration"
+  ]
 }

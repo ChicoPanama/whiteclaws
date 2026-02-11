@@ -68,10 +68,20 @@
       "disputeGame"
     ]
   },
-  "updated_at": "2026-02-10T00:00:00Z",
+  "updated_at": "2025-12-09T08:35:24.191Z",
   "branding": {
     "primary": "#F80818",
     "accent": "#95050E",
     "text_on_primary": "#FFFFFF"
-  }
+  },
+  "live_since": "2022-01-14T07:00:00.000Z",
+  "poc_required": true,
+  "triaged": true,
+  "immunefi_tags": [
+    "Immunefi Standard",
+    "KYC Required",
+    "PoC Required",
+    "Primacy of Impact",
+    "Triaged by Immunefi"
+  ]
 }

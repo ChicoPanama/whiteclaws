@@ -71,10 +71,18 @@
       "repay"
     ]
   },
-  "updated_at": "2026-02-10T00:00:00Z",
+  "updated_at": "2025-09-05T07:13:43.461Z",
   "branding": {
     "primary": "#A7A5FE",
     "accent": "#646398",
     "text_on_primary": "#000000"
-  }
+  },
+  "live_since": "2023-10-18T09:00:00.000Z",
+  "poc_required": true,
+  "immunefi_tags": [
+    "Immunefi Standard",
+    "KYC Required",
+    "PoC Required",
+    "Primacy of Impact"
+  ]
 }

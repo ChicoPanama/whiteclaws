@@ -67,10 +67,17 @@
       "slashShares"
     ]
   },
-  "updated_at": "2026-02-10T00:00:00Z",
+  "updated_at": "2025-09-09T06:20:08.287Z",
   "branding": {
     "primary": "#0B0063",
     "accent": "#07003B",
     "text_on_primary": "#FFFFFF"
-  }
+  },
+  "live_since": "2023-06-14T21:00:00.000Z",
+  "poc_required": true,
+  "immunefi_tags": [
+    "Immunefi Standard",
+    "KYC Required",
+    "PoC Required"
+  ]
 }

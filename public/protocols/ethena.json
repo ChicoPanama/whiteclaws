@@ -63,5 +63,17 @@
     }
   ],
   "source": "immunefi",
-  "updated_at": "2026-02-07T23:10:00Z"
+  "updated_at": "2025-05-20T06:39:16.014Z",
+  "live_since": "2024-04-04T16:46:29.000Z",
+  "poc_required": true,
+  "triaged": true,
+  "immunefi_tags": [
+    "Immunefi Standard",
+    "KYC Required",
+    "PoC Required",
+    "Primacy of Impact",
+    "Triaged by Immunefi",
+    "Arbitration",
+    "Vaults"
+  ]
 }

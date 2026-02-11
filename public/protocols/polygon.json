@@ -68,10 +68,17 @@
       "claimRewards"
     ]
   },
-  "updated_at": "2026-02-10T00:00:00Z",
+  "updated_at": "2026-01-05T11:10:50.979Z",
   "branding": {
     "primary": "#8848E8",
     "accent": "#522B8B",
     "text_on_primary": "#FFFFFF"
-  }
+  },
+  "live_since": "2021-09-13T13:00:00.000Z",
+  "poc_required": true,
+  "immunefi_tags": [
+    "Immunefi Standard",
+    "KYC Required",
+    "PoC Required"
+  ]
 }

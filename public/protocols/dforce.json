@@ -44,10 +44,18 @@
       "Off-chain infrastructure"
     ]
   },
-  "updated_at": "2026-02-10T00:00:00Z",
+  "updated_at": "2025-09-29T20:46:58.381Z",
   "branding": {
     "primary": "#22203C",
     "accent": "#141324",
     "text_on_primary": "#FFFFFF"
-  }
+  },
+  "live_since": "2021-07-29T06:00:00.000Z",
+  "poc_required": true,
+  "immunefi_tags": [
+    "Immunefi Standard",
+    "KYC Not Required",
+    "PoC Required",
+    "Arbitration"
+  ]
 }

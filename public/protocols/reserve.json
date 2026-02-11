@@ -68,10 +68,17 @@
       "refreshBasket"
     ]
   },
-  "updated_at": "2026-02-10T00:00:00Z",
+  "updated_at": "2025-06-26T13:32:24.962Z",
   "branding": {
     "primary": "#0858A8",
     "accent": "#053565",
     "text_on_primary": "#FFFFFF"
-  }
+  },
+  "live_since": "2023-04-27T09:00:00.000Z",
+  "poc_required": true,
+  "immunefi_tags": [
+    "Immunefi Standard",
+    "KYC Required",
+    "PoC Required"
+  ]
 }
