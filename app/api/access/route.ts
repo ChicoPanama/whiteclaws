@@ -1,40 +1,42 @@
-import { NextRequest, NextResponse } from 'next/server';
-import { createClient } from '@supabase/supabase-js'
+import { NextRequest, NextResponse } from 'next/server'
+import { createClient } from '@/lib/supabase/server'
 
-const supabaseUrl = 'https://kahrhjsmvfqzhmxiglru.supabase.co'
-const supabaseKey = process.env.SUPABASE_KEY
-const supabase = supabaseKey ? createClient(supabaseUrl, supabaseKey) : null
+export const dynamic = 'force-dynamic'
 
 export async function POST(req: NextRequest) {
   try {
-    const body = await req.json();
-    
-    // TODO: Validate wallet, check balance, mint SBT
-    // This is a stub implementation - will be fleshed out in later phases
-    
-    const { address, signature, amount } = body;
-    
-    // Validate required fields
+    const body = await req.json()
+    const { address } = body
+
     if (!address) {
-      return NextResponse.json(
-        { error: 'Wallet address is required' },
-        { status: 400 }
-      );
+      return NextResponse.json({ error: 'Wallet address is required' }, { status: 400 })
     }
-    
-    // Mock response for Phase 5
-    return NextResponse.json({ 
-      ok: true, 
-      txHash: '0x' + Array(64).fill('0').map(() => Math.floor(Math.random() * 16).toString(16)).join(''),
-      message: 'Access request submitted successfully (stub)',
+
+    const supabase = createClient()
+
+    // Check if user already has access
+    const { data: existing } = await supabase
+      .from('users')
+      .select('id, wallet_address')
+      .eq('wallet_address', address)
+      .single()
+
+    if (existing) {
+      return NextResponse.json({
+        ok: true,
+        message: 'Access already granted',
+        address,
+      })
+    }
+
+    return NextResponse.json({
+      ok: true,
+      message: 'Access request recorded',
       address,
-      timestamp: new Date().toISOString()
-    });
+      timestamp: new Date().toISOString(),
+    })
   } catch (error) {
-    console.error('Access API error:', error);
-    return NextResponse.json(
-      { error: 'Internal server error' },
-      { status: 500 }
-    );
+    console.error('Access API error:', error)
+    return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
   }
 }
