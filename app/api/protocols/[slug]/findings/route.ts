@@ -4,11 +4,6 @@ import { extractApiKey, verifyApiKey } from '@/lib/auth/api-key'
 
 export const dynamic = 'force-dynamic'
 
-/**
- * GET /api/protocols/[slug]/findings — list findings for this protocol
- * Auth required: must be protocol member
- * Query: ?status=submitted&severity=critical&limit=50
- */
 export async function GET(req: NextRequest, { params }: { params: { slug: string } }) {
   const apiKey = extractApiKey(req)
   if (!apiKey) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
@@ -18,12 +13,21 @@ export async function GET(req: NextRequest, { params }: { params: { slug: string
 
   const supabase = createClient()
 
-  // Verify protocol membership
+  // Get protocol
+  const { data: protocol } = await supabase
+    .from('protocols')
+    .select('id')
+    .eq('slug', params.slug)
+    .maybeSingle()
+
+  if (!protocol) return NextResponse.json({ error: 'Protocol not found' }, { status: 404 })
+
+  // Verify membership
   const { data: member } = await supabase
     .from('protocol_members')
-    .select('protocol_id, role, protocols!inner(slug, id)')
+    .select('role')
+    .eq('protocol_id', protocol.id)
     .eq('user_id', auth.userId)
-    .eq('protocols.slug', params.slug)
     .maybeSingle()
 
   if (!member) return NextResponse.json({ error: 'Not a member of this protocol' }, { status: 403 })
@@ -38,10 +42,9 @@ export async function GET(req: NextRequest, { params }: { params: { slug: string
     .select(`
       id, title, severity, status, scope_version,
       created_at, triaged_at, accepted_at, rejected_at, paid_at,
-      payout_amount, payout_currency, duplicate_of,
-      researcher:users!researcher_id(handle, display_name, is_agent)
+      payout_amount, payout_currency, duplicate_of, researcher_id
     `)
-    .eq('protocol_id', member.protocol_id)
+    .eq('protocol_id', protocol.id)
     .order('created_at', { ascending: false })
     .limit(limit)
 
@@ -50,7 +53,10 @@ export async function GET(req: NextRequest, { params }: { params: { slug: string
 
   const { data: findings, error } = await query
 
-  if (error) throw error
+  if (error) {
+    console.error('Findings query error:', error)
+    return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
+  }
 
   return NextResponse.json({
     findings: findings || [],
