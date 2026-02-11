@@ -4,11 +4,9 @@ import Nav from '@/components/landing/Nav'
 import Footer from '@/components/Footer'
 import ProtocolIcon from '@/components/ProtocolIcon'
 import { getProtocolBySlug } from '@/lib/data/protocols'
-import { createClient } from '@/lib/supabase/server'
 import ProtocolDetailClient from '@/components/protocol/ProtocolDetailClient'
 
 export const dynamic = 'force-dynamic'
-const hasSupabaseConfig = !!process.env.NEXT_PUBLIC_SUPABASE_URL && !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
 
 
 
@@ -22,10 +20,11 @@ const CHAIN_SHORT: Record<string, string> = {
 }
 
 async function getProtocol(slug: string) {
-  if (!hasSupabaseConfig) return getProtocolBySlug(slug)
-  const supabase = createClient()
-  const { data } = await supabase.from('protocols').select('*').eq('slug', slug).single()
-  return data
+  // Always read from JSON files for detail pages — they contain the full
+  // program structure (severity tiers, scope, contracts, rules, submission
+  // requirements, eligibility, branding). Supabase only stores the flat
+  // listing fields used by /bounties.
+  return getProtocolBySlug(slug)
 }
 
 export default async function ProtocolPage({ params }: { params: { id: string } }) {
