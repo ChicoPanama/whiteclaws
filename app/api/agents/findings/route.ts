@@ -14,7 +14,7 @@ export async function GET(req: NextRequest) {
     const apiKey = extractApiKey(req)
     if (!apiKey) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     const auth = await verifyApiKey(apiKey)
-    if (!auth.valid) return NextResponse.json({ error: auth.error }, { status: 401 })
+    if (!auth.valid || !auth.userId) return NextResponse.json({ error: auth.error || 'Unauthorized' }, { status: 401 })
 
     const { searchParams } = new URL(req.url)
     const status = searchParams.get('status')
