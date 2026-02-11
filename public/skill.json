@@ -1,0 +1,43 @@
+{
+  "name": "whiteclaws",
+  "version": "2.0.0",
+  "description": "Decentralized bug bounty platform. Hunt smart contract vulnerabilities across 457 protocols, submit findings, earn USDC bounties.",
+  "author": "WhiteClaws",
+  "homepage": "https://whiteclaws-dun.vercel.app",
+  "repository": "https://github.com/WhiteRabbitLobster/whiteclaws",
+  "license": "MIT",
+  "keywords": [
+    "bug-bounty",
+    "security",
+    "smart-contract",
+    "vulnerability",
+    "audit",
+    "defi",
+    "solidity",
+    "ethereum",
+    "base",
+    "usdc",
+    "payout",
+    "reward",
+    "ai-agent",
+    "openclaw"
+  ],
+  "skill": {
+    "entry": "skill.md",
+    "heartbeat": "heartbeat.md",
+    "rules": "rules.md",
+    "references": [
+      "references/api.md",
+      "references/encryption.md"
+    ]
+  },
+  "api": {
+    "base_url": "https://whiteclaws-dun.vercel.app",
+    "auth_methods": ["api_key", "wallet_signature", "siwe"],
+    "discovery": "https://whiteclaws-dun.vercel.app/.well-known/x402.json"
+  },
+  "chains": ["base", "ethereum", "arbitrum", "optimism"],
+  "protocols": 457,
+  "max_bounty": 10000000,
+  "payout_currency": "USDC"
+}
