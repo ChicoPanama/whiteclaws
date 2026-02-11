@@ -6,19 +6,23 @@ export const dynamic = 'force-dynamic'
 
 /**
  * POST /api/protocols/register
- * Protocol team registers their project. Creates protocol + program + owner membership.
- * Body: { name, slug, website_url?, github_url?, contact_email, chains[], max_bounty?, description? }
+ * Protocol team registers their project. Creates protocol, program, owner membership, and API key.
+ * Body: { name, slug?, website_url?, github_url?, contact_email, chains?, category?, max_bounty?, payout_currency? }
  */
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json()
-    const { name, slug, website_url, github_url, contact_email, chains, max_bounty, description } = body
+    const { name, slug, website_url, github_url, docs_url, contact_email, chains, category, max_bounty, payout_currency, logo_url } = body
 
-    if (!name || !slug || !contact_email) {
-      return NextResponse.json({ error: 'name, slug, and contact_email are required' }, { status: 400 })
+    if (!name || typeof name !== 'string' || name.length < 2) {
+      return NextResponse.json({ error: 'name is required (min 2 chars)' }, { status: 400 })
+    }
+    if (!contact_email || !contact_email.includes('@')) {
+      return NextResponse.json({ error: 'valid contact_email is required' }, { status: 400 })
     }
 
-    const cleanSlug = slug.toLowerCase().replace(/[^a-z0-9-]/g, '')
+    const cleanSlug = (slug || name).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '')
+
     const supabase = createClient()
 
     // Check duplicate slug
@@ -29,10 +33,10 @@ export async function POST(req: NextRequest) {
       .maybeSingle()
 
     if (existing) {
-      return NextResponse.json({ error: 'Protocol slug already registered' }, { status: 409 })
+      return NextResponse.json({ error: `Protocol slug '${cleanSlug}' already exists` }, { status: 409 })
     }
 
-    // Create owner user (or link to existing wallet user later via Privy)
+    // Create owner user (or this could be linked to an existing wallet user later)
     const { data: owner, error: ownerErr } = await supabase
       .from('users')
       .insert({
@@ -52,57 +56,58 @@ export async function POST(req: NextRequest) {
       .insert({
         slug: cleanSlug,
         name,
-        description: description || `${name} bug bounty program on WhiteClaws`,
-        category: 'DeFi',
-        chains: chains || ['ethereum'],
+        description: `${name} bug bounty program on WhiteClaws`,
+        category: category || 'DeFi',
+        chains: Array.isArray(chains) ? chains : ['ethereum'],
         max_bounty: max_bounty || 100000,
-        website_url,
-        github_url,
+        logo_url: logo_url || null,
+        website_url: website_url || null,
+        github_url: github_url || null,
+        docs_url: docs_url || null,
         contact_email,
-        owner_id: owner.id,
         verified: false,
+        owner_id: owner.id,
       })
       .select('id, slug, name')
       .single()
 
     if (protoErr) throw protoErr
 
-    // Create protocol_member (owner role)
+    // Create program
+    const { data: program, error: progErr } = await supabase
+      .from('programs')
+      .insert({
+        protocol_id: protocol.id,
+        status: 'active',
+        payout_currency: payout_currency || 'USDC',
+        min_payout: 500,
+        max_payout: max_bounty || 100000,
+      })
+      .select('id')
+      .single()
+
+    if (progErr) throw progErr
+
+    // Create initial scope v1
+    await supabase.from('program_scopes').insert({
+      program_id: program.id,
+      version: 1,
+      in_scope: ['Smart contracts — define specific contracts via scope update'],
+      out_of_scope: ['Frontend applications', 'Off-chain infrastructure'],
+      severity_definitions: {
+        critical: { min: Math.max(Math.floor((max_bounty || 100000) * 0.25), 1000), max: max_bounty || 100000, description: 'Direct theft of user funds or protocol insolvency' },
+        high: { min: 1000, max: Math.max(Math.floor((max_bounty || 100000) * 0.1), 5000), description: 'Temporary freezing of funds or manipulation' },
+        medium: { min: 500, max: 1000, description: 'Griefing or protocol disruption' },
+        low: { min: 100, max: 500, description: 'Informational or best practice issues' },
+      },
+    })
+
+    // Create owner membership
     await supabase.from('protocol_members').insert({
       protocol_id: protocol.id,
       user_id: owner.id,
       role: 'owner',
     })
-
-    // Create default program
-    const { data: program } = await supabase
-      .from('programs')
-      .insert({
-        protocol_id: protocol.id,
-        status: 'active',
-        max_payout: max_bounty || 100000,
-        min_payout: 500,
-        payout_currency: 'USDC',
-        poc_required: true,
-      })
-      .select('id')
-      .single()
-
-    // Create initial scope v1
-    if (program) {
-      await supabase.from('program_scopes').insert({
-        program_id: program.id,
-        version: 1,
-        in_scope: ['Smart contracts — define specific scope after registration'],
-        out_of_scope: ['Frontend applications', 'Off-chain infrastructure'],
-        severity_definitions: {
-          critical: { min: Math.floor((max_bounty || 100000) * 0.25), max: max_bounty || 100000, description: 'Direct theft of user funds or protocol insolvency' },
-          high: { min: 1000, max: Math.floor((max_bounty || 100000) * 0.1), description: 'Temporary freezing of funds or manipulation' },
-          medium: { min: 500, max: 1000, description: 'Griefing or protocol disruption' },
-          low: { min: 100, max: 500, description: 'Informational or best practice issues' },
-        },
-      })
-    }
 
     // Generate API key for protocol management
     const { key, keyPrefix } = await generateApiKey(owner.id, 'protocol-admin', [
@@ -111,10 +116,11 @@ export async function POST(req: NextRequest) {
 
     return NextResponse.json({
       protocol: { id: protocol.id, slug: protocol.slug, name: protocol.name },
-      program_id: program?.id,
+      program_id: program.id,
+      owner_id: owner.id,
       api_key: key,
       api_key_prefix: keyPrefix,
-      message: 'Protocol registered. Save your API key — it will not be shown again. Update your scope at PATCH /api/protocols/' + cleanSlug + '/scope',
+      message: 'Protocol registered. Save your API key — it will not be shown again. Next: update your scope via PATCH /api/protocols/' + cleanSlug + '/scope',
     }, { status: 201 })
   } catch (error) {
     console.error('Protocol registration error:', error)
