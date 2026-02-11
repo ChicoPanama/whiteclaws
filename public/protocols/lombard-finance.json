@@ -58,5 +58,17 @@
     "primary": "#142C2E",
     "accent": "#0C1A1C",
     "text_on_primary": "#FFFFFF"
-  }
+  },
+  "live_since": "2024-09-04T00:00:00.000Z",
+  "updated_at": "2025-01-17T14:25:50.616Z",
+  "poc_required": true,
+  "triaged": true,
+  "immunefi_tags": [
+    "Immunefi Standard",
+    "KYC Required",
+    "PoC Required",
+    "Triaged by Immunefi",
+    "Arbitration",
+    "Vaults"
+  ]
 }

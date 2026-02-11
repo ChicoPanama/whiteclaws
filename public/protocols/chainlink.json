@@ -72,10 +72,18 @@
       "setConfig"
     ]
   },
-  "updated_at": "2026-02-10T00:00:00Z",
+  "updated_at": "2025-08-12T09:06:25.889Z",
   "branding": {
     "primary": "#265DE2",
     "accent": "#173888",
     "text_on_primary": "#FFFFFF"
-  }
+  },
+  "live_since": "2021-05-11T05:00:00.000Z",
+  "poc_required": true,
+  "immunefi_tags": [
+    "Immunefi Standard",
+    "KYC Required",
+    "PoC Required",
+    "Primacy of Impact"
+  ]
 }

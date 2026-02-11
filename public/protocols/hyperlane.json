@@ -71,10 +71,17 @@
       "transferRemote"
     ]
   },
-  "updated_at": "2026-02-10T00:00:00Z",
+  "updated_at": "2025-12-03T23:49:23.843Z",
   "branding": {
     "primary": "#2868C8",
     "accent": "#183E78",
     "text_on_primary": "#FFFFFF"
-  }
+  },
+  "live_since": "2023-01-10T21:00:00.000Z",
+  "poc_required": true,
+  "immunefi_tags": [
+    "Immunefi Standard",
+    "KYC Required",
+    "PoC Required"
+  ]
 }

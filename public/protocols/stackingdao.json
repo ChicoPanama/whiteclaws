@@ -57,5 +57,16 @@
     "primary": "#183828",
     "accent": "#0E2218",
     "text_on_primary": "#FFFFFF"
-  }
+  },
+  "live_since": "2024-02-04T20:00:00.000Z",
+  "updated_at": "2025-07-16T12:17:01.393Z",
+  "poc_required": true,
+  "immunefi_tags": [
+    "Immunefi Standard",
+    "KYC Not Required",
+    "PoC Required",
+    "Primacy of Impact",
+    "Arbitration",
+    "Vaults"
+  ]
 }

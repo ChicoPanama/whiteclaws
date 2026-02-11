@@ -70,10 +70,19 @@
       "pause"
     ]
   },
-  "updated_at": "2026-02-10T00:00:00Z",
+  "updated_at": "2025-07-16T16:23:39.680Z",
   "branding": {
     "primary": "#00D292",
     "accent": "#007E58",
     "text_on_primary": "#000000"
-  }
+  },
+  "live_since": "2024-12-11T16:28:00.000Z",
+  "poc_required": true,
+  "triaged": true,
+  "immunefi_tags": [
+    "Immunefi Standard",
+    "KYC Required",
+    "PoC Required",
+    "Triaged by Immunefi"
+  ]
 }

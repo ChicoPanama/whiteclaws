@@ -72,5 +72,16 @@
       "setReceiveVersion"
     ]
   },
-  "updated_at": "2026-02-10T00:00:00Z"
+  "updated_at": "2025-11-11T09:44:54.638Z",
+  "live_since": "2023-05-17T17:00:00.000Z",
+  "poc_required": true,
+  "triaged": true,
+  "immunefi_tags": [
+    "Immunefi Standard",
+    "KYC Required",
+    "PoC Required",
+    "Primacy of Impact",
+    "Triaged by Immunefi",
+    "Arbitration"
+  ]
 }

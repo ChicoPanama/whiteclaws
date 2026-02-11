@@ -73,5 +73,12 @@
       "updateGuardianSet"
     ]
   },
-  "updated_at": "2026-02-10T00:00:00Z"
+  "updated_at": "2025-07-21T07:21:20.279Z",
+  "live_since": "2022-02-11T15:00:00.000Z",
+  "poc_required": true,
+  "immunefi_tags": [
+    "Immunefi Standard",
+    "KYC Required",
+    "PoC Required"
+  ]
 }

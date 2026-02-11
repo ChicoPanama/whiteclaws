@@ -11,7 +11,7 @@
   "bounty": {
     "max": 5000000,
     "min": 1000,
-    "kyc_required": true,
+    "kyc_required": false,
     "payout_token": "USDC"
   },
   "severity_payouts": {
@@ -68,10 +68,19 @@
       "createOrder"
     ]
   },
-  "updated_at": "2026-02-10T00:00:00Z",
+  "updated_at": "2025-05-09T07:17:13.823Z",
   "branding": {
     "primary": "#1A8CF2",
     "accent": "#105491",
     "text_on_primary": "#FFFFFF"
-  }
+  },
+  "live_since": "2021-10-20T12:00:00.000Z",
+  "poc_required": true,
+  "triaged": true,
+  "immunefi_tags": [
+    "Immunefi Standard",
+    "KYC Not Required",
+    "PoC Required",
+    "Triaged by Immunefi"
+  ]
 }

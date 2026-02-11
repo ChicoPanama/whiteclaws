@@ -71,10 +71,19 @@
     }
   ],
   "source": "immunefi",
-  "updated_at": "2026-02-07T23:10:00Z",
+  "updated_at": "2025-05-14T20:17:54.012Z",
   "branding": {
     "primary": "#F8E8D8",
     "accent": "#958B82",
     "text_on_primary": "#000000"
-  }
+  },
+  "live_since": "2023-10-17T09:00:00.000Z",
+  "poc_required": true,
+  "immunefi_tags": [
+    "Immunefi Standard",
+    "KYC Required",
+    "PoC Required",
+    "Primacy of Impact",
+    "Vaults"
+  ]
 }
