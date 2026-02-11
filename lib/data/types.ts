@@ -17,6 +17,16 @@ export interface Bounty {
   type?: string;
   maxReward?: string;
   maxRewardNum?: number;
+  // Rich fields from protocol JSON
+  description?: string;
+  kycRequired?: boolean;
+  pocRequired?: boolean;
+  triaged?: boolean;
+  payoutToken?: string;
+  severityMax?: number;  // critical max
+  severityHigh?: number; // high max
+  scopeCount?: number;   // number of in-scope items
+  contractCount?: number;
 }
 
 export interface Finding {

@@ -3683,3 +3683,328 @@ a { color: inherit; text-decoration: none; }
 
 .lg-wallet-btn:hover { filter: brightness(1.1); }
 .lg-wallet-btn:active { filter: brightness(0.95); }
+
+/* ═══════════════════════════════════════════════════════════════
+   BOUNTY GRID — Rich card layout (Phase 3 fix)
+   Platform-grade bounty listings with severity, badges, scope
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Search bar */
+.bg-search-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.bg-search-input {
+  flex: 1;
+  background: var(--s1);
+  border: 1px solid var(--s2);
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: .88rem;
+  font-family: var(--fm);
+  color: var(--ink);
+  outline: none;
+  transition: border-color .15s;
+}
+.bg-search-input::placeholder { color: var(--dim); }
+.bg-search-input:focus { border-color: var(--pr); }
+.bg-result-count {
+  font-size: .75rem;
+  font-family: var(--fm);
+  color: var(--dim);
+  white-space: nowrap;
+}
+
+/* Controls row */
+.bg-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+.bg-sort {
+  display: flex;
+  gap: 4px;
+}
+.bg-sort-btn {
+  font-family: var(--fm);
+  font-size: .72rem;
+  font-weight: 500;
+  color: var(--dim);
+  background: none;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  padding: 4px 10px;
+  cursor: pointer;
+  transition: all .15s;
+}
+.bg-sort-btn:hover { color: var(--ink); }
+.bg-sort-btn.active {
+  color: var(--pr);
+  border-color: var(--pr);
+  background: rgba(137, 224, 109, 0.06);
+}
+
+/* Grid layout */
+.bg-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 16px;
+}
+
+/* Card */
+.bg-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: var(--s1);
+  border: 1px solid var(--s2);
+  border-radius: 12px;
+  padding: 20px;
+  transition: border-color .2s, box-shadow .2s;
+  cursor: pointer;
+}
+.bg-card:hover {
+  border-color: var(--pr);
+  box-shadow: 0 0 20px rgba(137, 224, 109, 0.06);
+}
+
+/* Card header */
+.bg-card-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+.bg-card-icon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--s2);
+}
+.bg-card-title {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.bg-card-name {
+  font-size: .95rem;
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: -.01em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.bg-card-cat {
+  font-size: .72rem;
+  font-family: var(--fm);
+  color: var(--dim);
+}
+.bg-card-reward {
+  flex-shrink: 0;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+.bg-card-reward-label {
+  font-size: .62rem;
+  font-family: var(--fm);
+  color: var(--dim);
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+.bg-card-reward-value {
+  font-size: 1.1rem;
+  font-weight: 700;
+  font-family: var(--fm);
+  color: var(--pr);
+  letter-spacing: -.02em;
+}
+
+/* Description */
+.bg-card-desc {
+  font-size: .78rem;
+  line-height: 1.5;
+  color: var(--dim);
+  margin: 0;
+}
+
+/* Severity mini-bar */
+.bg-card-sev {
+  display: flex;
+  gap: 16px;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 8px;
+  border: 1px solid var(--s2);
+}
+.bg-sev-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.bg-sev-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.bg-sev-dot.critical { background: #FF4747; }
+.bg-sev-dot.high { background: #FF8C42; }
+.bg-sev-label {
+  font-size: .68rem;
+  font-family: var(--fm);
+  color: var(--dim);
+}
+.bg-sev-val {
+  font-size: .72rem;
+  font-family: var(--fm);
+  font-weight: 600;
+  color: var(--ink);
+}
+
+/* Badges */
+.bg-card-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.bg-badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: .62rem;
+  font-family: var(--fm);
+  font-weight: 500;
+  padding: 3px 8px;
+  border-radius: 4px;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+}
+.bg-badge.chain {
+  background: rgba(137, 224, 109, 0.08);
+  color: var(--pr);
+  border: 1px solid rgba(137, 224, 109, 0.15);
+}
+.bg-badge.kyc {
+  background: rgba(255, 209, 102, 0.08);
+  color: #FFD166;
+  border: 1px solid rgba(255, 209, 102, 0.2);
+}
+.bg-badge.poc {
+  background: rgba(96, 165, 250, 0.08);
+  color: #60A5FA;
+  border: 1px solid rgba(96, 165, 250, 0.2);
+}
+.bg-badge.triaged {
+  background: rgba(168, 85, 247, 0.08);
+  color: #A855F7;
+  border: 1px solid rgba(168, 85, 247, 0.2);
+}
+.bg-badge.token {
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--dim);
+  border: 1px solid var(--s2);
+}
+
+/* Footer */
+.bg-card-footer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 8px;
+  border-top: 1px solid var(--s2);
+}
+.bg-card-stat {
+  font-size: .66rem;
+  font-family: var(--fm);
+  color: var(--dim);
+}
+.bg-card-arrow {
+  margin-left: auto;
+  font-size: .72rem;
+  font-family: var(--fm);
+  font-weight: 600;
+  color: var(--pr);
+  opacity: 0;
+  transition: opacity .2s;
+}
+.bg-card:hover .bg-card-arrow { opacity: 1; }
+
+
+/* Hero stats bar on bounties page */
+.bg-hero-stats {
+  display: flex;
+  gap: 2px;
+  margin-bottom: 24px;
+  background: var(--s1);
+  border: 1px solid var(--s2);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.bg-hero-stat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 16px 12px;
+  background: transparent;
+  transition: background .15s;
+}
+.bg-hero-stat:hover { background: rgba(255,255,255,0.02); }
+.bg-hero-stat-value {
+  font-size: 1.3rem;
+  font-weight: 700;
+  font-family: var(--fm);
+  color: var(--ink);
+  letter-spacing: -.02em;
+}
+.bg-hero-stat-label {
+  font-size: .66rem;
+  font-family: var(--fm);
+  color: var(--dim);
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 860px) {
+  .bg-grid {
+    grid-template-columns: 1fr;
+  }
+  .bg-controls {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .bg-hero-stats {
+    flex-wrap: wrap;
+  }
+  .bg-hero-stat {
+    flex: 1 1 30%;
+    min-width: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .bg-card { padding: 14px; gap: 10px; }
+  .bg-card-name { font-size: .88rem; }
+  .bg-card-reward-value { font-size: .95rem; }
+  .bg-card-sev { flex-direction: column; gap: 6px; }
+  .bg-search-bar { flex-direction: column; }
+  .bg-search-input { width: 100%; }
+  .bg-hero-stats { flex-wrap: wrap; gap: 1px; }
+  .bg-hero-stat { padding: 12px 8px; }
+  .bg-hero-stat-value { font-size: 1rem; }
+}
