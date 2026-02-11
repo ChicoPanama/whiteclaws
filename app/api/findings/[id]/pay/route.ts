@@ -13,7 +13,7 @@ export async function POST(req: NextRequest, { params }: { params: { id: string 
   if (!apiKey) return NextResponse.json({ error: 'Missing API key' }, { status: 401 })
 
   const auth = await verifyApiKey(apiKey)
-  if (!auth.valid) return NextResponse.json({ error: auth.error }, { status: 401 })
+  if (!auth.valid || !auth.userId) return NextResponse.json({ error: auth.error }, { status: 401 })
 
   const supabase = createClient()
 

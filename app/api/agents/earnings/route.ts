@@ -12,11 +12,10 @@ export async function GET(req: NextRequest) {
   if (!apiKey) return NextResponse.json({ error: 'Missing API key' }, { status: 401 })
 
   const auth = await verifyApiKey(apiKey)
-  if (!auth.valid) return NextResponse.json({ error: auth.error }, { status: 401 })
+  if (!auth.valid || !auth.userId) return NextResponse.json({ error: auth.error || 'Invalid key' }, { status: 401 })
 
   const supabase = createClient()
 
-  // All findings for this agent
   const { data: findings, error } = await supabase
     .from('findings')
     .select(`
@@ -38,9 +37,10 @@ export async function GET(req: NextRequest) {
   // Per-protocol breakdown
   const byProtocol: Record<string, { slug: string; name: string; paid: number; pending: number; count: number }> = {}
   for (const f of all) {
-    const slug = (f.protocol as any)?.slug || 'unknown'
+    const proto = f.protocol as any
+    const slug = proto?.slug || 'unknown'
     if (!byProtocol[slug]) {
-      byProtocol[slug] = { slug, name: (f.protocol as any)?.name || slug, paid: 0, pending: 0, count: 0 }
+      byProtocol[slug] = { slug, name: proto?.name || slug, paid: 0, pending: 0, count: 0 }
     }
     byProtocol[slug].count++
     if (f.status === 'paid') byProtocol[slug].paid += Number(f.payout_amount) || 0
