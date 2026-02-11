@@ -13,6 +13,7 @@ export async function GET(req: NextRequest) {
   const minBounty = searchParams.get('min_bounty')
   const maxBounty = searchParams.get('max_bounty')
   const category = searchParams.get('category')
+  const hasContracts = searchParams.get('has_contracts')
   const limit = Math.min(parseInt(searchParams.get('limit') || '50'), 200)
   const offset = parseInt(searchParams.get('offset') || '0')
 
@@ -40,10 +41,24 @@ export async function GET(req: NextRequest) {
   const protocolIds = [...new Set(programs.map(p => p.protocol_id))]
   const { data: protocols } = await supabase
     .from('protocols')
-    .select('id, slug, name, description, category, chains, max_bounty, logo_url')
+    .select('id, slug, name, description, category, chains, max_bounty, logo_url, contracts')
     .in('id', protocolIds)
 
   const protoMap = new Map((protocols || []).map(p => [p.id, p]))
+
+  // If has_contracts filter, also fetch scope data to check for contracts
+  let scopeMap = new Map<string, boolean>()
+  if (hasContracts === 'true') {
+    const programIds = programs.map(p => p.id)
+    const { data: scopes } = await supabase
+      .from('program_scopes')
+      .select('program_id, contracts')
+      .in('program_id', programIds)
+    for (const s of scopes || []) {
+      const hasAny = Array.isArray(s.contracts) && s.contracts.length > 0
+      scopeMap.set(s.program_id, hasAny)
+    }
+  }
 
   let results = programs.map(p => {
     const proto = protoMap.get(p.protocol_id)
@@ -70,6 +85,9 @@ export async function GET(req: NextRequest) {
   }
   if (category) {
     results = results.filter(r => r.category?.toLowerCase().includes(category.toLowerCase()))
+  }
+  if (hasContracts === 'true') {
+    results = results.filter(r => scopeMap.get(r.program_id) === true)
   }
 
   return NextResponse.json({ bounties: results, count: results.length, offset, limit })

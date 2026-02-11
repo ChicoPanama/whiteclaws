@@ -92,7 +92,29 @@ export default function SubmitPage() {
 
     try {
       const { publicKey: senderPublicKey, secretKey: senderSecretKey } = generateKeyPair()
-      const recipientPublicKey = 'w3J/6zqIjRjUo4WYgEqKF5j4QkBKK6DQr3a72wP8qzI='
+
+      // Fetch protocol's encryption public key from bounty details
+      let recipientPublicKey = ''
+      try {
+        const bountyRes = await fetch(`/api/bounties/${protocolSlug}`)
+        if (bountyRes.ok) {
+          const bountyData = await bountyRes.json()
+          recipientPublicKey = bountyData.program?.encryption_public_key || ''
+        }
+      } catch {
+        // fallback below
+      }
+      if (!recipientPublicKey) {
+        // Fallback: try protocol's public_key field
+        const supa = getSupabase()
+        if (supa) {
+          const { data: proto } = await supa.from('protocols').select('public_key').eq('slug', protocolSlug).maybeSingle()
+          recipientPublicKey = proto?.public_key || ''
+        }
+      }
+      if (!recipientPublicKey) {
+        throw new Error('This protocol has no encryption key configured. Cannot submit encrypted report.')
+      }
 
       const report = {
         title: formData.title,

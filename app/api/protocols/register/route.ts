@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@/lib/supabase/admin'
 import { generateApiKey } from '@/lib/auth/api-key'
+import { generateKeyPair } from '@/lib/crypto'
 
 export const dynamic = 'force-dynamic'
 
@@ -80,7 +81,16 @@ export async function POST(req: NextRequest) {
       role: 'owner',
     })
 
-    // Create default program
+    // Generate encryption keypair for the protocol
+    const encryptionKeypair = generateKeyPair()
+
+    // Store public key on protocol
+    await supabase
+      .from('protocols')
+      .update({ public_key: encryptionKeypair.publicKey })
+      .eq('id', protocol.id)
+
+    // Create default program with encryption key
     const { data: program } = await supabase
       .from('programs')
       .insert({
@@ -90,6 +100,7 @@ export async function POST(req: NextRequest) {
         min_payout: 500,
         payout_currency: 'USDC',
         poc_required: true,
+        encryption_public_key: encryptionKeypair.publicKey,
       })
       .select('id')
       .single()
@@ -120,7 +131,9 @@ export async function POST(req: NextRequest) {
       program_id: program?.id,
       api_key: key,
       api_key_prefix: keyPrefix,
-      message: 'Protocol registered. Save your API key — it will not be shown again.',
+      encryption_public_key: encryptionKeypair.publicKey,
+      encryption_private_key: encryptionKeypair.secretKey,
+      message: 'Protocol registered. Save your API key and encryption private key — they will not be shown again.',
     }, { status: 201 })
   } catch (error) {
     console.error('Protocol registration error:', error)

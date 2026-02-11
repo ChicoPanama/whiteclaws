@@ -1,10 +1,17 @@
 import Nav from '@/components/landing/Nav'
 import Footer from '@/components/Footer'
 import BountyGrid from '@/components/BountyGrid'
-import { getJSONBounties } from '@/lib/data/bounties'
+import { getBounties, getJSONBounties } from '@/lib/data/bounties'
 
-export default function BountiesPage() {
-  const bounties = getJSONBounties()
+export const dynamic = 'force-dynamic'
+
+export default async function BountiesPage() {
+  let bounties
+  try {
+    bounties = await getBounties()
+  } catch {
+    bounties = getJSONBounties()
+  }
 
   const totalBounty = bounties.reduce((sum, b) => sum + (b.maxRewardNum || 0), 0)
   const kycCount = bounties.filter(b => b.kycRequired).length
