@@ -51,6 +51,23 @@ export async function POST(req: NextRequest) {
 
     if (!program) return NextResponse.json({ error: 'No active bounty program for this protocol' }, { status: 404 })
 
+    // Validate scope_version if provided
+    if (scope_version && scope_version !== program.scope_version) {
+      const { data: scopeExists } = await supabase
+        .from('program_scopes')
+        .select('version')
+        .eq('program_id', program.id)
+        .eq('version', scope_version)
+        .maybeSingle()
+
+      if (!scopeExists) {
+        return NextResponse.json({
+          error: `Invalid scope_version ${scope_version}. Current version is ${program.scope_version}.`,
+          current_scope_version: program.scope_version,
+        }, { status: 400 })
+      }
+    }
+
     // Check PoC requirement
     if (program.poc_required && !poc_url && !encrypted_report) {
       return NextResponse.json({ error: 'This program requires a proof of concept (poc_url or encrypted_report)' }, { status: 400 })
@@ -93,7 +110,6 @@ export async function POST(req: NextRequest) {
         title,
         severity,
         scope_version: scope_version || program.scope_version,
-        encrypted_report_url: encrypted_report ? JSON.stringify(encrypted_report) : null,
         encrypted_report: encrypted_report || null,
         poc_url: poc_url || null,
         status: 'submitted',
