@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@/lib/supabase/admin'
 import { extractApiKey, verifyApiKey } from '@/lib/auth/api-key'
+import { fireEvent } from '@/lib/points/hooks'
 
 export const dynamic = 'force-dynamic'
 
@@ -63,6 +64,13 @@ export async function POST(req: NextRequest, { params }: { params: { id: string 
 
     // Update agent rankings
     if (finding.researcher_id) {
+      // Fire points event (non-blocking)
+      fireEvent(finding.researcher_id, 'finding_paid', {
+        findingId: finding.id,
+        amount,
+        tx_hash,
+      })
+
       const { data: ranking } = await supabase
         .from('agent_rankings')
         .select('id, accepted_submissions, total_bounty_amount')

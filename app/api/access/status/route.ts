@@ -21,13 +21,32 @@ export async function GET(req: NextRequest) {
       .eq('wallet_address', address)
       .single()
 
-    // Open beta: any registered wallet gets access
     const hasAccess = !!user
+
+    // Check SBT status
+    let sbt = null
+    if (user) {
+      const { data: sbtData } = await (supabase as any)
+        .from('access_sbt')
+        .select('minted_at, is_early, token_id, status')
+        .eq('user_id', user.id)
+        .maybeSingle()
+
+      if (sbtData && sbtData.status === 'active') {
+        sbt = {
+          minted_at: sbtData.minted_at,
+          is_early: sbtData.is_early,
+          token_id: sbtData.token_id,
+        }
+      }
+    }
 
     return NextResponse.json({
       address,
       hasAccess,
       isValidated: hasAccess,
+      hasSBT: !!sbt,
+      sbt,
       expiry: null,
       timestamp: new Date().toISOString(),
     })

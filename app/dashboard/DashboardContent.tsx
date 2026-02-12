@@ -4,6 +4,10 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { useAuth } from '@/hooks/useAuth';
 import AuthGuard from '@/components/AuthGuard';
+import PointsBreakdown from '@/components/dashboard/PointsBreakdown';
+import ActivityFeed from '@/components/dashboard/ActivityFeed';
+import ReferralWidget from '@/components/dashboard/ReferralWidget';
+import SBTMintWidget from '@/components/dashboard/SBTMintWidget';
 
 interface Finding {
   id: string;
@@ -52,6 +56,10 @@ export default function DashboardContent() {
   const [bounties, setBounties] = useState<BountyProgram[]>([]);
   const [stats, setStats] = useState({ submissions: 0, accepted: 0, earned: 0 });
   const [points, setPoints] = useState<PointsData | null>(null);
+  const [sbtStatus, setSbtStatus] = useState<{ hasSBT: boolean; isEarly: boolean; mintedAt: string | null }>({
+    hasSBT: false, isEarly: false, mintedAt: null,
+  });
+  const [apiKey, setApiKey] = useState<string | null>(null);
 
   useEffect(() => {
     // Load recent bounties
@@ -60,11 +68,26 @@ export default function DashboardContent() {
       .then(data => setBounties(data.bounties || []))
       .catch(() => {});
 
+    // Check SBT status
+    const walletAddr = (user as any)?.wallet?.address;
+    if (walletAddr) {
+      fetch(`/api/sbt/status?address=${walletAddr}`)
+        .then(r => r.json())
+        .then(data => setSbtStatus({
+          hasSBT: data.has_sbt || false,
+          isEarly: data.is_early || false,
+          mintedAt: data.minted_at || null,
+        }))
+        .catch(() => {});
+    }
+
     // If user has an API key stored, load their findings
-    const apiKey = localStorage.getItem('wc_agent_api_key');
-    if (apiKey) {
+    const storedKey = typeof window !== 'undefined' ? localStorage.getItem('wc_agent_api_key') : null;
+    setApiKey(storedKey);
+
+    if (storedKey) {
       fetch('/api/agents/findings?limit=5', {
-        headers: { 'Authorization': `Bearer ${apiKey}` },
+        headers: { 'Authorization': `Bearer ${storedKey}` },
       })
         .then(r => r.json())
         .then(data => {
@@ -79,7 +102,7 @@ export default function DashboardContent() {
         .catch(() => {});
 
       fetch('/api/agents/earnings', {
-        headers: { 'Authorization': `Bearer ${apiKey}` },
+        headers: { 'Authorization': `Bearer ${storedKey}` },
       })
         .then(r => r.json())
         .then(data => {
@@ -97,7 +120,7 @@ export default function DashboardContent() {
         .then(data => { if (data.season) setPoints(data); })
         .catch(() => {});
     }
-  }, []);
+  }, [user]);
 
   return (
     <AuthGuard>
@@ -107,7 +130,23 @@ export default function DashboardContent() {
             <h1 className="ap-page-title">Dashboard</h1>
           </div>
 
+          {/* SBT Mint Widget — above the fold */}
           <div className="ap-stat-grid">
+            <SBTMintWidget
+              walletAddress={(user as any)?.wallet?.address}
+              hasSBT={sbtStatus.hasSBT}
+              isEarly={sbtStatus.isEarly}
+              mintedAt={sbtStatus.mintedAt}
+            />
+          </div>
+
+          {/* Points Breakdown */}
+          <div className="ap-stat-grid" style={{ marginTop: 16 }}>
+            <PointsBreakdown apiKey={apiKey || undefined} />
+          </div>
+
+          {/* Original Stats */}
+          <div className="ap-stat-grid" style={{ marginTop: 16 }}>
             <div className="ap-stat-card">
               <p className="ap-stat-label">Total Submissions</p>
               <p className="ap-stat-value">{stats.submissions}</p>
@@ -176,6 +215,12 @@ export default function DashboardContent() {
               )}
             </div>
           )}
+
+          {/* Activity Feed + Referral Widget */}
+          <div className="ap-stat-grid" style={{ marginTop: 16 }}>
+            <ActivityFeed apiKey={apiKey || undefined} limit={8} />
+            <ReferralWidget apiKey={apiKey || undefined} />
+          </div>
 
           {/* Recent Findings with status notifications */}
           <div className="pr-card">

@@ -3,6 +3,7 @@ import { createClient } from '@/lib/supabase/admin'
 import { extractApiKey, verifyApiKey } from '@/lib/auth/api-key'
 import { emitParticipationEvent, checkSubmissionQuality, checkAndAwardStreak } from '@/lib/services/points-engine'
 import { notifyProtocolAboutFinding } from '@/lib/services/notifications'
+import { fireEvents } from '@/lib/points/hooks'
 
 export const dynamic = 'force-dynamic'
 
@@ -168,6 +169,16 @@ export async function POST(req: NextRequest) {
 
     // Check streaks
     await checkAndAwardStreak(auth.userId!)
+
+    // Fire airdrop scoring events (non-blocking)
+    if (auth.userId) {
+      const airdropEvents: Array<{ type: any; metadata?: Record<string, any> }> = [
+        { type: 'finding_submitted', metadata: { protocol: protocol.slug, severity, findingId: finding.id } },
+      ]
+      if (encrypted_report) airdropEvents.push({ type: 'encrypted_report', metadata: { findingId: finding.id } })
+      if (poc_url) airdropEvents.push({ type: 'poc_provided', metadata: { findingId: finding.id, poc_url } })
+      fireEvents(auth.userId, airdropEvents)
+    }
 
     // ── 5. Notify protocol + route to Immunefi ──
     const notification = await notifyProtocolAboutFinding({

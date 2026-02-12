@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@/lib/supabase/admin'
 import { extractApiKey, verifyApiKey } from '@/lib/auth/api-key'
 import { emitParticipationEvent, flagSpam } from '@/lib/services/points-engine'
+import { fireEvent } from '@/lib/points/hooks'
 
 export const dynamic = 'force-dynamic'
 
@@ -123,6 +124,14 @@ export async function PATCH(req: NextRequest, { params }: { params: { id: string
       .single()
 
     if (error) throw error
+
+    // Fire airdrop scoring events (non-blocking)
+    if (body.status === 'accepted' && finding.researcher_id) {
+      fireEvent(finding.researcher_id, 'finding_accepted', { findingId: finding.id })
+      if (finding.severity === 'critical') {
+        fireEvent(finding.researcher_id, 'critical_finding', { findingId: finding.id })
+      }
+    }
 
     return NextResponse.json({
       finding: updated,

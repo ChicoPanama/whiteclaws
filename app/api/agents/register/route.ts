@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@/lib/supabase/admin'
 import { generateApiKey } from '@/lib/auth/api-key'
+import { fireEvent } from '@/lib/points/hooks'
 
 export const dynamic = 'force-dynamic'
 
@@ -72,6 +73,9 @@ export async function POST(req: NextRequest) {
     const { key, keyPrefix } = await generateApiKey(agent.id, 'default', [
       'agent:read', 'agent:submit',
     ])
+
+    // Fire points event (non-blocking)
+    fireEvent(agent.id, 'agent_registered', { handle: agent.handle })
 
     return NextResponse.json({
       agent: {
