@@ -2187,9 +2187,9 @@
       "bio_text": "White hacker since 2022",
       "bio_links": [],
       "links": {
-        "x_handle": null,
+        "x_handle": "PaludoX0",
         "x_url": null,
-        "x_confidence": "low",
+        "x_confidence": "high",
         "github_url": null,
         "personal_site_url": null
       },
@@ -2202,7 +2202,7 @@
         "bg": "#16161a",
         "accent": "#7f5af0"
       },
-      "primary_link": "https://immunefi.com/pledge/Paludo0x/",
+      "primary_link": "https://x.com/PaludoX0",
       "earned_display": "$228K"
     },
     {
@@ -4613,7 +4613,7 @@
         "https://x.com/immunefi/status/1805541453361267155"
       ],
       "links": {
-        "x_handle": "Immunefi",
+        "x_handle": "0xSCSamurai",
         "x_url": "https://x.com/Immunefi",
         "x_confidence": "high",
         "github_url": "https://github.com/dappconsulting",
@@ -4628,7 +4628,7 @@
         "bg": "#0a192f",
         "accent": "#64ffda"
       },
-      "primary_link": "https://x.com/Immunefi",
+      "primary_link": "https://x.com/0xSCSamurai",
       "earned_display": "$36K"
     },
     {
