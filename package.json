@@ -13,7 +13,8 @@
     "enrich:contacts": "tsx scripts/enrich_protocol_contacts.ts",
     "enrich:contracts": "tsx scripts/enrich_protocol_contracts.ts",
     "enrich:validate": "tsx scripts/validate_enrichment.ts",
-    "enrich:all": "pnpm enrich:index && pnpm enrich:domains && pnpm enrich:contacts && pnpm enrich:contracts && pnpm enrich:validate"
+    "enrich:all": "pnpm enrich:index && pnpm enrich:domains && pnpm enrich:contacts && pnpm enrich:contracts && pnpm enrich:validate",
+    "seed:supabase": "tsx scripts/seed_supabase_protocols.ts"
   },
   "dependencies": {
     "@privy-io/react-auth": "^1.93.0",

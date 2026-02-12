@@ -1,17 +1,16 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@/lib/supabase/admin'
 import { extractApiKey, verifyApiKey } from '@/lib/auth/api-key'
+import { emitParticipationEvent, checkSubmissionQuality, checkAndAwardStreak } from '@/lib/services/points-engine'
+import { notifyProtocolAboutFinding } from '@/lib/services/notifications'
 
 export const dynamic = 'force-dynamic'
 
 /**
  * POST /api/agents/submit
- * Submit a vulnerability finding. Requires API key auth.
- * Body: {
- *   protocol_slug, title, severity, scope_version?,
- *   description?, encrypted_report?: { ciphertext, nonce, sender_pubkey },
- *   poc_url?
- * }
+ * Submit a vulnerability finding.
+ * 
+ * Flow: Quality check → Store encrypted → Notify protocol → Award points → Route to Immunefi
  */
 export async function POST(req: NextRequest) {
   try {
@@ -33,10 +32,25 @@ export async function POST(req: NextRequest) {
 
     const supabase = createClient()
 
-    // Resolve protocol + active program
+    // ── 1. Quality check (anti-spam) ──
+    const quality = await checkSubmissionQuality({
+      user_id: auth.userId!,
+      title,
+      description,
+      protocol_slug,
+    })
+
+    if (!quality.ok) {
+      return NextResponse.json({
+        error: quality.reason,
+        points_impact: 'Repeated low-quality submissions will result in point deductions.',
+      }, { status: 429 })
+    }
+
+    // ── 2. Resolve protocol + program ──
     const { data: protocol } = await supabase
       .from('protocols')
-      .select('id, slug, name')
+      .select('id, slug, name, immunefi_url')
       .eq('slug', protocol_slug)
       .maybeSingle()
 
@@ -73,7 +87,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'This program requires a proof of concept (poc_url or encrypted_report)' }, { status: 400 })
     }
 
-    // Check cooldown — agent can't submit to same protocol within cooldown_hours
+    // Check cooldown
     const cooldownDate = new Date(Date.now() - (program.cooldown_hours || 24) * 3600000).toISOString()
     const { data: recentSubmission } = await supabase
       .from('findings')
@@ -86,21 +100,12 @@ export async function POST(req: NextRequest) {
 
     if (recentSubmission) {
       return NextResponse.json({
-        error: `Cooldown active. You submitted to ${protocol_slug} within the last ${program.cooldown_hours}h. Try again later.`,
+        error: `Cooldown active. You submitted to ${protocol_slug} within the last ${program.cooldown_hours}h.`,
         last_submission: recentSubmission.created_at,
       }, { status: 429 })
     }
 
-    // Check for duplicate title (basic)
-    const { data: duplicate } = await supabase
-      .from('findings')
-      .select('id, title')
-      .eq('protocol_id', protocol.id)
-      .ilike('title', title)
-      .limit(1)
-      .maybeSingle()
-
-    // Insert finding
+    // ── 3. Store finding (encrypted) ──
     const { data: finding, error: insertError } = await supabase
       .from('findings')
       .insert({
@@ -109,16 +114,71 @@ export async function POST(req: NextRequest) {
         researcher_id: auth.userId,
         title,
         severity,
+        description: description || null,
         scope_version: scope_version || program.scope_version,
         encrypted_report: encrypted_report || null,
         poc_url: poc_url || null,
         status: 'submitted',
+        submission_source: 'whiteclaws',
       })
       .select('id, title, severity, status, scope_version, created_at')
       .single()
 
     if (insertError) throw insertError
 
+    // ── 4. Award points ──
+    // Get wallet address for points
+    const { data: userRow } = await supabase.from('users').select('wallet_address').eq('id', auth.userId).single()
+    const walletAddr = userRow?.wallet_address || undefined
+    const pointsAwarded: Array<{ event: string; points: number }> = []
+
+    // Base submission points (low — real value comes from acceptance)
+    const submitResult = await emitParticipationEvent({
+      user_id: auth.userId!,
+      event_type: 'finding_submitted',
+      metadata: { protocol_slug, severity, finding_id: finding.id },
+      wallet_address: walletAddr,
+      finding_id: finding.id,
+    })
+    if (submitResult.success) pointsAwarded.push({ event: 'finding_submitted', points: submitResult.points })
+
+    // Encrypted report bonus
+    if (encrypted_report) {
+      const encResult = await emitParticipationEvent({
+        user_id: auth.userId!,
+        event_type: 'encrypted_report',
+        metadata: { finding_id: finding.id },
+        wallet_address: walletAddr,
+        finding_id: finding.id,
+      })
+      if (encResult.success) pointsAwarded.push({ event: 'encrypted_report', points: encResult.points })
+    }
+
+    // PoC bonus
+    if (poc_url) {
+      const pocResult = await emitParticipationEvent({
+        user_id: auth.userId!,
+        event_type: 'poc_provided',
+        metadata: { finding_id: finding.id, poc_url },
+        wallet_address: walletAddr,
+        finding_id: finding.id,
+      })
+      if (pocResult.success) pointsAwarded.push({ event: 'poc_provided', points: pocResult.points })
+    }
+
+    // Check streaks
+    await checkAndAwardStreak(auth.userId!)
+
+    // ── 5. Notify protocol + route to Immunefi ──
+    const notification = await notifyProtocolAboutFinding({
+      finding_id: finding.id,
+      protocol_id: protocol.id,
+      protocol_name: protocol.name,
+      severity,
+      submitted_at: finding.created_at,
+    })
+
+    // ── 6. Response ──
     return NextResponse.json({
       finding: {
         id: finding.id,
@@ -129,9 +189,21 @@ export async function POST(req: NextRequest) {
         status: finding.status,
         scope_version: finding.scope_version,
         created_at: finding.created_at,
-        possible_duplicate: duplicate ? { id: duplicate.id, title: duplicate.title } : null,
       },
-      message: 'Finding submitted. It will be triaged by the protocol team.',
+      points: {
+        awarded: pointsAwarded,
+        total: pointsAwarded.reduce((s, p) => s + p.points, 0),
+        note: 'Submission earns base points. Accepted findings earn 100x more.',
+      },
+      notification: {
+        email_sent: notification.email_sent,
+        recipient: notification.recipient ? notification.recipient.replace(/(.{2}).*@/, '$1***@') : null,
+      },
+      immunefi_route: notification.immunefi_url ? {
+        url: notification.immunefi_url,
+        action: 'Submit to Immunefi for formal triage and payout mediation.',
+      } : null,
+      message: 'Finding stored on WhiteClaws. Protocol notified.',
     }, { status: 201 })
   } catch (error) {
     console.error('Agent submission error:', error)

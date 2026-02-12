@@ -21,6 +21,23 @@ interface BountyProgram {
   description?: string;
 }
 
+interface PointsData {
+  season: number;
+  week: number;
+  score: {
+    total: number;
+    security_points: number;
+    growth_points: number;
+    engagement_points: number;
+    penalty_points: number;
+  };
+  rank: number;
+  streak_weeks: number;
+  weekly: { points_earned: number; cap: number; remaining: number };
+  warnings: { spam_flags: number; status: string };
+  recent_events: Array<{ event: string; points: number; at: string; finding_id: string | null }>;
+}
+
 const statusColors: Record<string, string> = {
   submitted: '#8b5cf6',
   triaged: '#3b82f6',
@@ -34,6 +51,7 @@ export default function DashboardContent() {
   const [findings, setFindings] = useState<Finding[]>([]);
   const [bounties, setBounties] = useState<BountyProgram[]>([]);
   const [stats, setStats] = useState({ submissions: 0, accepted: 0, earned: 0 });
+  const [points, setPoints] = useState<PointsData | null>(null);
 
   useEffect(() => {
     // Load recent bounties
@@ -70,6 +88,14 @@ export default function DashboardContent() {
           }
         })
         .catch(() => {});
+
+      // Load points data
+      fetch('/api/points/me', {
+        headers: { 'Authorization': `Bearer ${apiKey}` },
+      })
+        .then(r => r.json())
+        .then(data => { if (data.season) setPoints(data); })
+        .catch(() => {});
     }
   }, []);
 
@@ -97,7 +123,59 @@ export default function DashboardContent() {
               <p className="ap-stat-value ap-stat-active">${stats.earned.toLocaleString()}</p>
               <p className="wc-field-helper">Bounty payouts</p>
             </div>
+            <div className="ap-stat-card">
+              <p className="ap-stat-label">$WC Score</p>
+              <p className="ap-stat-value" style={{ color: '#f59e0b' }}>{points ? Math.floor(points.score.total).toLocaleString() : '—'}</p>
+              <p className="wc-field-helper">{points ? `Rank #${points.rank} · Season ${points.season}` : 'Loading...'}</p>
+            </div>
           </div>
+
+          {/* Points Breakdown */}
+          {points && (
+            <div className="pr-card" style={{ marginBottom: '16px' }}>
+              <h2 className="pr-card-title">$WC Points — Season {points.season}, Week {points.week}</h2>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(140px, 1fr))', gap: '8px', marginBottom: '12px' }}>
+                <div style={{ padding: '10px', background: 'var(--bg-secondary, #111)', borderRadius: '6px' }}>
+                  <p style={{ fontSize: '11px', opacity: 0.6, margin: 0 }}>Security</p>
+                  <p style={{ fontSize: '18px', fontWeight: 700, margin: '2px 0 0', color: '#22c55e' }}>{points.score.security_points}</p>
+                </div>
+                <div style={{ padding: '10px', background: 'var(--bg-secondary, #111)', borderRadius: '6px' }}>
+                  <p style={{ fontSize: '11px', opacity: 0.6, margin: 0 }}>Growth</p>
+                  <p style={{ fontSize: '18px', fontWeight: 700, margin: '2px 0 0', color: '#3b82f6' }}>{points.score.growth_points}</p>
+                </div>
+                <div style={{ padding: '10px', background: 'var(--bg-secondary, #111)', borderRadius: '6px' }}>
+                  <p style={{ fontSize: '11px', opacity: 0.6, margin: 0 }}>Engagement</p>
+                  <p style={{ fontSize: '18px', fontWeight: 700, margin: '2px 0 0', color: '#8b5cf6' }}>{points.score.engagement_points}</p>
+                </div>
+                <div style={{ padding: '10px', background: 'var(--bg-secondary, #111)', borderRadius: '6px' }}>
+                  <p style={{ fontSize: '11px', opacity: 0.6, margin: 0 }}>Penalties</p>
+                  <p style={{ fontSize: '18px', fontWeight: 700, margin: '2px 0 0', color: points.score.penalty_points > 0 ? '#ef4444' : '#525252' }}>-{points.score.penalty_points}</p>
+                </div>
+              </div>
+
+              <div style={{ display: 'flex', gap: '16px', fontSize: '12px', opacity: 0.7, flexWrap: 'wrap' }}>
+                <span>🔥 Streak: {points.streak_weeks}w</span>
+                <span>📊 Weekly: {points.weekly.points_earned}/{points.weekly.cap}</span>
+                {points.warnings.status !== 'clean' && (
+                  <span style={{ color: '#ef4444' }}>⚠️ {points.warnings.spam_flags} flag{points.warnings.spam_flags !== 1 ? 's' : ''}</span>
+                )}
+              </div>
+
+              {points.recent_events.length > 0 && (
+                <div style={{ marginTop: '12px', borderTop: '1px solid #222', paddingTop: '8px' }}>
+                  <p style={{ fontSize: '11px', opacity: 0.5, margin: '0 0 6px' }}>Recent Points</p>
+                  {points.recent_events.slice(0, 5).map((e, i) => (
+                    <div key={i} style={{ display: 'flex', justifyContent: 'space-between', padding: '3px 0', fontSize: '12px' }}>
+                      <span style={{ opacity: 0.7 }}>{e.event.replace(/_/g, ' ')}</span>
+                      <span style={{ fontWeight: 600, color: e.points >= 0 ? '#22c55e' : '#ef4444' }}>
+                        {e.points >= 0 ? '+' : ''}{e.points}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          )}
 
           {/* Recent Findings with status notifications */}
           <div className="pr-card">
