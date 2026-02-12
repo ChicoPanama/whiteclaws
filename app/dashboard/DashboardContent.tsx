@@ -69,7 +69,7 @@ export default function DashboardContent() {
       .catch(() => {});
 
     // Check SBT status
-    const walletAddr = (user as any)?.wallet?.address;
+    const walletAddr = ((user?.user_metadata?.wallet_address as string) || null);
     if (walletAddr) {
       fetch(`/api/sbt/status?address=${walletAddr}`)
         .then(r => r.json())
@@ -133,7 +133,7 @@ export default function DashboardContent() {
           {/* SBT Mint Widget — above the fold */}
           <div className="ap-stat-grid">
             <SBTMintWidget
-              walletAddress={(user as any)?.wallet?.address}
+              walletAddress={((user?.user_metadata?.wallet_address as string) || null)}
               hasSBT={sbtStatus.hasSBT}
               isEarly={sbtStatus.isEarly}
               mintedAt={sbtStatus.mintedAt}

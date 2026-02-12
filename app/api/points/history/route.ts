@@ -21,12 +21,12 @@ export async function GET(req: NextRequest) {
     const supabase = createClient()
 
     let query = (supabase
-      .from('participation_events' as any)
+      .from('participation_events')
       .select('id, event_type, points, metadata, verified, season, week, created_at')
       .eq('user_id', identity.userId)
       .eq('season', season)
       .order('created_at', { ascending: false })
-      .range(offset, offset + limit - 1) as any)
+      .range(offset, offset + limit - 1))
 
     if (eventType) {
       query = query.eq('event_type', eventType)

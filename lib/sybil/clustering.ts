@@ -8,6 +8,7 @@
  */
 
 import { createClient } from '@/lib/supabase/admin'
+import type { Row } from '@/lib/supabase/helpers'
 import { PRIMARY_CHAIN } from '@/lib/web3/config'
 
 /**
@@ -36,9 +37,9 @@ export async function runClusteringBatch(): Promise<{
 
   // Get all registered wallets
   const { data: wallets } = await (supabase
-    .from('access_sbt' as any)
+    .from('access_sbt')
     .select('wallet_address')
-    .eq('status', 'active') as any)
+    .eq('status', 'active'))
 
   if (!wallets || wallets.length === 0) return { clustersFound: 0, walletsProcessed: 0 }
 
@@ -83,32 +84,32 @@ async function updateClusterFlag(
   const riskIncrease = clusterSize >= 10 ? 0.5 : clusterSize >= 5 ? 0.35 : 0.2
 
   const { data: existing } = await (supabase
-    .from('anti_sybil_flags' as any)
+    .from('anti_sybil_flags')
     .select('risk_score, flags')
     .eq('wallet_address', walletAddress)
-    .maybeSingle() as any)
+    .returns<Row<'anti_sybil_flags'>[]>().maybeSingle())
 
-  const currentFlags = existing?.flags || []
+  const currentFlags = (Array.isArray(existing?.flags) ? existing.flags : []) as string[]
   const newFlags = [...currentFlags, `cluster_${clusterSize}_wallets`]
   const newScore = Math.min((existing?.risk_score || 0) + riskIncrease, 1.0)
 
   if (existing) {
     await (supabase
-      .from('anti_sybil_flags' as any)
+      .from('anti_sybil_flags')
       .update({
         risk_score: newScore,
         flags: newFlags,
         cluster_id: clusterId,
         updated_at: new Date().toISOString(),
       })
-      .eq('wallet_address', walletAddress) as any)
+      .eq('wallet_address', walletAddress))
   } else {
-    await (supabase.from('anti_sybil_flags' as any).insert({
+    await (supabase.from('anti_sybil_flags').insert({
       wallet_address: walletAddress,
       risk_score: newScore,
       flags: newFlags,
       cluster_id: clusterId,
-    }) as any)
+    }))
   }
 }
 

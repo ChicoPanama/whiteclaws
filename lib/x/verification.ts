@@ -118,10 +118,10 @@ export async function handleCallback(
 
     // Detect user type
     const { data: user } = await (supabase
-      .from('users' as any)
+      .from('users')
       .select('is_agent')
       .eq('id', stateData.userId)
-      .single() as any)
+      .single())
 
     let userType = 'human'
     if (user?.is_agent) userType = 'agent'
@@ -129,12 +129,12 @@ export async function handleCallback(
 
     // Get wallet address
     const { data: walletUser } = await (supabase
-      .from('users' as any)
+      .from('users')
       .select('wallet_address')
       .eq('id', stateData.userId)
-      .single() as any)
+      .single())
 
-    await (supabase.from('x_verifications' as any).upsert(
+    await (supabase.from('x_verifications').upsert(
       {
         user_id: stateData.userId,
         user_type: userType,
@@ -144,7 +144,7 @@ export async function handleCallback(
         status: 'pending', // Pending until verification tweet is posted
       },
       { onConflict: 'user_id' }
-    ) as any)
+    ))
 
     return { ok: true, userId: stateData.userId, xHandle: xUser.username, xId: xUser.id }
   } catch (err) {
@@ -186,10 +186,10 @@ export async function verifyTweet(
 
   // Get verification record
   const { data: verification } = await (supabase
-    .from('x_verifications' as any)
+    .from('x_verifications')
     .select('x_handle, wallet_address, status')
     .eq('user_id', userId)
-    .single() as any)
+    .single())
 
   if (!verification) return { ok: false, error: 'No X OAuth record found. Complete OAuth first.' }
   if (verification.status === 'verified') return { ok: false, error: 'Already verified' }
@@ -199,13 +199,13 @@ export async function verifyTweet(
   // TODO: fetch tweet content and verify it contains wallet address + @WhiteClawsSec
 
   const { error } = await (supabase
-    .from('x_verifications' as any)
+    .from('x_verifications')
     .update({
       tweet_id: tweetId,
       verified_at: new Date().toISOString(),
       status: 'verified',
     })
-    .eq('user_id', userId) as any)
+    .eq('user_id', userId))
 
   if (error) return { ok: false, error: 'Database update failed' }
 
@@ -223,10 +223,10 @@ export async function getXStatus(userId: string): Promise<{
   const supabase = createClient()
 
   const { data } = await (supabase
-    .from('x_verifications' as any)
+    .from('x_verifications')
     .select('x_handle, verified_at, status')
     .eq('user_id', userId)
-    .maybeSingle() as any)
+    .maybeSingle())
 
   if (!data) {
     return { verified: false, x_handle: null, verified_at: null, can_share: false }
@@ -257,10 +257,10 @@ export async function checkTweetRetention(): Promise<{
 
   // Only check tweets verified within the retention period
   const { data: verifications } = await (supabase
-    .from('x_verifications' as any)
+    .from('x_verifications')
     .select('id, user_id, tweet_id, x_handle, verified_at')
     .eq('status', 'verified')
-    .gt('verified_at', cutoff.toISOString()) as any)
+    .gt('verified_at', cutoff.toISOString()))
 
   if (!verifications || verifications.length === 0) {
     return { checked: 0, revoked: 0 }
@@ -285,19 +285,19 @@ export async function checkTweetRetention(): Promise<{
       if (res.status === 404 || res.status === 403) {
         // Tweet deleted or account suspended — revoke
         await (supabase
-          .from('x_verifications' as any)
+          .from('x_verifications')
           .update({
             status: 'revoked',
             tweet_checked_at: new Date().toISOString(),
           })
-          .eq('id', v.id) as any)
+          .eq('id', v.id))
         revoked++
       } else {
         // Tweet still exists — update check timestamp
         await (supabase
-          .from('x_verifications' as any)
+          .from('x_verifications')
           .update({ tweet_checked_at: new Date().toISOString() })
-          .eq('id', v.id) as any)
+          .eq('id', v.id))
       }
     } catch {
       // API error — skip this one, don't revoke

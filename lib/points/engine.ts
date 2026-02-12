@@ -91,16 +91,16 @@ export async function recordEvent(
 
     // Get wallet address
     const { data: user } = await (supabase
-      .from('users' as any)
+      .from('users')
       .select('wallet_address')
       .eq('id', userId)
-      .single() as any)
+      .single())
 
     const walletAddress = user?.wallet_address || null
 
     // Record the event
     const { data: event, error } = await (supabase
-      .from('participation_events' as any)
+      .from('participation_events')
       .insert({
         user_id: userId,
         event_type: eventType,
@@ -112,7 +112,7 @@ export async function recordEvent(
         week,
       })
       .select('id')
-      .single() as any)
+      .single())
 
     if (error) {
       console.error('[Points] Event insert error:', error)
@@ -133,11 +133,11 @@ export async function requireSBT(userId: string): Promise<boolean> {
   try {
     const supabase = createClient()
     const { data } = await (supabase
-      .from('access_sbt' as any)
+      .from('access_sbt')
       .select('id')
       .eq('user_id', userId)
       .eq('status', 'active')
-      .maybeSingle() as any)
+      .maybeSingle())
     return !!data
   } catch {
     return false
@@ -162,24 +162,24 @@ async function checkCooldown(
   if (config.cooldown === 'one-time') {
     // Check if this event has ever been recorded for this user
     const { data } = await (supabase
-      .from('participation_events' as any)
+      .from('participation_events')
       .select('id')
       .eq('user_id', userId)
       .eq('event_type', eventType)
-      .limit(1) as any)
+      .limit(1))
     return !data || data.length === 0
   }
 
   if (config.cooldown === 'weekly') {
     // Check if already recorded this week
     const { data } = await (supabase
-      .from('participation_events' as any)
+      .from('participation_events')
       .select('id')
       .eq('user_id', userId)
       .eq('event_type', eventType)
       .eq('season', season)
       .eq('week', week)
-      .limit(1) as any)
+      .limit(1))
     return !data || data.length === 0
   }
 
@@ -199,20 +199,20 @@ async function checkWeeklyCap(
 
     // Get weekly cap from season_config
     const { data: config } = await (supabase
-      .from('season_config' as any)
+      .from('season_config')
       .select('weekly_cap')
       .eq('season', season)
-      .single() as any)
+      .single())
 
     const cap = config?.weekly_cap || 5000
 
     // Sum points this week
     const { data: events } = await (supabase
-      .from('participation_events' as any)
+      .from('participation_events')
       .select('points')
       .eq('user_id', userId)
       .eq('season', season)
-      .eq('week', week) as any)
+      .eq('week', week))
 
     const totalThisWeek = (events || []).reduce((sum: number, e: any) => sum + (e.points || 0), 0)
     return totalThisWeek < cap

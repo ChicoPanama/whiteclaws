@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
+import type { Row } from '@/lib/supabase/helpers'
 import { createClient } from '@/lib/supabase/admin'
 import { extractApiKey, verifyApiKey } from '@/lib/auth/api-key'
 import { emitParticipationEvent, flagSpam } from '@/lib/services/points-engine'
@@ -19,7 +20,7 @@ export async function PATCH(req: NextRequest, { params }: { params: { id: string
     if (!apiKey) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
 
     const auth = await verifyApiKey(apiKey)
-    if (!auth.valid || !auth.userId) return NextResponse.json({ error: auth.error || 'Invalid' }, { status: 401 })
+    if (!auth.valid || !auth.userId!) return NextResponse.json({ error: auth.error || 'Invalid' }, { status: 401 })
     if (!auth.scopes || !auth.scopes.includes('protocol:triage')) {
       return NextResponse.json({ error: 'Missing protocol:triage scope' }, { status: 403 })
     }
@@ -35,8 +36,8 @@ export async function PATCH(req: NextRequest, { params }: { params: { id: string
     const { data: finding } = await supabase
       .from('findings')
       .select('id, protocol_id, status, researcher_id, severity')
-      .eq('id', params.id)
-      .single()
+      .eq('id', params.id!)
+      .returns<Row<'findings'>[]>().single()
 
     if (!finding) return NextResponse.json({ error: 'Finding not found' }, { status: 404 })
 
@@ -44,9 +45,9 @@ export async function PATCH(req: NextRequest, { params }: { params: { id: string
     const { data: member } = await supabase
       .from('protocol_members')
       .select('role')
-      .eq('protocol_id', finding.protocol_id)
-      .eq('user_id', auth.userId)
-      .maybeSingle()
+      .eq('protocol_id', finding.protocol_id!)
+      .eq('user_id', auth.userId!)
+      .returns<Row<'protocol_members'>[]>().maybeSingle()
 
     if (!member) return NextResponse.json({ error: 'Not a member of this protocol' }, { status: 403 })
 
@@ -119,9 +120,9 @@ export async function PATCH(req: NextRequest, { params }: { params: { id: string
     const { data: updated, error } = await supabase
       .from('findings')
       .update(updates)
-      .eq('id', params.id)
+      .eq('id', params.id!)
       .select('id, status, triage_notes, payout_amount, triaged_at, accepted_at, rejected_at')
-      .single()
+      .returns<Row<'findings'>[]>().single()
 
     if (error) throw error
 

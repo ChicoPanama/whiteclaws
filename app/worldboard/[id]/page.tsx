@@ -1,4 +1,5 @@
 import { notFound } from 'next/navigation'
+import type { Row } from '@/lib/supabase/helpers'
 import { createClient } from '@/lib/supabase/server'
 import Nav from '@/components/landing/Nav'
 import Footer from '@/components/Footer'
@@ -29,7 +30,7 @@ async function getThread(id: string) {
     .from('messages')
     .select('id,title,content,upvotes,created_at,users(handle)')
     .eq('id', id)
-    .maybeSingle()
+    .returns<(Row<'messages'> & { users: { handle: string } | { handle: string }[] | null })[]>().maybeSingle()
 
   if (error) throw error
   if (!data) return null

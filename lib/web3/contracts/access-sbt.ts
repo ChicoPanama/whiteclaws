@@ -8,6 +8,7 @@
  */
 
 import { createClient } from '@/lib/supabase/admin'
+import type { Row } from '@/lib/supabase/helpers'
 import { CONTRACTS } from '@/lib/web3/config'
 
 // Placeholder ABI — replace with real ABI when contract is compiled
@@ -53,10 +54,10 @@ export async function mintSBT(
 
   // Check if already minted
   const { data: existing } = await (supabase
-    .from('access_sbt' as any)
+    .from('access_sbt')
     .select('id')
     .eq('user_id', userId)
-    .maybeSingle() as any)
+    .returns<Row<'access_sbt'>[]>().maybeSingle())
 
   if (existing) {
     return { ok: false, error: 'SBT already minted', isEarly: false }
@@ -64,10 +65,10 @@ export async function mintSBT(
 
   // Determine if early supporter
   const { data: seasonConfig } = await (supabase
-    .from('season_config' as any)
+    .from('season_config')
     .select('start_date, status')
     .eq('season', 1)
-    .maybeSingle() as any)
+    .returns<Row<'season_config'>[]>().maybeSingle())
 
   const isEarly = !seasonConfig?.start_date ||
     seasonConfig.status === 'pending' ||
@@ -84,7 +85,7 @@ export async function mintSBT(
 
   // Record in Supabase (always — this is the source of truth until contract takes over)
   const { error } = await (supabase
-    .from('access_sbt' as any)
+    .from('access_sbt')
     .insert({
       user_id: userId,
       wallet_address: walletAddress,
@@ -94,7 +95,7 @@ export async function mintSBT(
       token_id: tokenId,
       is_early: isEarly,
       status: 'active',
-    }) as any)
+    }))
 
   if (error) {
     console.error('[SBT] Mint insert error:', error)
@@ -112,11 +113,11 @@ export async function mintSBT(
 export async function hasSBT(userId: string): Promise<boolean> {
   const supabase = createClient()
   const { data } = await (supabase
-    .from('access_sbt' as any)
+    .from('access_sbt')
     .select('id, status')
     .eq('user_id', userId)
     .eq('status', 'active')
-    .maybeSingle() as any)
+    .returns<Row<'access_sbt'>[]>().maybeSingle())
 
   return !!data
 }
@@ -127,11 +128,11 @@ export async function hasSBT(userId: string): Promise<boolean> {
 export async function hasSBTByWallet(walletAddress: string): Promise<boolean> {
   const supabase = createClient()
   const { data } = await (supabase
-    .from('access_sbt' as any)
+    .from('access_sbt')
     .select('id, status')
     .eq('wallet_address', walletAddress.toLowerCase())
     .eq('status', 'active')
-    .maybeSingle() as any)
+    .returns<Row<'access_sbt'>[]>().maybeSingle())
 
   // If contract is deployed and not found in DB, check onchain
   if (!data && CONTRACTS.accessSBT) {
@@ -149,10 +150,10 @@ export async function hasSBTByWallet(walletAddress: string): Promise<boolean> {
 export async function getSBTDetails(userId: string): Promise<SBTStatus> {
   const supabase = createClient()
   const { data } = await (supabase
-    .from('access_sbt' as any)
+    .from('access_sbt')
     .select('minted_at, is_early, token_id, payment_token, status')
     .eq('user_id', userId)
-    .maybeSingle() as any)
+    .returns<Row<'access_sbt'>[]>().maybeSingle())
 
   if (!data || data.status !== 'active') {
     return { hasSBT: false, isEarly: false, mintedAt: null, tokenId: null, paymentToken: null }
@@ -163,6 +164,6 @@ export async function getSBTDetails(userId: string): Promise<SBTStatus> {
     isEarly: data.is_early || false,
     mintedAt: data.minted_at,
     tokenId: data.token_id,
-    paymentToken: data.payment_token,
+    paymentToken: data.payment_token as PaymentToken,
   }
 }

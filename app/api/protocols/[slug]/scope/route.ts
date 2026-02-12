@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
+import type { Row } from '@/lib/supabase/helpers'
 import { createClient } from '@/lib/supabase/admin'
 import { extractApiKey, verifyApiKey } from '@/lib/auth/api-key'
 import { fireEvent } from '@/lib/points/hooks'
@@ -15,8 +16,8 @@ export async function GET(req: NextRequest, { params }: { params: { slug: string
   const { data: protocol } = await supabase
     .from('protocols')
     .select('id, slug, name')
-    .eq('slug', params.slug)
-    .maybeSingle()
+    .eq('slug', params.slug!)
+    .returns<Row<'protocols'>[]>().maybeSingle()
 
   if (!protocol) return NextResponse.json({ error: 'Protocol not found' }, { status: 404 })
 
@@ -27,7 +28,7 @@ export async function GET(req: NextRequest, { params }: { params: { slug: string
     .eq('status', 'active')
     .order('created_at', { ascending: false })
     .limit(1)
-    .maybeSingle()
+    .returns<Row<'programs'>[]>().maybeSingle()
 
   if (!program) return NextResponse.json({ error: 'No active program' }, { status: 404 })
 
@@ -36,7 +37,7 @@ export async function GET(req: NextRequest, { params }: { params: { slug: string
     .select('*')
     .eq('program_id', program.id)
     .eq('version', program.scope_version)
-    .maybeSingle()
+    .returns<Row<'program_scopes'>[]>().maybeSingle()
 
   return NextResponse.json({
     protocol: { slug: protocol.slug, name: protocol.name },
@@ -78,8 +79,8 @@ export async function POST(req: NextRequest, { params }: { params: { slug: strin
   const { data: protocol } = await supabase
     .from('protocols')
     .select('id')
-    .eq('slug', params.slug)
-    .single()
+    .eq('slug', params.slug!)
+    .returns<Row<'protocols'>[]>().single()
 
   if (!protocol) return NextResponse.json({ error: 'Protocol not found' }, { status: 404 })
 
@@ -88,8 +89,8 @@ export async function POST(req: NextRequest, { params }: { params: { slug: strin
     .from('protocol_members')
     .select('role')
     .eq('protocol_id', protocol.id)
-    .eq('user_id', auth.userId)
-    .maybeSingle()
+    .eq('user_id', auth.userId!)
+    .returns<Row<'protocol_members'>[]>().maybeSingle()
 
   if (!member || !['owner', 'admin'].includes(member.role)) {
     return NextResponse.json({ error: 'Insufficient permissions' }, { status: 403 })
@@ -102,7 +103,7 @@ export async function POST(req: NextRequest, { params }: { params: { slug: strin
     .eq('protocol_id', protocol.id)
     .order('created_at', { ascending: false })
     .limit(1)
-    .single()
+    .returns<Row<'programs'>[]>().single()
 
   if (!program) return NextResponse.json({ error: 'No program found' }, { status: 404 })
 
@@ -131,7 +132,7 @@ export async function POST(req: NextRequest, { params }: { params: { slug: strin
     .eq('id', program.id)
 
   // Fire points event (non-blocking)
-  if (auth.userId) {
+  if (auth.userId!) {
     fireEvent(auth.userId, 'scope_published', { protocol: params.slug, version: newVersion })
   }
 

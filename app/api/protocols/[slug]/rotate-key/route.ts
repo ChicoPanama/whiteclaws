@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
+import type { Row } from '@/lib/supabase/helpers'
 import { createClient } from '@/lib/supabase/admin'
 import { extractApiKey, verifyApiKey } from '@/lib/auth/api-key'
 import { generateKeyPair } from '@/lib/crypto'
@@ -26,8 +27,8 @@ export async function POST(req: NextRequest, { params }: { params: { slug: strin
     const { data: protocol } = await supabase
       .from('protocols')
       .select('id')
-      .eq('slug', params.slug)
-      .single()
+      .eq('slug', params.slug!)
+      .returns<Row<'protocols'>[]>().single()
 
     if (!protocol) return NextResponse.json({ error: 'Protocol not found' }, { status: 404 })
 
@@ -36,8 +37,8 @@ export async function POST(req: NextRequest, { params }: { params: { slug: strin
       .from('protocol_members')
       .select('role')
       .eq('protocol_id', protocol.id)
-      .eq('user_id', auth.userId)
-      .maybeSingle()
+      .eq('user_id', auth.userId!)
+      .returns<Row<'protocol_members'>[]>().maybeSingle()
 
     if (!member || member.role !== 'owner') {
       return NextResponse.json({ error: 'Only protocol owner can rotate encryption keys' }, { status: 403 })

@@ -37,7 +37,7 @@ export async function GET(req: NextRequest) {
   // Per-protocol breakdown
   const byProtocol: Record<string, { slug: string; name: string; paid: number; pending: number; count: number }> = {}
   for (const f of all) {
-    const proto = f.protocol as any
+    const proto = f.protocol
     const slug = proto?.slug || 'unknown'
     if (!byProtocol[slug]) {
       byProtocol[slug] = { slug, name: proto?.name || slug, paid: 0, pending: 0, count: 0 }

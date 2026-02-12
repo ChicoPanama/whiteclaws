@@ -24,12 +24,12 @@ export async function getCurrentSeason(): Promise<SeasonConfig | null> {
   const supabase = createClient()
 
   const { data } = await (supabase
-    .from('season_config' as any)
+    .from('season_config')
     .select('*')
     .in('status', ['pending', 'active', 'frozen', 'claiming'])
     .order('season', { ascending: false })
     .limit(1)
-    .maybeSingle() as any)
+    .maybeSingle())
 
   return data as SeasonConfig | null
 }
@@ -41,10 +41,10 @@ export async function getSeasonStatus(season: number = 1): Promise<string> {
   const supabase = createClient()
 
   const { data } = await (supabase
-    .from('season_config' as any)
+    .from('season_config')
     .select('status')
     .eq('season', season)
-    .single() as any)
+    .single())
 
   return data?.status || 'pending'
 }
@@ -56,14 +56,14 @@ export async function freezeSeason(season: number): Promise<{ ok: boolean; error
   const supabase = createClient()
 
   const { error } = await (supabase
-    .from('season_config' as any)
+    .from('season_config')
     .update({
       status: 'frozen',
       end_date: new Date().toISOString(),
       updated_at: new Date().toISOString(),
     })
     .eq('season', season)
-    .eq('status', 'active') as any)
+    .eq('status', 'active'))
 
   if (error) return { ok: false, error: error.message }
   return { ok: true }
@@ -88,9 +88,9 @@ export async function activateSeason(
   if (weeklyCap) updates.weekly_cap = weeklyCap
 
   const { error } = await (supabase
-    .from('season_config' as any)
+    .from('season_config')
     .update(updates)
-    .eq('season', season) as any)
+    .eq('season', season))
 
   if (error) return { ok: false, error: error.message }
   return { ok: true }
@@ -103,13 +103,13 @@ export async function openClaimWindow(season: number): Promise<{ ok: boolean; er
   const supabase = createClient()
 
   const { error } = await (supabase
-    .from('season_config' as any)
+    .from('season_config')
     .update({
       status: 'claiming',
       updated_at: new Date().toISOString(),
     })
     .eq('season', season)
-    .eq('status', 'frozen') as any)
+    .eq('status', 'frozen'))
 
   if (error) return { ok: false, error: error.message }
   return { ok: true }
@@ -122,21 +122,25 @@ export async function completeSeason(season: number): Promise<{ ok: boolean; err
   const supabase = createClient()
 
   const { error } = await (supabase
-    .from('season_config' as any)
+    .from('season_config')
     .update({
       status: 'completed',
       updated_at: new Date().toISOString(),
     })
-    .eq('season', season) as any)
+    .eq('season', season))
 
   if (error) return { ok: false, error: error.message }
 
   // Seed next season
   const nextSeason = season + 1
-  await (supabase.from('season_config' as any).insert({
-    season: nextSeason,
-    status: 'pending',
-  }) as any).catch(() => {}) // Ignore if exists
+  try {
+    await supabase.from('season_config').insert({
+      season: nextSeason,
+      status: 'pending',
+    })
+  } catch {
+    // Ignore if exists
+  }
 
   return { ok: true }
 }

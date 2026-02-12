@@ -103,22 +103,24 @@ export async function runWalletChecks(walletAddress: string): Promise<{
 
   // Store in anti_sybil_flags
   const supabase = createClient()
-  await (supabase.from('anti_sybil_flags' as any).upsert(
-    {
-      wallet_address: walletAddress,
-      risk_score: riskScore,
-      flags,
-      updated_at: new Date().toISOString(),
-    },
-    { onConflict: 'wallet_address' }
-  ) as any).catch(() => {
-    // upsert might fail if no unique constraint on wallet_address yet
-    supabase.from('anti_sybil_flags' as any).insert({
+  try {
+    await supabase.from('anti_sybil_flags').upsert(
+      {
+        wallet_address: walletAddress,
+        risk_score: riskScore,
+        flags,
+        updated_at: new Date().toISOString(),
+      },
+      { onConflict: 'wallet_address' }
+    )
+  } catch {
+    // Fallback: insert if upsert fails
+    await supabase.from('anti_sybil_flags').insert({
       wallet_address: walletAddress,
       risk_score: riskScore,
       flags,
     })
-  })
+  }
 
   return { riskScore, flags }
 }

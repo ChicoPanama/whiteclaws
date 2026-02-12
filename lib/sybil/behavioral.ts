@@ -6,6 +6,7 @@
  */
 
 import { createClient } from '@/lib/supabase/admin'
+import type { Row } from '@/lib/supabase/helpers'
 
 /**
  * Analyze submission quality — detect copy-paste or template-based reports.
@@ -23,11 +24,11 @@ export async function checkSubmissionQuality(
 
   // Get recent submissions from other users for similarity check
   const { data: recentFindings } = await (supabase
-    .from('findings' as any)
+    .from('findings')
     .select('title, description')
     .neq('submitted_by', userId)
     .order('created_at', { ascending: false })
-    .limit(50) as any)
+    .limit(50))
 
   if (!recentFindings || recentFindings.length === 0) return { score: 0 }
 
@@ -65,11 +66,11 @@ export async function checkApiPatterns(userId: string): Promise<{
 
   // Get recent events and check timing regularity
   const { data: events } = await (supabase
-    .from('participation_events' as any)
+    .from('participation_events')
     .select('created_at, event_type')
     .eq('user_id', userId)
     .order('created_at', { ascending: true })
-    .limit(100) as any)
+    .limit(100))
 
   if (!events || events.length < 5) return { score: 0, flags: [] }
 
@@ -112,30 +113,30 @@ export async function updateBehavioralScore(
   const supabase = createClient()
 
   const { data: existing } = await (supabase
-    .from('anti_sybil_flags' as any)
+    .from('anti_sybil_flags')
     .select('risk_score, flags')
     .eq('wallet_address', walletAddress)
-    .maybeSingle() as any)
+    .returns<Row<'anti_sybil_flags'>[]>().maybeSingle())
 
-  const currentFlags = existing?.flags || []
+  const currentFlags = (Array.isArray(existing?.flags) ? existing.flags : []) as string[]
   const mergedFlags = Array.from(new Set([...currentFlags, ...behavioralFlags]))
   const newScore = Math.min((existing?.risk_score || 0) + behavioralScore, 1.0)
 
   if (existing) {
     await (supabase
-      .from('anti_sybil_flags' as any)
+      .from('anti_sybil_flags')
       .update({
         risk_score: newScore,
         flags: mergedFlags,
         updated_at: new Date().toISOString(),
       })
-      .eq('wallet_address', walletAddress) as any)
+      .eq('wallet_address', walletAddress))
   } else {
-    await (supabase.from('anti_sybil_flags' as any).insert({
+    await (supabase.from('anti_sybil_flags').insert({
       wallet_address: walletAddress,
       risk_score: newScore,
       flags: mergedFlags,
-    }) as any)
+    }))
   }
 }
 

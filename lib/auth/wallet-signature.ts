@@ -50,7 +50,7 @@ export async function verifyWalletSignature(req: Request): Promise<WalletAuth | 
 
   // Extract method and path from request
   const url = new URL(req.url)
-  const method = (req as any).method || 'GET'
+  const method = (req).method || 'GET'
   const message = constructSignMessage(method, url.pathname, timestamp)
 
   try {

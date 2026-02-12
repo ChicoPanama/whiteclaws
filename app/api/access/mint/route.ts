@@ -25,7 +25,7 @@ export async function POST(req: NextRequest) {
 
     if (existing) {
       // Check if SBT already exists
-      const { data: sbt } = await (supabase as any)
+      const { data: sbt } = await (supabase)
         .from('access_sbt')
         .select('id, is_early')
         .eq('user_id', existing.id)

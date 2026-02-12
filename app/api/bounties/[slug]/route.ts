@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
+import type { Row } from '@/lib/supabase/helpers'
 import { createClient } from '@/lib/supabase/admin'
 
 export const dynamic = 'force-dynamic'
@@ -10,7 +11,7 @@ export async function GET(_req: NextRequest, { params }: { params: { slug: strin
     .from('protocols')
     .select('id, slug, name, description, category, chains, max_bounty, logo_url, website_url, github_url')
     .eq('slug', params.slug)
-    .maybeSingle()
+    .returns<Row<'protocols'>[]>().maybeSingle()
 
   if (!protocol) return NextResponse.json({ error: 'Protocol not found' }, { status: 404 })
 
@@ -19,7 +20,7 @@ export async function GET(_req: NextRequest, { params }: { params: { slug: strin
     .select('*')
     .eq('protocol_id', protocol.id)
     .eq('status', 'active')
-    .maybeSingle()
+    .returns<Row<'programs'>[]>().maybeSingle()
 
   if (!program) return NextResponse.json({ error: 'No active bounty program' }, { status: 404 })
 
@@ -29,7 +30,7 @@ export async function GET(_req: NextRequest, { params }: { params: { slug: strin
     .eq('program_id', program.id)
     .order('version', { ascending: false })
     .limit(1)
-    .maybeSingle()
+    .returns<Row<'program_scopes'>[]>().maybeSingle()
 
   const { count: totalFindings } = await supabase
     .from('findings')

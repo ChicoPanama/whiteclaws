@@ -19,10 +19,10 @@ export async function GET(req: NextRequest) {
     if (!status.verified) {
       const supabase = createClient()
       const { data: user } = await (supabase
-        .from('users' as any)
+        .from('users')
         .select('wallet_address, is_agent, handle')
         .eq('id', identity.userId)
-        .single() as any)
+        .single())
 
       if (user?.wallet_address) {
         const userType = user.is_agent ? 'agent' : 'human'

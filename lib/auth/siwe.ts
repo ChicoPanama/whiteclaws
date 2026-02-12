@@ -11,6 +11,7 @@
  */
 
 import { verifyMessage } from 'viem'
+import type { Row } from '@/lib/supabase/helpers'
 import { createClient } from '@/lib/supabase/admin'
 
 const NONCE_EXPIRY_MS = 5 * 60 * 1000 // 5 minutes
@@ -132,24 +133,24 @@ export async function resolveWalletUser(address: string): Promise<{
 
   // Check existing user
   const { data: existing } = await supabase
-    .from('users' as any)
+    .from('users')
     .select('id, handle')
     .eq('wallet_address', normalizedAddress)
-    .maybeSingle()
+    .returns<Row<'users'>[]>().maybeSingle()
 
   if (existing) {
-    return { userId: existing.id, handle: existing.handle, isNew: false }
+    return { userId: existing.id, handle: existing.handle ?? '', isNew: false }
   }
 
   // Also check payout_wallet
   const { data: byPayout } = await supabase
-    .from('users' as any)
+    .from('users')
     .select('id, handle')
     .eq('payout_wallet', normalizedAddress)
-    .maybeSingle()
+    .returns<Row<'users'>[]>().maybeSingle()
 
   if (byPayout) {
-    return { userId: byPayout.id, handle: byPayout.handle, isNew: false }
+    return { userId: byPayout.id, handle: byPayout.handle ?? '', isNew: false }
   }
 
   return null // User not found — they need to register first

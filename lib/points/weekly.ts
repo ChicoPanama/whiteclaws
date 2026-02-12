@@ -26,9 +26,9 @@ export async function processWeeklyActivity(): Promise<{
 
   // Get all users with SBTs
   const { data: sbtHolders } = await (supabase
-    .from('access_sbt' as any)
+    .from('access_sbt')
     .select('user_id')
-    .eq('status', 'active') as any)
+    .eq('status', 'active'))
 
   if (!sbtHolders) return { processed: 0, activeUsers: 0, streakBonuses: 0 }
 
@@ -40,13 +40,13 @@ export async function processWeeklyActivity(): Promise<{
 
     // Check if user had any events this week (excluding weekly_* events themselves)
     const { data: weekEvents } = await (supabase
-      .from('participation_events' as any)
+      .from('participation_events')
       .select('event_type')
       .eq('user_id', userId)
       .eq('season', season)
       .eq('week', week)
       .not('event_type', 'in', '("weekly_active","weekly_submission","streak_bonus","heartbeat_active")')
-      .limit(1) as any)
+      .limit(1))
 
     const isActive = weekEvents && weekEvents.length > 0
 
@@ -56,13 +56,13 @@ export async function processWeeklyActivity(): Promise<{
 
       // Check for submissions this week
       const { data: submissions } = await (supabase
-        .from('participation_events' as any)
+        .from('participation_events')
         .select('id')
         .eq('user_id', userId)
         .eq('season', season)
         .eq('week', week)
         .eq('event_type', 'finding_submitted')
-        .limit(1) as any)
+        .limit(1))
 
       if (submissions && submissions.length > 0) {
         await recordEvent(userId, 'weekly_submission', { season, week })
@@ -70,17 +70,17 @@ export async function processWeeklyActivity(): Promise<{
 
       // Calculate streak
       const { data: score } = await (supabase
-        .from('contribution_scores' as any)
+        .from('contribution_scores')
         .select('streak_weeks')
         .eq('user_id', userId)
         .eq('season', season)
-        .maybeSingle() as any)
+        .maybeSingle())
 
       const currentStreak = (score?.streak_weeks || 0) + 1
 
       // Update streak in contribution_scores
       await (supabase
-        .from('contribution_scores' as any)
+        .from('contribution_scores')
         .upsert(
           {
             user_id: userId,
@@ -90,7 +90,7 @@ export async function processWeeklyActivity(): Promise<{
             updated_at: new Date().toISOString(),
           },
           { onConflict: 'user_id,season' }
-        ) as any)
+        ))
 
       // Check for streak milestones
       if (STREAK_MILESTONES.includes(currentStreak)) {
@@ -105,7 +105,7 @@ export async function processWeeklyActivity(): Promise<{
     } else {
       // Reset streak for inactive users
       await (supabase
-        .from('contribution_scores' as any)
+        .from('contribution_scores')
         .upsert(
           {
             user_id: userId,
@@ -114,7 +114,7 @@ export async function processWeeklyActivity(): Promise<{
             updated_at: new Date().toISOString(),
           },
           { onConflict: 'user_id,season' }
-        ) as any)
+        ))
     }
   }
 

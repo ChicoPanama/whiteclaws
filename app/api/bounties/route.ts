@@ -38,7 +38,7 @@ export async function GET(req: NextRequest) {
   }
 
   // Fetch protocol details for these programs
-  const protocolIds = [...new Set(programs.map(p => p.protocol_id))]
+  const protocolIds = Array.from(new Set(programs.map(p => p.protocol_id)))
   const { data: protocols } = await supabase
     .from('protocols')
     .select('id, slug, name, description, category, chains, max_bounty, logo_url, contracts')

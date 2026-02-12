@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
+import type { Row } from '@/lib/supabase/helpers'
 import { createClient } from '@/lib/supabase/admin'
 import { mintSBT, type PaymentToken } from '@/lib/web3/contracts/access-sbt'
 import { fireEvent } from '@/lib/points/hooks'
@@ -33,17 +34,17 @@ export async function POST(req: NextRequest) {
     let userId: string
 
     const { data: existing } = await (supabase
-      .from('users' as any)
+      .from('users')
       .select('id')
       .eq('wallet_address', address)
-      .maybeSingle() as any)
+      .returns<Row<'users'>[]>().maybeSingle())
 
     if (existing) {
       userId = existing.id
     } else {
       // Create user record
       const { data: newUser, error: createErr } = await (supabase
-        .from('users' as any)
+        .from('users')
         .insert({
           handle: `wallet_${address.slice(2, 10)}`,
           display_name: `${address.slice(0, 6)}...${address.slice(-4)}`,
@@ -52,17 +53,17 @@ export async function POST(req: NextRequest) {
           status: 'active',
         })
         .select('id')
-        .single() as any)
+        .single())
 
       if (createErr) {
         if (createErr.code === '23505') {
           // Race condition — wallet just registered, try again
           const { data: retry } = await (supabase
-            .from('users' as any)
+            .from('users')
             .select('id')
             .eq('wallet_address', address)
-            .single() as any)
-          userId = retry?.id
+            .returns<Row<'users'>[]>().single())
+          userId = retry?.id ?? ''
         } else {
           throw createErr
         }

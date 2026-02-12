@@ -11,6 +11,7 @@
  */
 
 import { createClient } from '@/lib/supabase/admin'
+import type { Row } from '@/lib/supabase/helpers'
 import { recalculateAllScores } from '@/lib/points/scores'
 import crypto from 'crypto'
 
@@ -43,10 +44,10 @@ export async function generateSnapshot(
 
     // 2. Get all scores with wallet addresses
     const { data: scores } = await (supabase
-      .from('contribution_scores' as any)
+      .from('contribution_scores')
       .select('user_id, total_score, sybil_multiplier')
       .eq('season', season)
-      .gt('total_score', 0) as any)
+      .gt('total_score', 0))
 
     if (!scores || scores.length === 0) {
       return { ok: false, error: 'No scores found for this season' }
@@ -55,9 +56,9 @@ export async function generateSnapshot(
     // Get wallet addresses for all users
     const userIds = scores.map((s: any) => s.user_id)
     const { data: users } = await (supabase
-      .from('users' as any)
+      .from('users')
       .select('id, wallet_address')
-      .in('id', userIds) as any)
+      .in('id', userIds))
 
     const walletMap = new Map((users || []).map((u: any) => [u.id, u.wallet_address]))
 
@@ -93,7 +94,7 @@ export async function generateSnapshot(
 
     // 5. Store snapshot in metadata
     await (supabase
-      .from('season_config' as any)
+      .from('season_config')
       .update({
         metadata: {
           snapshot_at: new Date().toISOString(),
@@ -104,7 +105,7 @@ export async function generateSnapshot(
         },
         updated_at: new Date().toISOString(),
       })
-      .eq('season', season) as any)
+      .eq('season', season))
 
     return { ok: true, allocations, merkleRoot: root }
   } catch (err) {
@@ -214,34 +215,34 @@ export async function getUserProof(
 
   // Check season has snapshot
   const { data: config } = await (supabase
-    .from('season_config' as any)
+    .from('season_config')
     .select('metadata, status')
     .eq('season', season)
-    .single() as any)
+    .returns<Row<'season_config'>[]>().single())
 
   if (!config || !['frozen', 'claiming'].includes(config.status)) {
     return { eligible: false, error: 'Season not in claimable state' }
   }
 
-  if (!config.metadata?.merkle_root) {
+  if (!(config.metadata as Record<string, unknown>)?.merkle_root) {
     return { eligible: false, error: 'Snapshot not yet generated' }
   }
 
   // Look up user's allocation
   const { data: user } = await (supabase
-    .from('users' as any)
+    .from('users')
     .select('id')
     .eq('wallet_address', walletAddress)
-    .maybeSingle() as any)
+    .returns<Row<'users'>[]>().maybeSingle())
 
   if (!user) return { eligible: false, error: 'Wallet not registered' }
 
   const { data: score } = await (supabase
-    .from('contribution_scores' as any)
+    .from('contribution_scores')
     .select('total_score')
     .eq('user_id', user.id)
     .eq('season', season)
-    .maybeSingle() as any)
+    .returns<Row<'contribution_scores'>[]>().maybeSingle())
 
   if (!score || score.total_score <= 0) {
     return { eligible: false, error: 'No points earned this season' }

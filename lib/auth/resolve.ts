@@ -37,7 +37,7 @@ export async function resolveIdentity(req: Request): Promise<Identity | null> {
         .from('users')
         .select('handle, wallet_address')
         .eq('id', auth.userId)
-        .single() as any)
+        .single())
 
       return {
         userId: auth.userId,

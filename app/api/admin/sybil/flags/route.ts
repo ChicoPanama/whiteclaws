@@ -20,16 +20,16 @@ export async function GET(req: NextRequest) {
     const supabase = createClient()
 
     let query = supabase
-      .from('anti_sybil_flags' as any)
+      .from('anti_sybil_flags')
       .select('*')
       .gte('risk_score', minScore)
       .order('risk_score', { ascending: false })
       .limit(limit)
 
-    if (reviewed === 'true') query = (query as any).eq('reviewed', true)
-    if (reviewed === 'false') query = (query as any).eq('reviewed', false)
+    if (reviewed === 'true') query = (query).eq('reviewed', true)
+    if (reviewed === 'false') query = (query).eq('reviewed', false)
 
-    const { data, error } = await (query as any)
+    const { data, error } = await (query)
 
     if (error) throw error
 

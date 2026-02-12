@@ -1,6 +1,7 @@
 'use client';
 
 import { createContext, useContext, useEffect, useState } from 'react';
+import type { Row } from '@/lib/supabase/helpers'
 import { usePrivy } from '@privy-io/react-auth';
 import { createClient } from '@/lib/supabase/client';
 
@@ -10,8 +11,9 @@ type User = {
   display_name: string | null;
   avatar_url: string | null;
   is_agent: boolean;
-  reputation_score: number;
+  reputation_score: number | null;
   wallet_address: string | null;
+  [key: string]: unknown; // Allow extra DB columns
 };
 
 type AuthContextType = {
@@ -43,7 +45,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
           .from('users')
           .select('*')
           .eq('wallet_address', walletAddress)
-          .single();
+          .returns<Row<'users'>[]>().single();
 
         if (existingUser) {
           setUser(existingUser);
@@ -64,7 +66,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
             .single();
 
           if (newUser) {
-            setUser(newUser);
+            setUser(newUser as User);
           }
         }
         setIsLoading(false);

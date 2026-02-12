@@ -19,10 +19,10 @@ export async function GET(req: NextRequest) {
     const supabase = createClient()
 
     const { data: sbt } = await (supabase
-      .from('access_sbt' as any)
+      .from('access_sbt')
       .select('minted_at, is_early, token_id, payment_token, status, tx_hash')
       .eq('wallet_address', address.toLowerCase())
-      .maybeSingle() as any)
+      .maybeSingle())
 
     if (!sbt || sbt.status !== 'active') {
       return NextResponse.json({

@@ -17,18 +17,18 @@ export async function GET(req: NextRequest) {
 
     // Get user's score
     const { data: userScore } = await (supabase
-      .from('contribution_scores' as any)
+      .from('contribution_scores')
       .select('total_score, rank')
       .eq('user_id', identity.userId)
       .eq('season', season)
-      .maybeSingle() as any)
+      .maybeSingle())
 
     // Get total scores across all users
     const { data: allScores } = await (supabase
-      .from('contribution_scores' as any)
+      .from('contribution_scores')
       .select('total_score')
       .eq('season', season)
-      .gt('total_score', 0) as any)
+      .gt('total_score', 0))
 
     const totalPoolScore = (allScores || []).reduce((sum: number, s: any) => sum + (s.total_score || 0), 0)
     const totalParticipants = allScores?.length || 0
@@ -37,10 +37,10 @@ export async function GET(req: NextRequest) {
 
     // Get season pool size (if set)
     const { data: seasonConfig } = await (supabase
-      .from('season_config' as any)
+      .from('season_config')
       .select('pool_size, status')
       .eq('season', season)
-      .maybeSingle() as any)
+      .maybeSingle())
 
     const poolSize = seasonConfig?.pool_size || null
 

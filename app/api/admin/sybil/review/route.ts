@@ -40,14 +40,14 @@ export async function POST(req: NextRequest) {
     }
 
     const { error } = await (supabase
-      .from('anti_sybil_flags' as any)
+      .from('anti_sybil_flags')
       .update({
         risk_score: newScore,
         reviewed: true,
         reviewed_by: reviewer || 'admin',
         updated_at: new Date().toISOString(),
-      } as any)
-      .eq('wallet_address', wallet_address) as any)
+      })
+      .eq('wallet_address', wallet_address))
 
     if (error) throw error
 
@@ -56,16 +56,16 @@ export async function POST(req: NextRequest) {
 
     // Find user by wallet and update their score multiplier
     const { data: user } = await (supabase
-      .from('users' as any)
+      .from('users')
       .select('id')
       .eq('wallet_address', wallet_address)
-      .maybeSingle() as any)
+      .maybeSingle())
 
     if (user) {
       await (supabase
-        .from('contribution_scores' as any)
-        .update({ sybil_multiplier: multiplier, updated_at: new Date().toISOString() } as any)
-        .eq('user_id', user.id) as any)
+        .from('contribution_scores')
+        .update({ sybil_multiplier: multiplier, updated_at: new Date().toISOString() })
+        .eq('user_id', user.id))
     }
 
     return NextResponse.json({

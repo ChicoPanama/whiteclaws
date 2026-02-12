@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
+import type { Row } from '@/lib/supabase/helpers'
 import { createClient } from '@/lib/supabase/admin'
 import { extractApiKey, verifyApiKey, generateApiKey, revokeApiKey } from '@/lib/auth/api-key'
 
@@ -20,7 +21,7 @@ export async function GET(req: NextRequest) {
   const { data: keys, error } = await supabase
     .from('api_keys')
     .select('id, key_prefix, name, scopes, last_used_at, expires_at, revoked_at, created_at')
-    .eq('user_id', auth.userId)
+    .eq('user_id', auth.userId!)
     .order('created_at', { ascending: false })
 
   if (error) throw error

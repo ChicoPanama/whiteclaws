@@ -26,7 +26,7 @@ export async function GET(req: NextRequest) {
     // Check SBT status
     let sbt = null
     if (user) {
-      const { data: sbtData } = await (supabase as any)
+      const { data: sbtData } = await (supabase)
         .from('access_sbt')
         .select('minted_at, is_early, token_id, status')
         .eq('user_id', user.id)

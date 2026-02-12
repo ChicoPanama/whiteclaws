@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
+import type { Row } from '@/lib/supabase/helpers'
 import { createClient } from '@/lib/supabase/admin'
 import { extractApiKey, verifyApiKey } from '@/lib/auth/api-key'
 
@@ -25,8 +26,8 @@ export async function GET(req: NextRequest, { params }: { params: { id: string }
       duplicate_of, poc_url,
       protocol:protocol_id (slug, name)
     `)
-    .eq('id', params.id)
-    .eq('researcher_id', auth.userId)
+    .eq('id', params.id!)
+    .eq('researcher_id', auth.userId!)
     .maybeSingle()
 
   if (error) throw error
@@ -36,7 +37,7 @@ export async function GET(req: NextRequest, { params }: { params: { id: string }
   const { data: comments } = await supabase
     .from('finding_comments')
     .select('id, content, is_internal, created_at, user:user_id (handle, display_name)')
-    .eq('finding_id', params.id)
+    .eq('finding_id', params.id!)
     .eq('is_internal', false)
     .order('created_at', { ascending: true })
 

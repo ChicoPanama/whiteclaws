@@ -24,10 +24,10 @@ export async function recalculateUserScore(userId: string, season: number = 1): 
 
   // Sum points by tier
   const { data: events } = await (supabase
-    .from('participation_events' as any)
+    .from('participation_events')
     .select('event_type, points')
     .eq('user_id', userId)
-    .eq('season', season) as any)
+    .eq('season', season))
 
   if (!events || events.length === 0) return
 
@@ -42,18 +42,18 @@ export async function recalculateUserScore(userId: string, season: number = 1): 
 
   // Get sybil multiplier
   const { data: user } = await (supabase
-    .from('users' as any)
+    .from('users')
     .select('wallet_address')
     .eq('id', userId)
-    .single() as any)
+    .single())
 
   let sybilMultiplier = 1.0
   if (user?.wallet_address) {
     const { data: sybilFlag } = await (supabase
-      .from('anti_sybil_flags' as any)
+      .from('anti_sybil_flags')
       .select('risk_score')
       .eq('wallet_address', user.wallet_address)
-      .maybeSingle() as any)
+      .maybeSingle())
 
     if (sybilFlag) {
       const risk = sybilFlag.risk_score || 0
@@ -73,7 +73,7 @@ export async function recalculateUserScore(userId: string, season: number = 1): 
     sybilMultiplier
 
   // Upsert contribution score
-  await (supabase.from('contribution_scores' as any).upsert(
+  await (supabase.from('contribution_scores').upsert(
     {
       user_id: userId,
       season,
@@ -87,7 +87,7 @@ export async function recalculateUserScore(userId: string, season: number = 1): 
       updated_at: new Date().toISOString(),
     },
     { onConflict: 'user_id,season' }
-  ) as any)
+  ))
 }
 
 /**
@@ -98,9 +98,9 @@ export async function recalculateAllScores(season: number = 1): Promise<number> 
 
   // Get all users with events this season
   const { data: userIds } = await (supabase
-    .from('participation_events' as any)
+    .from('participation_events')
     .select('user_id')
-    .eq('season', season) as any)
+    .eq('season', season))
 
   if (!userIds) return 0
 
@@ -123,18 +123,18 @@ export async function updateRanks(season: number = 1): Promise<void> {
   const supabase = createClient()
 
   const { data: scores } = await (supabase
-    .from('contribution_scores' as any)
+    .from('contribution_scores')
     .select('id, total_score')
     .eq('season', season)
-    .order('total_score', { ascending: false }) as any)
+    .order('total_score', { ascending: false }))
 
   if (!scores) return
 
   for (let i = 0; i < scores.length; i++) {
     await (supabase
-      .from('contribution_scores' as any)
+      .from('contribution_scores')
       .update({ rank: i + 1 })
-      .eq('id', scores[i].id) as any)
+      .eq('id', scores[i].id))
   }
 }
 
@@ -146,10 +146,10 @@ export async function applyDecay(season: number = 1): Promise<number> {
   const supabase = createClient()
 
   const { data: scores } = await (supabase
-    .from('contribution_scores' as any)
+    .from('contribution_scores')
     .select('id, user_id, last_active_at, total_score')
     .eq('season', season)
-    .gt('total_score', 0) as any)
+    .gt('total_score', 0))
 
   if (!scores) return 0
 
@@ -171,9 +171,9 @@ export async function applyDecay(season: number = 1): Promise<number> {
 
     const newScore = score.total_score * (1 - decayRate)
     await (supabase
-      .from('contribution_scores' as any)
+      .from('contribution_scores')
       .update({ total_score: newScore, updated_at: new Date().toISOString() })
-      .eq('id', score.id) as any)
+      .eq('id', score.id))
     decayed++
   }
 
