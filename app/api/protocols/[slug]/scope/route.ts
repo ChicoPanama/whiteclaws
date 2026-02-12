@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@/lib/supabase/admin'
 import { extractApiKey, verifyApiKey } from '@/lib/auth/api-key'
+import { fireEvent } from '@/lib/points/hooks'
 
 export const dynamic = 'force-dynamic'
 
@@ -128,6 +129,11 @@ export async function POST(req: NextRequest, { params }: { params: { slug: strin
     .from('programs')
     .update({ scope_version: newVersion })
     .eq('id', program.id)
+
+  // Fire points event (non-blocking)
+  if (auth.userId) {
+    fireEvent(auth.userId, 'scope_published', { protocol: params.slug, version: newVersion })
+  }
 
   return NextResponse.json({
     scope: { id: scope.id, version: scope.version },

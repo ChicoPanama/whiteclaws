@@ -239,3 +239,70 @@ export async function getXStatus(userId: string): Promise<{
     can_share: data.status === 'verified',
   }
 }
+
+// ── Tweet Retention Checker ──
+// Call via cron (daily). Checks if verification tweets still exist.
+// After retention period, stops checking (permanently verified).
+
+const RETENTION_PERIOD_DAYS = 30
+
+export async function checkTweetRetention(): Promise<{
+  checked: number
+  revoked: number
+}> {
+  const supabase = createClient()
+
+  const cutoff = new Date()
+  cutoff.setDate(cutoff.getDate() - RETENTION_PERIOD_DAYS)
+
+  // Only check tweets verified within the retention period
+  const { data: verifications } = await (supabase
+    .from('x_verifications' as any)
+    .select('id, user_id, tweet_id, x_handle, verified_at')
+    .eq('status', 'verified')
+    .gt('verified_at', cutoff.toISOString()) as any)
+
+  if (!verifications || verifications.length === 0) {
+    return { checked: 0, revoked: 0 }
+  }
+
+  let checked = 0
+  let revoked = 0
+
+  for (const v of verifications) {
+    checked++
+
+    // Check if tweet still exists via Twitter API
+    // When TWITTER_BEARER_TOKEN is set, verify via API
+    const bearerToken = process.env.TWITTER_BEARER_TOKEN
+    if (!bearerToken || !v.tweet_id) continue
+
+    try {
+      const res = await fetch(`https://api.twitter.com/2/tweets/${v.tweet_id}`, {
+        headers: { Authorization: `Bearer ${bearerToken}` },
+      })
+
+      if (res.status === 404 || res.status === 403) {
+        // Tweet deleted or account suspended — revoke
+        await (supabase
+          .from('x_verifications' as any)
+          .update({
+            status: 'revoked',
+            tweet_checked_at: new Date().toISOString(),
+          })
+          .eq('id', v.id) as any)
+        revoked++
+      } else {
+        // Tweet still exists — update check timestamp
+        await (supabase
+          .from('x_verifications' as any)
+          .update({ tweet_checked_at: new Date().toISOString() })
+          .eq('id', v.id) as any)
+      }
+    } catch {
+      // API error — skip this one, don't revoke
+    }
+  }
+
+  return { checked, revoked }
+}

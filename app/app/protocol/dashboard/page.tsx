@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
+import PointsBreakdown from '@/components/dashboard/PointsBreakdown'
+import ActivityFeed from '@/components/dashboard/ActivityFeed'
 
 interface DashboardData {
   protocol: { slug: string; name: string } | null
@@ -127,6 +129,16 @@ export default function ProtocolDashboardPage() {
           </Link>
         </div>
       </div>
+
+      {apiKey && (
+        <div className="ap-section">
+          <h2 className="ap-section-title">Points & Activity</h2>
+          <PointsBreakdown apiKey={apiKey} />
+          <div style={{ marginTop: '16px' }}>
+            <ActivityFeed apiKey={apiKey} limit={6} />
+          </div>
+        </div>
+      )}
     </div>
   )
 }

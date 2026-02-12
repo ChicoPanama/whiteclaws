@@ -118,7 +118,7 @@ export async function updateBehavioralScore(
     .maybeSingle() as any)
 
   const currentFlags = existing?.flags || []
-  const mergedFlags = [...new Set([...currentFlags, ...behavioralFlags])]
+  const mergedFlags = Array.from(new Set([...currentFlags, ...behavioralFlags]))
   const newScore = Math.min((existing?.risk_score || 0) + behavioralScore, 1.0)
 
   if (existing) {
