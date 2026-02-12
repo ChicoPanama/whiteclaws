@@ -1,0 +1,218 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Immunefi Heroes Dataset",
+  "type": "object",
+  "required": [
+    "meta",
+    "heroes",
+    "warnings"
+  ],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": [
+        "source",
+        "source_url",
+        "pledged_hackers_count",
+        "total_pledged_imu_raw",
+        "total_pledged_imu",
+        "active_pledgers",
+        "extracted_at"
+      ],
+      "properties": {
+        "source": {
+          "type": "string"
+        },
+        "source_url": {
+          "type": "string"
+        },
+        "pledged_hackers_count": {
+          "type": "integer"
+        },
+        "total_pledged_imu_raw": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "total_pledged_imu": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "active_pledgers": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "extracted_at": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "heroes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "handle",
+          "pfp_url",
+          "rank",
+          "bugs_found",
+          "total_earned_usd",
+          "imu_pledged",
+          "pledgers",
+          "pledge_url",
+          "profile_url",
+          "member_since",
+          "all_time_rank",
+          "total_earnings_usd_profile",
+          "bio_text",
+          "bio_links",
+          "links",
+          "total_saved_usd",
+          "impact_notes"
+        ],
+        "properties": {
+          "handle": {
+            "type": "string"
+          },
+          "pfp_url": {
+            "type": "string"
+          },
+          "rank": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "bugs_found": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "total_earned_usd": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "imu_pledged": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "pledgers": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "pledge_url": {
+            "type": "string"
+          },
+          "profile_url": {
+            "type": "string"
+          },
+          "member_since": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "all_time_rank": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "total_earnings_usd_profile": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "bio_text": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "bio_links": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "links": {
+            "type": "object",
+            "required": [
+              "x_handle",
+              "x_url",
+              "x_confidence",
+              "github_url",
+              "personal_site_url"
+            ],
+            "properties": {
+              "x_handle": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "x_url": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "x_confidence": {
+                "type": "string",
+                "enum": [
+                  "high",
+                  "medium",
+                  "low"
+                ]
+              },
+              "github_url": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "personal_site_url": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "additionalProperties": false
+          },
+          "total_saved_usd": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "impact_notes": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "warnings": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false
+}
