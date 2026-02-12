@@ -54,43 +54,17 @@
     "name": "Alchemix",
     "contracts": [
       {
-        "address": "0xc3f279090a0e534d4127d8fe6605f860dcaf360f",
+        "address": "0x5c6374a2ac4ebc38dea0fc1f8716e5ea1add94dd",
         "chain": "ethereum",
-        "label": "AlchemistV2",
+        "label": "Alchemix alETH AlToken",
         "source": {
-          "kind": "whiteclaws_protocol_json",
-          "url": "public/protocols/alchemix.json"
+          "kind": "verified_onchain",
+          "url": "https://etherscan.io/address/0x5c6374a2ac4ebc38dea0fc1f8716e5ea1add94dd"
         },
-        "needs_review": false,
         "explorer": {
-          "url": "https://etherscan.io/address/0xc3f279090a0e534d4127d8fe6605f860dcaf360f"
-        }
-      },
-      {
-        "address": "0xe8ea477b43db7c83df5796344576cd07a4a947b7",
-        "chain": "ethereum",
-        "label": "TransmuterV2",
-        "source": {
-          "kind": "whiteclaws_protocol_json",
-          "url": "public/protocols/alchemix.json"
+          "url": "https://etherscan.io/address/0x5c6374a2ac4ebc38dea0fc1f8716e5ea1add94dd"
         },
-        "needs_review": false,
-        "explorer": {
-          "url": "https://etherscan.io/address/0xe8ea477b43db7c83df5796344576cd07a4a947b7"
-        }
-      },
-      {
-        "address": "0xd1baa1dc3ebd495a2fb6f4f5973722f3a7d89178",
-        "chain": "ethereum",
-        "label": "AlchemixToken",
-        "source": {
-          "kind": "whiteclaws_protocol_json",
-          "url": "public/protocols/alchemix.json"
-        },
-        "needs_review": false,
-        "explorer": {
-          "url": "https://etherscan.io/address/0xd1baa1dc3ebd495a2fb6f4f5973722f3a7d89178"
-        }
+        "needs_review": false
       }
     ],
     "needs_review": false
@@ -909,30 +883,30 @@
     "name": "Ethena",
     "contracts": [
       {
-        "address": "0x5c5b196abe0f81f8eab17b3924d896d3593e9e65",
+        "address": "0x4c9edd5852cd905f086c759e8383e09bff1e68b3",
         "chain": "ethereum",
         "label": "USDe",
         "source": {
-          "kind": "whiteclaws_protocol_json",
-          "url": "public/protocols/ethena.json"
+          "kind": "verified_onchain",
+          "url": "https://etherscan.io/address/0x4c9edd5852cd905f086c759e8383e09bff1e68b3"
         },
-        "needs_review": false,
         "explorer": {
-          "url": "https://etherscan.io/address/0x5c5b196abe0f81f8eab17b3924d896d3593e9e65"
-        }
+          "url": "https://etherscan.io/address/0x4c9edd5852cd905f086c759e8383e09bff1e68b3"
+        },
+        "needs_review": false
       },
       {
-        "address": "0xfa91a32357947e925d062d4742ef143a5b8c9279",
+        "address": "0x9d39a5de30e57443bff2a8307a4256c8797a3497",
         "chain": "ethereum",
-        "label": "StakedUSDe",
+        "label": "Staked USDe (sUSDe)",
         "source": {
-          "kind": "whiteclaws_protocol_json",
-          "url": "public/protocols/ethena.json"
+          "kind": "verified_onchain",
+          "url": "https://etherscan.io/address/0x9d39a5de30e57443bff2a8307a4256c8797a3497"
         },
-        "needs_review": false,
         "explorer": {
-          "url": "https://etherscan.io/address/0xfa91a32357947e925d062d4742ef143a5b8c9279"
-        }
+          "url": "https://etherscan.io/address/0x9d39a5de30e57443bff2a8307a4256c8797a3497"
+        },
+        "needs_review": false
       }
     ],
     "needs_review": false
@@ -1402,17 +1376,17 @@
     "name": "Inverse Finance",
     "contracts": [
       {
-        "address": "0x9101c978e50d5f421b95d150c5b47a2f16d856f1",
+        "address": "0x865377367054516e17014ccded1e7d814edc9ce4",
         "chain": "ethereum",
-        "label": "DOLA",
+        "label": "DOLA Stablecoin",
         "source": {
-          "kind": "whiteclaws_protocol_json",
-          "url": "public/protocols/inverse-finance.json"
+          "kind": "verified_onchain",
+          "url": "https://etherscan.io/address/0x865377367054516e17014ccded1e7d814edc9ce4"
         },
-        "needs_review": false,
         "explorer": {
-          "url": "https://etherscan.io/address/0x9101c978e50d5f421b95d150c5b47a2f16d856f1"
-        }
+          "url": "https://etherscan.io/address/0x865377367054516e17014ccded1e7d814edc9ce4"
+        },
+        "needs_review": false
       }
     ],
     "needs_review": false
@@ -2408,43 +2382,17 @@
     "name": "Scroll",
     "contracts": [
       {
-        "address": "0x5300000000000000000000000000000000000004",
+        "address": "0x6774bcbd5cecef1336b5300fb5186a12ddd8b367",
         "chain": "ethereum",
         "label": "L1ScrollMessenger",
         "source": {
-          "kind": "whiteclaws_protocol_json",
-          "url": "public/protocols/scroll.json"
+          "kind": "verified_onchain",
+          "url": "https://etherscan.io/address/0x6774bcbd5cecef1336b5300fb5186a12ddd8b367"
         },
-        "needs_review": false,
         "explorer": {
-          "url": "https://etherscan.io/address/0x5300000000000000000000000000000000000004"
-        }
-      },
-      {
-        "address": "0x778625549534e1d17e9bc6c654b044252136cee8",
-        "chain": "ethereum",
-        "label": "ScrollChain",
-        "source": {
-          "kind": "whiteclaws_protocol_json",
-          "url": "public/protocols/scroll.json"
+          "url": "https://etherscan.io/address/0x6774bcbd5cecef1336b5300fb5186a12ddd8b367"
         },
-        "needs_review": false,
-        "explorer": {
-          "url": "https://etherscan.io/address/0x778625549534e1d17e9bc6c654b044252136cee8"
-        }
-      },
-      {
-        "address": "0x64bd026b7493dd9534d65056b422e0e015f6d579",
-        "chain": "ethereum",
-        "label": "L1ETHGateway",
-        "source": {
-          "kind": "whiteclaws_protocol_json",
-          "url": "public/protocols/scroll.json"
-        },
-        "needs_review": false,
-        "explorer": {
-          "url": "https://etherscan.io/address/0x64bd026b7493dd9534d65056b422e0e015f6d579"
-        }
+        "needs_review": false
       }
     ],
     "needs_review": false
@@ -2623,19 +2571,6 @@
         "needs_review": false,
         "explorer": {
           "url": "https://etherscan.io/address/0x9d65ff81a3c488d585bbfb0bfe3c7707c7917f54"
-        }
-      },
-      {
-        "address": "0xb91c9307c6c08e9f26427116e3ec4b8d87cc7f3d",
-        "chain": "ethereum",
-        "label": "SSVDAO",
-        "source": {
-          "kind": "whiteclaws_protocol_json",
-          "url": "public/protocols/ssv-network.json"
-        },
-        "needs_review": false,
-        "explorer": {
-          "url": "https://etherscan.io/address/0xb91c9307c6c08e9f26427116e3ec4b8d87cc7f3d"
         }
       }
     ],

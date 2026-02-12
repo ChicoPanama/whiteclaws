@@ -1,19 +1,33 @@
 # Enrichment Report
 
-Generated: 2026-02-12T05:46:36.582Z
+Generated: 2026-02-12T06:22:11.640Z
 
-## Summary
+## Domain Resolution
 - total_protocols: 457
-- direct-ready: 12
+- domains_resolved: 456
+- unresolved: 1
+
+### Resolution methods
+- prefix: 161
+- curated: 125
+- exact_slug: 105
+- normalized: 48
+- exact_name: 13
+- coingecko: 4
+
+### Failure reasons
+- domain_unresolved: 1
+
+## Contact Enrichment
+- direct-ready (security.txt / email / form): 2
 - portal-required: 1
 - immunefi-only: 1
-- missing: 444
-- protocols_with_contracts: 27
+- no contact info: 454
 
-## Top failure reasons
-- domain_unresolved: 339
+## Contract Scope
+- protocols_with_contracts: 27
+- total_verified_contracts: 30
 
 ## CI Gate Result
 PASSED
-
 

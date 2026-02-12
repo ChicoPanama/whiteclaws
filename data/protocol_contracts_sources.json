@@ -10,14 +10,8 @@
   "aera": {},
   "aevo": {},
   "alchemix": {
-    "0xc3f279090a0e534d4127d8fe6605f860dcaf360f": [
-      "public/protocols/alchemix.json"
-    ],
-    "0xe8ea477b43db7c83df5796344576cd07a4a947b7": [
-      "public/protocols/alchemix.json"
-    ],
-    "0xd1baa1dc3ebd495a2fb6f4f5973722f3a7d89178": [
-      "public/protocols/alchemix.json"
+    "0x5c6374a2ac4ebc38dea0fc1f8716e5ea1add94dd": [
+      "https://etherscan.io/address/0x5c6374a2ac4ebc38dea0fc1f8716e5ea1add94dd"
     ]
   },
   "aleo": {},
@@ -170,11 +164,11 @@
   "enzyme-onyx": {},
   "enzymefinance": {},
   "ethena": {
-    "0x5c5b196abe0f81f8eab17b3924d896d3593e9e65": [
-      "public/protocols/ethena.json"
+    "0x4c9edd5852cd905f086c759e8383e09bff1e68b3": [
+      "https://etherscan.io/address/0x4c9edd5852cd905f086c759e8383e09bff1e68b3"
     ],
-    "0xfa91a32357947e925d062d4742ef143a5b8c9279": [
-      "public/protocols/ethena.json"
+    "0x9d39a5de30e57443bff2a8307a4256c8797a3497": [
+      "https://etherscan.io/address/0x9d39a5de30e57443bff2a8307a4256c8797a3497"
     ]
   },
   "etherfi": {},
@@ -258,8 +252,8 @@
   "interlay": {},
   "intmax": {},
   "inverse-finance": {
-    "0x9101c978e50d5f421b95d150c5b47a2f16d856f1": [
-      "public/protocols/inverse-finance.json"
+    "0x865377367054516e17014ccded1e7d814edc9ce4": [
+      "https://etherscan.io/address/0x865377367054516e17014ccded1e7d814edc9ce4"
     ]
   },
   "ion-protocol": {},
@@ -439,14 +433,8 @@
   "ruscet": {},
   "rysk": {},
   "scroll": {
-    "0x5300000000000000000000000000000000000004": [
-      "public/protocols/scroll.json"
-    ],
-    "0x778625549534e1d17e9bc6c654b044252136cee8": [
-      "public/protocols/scroll.json"
-    ],
-    "0x64bd026b7493dd9534d65056b422e0e015f6d579": [
-      "public/protocols/scroll.json"
+    "0x6774bcbd5cecef1336b5300fb5186a12ddd8b367": [
+      "https://etherscan.io/address/0x6774bcbd5cecef1336b5300fb5186a12ddd8b367"
     ]
   },
   "sectorfinance": {},
@@ -480,9 +468,6 @@
       "public/protocols/ssv-network.json"
     ],
     "0x9d65ff81a3c488d585bbfb0bfe3c7707c7917f54": [
-      "public/protocols/ssv-network.json"
-    ],
-    "0xb91c9307c6c08e9f26427116e3ec4b8d87cc7f3d": [
       "public/protocols/ssv-network.json"
     ]
   },

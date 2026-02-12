@@ -2,39 +2,40 @@
   "0x": {},
   "88mphv3": {},
   "aave": {},
-  "acala": {
-    "contacts.security_txt_url": [
-      "https://acala.network/.well-known/security.txt"
-    ]
-  },
+  "acala": {},
   "aera": {},
   "aevo": {},
-  "alchemix": {
-    "contacts.security_txt_url": [
-      "https://alchemix.fi/.well-known/security.txt"
-    ]
-  },
+  "alchemix": {},
   "aleo": {},
   "alephzero": {},
-  "alex": {
-    "contacts.security_txt_url": [
-      "https://alexlab.co/.well-known/security.txt"
-    ]
-  },
+  "alex": {},
   "aloeprotocol": {},
   "alongside": {},
   "alpacafinance": {},
-  "alpen-labs": {},
+  "alpen-labs": {
+    "contacts.security_txt_url": [
+      "https://alpenlabs.io/.well-known/security.txt"
+    ],
+    "contacts.contact_form_url": [
+      "https://alpenlabs.io/.well-known/security.txt"
+    ]
+  },
   "alphaventuredao": {},
-  "ambire": {},
+  "ambire": {
+    "contacts.security_txt_url": [
+      "https://ambire.com/.well-known/security.txt"
+    ],
+    "contacts.security_emails": [
+      "https://ambire.com/.well-known/security.txt"
+    ],
+    "policy_url": [
+      "https://ambire.com/.well-known/security.txt"
+    ]
+  },
   "angleprotocol": {},
   "ankr": {},
   "antefinance": {},
-  "anvil": {
-    "contacts.security_txt_url": [
-      "https://anvil.xyz/.well-known/security.txt"
-    ]
-  },
+  "anvil": {},
   "apecoinmainnet": {},
   "arbitrum": {},
   "arborfinance": {},
@@ -51,11 +52,7 @@
   "avalabs": {},
   "avalanche": {},
   "axelarnetwork": {},
-  "axiom": {
-    "contacts.security_txt_url": [
-      "https://axiom.trade/.well-known/security.txt"
-    ]
-  },
+  "axiom": {},
   "baanx": {},
   "babylon-labs": {},
   "badger": {},
@@ -115,11 +112,7 @@
   "decentraland": {},
   "defisaver": {},
   "defly": {},
-  "degate": {
-    "contacts.security_txt_url": [
-      "https://app.degate.com/security.txt"
-    ]
-  },
+  "degate": {},
   "delv": {},
   "deriprotocol": {},
   "dex-protocol": {},
@@ -141,11 +134,7 @@
   "elixirprotocol": {},
   "enosys": {},
   "ens": {},
-  "ensuro": {
-    "contacts.security_txt_url": [
-      "https://ensuro.co/.well-known/security.txt"
-    ]
-  },
+  "ensuro": {},
   "enzyme-onyx": {},
   "enzymefinance": {},
   "ethena": {},
@@ -171,11 +160,7 @@
   "felix": {},
   "filecoin": {},
   "firedancer": {},
-  "flamingofinance": {
-    "contacts.security_txt_url": [
-      "https://flamingo.finance/.well-known/security.txt"
-    ]
-  },
+  "flamingofinance": {},
   "flarenetwork": {},
   "flexytech": {},
   "floki": {},
@@ -184,22 +169,14 @@
   "folksfinance": {},
   "forta": {},
   "foundation": {},
-  "furucombo": {
-    "contacts.security_txt_url": [
-      "https://furucombo.app/.well-known/security.txt"
-    ]
-  },
+  "furucombo": {},
   "furucombofunds": {},
   "gainsnetwork": {},
   "galagames": {},
   "gamma": {},
   "gammaswap": {},
   "gear": {},
-  "gearbox": {
-    "contacts.security_txt_url": [
-      "https://gearbox.finance/.well-known/security.txt"
-    ]
-  },
+  "gearbox": {},
   "geniusyield": {},
   "gerowallet": {},
   "ghostmarket": {},
@@ -264,26 +241,12 @@
   "layer3": {},
   "layerzero": {},
   "lendr": {},
-  "lido": {
-    "contacts.security_txt_url": [
-      "https://lido.fi/.well-known/security.txt"
-    ],
-    "contacts.security_emails": [
-      "https://lido.fi/.well-known/security.txt"
-    ],
-    "policy_url": [
-      "https://lido.fi/.well-known/security.txt"
-    ]
-  },
+  "lido": {},
   "lidoonpolygon": {},
   "lifi": {},
   "light-protocol": {},
   "linea": {},
-  "liquidswap": {
-    "contacts.security_txt_url": [
-      "https://liquidswap.com/.well-known/security.txt"
-    ]
-  },
+  "liquidswap": {},
   "listadao": {},
   "livepeer": {},
   "localtraders": {},

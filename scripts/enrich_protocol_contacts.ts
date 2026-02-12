@@ -2,24 +2,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { execFileSync } from 'node:child_process';
 
-type Contacts = {
-  security_emails: string[];
-  contact_form_url: string | null;
-  pgp_key_url: string | null;
-  security_txt_url: string | null;
-};
-
-type Disclosure = {
-  preferred: 'direct' | 'portal';
-  contacts: Contacts;
-  policy_url: string | null;
-  portal: { required: boolean; type: string | null; url: string | null };
-  fallback: { immunefi_url: string | null };
-  sources: string[];
-  last_verified: string;
-  needs_review: boolean;
-  confidence: number;
-};
+type Contacts = { security_emails: string[]; contact_form_url: string | null; pgp_key_url: string | null; security_txt_url: string | null };
+type Disclosure = { preferred: 'direct' | 'portal'; contacts: Contacts; policy_url: string | null; portal: { required: boolean; type: string | null; url: string | null }; fallback: { immunefi_url: string | null }; sources: string[]; last_verified: string; needs_review: boolean; confidence: number };
 
 const ROOT = process.cwd();
 const DOMAINS_PATH = path.join(ROOT, 'data', 'protocol_domains.json');
@@ -30,15 +14,23 @@ const INDEX_PATH = path.join(ROOT, 'data', 'whiteclaws_protocol_index.json');
 
 function curlGet(url: string): string | null {
   try {
-    return execFileSync('curl', ['-fsSL', '--max-time', '2', '--retry', '0', url], { encoding: 'utf8', stdio: ['ignore','pipe','ignore'] });
-  } catch {
-    return null;
-  }
+    return execFileSync('curl', ['-fsSL', '--max-time', '4', '--retry', '0', '-H', 'User-Agent: whiteclaws-enricher/2.0', url], { encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] });
+  } catch { return null; }
 }
 
 function uniq<T>(arr: T[]): T[] { return [...new Set(arr)]; }
 function today(): string { return new Date().toISOString().slice(0, 10); }
-function extractEmails(s: string): string[] { return uniq((s.match(/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/gi) ?? []).map((x) => x.toLowerCase())); }
+
+function isValidSecurityTxt(body: string): boolean {
+  // RFC 9116: must contain Contact: field, must not be HTML
+  if (!body || body.length < 10) return false;
+  const lower = body.toLowerCase().trim();
+  if (lower.startsWith('<!doctype') || lower.startsWith('<html') || lower.startsWith('<?xml') || lower.includes('<head>') || lower.includes('<body>')) return false;
+  // Must have at least one Contact: line
+  const lines = body.split(/\r?\n/);
+  const hasContact = lines.some(l => /^contact\s*:/i.test(l.trim()));
+  return hasContact;
+}
 
 function parseSecurityTxt(body: string) {
   const out = { contact: [] as string[], policy: [] as string[], encryption: [] as string[] };
@@ -47,6 +39,7 @@ function parseSecurityTxt(body: string) {
     if (i < 0) continue;
     const k = line.slice(0, i).trim().toLowerCase();
     const v = line.slice(i + 1).trim();
+    if (!v) continue;
     if (k === 'contact') out.contact.push(v);
     if (k === 'policy') out.policy.push(v);
     if (k === 'encryption') out.encryption.push(v);
@@ -59,6 +52,7 @@ function classifyPortal(url: string): string {
   if (l.includes('hackerone')) return 'hackerone';
   if (l.includes('cantina')) return 'cantina';
   if (l.includes('immunefi')) return 'immunefi';
+  if (l.includes('code4rena')) return 'code4rena';
   return 'other';
 }
 
@@ -67,10 +61,9 @@ function run() {
   const index = JSON.parse(fs.readFileSync(INDEX_PATH, 'utf8')) as { protocols: Array<{ slug: string | null; name: string | null; filepath: string }> };
   const bySlug = new Map(index.protocols.filter((p) => p.slug).map((p) => [p.slug!, p]));
 
-
-  const maxFetch = Number(process.env.CONTACT_ENRICH_LIMIT ?? '40');
+  const maxFetch = Number(process.env.CONTACT_ENRICH_LIMIT ?? '9999');
   const eligible = Object.entries(domains)
-    .filter(([, v]) => v.domain && v.confidence >= 0.6)
+    .filter(([, v]) => v.domain && v.confidence >= 0.5)
     .sort(([a], [b]) => a.localeCompare(b))
     .slice(0, maxFetch)
     .map(([k]) => k);
@@ -78,7 +71,10 @@ function run() {
 
   const contacts: Record<string, { slug: string; name: string; disclosure: Disclosure }> = {};
   const sources: Record<string, Record<string, string[]>> = {};
-  const rows = [['slug','name','preferred','security_emails','policy_url','portal_type','portal_url','immunefi_url','last_verified','confidence','needs_review']];
+  const rows = [['slug', 'name', 'preferred', 'security_emails', 'policy_url', 'portal_type', 'portal_url', 'immunefi_url', 'last_verified', 'confidence', 'needs_review']];
+
+  let fetched = 0;
+  let secTxtFound = 0;
 
   for (const [slug, d] of Object.entries(domains)) {
     const src: Record<string, string[]> = {};
@@ -96,14 +92,21 @@ function run() {
       confidence: 0.3,
     };
 
-    if (eligibleSet.has(slug) && d.domain && d.confidence >= 0.6) {
+    // Fetch security.txt with VALIDATION
+    if (eligibleSet.has(slug) && d.domain && d.confidence >= 0.5) {
       for (const endpoint of [`https://${d.domain}/.well-known/security.txt`, `https://${d.domain}/security.txt`]) {
         const txt = curlGet(endpoint);
+        fetched++;
         if (!txt) continue;
+
+        // CRITICAL FIX: Validate this is actually security.txt, not an SPA HTML page
+        if (!isValidSecurityTxt(txt)) continue;
+
         const parsed = parseSecurityTxt(txt);
         disclosure.contacts.security_txt_url = endpoint;
         addSrc('contacts.security_txt_url', endpoint);
         disclosure.confidence += 0.4;
+        secTxtFound++;
 
         for (const c of parsed.contact) {
           if (c.toLowerCase().startsWith('mailto:')) {
@@ -125,11 +128,9 @@ function run() {
         }
         break;
       }
-
     }
 
-
-    // Fallback to protocol file hints for immunefi only.
+    // Fallback: check protocol JSON for immunefi URLs
     const idx = bySlug.get(slug);
     if (idx?.filepath) {
       try {
@@ -150,22 +151,20 @@ function run() {
 
     disclosure.contacts.security_emails = uniq(disclosure.contacts.security_emails);
     disclosure.confidence = Math.max(0, Math.min(1, Number(disclosure.confidence.toFixed(2))));
-    const hasIntake = disclosure.contacts.security_emails.length > 0 || disclosure.contacts.contact_form_url || disclosure.policy_url || disclosure.portal.url || disclosure.fallback.immunefi_url;
+    const hasIntake = disclosure.contacts.security_emails.length > 0 || !!disclosure.contacts.contact_form_url || !!disclosure.policy_url || !!disclosure.contacts.security_txt_url || !!disclosure.portal.url || !!disclosure.fallback.immunefi_url;
     disclosure.needs_review = !(disclosure.confidence >= 0.7 && hasIntake);
     disclosure.sources = uniq(Object.values(src).flat());
 
     contacts[slug] = { slug, name: d.name, disclosure };
     sources[slug] = src;
-
-    rows.push([
-      slug, d.name, disclosure.preferred, disclosure.contacts.security_emails.join(';'), disclosure.policy_url ?? '', disclosure.portal.type ?? '', disclosure.portal.url ?? '', disclosure.fallback.immunefi_url ?? '', disclosure.last_verified, String(disclosure.confidence), String(disclosure.needs_review),
-    ]);
+    rows.push([slug, d.name, disclosure.preferred, disclosure.contacts.security_emails.join(';'), disclosure.policy_url ?? '', disclosure.portal.type ?? '', disclosure.portal.url ?? '', disclosure.fallback.immunefi_url ?? '', disclosure.last_verified, String(disclosure.confidence), String(disclosure.needs_review)]);
   }
 
   fs.writeFileSync(CONTACTS_PATH, `${JSON.stringify(contacts, null, 2)}\n`);
   fs.writeFileSync(SOURCES_PATH, `${JSON.stringify(sources, null, 2)}\n`);
   fs.writeFileSync(CSV_PATH, `${rows.map((r) => r.map((x) => (String(x).includes(',') ? `"${String(x).replaceAll('"', '""')}"` : String(x))).join(',')).join('\n')}\n`);
-  console.log(`wrote ${CONTACTS_PATH}`);
+
+  console.log(`wrote ${CONTACTS_PATH} — fetched ${fetched} URLs, found ${secTxtFound} valid security.txt files`);
 }
 
 run();
