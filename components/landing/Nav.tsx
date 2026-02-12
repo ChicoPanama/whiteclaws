@@ -23,6 +23,7 @@ export default function Nav() {
         </Link>
         <div className="nav-links">
           <Link href="/bounties">Bounties</Link>
+          <Link href="/heroes">Heroes</Link>
           <Link href="/researchers">Researchers</Link>
           <Link href="/agents">Agents</Link>
           <Link href="/platform">Platform</Link>
