@@ -1,0 +1,468 @@
+slug,name,chain,address,label,type,is_verified,explorer_url,source_url,tier,last_verified,needs_review
+0x,"0x",,,,,,,,1,,true
+88mphv3,"88mphv3",,,,,,,,1,,true
+aave,"AAVE",ethereum,0x87870bca3f3fd6335c3f4ce8392d69350b4fa4e2,"Aave V3 Pool",core,,https://etherscan.io/address/0x87870bca3f3fd6335c3f4ce8392d69350b4fa4e2,https://github.com/whiteclaws,1,2026-02-12,true
+acala,"Acala",,,,,,,,1,,true
+aera,"Aera",,,,,,,,1,,true
+aevo,"Aevo",,,,,,,,1,,true
+alchemix,"Alchemix",ethereum,0xc3f279090a0e534d4127d8fe6605f860dcaf360f,"AlchemistV2",core,,https://etherscan.io/address/0xc3f279090a0e534d4127d8fe6605f860dcaf360f,https://github.com/whiteclaws,1,2026-02-12,true
+alchemix,"Alchemix",ethereum,0xd1baa1dc3ebd495a2fb6f4f5973722f3a7d89178,"AlchemixToken",erc20,,https://etherscan.io/address/0xd1baa1dc3ebd495a2fb6f4f5973722f3a7d89178,https://github.com/whiteclaws,1,2026-02-12,true
+alchemix,"Alchemix",ethereum,0xe8ea477b43db7c83df5796344576cd07a4a947b7,"TransmuterV2",yield,,https://etherscan.io/address/0xe8ea477b43db7c83df5796344576cd07a4a947b7,https://github.com/whiteclaws,1,2026-02-12,true
+aleo,"Aleo",,,,,,,,1,,true
+alephzero,"Alephzero",,,,,,,,1,,true
+alex,"Alex",,,,,,,,1,,true
+aloeprotocol,"Aloeprotocol",,,,,,,,1,,true
+alongside,"Alongside",,,,,,,,1,,true
+alpacafinance,"Alpacafinance",,,,,,,,1,,true
+alpen-labs,"Alpen Labs",,,,,,,,1,,true
+alphaventuredao,"Alpha Venture DAO",,,,,,,,1,,true
+ambire,"Ambire",,,,,,,,1,,true
+angleprotocol,"Angleprotocol",,,,,,,,1,,true
+ankr,"Ankr",,,,,,,,1,,true
+antefinance,"Antefinance",,,,,,,,1,,true
+anvil,"Anvil",,,,,,,,1,,true
+apecoinmainnet,"Apecoinmainnet",,,,,,,,1,,true
+arbitrum,"Arbitrum",ethereum,0x1c479675ad559dc151f6ec7ed3fbf8cee79582b6,"Arbitrum Rollup",core,,https://etherscan.io/address/0x1c479675ad559dc151f6ec7ed3fbf8cee79582b6,https://github.com/whiteclaws,1,2026-02-12,true
+arborfinance,"Arborfinance",,,,,,,,1,,true
+arcade,"Arcade",,,,,,,,1,,true
+arkadiko,"Arkadiko",,,,,,,,1,,true
+arkham,"Arkham",,,,,,,,1,,true
+aspida,"Aspida",,,,,,,,1,,true
+astarnetwork,"Astarnetwork",,,,,,,,1,,true
+aster,"Aster",,,,,,,,1,,true
+astroport,"Astroport",,,,,,,,1,,true
+aurafinance,"Aura Finance",,,,,,,,1,,true
+autonolas,"Autonolas",,,,,,,,1,,true
+avail,"Avail",,,,,,,,1,,true
+avalabs,"Avalabs",,,,,,,,1,,true
+avalanche,"Avalanche",,,,,,,,1,,true
+axelarnetwork,"Axelar Network",ethereum,0x4f4495243837681061c4743b74b3eedf548d56a5,"Axelar Gateway",core,,https://etherscan.io/address/0x4f4495243837681061c4743b74b3eedf548d56a5,https://github.com/whiteclaws,1,2026-02-12,true
+axiom,"Axiom",,,,,,,,1,,true
+baanx,"Baanx",,,,,,,,1,,true
+babylon-labs,"Babylon Labs",,,,,,,,1,,true
+badger,"Badger",,,,,,,,1,,true
+balancer,"Balancer",ethereum,0xba12222222228d8ba445958a75a0704d566bf2c8,"Balancer Vault",core,,https://etherscan.io/address/0xba12222222228d8ba445958a75a0704d566bf2c8,https://github.com/whiteclaws,1,2026-02-12,true
+balmy,"Balmy",,,,,,,,1,,true
+bankx,"Bankx",,,,,,,,1,,true
+baofinance,"Baofinance",,,,,,,,1,,true
+basilisk,"Basilisk",,,,,,,,1,,true
+beanstalk,"Beanstalk",,,,,,,,1,,true
+beefyfinance,"Beefy Finance",,,,,,,,1,,true
+beethovenx,"Beethovenx",,,,,,,,1,,true
+beets,"Beets",,,,,,,,1,,true
+benddao,"Benddao",,,,,,,,1,,true
+benqi,"BENQI",,,,,,,,1,,true
+berachain-webapps,"Berachain Webapps",,,,,,,,1,,true
+berachain,"Berachain",,,,,,,,1,,true
+beradrome,"Beradrome",,,,,,,,1,,true
+betafinance,"Betafinance",,,,,,,,1,,true
+biconomy,"Biconomy",,,,,,,,1,,true
+bifi,"Bifi",,,,,,,,1,,true
+bifrostfinance,"Bifrost",,,,,,,,1,,true
+bitcoinsv,"Bitcoinsv",,,,,,,,1,,true
+bitflow,"Bitflow",,,,,,,,1,,true
+bitswift,"Bitswift",,,,,,,,1,,true
+blackwing,"Blackwing",,,,,,,,1,,true
+blockpinetwork,"Blockpinetwork",,,,,,,,1,,true
+blockwallet,"Blockwallet",,,,,,,,1,,true
+bobanetwork,"Boba Network",,,,,,,,1,,true
+bondprotocol,"Bondprotocol",,,,,,,,1,,true
+bonfida,"Bonfida",,,,,,,,1,,true
+bprotocol,"Bprotocol",,,,,,,,1,,true
+burrow,"Burrow",,,,,,,,1,,true
+buttonwood,"Buttonwood",,,,,,,,1,,true
+c3,"C3",,,,,,,,1,,true
+capyfi,"CapyFi",,,,,,,,1,,true
+carbonbancor,"Carbonbancor",,,,,,,,1,,true
+cardanofoundation,"Cardanofoundation",,,,,,,,1,,true
+cc-protocol,"CC Protocol",,,,,,,,1,,true
+celer,"Celer",,,,,,,,1,,true
+ceres,"Ceres",,,,,,,,1,,true
+chainlink,"Chainlink",ethereum,0x47fb2585d2c56fe188d0e6ec628a38b74fceeedf,"Chainlink Feed Registry",core,,https://etherscan.io/address/0x47fb2585d2c56fe188d0e6ec628a38b74fceeedf,https://github.com/whiteclaws,1,2026-02-12,true
+charm,"Charm",,,,,,,,1,,true
+comdex,"Comdex",,,,,,,,1,,true
+composablefinance,"Composablefinance",,,,,,,,1,,true
+compoundfinance,"Compound Finance",ethereum,0xc3d688b66703497daa19211eedff47f25384cdc3,"Compound V3 (cUSDCv3)",core,,https://etherscan.io/address/0xc3d688b66703497daa19211eedff47f25384cdc3,https://github.com/whiteclaws,1,2026-02-12,true
+connext,"Connext",,,,,,,,1,,true
+contrax,"Contrax",,,,,,,,1,,true
+coreum,"Coreum",,,,,,,,1,,true
+cove,"Cove",,,,,,,,1,,true
+cowprotocol,"CoW Protocol",ethereum,0x9008d19f58aabd9ed0d60971565aa8510560ab41,"CoW Protocol Settlement",core,,https://etherscan.io/address/0x9008d19f58aabd9ed0d60971565aa8510560ab41,https://github.com/whiteclaws,1,2026-02-12,true
+cyan,"Cyan",,,,,,,,1,,true
+daimo-pay,"Daimo Pay",,,,,,,,1,,true
+daimo,"Daimo",,,,,,,,1,,true
+darwinia,"Darwinia",,,,,,,,1,,true
+davos,"Davos",,,,,,,,1,,true
+debridge,"deBridge",,,,,,,,1,,true
+decentraland,"Decentraland",,,,,,,,1,,true
+defisaver,"DeFi Saver",,,,,,,,1,,true
+defly,"Defly",,,,,,,,1,,true
+degate,"Degate",,,,,,,,1,,true
+delv,"Delv",,,,,,,,1,,true
+deriprotocol,"Deriprotocol",,,,,,,,1,,true
+dex-protocol,"DeXe Protocol",,,,,,,,1,,true
+dexeprotocol,"DeXe Protocol",,,,,,,,1,,true
+dforce,"dForce",,,,,,,,1,,true
+dfxfinance,"Dfxfinance",,,,,,,,1,,true
+dhedge,"dHEDGE",,,,,,,,1,,true
+dodo,"Dodo",,,,,,,,1,,true
+dodov3,"Dodov3",,,,,,,,1,,true
+driftprotocol,"Driftprotocol",,,,,,,,1,,true
+drips,"Drips",,,,,,,,1,,true
+duetfinance,"Duetfinance",,,,,,,,1,,true
+ebtc,"Ebtc",,,,,,,,1,,true
+eckodao,"Eckodao",,,,,,,,1,,true
+eclipse,"Eclipse",,,,,,,,1,,true
+eco,"Eco",,,,,,,,1,,true
+econia,"Econia",,,,,,,,1,,true
+eigenlayer,"EigenLayer",ethereum,0x39053d51b77dc0d36036fc1fcc8cb819df8ef37a,"EigenLayer StrategyManager",core,,https://etherscan.io/address/0x39053d51b77dc0d36036fc1fcc8cb819df8ef37a,https://github.com/whiteclaws,1,2026-02-12,true
+elixirprotocol,"Elixirprotocol",,,,,,,,1,,true
+enosys,"Enosys",,,,,,,,1,,true
+ens,"ENS",ethereum,0x00000000000c2e074ec69a0dfb2997ba6c7d2e1e,"ENSRegistry",core,,https://etherscan.io/address/0x00000000000c2e074ec69a0dfb2997ba6c7d2e1e,https://github.com/whiteclaws,1,2026-02-12,true
+ens,"ENS",ethereum,0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85,"ENSBaseRegistrar",registrar,,https://etherscan.io/address/0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85,https://github.com/whiteclaws,1,2026-02-12,true
+ensuro,"Ensuro",,,,,,,,1,,true
+enzyme-onyx,"Enzyme Onyx",,,,,,,,1,,true
+enzymefinance,"Enzymefinance",,,,,,,,1,,true
+ethena,"Ethena",ethereum,0x5c5b196abe0f81f8eab17b3924d896d3593e9e65,"USDe",stablecoin,,https://etherscan.io/address/0x5c5b196abe0f81f8eab17b3924d896d3593e9e65,https://github.com/whiteclaws,1,2026-02-12,true
+ethena,"Ethena",ethereum,0xfa91a32357947e925d062d4742ef143a5b8c9279,"StakedUSDe",staking,,https://etherscan.io/address/0xfa91a32357947e925d062d4742ef143a5b8c9279,https://github.com/whiteclaws,1,2026-02-12,true
+etherfi,"Ether.fi",,,,,,,,1,,true
+euphrates,"Euphrates",,,,,,,,1,,true
+exactly,"Exactly",,,,,,,,1,,true
+example-protocol,"Example Protocol",,,,,,,,1,,true
+exodus,"Exodus",,,,,,,,1,,true
+extrafinance,"Extrafinance",,,,,,,,1,,true
+farcaster,"Farcaster",,,,,,,,1,,true
+fassets,"Fassets",,,,,,,,1,,true
+fbtc,"Fbtc",,,,,,,,1,,true
+felix,"Felix",,,,,,,,1,,true
+filecoin,"Filecoin",,,,,,,,1,,true
+firedancer,"Firedancer",,,,,,,,1,,true
+flamingofinance,"Flamingo Finance",,,,,,,,1,,true
+flarenetwork,"Flarenetwork",,,,,,,,1,,true
+flexytech,"Flexytech",,,,,,,,1,,true
+floki,"Floki",,,,,,,,1,,true
+fluxfinance,"Flux Finance",,,,,,,,1,,true
+foil,"Foil",,,,,,,,1,,true
+folksfinance,"Folksfinance",,,,,,,,1,,true
+forta,"Forta",,,,,,,,1,,true
+foundation,"Foundation",,,,,,,,1,,true
+furucombo,"Furucombo",,,,,,,,1,,true
+furucombofunds,"Furucombofunds",,,,,,,,1,,true
+gainsnetwork,"Gains Network",,,,,,,,1,,true
+galagames,"Galagames",,,,,,,,1,,true
+gamma,"Gamma",,,,,,,,1,,true
+gammaswap,"Gammaswap",,,,,,,,1,,true
+gear,"Gear",,,,,,,,1,,true
+gearbox,"Gearbox",,,,,,,,1,,true
+geniusyield,"Geniusyield",,,,,,,,1,,true
+gerowallet,"Gerowallet",,,,,,,,1,,true
+ghostmarket,"Ghostmarket",,,,,,,,1,,true
+glodollar,"Glodollar",,,,,,,,1,,true
+gmx,"GMX",arbitrum,0x489ee077994b6658eafa855c308275ead8097c4a,"GMX Vault",core,,https://arbiscan.io/address/0x489ee077994b6658eafa855c308275ead8097c4a,https://github.com/whiteclaws,1,2026-02-12,true
+gnosischain,"Gnosis Chain",,,,,,,,1,,true
+gogopool,"Gogopool",,,,,,,,1,,true
+goldfinch,"Goldfinch",,,,,,,,1,,true
+granite-protocol,"Granite Protocol",,,,,,,,1,,true
+gysr,"Gysr",,,,,,,,1,,true
+hakkafinance,"Hakkafinance",,,,,,,,1,,true
+halogen,"Halogen",,,,,,,,1,,true
+harvest,"Harvest",,,,,,,,1,,true
+hashflow,"Hashflow",,,,,,,,1,,true
+hathornetwork,"Hathornetwork",,,,,,,,1,,true
+haven1,"Haven1",,,,,,,,1,,true
+hedera,"Hedera",,,,,,,,1,,true
+helios-finance,"Helios Finance",,,,,,,,1,,true
+hibachi,"Hibachi",,,,,,,,1,,true
+hoenn,"Hoenn",,,,,,,,1,,true
+horizen,"Horizen",,,,,,,,1,,true
+hourglass,"Hourglass",,,,,,,,1,,true
+hydradx,"Hydradx",,,,,,,,1,,true
+hydration,"Hydration",,,,,,,,1,,true
+hydro,"Hydro",,,,,,,,1,,true
+hyperlane,"Hyperlane",ethereum,0xc005dc82818d67af737725bd4bf75435d065d239,"Hyperlane Mailbox",core,,https://etherscan.io/address/0xc005dc82818d67af737725bd4bf75435d065d239,https://github.com/whiteclaws,1,2026-02-12,true
+ichi,"Ichi",,,,,,,,1,,true
+icon,"Icon",,,,,,,,1,,true
+idex,"Idex",,,,,,,,1,,true
+idlefinance,"Idlefinance",,,,,,,,1,,true
+illuvium,"Illuvium",,,,,,,,1,,true
+immunefi,"Immunefi",,,,,,,,1,,true
+immutable,"Immutable",,,,,,,,1,,true
+impossible-cloud-network,"Impossible Cloud Network",,,,,,,,1,,true
+impossiblefinance,"Impossiblefinance",,,,,,,,1,,true
+indexcoop,"Index Coop",,,,,,,,1,,true
+infinex,"Infinex",,,,,,,,1,,true
+injective,"Injective",,,,,,,,1,,true
+instadapp,"Instadapp",,,,,,,,1,,true
+integral,"Integral",,,,,,,,1,,true
+integriteenetwork,"Integriteenetwork",,,,,,,,1,,true
+interlay,"Interlay",,,,,,,,1,,true
+intmax,"INTMAX",,,,,,,,1,,true
+inverse-finance,"Inverse Finance",ethereum,0x9101c978e50d5f421b95d150c5b47a2f16d856f1,"DOLA",stablecoin,,https://etherscan.io/address/0x9101c978e50d5f421b95d150c5b47a2f16d856f1,https://github.com/whiteclaws,1,2026-02-12,true
+ion-protocol,"Ion Protocol",,,,,,,,1,,true
+ipor,"IPOR",,,,,,,,1,,true
+jito-bam-client,"Jito Bam Client",,,,,,,,1,,true
+jito-foundation,"Jito Foundation",,,,,,,,1,,true
+jito,"Jito",,,,,,,,1,,true
+justlenddao,"Justlenddao",,,,,,,,1,,true
+kadena,"Kadena",,,,,,,,1,,true
+kamino,"Kamino",,,,,,,,1,,true
+keep3rnetwork,"Keep3rnetwork",,,,,,,,1,,true
+kelp-dao,"Kelp DAO",,,,,,,,1,,true
+kiln-defi,"Kiln DeFi",,,,,,,,1,,true
+kiln-on-chain-v1,"Kiln On-Chain v1",,,,,,,,1,,true
+kiln-webapp,"Kiln Webapp",,,,,,,,1,,true
+kiln,"Kiln On-Chain v2",,,,,,,,1,,true
+kinesis-bridge-on-kadena,"Kinesis Bridge On Kadena",,,,,,,,1,,true
+kwenta,"Kwenta",,,,,,,,1,,true
+landx,"Landx",,,,,,,,1,,true
+layer3,"Layer3.xyz",,,,,,,,1,,true
+layerzero,"LayerZero",ethereum,0x66a71dcef29a0ffbdbe3c6a460a3b5bc225cd675,"LayerZero Endpoint",core,,https://etherscan.io/address/0x66a71dcef29a0ffbdbe3c6a460a3b5bc225cd675,https://github.com/whiteclaws,1,2026-02-12,true
+lendr,"Lendr",,,,,,,,1,,true
+lido,"Lido",ethereum,0xae7ab96520de3a18e5e111b5eaab095312d7fe84,"Lido stETH",core,,https://etherscan.io/address/0xae7ab96520de3a18e5e111b5eaab095312d7fe84,https://github.com/whiteclaws,1,2026-02-12,true
+lidoonpolygon,"Lidoonpolygon",,,,,,,,1,,true
+lifi,"Lifi",,,,,,,,1,,true
+light-protocol,"Light Protocol",,,,,,,,1,,true
+linea,"Linea",,,,,,,,1,,true
+liquidswap,"Liquidswap",,,,,,,,1,,true
+listadao,"Lista DAO",,,,,,,,1,,true
+livepeer,"Livepeer",,,,,,,,1,,true
+localtraders,"Localtraders",,,,,,,,1,,true
+lombard-finance,"Lombard Finance",,,,,,,,1,,true
+lossless,"Lossless",,,,,,,,1,,true
+lybrafinance,"Lybrafinance",,,,,,,,1,,true
+lyra,"Lyra",,,,,,,,1,,true
+magpiexyz,"Magpiexyz",,,,,,,,1,,true
+mantlelsp,"Mantlelsp",,,,,,,,1,,true
+maple,"Maple",,,,,,,,1,,true
+marinade,"Marinade",,,,,,,,1,,true
+mars,"Mars",,,,,,,,1,,true
+marsecosystem,"Marsecosystem",,,,,,,,1,,true
+mayaprotocol,"Mayaprotocol",,,,,,,,1,,true
+meanfinance,"Meanfinance",,,,,,,,1,,true
+metalswap,"Metalswap",,,,,,,,1,,true
+metastreet-yield-pass,"Metastreet Yield Pass",,,,,,,,1,,true
+metastreet,"Metastreet",,,,,,,,1,,true
+meth,"mETH Protocol",,,,,,,,1,,true
+metis,"Metis",,,,,,,,1,,true
+metronome,"Metronome",,,,,,,,1,,true
+monero-oxide,"Monero Oxide",,,,,,,,1,,true
+moneyonchain,"Moneyonchain",,,,,,,,1,,true
+moonbeamnetwork,"Moonbeamnetwork",,,,,,,,1,,true
+moonwell,"Moonwell",,,,,,,,1,,true
+morpho,"Morpho",,,,,,,,1,,true
+mountainprotocol,"Mountainprotocol",,,,,,,,1,,true
+mtpelerin,"Mtpelerin",,,,,,,,1,,true
+mux,"Mux",,,,,,,,1,,true
+myntandzero,"Myntandzero",,,,,,,,1,,true
+native,"Native",,,,,,,,1,,true
+nayms,"Nayms",,,,,,,,1,,true
+neo,"Neo",,,,,,,,1,,true
+neutron,"Neutron",,,,,,,,1,,true
+nexusmutual,"Nexus Mutual",,,,,,,,1,,true
+nftfi,"Nftfi",,,,,,,,1,,true
+nftfitestnetrefi,"Nftfitestnetrefi",,,,,,,,1,,true
+nftx,"Nftx",,,,,,,,1,,true
+nodle,"Nodle",,,,,,,,1,,true
+nomad,"Nomad",,,,,,,,1,,true
+notional,"Notional",,,,,,,,1,,true
+nucleus,"Nucleus",,,,,,,,1,,true
+oasis,"Oasis",,,,,,,,1,,true
+obyte,"Obyte",,,,,,,,1,,true
+oceanprotocol,"Oceanprotocol",,,,,,,,1,,true
+octopusnetwork,"Octopusnetwork",,,,,,,,1,,true
+ofza-1,"Ofza 1",,,,,,,,1,,true
+olafinance,"Olafinance",,,,,,,,1,,true
+olympus,"Olympus",ethereum,0x64aa3364f17a4d01c6f1751fd97c2bd3d7e7f1d5,"OHM Token",core,,https://etherscan.io/address/0x64aa3364f17a4d01c6f1751fd97c2bd3d7e7f1d5,https://github.com/whiteclaws,1,2026-02-12,true
+omni-network,"Omni Network",,,,,,,,1,,true
+omron,"Omron",,,,,,,,1,,true
+ondofinance,"Ondo Finance",,,,,,,,1,,true
+openzeppelin-stellar,"Openzeppelin Stellar",,,,,,,,1,,true
+openzeppelin,"Openzeppelin",,,,,,,,1,,true
+optimism,"Optimism",ethereum,0x25ace71c97b33cc4729cf772ae268934f7ab5fa1,"L1CrossDomainMessenger",core,,https://etherscan.io/address/0x25ace71c97b33cc4729cf772ae268934f7ab5fa1,https://github.com/whiteclaws,1,2026-02-12,true
+opyngamma,"Opyngamma",,,,,,,,1,,true
+opynsqueeth,"Opynsqueeth",,,,,,,,1,,true
+orca,"Orca",,,,,,,,1,,true
+orderlynetwork,"Orderlynetwork",,,,,,,,1,,true
+origin-protocol,"Origin Protocol",,,,,,,,1,,true
+origindefi,"Origindefi",,,,,,,,1,,true
+ostium,"Ostium",,,,,,,,1,,true
+overlay,"Overlay",,,,,,,,1,,true
+pact,"Pact",,,,,,,,1,,true
+pancakeswap,"PancakeSwap",bsc,0x13f4ea83d0bd40e75c8222255bc855a974568dd4,"PancakeSwap V3 Factory",core,,https://bscscan.com/address/0x13f4ea83d0bd40e75c8222255bc855a974568dd4,https://github.com/whiteclaws,1,2026-02-12,true
+pantos,"Pantos",,,,,,,,1,,true
+paradex,"Paradex",,,,,,,,1,,true
+paragonsdao,"Paragonsdao",,,,,,,,1,,true
+parallel,"Parallel",,,,,,,,1,,true
+parallelwallet,"Parallelwallet",,,,,,,,1,,true
+pareto,"Pareto",,,,,,,,1,,true
+paribus,"Paribus",,,,,,,,1,,true
+pendle,"Pendle",,,,,,,,1,,true
+perennial,"Perennial",,,,,,,,1,,true
+perpetual,"Perpetual",,,,,,,,1,,true
+pikaprotocol,"Pikaprotocol",,,,,,,,1,,true
+pillar,"Pillar",,,,,,,,1,,true
+pinto,"Pinto",,,,,,,,1,,true
+plaza-finance,"Plaza Finance",,,,,,,,1,,true
+plume-network,"Plume Network",,,,,,,,1,,true
+pnetwork,"Pnetwork",,,,,,,,1,,true
+pods,"Pods",,,,,,,,1,,true
+polkastarter,"Polkastarter",,,,,,,,1,,true
+polygon,"Polygon",ethereum,0xa0c68c638235ee32657e8f720a23cec1bfc77c77,"Polygon Bridge",core,,https://etherscan.io/address/0xa0c68c638235ee32657e8f720a23cec1bfc77c77,https://github.com/whiteclaws,1,2026-02-12,true
+polygonzkevm,"Polygonzkevm",,,,,,,,1,,true
+polymarket,"Polymarket",,,,,,,,1,,true
+polymesh,"Polymesh",,,,,,,,1,,true
+poolshark,"Poolshark",,,,,,,,1,,true
+pooltogether,"PoolTogether",,,,,,,,1,,true
+popsicle,"Popsicle",,,,,,,,1,,true
+portfinance,"Portfinance",,,,,,,,1,,true
+pragmaoracle,"Pragmaoracle",,,,,,,,1,,true
+predyfinance,"Predyfinance",,,,,,,,1,,true
+primitive,"Primitive",,,,,,,,1,,true
+print3r,"Print3r",,,,,,,,1,,true
+example-protocol,"Example Protocol",,,,,,,,1,,false
+pstake,"Pstake",,,,,,,,1,,true
+pstakeoncosmos,"Pstakeoncosmos",,,,,,,,1,,true
+pushprotocol,"Pushprotocol",,,,,,,,1,,true
+pythnetwork,"Pyth Network",,,,,,,,1,,true
+qblockchain,"Qblockchain",,,,,,,,1,,true
+quadrata,"Quadrata",,,,,,,,1,,true
+radiant,"Radiant",,,,,,,,1,,true
+rai,"Rai",,,,,,,,1,,true
+rangeprotocol,"Rangeprotocol",,,,,,,,1,,true
+raydium,"Raydium",,,,,,,,1,,true
+reaperfarm,"Reaperfarm",,,,,,,,1,,true
+ref-finance,"Ref Finance",near,factory.ref-finance.near,"RefFactory",dex,,,https://github.com/whiteclaws,1,2026-02-12,true
+ref-finance,"Ref Finance",near,v2.ref-finance.near,"RefExchange",dex,,,https://github.com/whiteclaws,1,2026-02-12,true
+renzoprotocol,"Renzo Protocol",,,,,,,,1,,true
+reserve,"Reserve",ethereum,0x320623b8e4ff03373931769a31fc52a4e78b5d70,"Reserve RToken Main",core,,https://etherscan.io/address/0x320623b8e4ff03373931769a31fc52a4e78b5d70,https://github.com/whiteclaws,1,2026-02-12,true
+resolv,"Resolv",,,,,,,,1,,true
+resonate,"Resonate",,,,,,,,1,,true
+revert,"Revert",,,,,,,,1,,true
+revest,"Revest",,,,,,,,1,,true
+rhinofi,"Rhino.fi",,,,,,,,1,,true
+ribbon,"Ribbon",,,,,,,,1,,true
+ringdao,"Ringdao",,,,,,,,1,,true
+rocketpool,"Rocket Pool",,,,,,,,1,,true
+router,"Router",,,,,,,,1,,true
+royco,"Royco",,,,,,,,1,,true
+rubic,"Rubic",,,,,,,,1,,true
+ruscet,"Ruscet",,,,,,,,1,,true
+rysk,"Rysk",,,,,,,,1,,true
+scroll,"Scroll",ethereum,0x5300000000000000000000000000000000000004,"L1ScrollMessenger",bridge,,https://etherscan.io/address/0x5300000000000000000000000000000000000004,https://github.com/whiteclaws,1,2026-02-12,true
+scroll,"Scroll",ethereum,0x64bd026b7493dd9534d65056b422e0e015f6d579,"L1ETHGateway",gateway,,https://etherscan.io/address/0x64bd026b7493dd9534d65056b422e0e015f6d579,https://github.com/whiteclaws,1,2026-02-12,true
+scroll,"Scroll",ethereum,0x778625549534e1d17e9bc6c654b044252136cee8,"ScrollChain",core,,https://etherscan.io/address/0x778625549534e1d17e9bc6c654b044252136cee8,https://github.com/whiteclaws,1,2026-02-12,true
+sectorfinance,"Sectorfinance",,,,,,,,1,,true
+securefi,"Securefi",,,,,,,,1,,true
+segmentfinance,"Segmentfinance",,,,,,,,1,,true
+sei,"Sei",,,,,,,,1,,true
+serai,"Serai",,,,,,,,1,,true
+shellprotocol,"Shellprotocol",,,,,,,,1,,true
+sherlock,"Sherlock",,,,,,,,1,,true
+silofinance-v2,"Silo Finance V2",,,,,,,,1,,true
+silofinance,"Silofinance",,,,,,,,1,,true
+singularitydao,"Singularitydao",,,,,,,,1,,true
+skatefi,"Skatefi",,,,,,,,1,,true
+sky,"Sky",ethereum,0x35d1b3f3d7966a1dfe207aa4514c12a259a0492b,"MCD Vat",core,,https://etherscan.io/address/0x35d1b3f3d7966a1dfe207aa4514c12a259a0492b,https://github.com/whiteclaws,1,2026-02-12,true
+smardex,"Smardex",,,,,,,,1,,true
+sns,"Sns",,,,,,,,1,,true
+sommelier,"Sommelier",,,,,,,,1,,true
+sora,"Sora",,,,,,,,1,,true
+sovryn,"Sovryn",,,,,,,,1,,true
+sparklend,"Spark",,,,,,,,1,,true
+spectral,"Spectral",,,,,,,,1,,true
+spookyswap,"Spookyswap",,,,,,,,1,,true
+spool,"Spool",,,,,,,,1,,true
+spot,"Spot",,,,,,,,1,,true
+ssv-network,"SSV Network",ethereum,0x9d65ff81a3c488d585bbfb0bfe3c7707c7917f54,"SSVToken",erc20,,https://etherscan.io/address/0x9d65ff81a3c488d585bbfb0bfe3c7707c7917f54,https://github.com/whiteclaws,1,2026-02-12,true
+ssv-network,"SSV Network",ethereum,0xb91c9307c6c08e9f26427116e3ec4b8d87cc7f3d,"SSVDAO",governance,,https://etherscan.io/address/0xb91c9307c6c08e9f26427116e3ec4b8d87cc7f3d,https://github.com/whiteclaws,1,2026-02-12,true
+ssv-network,"SSV Network",ethereum,0xdd9bc35ae942ef0cfa76930954a156b3ff30a4e1,"SSVNetwork",core,,https://etherscan.io/address/0xdd9bc35ae942ef0cfa76930954a156b3ff30a4e1,https://github.com/whiteclaws,1,2026-02-12,true
+stackingdao,"StackingDAO",stacks,SP000000,"StackingDAO",staking,,,https://github.com/whiteclaws,1,2026-02-12,true
+stacks,"Stacks",,,,,,,,1,,true
+staderforbnb,"Staderforbnb",,,,,,,,1,,true
+staderforeth,"Stader for ETH",,,,,,,,1,,true
+staderforpolygon,"StaderforPolygon",,,,,,,,1,,true
+stafi,"Stafi",,,,,,,,1,,true
+stakeeasy,"Stakeeasy",,,,,,,,1,,true
+stakelink,"Stakelink",,,,,,,,1,,true
+stakestone,"StakeStone",,,,,,,,1,,true
+stakewise,"Stakewise",,,,,,,,1,,true
+stargate,"Stargate",ethereum,0x8731d54e9d02c286767d56ac03e8037c07e01e98,"Stargate Router",core,,https://etherscan.io/address/0x8731d54e9d02c286767d56ac03e8037c07e01e98,https://github.com/whiteclaws,1,2026-02-12,true
+starkex,"StarkEx",,,,,,,,1,,true
+starknet-staking,"Starknet Staking",,,,,,,,1,,true
+starknet,"StarkNet",ethereum,0xc662c410c0ecf747543f5ba90660f6abebd9c8c4,"StarkNet Core Contract",core,,https://etherscan.io/address/0xc662c410c0ecf747543f5ba90660f6abebd9c8c4,https://github.com/whiteclaws,1,2026-02-12,true
+stellar,"Stellar",,,,,,,,1,,true
+stellaswap,"Stellaswap",,,,,,,,1,,true
+strikefinance,"Strikefinance",,,,,,,,1,,true
+sturdy,"Sturdy",,,,,,,,1,,true
+summerfi,"Summerfi",,,,,,,,1,,true
+superbots,"Superbots",,,,,,,,1,,true
+superfluid,"Superfluid",,,,,,,,1,,true
+superform,"Superform",,,,,,,,1,,true
+sushiswap,"SushiSwap",,,,,,,,1,,true
+swappi,"Swappi",,,,,,,,1,,true
+sweateconomy,"Sweat Economy",,,,,,,,1,,true
+swell,"Swell",,,,,,,,1,,true
+symbiosis,"Symbiosis",,,,,,,,1,,true
+symbiotic,"Symbiotic",,,,,,,,1,,true
+synfutures,"SynFutures",,,,,,,,1,,true
+synthetix,"Synthetix",,,,,,,,1,,true
+teahousefinance,"Teahousefinance",,,,,,,,1,,true
+templar-protocol,"Templar Protocol",,,,,,,,1,,true
+termstructurelabs,"Termstructurelabs",,,,,,,,1,,true
+tetu,"Tetu",,,,,,,,1,,true
+thala-protocol,"Thala Protocol",,,,,,,,1,,true
+thegraph,"The Graph",,,,,,,,1,,true
+thesandbox,"Thesandbox",,,,,,,,1,,true
+thorchain,"THORChain",,,,,,,,1,,true
+thresholdnetwork,"Threshold Network",,,,,,,,1,,true
+thusd,"Thusd",,,,,,,,1,,true
+tidal,"Tidal",,,,,,,,1,,true
+timelessandbunni,"Timelessandbunni",,,,,,,,1,,true
+tinyman,"Tinyman",,,,,,,,1,,true
+tinymanv2,"Tinymanv2",,,,,,,,1,,true
+tokemak,"Tokemak",,,,,,,,1,,true
+toucan,"Toucan",,,,,,,,1,,true
+traderjoe,"Trader Joe",,,,,,,,1,,true
+tranchess,"Tranchess",,,,,,,,1,,true
+tropykus,"Tropykus",,,,,,,,1,,true
+trufin,"Trufin",,,,,,,,1,,true
+uniswaponzksync,"Uniswaponzksync",,,,,,,,1,,true
+universalpage,"Universalpage",,,,,,,,1,,true
+unstoppablewallet,"Unstoppablewallet",,,,,,,,1,,true
+usdn,"Usdn",,,,,,,,1,,true
+usdt0,"USDT0",,,,,,,,1,,true
+usx,"Usx",,,,,,,,1,,true
+utix,"Utix",,,,,,,,1,,true
+vaultcraft,"Vaultcraft",,,,,,,,1,,true
+vechain,"Vechain",,,,,,,,1,,true
+velodromefinance,"Velodrome Finance",,,,,,,,1,,true
+velvet-capital-v2,"Velvet Capital V2",,,,,,,,1,,true
+velvetcapital,"Velvetcapital",,,,,,,,1,,true
+vesper,"Vesper",,,,,,,,1,,true
+vesu,"Vesu",,,,,,,,1,,true
+virtuals-protocol,"Virtuals Protocol",,,,,,,,1,,true
+voltz,"Voltz",,,,,,,,1,,true
+waymont,"Waymont",,,,,,,,1,,true
+wepiggy,"Wepiggy",,,,,,,,1,,true
+wildcatprotocol,"Wildcatprotocol",,,,,,,,1,,true
+wombatexchange,"Wombatexchange",,,,,,,,1,,true
+woofi,"WOOFi",,,,,,,,1,,true
+wormhole,"Wormhole",ethereum,0x98f3c9e6e3face36baad05fe09d375ef1464288b,"Wormhole Core Bridge",core,,https://etherscan.io/address/0x98f3c9e6e3face36baad05fe09d375ef1464288b,https://github.com/whiteclaws,1,2026-02-12,true
+xion,"XION",,,,,,,,1,,true
+xoxno,"Xoxno",,,,,,,,1,,true
+xterio,"Xterio",,,,,,,,1,,true
+yamatoprotocol,"Yamatoprotocol",,,,,,,,1,,true
+yearnfinance,"Yearn Finance",,,,,,,,1,,true
+yelay,"Yelay",,,,,,,,1,,true
+yieldnest,"Yieldnest",,,,,,,,1,,true
+yo-protocol,"Yo Protocol",,,,,,,,1,,true
+zano,"Zano",,,,,,,,1,,true
+zenlink,"Zenlink",,,,,,,,1,,true
+zerion,"Zerion",,,,,,,,1,,true
+zerolend,"Zerolend",,,,,,,,1,,true
+zest-protocol-v2,"Zest Protocol V2",stacks,SP000000,"ZestLending",lending,,,https://github.com/whiteclaws,1,2026-02-12,true
+zksync-os,"Zksync Os",,,,,,,,1,,true
+zksync,"ZKsync Lite",,,,,,,,1,,true
+zksyncera,"ZKsync Era",,,,,,,,1,,true
+zkverify,"Zkverify",,,,,,,,1,,true
+zodiac,"Zodiac",,,,,,,,1,,true

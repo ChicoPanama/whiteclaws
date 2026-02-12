@@ -320,6 +320,16 @@ export default function FeaturePage({ params }: { params: { slug: string } }) {
           {feature.slug === 'openclaw' && <><a href="/skill.md" target="_blank" className="bn" style={{ textDecoration: 'none' }}>Read skill.md &#8594;</a><a href="/heartbeat.md" target="_blank" className="lk" style={{ textDecoration: 'none', padding: '8px 0' }}>heartbeat.md</a><a href="/rules.md" target="_blank" className="lk" style={{ textDecoration: 'none', padding: '8px 0' }}>rules.md</a></>}
           {feature.slug === 'hack-database' && <Link href="/learn" className="bn" style={{ textDecoration: 'none' }}>Browse All Research &#8594;</Link>}
           {feature.slug === 'leaderboard' && <Link href="/leaderboard" className="bn" style={{ textDecoration: 'none' }}>View Full Leaderboard &#8594;</Link>}
+          {feature.slug === 'surface-expansion' && (
+            <button
+              className="bn"
+              disabled
+              style={{ opacity: 0.55, cursor: 'not-allowed' }}
+              title="Coming soon"
+            >
+              Join waitlist
+            </button>
+          )}
         </div>
       </div>
       <Footer />

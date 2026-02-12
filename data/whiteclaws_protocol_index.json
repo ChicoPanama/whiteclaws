@@ -1,0 +1,5688 @@
+{
+  "count": 458,
+  "protocols": [
+    {
+      "slug": "0x",
+      "name": "0x",
+      "chains": [
+        "ethereum",
+        "polygon",
+        "arbitrum",
+        "base",
+        "optimism"
+      ],
+      "filepath": "public/protocols/0x.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "88mphv3",
+      "name": "88mphv3",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/88mphv3.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "aave",
+      "name": "AAVE",
+      "chains": [
+        "ethereum",
+        "arbitrum",
+        "optimism",
+        "polygon",
+        "base"
+      ],
+      "filepath": "public/protocols/aave.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "acala",
+      "name": "Acala",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/acala.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "aera",
+      "name": "Aera",
+      "chains": [
+        "ethereum",
+        "arbitrum",
+        "base",
+        "polygon",
+        "optimism"
+      ],
+      "filepath": "public/protocols/aera.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "aevo",
+      "name": "Aevo",
+      "chains": [
+        "ethereum",
+        "avalanche",
+        "bsc",
+        "solana"
+      ],
+      "filepath": "public/protocols/aevo.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "alchemix",
+      "name": "Alchemix",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/alchemix.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "aleo",
+      "name": "Aleo",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/aleo.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "alephzero",
+      "name": "Alephzero",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/alephzero.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "alex",
+      "name": "Alex",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/alex.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "aloeprotocol",
+      "name": "Aloeprotocol",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/aloeprotocol.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "alongside",
+      "name": "Alongside",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/alongside.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "alpacafinance",
+      "name": "Alpacafinance",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/alpacafinance.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "alpen-labs",
+      "name": "Alpen Labs",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/alpen-labs.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "alphaventuredao",
+      "name": "Alpha Venture DAO",
+      "chains": [
+        "ethereum",
+        "bsc",
+        "avalanche"
+      ],
+      "filepath": "public/protocols/alphaventuredao.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "ambire",
+      "name": "Ambire",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/ambire.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "angleprotocol",
+      "name": "Angleprotocol",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/angleprotocol.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "ankr",
+      "name": "Ankr",
+      "chains": [
+        "ethereum",
+        "bsc",
+        "polygon"
+      ],
+      "filepath": "public/protocols/ankr.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "antefinance",
+      "name": "Antefinance",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/antefinance.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "anvil",
+      "name": "Anvil",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/anvil.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "apecoinmainnet",
+      "name": "Apecoinmainnet",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/apecoinmainnet.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "arbitrum",
+      "name": "Arbitrum",
+      "chains": [
+        "arbitrum",
+        "ethereum"
+      ],
+      "filepath": "public/protocols/arbitrum.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "arborfinance",
+      "name": "Arborfinance",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/arborfinance.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "arcade",
+      "name": "Arcade",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/arcade.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "arkadiko",
+      "name": "Arkadiko",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/arkadiko.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "arkham",
+      "name": "Arkham",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/arkham.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "aspida",
+      "name": "Aspida",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/aspida.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "astarnetwork",
+      "name": "Astarnetwork",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/astarnetwork.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "aster",
+      "name": "Aster",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/aster.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "astroport",
+      "name": "Astroport",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/astroport.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "aurafinance",
+      "name": "Aura Finance",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/aurafinance.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "autonolas",
+      "name": "Autonolas",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/autonolas.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "avail",
+      "name": "Avail",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/avail.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "avalabs",
+      "name": "Avalabs",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/avalabs.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "avalanche",
+      "name": "Avalanche",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/avalanche.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "axelarnetwork",
+      "name": "Axelar Network",
+      "chains": [
+        "ethereum",
+        "arbitrum",
+        "optimism",
+        "polygon",
+        "base"
+      ],
+      "filepath": "public/protocols/axelarnetwork.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "axiom",
+      "name": "Axiom",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/axiom.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "baanx",
+      "name": "Baanx",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/baanx.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "babylon-labs",
+      "name": "Babylon Labs",
+      "chains": [
+        "bitcoin"
+      ],
+      "filepath": "public/protocols/babylon-labs.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "badger",
+      "name": "Badger",
+      "chains": [
+        "ethereum",
+        "arbitrum"
+      ],
+      "filepath": "public/protocols/badger.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "balancer",
+      "name": "Balancer",
+      "chains": [
+        "ethereum",
+        "arbitrum",
+        "polygon",
+        "base",
+        "optimism"
+      ],
+      "filepath": "public/protocols/balancer.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "balmy",
+      "name": "Balmy",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/balmy.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "bankx",
+      "name": "Bankx",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/bankx.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "baofinance",
+      "name": "Baofinance",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/baofinance.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "basilisk",
+      "name": "Basilisk",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/basilisk.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "beanstalk",
+      "name": "Beanstalk",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/beanstalk.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "beefyfinance",
+      "name": "Beefy Finance",
+      "chains": [
+        "ethereum",
+        "arbitrum",
+        "optimism",
+        "polygon",
+        "bsc",
+        "base",
+        "avalanche"
+      ],
+      "filepath": "public/protocols/beefyfinance.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "beethovenx",
+      "name": "Beethovenx",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/beethovenx.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "beets",
+      "name": "Beets",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/beets.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "benddao",
+      "name": "Benddao",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/benddao.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "benqi",
+      "name": "BENQI",
+      "chains": [
+        "avalanche"
+      ],
+      "filepath": "public/protocols/benqi.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "berachain-webapps",
+      "name": "Berachain Webapps",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/berachain-webapps.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "berachain",
+      "name": "Berachain",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/berachain.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "beradrome",
+      "name": "Beradrome",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/beradrome.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "betafinance",
+      "name": "Betafinance",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/betafinance.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "biconomy",
+      "name": "Biconomy",
+      "chains": [
+        "ethereum",
+        "polygon",
+        "arbitrum",
+        "optimism",
+        "bsc",
+        "base"
+      ],
+      "filepath": "public/protocols/biconomy.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "bifi",
+      "name": "Bifi",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/bifi.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "bifrostfinance",
+      "name": "Bifrost",
+      "chains": [
+        "polkadot"
+      ],
+      "filepath": "public/protocols/bifrostfinance.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "bitcoinsv",
+      "name": "Bitcoinsv",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/bitcoinsv.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "bitflow",
+      "name": "Bitflow",
+      "chains": [
+        "stacks"
+      ],
+      "filepath": "public/protocols/bitflow.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "bitswift",
+      "name": "Bitswift",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/bitswift.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "blackwing",
+      "name": "Blackwing",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/blackwing.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "blockpinetwork",
+      "name": "Blockpinetwork",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/blockpinetwork.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "blockwallet",
+      "name": "Blockwallet",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/blockwallet.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "bobanetwork",
+      "name": "Boba Network",
+      "chains": [
+        "ethereum",
+        "bsc"
+      ],
+      "filepath": "public/protocols/bobanetwork.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "bondprotocol",
+      "name": "Bondprotocol",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/bondprotocol.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "bonfida",
+      "name": "Bonfida",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/bonfida.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "bprotocol",
+      "name": "Bprotocol",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/bprotocol.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "burrow",
+      "name": "Burrow",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/burrow.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "buttonwood",
+      "name": "Buttonwood",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/buttonwood.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "c3",
+      "name": "C3",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/c3.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "capyfi",
+      "name": "CapyFi",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/capyfi.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "carbonbancor",
+      "name": "Carbonbancor",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/carbonbancor.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "cardanofoundation",
+      "name": "Cardanofoundation",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/cardanofoundation.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "cc-protocol",
+      "name": "CC Protocol",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/cc-protocol.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "celer",
+      "name": "Celer",
+      "chains": [
+        "ethereum",
+        "arbitrum",
+        "bsc",
+        "optimism",
+        "polygon"
+      ],
+      "filepath": "public/protocols/celer.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "ceres",
+      "name": "Ceres",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/ceres.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "chainlink",
+      "name": "Chainlink",
+      "chains": [
+        "ethereum",
+        "arbitrum",
+        "optimism",
+        "polygon",
+        "bsc",
+        "base"
+      ],
+      "filepath": "public/protocols/chainlink.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "charm",
+      "name": "Charm",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/charm.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "comdex",
+      "name": "Comdex",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/comdex.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "composablefinance",
+      "name": "Composablefinance",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/composablefinance.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "compoundfinance",
+      "name": "Compound Finance",
+      "chains": [
+        "ethereum",
+        "arbitrum",
+        "base",
+        "polygon"
+      ],
+      "filepath": "public/protocols/compoundfinance.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "connext",
+      "name": "Connext",
+      "chains": [
+        "ethereum",
+        "arbitrum",
+        "optimism",
+        "polygon",
+        "bsc"
+      ],
+      "filepath": "public/protocols/connext.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "contrax",
+      "name": "Contrax",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/contrax.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "coreum",
+      "name": "Coreum",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/coreum.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "cove",
+      "name": "Cove",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/cove.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "cowprotocol",
+      "name": "CoW Protocol",
+      "chains": [
+        "ethereum",
+        "arbitrum",
+        "base"
+      ],
+      "filepath": "public/protocols/cowprotocol.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "cyan",
+      "name": "Cyan",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/cyan.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "daimo-pay",
+      "name": "Daimo Pay",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/daimo-pay.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "daimo",
+      "name": "Daimo",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/daimo.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "darwinia",
+      "name": "Darwinia",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/darwinia.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "davos",
+      "name": "Davos",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/davos.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "debridge",
+      "name": "deBridge",
+      "chains": [
+        "ethereum",
+        "arbitrum",
+        "optimism",
+        "polygon",
+        "bsc",
+        "base",
+        "solana"
+      ],
+      "filepath": "public/protocols/debridge.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "decentraland",
+      "name": "Decentraland",
+      "chains": [
+        "ethereum",
+        "polygon"
+      ],
+      "filepath": "public/protocols/decentraland.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "defisaver",
+      "name": "DeFi Saver",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/defisaver.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "defly",
+      "name": "Defly",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/defly.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "degate",
+      "name": "Degate",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/degate.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "delv",
+      "name": "Delv",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/delv.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "deriprotocol",
+      "name": "Deriprotocol",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/deriprotocol.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "dex-protocol",
+      "name": "DeXe Protocol",
+      "chains": [
+        "ethereum",
+        "bsc"
+      ],
+      "filepath": "public/protocols/dex-protocol.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "dexeprotocol",
+      "name": "DeXe Protocol",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/dexeprotocol.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "dforce",
+      "name": "dForce",
+      "chains": [
+        "ethereum",
+        "arbitrum",
+        "optimism",
+        "bsc"
+      ],
+      "filepath": "public/protocols/dforce.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "dfxfinance",
+      "name": "Dfxfinance",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/dfxfinance.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "dhedge",
+      "name": "dHEDGE",
+      "chains": [
+        "ethereum",
+        "optimism",
+        "polygon",
+        "arbitrum",
+        "base"
+      ],
+      "filepath": "public/protocols/dhedge.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "dodo",
+      "name": "Dodo",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/dodo.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "dodov3",
+      "name": "Dodov3",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/dodov3.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "driftprotocol",
+      "name": "Driftprotocol",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/driftprotocol.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "drips",
+      "name": "Drips",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/drips.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "duetfinance",
+      "name": "Duetfinance",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/duetfinance.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "ebtc",
+      "name": "Ebtc",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/ebtc.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "eckodao",
+      "name": "Eckodao",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/eckodao.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "eclipse",
+      "name": "Eclipse",
+      "chains": [
+        "solana",
+        "ethereum"
+      ],
+      "filepath": "public/protocols/eclipse.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "eco",
+      "name": "Eco",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/eco.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "econia",
+      "name": "Econia",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/econia.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "eigenlayer",
+      "name": "EigenLayer",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/eigenlayer.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "elixirprotocol",
+      "name": "Elixirprotocol",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/elixirprotocol.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "enosys",
+      "name": "Enosys",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/enosys.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "ens",
+      "name": "ENS",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/ens.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "ensuro",
+      "name": "Ensuro",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/ensuro.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "enzyme-onyx",
+      "name": "Enzyme Onyx",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/enzyme-onyx.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "enzymefinance",
+      "name": "Enzymefinance",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/enzymefinance.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "ethena",
+      "name": "Ethena",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/ethena.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "etherfi",
+      "name": "Ether.fi",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/etherfi.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "euphrates",
+      "name": "Euphrates",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/euphrates.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "exactly",
+      "name": "Exactly",
+      "chains": [
+        "ethereum",
+        "optimism"
+      ],
+      "filepath": "public/protocols/exactly.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "example-protocol",
+      "name": "Example Protocol",
+      "chains": [],
+      "filepath": "public/protocols/example-protocol.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "exodus",
+      "name": "Exodus",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/exodus.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "extrafinance",
+      "name": "Extrafinance",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/extrafinance.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "farcaster",
+      "name": "Farcaster",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/farcaster.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "fassets",
+      "name": "Fassets",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/fassets.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "fbtc",
+      "name": "Fbtc",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/fbtc.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "felix",
+      "name": "Felix",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/felix.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "filecoin",
+      "name": "Filecoin",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/filecoin.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "firedancer",
+      "name": "Firedancer",
+      "chains": [
+        "solana"
+      ],
+      "filepath": "public/protocols/firedancer.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "flamingofinance",
+      "name": "Flamingo Finance",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/flamingofinance.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "flarenetwork",
+      "name": "Flarenetwork",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/flarenetwork.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "flexytech",
+      "name": "Flexytech",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/flexytech.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "floki",
+      "name": "Floki",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/floki.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "fluxfinance",
+      "name": "Flux Finance",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/fluxfinance.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "foil",
+      "name": "Foil",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/foil.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "folksfinance",
+      "name": "Folksfinance",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/folksfinance.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "forta",
+      "name": "Forta",
+      "chains": [
+        "ethereum",
+        "polygon"
+      ],
+      "filepath": "public/protocols/forta.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "foundation",
+      "name": "Foundation",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/foundation.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "furucombo",
+      "name": "Furucombo",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/furucombo.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "furucombofunds",
+      "name": "Furucombofunds",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/furucombofunds.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "gainsnetwork",
+      "name": "Gains Network",
+      "chains": [
+        "arbitrum",
+        "polygon"
+      ],
+      "filepath": "public/protocols/gainsnetwork.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "galagames",
+      "name": "Galagames",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/galagames.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "gamma",
+      "name": "Gamma",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/gamma.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "gammaswap",
+      "name": "Gammaswap",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/gammaswap.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "gear",
+      "name": "Gear",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/gear.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "gearbox",
+      "name": "Gearbox",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/gearbox.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "geniusyield",
+      "name": "Geniusyield",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/geniusyield.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "gerowallet",
+      "name": "Gerowallet",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/gerowallet.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "ghostmarket",
+      "name": "Ghostmarket",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/ghostmarket.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "glodollar",
+      "name": "Glodollar",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/glodollar.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "gmx",
+      "name": "GMX",
+      "chains": [
+        "arbitrum",
+        "base"
+      ],
+      "filepath": "public/protocols/gmx.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "gnosischain",
+      "name": "Gnosis Chain",
+      "chains": [
+        "ethereum",
+        "bsc"
+      ],
+      "filepath": "public/protocols/gnosischain.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "gogopool",
+      "name": "Gogopool",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/gogopool.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "goldfinch",
+      "name": "Goldfinch",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/goldfinch.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "granite-protocol",
+      "name": "Granite Protocol",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/granite-protocol.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "gysr",
+      "name": "Gysr",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/gysr.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "hakkafinance",
+      "name": "Hakkafinance",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/hakkafinance.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "halogen",
+      "name": "Halogen",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/halogen.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "harvest",
+      "name": "Harvest",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/harvest.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "hashflow",
+      "name": "Hashflow",
+      "chains": [
+        "ethereum",
+        "arbitrum",
+        "bsc",
+        "polygon",
+        "optimism",
+        "avalanche"
+      ],
+      "filepath": "public/protocols/hashflow.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "hathornetwork",
+      "name": "Hathornetwork",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/hathornetwork.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "haven1",
+      "name": "Haven1",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/haven1.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "hedera",
+      "name": "Hedera",
+      "chains": [
+        "hedera"
+      ],
+      "filepath": "public/protocols/hedera.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "helios-finance",
+      "name": "Helios Finance",
+      "chains": [
+        "arbitrum"
+      ],
+      "filepath": "public/protocols/helios-finance.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "hibachi",
+      "name": "Hibachi",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/hibachi.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "hoenn",
+      "name": "Hoenn",
+      "chains": [
+        "ethereum",
+        "polygon"
+      ],
+      "filepath": "public/protocols/hoenn.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "horizen",
+      "name": "Horizen",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/horizen.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "hourglass",
+      "name": "Hourglass",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/hourglass.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "hydradx",
+      "name": "Hydradx",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/hydradx.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "hydration",
+      "name": "Hydration",
+      "chains": [
+        "polkadot"
+      ],
+      "filepath": "public/protocols/hydration.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "hydro",
+      "name": "Hydro",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/hydro.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "hyperlane",
+      "name": "Hyperlane",
+      "chains": [
+        "ethereum",
+        "arbitrum",
+        "optimism",
+        "polygon",
+        "base"
+      ],
+      "filepath": "public/protocols/hyperlane.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "ichi",
+      "name": "Ichi",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/ichi.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "icon",
+      "name": "Icon",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/icon.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "idex",
+      "name": "Idex",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/idex.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "idlefinance",
+      "name": "Idlefinance",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/idlefinance.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "illuvium",
+      "name": "Illuvium",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/illuvium.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "immunefi",
+      "name": "Immunefi",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/immunefi.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "immutable",
+      "name": "Immutable",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/immutable.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "impossible-cloud-network",
+      "name": "Impossible Cloud Network",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/impossible-cloud-network.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "impossiblefinance",
+      "name": "Impossiblefinance",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/impossiblefinance.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "indexcoop",
+      "name": "Index Coop",
+      "chains": [
+        "ethereum",
+        "arbitrum"
+      ],
+      "filepath": "public/protocols/indexcoop.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "infinex",
+      "name": "Infinex",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/infinex.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "injective",
+      "name": "Injective",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/injective.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "instadapp",
+      "name": "Instadapp",
+      "chains": [
+        "ethereum",
+        "optimism",
+        "polygon"
+      ],
+      "filepath": "public/protocols/instadapp.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "integral",
+      "name": "Integral",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/integral.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "integriteenetwork",
+      "name": "Integriteenetwork",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/integriteenetwork.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "interlay",
+      "name": "Interlay",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/interlay.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "intmax",
+      "name": "INTMAX",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/intmax.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "inverse-finance",
+      "name": "Inverse Finance",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/inverse-finance.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "ion-protocol",
+      "name": "Ion Protocol",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/ion-protocol.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "ipor",
+      "name": "IPOR",
+      "chains": [
+        "ethereum",
+        "arbitrum"
+      ],
+      "filepath": "public/protocols/ipor.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "jito-bam-client",
+      "name": "Jito Bam Client",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/jito-bam-client.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "jito-foundation",
+      "name": "Jito Foundation",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/jito-foundation.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "jito",
+      "name": "Jito",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/jito.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "justlenddao",
+      "name": "Justlenddao",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/justlenddao.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "kadena",
+      "name": "Kadena",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/kadena.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "kamino",
+      "name": "Kamino",
+      "chains": [
+        "solana"
+      ],
+      "filepath": "public/protocols/kamino.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "keep3rnetwork",
+      "name": "Keep3rnetwork",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/keep3rnetwork.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "kelp-dao",
+      "name": "Kelp DAO",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/kelp-dao.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "kiln-defi",
+      "name": "Kiln DeFi",
+      "chains": [
+        "ethereum",
+        "arbitrum",
+        "optimism",
+        "polygon",
+        "bsc",
+        "base"
+      ],
+      "filepath": "public/protocols/kiln-defi.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "kiln-on-chain-v1",
+      "name": "Kiln On-Chain v1",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/kiln-on-chain-v1.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "kiln-webapp",
+      "name": "Kiln Webapp",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/kiln-webapp.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "kiln",
+      "name": "Kiln On-Chain v2",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/kiln.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "kinesis-bridge-on-kadena",
+      "name": "Kinesis Bridge On Kadena",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/kinesis-bridge-on-kadena.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "kwenta",
+      "name": "Kwenta",
+      "chains": [
+        "optimism",
+        "base"
+      ],
+      "filepath": "public/protocols/kwenta.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "landx",
+      "name": "Landx",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/landx.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "layer3",
+      "name": "Layer3.xyz",
+      "chains": [
+        "ethereum",
+        "base",
+        "arbitrum",
+        "optimism"
+      ],
+      "filepath": "public/protocols/layer3.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "layerzero",
+      "name": "LayerZero",
+      "chains": [
+        "ethereum",
+        "arbitrum",
+        "optimism",
+        "polygon",
+        "bsc",
+        "base"
+      ],
+      "filepath": "public/protocols/layerzero.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "lendr",
+      "name": "Lendr",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/lendr.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "lido",
+      "name": "Lido",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/lido.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "lidoonpolygon",
+      "name": "Lidoonpolygon",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/lidoonpolygon.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "lifi",
+      "name": "Lifi",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/lifi.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "light-protocol",
+      "name": "Light Protocol",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/light-protocol.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "linea",
+      "name": "Linea",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/linea.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "liquidswap",
+      "name": "Liquidswap",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/liquidswap.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "listadao",
+      "name": "Lista DAO",
+      "chains": [
+        "bsc"
+      ],
+      "filepath": "public/protocols/listadao.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "livepeer",
+      "name": "Livepeer",
+      "chains": [
+        "ethereum",
+        "arbitrum"
+      ],
+      "filepath": "public/protocols/livepeer.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "localtraders",
+      "name": "Localtraders",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/localtraders.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "lombard-finance",
+      "name": "Lombard Finance",
+      "chains": [
+        "ethereum",
+        "base"
+      ],
+      "filepath": "public/protocols/lombard-finance.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "lossless",
+      "name": "Lossless",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/lossless.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "lybrafinance",
+      "name": "Lybrafinance",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/lybrafinance.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "lyra",
+      "name": "Lyra",
+      "chains": [
+        "ethereum",
+        "optimism",
+        "arbitrum"
+      ],
+      "filepath": "public/protocols/lyra.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "magpiexyz",
+      "name": "Magpiexyz",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/magpiexyz.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "mantlelsp",
+      "name": "Mantlelsp",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/mantlelsp.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "maple",
+      "name": "Maple",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/maple.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "marinade",
+      "name": "Marinade",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/marinade.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "mars",
+      "name": "Mars",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/mars.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "marsecosystem",
+      "name": "Marsecosystem",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/marsecosystem.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "mayaprotocol",
+      "name": "Mayaprotocol",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/mayaprotocol.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "meanfinance",
+      "name": "Meanfinance",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/meanfinance.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "metalswap",
+      "name": "Metalswap",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/metalswap.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "metastreet-yield-pass",
+      "name": "Metastreet Yield Pass",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/metastreet-yield-pass.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "metastreet",
+      "name": "Metastreet",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/metastreet.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "meth",
+      "name": "mETH Protocol",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/meth.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "metis",
+      "name": "Metis",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/metis.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "metronome",
+      "name": "Metronome",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/metronome.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "monero-oxide",
+      "name": "Monero Oxide",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/monero-oxide.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "moneyonchain",
+      "name": "Moneyonchain",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/moneyonchain.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "moonbeamnetwork",
+      "name": "Moonbeamnetwork",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/moonbeamnetwork.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "moonwell",
+      "name": "Moonwell",
+      "chains": [
+        "base",
+        "optimism"
+      ],
+      "filepath": "public/protocols/moonwell.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "morpho",
+      "name": "Morpho",
+      "chains": [
+        "ethereum",
+        "base"
+      ],
+      "filepath": "public/protocols/morpho.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "mountainprotocol",
+      "name": "Mountainprotocol",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/mountainprotocol.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "mtpelerin",
+      "name": "Mtpelerin",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/mtpelerin.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "mux",
+      "name": "Mux",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/mux.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "myntandzero",
+      "name": "Myntandzero",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/myntandzero.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "native",
+      "name": "Native",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/native.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "nayms",
+      "name": "Nayms",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/nayms.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "neo",
+      "name": "Neo",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/neo.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "neutron",
+      "name": "Neutron",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/neutron.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "nexusmutual",
+      "name": "Nexus Mutual",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/nexusmutual.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "nftfi",
+      "name": "Nftfi",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/nftfi.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "nftfitestnetrefi",
+      "name": "Nftfitestnetrefi",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/nftfitestnetrefi.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "nftx",
+      "name": "Nftx",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/nftx.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "nodle",
+      "name": "Nodle",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/nodle.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "nomad",
+      "name": "Nomad",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/nomad.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "notional",
+      "name": "Notional",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/notional.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "nucleus",
+      "name": "Nucleus",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/nucleus.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "oasis",
+      "name": "Oasis",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/oasis.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "obyte",
+      "name": "Obyte",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/obyte.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "oceanprotocol",
+      "name": "Oceanprotocol",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/oceanprotocol.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "octopusnetwork",
+      "name": "Octopusnetwork",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/octopusnetwork.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "ofza-1",
+      "name": "Ofza 1",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/ofza-1.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "olafinance",
+      "name": "Olafinance",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/olafinance.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "olympus",
+      "name": "Olympus",
+      "chains": [
+        "ethereum",
+        "arbitrum"
+      ],
+      "filepath": "public/protocols/olympus.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "omni-network",
+      "name": "Omni Network",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/omni-network.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "omron",
+      "name": "Omron",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/omron.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "ondofinance",
+      "name": "Ondo Finance",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/ondofinance.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "openzeppelin-stellar",
+      "name": "Openzeppelin Stellar",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/openzeppelin-stellar.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "openzeppelin",
+      "name": "Openzeppelin",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/openzeppelin.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "optimism",
+      "name": "Optimism",
+      "chains": [
+        "optimism",
+        "ethereum"
+      ],
+      "filepath": "public/protocols/optimism.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "opyngamma",
+      "name": "Opyngamma",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/opyngamma.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "opynsqueeth",
+      "name": "Opynsqueeth",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/opynsqueeth.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "orca",
+      "name": "Orca",
+      "chains": [
+        "solana"
+      ],
+      "filepath": "public/protocols/orca.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "orderlynetwork",
+      "name": "Orderlynetwork",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/orderlynetwork.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "origin-protocol",
+      "name": "Origin Protocol",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/origin-protocol.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "origindefi",
+      "name": "Origindefi",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/origindefi.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "ostium",
+      "name": "Ostium",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/ostium.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "overlay",
+      "name": "Overlay",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/overlay.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "pact",
+      "name": "Pact",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/pact.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "pancakeswap",
+      "name": "PancakeSwap",
+      "chains": [
+        "bsc",
+        "ethereum",
+        "arbitrum",
+        "base"
+      ],
+      "filepath": "public/protocols/pancakeswap.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "pantos",
+      "name": "Pantos",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/pantos.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "paradex",
+      "name": "Paradex",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/paradex.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "paragonsdao",
+      "name": "Paragonsdao",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/paragonsdao.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "parallel",
+      "name": "Parallel",
+      "chains": [
+        "ethereum",
+        "polygon",
+        "arbitrum",
+        "avalanche",
+        "base",
+        "optimism"
+      ],
+      "filepath": "public/protocols/parallel.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "parallelwallet",
+      "name": "Parallelwallet",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/parallelwallet.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "pareto",
+      "name": "Pareto",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/pareto.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "paribus",
+      "name": "Paribus",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/paribus.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "pendle",
+      "name": "Pendle",
+      "chains": [
+        "ethereum",
+        "arbitrum"
+      ],
+      "filepath": "public/protocols/pendle.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "perennial",
+      "name": "Perennial",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/perennial.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "perpetual",
+      "name": "Perpetual",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/perpetual.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "pikaprotocol",
+      "name": "Pikaprotocol",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/pikaprotocol.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "pillar",
+      "name": "Pillar",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/pillar.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "pinto",
+      "name": "Pinto",
+      "chains": [
+        "base"
+      ],
+      "filepath": "public/protocols/pinto.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "plaza-finance",
+      "name": "Plaza Finance",
+      "chains": [
+        "ethereum",
+        "base"
+      ],
+      "filepath": "public/protocols/plaza-finance.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "plume-network",
+      "name": "Plume Network",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/plume-network.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "pnetwork",
+      "name": "Pnetwork",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/pnetwork.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "pods",
+      "name": "Pods",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/pods.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "polkastarter",
+      "name": "Polkastarter",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/polkastarter.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "polygon",
+      "name": "Polygon",
+      "chains": [
+        "polygon",
+        "ethereum"
+      ],
+      "filepath": "public/protocols/polygon.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "polygonzkevm",
+      "name": "Polygonzkevm",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/polygonzkevm.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "polymarket",
+      "name": "Polymarket",
+      "chains": [
+        "polygon"
+      ],
+      "filepath": "public/protocols/polymarket.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "polymesh",
+      "name": "Polymesh",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/polymesh.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "poolshark",
+      "name": "Poolshark",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/poolshark.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "pooltogether",
+      "name": "PoolTogether",
+      "chains": [
+        "ethereum",
+        "optimism",
+        "polygon",
+        "arbitrum",
+        "base",
+        "avalanche"
+      ],
+      "filepath": "public/protocols/pooltogether.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "popsicle",
+      "name": "Popsicle",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/popsicle.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "portfinance",
+      "name": "Portfinance",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/portfinance.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "pragmaoracle",
+      "name": "Pragmaoracle",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/pragmaoracle.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "predyfinance",
+      "name": "Predyfinance",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/predyfinance.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "primitive",
+      "name": "Primitive",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/primitive.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "print3r",
+      "name": "Print3r",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/print3r.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "example-protocol",
+      "name": "Example Protocol",
+      "chains": [],
+      "filepath": "public/protocols/protocol_template.json",
+      "links": {
+        "website": "https://immunefi.com/bug-bounty/example-protocol",
+        "discovered": [
+          "https://immunefi.com/bug-bounty/example-protocol"
+        ]
+      }
+    },
+    {
+      "slug": "pstake",
+      "name": "Pstake",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/pstake.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "pstakeoncosmos",
+      "name": "Pstakeoncosmos",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/pstakeoncosmos.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "pushprotocol",
+      "name": "Pushprotocol",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/pushprotocol.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "pythnetwork",
+      "name": "Pyth Network",
+      "chains": [
+        "solana",
+        "ethereum",
+        "arbitrum",
+        "optimism",
+        "polygon",
+        "bsc",
+        "base"
+      ],
+      "filepath": "public/protocols/pythnetwork.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "qblockchain",
+      "name": "Qblockchain",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/qblockchain.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "quadrata",
+      "name": "Quadrata",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/quadrata.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "radiant",
+      "name": "Radiant",
+      "chains": [
+        "arbitrum",
+        "bsc"
+      ],
+      "filepath": "public/protocols/radiant.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "rai",
+      "name": "Rai",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/rai.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "rangeprotocol",
+      "name": "Rangeprotocol",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/rangeprotocol.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "raydium",
+      "name": "Raydium",
+      "chains": [
+        "solana"
+      ],
+      "filepath": "public/protocols/raydium.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "reaperfarm",
+      "name": "Reaperfarm",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/reaperfarm.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "ref-finance",
+      "name": "Ref Finance",
+      "chains": [
+        "near"
+      ],
+      "filepath": "public/protocols/ref-finance.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "renzoprotocol",
+      "name": "Renzo Protocol",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/renzoprotocol.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "reserve",
+      "name": "Reserve",
+      "chains": [
+        "ethereum",
+        "base"
+      ],
+      "filepath": "public/protocols/reserve.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "resolv",
+      "name": "Resolv",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/resolv.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "resonate",
+      "name": "Resonate",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/resonate.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "revert",
+      "name": "Revert",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/revert.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "revest",
+      "name": "Revest",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/revest.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "rhinofi",
+      "name": "Rhino.fi",
+      "chains": [
+        "ethereum",
+        "arbitrum",
+        "optimism",
+        "polygon",
+        "bsc"
+      ],
+      "filepath": "public/protocols/rhinofi.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "ribbon",
+      "name": "Ribbon",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/ribbon.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "ringdao",
+      "name": "Ringdao",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/ringdao.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "rocketpool",
+      "name": "Rocket Pool",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/rocketpool.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "router",
+      "name": "Router",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/router.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "royco",
+      "name": "Royco",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/royco.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "rubic",
+      "name": "Rubic",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/rubic.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "ruscet",
+      "name": "Ruscet",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/ruscet.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "rysk",
+      "name": "Rysk",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/rysk.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "scroll",
+      "name": "Scroll",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/scroll.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "sectorfinance",
+      "name": "Sectorfinance",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/sectorfinance.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "securefi",
+      "name": "Securefi",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/securefi.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "segmentfinance",
+      "name": "Segmentfinance",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/segmentfinance.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "sei",
+      "name": "Sei",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/sei.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "serai",
+      "name": "Serai",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/serai.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "shellprotocol",
+      "name": "Shellprotocol",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/shellprotocol.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "sherlock",
+      "name": "Sherlock",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/sherlock.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "silofinance-v2",
+      "name": "Silo Finance V2",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/silofinance-v2.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "silofinance",
+      "name": "Silofinance",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/silofinance.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "singularitydao",
+      "name": "Singularitydao",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/singularitydao.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "skatefi",
+      "name": "Skatefi",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/skatefi.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "sky",
+      "name": "Sky",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/sky.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "smardex",
+      "name": "Smardex",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/smardex.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "sns",
+      "name": "Sns",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/sns.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "sommelier",
+      "name": "Sommelier",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/sommelier.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "sora",
+      "name": "Sora",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/sora.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "sovryn",
+      "name": "Sovryn",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/sovryn.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "sparklend",
+      "name": "Spark",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/sparklend.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "spectral",
+      "name": "Spectral",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/spectral.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "spookyswap",
+      "name": "Spookyswap",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/spookyswap.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "spool",
+      "name": "Spool",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/spool.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "spot",
+      "name": "Spot",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/spot.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "ssv-network",
+      "name": "SSV Network",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/ssv-network.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "stackingdao",
+      "name": "StackingDAO",
+      "chains": [
+        "stacks"
+      ],
+      "filepath": "public/protocols/stackingdao.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "stacks",
+      "name": "Stacks",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/stacks.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "staderforbnb",
+      "name": "Staderforbnb",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/staderforbnb.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "staderforeth",
+      "name": "Stader for ETH",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/staderforeth.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "staderforpolygon",
+      "name": "StaderforPolygon",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/staderforpolygon.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "stafi",
+      "name": "Stafi",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/stafi.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "stakeeasy",
+      "name": "Stakeeasy",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/stakeeasy.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "stakelink",
+      "name": "Stakelink",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/stakelink.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "stakestone",
+      "name": "StakeStone",
+      "chains": [
+        "ethereum",
+        "bitcoin"
+      ],
+      "filepath": "public/protocols/stakestone.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "stakewise",
+      "name": "Stakewise",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/stakewise.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "stargate",
+      "name": "Stargate",
+      "chains": [
+        "ethereum",
+        "arbitrum",
+        "optimism",
+        "polygon",
+        "bsc",
+        "base"
+      ],
+      "filepath": "public/protocols/stargate.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "starkex",
+      "name": "StarkEx",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/starkex.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "starknet-staking",
+      "name": "Starknet Staking",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/starknet-staking.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "starknet",
+      "name": "StarkNet",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/starknet.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "stellar",
+      "name": "Stellar",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/stellar.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "stellaswap",
+      "name": "Stellaswap",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/stellaswap.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "strikefinance",
+      "name": "Strikefinance",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/strikefinance.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "sturdy",
+      "name": "Sturdy",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/sturdy.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "summerfi",
+      "name": "Summerfi",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/summerfi.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "superbots",
+      "name": "Superbots",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/superbots.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "superfluid",
+      "name": "Superfluid",
+      "chains": [
+        "ethereum",
+        "polygon",
+        "arbitrum",
+        "optimism",
+        "bsc",
+        "base"
+      ],
+      "filepath": "public/protocols/superfluid.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "superform",
+      "name": "Superform",
+      "chains": [
+        "ethereum",
+        "arbitrum",
+        "optimism",
+        "polygon",
+        "bsc",
+        "base",
+        "avalanche"
+      ],
+      "filepath": "public/protocols/superform.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "sushiswap",
+      "name": "SushiSwap",
+      "chains": [
+        "ethereum",
+        "arbitrum",
+        "polygon",
+        "bsc",
+        "base",
+        "optimism"
+      ],
+      "filepath": "public/protocols/sushiswap.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "swappi",
+      "name": "Swappi",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/swappi.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "sweateconomy",
+      "name": "Sweat Economy",
+      "chains": [
+        "near"
+      ],
+      "filepath": "public/protocols/sweateconomy.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "swell",
+      "name": "Swell",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/swell.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "symbiosis",
+      "name": "Symbiosis",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/symbiosis.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "symbiotic",
+      "name": "Symbiotic",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/symbiotic.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "synfutures",
+      "name": "SynFutures",
+      "chains": [
+        "ethereum",
+        "blast"
+      ],
+      "filepath": "public/protocols/synfutures.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "synthetix",
+      "name": "Synthetix",
+      "chains": [
+        "ethereum",
+        "optimism"
+      ],
+      "filepath": "public/protocols/synthetix.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "teahousefinance",
+      "name": "Teahousefinance",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/teahousefinance.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "templar-protocol",
+      "name": "Templar Protocol",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/templar-protocol.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "termstructurelabs",
+      "name": "Termstructurelabs",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/termstructurelabs.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "tetu",
+      "name": "Tetu",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/tetu.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "thala-protocol",
+      "name": "Thala Protocol",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/thala-protocol.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "thegraph",
+      "name": "The Graph",
+      "chains": [
+        "ethereum",
+        "arbitrum"
+      ],
+      "filepath": "public/protocols/thegraph.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "thesandbox",
+      "name": "Thesandbox",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/thesandbox.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "thorchain",
+      "name": "THORChain",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/thorchain.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "thresholdnetwork",
+      "name": "Threshold Network",
+      "chains": [
+        "ethereum",
+        "arbitrum",
+        "optimism",
+        "polygon",
+        "solana",
+        "base"
+      ],
+      "filepath": "public/protocols/thresholdnetwork.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "thusd",
+      "name": "Thusd",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/thusd.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "tidal",
+      "name": "Tidal",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/tidal.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "timelessandbunni",
+      "name": "Timelessandbunni",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/timelessandbunni.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "tinyman",
+      "name": "Tinyman",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/tinyman.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "tinymanv2",
+      "name": "Tinymanv2",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/tinymanv2.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "tokemak",
+      "name": "Tokemak",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/tokemak.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "toucan",
+      "name": "Toucan",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/toucan.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "traderjoe",
+      "name": "Trader Joe",
+      "chains": [
+        "avalanche",
+        "arbitrum",
+        "bsc"
+      ],
+      "filepath": "public/protocols/traderjoe.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "tranchess",
+      "name": "Tranchess",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/tranchess.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "tropykus",
+      "name": "Tropykus",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/tropykus.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "trufin",
+      "name": "Trufin",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/trufin.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "uniswaponzksync",
+      "name": "Uniswaponzksync",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/uniswaponzksync.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "universalpage",
+      "name": "Universalpage",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/universalpage.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "unstoppablewallet",
+      "name": "Unstoppablewallet",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/unstoppablewallet.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "usdn",
+      "name": "Usdn",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/usdn.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "usdt0",
+      "name": "USDT0",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/usdt0.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "usx",
+      "name": "Usx",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/usx.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "utix",
+      "name": "Utix",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/utix.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "vaultcraft",
+      "name": "Vaultcraft",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/vaultcraft.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "vechain",
+      "name": "Vechain",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/vechain.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "velodromefinance",
+      "name": "Velodrome Finance",
+      "chains": [
+        "optimism",
+        "base"
+      ],
+      "filepath": "public/protocols/velodromefinance.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "velvet-capital-v2",
+      "name": "Velvet Capital V2",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/velvet-capital-v2.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "velvetcapital",
+      "name": "Velvetcapital",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/velvetcapital.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "vesper",
+      "name": "Vesper",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/vesper.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "vesu",
+      "name": "Vesu",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/vesu.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "virtuals-protocol",
+      "name": "Virtuals Protocol",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/virtuals-protocol.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "voltz",
+      "name": "Voltz",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/voltz.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "waymont",
+      "name": "Waymont",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/waymont.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "wepiggy",
+      "name": "Wepiggy",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/wepiggy.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "wildcatprotocol",
+      "name": "Wildcatprotocol",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/wildcatprotocol.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "wombatexchange",
+      "name": "Wombatexchange",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/wombatexchange.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "woofi",
+      "name": "WOOFi",
+      "chains": [
+        "ethereum",
+        "arbitrum",
+        "bsc",
+        "polygon",
+        "optimism",
+        "avalanche",
+        "base"
+      ],
+      "filepath": "public/protocols/woofi.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "wormhole",
+      "name": "Wormhole",
+      "chains": [
+        "ethereum",
+        "solana",
+        "bsc",
+        "polygon",
+        "arbitrum",
+        "optimism",
+        "base"
+      ],
+      "filepath": "public/protocols/wormhole.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "xion",
+      "name": "XION",
+      "chains": [
+        "cosmos"
+      ],
+      "filepath": "public/protocols/xion.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "xoxno",
+      "name": "Xoxno",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/xoxno.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "xterio",
+      "name": "Xterio",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/xterio.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "yamatoprotocol",
+      "name": "Yamatoprotocol",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/yamatoprotocol.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "yearnfinance",
+      "name": "Yearn Finance",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/yearnfinance.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "yelay",
+      "name": "Yelay",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/yelay.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "yieldnest",
+      "name": "Yieldnest",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/yieldnest.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "yo-protocol",
+      "name": "Yo Protocol",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/yo-protocol.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "zano",
+      "name": "Zano",
+      "chains": [
+        "zano"
+      ],
+      "filepath": "public/protocols/zano.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "zenlink",
+      "name": "Zenlink",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/zenlink.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "zerion",
+      "name": "Zerion",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/zerion.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "zerolend",
+      "name": "Zerolend",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/zerolend.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "zest-protocol-v2",
+      "name": "Zest Protocol V2",
+      "chains": [
+        "stacks"
+      ],
+      "filepath": "public/protocols/zest-protocol-v2.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "zksync-os",
+      "name": "Zksync Os",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/zksync-os.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "zksync",
+      "name": "ZKsync Lite",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/zksync.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "zksyncera",
+      "name": "ZKsync Era",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/zksyncera.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "zkverify",
+      "name": "Zkverify",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/zkverify.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    },
+    {
+      "slug": "zodiac",
+      "name": "Zodiac",
+      "chains": [
+        "ethereum"
+      ],
+      "filepath": "public/protocols/zodiac.json",
+      "links": {
+        "website": null,
+        "discovered": []
+      }
+    }
+  ]
+}
