@@ -1,0 +1,591 @@
+{
+  "0x": {},
+  "88mphv3": {},
+  "aave": {
+    "0x87870bca3f3fd6335c3f4ce8392d69350b4fa4e2": [
+      "public/protocols/aave.json"
+    ]
+  },
+  "acala": {},
+  "aera": {},
+  "aevo": {},
+  "alchemix": {
+    "0xc3f279090a0e534d4127d8fe6605f860dcaf360f": [
+      "public/protocols/alchemix.json"
+    ],
+    "0xe8ea477b43db7c83df5796344576cd07a4a947b7": [
+      "public/protocols/alchemix.json"
+    ],
+    "0xd1baa1dc3ebd495a2fb6f4f5973722f3a7d89178": [
+      "public/protocols/alchemix.json"
+    ]
+  },
+  "aleo": {},
+  "alephzero": {},
+  "alex": {},
+  "aloeprotocol": {},
+  "alongside": {},
+  "alpacafinance": {},
+  "alpen-labs": {},
+  "alphaventuredao": {},
+  "ambire": {},
+  "angleprotocol": {},
+  "ankr": {},
+  "antefinance": {},
+  "anvil": {},
+  "apecoinmainnet": {},
+  "arbitrum": {
+    "0x1c479675ad559dc151f6ec7ed3fbf8cee79582b6": [
+      "public/protocols/arbitrum.json"
+    ]
+  },
+  "arborfinance": {},
+  "arcade": {},
+  "arkadiko": {},
+  "arkham": {},
+  "aspida": {},
+  "astarnetwork": {},
+  "aster": {},
+  "astroport": {},
+  "aurafinance": {},
+  "autonolas": {},
+  "avail": {},
+  "avalabs": {},
+  "avalanche": {},
+  "axelarnetwork": {
+    "0x4f4495243837681061c4743b74b3eedf548d56a5": [
+      "public/protocols/axelarnetwork.json"
+    ]
+  },
+  "axiom": {},
+  "baanx": {},
+  "babylon-labs": {},
+  "badger": {},
+  "balancer": {
+    "0xba12222222228d8ba445958a75a0704d566bf2c8": [
+      "public/protocols/balancer.json"
+    ]
+  },
+  "balmy": {},
+  "bankx": {},
+  "baofinance": {},
+  "basilisk": {},
+  "beanstalk": {},
+  "beefyfinance": {},
+  "beethovenx": {},
+  "beets": {},
+  "benddao": {},
+  "benqi": {},
+  "berachain-webapps": {},
+  "berachain": {},
+  "beradrome": {},
+  "betafinance": {},
+  "biconomy": {},
+  "bifi": {},
+  "bifrostfinance": {},
+  "bitcoinsv": {},
+  "bitflow": {},
+  "bitswift": {},
+  "blackwing": {},
+  "blockpinetwork": {},
+  "blockwallet": {},
+  "bobanetwork": {},
+  "bondprotocol": {},
+  "bonfida": {},
+  "bprotocol": {},
+  "burrow": {},
+  "buttonwood": {},
+  "c3": {},
+  "capyfi": {},
+  "carbonbancor": {},
+  "cardanofoundation": {},
+  "cc-protocol": {},
+  "celer": {},
+  "ceres": {},
+  "chainlink": {
+    "0x47fb2585d2c56fe188d0e6ec628a38b74fceeedf": [
+      "public/protocols/chainlink.json"
+    ]
+  },
+  "charm": {},
+  "comdex": {},
+  "composablefinance": {},
+  "compoundfinance": {
+    "0xc3d688b66703497daa19211eedff47f25384cdc3": [
+      "public/protocols/compoundfinance.json"
+    ]
+  },
+  "connext": {},
+  "contrax": {},
+  "coreum": {},
+  "cove": {},
+  "cowprotocol": {
+    "0x9008d19f58aabd9ed0d60971565aa8510560ab41": [
+      "public/protocols/cowprotocol.json"
+    ]
+  },
+  "cyan": {},
+  "daimo-pay": {},
+  "daimo": {},
+  "darwinia": {},
+  "davos": {},
+  "debridge": {},
+  "decentraland": {},
+  "defisaver": {},
+  "defly": {},
+  "degate": {},
+  "delv": {},
+  "deriprotocol": {},
+  "dex-protocol": {},
+  "dexeprotocol": {},
+  "dforce": {},
+  "dfxfinance": {},
+  "dhedge": {},
+  "dodo": {},
+  "dodov3": {},
+  "driftprotocol": {},
+  "drips": {},
+  "duetfinance": {},
+  "ebtc": {},
+  "eckodao": {},
+  "eclipse": {},
+  "eco": {},
+  "econia": {},
+  "eigenlayer": {
+    "0x39053d51b77dc0d36036fc1fcc8cb819df8ef37a": [
+      "public/protocols/eigenlayer.json"
+    ]
+  },
+  "elixirprotocol": {},
+  "enosys": {},
+  "ens": {
+    "0x00000000000c2e074ec69a0dfb2997ba6c7d2e1e": [
+      "public/protocols/ens.json"
+    ],
+    "0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85": [
+      "public/protocols/ens.json"
+    ]
+  },
+  "ensuro": {},
+  "enzyme-onyx": {},
+  "enzymefinance": {},
+  "ethena": {
+    "0x5c5b196abe0f81f8eab17b3924d896d3593e9e65": [
+      "public/protocols/ethena.json"
+    ],
+    "0xfa91a32357947e925d062d4742ef143a5b8c9279": [
+      "public/protocols/ethena.json"
+    ]
+  },
+  "etherfi": {},
+  "euphrates": {},
+  "exactly": {},
+  "example-protocol": {},
+  "exodus": {},
+  "extrafinance": {},
+  "farcaster": {},
+  "fassets": {},
+  "fbtc": {},
+  "felix": {},
+  "filecoin": {},
+  "firedancer": {},
+  "flamingofinance": {},
+  "flarenetwork": {},
+  "flexytech": {},
+  "floki": {},
+  "fluxfinance": {},
+  "foil": {},
+  "folksfinance": {},
+  "forta": {},
+  "foundation": {},
+  "furucombo": {},
+  "furucombofunds": {},
+  "gainsnetwork": {},
+  "galagames": {},
+  "gamma": {},
+  "gammaswap": {},
+  "gear": {},
+  "gearbox": {},
+  "geniusyield": {},
+  "gerowallet": {},
+  "ghostmarket": {},
+  "glodollar": {},
+  "gmx": {
+    "0x489ee077994b6658eafa855c308275ead8097c4a": [
+      "public/protocols/gmx.json"
+    ]
+  },
+  "gnosischain": {},
+  "gogopool": {},
+  "goldfinch": {},
+  "granite-protocol": {},
+  "gysr": {},
+  "hakkafinance": {},
+  "halogen": {},
+  "harvest": {},
+  "hashflow": {},
+  "hathornetwork": {},
+  "haven1": {},
+  "hedera": {},
+  "helios-finance": {},
+  "hibachi": {},
+  "hoenn": {},
+  "horizen": {},
+  "hourglass": {},
+  "hydradx": {},
+  "hydration": {},
+  "hydro": {},
+  "hyperlane": {
+    "0xc005dc82818d67af737725bd4bf75435d065d239": [
+      "public/protocols/hyperlane.json"
+    ]
+  },
+  "ichi": {},
+  "icon": {},
+  "idex": {},
+  "idlefinance": {},
+  "illuvium": {},
+  "immunefi": {},
+  "immutable": {},
+  "impossible-cloud-network": {},
+  "impossiblefinance": {},
+  "indexcoop": {},
+  "infinex": {},
+  "injective": {},
+  "instadapp": {},
+  "integral": {},
+  "integriteenetwork": {},
+  "interlay": {},
+  "intmax": {},
+  "inverse-finance": {
+    "0x9101c978e50d5f421b95d150c5b47a2f16d856f1": [
+      "public/protocols/inverse-finance.json"
+    ]
+  },
+  "ion-protocol": {},
+  "ipor": {},
+  "jito-bam-client": {},
+  "jito-foundation": {},
+  "jito": {},
+  "justlenddao": {},
+  "kadena": {},
+  "kamino": {},
+  "keep3rnetwork": {},
+  "kelp-dao": {},
+  "kiln-defi": {},
+  "kiln-on-chain-v1": {},
+  "kiln-webapp": {},
+  "kiln": {},
+  "kinesis-bridge-on-kadena": {},
+  "kwenta": {},
+  "landx": {},
+  "layer3": {},
+  "layerzero": {
+    "0x66a71dcef29a0ffbdbe3c6a460a3b5bc225cd675": [
+      "public/protocols/layerzero.json"
+    ]
+  },
+  "lendr": {},
+  "lido": {
+    "0xae7ab96520de3a18e5e111b5eaab095312d7fe84": [
+      "public/protocols/lido.json"
+    ]
+  },
+  "lidoonpolygon": {},
+  "lifi": {},
+  "light-protocol": {},
+  "linea": {},
+  "liquidswap": {},
+  "listadao": {},
+  "livepeer": {},
+  "localtraders": {},
+  "lombard-finance": {},
+  "lossless": {},
+  "lybrafinance": {},
+  "lyra": {},
+  "magpiexyz": {},
+  "mantlelsp": {},
+  "maple": {},
+  "marinade": {},
+  "mars": {},
+  "marsecosystem": {},
+  "mayaprotocol": {},
+  "meanfinance": {},
+  "metalswap": {},
+  "metastreet-yield-pass": {},
+  "metastreet": {},
+  "meth": {},
+  "metis": {},
+  "metronome": {},
+  "monero-oxide": {},
+  "moneyonchain": {},
+  "moonbeamnetwork": {},
+  "moonwell": {},
+  "morpho": {},
+  "mountainprotocol": {},
+  "mtpelerin": {},
+  "mux": {},
+  "myntandzero": {},
+  "native": {},
+  "nayms": {},
+  "neo": {},
+  "neutron": {},
+  "nexusmutual": {},
+  "nftfi": {},
+  "nftfitestnetrefi": {},
+  "nftx": {},
+  "nodle": {},
+  "nomad": {},
+  "notional": {},
+  "nucleus": {},
+  "oasis": {},
+  "obyte": {},
+  "oceanprotocol": {},
+  "octopusnetwork": {},
+  "ofza-1": {},
+  "olafinance": {},
+  "olympus": {
+    "0x64aa3364f17a4d01c6f1751fd97c2bd3d7e7f1d5": [
+      "public/protocols/olympus.json"
+    ]
+  },
+  "omni-network": {},
+  "omron": {},
+  "ondofinance": {},
+  "openzeppelin-stellar": {},
+  "openzeppelin": {},
+  "optimism": {
+    "0x25ace71c97b33cc4729cf772ae268934f7ab5fa1": [
+      "public/protocols/optimism.json"
+    ]
+  },
+  "opyngamma": {},
+  "opynsqueeth": {},
+  "orca": {},
+  "orderlynetwork": {},
+  "origin-protocol": {},
+  "origindefi": {},
+  "ostium": {},
+  "overlay": {},
+  "pact": {},
+  "pancakeswap": {
+    "0x13f4ea83d0bd40e75c8222255bc855a974568dd4": [
+      "public/protocols/pancakeswap.json"
+    ]
+  },
+  "pantos": {},
+  "paradex": {},
+  "paragonsdao": {},
+  "parallel": {},
+  "parallelwallet": {},
+  "pareto": {},
+  "paribus": {},
+  "pendle": {},
+  "perennial": {},
+  "perpetual": {},
+  "pikaprotocol": {},
+  "pillar": {},
+  "pinto": {},
+  "plaza-finance": {},
+  "plume-network": {},
+  "pnetwork": {},
+  "pods": {},
+  "polkastarter": {},
+  "polygon": {
+    "0xa0c68c638235ee32657e8f720a23cec1bfc77c77": [
+      "public/protocols/polygon.json"
+    ]
+  },
+  "polygonzkevm": {},
+  "polymarket": {},
+  "polymesh": {},
+  "poolshark": {},
+  "pooltogether": {},
+  "popsicle": {},
+  "portfinance": {},
+  "pragmaoracle": {},
+  "predyfinance": {},
+  "primitive": {},
+  "print3r": {},
+  "pstake": {},
+  "pstakeoncosmos": {},
+  "pushprotocol": {},
+  "pythnetwork": {},
+  "qblockchain": {},
+  "quadrata": {},
+  "radiant": {},
+  "rai": {},
+  "rangeprotocol": {},
+  "raydium": {},
+  "reaperfarm": {},
+  "ref-finance": {},
+  "renzoprotocol": {},
+  "reserve": {
+    "0x320623b8e4ff03373931769a31fc52a4e78b5d70": [
+      "public/protocols/reserve.json"
+    ]
+  },
+  "resolv": {},
+  "resonate": {},
+  "revert": {},
+  "revest": {},
+  "rhinofi": {},
+  "ribbon": {},
+  "ringdao": {},
+  "rocketpool": {},
+  "router": {},
+  "royco": {},
+  "rubic": {},
+  "ruscet": {},
+  "rysk": {},
+  "scroll": {
+    "0x5300000000000000000000000000000000000004": [
+      "public/protocols/scroll.json"
+    ],
+    "0x778625549534e1d17e9bc6c654b044252136cee8": [
+      "public/protocols/scroll.json"
+    ],
+    "0x64bd026b7493dd9534d65056b422e0e015f6d579": [
+      "public/protocols/scroll.json"
+    ]
+  },
+  "sectorfinance": {},
+  "securefi": {},
+  "segmentfinance": {},
+  "sei": {},
+  "serai": {},
+  "shellprotocol": {},
+  "sherlock": {},
+  "silofinance-v2": {},
+  "silofinance": {},
+  "singularitydao": {},
+  "skatefi": {},
+  "sky": {
+    "0x35d1b3f3d7966a1dfe207aa4514c12a259a0492b": [
+      "public/protocols/sky.json"
+    ]
+  },
+  "smardex": {},
+  "sns": {},
+  "sommelier": {},
+  "sora": {},
+  "sovryn": {},
+  "sparklend": {},
+  "spectral": {},
+  "spookyswap": {},
+  "spool": {},
+  "spot": {},
+  "ssv-network": {
+    "0xdd9bc35ae942ef0cfa76930954a156b3ff30a4e1": [
+      "public/protocols/ssv-network.json"
+    ],
+    "0x9d65ff81a3c488d585bbfb0bfe3c7707c7917f54": [
+      "public/protocols/ssv-network.json"
+    ],
+    "0xb91c9307c6c08e9f26427116e3ec4b8d87cc7f3d": [
+      "public/protocols/ssv-network.json"
+    ]
+  },
+  "stackingdao": {},
+  "stacks": {},
+  "staderforbnb": {},
+  "staderforeth": {},
+  "staderforpolygon": {},
+  "stafi": {},
+  "stakeeasy": {},
+  "stakelink": {},
+  "stakestone": {},
+  "stakewise": {},
+  "stargate": {
+    "0x8731d54e9d02c286767d56ac03e8037c07e01e98": [
+      "public/protocols/stargate.json"
+    ]
+  },
+  "starkex": {},
+  "starknet-staking": {},
+  "starknet": {
+    "0xc662c410c0ecf747543f5ba90660f6abebd9c8c4": [
+      "public/protocols/starknet.json"
+    ]
+  },
+  "stellar": {},
+  "stellaswap": {},
+  "strikefinance": {},
+  "sturdy": {},
+  "summerfi": {},
+  "superbots": {},
+  "superfluid": {},
+  "superform": {},
+  "sushiswap": {},
+  "swappi": {},
+  "sweateconomy": {},
+  "swell": {},
+  "symbiosis": {},
+  "symbiotic": {},
+  "synfutures": {},
+  "synthetix": {},
+  "teahousefinance": {},
+  "templar-protocol": {},
+  "termstructurelabs": {},
+  "tetu": {},
+  "thala-protocol": {},
+  "thegraph": {},
+  "thesandbox": {},
+  "thorchain": {},
+  "thresholdnetwork": {},
+  "thusd": {},
+  "tidal": {},
+  "timelessandbunni": {},
+  "tinyman": {},
+  "tinymanv2": {},
+  "tokemak": {},
+  "toucan": {},
+  "traderjoe": {},
+  "tranchess": {},
+  "tropykus": {},
+  "trufin": {},
+  "uniswaponzksync": {},
+  "universalpage": {},
+  "unstoppablewallet": {},
+  "usdn": {},
+  "usdt0": {},
+  "usx": {},
+  "utix": {},
+  "vaultcraft": {},
+  "vechain": {},
+  "velodromefinance": {},
+  "velvet-capital-v2": {},
+  "velvetcapital": {},
+  "vesper": {},
+  "vesu": {},
+  "virtuals-protocol": {},
+  "voltz": {},
+  "waymont": {},
+  "wepiggy": {},
+  "wildcatprotocol": {},
+  "wombatexchange": {},
+  "woofi": {},
+  "wormhole": {
+    "0x98f3c9e6e3face36baad05fe09d375ef1464288b": [
+      "public/protocols/wormhole.json"
+    ]
+  },
+  "xion": {},
+  "xoxno": {},
+  "xterio": {},
+  "yamatoprotocol": {},
+  "yearnfinance": {},
+  "yelay": {},
+  "yieldnest": {},
+  "yo-protocol": {},
+  "zano": {},
+  "zenlink": {},
+  "zerion": {},
+  "zerolend": {},
+  "zest-protocol-v2": {},
+  "zksync-os": {},
+  "zksync": {},
+  "zksyncera": {},
+  "zkverify": {},
+  "zodiac": {}
+}

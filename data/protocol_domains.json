@@ -1,0 +1,6091 @@
+{
+  "0x": {
+    "slug": "0x",
+    "name": "0x",
+    "domain": "0x.org",
+    "url": "https://0x.org",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "0x.org",
+        "url": "https://0x.org",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "88mphv3": {
+    "slug": "88mphv3",
+    "name": "88mphv3",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "aave": {
+    "slug": "aave",
+    "name": "AAVE",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "acala": {
+    "slug": "acala",
+    "name": "Acala",
+    "domain": "acala.network",
+    "url": "https://acala.network",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "acala.network",
+        "url": "https://acala.network",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "aera": {
+    "slug": "aera",
+    "name": "Aera",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "aevo": {
+    "slug": "aevo",
+    "name": "Aevo",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "alchemix": {
+    "slug": "alchemix",
+    "name": "Alchemix",
+    "domain": "alchemix.fi",
+    "url": "https://alchemix.fi",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "alchemix.fi",
+        "url": "https://alchemix.fi",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "aleo": {
+    "slug": "aleo",
+    "name": "Aleo",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "alephzero": {
+    "slug": "alephzero",
+    "name": "Alephzero",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "alex": {
+    "slug": "alex",
+    "name": "Alex",
+    "domain": "alexlab.co",
+    "url": "https://alexlab.co",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "alexlab.co",
+        "url": "https://alexlab.co",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "aloeprotocol": {
+    "slug": "aloeprotocol",
+    "name": "Aloeprotocol",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "alongside": {
+    "slug": "alongside",
+    "name": "Alongside",
+    "domain": "alongside.xyz",
+    "url": "https://alongside.xyz",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "alongside.xyz",
+        "url": "https://alongside.xyz",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "alpacafinance": {
+    "slug": "alpacafinance",
+    "name": "Alpacafinance",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "alpen-labs": {
+    "slug": "alpen-labs",
+    "name": "Alpen Labs",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "alphaventuredao": {
+    "slug": "alphaventuredao",
+    "name": "Alpha Venture DAO",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "ambire": {
+    "slug": "ambire",
+    "name": "Ambire",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "angleprotocol": {
+    "slug": "angleprotocol",
+    "name": "Angleprotocol",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "ankr": {
+    "slug": "ankr",
+    "name": "Ankr",
+    "domain": "ankr.com",
+    "url": "https://ankr.com",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "ankr.com",
+        "url": "https://ankr.com",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "antefinance": {
+    "slug": "antefinance",
+    "name": "Antefinance",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "anvil": {
+    "slug": "anvil",
+    "name": "Anvil",
+    "domain": "anvil.xyz",
+    "url": "https://anvil.xyz",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "anvil.xyz",
+        "url": "https://anvil.xyz",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "apecoinmainnet": {
+    "slug": "apecoinmainnet",
+    "name": "Apecoinmainnet",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "arbitrum": {
+    "slug": "arbitrum",
+    "name": "Arbitrum",
+    "domain": "arbitrum.foundation",
+    "url": "https://arbitrum.foundation",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "arbitrum.foundation",
+        "url": "https://arbitrum.foundation",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "arborfinance": {
+    "slug": "arborfinance",
+    "name": "Arborfinance",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "arcade": {
+    "slug": "arcade",
+    "name": "Arcade",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "arkadiko": {
+    "slug": "arkadiko",
+    "name": "Arkadiko",
+    "domain": "arkadiko.finance",
+    "url": "https://arkadiko.finance",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "arkadiko.finance",
+        "url": "https://arkadiko.finance",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "arkham": {
+    "slug": "arkham",
+    "name": "Arkham",
+    "domain": "arkhamintelligence.com",
+    "url": "https://arkhamintelligence.com",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "arkhamintelligence.com",
+        "url": "https://arkhamintelligence.com",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "aspida": {
+    "slug": "aspida",
+    "name": "Aspida",
+    "domain": "aspidanet.com",
+    "url": "https://aspidanet.com",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "aspidanet.com",
+        "url": "https://aspidanet.com",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "astarnetwork": {
+    "slug": "astarnetwork",
+    "name": "Astarnetwork",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "aster": {
+    "slug": "aster",
+    "name": "Aster",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "astroport": {
+    "slug": "astroport",
+    "name": "Astroport",
+    "domain": "astroport.fi",
+    "url": "https://astroport.fi",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "astroport.fi",
+        "url": "https://astroport.fi",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "aurafinance": {
+    "slug": "aurafinance",
+    "name": "Aura Finance",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "autonolas": {
+    "slug": "autonolas",
+    "name": "Autonolas",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "avail": {
+    "slug": "avail",
+    "name": "Avail",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "avalabs": {
+    "slug": "avalabs",
+    "name": "Avalabs",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "avalanche": {
+    "slug": "avalanche",
+    "name": "Avalanche",
+    "domain": "avax.network",
+    "url": "https://avax.network",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "avax.network",
+        "url": "https://avax.network",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "axelarnetwork": {
+    "slug": "axelarnetwork",
+    "name": "Axelar Network",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "axiom": {
+    "slug": "axiom",
+    "name": "Axiom",
+    "domain": "axiom.trade",
+    "url": "https://axiom.trade",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "axiom.trade",
+        "url": "https://axiom.trade",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "baanx": {
+    "slug": "baanx",
+    "name": "Baanx",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "babylon-labs": {
+    "slug": "babylon-labs",
+    "name": "Babylon Labs",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "badger": {
+    "slug": "badger",
+    "name": "Badger",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "balancer": {
+    "slug": "balancer",
+    "name": "Balancer",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "balmy": {
+    "slug": "balmy",
+    "name": "Balmy",
+    "domain": "balmy.xyz",
+    "url": "https://balmy.xyz",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "balmy.xyz",
+        "url": "https://balmy.xyz",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "bankx": {
+    "slug": "bankx",
+    "name": "Bankx",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "baofinance": {
+    "slug": "baofinance",
+    "name": "Baofinance",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "basilisk": {
+    "slug": "basilisk",
+    "name": "Basilisk",
+    "domain": "basilisk.org",
+    "url": "https://basilisk.org",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "basilisk.org",
+        "url": "https://basilisk.org",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "beanstalk": {
+    "slug": "beanstalk",
+    "name": "Beanstalk",
+    "domain": "bean.money",
+    "url": "https://bean.money",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "bean.money",
+        "url": "https://bean.money",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "beefyfinance": {
+    "slug": "beefyfinance",
+    "name": "Beefy Finance",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "beethovenx": {
+    "slug": "beethovenx",
+    "name": "Beethovenx",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "beets": {
+    "slug": "beets",
+    "name": "Beets",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "benddao": {
+    "slug": "benddao",
+    "name": "Benddao",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "benqi": {
+    "slug": "benqi",
+    "name": "BENQI",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "berachain-webapps": {
+    "slug": "berachain-webapps",
+    "name": "Berachain Webapps",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "berachain": {
+    "slug": "berachain",
+    "name": "Berachain",
+    "domain": "berachain.com",
+    "url": "https://berachain.com",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "berachain.com",
+        "url": "https://berachain.com",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "beradrome": {
+    "slug": "beradrome",
+    "name": "Beradrome",
+    "domain": "beradrome.com",
+    "url": "https://beradrome.com",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "beradrome.com",
+        "url": "https://beradrome.com",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "betafinance": {
+    "slug": "betafinance",
+    "name": "Betafinance",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "biconomy": {
+    "slug": "biconomy",
+    "name": "Biconomy",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "bifi": {
+    "slug": "bifi",
+    "name": "Bifi",
+    "domain": "bifi.finance",
+    "url": "https://bifi.finance",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "bifi.finance",
+        "url": "https://bifi.finance",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "bifrostfinance": {
+    "slug": "bifrostfinance",
+    "name": "Bifrost",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "bitcoinsv": {
+    "slug": "bitcoinsv",
+    "name": "Bitcoinsv",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "bitflow": {
+    "slug": "bitflow",
+    "name": "Bitflow",
+    "domain": "bitflow.finance",
+    "url": "https://bitflow.finance",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "bitflow.finance",
+        "url": "https://bitflow.finance",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "bitswift": {
+    "slug": "bitswift",
+    "name": "Bitswift",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "blackwing": {
+    "slug": "blackwing",
+    "name": "Blackwing",
+    "domain": "blackwing.fi",
+    "url": "https://blackwing.fi",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "blackwing.fi",
+        "url": "https://blackwing.fi",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "blockpinetwork": {
+    "slug": "blockpinetwork",
+    "name": "Blockpinetwork",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "blockwallet": {
+    "slug": "blockwallet",
+    "name": "Blockwallet",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "bobanetwork": {
+    "slug": "bobanetwork",
+    "name": "Boba Network",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "bondprotocol": {
+    "slug": "bondprotocol",
+    "name": "Bondprotocol",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "bonfida": {
+    "slug": "bonfida",
+    "name": "Bonfida",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "bprotocol": {
+    "slug": "bprotocol",
+    "name": "Bprotocol",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "burrow": {
+    "slug": "burrow",
+    "name": "Burrow",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "buttonwood": {
+    "slug": "buttonwood",
+    "name": "Buttonwood",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "c3": {
+    "slug": "c3",
+    "name": "C3",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "capyfi": {
+    "slug": "capyfi",
+    "name": "CapyFi",
+    "domain": "capyfi.com",
+    "url": "https://capyfi.com",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "capyfi.com",
+        "url": "https://capyfi.com",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "carbonbancor": {
+    "slug": "carbonbancor",
+    "name": "Carbonbancor",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "cardanofoundation": {
+    "slug": "cardanofoundation",
+    "name": "Cardanofoundation",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "cc-protocol": {
+    "slug": "cc-protocol",
+    "name": "CC Protocol",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "celer": {
+    "slug": "celer",
+    "name": "Celer",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "ceres": {
+    "slug": "ceres",
+    "name": "Ceres",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "chainlink": {
+    "slug": "chainlink",
+    "name": "Chainlink",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "charm": {
+    "slug": "charm",
+    "name": "Charm",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "comdex": {
+    "slug": "comdex",
+    "name": "Comdex",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "composablefinance": {
+    "slug": "composablefinance",
+    "name": "Composablefinance",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "compoundfinance": {
+    "slug": "compoundfinance",
+    "name": "Compound Finance",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "connext": {
+    "slug": "connext",
+    "name": "Connext",
+    "domain": "connext.network",
+    "url": "https://connext.network",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "connext.network",
+        "url": "https://connext.network",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "contrax": {
+    "slug": "contrax",
+    "name": "Contrax",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "coreum": {
+    "slug": "coreum",
+    "name": "Coreum",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "cove": {
+    "slug": "cove",
+    "name": "Cove",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "cowprotocol": {
+    "slug": "cowprotocol",
+    "name": "CoW Protocol",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "cyan": {
+    "slug": "cyan",
+    "name": "Cyan",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "daimo-pay": {
+    "slug": "daimo-pay",
+    "name": "Daimo Pay",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "daimo": {
+    "slug": "daimo",
+    "name": "Daimo",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "darwinia": {
+    "slug": "darwinia",
+    "name": "Darwinia",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "davos": {
+    "slug": "davos",
+    "name": "Davos",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "debridge": {
+    "slug": "debridge",
+    "name": "deBridge",
+    "domain": "app.debridge.com",
+    "url": "https://app.debridge.com",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "app.debridge.com",
+        "url": "https://app.debridge.com",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "decentraland": {
+    "slug": "decentraland",
+    "name": "Decentraland",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "defisaver": {
+    "slug": "defisaver",
+    "name": "DeFi Saver",
+    "domain": "defisaver.com",
+    "url": "https://defisaver.com",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "defisaver.com",
+        "url": "https://defisaver.com",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "defly": {
+    "slug": "defly",
+    "name": "Defly",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "degate": {
+    "slug": "degate",
+    "name": "Degate",
+    "domain": "app.degate.com",
+    "url": "https://app.degate.com",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "app.degate.com",
+        "url": "https://app.degate.com",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "delv": {
+    "slug": "delv",
+    "name": "Delv",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "deriprotocol": {
+    "slug": "deriprotocol",
+    "name": "Deriprotocol",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "dex-protocol": {
+    "slug": "dex-protocol",
+    "name": "DeXe Protocol",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "dexeprotocol": {
+    "slug": "dexeprotocol",
+    "name": "DeXe Protocol",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "dforce": {
+    "slug": "dforce",
+    "name": "dForce",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "dfxfinance": {
+    "slug": "dfxfinance",
+    "name": "Dfxfinance",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "dhedge": {
+    "slug": "dhedge",
+    "name": "dHEDGE",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "dodo": {
+    "slug": "dodo",
+    "name": "Dodo",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "dodov3": {
+    "slug": "dodov3",
+    "name": "Dodov3",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "driftprotocol": {
+    "slug": "driftprotocol",
+    "name": "Driftprotocol",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "drips": {
+    "slug": "drips",
+    "name": "Drips",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "duetfinance": {
+    "slug": "duetfinance",
+    "name": "Duetfinance",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "ebtc": {
+    "slug": "ebtc",
+    "name": "Ebtc",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "eckodao": {
+    "slug": "eckodao",
+    "name": "Eckodao",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "eclipse": {
+    "slug": "eclipse",
+    "name": "Eclipse",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "eco": {
+    "slug": "eco",
+    "name": "Eco",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "econia": {
+    "slug": "econia",
+    "name": "Econia",
+    "domain": "econialabs.com",
+    "url": "https://econialabs.com",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "econialabs.com",
+        "url": "https://econialabs.com",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "eigenlayer": {
+    "slug": "eigenlayer",
+    "name": "EigenLayer",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "elixirprotocol": {
+    "slug": "elixirprotocol",
+    "name": "Elixirprotocol",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "enosys": {
+    "slug": "enosys",
+    "name": "Enosys",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "ens": {
+    "slug": "ens",
+    "name": "ENS",
+    "domain": "app.ens.domains",
+    "url": "https://app.ens.domains",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "app.ens.domains",
+        "url": "https://app.ens.domains",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "ensuro": {
+    "slug": "ensuro",
+    "name": "Ensuro",
+    "domain": "ensuro.co",
+    "url": "https://ensuro.co",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "ensuro.co",
+        "url": "https://ensuro.co",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "enzyme-onyx": {
+    "slug": "enzyme-onyx",
+    "name": "Enzyme Onyx",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "enzymefinance": {
+    "slug": "enzymefinance",
+    "name": "Enzymefinance",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "ethena": {
+    "slug": "ethena",
+    "name": "Ethena",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "etherfi": {
+    "slug": "etherfi",
+    "name": "Ether.fi",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "euphrates": {
+    "slug": "euphrates",
+    "name": "Euphrates",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "exactly": {
+    "slug": "exactly",
+    "name": "Exactly",
+    "domain": "exact.ly",
+    "url": "https://exact.ly",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "exact.ly",
+        "url": "https://exact.ly",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "example-protocol": {
+    "slug": "example-protocol",
+    "name": "Example Protocol",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "exodus": {
+    "slug": "exodus",
+    "name": "Exodus",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "extrafinance": {
+    "slug": "extrafinance",
+    "name": "Extrafinance",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "farcaster": {
+    "slug": "farcaster",
+    "name": "Farcaster",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "fassets": {
+    "slug": "fassets",
+    "name": "Fassets",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "fbtc": {
+    "slug": "fbtc",
+    "name": "Fbtc",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "felix": {
+    "slug": "felix",
+    "name": "Felix",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "filecoin": {
+    "slug": "filecoin",
+    "name": "Filecoin",
+    "domain": "filecoin.io",
+    "url": "https://filecoin.io",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "filecoin.io",
+        "url": "https://filecoin.io",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "firedancer": {
+    "slug": "firedancer",
+    "name": "Firedancer",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "flamingofinance": {
+    "slug": "flamingofinance",
+    "name": "Flamingo Finance",
+    "domain": "flamingo.finance",
+    "url": "https://flamingo.finance",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "flamingo.finance",
+        "url": "https://flamingo.finance",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "flarenetwork": {
+    "slug": "flarenetwork",
+    "name": "Flarenetwork",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "flexytech": {
+    "slug": "flexytech",
+    "name": "Flexytech",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "floki": {
+    "slug": "floki",
+    "name": "Floki",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "fluxfinance": {
+    "slug": "fluxfinance",
+    "name": "Flux Finance",
+    "domain": "fluxfinance.com",
+    "url": "https://fluxfinance.com",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "fluxfinance.com",
+        "url": "https://fluxfinance.com",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "foil": {
+    "slug": "foil",
+    "name": "Foil",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "folksfinance": {
+    "slug": "folksfinance",
+    "name": "Folksfinance",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "forta": {
+    "slug": "forta",
+    "name": "Forta",
+    "domain": "forta.org",
+    "url": "https://forta.org",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "forta.org",
+        "url": "https://forta.org",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "foundation": {
+    "slug": "foundation",
+    "name": "Foundation",
+    "domain": "foundation.app",
+    "url": "https://foundation.app",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "foundation.app",
+        "url": "https://foundation.app",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "furucombo": {
+    "slug": "furucombo",
+    "name": "Furucombo",
+    "domain": "furucombo.app",
+    "url": "https://furucombo.app",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "furucombo.app",
+        "url": "https://furucombo.app",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "furucombofunds": {
+    "slug": "furucombofunds",
+    "name": "Furucombofunds",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "gainsnetwork": {
+    "slug": "gainsnetwork",
+    "name": "Gains Network",
+    "domain": "gains.trade",
+    "url": "https://gains.trade",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "gains.trade",
+        "url": "https://gains.trade",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "galagames": {
+    "slug": "galagames",
+    "name": "Galagames",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "gamma": {
+    "slug": "gamma",
+    "name": "Gamma",
+    "domain": "gamma.xyz",
+    "url": "https://gamma.xyz",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "gamma.xyz",
+        "url": "https://gamma.xyz",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "gammaswap": {
+    "slug": "gammaswap",
+    "name": "Gammaswap",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "gear": {
+    "slug": "gear",
+    "name": "Gear",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "gearbox": {
+    "slug": "gearbox",
+    "name": "Gearbox",
+    "domain": "gearbox.finance",
+    "url": "https://gearbox.finance",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "gearbox.finance",
+        "url": "https://gearbox.finance",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "geniusyield": {
+    "slug": "geniusyield",
+    "name": "Geniusyield",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "gerowallet": {
+    "slug": "gerowallet",
+    "name": "Gerowallet",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "ghostmarket": {
+    "slug": "ghostmarket",
+    "name": "Ghostmarket",
+    "domain": "ghostmarket.io",
+    "url": "https://ghostmarket.io",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "ghostmarket.io",
+        "url": "https://ghostmarket.io",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "glodollar": {
+    "slug": "glodollar",
+    "name": "Glodollar",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "gmx": {
+    "slug": "gmx",
+    "name": "GMX",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "gnosischain": {
+    "slug": "gnosischain",
+    "name": "Gnosis Chain",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "gogopool": {
+    "slug": "gogopool",
+    "name": "Gogopool",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "goldfinch": {
+    "slug": "goldfinch",
+    "name": "Goldfinch",
+    "domain": "goldfinch.finance",
+    "url": "https://goldfinch.finance",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "goldfinch.finance",
+        "url": "https://goldfinch.finance",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "granite-protocol": {
+    "slug": "granite-protocol",
+    "name": "Granite Protocol",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "gysr": {
+    "slug": "gysr",
+    "name": "Gysr",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "hakkafinance": {
+    "slug": "hakkafinance",
+    "name": "Hakkafinance",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "halogen": {
+    "slug": "halogen",
+    "name": "Halogen",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "harvest": {
+    "slug": "harvest",
+    "name": "Harvest",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "hashflow": {
+    "slug": "hashflow",
+    "name": "Hashflow",
+    "domain": "hashflow.com",
+    "url": "https://hashflow.com",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "hashflow.com",
+        "url": "https://hashflow.com",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "hathornetwork": {
+    "slug": "hathornetwork",
+    "name": "Hathornetwork",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "haven1": {
+    "slug": "haven1",
+    "name": "Haven1",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "hedera": {
+    "slug": "hedera",
+    "name": "Hedera",
+    "domain": "hedera.com",
+    "url": "https://hedera.com",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "hedera.com",
+        "url": "https://hedera.com",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "helios-finance": {
+    "slug": "helios-finance",
+    "name": "Helios Finance",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "hibachi": {
+    "slug": "hibachi",
+    "name": "Hibachi",
+    "domain": "hibachi.xyz",
+    "url": "https://hibachi.xyz",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "hibachi.xyz",
+        "url": "https://hibachi.xyz",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "hoenn": {
+    "slug": "hoenn",
+    "name": "Hoenn",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "horizen": {
+    "slug": "horizen",
+    "name": "Horizen",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "hourglass": {
+    "slug": "hourglass",
+    "name": "Hourglass",
+    "domain": "hourglass.com",
+    "url": "https://hourglass.com",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "hourglass.com",
+        "url": "https://hourglass.com",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "hydradx": {
+    "slug": "hydradx",
+    "name": "Hydradx",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "hydration": {
+    "slug": "hydration",
+    "name": "Hydration",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "hydro": {
+    "slug": "hydro",
+    "name": "Hydro",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "hyperlane": {
+    "slug": "hyperlane",
+    "name": "Hyperlane",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "ichi": {
+    "slug": "ichi",
+    "name": "Ichi",
+    "domain": "ichi.org",
+    "url": "https://ichi.org",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "ichi.org",
+        "url": "https://ichi.org",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "icon": {
+    "slug": "icon",
+    "name": "Icon",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "idex": {
+    "slug": "idex",
+    "name": "Idex",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "idlefinance": {
+    "slug": "idlefinance",
+    "name": "Idlefinance",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "illuvium": {
+    "slug": "illuvium",
+    "name": "Illuvium",
+    "domain": "illuvium.io",
+    "url": "https://illuvium.io",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "illuvium.io",
+        "url": "https://illuvium.io",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "immunefi": {
+    "slug": "immunefi",
+    "name": "Immunefi",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "immutable": {
+    "slug": "immutable",
+    "name": "Immutable",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "impossible-cloud-network": {
+    "slug": "impossible-cloud-network",
+    "name": "Impossible Cloud Network",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "impossiblefinance": {
+    "slug": "impossiblefinance",
+    "name": "Impossiblefinance",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "indexcoop": {
+    "slug": "indexcoop",
+    "name": "Index Coop",
+    "domain": "indexcoop.com",
+    "url": "https://indexcoop.com",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "indexcoop.com",
+        "url": "https://indexcoop.com",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "infinex": {
+    "slug": "infinex",
+    "name": "Infinex",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "injective": {
+    "slug": "injective",
+    "name": "Injective",
+    "domain": "injective.com",
+    "url": "https://injective.com",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "injective.com",
+        "url": "https://injective.com",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "instadapp": {
+    "slug": "instadapp",
+    "name": "Instadapp",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "integral": {
+    "slug": "integral",
+    "name": "Integral",
+    "domain": "integral.link",
+    "url": "https://integral.link",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "integral.link",
+        "url": "https://integral.link",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "integriteenetwork": {
+    "slug": "integriteenetwork",
+    "name": "Integriteenetwork",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "interlay": {
+    "slug": "interlay",
+    "name": "Interlay",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "intmax": {
+    "slug": "intmax",
+    "name": "INTMAX",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "inverse-finance": {
+    "slug": "inverse-finance",
+    "name": "Inverse Finance",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "ion-protocol": {
+    "slug": "ion-protocol",
+    "name": "Ion Protocol",
+    "domain": "ionprotocol.io",
+    "url": "https://ionprotocol.io",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "ionprotocol.io",
+        "url": "https://ionprotocol.io",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "ipor": {
+    "slug": "ipor",
+    "name": "IPOR",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "jito-bam-client": {
+    "slug": "jito-bam-client",
+    "name": "Jito Bam Client",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "jito-foundation": {
+    "slug": "jito-foundation",
+    "name": "Jito Foundation",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "jito": {
+    "slug": "jito",
+    "name": "Jito",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "justlenddao": {
+    "slug": "justlenddao",
+    "name": "Justlenddao",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "kadena": {
+    "slug": "kadena",
+    "name": "Kadena",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "kamino": {
+    "slug": "kamino",
+    "name": "Kamino",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "keep3rnetwork": {
+    "slug": "keep3rnetwork",
+    "name": "Keep3rnetwork",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "kelp-dao": {
+    "slug": "kelp-dao",
+    "name": "Kelp DAO",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "kiln-defi": {
+    "slug": "kiln-defi",
+    "name": "Kiln DeFi",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "kiln-on-chain-v1": {
+    "slug": "kiln-on-chain-v1",
+    "name": "Kiln On-Chain v1",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "kiln-webapp": {
+    "slug": "kiln-webapp",
+    "name": "Kiln Webapp",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "kiln": {
+    "slug": "kiln",
+    "name": "Kiln On-Chain v2",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "kinesis-bridge-on-kadena": {
+    "slug": "kinesis-bridge-on-kadena",
+    "name": "Kinesis Bridge On Kadena",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "kwenta": {
+    "slug": "kwenta",
+    "name": "Kwenta",
+    "domain": "kwenta.eth.limo",
+    "url": "https://kwenta.eth.limo",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "kwenta.eth.limo",
+        "url": "https://kwenta.eth.limo",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "landx": {
+    "slug": "landx",
+    "name": "Landx",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "layer3": {
+    "slug": "layer3",
+    "name": "Layer3.xyz",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "layerzero": {
+    "slug": "layerzero",
+    "name": "LayerZero",
+    "domain": "layerzero.network",
+    "url": "https://layerzero.network",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "layerzero.network",
+        "url": "https://layerzero.network",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "lendr": {
+    "slug": "lendr",
+    "name": "Lendr",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "lido": {
+    "slug": "lido",
+    "name": "Lido",
+    "domain": "lido.fi",
+    "url": "https://lido.fi",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "lido.fi",
+        "url": "https://lido.fi",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "lidoonpolygon": {
+    "slug": "lidoonpolygon",
+    "name": "Lidoonpolygon",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "lifi": {
+    "slug": "lifi",
+    "name": "Lifi",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "light-protocol": {
+    "slug": "light-protocol",
+    "name": "Light Protocol",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "linea": {
+    "slug": "linea",
+    "name": "Linea",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "liquidswap": {
+    "slug": "liquidswap",
+    "name": "Liquidswap",
+    "domain": "liquidswap.com",
+    "url": "https://liquidswap.com",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "liquidswap.com",
+        "url": "https://liquidswap.com",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "listadao": {
+    "slug": "listadao",
+    "name": "Lista DAO",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "livepeer": {
+    "slug": "livepeer",
+    "name": "Livepeer",
+    "domain": "livepeer.org",
+    "url": "https://livepeer.org",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "livepeer.org",
+        "url": "https://livepeer.org",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "localtraders": {
+    "slug": "localtraders",
+    "name": "Localtraders",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "lombard-finance": {
+    "slug": "lombard-finance",
+    "name": "Lombard Finance",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "lossless": {
+    "slug": "lossless",
+    "name": "Lossless",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "lybrafinance": {
+    "slug": "lybrafinance",
+    "name": "Lybrafinance",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "lyra": {
+    "slug": "lyra",
+    "name": "Lyra",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "magpiexyz": {
+    "slug": "magpiexyz",
+    "name": "Magpiexyz",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "mantlelsp": {
+    "slug": "mantlelsp",
+    "name": "Mantlelsp",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "maple": {
+    "slug": "maple",
+    "name": "Maple",
+    "domain": "maple.finance",
+    "url": "https://maple.finance",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "maple.finance",
+        "url": "https://maple.finance",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "marinade": {
+    "slug": "marinade",
+    "name": "Marinade",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "mars": {
+    "slug": "mars",
+    "name": "Mars",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "marsecosystem": {
+    "slug": "marsecosystem",
+    "name": "Marsecosystem",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "mayaprotocol": {
+    "slug": "mayaprotocol",
+    "name": "Mayaprotocol",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "meanfinance": {
+    "slug": "meanfinance",
+    "name": "Meanfinance",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "metalswap": {
+    "slug": "metalswap",
+    "name": "Metalswap",
+    "domain": "app.metalswap.finance",
+    "url": "https://app.metalswap.finance",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "app.metalswap.finance",
+        "url": "https://app.metalswap.finance",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "metastreet-yield-pass": {
+    "slug": "metastreet-yield-pass",
+    "name": "Metastreet Yield Pass",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "metastreet": {
+    "slug": "metastreet",
+    "name": "Metastreet",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "meth": {
+    "slug": "meth",
+    "name": "mETH Protocol",
+    "domain": "methprotocol.xyz",
+    "url": "https://methprotocol.xyz",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "methprotocol.xyz",
+        "url": "https://methprotocol.xyz",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "metis": {
+    "slug": "metis",
+    "name": "Metis",
+    "domain": "metis.io",
+    "url": "https://metis.io",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "metis.io",
+        "url": "https://metis.io",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "metronome": {
+    "slug": "metronome",
+    "name": "Metronome",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "monero-oxide": {
+    "slug": "monero-oxide",
+    "name": "Monero Oxide",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "moneyonchain": {
+    "slug": "moneyonchain",
+    "name": "Moneyonchain",
+    "domain": "moneyonchain.com",
+    "url": "https://moneyonchain.com",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "moneyonchain.com",
+        "url": "https://moneyonchain.com",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "moonbeamnetwork": {
+    "slug": "moonbeamnetwork",
+    "name": "Moonbeamnetwork",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "moonwell": {
+    "slug": "moonwell",
+    "name": "Moonwell",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "morpho": {
+    "slug": "morpho",
+    "name": "Morpho",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "mountainprotocol": {
+    "slug": "mountainprotocol",
+    "name": "Mountainprotocol",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "mtpelerin": {
+    "slug": "mtpelerin",
+    "name": "Mtpelerin",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "mux": {
+    "slug": "mux",
+    "name": "Mux",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "myntandzero": {
+    "slug": "myntandzero",
+    "name": "Myntandzero",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "native": {
+    "slug": "native",
+    "name": "Native",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "nayms": {
+    "slug": "nayms",
+    "name": "Nayms",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "neo": {
+    "slug": "neo",
+    "name": "Neo",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "neutron": {
+    "slug": "neutron",
+    "name": "Neutron",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "nexusmutual": {
+    "slug": "nexusmutual",
+    "name": "Nexus Mutual",
+    "domain": "nexusmutual.io",
+    "url": "https://nexusmutual.io",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "nexusmutual.io",
+        "url": "https://nexusmutual.io",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "nftfi": {
+    "slug": "nftfi",
+    "name": "Nftfi",
+    "domain": "nftfi.com",
+    "url": "https://nftfi.com",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "nftfi.com",
+        "url": "https://nftfi.com",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "nftfitestnetrefi": {
+    "slug": "nftfitestnetrefi",
+    "name": "Nftfitestnetrefi",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "nftx": {
+    "slug": "nftx",
+    "name": "Nftx",
+    "domain": "nftx.io",
+    "url": "https://nftx.io",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "nftx.io",
+        "url": "https://nftx.io",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "nodle": {
+    "slug": "nodle",
+    "name": "Nodle",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "nomad": {
+    "slug": "nomad",
+    "name": "Nomad",
+    "domain": "nomad.xyz",
+    "url": "https://nomad.xyz",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "nomad.xyz",
+        "url": "https://nomad.xyz",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "notional": {
+    "slug": "notional",
+    "name": "Notional",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "nucleus": {
+    "slug": "nucleus",
+    "name": "Nucleus",
+    "domain": "nucleusearn.io",
+    "url": "https://nucleusearn.io",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "nucleusearn.io",
+        "url": "https://nucleusearn.io",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "oasis": {
+    "slug": "oasis",
+    "name": "Oasis",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "obyte": {
+    "slug": "obyte",
+    "name": "Obyte",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "oceanprotocol": {
+    "slug": "oceanprotocol",
+    "name": "Oceanprotocol",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "octopusnetwork": {
+    "slug": "octopusnetwork",
+    "name": "Octopusnetwork",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "ofza-1": {
+    "slug": "ofza-1",
+    "name": "Ofza 1",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "olafinance": {
+    "slug": "olafinance",
+    "name": "Olafinance",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "olympus": {
+    "slug": "olympus",
+    "name": "Olympus",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "omni-network": {
+    "slug": "omni-network",
+    "name": "Omni Network",
+    "domain": "nomina.io",
+    "url": "https://nomina.io",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "nomina.io",
+        "url": "https://nomina.io",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "omron": {
+    "slug": "omron",
+    "name": "Omron",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "ondofinance": {
+    "slug": "ondofinance",
+    "name": "Ondo Finance",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "openzeppelin-stellar": {
+    "slug": "openzeppelin-stellar",
+    "name": "Openzeppelin Stellar",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "openzeppelin": {
+    "slug": "openzeppelin",
+    "name": "Openzeppelin",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "optimism": {
+    "slug": "optimism",
+    "name": "Optimism",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "opyngamma": {
+    "slug": "opyngamma",
+    "name": "Opyngamma",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "opynsqueeth": {
+    "slug": "opynsqueeth",
+    "name": "Opynsqueeth",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "orca": {
+    "slug": "orca",
+    "name": "Orca",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "orderlynetwork": {
+    "slug": "orderlynetwork",
+    "name": "Orderlynetwork",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "origin-protocol": {
+    "slug": "origin-protocol",
+    "name": "Origin Protocol",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "origindefi": {
+    "slug": "origindefi",
+    "name": "Origindefi",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "ostium": {
+    "slug": "ostium",
+    "name": "Ostium",
+    "domain": "ostium.io",
+    "url": "https://ostium.io",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "ostium.io",
+        "url": "https://ostium.io",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "overlay": {
+    "slug": "overlay",
+    "name": "Overlay",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "pact": {
+    "slug": "pact",
+    "name": "Pact",
+    "domain": "app.pact.fi",
+    "url": "https://app.pact.fi",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "app.pact.fi",
+        "url": "https://app.pact.fi",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "pancakeswap": {
+    "slug": "pancakeswap",
+    "name": "PancakeSwap",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "pantos": {
+    "slug": "pantos",
+    "name": "Pantos",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "paradex": {
+    "slug": "paradex",
+    "name": "Paradex",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "paragonsdao": {
+    "slug": "paragonsdao",
+    "name": "Paragonsdao",
+    "domain": "app.paragonsdao.com",
+    "url": "https://app.paragonsdao.com",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "app.paragonsdao.com",
+        "url": "https://app.paragonsdao.com",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "parallel": {
+    "slug": "parallel",
+    "name": "Parallel",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "parallelwallet": {
+    "slug": "parallelwallet",
+    "name": "Parallelwallet",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "pareto": {
+    "slug": "pareto",
+    "name": "Pareto",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "paribus": {
+    "slug": "paribus",
+    "name": "Paribus",
+    "domain": "app.paribus.io",
+    "url": "https://app.paribus.io",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "app.paribus.io",
+        "url": "https://app.paribus.io",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "pendle": {
+    "slug": "pendle",
+    "name": "Pendle",
+    "domain": "pendle.finance",
+    "url": "https://pendle.finance",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "pendle.finance",
+        "url": "https://pendle.finance",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "perennial": {
+    "slug": "perennial",
+    "name": "Perennial",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "perpetual": {
+    "slug": "perpetual",
+    "name": "Perpetual",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "pikaprotocol": {
+    "slug": "pikaprotocol",
+    "name": "Pikaprotocol",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "pillar": {
+    "slug": "pillar",
+    "name": "Pillar",
+    "domain": "pillarprotocol.com",
+    "url": "https://pillarprotocol.com",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "pillarprotocol.com",
+        "url": "https://pillarprotocol.com",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "pinto": {
+    "slug": "pinto",
+    "name": "Pinto",
+    "domain": "pinto.money",
+    "url": "https://pinto.money",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "pinto.money",
+        "url": "https://pinto.money",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "plaza-finance": {
+    "slug": "plaza-finance",
+    "name": "Plaza Finance",
+    "domain": "deposit.plaza.finance",
+    "url": "https://deposit.plaza.finance",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "deposit.plaza.finance",
+        "url": "https://deposit.plaza.finance",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "plume-network": {
+    "slug": "plume-network",
+    "name": "Plume Network",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "pnetwork": {
+    "slug": "pnetwork",
+    "name": "Pnetwork",
+    "domain": "p.network",
+    "url": "https://p.network",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "p.network",
+        "url": "https://p.network",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "pods": {
+    "slug": "pods",
+    "name": "Pods",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "polkastarter": {
+    "slug": "polkastarter",
+    "name": "Polkastarter",
+    "domain": "polkastarter.com",
+    "url": "https://polkastarter.com",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "polkastarter.com",
+        "url": "https://polkastarter.com",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "polygon": {
+    "slug": "polygon",
+    "name": "Polygon",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "polygonzkevm": {
+    "slug": "polygonzkevm",
+    "name": "Polygonzkevm",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "polymarket": {
+    "slug": "polymarket",
+    "name": "Polymarket",
+    "domain": "polymarket.com",
+    "url": "https://polymarket.com",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "polymarket.com",
+        "url": "https://polymarket.com",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "polymesh": {
+    "slug": "polymesh",
+    "name": "Polymesh",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "poolshark": {
+    "slug": "poolshark",
+    "name": "Poolshark",
+    "domain": "poolshark.fi",
+    "url": "https://poolshark.fi",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "poolshark.fi",
+        "url": "https://poolshark.fi",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "pooltogether": {
+    "slug": "pooltogether",
+    "name": "PoolTogether",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "popsicle": {
+    "slug": "popsicle",
+    "name": "Popsicle",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "portfinance": {
+    "slug": "portfinance",
+    "name": "Portfinance",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "pragmaoracle": {
+    "slug": "pragmaoracle",
+    "name": "Pragmaoracle",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "predyfinance": {
+    "slug": "predyfinance",
+    "name": "Predyfinance",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "primitive": {
+    "slug": "primitive",
+    "name": "Primitive",
+    "domain": "primitive.xyz",
+    "url": "https://primitive.xyz",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "primitive.xyz",
+        "url": "https://primitive.xyz",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "print3r": {
+    "slug": "print3r",
+    "name": "Print3r",
+    "domain": "print3r.xyz",
+    "url": "https://print3r.xyz",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "print3r.xyz",
+        "url": "https://print3r.xyz",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "pstake": {
+    "slug": "pstake",
+    "name": "Pstake",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "pstakeoncosmos": {
+    "slug": "pstakeoncosmos",
+    "name": "Pstakeoncosmos",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "pushprotocol": {
+    "slug": "pushprotocol",
+    "name": "Pushprotocol",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "pythnetwork": {
+    "slug": "pythnetwork",
+    "name": "Pyth Network",
+    "domain": "pyth.network",
+    "url": "https://pyth.network",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "pyth.network",
+        "url": "https://pyth.network",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "qblockchain": {
+    "slug": "qblockchain",
+    "name": "Qblockchain",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "quadrata": {
+    "slug": "quadrata",
+    "name": "Quadrata",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "radiant": {
+    "slug": "radiant",
+    "name": "Radiant",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "rai": {
+    "slug": "rai",
+    "name": "Rai",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "rangeprotocol": {
+    "slug": "rangeprotocol",
+    "name": "Rangeprotocol",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "raydium": {
+    "slug": "raydium",
+    "name": "Raydium",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "reaperfarm": {
+    "slug": "reaperfarm",
+    "name": "Reaperfarm",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "ref-finance": {
+    "slug": "ref-finance",
+    "name": "Ref Finance",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "renzoprotocol": {
+    "slug": "renzoprotocol",
+    "name": "Renzo Protocol",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "reserve": {
+    "slug": "reserve",
+    "name": "Reserve",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "resolv": {
+    "slug": "resolv",
+    "name": "Resolv",
+    "domain": "app.resolv.xyz",
+    "url": "https://app.resolv.xyz",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "app.resolv.xyz",
+        "url": "https://app.resolv.xyz",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "resonate": {
+    "slug": "resonate",
+    "name": "Resonate",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "revert": {
+    "slug": "revert",
+    "name": "Revert",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "revest": {
+    "slug": "revest",
+    "name": "Revest",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "rhinofi": {
+    "slug": "rhinofi",
+    "name": "Rhino.fi",
+    "domain": "rhino.fi",
+    "url": "https://rhino.fi",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "rhino.fi",
+        "url": "https://rhino.fi",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "ribbon": {
+    "slug": "ribbon",
+    "name": "Ribbon",
+    "domain": "ribbon.finance",
+    "url": "https://ribbon.finance",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "ribbon.finance",
+        "url": "https://ribbon.finance",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "ringdao": {
+    "slug": "ringdao",
+    "name": "Ringdao",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "rocketpool": {
+    "slug": "rocketpool",
+    "name": "Rocket Pool",
+    "domain": "rocketpool.net",
+    "url": "https://rocketpool.net",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "rocketpool.net",
+        "url": "https://rocketpool.net",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "router": {
+    "slug": "router",
+    "name": "Router",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "royco": {
+    "slug": "royco",
+    "name": "Royco",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "rubic": {
+    "slug": "rubic",
+    "name": "Rubic",
+    "domain": "app.rubic.exchange",
+    "url": "https://app.rubic.exchange",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "app.rubic.exchange",
+        "url": "https://app.rubic.exchange",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "ruscet": {
+    "slug": "ruscet",
+    "name": "Ruscet",
+    "domain": "ruscet.xyz",
+    "url": "https://ruscet.xyz",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "ruscet.xyz",
+        "url": "https://ruscet.xyz",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "rysk": {
+    "slug": "rysk",
+    "name": "Rysk",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "scroll": {
+    "slug": "scroll",
+    "name": "Scroll",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "sectorfinance": {
+    "slug": "sectorfinance",
+    "name": "Sectorfinance",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "securefi": {
+    "slug": "securefi",
+    "name": "Securefi",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "segmentfinance": {
+    "slug": "segmentfinance",
+    "name": "Segmentfinance",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "sei": {
+    "slug": "sei",
+    "name": "Sei",
+    "domain": "sei.io",
+    "url": "https://sei.io",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "sei.io",
+        "url": "https://sei.io",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "serai": {
+    "slug": "serai",
+    "name": "Serai",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "shellprotocol": {
+    "slug": "shellprotocol",
+    "name": "Shellprotocol",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "sherlock": {
+    "slug": "sherlock",
+    "name": "Sherlock",
+    "domain": "sherlock.xyz",
+    "url": "https://sherlock.xyz",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "sherlock.xyz",
+        "url": "https://sherlock.xyz",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "silofinance-v2": {
+    "slug": "silofinance-v2",
+    "name": "Silo Finance V2",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "silofinance": {
+    "slug": "silofinance",
+    "name": "Silofinance",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "singularitydao": {
+    "slug": "singularitydao",
+    "name": "Singularitydao",
+    "domain": "singularitydao.ai",
+    "url": "https://singularitydao.ai",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "singularitydao.ai",
+        "url": "https://singularitydao.ai",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "skatefi": {
+    "slug": "skatefi",
+    "name": "Skatefi",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "sky": {
+    "slug": "sky",
+    "name": "Sky",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "smardex": {
+    "slug": "smardex",
+    "name": "Smardex",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "sns": {
+    "slug": "sns",
+    "name": "Sns",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "sommelier": {
+    "slug": "sommelier",
+    "name": "Sommelier",
+    "domain": "somm.finance",
+    "url": "https://somm.finance",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "somm.finance",
+        "url": "https://somm.finance",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "sora": {
+    "slug": "sora",
+    "name": "Sora",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "sovryn": {
+    "slug": "sovryn",
+    "name": "Sovryn",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "sparklend": {
+    "slug": "sparklend",
+    "name": "Spark",
+    "domain": "app.spark.fi",
+    "url": "https://app.spark.fi",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "app.spark.fi",
+        "url": "https://app.spark.fi",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "spectral": {
+    "slug": "spectral",
+    "name": "Spectral",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "spookyswap": {
+    "slug": "spookyswap",
+    "name": "Spookyswap",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "spool": {
+    "slug": "spool",
+    "name": "Spool",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "spot": {
+    "slug": "spot",
+    "name": "Spot",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "ssv-network": {
+    "slug": "ssv-network",
+    "name": "SSV Network",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "stackingdao": {
+    "slug": "stackingdao",
+    "name": "StackingDAO",
+    "domain": "app.stackingdao.com",
+    "url": "https://app.stackingdao.com",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "app.stackingdao.com",
+        "url": "https://app.stackingdao.com",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "stacks": {
+    "slug": "stacks",
+    "name": "Stacks",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "staderforbnb": {
+    "slug": "staderforbnb",
+    "name": "Staderforbnb",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "staderforeth": {
+    "slug": "staderforeth",
+    "name": "Stader for ETH",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "staderforpolygon": {
+    "slug": "staderforpolygon",
+    "name": "StaderforPolygon",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "stafi": {
+    "slug": "stafi",
+    "name": "Stafi",
+    "domain": "stafi.io",
+    "url": "https://stafi.io",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "stafi.io",
+        "url": "https://stafi.io",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "stakeeasy": {
+    "slug": "stakeeasy",
+    "name": "Stakeeasy",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "stakelink": {
+    "slug": "stakelink",
+    "name": "Stakelink",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "stakestone": {
+    "slug": "stakestone",
+    "name": "StakeStone",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "stakewise": {
+    "slug": "stakewise",
+    "name": "Stakewise",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "stargate": {
+    "slug": "stargate",
+    "name": "Stargate",
+    "domain": "stargate.vechain.org",
+    "url": "https://stargate.vechain.org",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "stargate.vechain.org",
+        "url": "https://stargate.vechain.org",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "starkex": {
+    "slug": "starkex",
+    "name": "StarkEx",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "starknet-staking": {
+    "slug": "starknet-staking",
+    "name": "Starknet Staking",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "starknet": {
+    "slug": "starknet",
+    "name": "StarkNet",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "stellar": {
+    "slug": "stellar",
+    "name": "Stellar",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "stellaswap": {
+    "slug": "stellaswap",
+    "name": "Stellaswap",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "strikefinance": {
+    "slug": "strikefinance",
+    "name": "Strikefinance",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "sturdy": {
+    "slug": "sturdy",
+    "name": "Sturdy",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "summerfi": {
+    "slug": "summerfi",
+    "name": "Summerfi",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "superbots": {
+    "slug": "superbots",
+    "name": "Superbots",
+    "domain": "superbots.finance",
+    "url": "https://superbots.finance",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "superbots.finance",
+        "url": "https://superbots.finance",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "superfluid": {
+    "slug": "superfluid",
+    "name": "Superfluid",
+    "domain": "superfluid.org",
+    "url": "https://superfluid.org",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "superfluid.org",
+        "url": "https://superfluid.org",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "superform": {
+    "slug": "superform",
+    "name": "Superform",
+    "domain": "app.superform.xyz",
+    "url": "https://app.superform.xyz",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "app.superform.xyz",
+        "url": "https://app.superform.xyz",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "sushiswap": {
+    "slug": "sushiswap",
+    "name": "SushiSwap",
+    "domain": "sushi.com",
+    "url": "https://sushi.com",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "sushi.com",
+        "url": "https://sushi.com",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "swappi": {
+    "slug": "swappi",
+    "name": "Swappi",
+    "domain": "app.swappi.io",
+    "url": "https://app.swappi.io",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "app.swappi.io",
+        "url": "https://app.swappi.io",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "sweateconomy": {
+    "slug": "sweateconomy",
+    "name": "Sweat Economy",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "swell": {
+    "slug": "swell",
+    "name": "Swell",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "symbiosis": {
+    "slug": "symbiosis",
+    "name": "Symbiosis",
+    "domain": "symbiosis.finance",
+    "url": "https://symbiosis.finance",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "symbiosis.finance",
+        "url": "https://symbiosis.finance",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "symbiotic": {
+    "slug": "symbiotic",
+    "name": "Symbiotic",
+    "domain": "symbiotic.fi",
+    "url": "https://symbiotic.fi",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "symbiotic.fi",
+        "url": "https://symbiotic.fi",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "synfutures": {
+    "slug": "synfutures",
+    "name": "SynFutures",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "synthetix": {
+    "slug": "synthetix",
+    "name": "Synthetix",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "teahousefinance": {
+    "slug": "teahousefinance",
+    "name": "Teahousefinance",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "templar-protocol": {
+    "slug": "templar-protocol",
+    "name": "Templar Protocol",
+    "domain": "templarfi.org",
+    "url": "https://templarfi.org",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "templarfi.org",
+        "url": "https://templarfi.org",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "termstructurelabs": {
+    "slug": "termstructurelabs",
+    "name": "Termstructurelabs",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "tetu": {
+    "slug": "tetu",
+    "name": "Tetu",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "thala-protocol": {
+    "slug": "thala-protocol",
+    "name": "Thala Protocol",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "thegraph": {
+    "slug": "thegraph",
+    "name": "The Graph",
+    "domain": "thegraph.com",
+    "url": "https://thegraph.com",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "thegraph.com",
+        "url": "https://thegraph.com",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "thesandbox": {
+    "slug": "thesandbox",
+    "name": "Thesandbox",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "thorchain": {
+    "slug": "thorchain",
+    "name": "THORChain",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "thresholdnetwork": {
+    "slug": "thresholdnetwork",
+    "name": "Threshold Network",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "thusd": {
+    "slug": "thusd",
+    "name": "Thusd",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "tidal": {
+    "slug": "tidal",
+    "name": "Tidal",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "timelessandbunni": {
+    "slug": "timelessandbunni",
+    "name": "Timelessandbunni",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "tinyman": {
+    "slug": "tinyman",
+    "name": "Tinyman",
+    "domain": "tinyman.org",
+    "url": "https://tinyman.org",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "tinyman.org",
+        "url": "https://tinyman.org",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "tinymanv2": {
+    "slug": "tinymanv2",
+    "name": "Tinymanv2",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "tokemak": {
+    "slug": "tokemak",
+    "name": "Tokemak",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "toucan": {
+    "slug": "toucan",
+    "name": "Toucan",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "traderjoe": {
+    "slug": "traderjoe",
+    "name": "Trader Joe",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "tranchess": {
+    "slug": "tranchess",
+    "name": "Tranchess",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "tropykus": {
+    "slug": "tropykus",
+    "name": "Tropykus",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "trufin": {
+    "slug": "trufin",
+    "name": "Trufin",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "uniswaponzksync": {
+    "slug": "uniswaponzksync",
+    "name": "Uniswaponzksync",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "universalpage": {
+    "slug": "universalpage",
+    "name": "Universalpage",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "unstoppablewallet": {
+    "slug": "unstoppablewallet",
+    "name": "Unstoppablewallet",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "usdn": {
+    "slug": "usdn",
+    "name": "Usdn",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "usdt0": {
+    "slug": "usdt0",
+    "name": "USDT0",
+    "domain": "usdt0.to",
+    "url": "https://usdt0.to",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "usdt0.to",
+        "url": "https://usdt0.to",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "usx": {
+    "slug": "usx",
+    "name": "Usx",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "utix": {
+    "slug": "utix",
+    "name": "Utix",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "vaultcraft": {
+    "slug": "vaultcraft",
+    "name": "Vaultcraft",
+    "domain": "vaultcraft.io",
+    "url": "https://vaultcraft.io",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "vaultcraft.io",
+        "url": "https://vaultcraft.io",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "vechain": {
+    "slug": "vechain",
+    "name": "Vechain",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "velodromefinance": {
+    "slug": "velodromefinance",
+    "name": "Velodrome Finance",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "velvet-capital-v2": {
+    "slug": "velvet-capital-v2",
+    "name": "Velvet Capital V2",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "velvetcapital": {
+    "slug": "velvetcapital",
+    "name": "Velvetcapital",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "vesper": {
+    "slug": "vesper",
+    "name": "Vesper",
+    "domain": "vesper.finance",
+    "url": "https://vesper.finance",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "vesper.finance",
+        "url": "https://vesper.finance",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "vesu": {
+    "slug": "vesu",
+    "name": "Vesu",
+    "domain": "vesu.xyz",
+    "url": "https://vesu.xyz",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "vesu.xyz",
+        "url": "https://vesu.xyz",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "virtuals-protocol": {
+    "slug": "virtuals-protocol",
+    "name": "Virtuals Protocol",
+    "domain": "app.virtuals.io",
+    "url": "https://app.virtuals.io",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "app.virtuals.io",
+        "url": "https://app.virtuals.io",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "voltz": {
+    "slug": "voltz",
+    "name": "Voltz",
+    "domain": "voltz.xyz",
+    "url": "https://voltz.xyz",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "voltz.xyz",
+        "url": "https://voltz.xyz",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "waymont": {
+    "slug": "waymont",
+    "name": "Waymont",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "wepiggy": {
+    "slug": "wepiggy",
+    "name": "Wepiggy",
+    "domain": "wepiggy.com",
+    "url": "https://wepiggy.com",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "wepiggy.com",
+        "url": "https://wepiggy.com",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "wildcatprotocol": {
+    "slug": "wildcatprotocol",
+    "name": "Wildcatprotocol",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "wombatexchange": {
+    "slug": "wombatexchange",
+    "name": "Wombatexchange",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "woofi": {
+    "slug": "woofi",
+    "name": "WOOFi",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "wormhole": {
+    "slug": "wormhole",
+    "name": "Wormhole",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "xion": {
+    "slug": "xion",
+    "name": "XION",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "xoxno": {
+    "slug": "xoxno",
+    "name": "Xoxno",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "xterio": {
+    "slug": "xterio",
+    "name": "Xterio",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "yamatoprotocol": {
+    "slug": "yamatoprotocol",
+    "name": "Yamatoprotocol",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "yearnfinance": {
+    "slug": "yearnfinance",
+    "name": "Yearn Finance",
+    "domain": "yearn.fi",
+    "url": "https://yearn.fi",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "yearn.fi",
+        "url": "https://yearn.fi",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "yelay": {
+    "slug": "yelay",
+    "name": "Yelay",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "yieldnest": {
+    "slug": "yieldnest",
+    "name": "Yieldnest",
+    "domain": "yieldnest.finance",
+    "url": "https://yieldnest.finance",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "yieldnest.finance",
+        "url": "https://yieldnest.finance",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "yo-protocol": {
+    "slug": "yo-protocol",
+    "name": "Yo Protocol",
+    "domain": "app.yo.xyz",
+    "url": "https://app.yo.xyz",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "app.yo.xyz",
+        "url": "https://app.yo.xyz",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "zano": {
+    "slug": "zano",
+    "name": "Zano",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "zenlink": {
+    "slug": "zenlink",
+    "name": "Zenlink",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "zerion": {
+    "slug": "zerion",
+    "name": "Zerion",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "zerolend": {
+    "slug": "zerolend",
+    "name": "Zerolend",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "zest-protocol-v2": {
+    "slug": "zest-protocol-v2",
+    "name": "Zest Protocol V2",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "zksync-os": {
+    "slug": "zksync-os",
+    "name": "Zksync Os",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "zksync": {
+    "slug": "zksync",
+    "name": "ZKsync Lite",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "zksyncera": {
+    "slug": "zksyncera",
+    "name": "ZKsync Era",
+    "domain": "zksync.io",
+    "url": "https://zksync.io",
+    "confidence": 0.9,
+    "candidates": [
+      {
+        "domain": "zksync.io",
+        "url": "https://zksync.io",
+        "source": "https://api.llama.fi/protocols",
+        "confidence": 0.9
+      }
+    ],
+    "sources": [
+      "https://api.llama.fi/protocols"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "zkverify": {
+    "slug": "zkverify",
+    "name": "Zkverify",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "zodiac": {
+    "slug": "zodiac",
+    "name": "Zodiac",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "candidates": [],
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  }
+}
