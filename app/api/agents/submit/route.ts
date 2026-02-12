@@ -196,12 +196,13 @@ export async function POST(req: NextRequest) {
         note: 'Submission earns base points. Accepted findings earn 100x more.',
       },
       notification: {
+        route: notification.route,
         email_sent: notification.email_sent,
         recipient: notification.recipient ? notification.recipient.replace(/(.{2}).*@/, '$1***@') : null,
       },
-      immunefi_route: notification.immunefi_url ? {
+      immunefi_fallback: notification.route === 'immunefi' ? {
         url: notification.immunefi_url,
-        action: 'Submit to Immunefi for formal triage and payout mediation.',
+        action: 'No direct contact found. Submit to Immunefi for formal triage.',
       } : null,
       message: 'Finding stored on WhiteClaws. Protocol notified.',
     }, { status: 201 })

@@ -142,6 +142,7 @@ ${PLATFORM_URL}`;
 }
 
 // ── Main: Notify protocol about a finding ──
+// PRIORITY: Direct protocol email FIRST → Immunefi fallback SECOND
 export async function notifyProtocolAboutFinding(params: {
   finding_id: string;
   protocol_id: string;
@@ -152,6 +153,7 @@ export async function notifyProtocolAboutFinding(params: {
   email_sent: boolean;
   immunefi_url: string | null;
   recipient: string | null;
+  route: 'direct' | 'immunefi' | 'none';
 }> {
   const supabase = createClient();
 
@@ -162,39 +164,47 @@ export async function notifyProtocolAboutFinding(params: {
     .eq('id', params.protocol_id)
     .single();
 
-  const email = protocol?.security_email || protocol?.contact_email || null;
+  const directEmail = protocol?.security_email || protocol?.contact_email || null;
   const immunefiUrl = protocol?.immunefi_url || null;
 
   let emailSent = false;
   let recipient: string | null = null;
+  let route: 'direct' | 'immunefi' | 'none' = 'none';
 
-  // Send email notification
-  if (email) {
+  // PRIMARY: Email protocol directly
+  if (directEmail) {
     const emailContent = buildFindingEmail({
       protocolName: params.protocol_name,
       severity: params.severity,
       findingId: params.finding_id,
       submittedAt: params.submitted_at,
-      immunefiUrl: immunefiUrl || undefined,
     });
 
-    const result = await sendEmail({ to: email, ...emailContent });
+    const result = await sendEmail({ to: directEmail, ...emailContent });
     emailSent = result.success;
-    recipient = email;
+    recipient = directEmail;
+    route = 'direct';
 
-    // Log notification
     await supabase.from('finding_notifications').insert({
       finding_id: params.finding_id,
       protocol_id: params.protocol_id,
       channel: 'email',
-      recipient: email,
+      recipient: directEmail,
       status: result.success ? 'sent' : 'failed',
       error: result.error || null,
     });
+
+    // Mark notification sent on finding
+    await supabase
+      .from('findings')
+      .update({ notification_sent: true })
+      .eq('id', params.finding_id);
   }
 
-  // Log Immunefi route
-  if (immunefiUrl) {
+  // SECONDARY: If no direct email, log Immunefi as the route
+  if (!directEmail && immunefiUrl) {
+    route = 'immunefi';
+
     await supabase.from('finding_notifications').insert({
       finding_id: params.finding_id,
       protocol_id: params.protocol_id,
@@ -203,12 +213,11 @@ export async function notifyProtocolAboutFinding(params: {
       status: 'sent',
     });
 
-    // Mark finding as routed
     await supabase
       .from('findings')
       .update({ immunefi_routed: true, immunefi_routed_at: new Date().toISOString(), notification_sent: true })
       .eq('id', params.finding_id);
   }
 
-  return { email_sent: emailSent, immunefi_url: immunefiUrl, recipient };
+  return { email_sent: emailSent, immunefi_url: immunefiUrl, recipient, route };
 }
