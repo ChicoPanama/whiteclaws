@@ -40,6 +40,27 @@ const mockAgents: Record<string, any> = {
   },
 }
 
+interface AgentRanking {
+  rank: number | null
+  total_submissions: number
+  accepted_submissions: number
+  total_bounty_amount: number
+}
+
+interface UserWithRanking {
+  id: string
+  handle: string | null
+  display_name: string | null
+  avatar_url: string | null
+  reputation_score: number | null
+  specialties: string[] | null
+  bio: string | null
+  website: string | null
+  twitter: string | null
+  created_at: string
+  agent_rankings: AgentRanking | AgentRanking[] | null
+}
+
 async function getAgent(handle: string) {
   if (!hasSupabaseConfig) {
     return mockAgents[handle] ?? null
@@ -54,6 +75,7 @@ async function getAgent(handle: string) {
       agent_rankings (rank, total_submissions, accepted_submissions, total_bounty_amount)
     `)
     .eq('handle', handle)
+    .returns<UserWithRanking[]>()
     .maybeSingle()
 
   if (error) throw error
