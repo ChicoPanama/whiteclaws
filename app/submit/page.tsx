@@ -141,6 +141,10 @@ export default function SubmitPage() {
 
       const supa2 = getSupabase();
       if (!supa2) throw new Error("Supabase not configured");
+
+      // Get authenticated user
+      const { data: { user: authUser } } = await supa2.auth.getUser()
+
       const { data: finding, error: insertError } = await supa2
         .from('findings')
         .insert({
@@ -149,7 +153,7 @@ export default function SubmitPage() {
           severity: formData.severity,
           encrypted_report_url: 'supabase://encrypted-reports/' + Date.now(),
           status: 'submitted',
-          researcher_id: user?.id || '',
+          researcher_id: authUser?.id || '',
           submission_source: 'whiteclaws',
           encrypted_report: {
             protocol_slug: protocolSlug,
