@@ -1,5 +1,7 @@
 import type { CSSProperties } from 'react'
 import { notFound } from 'next/navigation'
+import fs from 'fs'
+import path from 'path'
 import Nav from '@/components/landing/Nav'
 import Footer from '@/components/Footer'
 import ProtocolIcon from '@/components/ProtocolIcon'
@@ -27,9 +29,25 @@ async function getProtocol(slug: string) {
   return getProtocolBySlug(slug)
 }
 
+let enrichmentCache: Record<string, Record<string, unknown>> | null = null
+
+function getEnrichment(slug: string): Record<string, unknown> | null {
+  try {
+    if (!enrichmentCache) {
+      const filePath = path.join(process.cwd(), 'data', 'merged_enrichment.json')
+      enrichmentCache = JSON.parse(fs.readFileSync(filePath, 'utf-8'))
+    }
+    return enrichmentCache?.[slug] ?? null
+  } catch {
+    return null
+  }
+}
+
 export default async function ProtocolPage({ params }: { params: { id: string } }) {
   const protocol = await getProtocol(params.id)
   if (!protocol) notFound()
+
+  const enrichment = getEnrichment(params.id)
 
   const bounty = protocol.bounty || { max: 0, min: 0, kyc_required: false }
   const severity = protocol.severity_payouts || {}
@@ -148,6 +166,7 @@ export default async function ProtocolPage({ params }: { params: { id: string } 
             program_rules={protocol.program_rules}
             submission_requirements={protocol.submission_requirements}
             eligibility={protocol.eligibility}
+            enrichment={enrichment}
           />
 
         </div>

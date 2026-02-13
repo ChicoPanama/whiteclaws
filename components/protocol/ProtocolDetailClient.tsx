@@ -55,6 +55,10 @@ interface SubmissionReqs {
   severity_criteria?: Record<string, string>
 }
 
+interface EnrichmentData {
+  [key: string]: unknown
+}
+
 interface Props {
   severity: Record<string, SevData>
   contracts: ContractData[]
@@ -63,10 +67,11 @@ interface Props {
   program_rules?: string[]
   submission_requirements?: SubmissionReqs
   eligibility?: string[]
+  enrichment?: EnrichmentData | null
 }
 
 export default function ProtocolDetailClient({
-  severity, contracts, scope, slug, program_rules, submission_requirements, eligibility
+  severity, contracts, scope, slug, program_rules, submission_requirements, eligibility, enrichment
 }: Props) {
   const [expanded, setExpanded] = useState<string | null>('critical')
   const [tab, setTab] = useState<'scope' | 'contracts' | 'submission'>('scope')
@@ -283,6 +288,112 @@ export default function ProtocolDetailClient({
           )}
         </section>
       )}
+
+      {/* ─── ENRICHMENT: LINKS & INFO ─── */}
+      {enrichment && (() => {
+        const str = (key: string): string | null => {
+          const v = enrichment[key]
+          return typeof v === 'string' && v ? v : null
+        }
+        const twitterUrl = (handle: string): string => {
+          if (handle.startsWith('http')) return handle
+          return `https://x.com/${handle.replace(/^@/, '')}`
+        }
+
+        const socials: { label: string; url: string }[] = []
+        if (str('twitter')) socials.push({ label: '𝕏 Twitter', url: twitterUrl(str('twitter')!) })
+        if (str('discord')) socials.push({ label: 'Discord', url: str('discord')! })
+        if (str('telegram')) socials.push({ label: 'Telegram', url: str('telegram')! })
+        if (str('reddit_url')) socials.push({ label: 'Reddit', url: str('reddit_url')! })
+
+        const resources: { label: string; url: string }[] = []
+        if (str('website_url')) resources.push({ label: 'Website', url: str('website_url')! })
+        if (str('docs_url')) resources.push({ label: 'Docs', url: str('docs_url')! })
+        if (str('developer_docs_url')) resources.push({ label: 'Dev Docs', url: str('developer_docs_url')! })
+        if (str('github_url')) resources.push({ label: 'GitHub', url: str('github_url')! })
+        if (str('whitepaper_url')) resources.push({ label: 'Whitepaper', url: str('whitepaper_url')! })
+        if (str('blog_url')) resources.push({ label: 'Blog', url: str('blog_url')! })
+        if (str('status_page_url')) resources.push({ label: 'Status', url: str('status_page_url')! })
+        if (str('bounty_policy_url')) resources.push({ label: 'Bounty Policy', url: str('bounty_policy_url')! })
+
+        const emails: { label: string; email: string }[] = []
+        if (str('security_email')) emails.push({ label: 'Security', email: str('security_email')! })
+        if (str('contact_email')) emails.push({ label: 'Contact', email: str('contact_email')! })
+        if (str('legal_email')) emails.push({ label: 'Legal', email: str('legal_email')! })
+
+        const auditorList: string[] = Array.isArray(enrichment.auditors) ? (enrichment.auditors as unknown[]).filter((a): a is string => typeof a === 'string') : []
+
+        const auditUrls: string[] = Array.isArray(enrichment.audit_report_urls) ? (enrichment.audit_report_urls as unknown[]).filter((u): u is string => typeof u === 'string') : []
+
+        const marketCapRank = typeof enrichment.market_cap_rank === 'number' ? enrichment.market_cap_rank : null
+        const hasAnything = socials.length > 0 || resources.length > 0 || emails.length > 0 || auditorList.length > 0 || marketCapRank
+
+        if (!hasAnything) return null
+
+        return (
+          <section className="pd-section pd-enrich">
+            <h2 className="pd-heading"><span className="pd-num">★</span>Protocol Info</h2>
+
+            {socials.length > 0 && (
+              <div className="pd-enrich-group">
+                <span className="pd-enrich-label">Social</span>
+                <div className="pd-links">
+                  {socials.map(s => (
+                    <a key={s.label} href={s.url} target="_blank" rel="noopener noreferrer" className="pd-link">{s.label} ↗</a>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {resources.length > 0 && (
+              <div className="pd-enrich-group">
+                <span className="pd-enrich-label">Resources</span>
+                <div className="pd-links">
+                  {resources.map(r => (
+                    <a key={r.label} href={r.url} target="_blank" rel="noopener noreferrer" className="pd-link">{r.label} ↗</a>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {emails.length > 0 && (
+              <div className="pd-enrich-group">
+                <span className="pd-enrich-label">Contacts</span>
+                <div className="pd-contacts">
+                  {emails.map(e => (
+                    <a key={e.label} href={`mailto:${e.email}`} className="pd-link">{e.label}: {e.email}</a>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {auditorList.length > 0 && (
+              <div className="pd-enrich-group">
+                <span className="pd-enrich-label">Auditors</span>
+                <div className="pd-auditors">
+                  {auditorList.map(a => (
+                    <span key={a} className="pd-badge">{a}</span>
+                  ))}
+                </div>
+                {auditUrls.length > 0 && (
+                  <div className="pd-links" style={{ marginTop: 6 }}>
+                    {auditUrls.map((url, i) => (
+                      <a key={i} href={url} target="_blank" rel="noopener noreferrer" className="pd-link">Audit Report {auditUrls.length > 1 ? `#${i + 1}` : ''} ↗</a>
+                    ))}
+                  </div>
+                )}
+              </div>
+            )}
+
+            {marketCapRank && (
+              <div className="pd-enrich-group">
+                <span className="pd-enrich-label">Market</span>
+                <span className="pd-badge brand">CoinGecko Rank #{marketCapRank}</span>
+              </div>
+            )}
+          </section>
+        )
+      })()}
 
       {/* ─── CTA ─── */}
       <div className="pd-cta">

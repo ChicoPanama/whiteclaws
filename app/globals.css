@@ -2008,6 +2008,75 @@ a { color: inherit; text-decoration: none; }
   text-underline-offset: 2px;
 }
 
+/* ─── ENRICHMENT SECTION ─── */
+.pd-enrich {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 20px 22px;
+  background: var(--surface);
+}
+
+.pd-enrich-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 8px 0;
+}
+
+.pd-enrich-group + .pd-enrich-group {
+  border-top: 1px solid var(--border);
+}
+
+.pd-enrich-label {
+  font-family: var(--fm);
+  font-size: .6rem;
+  font-weight: 600;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--dim);
+  min-width: 70px;
+  padding-top: 4px;
+  flex-shrink: 0;
+}
+
+.pd-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.pd-link {
+  font-family: var(--fm);
+  font-size: .62rem;
+  font-weight: 500;
+  letter-spacing: .02em;
+  padding: 3px 10px;
+  border-radius: 100px;
+  background: var(--bg);
+  color: var(--ink-2);
+  border: 1px solid var(--border);
+  white-space: nowrap;
+  transition: all .2s;
+  text-decoration: none;
+}
+
+.pd-link:hover {
+  border-color: var(--brand-border, var(--border-2));
+  color: var(--brand, var(--ink));
+}
+
+.pd-contacts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.pd-auditors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
 /* ─── CTA BUTTONS ─── */
 .pd-cta {
   display: flex;
