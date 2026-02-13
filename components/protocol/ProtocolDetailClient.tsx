@@ -332,6 +332,8 @@ export default function ProtocolDetailClient({
 
         return (
           <section className="pd-section pd-enrich">
+            <div className="pd-enrich-glow" />
+            <div className="pd-enrich-glow pd-enrich-glow-2" />
             <h2 className="pd-heading"><span className="pd-num">★</span>Protocol Information</h2>
 
             {/* Social + Market row */}
