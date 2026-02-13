@@ -1,0 +1,191 @@
+{
+  "0x": {
+    "slug": "0x",
+    "website": "https://0x.org",
+    "source": [
+      "website_footer",
+      "docs_links",
+      "status_subdomain",
+      "page:/privacy"
+    ],
+    "twitter": "@0xProject",
+    "github": "https://github.com/0xProject",
+    "reddit": "https://www.reddit.com/r/0xProject",
+    "docs_url": "https://0x.org/docs",
+    "developer_docs_url": "https://0x.statuspal.io/",
+    "chains_mentioned": [
+      "Ethereum",
+      "Arbitrum",
+      "Optimism",
+      "Polygon",
+      "Base",
+      "Avalanche",
+      "Linea",
+      "Scroll",
+      "Mantle",
+      "Blast",
+      "Mode"
+    ],
+    "status_page_url": "https://status.0x.org",
+    "legal_email": "legal@0x.org"
+  },
+  "88mphv3": {
+    "slug": "88mphv3",
+    "website": "https://88mph.app",
+    "source": [
+      "docs_subdomain"
+    ],
+    "chains_mentioned": [
+      "Ethereum"
+    ],
+    "docs_url": "https://docs.88mph.app"
+  },
+  "aave": {
+    "slug": "aave",
+    "website": "https://aave.com",
+    "source": [
+      "website_footer",
+      "meta_tags",
+      "docs_links",
+      "status_subdomain"
+    ],
+    "twitter": "@aave",
+    "discord": "https://discord.com/invite/aave",
+    "github": "https://github.com/aave",
+    "og_site_name": "aave.com",
+    "docs_url": "https://aave.com/docs",
+    "auditors": [
+      "Immunefi",
+      "OpenZeppelin",
+      "Certora",
+      "Peckshield",
+      "PeckShield",
+      "Spearbit",
+      "Sherlock",
+      "OtterSec",
+      "MixBytes",
+      "Cantina"
+    ],
+    "bounty_policy_url": "href=\"https://immunefi.com/bug-bounty/aave/\"",
+    "chains_mentioned": [
+      "Ethereum",
+      "Polygon",
+      "Base",
+      "Solana"
+    ],
+    "status_page_url": "https://status.aave.com",
+    "audit_report_urls": [
+      "https://github.com/aave-dao/aave-v3-origin/blob/9f69c714350635787439608b52fb6064ce991bba/audits/2025-11-29_Pashov_Aave-v3.6.pdf",
+      "https://github.com/aave-dao/aave-v3-origin/blob/9f69c714350635787439608b52fb6064ce991bba/audits/2025-11-18_Certora_Aave-v3.6.pdf",
+      "https://github.com/aave-dao/aave-v3-origin/blob/9f69c714350635787439608b52fb6064ce991bba/audits/2025-11-18_MixBytes_Aave-v3.6.pdf",
+      "https://github.com/aave-dao/aave-v3-origin/blob/9f69c714350635787439608b52fb6064ce991bba/audits/2025-11-18_Savant_Aave-v3.6.pdf",
+      "https://github.com/aave-dao/aave-v3-origin/blob/9f69c714350635787439608b52fb6064ce991bba/audits/2025-11-16_Blackthorn_Aave-v3.6.pdf",
+      "https://github.com/aave-dao/aave-v3-origin/blob/main/audits/2025-07-18_MixBytes_AaveV3.5.pdf",
+      "https://github.com/aave-dao/aave-v3-origin/blob/main/audits/2025-07-17_ABDK_Aave-v3.5.pdf",
+      "https://github.com/aave-dao/aave-v3-origin/blob/main/audits/2025-07-14_Certora_AaveV3.5.pdf",
+      "https://github.com/aave-dao/aave-v3-origin/blob/74412e2b6e0b1973fac6837b6a488f8eaaeac4b1/audits/2025-06-12_Blackthorn-v3.4_Report.pdf",
+      "https://github.com/aave-dao/aave-v3-origin/blob/74412e2b6e0b1973fac6837b6a488f8eaaeac4b1/audits/2025-06-11_Certora_Aave-v3.4_Report.pdf"
+    ]
+  },
+  "acala": {
+    "slug": "acala",
+    "website": "https://acala.network",
+    "source": [
+      "page:/security"
+    ],
+    "bounty_policy_url": "https://acala.network/security"
+  },
+  "aera": {
+    "slug": "aera",
+    "website": "https://aera.finance",
+    "source": [
+      "website_footer",
+      "docs_links"
+    ],
+    "twitter": "@aerafinance",
+    "docs_url": "http://docs.aera.finance",
+    "whitepaper_url": "https://cdn.prod.website-files.com/62cd150e5e9efc960319c44d/6346c4525380f8fa6435c2b5_Aera_Whitepaper.pdf",
+    "audit_report_urls": [
+      "https://cdn.prod.website-files.com/62cd150e5e9efc960319c44d/652fe9fa1c0d6f6c0e0876d6_Aera-Spearbit-Security-Review-Aug2023.pdf"
+    ],
+    "auditors": [
+      "Spearbit"
+    ],
+    "chains_mentioned": [
+      "Scroll"
+    ]
+  },
+  "aevo": {
+    "slug": "aevo",
+    "website": "https://app.aevo.xyz",
+    "source": [
+      "meta_tags",
+      "docs_subdomain",
+      "status_subdomain",
+      "page:/security"
+    ],
+    "twitter": "@aevoxyz",
+    "docs_url": "https://docs.aevo.xyz",
+    "status_page_url": "https://status.aevo.xyz",
+    "bounty_policy_url": "https://app.aevo.xyz/security"
+  },
+  "alchemix": {
+    "slug": "alchemix",
+    "website": "https://alchemix.fi",
+    "source": [
+      "docs_subdomain",
+      "status_subdomain",
+      "page:/security"
+    ],
+    "docs_url": "https://docs.alchemix.fi",
+    "status_page_url": "https://status.alchemix.fi",
+    "bounty_policy_url": "https://alchemix.fi/security"
+  },
+  "aleo": {
+    "slug": "aleo",
+    "website": "https://aleo.org",
+    "source": [
+      "website_footer",
+      "docs_links",
+      "docs_subdomain",
+      "status_subdomain",
+      "page:/security"
+    ],
+    "twitter": "@aleohq",
+    "discord": "https://discord.gg/aleo",
+    "github": "https://github.com/AleoNet",
+    "developer_docs_url": "https://developer.aleo.org/guides/introduction/getting_started/",
+    "chains_mentioned": [
+      "Ethereum",
+      "NEAR"
+    ],
+    "docs_url": "https://docs.aleo.org",
+    "status_page_url": "https://status.aleo.org",
+    "bounty_policy_url": "https://aleo.org/security"
+  },
+  "alephzero": {
+    "slug": "alephzero",
+    "website": "https://alephzero.org",
+    "source": [
+      "docs_subdomain",
+      "page:/security"
+    ],
+    "docs_url": "https://docs.alephzero.org",
+    "bounty_policy_url": "https://alephzero.org/security",
+    "twitter": "@Aleph__Zero",
+    "discord": "https://discord.gg/alephzero",
+    "telegram": "https://t.me/AlephZeroFoundation",
+    "github": "https://github.com/aleph-zero-foundation",
+    "reddit": "https://www.reddit.com/r/AlephZero"
+  },
+  "alex": {
+    "slug": "alex",
+    "website": "https://alexlab.co",
+    "source": [
+      "docs_subdomain",
+      "page:/security"
+    ],
+    "docs_url": "https://docs.alexlab.co",
+    "bounty_policy_url": "https://alexlab.co/security"
+  }
+}
