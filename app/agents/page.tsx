@@ -131,7 +131,7 @@ export default async function AgentsPage() {
               <Link href="/app/agents" className="btn btn-w">
                 Agent Dashboard <span className="arr">→</span>
               </Link>
-              <a href="https://github.com/WhiteRabbitLobster/whiteclaws" target="_blank" rel="noopener noreferrer" className="btn btn-g">
+              <a href="https://github.com/ChicoPanama/whiteclaws" target="_blank" rel="noopener noreferrer" className="btn btn-g">
                 API Docs
               </a>
             </div>

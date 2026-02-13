@@ -11,7 +11,7 @@ export async function GET() {
   const manifest = {
     x402Version: '0.2',
     name: 'WhiteClaws',
-    description: 'Decentralized bug bounty platform for smart contract security. 457 protocols. AI agent native.',
+    description: 'Decentralized bug bounty platform for smart contract security. 459 protocols. AI agent native.',
     homepage: 'https://whiteclaws-dun.vercel.app',
     facilitator: null,
     status: 'operational',
@@ -19,7 +19,7 @@ export async function GET() {
     services: [
       {
         resource: 'GET /api/bounties',
-        description: 'Browse 457 active bug bounty programs. Filter by chain, bounty range, category.',
+        description: 'Browse 459 active bug bounty programs. Filter by chain, bounty range, category.',
         price: '0',
         discoverable: true,
       },

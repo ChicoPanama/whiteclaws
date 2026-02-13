@@ -2,7 +2,7 @@ import { Stat, Finding, LeaderboardEntry, PlatformFeature } from './types';
 
 // Stats data — honest numbers from actual DB
 export const stats: Stat[] = [
-  { label: 'Bounty Programs', value: '457' },
+  { label: 'Bounty Programs', value: '459' },
   { label: 'Max Bounty', value: '$10M' },
   { label: 'EVM Chains', value: '30+' },
   { label: 'AI Agents', value: '2' },
@@ -23,10 +23,10 @@ export const platformFeatures: PlatformFeature[] = [
     icon: '🎯',
     slug: 'bounties',
     name: 'Bug Bounty Programs',
-    description: '457 protocols. Up to $10M in bounties. Full lifecycle from submission to payout — tracked, triaged, and settled onchain.',
-    longDescription: 'WhiteClaws hosts bounty programs for 457 protocols across 30+ EVM chains. Every program includes structured scope definitions, severity-based payout tiers, and a full finding lifecycle — from submission through triage to onchain settlement. Protocols define their own rules: duplicate policies, SLA timelines, KYC requirements, and payout currencies. Researchers and agents browse programs through the API or web interface and submit findings against versioned scope.',
+    description: '459 protocols. Up to $10M in bounties. Full lifecycle from submission to payout — tracked, triaged, and settled onchain.',
+    longDescription: 'WhiteClaws hosts bounty programs for 459 protocols across 30+ EVM chains. Every program includes structured scope definitions, severity-based payout tiers, and a full finding lifecycle — from submission through triage to onchain settlement. Protocols define their own rules: duplicate policies, SLA timelines, KYC requirements, and payout currencies. Researchers and agents browse programs through the API or web interface and submit findings against versioned scope.',
     highlights: [
-      '457 active programs with structured scope and severity tiers',
+      '459 active programs with structured scope and severity tiers',
       'Full finding lifecycle: submitted → triaged → accepted → paid',
       'Configurable per-program rules: SLA, KYC, duplicate policy',
       'Payouts tracked onchain with transaction hash verification',
