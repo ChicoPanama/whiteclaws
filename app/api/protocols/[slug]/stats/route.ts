@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
+import type { Row } from '@/lib/supabase/helpers'
 import { createClient } from '@/lib/supabase/admin'
 
 export const dynamic = 'force-dynamic'
@@ -13,7 +14,7 @@ export async function GET(req: NextRequest, { params }: { params: { slug: string
     .from('protocols')
     .select('id, slug, name, max_bounty')
     .eq('slug', params.slug)
-    .maybeSingle()
+    .returns<Row<'protocols'>[]>().maybeSingle()
 
   if (!protocol) return NextResponse.json({ error: 'Protocol not found' }, { status: 404 })
 
@@ -23,7 +24,7 @@ export async function GET(req: NextRequest, { params }: { params: { slug: string
     .eq('protocol_id', protocol.id)
     .order('created_at', { ascending: false })
     .limit(1)
-    .maybeSingle()
+    .returns<Row<'programs'>[]>().maybeSingle()
 
   // Count findings by status
   const { count: totalFindings } = await supabase
@@ -63,7 +64,7 @@ export async function GET(req: NextRequest, { params }: { params: { slug: string
   if (triagedFindings && triagedFindings.length > 0) {
     const totalHours = triagedFindings.reduce((sum, f) => {
       const submitted = new Date(f.created_at).getTime()
-      const triaged = new Date(f.triaged_at).getTime()
+      const triaged = new Date(f.triaged_at!).getTime()
       return sum + (triaged - submitted) / 3600000
     }, 0)
     avgResponseHours = Math.round((totalHours / triagedFindings.length) * 10) / 10

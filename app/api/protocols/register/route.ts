@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@/lib/supabase/admin'
 import { generateApiKey } from '@/lib/auth/api-key'
 import { generateKeyPair } from '@/lib/crypto'
+import { fireEvents } from '@/lib/points/hooks'
 
 export const dynamic = 'force-dynamic'
 
@@ -124,6 +125,12 @@ export async function POST(req: NextRequest) {
     // Generate API key for protocol team
     const { key, keyPrefix } = await generateApiKey(owner.id, 'protocol-admin', [
       'protocol:read', 'protocol:write', 'protocol:triage',
+    ])
+
+    // Fire points events (non-blocking)
+    fireEvents(owner.id, [
+      { type: 'protocol_registered', metadata: { slug: protocol.slug } },
+      { type: 'bounty_created', metadata: { slug: protocol.slug, max_bounty: max_bounty || 100000 } },
     ])
 
     return NextResponse.json({

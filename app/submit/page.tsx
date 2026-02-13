@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import type { Row } from '@/lib/supabase/helpers'
 import { useRouter } from 'next/navigation'
 import { createClient } from '@/lib/supabase/client'
 import { encryptMessage, generateKeyPair } from '@/lib/crypto'
@@ -76,8 +77,8 @@ export default function SubmitPage() {
           return
         }
         const supa = getSupabase(); if (!supa) return;
-        const { data } = await supa.from('protocols').select('*').eq('slug', protocolSlug).single()
-        if (data) setProtocol(data)
+        const { data } = await supa.from('protocols').select('*').eq('slug', protocolSlug).returns<Row<'protocols'>[]>().single()
+        if (data) setProtocol(data as unknown as ProtocolData)
       } catch (err) {
         console.error('Failed to load protocol:', err)
       }
@@ -108,7 +109,7 @@ export default function SubmitPage() {
         // Fallback: try protocol's public_key field
         const supa = getSupabase()
         if (supa) {
-          const { data: proto } = await supa.from('protocols').select('public_key').eq('slug', protocolSlug).maybeSingle()
+          const { data: proto } = await supa.from('protocols').select('public_key').eq('slug', protocolSlug).returns<Row<'protocols'>[]>().maybeSingle()
           recipientPublicKey = proto?.public_key || ''
         }
       }
@@ -157,6 +158,7 @@ export default function SubmitPage() {
           }
         })
         .select()
+        .returns<Row<'findings'>[]>()
         .single()
 
       if (insertError) throw insertError

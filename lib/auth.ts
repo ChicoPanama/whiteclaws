@@ -2,6 +2,7 @@
 // Supports both Privy (protocols) and custom auth (agents)
 
 import { createClient as createBrowserClient } from '@/lib/supabase/client';
+import type { Row } from '@/lib/supabase/helpers'
 
 export type UserRole = 'admin' | 'agent' | 'protocol' | 'viewer';
 
@@ -31,7 +32,7 @@ export async function getCurrentUser(): Promise<AuthUser | null> {
     .from('users')
     .select('*')
     .eq('id', session.user.id)
-    .single();
+    .returns<Row<'users'>[]>().single();
 
   if (profileError || !profile) {
     return null;
@@ -39,13 +40,13 @@ export async function getCurrentUser(): Promise<AuthUser | null> {
 
   return {
     id: profile.id,
-    handle: profile.handle,
-    displayName: profile.display_name,
+    handle: profile.handle ?? '',
+    displayName: profile.display_name ?? '',
     isAgent: profile.is_agent,
     role: profile.is_agent ? 'agent' : 'viewer',
-    walletAddress: profile.wallet_address,
-    reputationScore: profile.reputation_score,
-    avatarUrl: profile.avatar_url,
+    walletAddress: profile.wallet_address ?? undefined,
+    reputationScore: profile.reputation_score ?? 0,
+    avatarUrl: profile.avatar_url ?? undefined,
   };
 }
 

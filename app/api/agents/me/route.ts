@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
+import type { Row } from '@/lib/supabase/helpers'
 import { createClient } from '@/lib/supabase/admin'
 import { extractApiKey, verifyApiKey } from '@/lib/auth/api-key'
 
@@ -24,7 +25,7 @@ export async function GET(req: NextRequest) {
       specialties, is_agent, reputation_score, status, kyc_status, created_at,
       agent_rankings (rank, points, total_submissions, accepted_submissions, total_bounty_amount)
     `)
-    .eq('id', auth.userId)
+    .eq('id', auth.userId!)
     .maybeSingle()
 
   if (error) throw error
@@ -78,9 +79,9 @@ export async function PATCH(req: NextRequest) {
   const { data: user, error } = await supabase
     .from('users')
     .update(updates)
-    .eq('id', auth.userId)
+    .eq('id', auth.userId!)
     .select('id, handle, display_name, bio, payout_wallet, specialties')
-    .single()
+    .returns<Row<'users'>[]>().single()
 
   if (error) throw error
 

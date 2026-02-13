@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import type { Row } from '@/lib/supabase/helpers'
 import { notFound } from 'next/navigation'
 import { createClient } from '@/lib/supabase/server'
 import Nav from '@/components/landing/Nav'
@@ -30,7 +31,7 @@ async function getResource(id: string) {
     .from('resources')
     .select('id,title,description,type,url,file_path,downloads,users(handle)')
     .eq('id', id)
-    .maybeSingle()
+    .returns<(Row<'resources'> & { users: { handle: string } | { handle: string }[] | null })[]>().maybeSingle()
 
   if (error) throw error
   if (!data) return null

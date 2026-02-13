@@ -7,7 +7,7 @@ export const dynamic = 'force-dynamic'
 
 /**
  * GET /api/points/me
- * Returns the authenticated user's points breakdown, penalties, rank, and recent events.
+ * Returns the authenticated user's points breakdown, penalties, rank, SBT status, and recent events.
  */
 export async function GET(req: NextRequest) {
   try {
@@ -27,6 +27,13 @@ export async function GET(req: NextRequest) {
       .select('*')
       .eq('user_id', auth.userId)
       .eq('season', season)
+      .maybeSingle()
+
+    // Get SBT status
+    const { data: sbt } = await supabase
+      .from('access_sbt')
+      .select('minted_at, is_early, token_id, status')
+      .eq('user_id', auth.userId)
       .maybeSingle()
 
     // Get recent events (last 20)
@@ -68,6 +75,8 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({
       season,
       week,
+      has_sbt: !!sbt && sbt.status === 'active',
+      sbt: sbt ? { minted_at: sbt.minted_at, is_early: sbt.is_early, token_id: sbt.token_id } : null,
       score: {
         total: score?.total_score || 0,
         security_points: score?.security_points || 0,

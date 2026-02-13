@@ -88,7 +88,7 @@ export const auditCatalog: AuditEntry[] = [
 // Stats computed from catalog
 export const auditStats = {
   total: auditCatalog.length,
-  protocols: [...new Set(auditCatalog.map(a => a.protocol))].length,
-  auditors: [...new Set(auditCatalog.map(a => a.auditor))].length,
-  categories: [...new Set(auditCatalog.map(a => a.category))],
+  protocols: Array.from(new Set(auditCatalog.map(a => a.protocol))).length,
+  auditors: Array.from(new Set(auditCatalog.map(a => a.auditor))).length,
+  categories: Array.from(new Set(auditCatalog.map(a => a.category))),
 }

@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
+import type { Row } from '@/lib/supabase/helpers'
 import { createClient } from '@/lib/supabase/admin'
 import { extractApiKey, verifyApiKey } from '@/lib/auth/api-key'
 
@@ -17,8 +18,8 @@ export async function GET(req: NextRequest, { params }: { params: { id: string }
     const { data: finding } = await supabase
       .from('findings')
       .select('id, protocol_id, researcher_id')
-      .eq('id', params.id)
-      .single()
+      .eq('id', params.id!)
+      .returns<Row<'findings'>[]>().single()
 
     if (!finding) return NextResponse.json({ error: 'Finding not found' }, { status: 404 })
 
@@ -26,9 +27,9 @@ export async function GET(req: NextRequest, { params }: { params: { id: string }
     const { data: member } = await supabase
       .from('protocol_members')
       .select('role')
-      .eq('protocol_id', finding.protocol_id)
-      .eq('user_id', auth.userId)
-      .maybeSingle()
+      .eq('protocol_id', finding.protocol_id!)
+      .eq('user_id', auth.userId!)
+      .returns<Row<'protocol_members'>[]>().maybeSingle()
 
     if (!isResearcher && !member) {
       return NextResponse.json({ error: 'Access denied' }, { status: 403 })
@@ -37,7 +38,7 @@ export async function GET(req: NextRequest, { params }: { params: { id: string }
     let query = supabase
       .from('finding_comments')
       .select('id, content, is_internal, created_at, user:user_id (id, handle, display_name)')
-      .eq('finding_id', params.id)
+      .eq('finding_id', params.id!)
       .order('created_at', { ascending: true })
 
     if (isResearcher && !member) {
@@ -72,8 +73,8 @@ export async function POST(req: NextRequest, { params }: { params: { id: string 
     const { data: finding } = await supabase
       .from('findings')
       .select('id, protocol_id, researcher_id')
-      .eq('id', params.id)
-      .single()
+      .eq('id', params.id!)
+      .returns<Row<'findings'>[]>().single()
 
     if (!finding) return NextResponse.json({ error: 'Finding not found' }, { status: 404 })
 
@@ -81,9 +82,9 @@ export async function POST(req: NextRequest, { params }: { params: { id: string 
     const { data: member } = await supabase
       .from('protocol_members')
       .select('role')
-      .eq('protocol_id', finding.protocol_id)
-      .eq('user_id', auth.userId)
-      .maybeSingle()
+      .eq('protocol_id', finding.protocol_id!)
+      .eq('user_id', auth.userId!)
+      .returns<Row<'protocol_members'>[]>().maybeSingle()
 
     if (!isResearcher && !member) {
       return NextResponse.json({ error: 'Access denied' }, { status: 403 })

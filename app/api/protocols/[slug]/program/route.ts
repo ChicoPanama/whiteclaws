@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
+import type { Row } from '@/lib/supabase/helpers'
 import { createClient } from '@/lib/supabase/admin'
 import { extractApiKey, verifyApiKey } from '@/lib/auth/api-key'
 
@@ -11,8 +12,8 @@ export async function GET(_req: NextRequest, { params }: { params: { slug: strin
     const { data: protocol } = await supabase
       .from('protocols')
       .select('id, slug, name')
-      .eq('slug', params.slug)
-      .maybeSingle()
+      .eq('slug', params.slug!)
+      .returns<Row<'protocols'>[]>().maybeSingle()
 
     if (!protocol) return NextResponse.json({ error: 'Protocol not found' }, { status: 404 })
 
@@ -22,7 +23,7 @@ export async function GET(_req: NextRequest, { params }: { params: { slug: strin
       .eq('protocol_id', protocol.id)
       .order('created_at', { ascending: false })
       .limit(1)
-      .maybeSingle()
+      .returns<Row<'programs'>[]>().maybeSingle()
 
     if (!program) return NextResponse.json({ error: 'No program found' }, { status: 404 })
 
@@ -50,8 +51,8 @@ export async function POST(req: NextRequest, { params }: { params: { slug: strin
     const { data: protocol } = await supabase
       .from('protocols')
       .select('id')
-      .eq('slug', params.slug)
-      .single()
+      .eq('slug', params.slug!)
+      .returns<Row<'protocols'>[]>().single()
 
     if (!protocol) return NextResponse.json({ error: 'Protocol not found' }, { status: 404 })
 
@@ -59,8 +60,8 @@ export async function POST(req: NextRequest, { params }: { params: { slug: strin
       .from('protocol_members')
       .select('role')
       .eq('protocol_id', protocol.id)
-      .eq('user_id', auth.userId)
-      .maybeSingle()
+      .eq('user_id', auth.userId!)
+      .returns<Row<'protocol_members'>[]>().maybeSingle()
 
     if (!member) return NextResponse.json({ error: 'Not a member' }, { status: 403 })
 
@@ -107,8 +108,8 @@ export async function PATCH(req: NextRequest, { params }: { params: { slug: stri
     const { data: protocol } = await supabase
       .from('protocols')
       .select('id')
-      .eq('slug', params.slug)
-      .single()
+      .eq('slug', params.slug!)
+      .returns<Row<'protocols'>[]>().single()
 
     if (!protocol) return NextResponse.json({ error: 'Protocol not found' }, { status: 404 })
 
@@ -116,8 +117,8 @@ export async function PATCH(req: NextRequest, { params }: { params: { slug: stri
       .from('protocol_members')
       .select('role')
       .eq('protocol_id', protocol.id)
-      .eq('user_id', auth.userId)
-      .maybeSingle()
+      .eq('user_id', auth.userId!)
+      .returns<Row<'protocol_members'>[]>().maybeSingle()
 
     if (!member) return NextResponse.json({ error: 'Not a member' }, { status: 403 })
 
@@ -142,7 +143,7 @@ export async function PATCH(req: NextRequest, { params }: { params: { slug: stri
       .select('id, status, max_payout, updated_at')
       .order('created_at', { ascending: false })
       .limit(1)
-      .single()
+      .returns<Row<'programs'>[]>().single()
 
     if (error) throw error
 

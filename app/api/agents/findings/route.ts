@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
+import type { Row } from '@/lib/supabase/helpers'
 import { createClient } from '@/lib/supabase/admin'
 import { extractApiKey, verifyApiKey } from '@/lib/auth/api-key'
 
@@ -31,7 +32,7 @@ export async function GET(req: NextRequest) {
       duplicate_of, poc_url,
       protocol:protocol_id (slug, name)
     `)
-    .eq('researcher_id', auth.userId)
+    .eq('researcher_id', auth.userId!)
     .order('created_at', { ascending: false })
     .limit(limit)
 

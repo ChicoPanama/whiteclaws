@@ -8,6 +8,7 @@
  */
 
 import { extractApiKey, verifyApiKey } from '@/lib/auth/api-key'
+import type { Row } from '@/lib/supabase/helpers'
 import { createClient as createAdminClient } from '@/lib/supabase/admin'
 
 export interface AuthenticatedAgent {
@@ -34,20 +35,20 @@ export async function authenticateAgent(req: Request): Promise<AuthenticatedAgen
   try {
     const supabase = createAdminClient()
     const { data: user, error } = await supabase
-      .from('users' as any)
+      .from('users')
       .select('id, handle, display_name, is_agent, reputation_score, status')
       .eq('id', auth.userId)
-      .single()
+      .returns<Row<'users'>[]>().single()
 
     if (error || !user) return null
     if (user.status !== 'active') return null
 
     return {
       id: user.id,
-      handle: user.handle,
+      handle: user.handle ?? '',
       display_name: user.display_name,
       is_agent: user.is_agent,
-      reputation_score: user.reputation_score,
+      reputation_score: user.reputation_score ?? 0,
       status: user.status,
       scopes: auth.scopes,
     }

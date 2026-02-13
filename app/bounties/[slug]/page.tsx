@@ -1,4 +1,5 @@
 import Nav from '@/components/landing/Nav'
+import type { Row } from '@/lib/supabase/helpers'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
 import { createClient } from '@/lib/supabase/admin'
@@ -13,7 +14,7 @@ async function getBountyDetail(slug: string) {
       .from('protocols')
       .select('id, slug, name, description, category, chains, max_bounty, logo_url, website_url, github_url')
       .eq('slug', slug)
-      .maybeSingle()
+      .returns<Row<'protocols'>[]>().maybeSingle()
 
     if (!protocol) return null
 
@@ -22,7 +23,7 @@ async function getBountyDetail(slug: string) {
       .select('*')
       .eq('protocol_id', protocol.id)
       .eq('status', 'active')
-      .maybeSingle()
+      .returns<Row<'programs'>[]>().maybeSingle()
 
     const { data: scope } = program ? await supabase
       .from('program_scopes')
@@ -30,7 +31,7 @@ async function getBountyDetail(slug: string) {
       .eq('program_id', program.id)
       .order('version', { ascending: false })
       .limit(1)
-      .maybeSingle() : { data: null }
+      .returns<Row<'program_scopes'>[]>().maybeSingle() : { data: null }
 
     const { count: totalFindings } = await supabase
       .from('findings')
@@ -139,7 +140,7 @@ export default async function BountyDetailPage({ params }: { params: { slug: str
             {scope.contracts && Array.isArray(scope.contracts) && scope.contracts.length > 0 && (
               <div style={{ marginBottom: '12px' }}>
                 <strong>Contracts:</strong>
-                {scope.contracts.map((c: { name?: string; address?: string; chain?: string }, i: number) => (
+                {(scope.contracts as Array<{ name?: string; address?: string; chain?: string }>).map((c, i: number) => (
                   <div key={i} style={{ padding: '6px', background: 'var(--bg-secondary, #111)', borderRadius: '4px', margin: '4px 0', fontSize: '13px' }}>
                     {c.name || 'Contract'} — <code>{c.address}</code> ({c.chain})
                   </div>
