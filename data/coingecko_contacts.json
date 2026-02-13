@@ -2295,5 +2295,127 @@
     "symbol": "zk",
     "market_cap_rank": 152,
     "source": "coingecko"
+  },
+  "astroport": {
+    "slug": "astroport",
+    "twitter": "@astroport_fi",
+    "telegram": "https://t.me/astroport_fi",
+    "telegram_handle": "astroport_fi",
+    "discord": "https://discord.com/invite/astroport",
+    "subreddit": "https://www.reddit.com/r/Astroport/",
+    "homepage": "https://astroport.fi/",
+    "github_repos": [
+      "https://github.com/astroport-fi"
+    ],
+    "source": "manual"
+  },
+  "connext": {
+    "slug": "connext",
+    "twitter": "@EverclearOrg",
+    "telegram": "https://t.me/EverclearCommunity",
+    "telegram_handle": "EverclearCommunity",
+    "discord": "https://discord.gg/everclear",
+    "homepage": "https://www.everclear.org/",
+    "github_repos": [
+      "https://github.com/everclearorg"
+    ],
+    "source": "manual"
+  },
+  "ghostmarket": {
+    "slug": "ghostmarket",
+    "twitter": "@ghostmarketio",
+    "telegram": "https://t.me/ghostmarketio",
+    "telegram_handle": "ghostmarketio",
+    "discord": "https://discord.com/invite/THHTS4F",
+    "subreddit": "https://www.reddit.com/r/ghostmarket/",
+    "homepage": "https://ghostmarket.io/",
+    "github_repos": [
+      "https://github.com/OnBlockIO"
+    ],
+    "source": "manual"
+  },
+  "ichi": {
+    "slug": "ichi",
+    "twitter": "@ichifoundation",
+    "telegram": "https://t.me/ichifarm",
+    "telegram_handle": "ichifarm",
+    "discord": "https://discord.gg/9Vu6CDPZZv",
+    "homepage": "https://www.ichi.org/",
+    "github_repos": [
+      "https://github.com/ichifarm"
+    ],
+    "source": "manual"
+  },
+  "idlefinance": {
+    "slug": "idlefinance",
+    "twitter": "@idlefinance",
+    "telegram": "https://t.me/idlefinance",
+    "telegram_handle": "idlefinance",
+    "discord": "https://discord.gg/mpySAJp",
+    "homepage": "https://idle.finance/",
+    "github_repos": [
+      "https://github.com/Idle-Finance"
+    ],
+    "source": "manual"
+  },
+  "poolshark": {
+    "slug": "poolshark",
+    "twitter": "@PoolsharkLabs",
+    "discord": "https://discord.com/invite/HJhrD9sZ6K",
+    "homepage": "https://www.poolshark.fi/",
+    "github_repos": [
+      "https://github.com/poolshark-protocol"
+    ],
+    "source": "manual"
+  },
+  "segmentfinance": {
+    "slug": "segmentfinance",
+    "twitter": "@segment_fi",
+    "telegram": "https://t.me/segmentfi",
+    "telegram_handle": "segmentfi",
+    "discord": "https://discord.com/invite/sNkaUFmxSb",
+    "homepage": "https://app.segment.finance/",
+    "github_repos": [
+      "https://github.com/Segment-Finance"
+    ],
+    "source": "manual"
+  },
+  "shellprotocol": {
+    "slug": "shellprotocol",
+    "twitter": "@ShellProtocol",
+    "telegram": "https://t.me/shellprotocol",
+    "telegram_handle": "shellprotocol",
+    "discord": "https://discord.gg/shell-protocol",
+    "homepage": "https://shellprotocol.io/",
+    "github_repos": [
+      "https://github.com/cowri",
+      "https://github.com/Shell-Protocol"
+    ],
+    "source": "manual"
+  },
+  "vaultcraft": {
+    "slug": "vaultcraft",
+    "twitter": "@VaultCraft_io",
+    "telegram": "https://t.me/popcorndaochat",
+    "telegram_handle": "popcorndaochat",
+    "discord": "https://discord.com/invite/kgCun7SbkR",
+    "homepage": "https://app.vaultcraft.io/",
+    "github_repos": [
+      "https://github.com/Popcorn-Limited",
+      "https://github.com/VaultCraft"
+    ],
+    "source": "manual"
+  },
+  "wepiggy": {
+    "slug": "wepiggy",
+    "twitter": "@wepiggydotcom",
+    "telegram": "https://t.me/wepiggy",
+    "telegram_handle": "wepiggy",
+    "discord": "https://discord.com/invite/pew9k58",
+    "homepage": "https://www.wepiggy.com/",
+    "github_repos": [
+      "https://github.com/WePiggy"
+    ],
+    "source": "manual"
   }
 }
