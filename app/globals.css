@@ -2010,71 +2010,314 @@ a { color: inherit; text-decoration: none; }
 
 /* ─── ENRICHMENT SECTION ─── */
 .pd-enrich {
-  border: 1px solid var(--border);
+  border: 1px solid var(--brand-border, var(--border));
   border-radius: 14px;
-  padding: 20px 22px;
+  padding: 22px 24px;
   background: var(--surface);
+  position: relative;
+  overflow: hidden;
 }
 
-.pd-enrich-group {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  padding: 8px 0;
+.pd-enrich-glow {
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: var(--brand, var(--green));
+  opacity: 0.04;
+  filter: blur(50px);
+  pointer-events: none;
+  animation: enrichGlow 4s ease-in-out infinite;
 }
 
-.pd-enrich-group + .pd-enrich-group {
-  border-top: 1px solid var(--border);
+@keyframes enrichGlow {
+  0%, 100% { opacity: 0.03; transform: scale(1); }
+  50% { opacity: 0.06; transform: scale(1.15); }
+}
+
+.pd-enrich .pd-heading {
+  position: relative;
 }
 
 .pd-enrich-label {
   font-family: var(--fm);
-  font-size: .6rem;
+  font-size: .58rem;
   font-weight: 600;
-  letter-spacing: .04em;
+  letter-spacing: .06em;
   text-transform: uppercase;
-  color: var(--dim);
-  min-width: 70px;
-  padding-top: 4px;
-  flex-shrink: 0;
+  color: var(--muted);
+  margin-bottom: 10px;
+  display: block;
 }
 
-.pd-links {
+.pd-enrich-sublabel {
+  font-family: var(--fm);
+  font-size: .58rem;
+  font-weight: 500;
+  color: var(--dim);
+  display: block;
+  margin-bottom: 6px;
+}
+
+.pd-enrich-block {
+  padding-top: 16px;
+  margin-top: 16px;
+  border-top: 1px solid var(--border);
+}
+
+/* ─── Social cards row ─── */
+.pd-enrich-row {
   display: flex;
+  gap: 8px;
   flex-wrap: wrap;
+}
+
+.pd-social-card {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 10px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  text-decoration: none;
+  transition: all .25s cubic-bezier(.4,0,.2,1);
+  flex: 1;
+  min-width: 110px;
+}
+
+.pd-social-card:hover {
+  border-color: var(--brand-border, var(--border-2));
+  background: var(--brand-surface, var(--surface-2));
+  transform: translateY(-1px);
+  box-shadow: 0 4px 20px rgba(0,0,0,.3);
+}
+
+.pd-social-icon {
+  font-size: .9rem;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: var(--surface-2);
+  flex-shrink: 0;
+  transition: background .25s;
+}
+
+.pd-social-card:hover .pd-social-icon {
+  background: var(--brand-border, var(--border-2));
+}
+
+.pd-social-name {
+  font-family: var(--fm);
+  font-size: .72rem;
+  font-weight: 600;
+  color: var(--ink-2);
+  flex: 1;
+  transition: color .25s;
+}
+
+.pd-social-card:hover .pd-social-name {
+  color: var(--brand, var(--ink));
+}
+
+.pd-social-arrow {
+  font-size: .7rem;
+  color: var(--dim);
+  transition: all .25s;
+}
+
+.pd-social-card:hover .pd-social-arrow {
+  color: var(--brand, var(--green));
+  transform: translate(2px, -2px);
+}
+
+/* Rank card variant */
+.pd-rank-card {
+  cursor: default;
+  border-color: var(--brand-border, rgba(137,224,109,.15));
+}
+
+.pd-rank-value {
+  font-family: var(--fm);
+  font-size: .82rem;
+  font-weight: 700;
+  color: var(--brand, var(--green));
+  font-variant-numeric: tabular-nums;
+}
+
+/* ─── Resource links grid ─── */
+.pd-resource-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: 6px;
 }
 
-.pd-link {
+.pd-resource-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all .2s;
+  color: var(--ink-2);
+}
+
+.pd-resource-link:hover {
+  background: var(--surface-2);
+  color: var(--brand, var(--ink));
+}
+
+.pd-resource-icon {
+  font-size: .7rem;
+  width: 20px;
+  text-align: center;
+  flex-shrink: 0;
+  opacity: 0.6;
+}
+
+.pd-resource-link:hover .pd-resource-icon {
+  opacity: 1;
+}
+
+.pd-resource-name {
   font-family: var(--fm);
-  font-size: .62rem;
+  font-size: .68rem;
   font-weight: 500;
-  letter-spacing: .02em;
-  padding: 3px 10px;
+  flex: 1;
+}
+
+.pd-resource-arrow {
+  font-size: .6rem;
+  color: var(--dim);
+  opacity: 0;
+  transform: translate(-4px, 0);
+  transition: all .2s;
+}
+
+.pd-resource-link:hover .pd-resource-arrow {
+  opacity: 1;
+  transform: translate(0, 0);
+  color: var(--brand, var(--green));
+}
+
+/* ─── Auditor chips ─── */
+.pd-auditor-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.pd-auditor-chip {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--fm);
+  font-size: .64rem;
+  font-weight: 500;
+  padding: 5px 12px;
   border-radius: 100px;
   background: var(--bg);
   color: var(--ink-2);
   border: 1px solid var(--border);
-  white-space: nowrap;
   transition: all .2s;
-  text-decoration: none;
 }
 
-.pd-link:hover {
+.pd-auditor-chip:hover {
   border-color: var(--brand-border, var(--border-2));
-  color: var(--brand, var(--ink));
 }
 
-.pd-contacts {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
+.pd-auditor-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--brand, var(--green));
+  flex-shrink: 0;
+  animation: auditPulse 2.5s ease-in-out infinite;
 }
 
-.pd-auditors {
+@keyframes auditPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.pd-audit-reports {
+  padding-top: 8px;
+}
+
+.pd-audit-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
+  gap: 4px;
+}
+
+.pd-audit-link {
+  font-family: var(--fm);
+  font-size: .58rem;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: 100px;
+  color: var(--muted);
+  text-decoration: none;
+  transition: all .2s;
+  border: 1px solid transparent;
+}
+
+.pd-audit-link:hover {
+  color: var(--brand, var(--green));
+  border-color: var(--brand-border, var(--border));
+  background: var(--bg);
+}
+
+/* ─── Contact cards ─── */
+.pd-contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 8px;
+}
+
+.pd-contact-card {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  text-decoration: none;
+  transition: all .2s;
+}
+
+.pd-contact-card:hover {
+  border-color: var(--brand-border, var(--border-2));
+  background: var(--surface-2);
+}
+
+.pd-contact-type {
+  font-family: var(--fm);
+  font-size: .56rem;
+  font-weight: 600;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--dim);
+}
+
+.pd-contact-email {
+  font-family: var(--fm);
+  font-size: .7rem;
+  font-weight: 500;
+  color: var(--ink-2);
+  transition: color .2s;
+}
+
+.pd-contact-card:hover .pd-contact-email {
+  color: var(--brand, var(--green));
 }
 
 /* ─── CTA BUTTONS ─── */
@@ -2291,6 +2534,11 @@ a { color: inherit; text-decoration: none; }
   .pd-contract-addr {
     max-width: 200px;
   }
+
+  .pd-enrich { padding: 16px 18px; }
+  .pd-social-card { min-width: 90px; padding: 8px 12px; }
+  .pd-resource-grid { grid-template-columns: 1fr 1fr; }
+  .pd-contact-grid { grid-template-columns: 1fr; }
 
   .pd-meta {
     flex-direction: column;

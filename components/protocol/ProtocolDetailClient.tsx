@@ -300,21 +300,21 @@ export default function ProtocolDetailClient({
           return `https://x.com/${handle.replace(/^@/, '')}`
         }
 
-        const socials: { label: string; url: string }[] = []
-        if (str('twitter')) socials.push({ label: '𝕏 Twitter', url: twitterUrl(str('twitter')!) })
-        if (str('discord')) socials.push({ label: 'Discord', url: str('discord')! })
-        if (str('telegram')) socials.push({ label: 'Telegram', url: str('telegram')! })
-        if (str('reddit_url')) socials.push({ label: 'Reddit', url: str('reddit_url')! })
+        const socials: { label: string; url: string; icon: string }[] = []
+        if (str('twitter')) socials.push({ label: 'Twitter', url: twitterUrl(str('twitter')!), icon: '𝕏' })
+        if (str('discord')) socials.push({ label: 'Discord', url: str('discord')!, icon: '💬' })
+        if (str('telegram')) socials.push({ label: 'Telegram', url: str('telegram')!, icon: '✈' })
+        if (str('reddit_url')) socials.push({ label: 'Reddit', url: str('reddit_url')!, icon: '◉' })
 
-        const resources: { label: string; url: string }[] = []
-        if (str('website_url')) resources.push({ label: 'Website', url: str('website_url')! })
-        if (str('docs_url')) resources.push({ label: 'Docs', url: str('docs_url')! })
-        if (str('developer_docs_url')) resources.push({ label: 'Dev Docs', url: str('developer_docs_url')! })
-        if (str('github_url')) resources.push({ label: 'GitHub', url: str('github_url')! })
-        if (str('whitepaper_url')) resources.push({ label: 'Whitepaper', url: str('whitepaper_url')! })
-        if (str('blog_url')) resources.push({ label: 'Blog', url: str('blog_url')! })
-        if (str('status_page_url')) resources.push({ label: 'Status', url: str('status_page_url')! })
-        if (str('bounty_policy_url')) resources.push({ label: 'Bounty Policy', url: str('bounty_policy_url')! })
+        const resources: { label: string; url: string; icon: string }[] = []
+        if (str('website_url')) resources.push({ label: 'Website', url: str('website_url')!, icon: '◆' })
+        if (str('docs_url')) resources.push({ label: 'Docs', url: str('docs_url')!, icon: '📄' })
+        if (str('developer_docs_url')) resources.push({ label: 'Dev Docs', url: str('developer_docs_url')!, icon: '⚙' })
+        if (str('github_url')) resources.push({ label: 'GitHub', url: str('github_url')!, icon: '⌥' })
+        if (str('whitepaper_url')) resources.push({ label: 'Whitepaper', url: str('whitepaper_url')!, icon: '📑' })
+        if (str('blog_url')) resources.push({ label: 'Blog', url: str('blog_url')!, icon: '✎' })
+        if (str('status_page_url')) resources.push({ label: 'Status', url: str('status_page_url')!, icon: '●' })
+        if (str('bounty_policy_url')) resources.push({ label: 'Bounty Policy', url: str('bounty_policy_url')!, icon: '🛡' })
 
         const emails: { label: string; email: string }[] = []
         if (str('security_email')) emails.push({ label: 'Security', email: str('security_email')! })
@@ -332,63 +332,84 @@ export default function ProtocolDetailClient({
 
         return (
           <section className="pd-section pd-enrich">
+            <div className="pd-enrich-glow" />
             <h2 className="pd-heading"><span className="pd-num">★</span>Protocol Info</h2>
 
-            {socials.length > 0 && (
-              <div className="pd-enrich-group">
-                <span className="pd-enrich-label">Social</span>
-                <div className="pd-links">
-                  {socials.map(s => (
-                    <a key={s.label} href={s.url} target="_blank" rel="noopener noreferrer" className="pd-link">{s.label} ↗</a>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            {resources.length > 0 && (
-              <div className="pd-enrich-group">
-                <span className="pd-enrich-label">Resources</span>
-                <div className="pd-links">
-                  {resources.map(r => (
-                    <a key={r.label} href={r.url} target="_blank" rel="noopener noreferrer" className="pd-link">{r.label} ↗</a>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            {emails.length > 0 && (
-              <div className="pd-enrich-group">
-                <span className="pd-enrich-label">Contacts</span>
-                <div className="pd-contacts">
-                  {emails.map(e => (
-                    <a key={e.label} href={`mailto:${e.email}`} className="pd-link">{e.label}: {e.email}</a>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            {auditorList.length > 0 && (
-              <div className="pd-enrich-group">
-                <span className="pd-enrich-label">Auditors</span>
-                <div className="pd-auditors">
-                  {auditorList.map(a => (
-                    <span key={a} className="pd-badge">{a}</span>
-                  ))}
-                </div>
-                {auditUrls.length > 0 && (
-                  <div className="pd-links" style={{ marginTop: 6 }}>
-                    {auditUrls.map((url, i) => (
-                      <a key={i} href={url} target="_blank" rel="noopener noreferrer" className="pd-link">Audit Report {auditUrls.length > 1 ? `#${i + 1}` : ''} ↗</a>
-                    ))}
+            {/* Social + Market row */}
+            {(socials.length > 0 || marketCapRank) && (
+              <div className="pd-enrich-row">
+                {socials.map(s => (
+                  <a key={s.label} href={s.url} target="_blank" rel="noopener noreferrer" className="pd-social-card">
+                    <span className="pd-social-icon">{s.icon}</span>
+                    <span className="pd-social-name">{s.label}</span>
+                    <span className="pd-social-arrow">↗</span>
+                  </a>
+                ))}
+                {marketCapRank && (
+                  <div className="pd-social-card pd-rank-card">
+                    <span className="pd-social-icon">📊</span>
+                    <span className="pd-social-name">Rank</span>
+                    <span className="pd-rank-value">#{marketCapRank}</span>
                   </div>
                 )}
               </div>
             )}
 
-            {marketCapRank && (
-              <div className="pd-enrich-group">
-                <span className="pd-enrich-label">Market</span>
-                <span className="pd-badge brand">CoinGecko Rank #{marketCapRank}</span>
+            {/* Resources grid */}
+            {resources.length > 0 && (
+              <div className="pd-enrich-block">
+                <span className="pd-enrich-label">Resources</span>
+                <div className="pd-resource-grid">
+                  {resources.map(r => (
+                    <a key={r.label} href={r.url} target="_blank" rel="noopener noreferrer" className="pd-resource-link">
+                      <span className="pd-resource-icon">{r.icon}</span>
+                      <span className="pd-resource-name">{r.label}</span>
+                      <span className="pd-resource-arrow">↗</span>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Auditors */}
+            {auditorList.length > 0 && (
+              <div className="pd-enrich-block">
+                <span className="pd-enrich-label">Audited By</span>
+                <div className="pd-auditor-grid">
+                  {auditorList.map(a => (
+                    <div key={a} className="pd-auditor-chip">
+                      <span className="pd-auditor-dot" />
+                      {a}
+                    </div>
+                  ))}
+                </div>
+                {auditUrls.length > 0 && (
+                  <div className="pd-audit-reports">
+                    <span className="pd-enrich-sublabel">{auditUrls.length} Audit Report{auditUrls.length > 1 ? 's' : ''}</span>
+                    <div className="pd-audit-links">
+                      {auditUrls.map((url, i) => (
+                        <a key={i} href={url} target="_blank" rel="noopener noreferrer" className="pd-audit-link">
+                          Report #{i + 1} ↗
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            )}
+
+            {/* Contacts */}
+            {emails.length > 0 && (
+              <div className="pd-enrich-block">
+                <span className="pd-enrich-label">Security Contacts</span>
+                <div className="pd-contact-grid">
+                  {emails.map(e => (
+                    <a key={e.label} href={`mailto:${e.email}`} className="pd-contact-card">
+                      <span className="pd-contact-type">{e.label}</span>
+                      <span className="pd-contact-email">{e.email}</span>
+                    </a>
+                  ))}
+                </div>
               </div>
             )}
           </section>
