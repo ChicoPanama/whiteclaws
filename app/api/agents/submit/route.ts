@@ -93,7 +93,7 @@ export async function POST(req: NextRequest) {
     const { data: recentSubmission } = await supabase
       .from('findings')
       .select('id, created_at')
-      .eq('researcher_id', auth.userId)
+      .eq('researcher_id', auth.userId!)
       .eq('protocol_id', protocol.id)
       .gte('created_at', cooldownDate)
       .limit(1)
@@ -112,7 +112,7 @@ export async function POST(req: NextRequest) {
       .insert({
         protocol_id: protocol.id,
         program_id: program.id,
-        researcher_id: auth.userId,
+        researcher_id: auth.userId!,
         title,
         severity,
         description: description || null,
@@ -129,7 +129,7 @@ export async function POST(req: NextRequest) {
 
     // ── 4. Award points ──
     // Get wallet address for points
-    const { data: userRow } = await supabase.from('users').select('wallet_address').eq('id', auth.userId).single()
+    const { data: userRow } = await supabase.from('users').select('wallet_address').eq('id', auth.userId!).single()
     const walletAddr = userRow?.wallet_address || undefined
     const pointsAwarded: Array<{ event: string; points: number }> = []
 

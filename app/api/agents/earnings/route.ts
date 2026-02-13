@@ -16,6 +16,16 @@ export async function GET(req: NextRequest) {
 
   const supabase = createClient()
 
+  interface EarningsFinding {
+    id: string
+    severity: string
+    status: string
+    payout_amount: number | null
+    payout_currency: string | null
+    paid_at: string | null
+    protocol: { slug: string; name: string } | null
+  }
+
   const { data: findings, error } = await supabase
     .from('findings')
     .select(`
@@ -24,6 +34,7 @@ export async function GET(req: NextRequest) {
     `)
     .eq('researcher_id', auth.userId)
     .in('status', ['accepted', 'paid'])
+    .returns<EarningsFinding[]>()
 
   if (error) throw error
 

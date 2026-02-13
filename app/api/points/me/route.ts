@@ -2,6 +2,9 @@ import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@/lib/supabase/admin'
 import { extractApiKey, verifyApiKey } from '@/lib/auth/api-key'
 import { getCurrentSeason, getCurrentWeek, WEEKLY_CAP, TIER_WEIGHTS } from '@/lib/services/points-engine'
+import type { Database } from '@/lib/supabase/database.types'
+
+type ContributionScore = Database['public']['Tables']['contribution_scores']['Row']
 
 export const dynamic = 'force-dynamic'
 
@@ -25,22 +28,22 @@ export async function GET(req: NextRequest) {
     const { data: score } = await supabase
       .from('contribution_scores')
       .select('*')
-      .eq('user_id', auth.userId)
+      .eq('user_id', auth.userId!)
       .eq('season', season)
-      .maybeSingle()
+      .maybeSingle() as { data: ContributionScore | null }
 
     // Get SBT status
     const { data: sbt } = await supabase
       .from('access_sbt')
       .select('minted_at, is_early, token_id, status')
-      .eq('user_id', auth.userId)
+      .eq('user_id', auth.userId!)
       .maybeSingle()
 
     // Get recent events (last 20)
     const { data: events } = await supabase
       .from('participation_events')
       .select('event_type, points, metadata, created_at')
-      .eq('user_id', auth.userId)
+      .eq('user_id', auth.userId!)
       .eq('season', season)
       .order('created_at', { ascending: false })
       .limit(20)
@@ -49,7 +52,7 @@ export async function GET(req: NextRequest) {
     const { data: weekEvents } = await supabase
       .from('participation_events')
       .select('points')
-      .eq('user_id', auth.userId)
+      .eq('user_id', auth.userId!)
       .eq('season', season)
       .eq('week', week)
       .gt('points', 0)
@@ -60,7 +63,7 @@ export async function GET(req: NextRequest) {
     const { count: spamFlags } = await supabase
       .from('spam_flags')
       .select('id', { count: 'exact', head: true })
-      .eq('user_id', auth.userId)
+      .eq('user_id', auth.userId!)
 
     // Get rank (count users with higher score)
     const userScore = score?.total_score || 0

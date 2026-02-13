@@ -10,6 +10,7 @@
  */
 
 import { createClient } from '@/lib/supabase/admin';
+import type { Json } from '@/lib/supabase/database.types';
 
 // ── Point values ──
 // Tier 1: Security (highest weight)
@@ -244,7 +245,7 @@ export async function flagSpam(params: {
     flag_type: params.flag_type,
     severity,
     points_deducted: pointsDeducted,
-    metadata: params.metadata || {},
+    metadata: (params.metadata || {}) as Json,
     finding_id: params.finding_id || null,
   });
 

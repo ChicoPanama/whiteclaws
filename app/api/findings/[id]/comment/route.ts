@@ -35,6 +35,11 @@ export async function GET(req: NextRequest, { params }: { params: { id: string }
       return NextResponse.json({ error: 'Access denied' }, { status: 403 })
     }
 
+    interface CommentWithUser {
+      id: string; content: string; is_internal: boolean; created_at: string
+      user: { id: string; handle: string; display_name: string | null } | null
+    }
+
     let query = supabase
       .from('finding_comments')
       .select('id, content, is_internal, created_at, user:user_id (id, handle, display_name)')
@@ -45,7 +50,7 @@ export async function GET(req: NextRequest, { params }: { params: { id: string }
       query = query.eq('is_internal', false)
     }
 
-    const { data: comments, error } = await query
+    const { data: comments, error } = await query.returns<CommentWithUser[]>()
     if (error) throw error
 
     return NextResponse.json({ comments: comments || [] })
@@ -96,7 +101,7 @@ export async function POST(req: NextRequest, { params }: { params: { id: string 
       .from('finding_comments')
       .insert({
         finding_id: params.id,
-        user_id: auth.userId,
+        user_id: auth.userId!,
         content: body.content,
         is_internal: isInternal,
       })

@@ -149,7 +149,9 @@ export default function SubmitPage() {
           severity: formData.severity,
           encrypted_report_url: 'supabase://encrypted-reports/' + Date.now(),
           status: 'submitted',
-          metadata: {
+          researcher_id: user?.id || '',
+          submission_source: 'whiteclaws',
+          encrypted_report: {
             protocol_slug: protocolSlug,
             encrypted_nonce: encrypted.nonce,
             sender_public_key: senderPublicKey,

@@ -170,7 +170,29 @@ export interface Database {
         }
         Insert: Partial<Database['public']['Tables']['findings']['Row']> & { researcher_id: string; title: string; severity: string }
         Update: Partial<Database['public']['Tables']['findings']['Row']>
-        Relationships: []
+        Relationships: [
+          {
+            foreignKeyName: "findings_protocol_id_fkey",
+            columns: ["protocol_id"],
+            referencedRelation: "protocols",
+            referencedColumns: ["id"],
+            isOneToOne: false
+          },
+          {
+            foreignKeyName: "findings_researcher_id_fkey",
+            columns: ["researcher_id"],
+            referencedRelation: "users",
+            referencedColumns: ["id"],
+            isOneToOne: false
+          },
+          {
+            foreignKeyName: "findings_program_id_fkey",
+            columns: ["program_id"],
+            referencedRelation: "programs",
+            referencedColumns: ["id"],
+            isOneToOne: false
+          }
+        ]
       }
       messages: {
         Row: {
@@ -226,7 +248,22 @@ export interface Database {
         }
         Insert: Partial<Database['public']['Tables']['finding_comments']['Row']> & { finding_id: string; user_id: string; content: string }
         Update: Partial<Database['public']['Tables']['finding_comments']['Row']>
-        Relationships: []
+        Relationships: [
+          {
+            foreignKeyName: "finding_comments_finding_id_fkey",
+            columns: ["finding_id"],
+            referencedRelation: "findings",
+            referencedColumns: ["id"],
+            isOneToOne: false
+          },
+          {
+            foreignKeyName: "finding_comments_user_id_fkey",
+            columns: ["user_id"],
+            referencedRelation: "users",
+            referencedColumns: ["id"],
+            isOneToOne: false
+          }
+        ]
       }
       api_keys: {
         Row: {

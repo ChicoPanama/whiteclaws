@@ -149,6 +149,7 @@ export async function applyReferralCode(
       referrer_id: link.referrer_id,
       referred_id: referredUserId,
       status: 'pending',
+      season: 1,
     }))
 
   if (error) {
