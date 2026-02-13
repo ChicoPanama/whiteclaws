@@ -171,6 +171,9 @@
       "page:/security"
     ],
     "docs_url": "https://docs.alephzero.org",
+    "auditors": [
+      "Kudelski"
+    ],
     "bounty_policy_url": "https://alephzero.org/security",
     "twitter": "@Aleph__Zero",
     "discord": "https://discord.gg/alephzero",
@@ -187,5 +190,6633 @@
     ],
     "docs_url": "https://docs.alexlab.co",
     "bounty_policy_url": "https://alexlab.co/security"
+  },
+  "aloeprotocol": {
+    "slug": "aloeprotocol",
+    "website": "https://aloe.capital",
+    "source": [
+      "docs_subdomain"
+    ],
+    "docs_url": "https://docs.aloe.capital"
+  },
+  "alongside": {
+    "slug": "alongside",
+    "website": "https://alongside.xyz",
+    "source": [
+      "website_footer",
+      "docs_links"
+    ],
+    "twitter": "@alongsidefi",
+    "contact_email": "Institutional@alongside.xyz",
+    "docs_url": "https://docs.amktdao.com/amkt-documentation/",
+    "whitepaper_url": "https://alongside.xyz/docs/whitepaper.pdf",
+    "auditors": [
+      "Immunefi"
+    ],
+    "bounty_policy_url": "https://immunefi.com/bounty/alongside/",
+    "chains_mentioned": [
+      "Ethereum",
+      "Base",
+      "Mode"
+    ]
+  },
+  "alpacafinance": {
+    "slug": "alpacafinance",
+    "website": "https://alpacafinance.org",
+    "source": []
+  },
+  "alpen-labs": {
+    "slug": "alpen-labs",
+    "website": "https://alpenlabs.io",
+    "source": [
+      "security.txt",
+      "website_footer",
+      "docs_links"
+    ],
+    "security_page_url": "https://github.com/alpenlabs/alpen/issues",
+    "preferred_languages": "en",
+    "twitter": "@AlpenLabs",
+    "discord": "https://discord.gg/alpen",
+    "telegram": "https://t.me/AlpenOfficial",
+    "docs_url": "https://docs.alpenlabs.io/",
+    "whitepaper_url": "https://github.com/alpenlabs/Technical-Whitepaper/blob/main/whitepaper_v085.pdf",
+    "chains_mentioned": [
+      "Scroll"
+    ]
+  },
+  "alphaventuredao": {
+    "slug": "alphaventuredao",
+    "website": "https://alpha.wtf",
+    "source": [
+      "website_body",
+      "meta_tags"
+    ],
+    "twitter": "@AlphaOnBitcoin",
+    "og_site_name": "Alpha",
+    "chains_mentioned": [
+      "Blast"
+    ]
+  },
+  "ambire": {
+    "slug": "ambire",
+    "website": "https://ambire.com",
+    "source": [
+      "security.txt",
+      "website_footer"
+    ],
+    "preferred_languages": "en",
+    "security_policy_url": "https://www.ambire.com/Ambire%20ToS%20and%20PP%20(26%20November%202021).pdf",
+    "security_email": "security@ambire.com",
+    "twitter": "@ambire",
+    "telegram": "https://t.me/AmbireOfficial",
+    "github": "https://github.com/AmbireTech",
+    "reddit": "https://www.reddit.com/r/Ambire_Wallet",
+    "audit_report_urls": [
+      "https://github.com/AmbireTech/ambire-common/tree/v2/audits"
+    ],
+    "chains_mentioned": [
+      "Ethereum",
+      "Arbitrum",
+      "Optimism",
+      "Polygon",
+      "Base",
+      "BNB Chain",
+      "Solana",
+      "Gnosis",
+      "Linea",
+      "Scroll",
+      "Mantle"
+    ]
+  },
+  "angleprotocol": {
+    "slug": "angleprotocol",
+    "website": "https://app.angle.money",
+    "source": [
+      "meta_tags",
+      "docs_subdomain",
+      "status_subdomain",
+      "page:/security"
+    ],
+    "twitter": "@angleProtocol",
+    "og_site_name": "Angle App",
+    "docs_url": "https://docs.angle.money",
+    "status_page_url": "https://status.angle.money",
+    "bounty_policy_url": "https://app.angle.money/security"
+  },
+  "ankr": {
+    "slug": "ankr",
+    "website": "https://ankr.com",
+    "source": [
+      "website_footer",
+      "meta_tags",
+      "docs_subdomain",
+      "status_subdomain"
+    ],
+    "twitter": "@ankr",
+    "telegram": "https://t.me/ankrnetwork",
+    "github": "https://github.com/Ankr-network",
+    "reddit": "https://www.reddit.com/r/Ankrofficial",
+    "contact_email": "info@ankr.com",
+    "og_site_name": "Ankr",
+    "chains_mentioned": [
+      "Ethereum",
+      "Arbitrum",
+      "Optimism",
+      "Polygon",
+      "Avalanche",
+      "BNB Chain",
+      "Mantle",
+      "Mode"
+    ],
+    "docs_url": "https://docs.ankr.com",
+    "status_page_url": "https://status.ankr.com"
+  },
+  "antefinance": {
+    "slug": "antefinance",
+    "website": "https://ante.finance",
+    "source": [
+      "website_footer",
+      "meta_tags",
+      "docs_links"
+    ],
+    "twitter": "@AnteFinance",
+    "discord": "https://discord.gg/ante",
+    "github": "https://github.com/antefinance",
+    "blog": "https://medium.com/ante-finance",
+    "og_site_name": "Ante",
+    "docs_url": "https://docs.ante.finance/ante-v06/",
+    "developer_docs_url": "https://ante.finance/for-developers",
+    "whitepaper_url": "https://ante.finance/s/litepaper.pdf",
+    "audit_report_urls": [
+      "https://github.com/antefinance/ante-v05-core/tree/v0.5/audit"
+    ],
+    "chains_mentioned": [
+      "Mode"
+    ]
+  },
+  "anvil": {
+    "slug": "anvil",
+    "website": "https://anvil.xyz",
+    "source": [
+      "docs_subdomain",
+      "page:/security"
+    ],
+    "chains_mentioned": [
+      "Ethereum"
+    ],
+    "docs_url": "https://docs.anvil.xyz",
+    "bounty_policy_url": "https://anvil.xyz/security"
+  },
+  "apecoinmainnet": {
+    "slug": "apecoinmainnet",
+    "website": "https://apechain.com",
+    "source": [
+      "website_footer",
+      "docs_links"
+    ],
+    "twitter": "@apecoin",
+    "discord": "https://discord.gg/apecoindao",
+    "telegram": "https://t.me/apechainofficial",
+    "docs_url": "https://docs.apechain.com/",
+    "chains_mentioned": [
+      "Ethereum",
+      "Arbitrum",
+      "Polygon",
+      "Base",
+      "Solana"
+    ]
+  },
+  "arbitrum": {
+    "slug": "arbitrum",
+    "website": "https://arbitrum.foundation",
+    "source": [
+      "website_footer",
+      "meta_tags",
+      "docs_links"
+    ],
+    "twitter": "@arbitrum",
+    "discord": "https://discord.gg/arbitrum",
+    "blog": "https://blog.arbitrum.foundation",
+    "og_site_name": "Arbitrum Foundation",
+    "docs_url": "https://docs.arbitrum.foundation/gentle-intro-dao-governance",
+    "developer_docs_url": "https://developer.arbitrum.io",
+    "chains_mentioned": [
+      "Ethereum",
+      "Arbitrum"
+    ]
+  },
+  "arborfinance": {
+    "slug": "arborfinance",
+    "website": "https://arbor.finance",
+    "source": [
+      "website_footer",
+      "meta_tags",
+      "docs_subdomain"
+    ],
+    "github": "https://github.com/alwaysbegrowing",
+    "blog": "https://blog.arbor.finance",
+    "twitter": "@arborfinance",
+    "audit_report_urls": [
+      "https://github.com/alwaysbegrowing/arbor-contracts/blob/main/audits/previously-porter-finance-spearbit-audit.pdf",
+      "https://github.com/alwaysbegrowing/arbor-contracts/blob/main/audits/previously-porter-finance-zellic-audit.pdf"
+    ],
+    "auditors": [
+      "Spearbit",
+      "Immunefi",
+      "Zellic"
+    ],
+    "chains_mentioned": [
+      "Ethereum"
+    ],
+    "docs_url": "https://docs.arbor.finance"
+  },
+  "arcade": {
+    "slug": "arcade",
+    "website": "https://arcade.xyz",
+    "source": [
+      "website_footer",
+      "docs_links"
+    ],
+    "twitter": "@arcade_xyz",
+    "github": "https://github.com/arcadexyz",
+    "docs_url": "https://docs.arcade.xyz/docs/introducing-arcadexyz",
+    "chains_mentioned": [
+      "Ethereum"
+    ]
+  },
+  "arkham": {
+    "slug": "arkham",
+    "website": "https://arkhamintelligence.com",
+    "source": [],
+    "chains_mentioned": [
+      "Ethereum",
+      "Arbitrum",
+      "Optimism",
+      "Base",
+      "Avalanche",
+      "Solana",
+      "Scroll",
+      "Sui",
+      "Mantle"
+    ]
+  },
+  "aspida": {
+    "slug": "aspida",
+    "website": "https://aspidanet.com",
+    "source": [
+      "docs_subdomain"
+    ],
+    "docs_url": "https://docs.aspidanet.com"
+  },
+  "astarnetwork": {
+    "slug": "astarnetwork",
+    "website": "https://astar.network",
+    "source": [
+      "website_footer",
+      "docs_links"
+    ],
+    "twitter": "@AstarNetwork",
+    "discord": "https://discord.gg/astarnetwork",
+    "telegram": "https://t.me/PlasmOfficial",
+    "github": "https://github.com/AstarNetwork",
+    "blog": "https://medium.com/astar-network",
+    "docs_url": "https://docs.astar.network/docs/learn/tokenomics2/",
+    "developer_docs_url": "https://astar.network/developers",
+    "auditors": [
+      "OpenZeppelin",
+      "Cyfrin"
+    ],
+    "chains_mentioned": [
+      "Ethereum",
+      "Optimism",
+      "Base"
+    ]
+  },
+  "aster": {
+    "slug": "aster",
+    "website": "https://asterdex.com",
+    "source": [
+      "website_body",
+      "meta_tags",
+      "docs_subdomain"
+    ],
+    "twitter": "@Aster_DEX",
+    "telegram": "https://t.me/AsterDEX",
+    "og_site_name": "Astherus",
+    "chains_mentioned": [
+      "Ethereum",
+      "Arbitrum",
+      "Polygon",
+      "Base",
+      "Avalanche",
+      "BNB Chain",
+      "Solana",
+      "Fantom",
+      "Cosmos",
+      "Sei",
+      "Mode"
+    ],
+    "docs_url": "https://docs.asterdex.com"
+  },
+  "aurafinance": {
+    "slug": "aurafinance",
+    "website": "https://aura.finance",
+    "source": [
+      "website_footer",
+      "docs_links",
+      "status_subdomain"
+    ],
+    "twitter": "@aurafinance",
+    "github": "https://github.com/aurafinance",
+    "blog": "https://blog.aura.finance",
+    "docs_url": "https://docs.aura.finance",
+    "developer_docs_url": "https://docs.aura.finance/developers/solidity-api",
+    "audit_report_urls": [
+      "https://github.com/aurafinance/aura-contracts/tree/main/security/audits"
+    ],
+    "auditors": [
+      "Halborn",
+      "Code4rena",
+      "Immunefi"
+    ],
+    "bounty_policy_url": "https://docs.aura.finance/aura/security",
+    "chains_mentioned": [
+      "Arbitrum",
+      "Optimism",
+      "Polygon",
+      "Gnosis"
+    ],
+    "status_page_url": "https://status.aura.finance"
+  },
+  "autonolas": {
+    "slug": "autonolas",
+    "website": "https://olas.network",
+    "source": [
+      "website_footer",
+      "docs_links"
+    ],
+    "twitter": "@autonolas",
+    "discord": "https://discord.com/invite/BQzYqhjGjQ",
+    "docs_url": "https://docs.olas.network",
+    "whitepaper_url": "https://olas.network/documents/whitepaper/Whitepaper%20v1.0.pdf",
+    "audit_report_urls": [
+      "https://code4rena.com/audits/2023-12-olas"
+    ],
+    "auditors": [
+      "Code4rena",
+      "Immunefi",
+      "Cantina"
+    ],
+    "chains_mentioned": [
+      "Ethereum",
+      "Arbitrum",
+      "Optimism",
+      "Polygon",
+      "Base",
+      "Solana",
+      "Gnosis",
+      "Mode",
+      "Celo"
+    ]
+  },
+  "avail": {
+    "slug": "avail",
+    "website": "https://availproject.org",
+    "source": [
+      "website_footer",
+      "docs_links",
+      "status_subdomain"
+    ],
+    "twitter": "@AvailProject",
+    "discord": "https://discord.com/invite/AvailProject",
+    "telegram": "https://t.me/AvailCommunity",
+    "github": "https://github.com/availproject",
+    "docs_url": "https://docs.availproject.org/",
+    "whitepaper_url": "./whitepaper",
+    "chains_mentioned": [
+      "Ethereum",
+      "Arbitrum",
+      "Optimism",
+      "Polygon",
+      "Base",
+      "Avalanche",
+      "Scroll"
+    ],
+    "status_page_url": "https://status.availproject.org"
+  },
+  "avalabs": {
+    "slug": "avalabs",
+    "website": "https://avax.network",
+    "source": [
+      "website_footer",
+      "meta_tags",
+      "docs_links",
+      "status_subdomain"
+    ],
+    "twitter": "@avax",
+    "discord": "https://discord.com/invite/avax",
+    "github": "https://github.com/ava-labs",
+    "og_site_name": "Avax.network — Homepage",
+    "docs_url": "https://build.avax.network/docs",
+    "developer_docs_url": "https://avax.network/build/developer-hub",
+    "auditors": [
+      "Immunefi"
+    ],
+    "bounty_policy_url": "href=\"https://immunefi.com/bug-bounty/avalanche/information/\"",
+    "chains_mentioned": [
+      "Avalanche",
+      "Scroll",
+      "Mode"
+    ],
+    "status_page_url": "https://status.avax.network"
+  },
+  "axelarnetwork": {
+    "slug": "axelarnetwork",
+    "website": "https://axelar.network",
+    "source": [
+      "website_footer",
+      "website_body",
+      "docs_links"
+    ],
+    "github": "https://github.com/axelarnetwork",
+    "twitter": "@axelar",
+    "discord": "https://discord.com/invite/aRZ3Ra6f7D",
+    "telegram": "https://t.me/axelarcommunity",
+    "docs_url": "https://docs.axelar.dev/",
+    "developer_docs_url": "https://axelar.network/mobius?utm_source=MainMenu&amp;utm_medium=DeveloperSegment&amp;utm_campaign=dAppBuilder",
+    "whitepaper_url": "https://axelar.network/whitepaper",
+    "auditors": [
+      "OpenZeppelin"
+    ],
+    "chains_mentioned": [
+      "Base",
+      "Scroll"
+    ]
+  },
+  "axiom": {
+    "slug": "axiom",
+    "website": "https://axiom.trade",
+    "source": [
+      "docs_subdomain",
+      "page:/security"
+    ],
+    "docs_url": "https://docs.axiom.trade",
+    "bounty_policy_url": "https://axiom.trade/security"
+  },
+  "baanx": {
+    "slug": "baanx",
+    "website": "https://withcl.com",
+    "source": [
+      "website_footer"
+    ],
+    "twitter": "@CL_Technology",
+    "telegram": "https://t.me/Baanx_BXX",
+    "auditors": [
+      "Kudelski"
+    ]
+  },
+  "babylon-labs": {
+    "slug": "babylon-labs",
+    "website": "https://babylonlabs.io",
+    "source": [
+      "website_footer",
+      "docs_links"
+    ],
+    "twitter": "@babylonlabs_io",
+    "discord": "https://discord.com/invite/babylonglobal",
+    "telegram": "https://t.me/babyloncommunity",
+    "github": "https://github.com/babylonlabs-io",
+    "contact_email": "contact@babylonlabs.io",
+    "docs_url": "https://docs.babylonlabs.io/",
+    "whitepaper_url": "https://docs.babylonlabs.io/papers/btc_staking_litepaper(EN).pdf",
+    "audit_report_urls": [
+      "https://docs.babylonlabs.io/assets/files/coinspect-phase1-audit.pdf",
+      "https://docs.babylonlabs.io/assets/files/zellic-phase1-audit.pdf"
+    ],
+    "auditors": [
+      "Immunefi",
+      "Zellic",
+      "Cantina"
+    ],
+    "bounty_policy_url": "href=\"https://immunefi.com/bug-bounty/babylon-labs/information/\""
+  },
+  "badger": {
+    "slug": "badger",
+    "website": "https://badger.com",
+    "source": [
+      "website_footer",
+      "docs_links"
+    ],
+    "twitter": "@badgerdao",
+    "discord": "https://discord.gg/badgerdao",
+    "github": "https://github.com/Badger-Finance",
+    "reddit": "https://www.reddit.com/r/BadgerDAO",
+    "docs_url": "https://github.com/Badger-Finance/badger-legacy-sunset",
+    "chains_mentioned": [
+      "Ethereum"
+    ]
+  },
+  "balancer": {
+    "slug": "balancer",
+    "website": "https://balancer.fi",
+    "source": [
+      "docs_subdomain"
+    ],
+    "docs_url": "https://docs.balancer.fi"
+  },
+  "balmy": {
+    "slug": "balmy",
+    "website": "https://balmy.xyz",
+    "source": []
+  },
+  "bankx": {
+    "slug": "bankx",
+    "website": "https://bankx.io",
+    "source": [
+      "website_footer",
+      "website_body",
+      "docs_links",
+      "page:/security"
+    ],
+    "twitter": "@bankxio",
+    "telegram": "https://t.me/BankXio",
+    "docs_url": "https://docs.bankx.io/",
+    "bounty_policy_url": "https://bankx.io/security"
+  },
+  "baofinance": {
+    "slug": "baofinance",
+    "website": "https://baoswap.xyz",
+    "source": [
+      "page:/security"
+    ],
+    "bounty_policy_url": "https://baoswap.xyz/security"
+  },
+  "basilisk": {
+    "slug": "basilisk",
+    "website": "https://basilisk.org",
+    "source": [],
+    "chains_mentioned": [
+      "zkSync"
+    ]
+  },
+  "beanstalk": {
+    "slug": "beanstalk",
+    "website": "https://bean.money",
+    "source": [
+      "website_footer",
+      "meta_tags",
+      "docs_links"
+    ],
+    "twitter": "@beanstalkmoney",
+    "github": "https://github.com/beanstalkfarms",
+    "og_site_name": "Beanstalk",
+    "docs_url": "https://docs.bean.money/almanac",
+    "auditors": [
+      "Immunefi"
+    ],
+    "bounty_policy_url": "https://immunefi.com/bounty/beanstalk",
+    "chains_mentioned": [
+      "Ethereum"
+    ]
+  },
+  "beefyfinance": {
+    "slug": "beefyfinance",
+    "website": "https://beefy.com",
+    "source": [
+      "website_footer",
+      "docs_links"
+    ],
+    "twitter": "@beefyfinance",
+    "telegram": "https://t.me/beefyfinance",
+    "github": "https://github.com/beefyfinance",
+    "reddit": "https://www.reddit.com/r/Beefy",
+    "docs_url": "https://docs.beefy.com/",
+    "auditors": [
+      "OpenZeppelin"
+    ],
+    "chains_mentioned": [
+      "Ethereum",
+      "Optimism"
+    ]
+  },
+  "beethovenx": {
+    "slug": "beethovenx",
+    "website": "https://beets.fi",
+    "source": [
+      "docs_subdomain"
+    ],
+    "docs_url": "https://docs.beets.fi"
+  },
+  "benddao": {
+    "slug": "benddao",
+    "website": "https://bend.berachain.com",
+    "source": [
+      "docs_subdomain"
+    ],
+    "docs_url": "https://docs.bend.berachain.com"
+  },
+  "benqi": {
+    "slug": "benqi",
+    "website": "https://app.benqi.fi",
+    "source": [
+      "docs_subdomain"
+    ],
+    "chains_mentioned": [
+      "Avalanche"
+    ],
+    "docs_url": "https://docs.benqi.fi"
+  },
+  "berachain-webapps": {
+    "slug": "berachain-webapps",
+    "website": "https://berachain.com",
+    "source": [
+      "docs_subdomain"
+    ],
+    "docs_url": "https://docs.berachain.com"
+  },
+  "beradrome": {
+    "slug": "beradrome",
+    "website": "https://beradrome.com",
+    "source": [
+      "docs_subdomain"
+    ],
+    "docs_url": "https://docs.beradrome.com"
+  },
+  "betafinance": {
+    "slug": "betafinance",
+    "website": "https://betafinance.org",
+    "source": []
+  },
+  "biconomy": {
+    "slug": "biconomy",
+    "website": "https://biconomy.com",
+    "source": [
+      "meta_tags",
+      "page:/security"
+    ],
+    "twitter": "@Biconomy",
+    "og_site_name": "Biconomy",
+    "bounty_policy_url": "https://biconomy.com/security"
+  },
+  "bifi": {
+    "slug": "bifi",
+    "website": "https://bifi.finance",
+    "source": [
+      "website_footer",
+      "meta_tags",
+      "docs_links"
+    ],
+    "twitter": "@bifi_lending",
+    "og_site_name": "BiFi",
+    "docs_url": "https://docs.bifi.finance/bifi-cross-chain-guide-en/",
+    "whitepaper_url": "https://assets.thebifrost.io/whitepaper/BiFi-White-Paper-V1.0-EN.pdf",
+    "chains_mentioned": [
+      "NEAR"
+    ]
+  },
+  "bifrostfinance": {
+    "slug": "bifrostfinance",
+    "website": "https://bifrost.io",
+    "source": [
+      "website_footer",
+      "meta_tags",
+      "docs_links"
+    ],
+    "twitter": "@Bifrost",
+    "discord": "https://discord.com/invite/bifrost",
+    "telegram": "https://t.me/bifrost_io",
+    "github": "https://github.com/bifrost-io",
+    "blog": "https://medium.com/bifrost-finance",
+    "og_site_name": "Bifrost",
+    "docs_url": "https://docs.bifrost.io/for-builders/builder-programs/bug-bounty",
+    "developer_docs_url": "https://developers.bifrost.io/docs/builder-programs",
+    "whitepaper_url": "https://github.com/bifrost-io/bifrost-wiki/blob/master/bifrost-finance-whitepaper-en.pdf",
+    "audit_report_urls": [
+      "https://github.com/bifrost-io/slpx-contracts/blob/main/audit/Bifrost%20XCM%20Actions%20Audit.pdf",
+      "https://github.com/oak-security/audit-reports/blob/main/Bifrost/2024-03-11%20Audit%20Report%20-%20Bifrost%20Finance%20Leveraged%20Staking%20v1.0.pdf",
+      "https://github.com/bifrost-io/bifrost-wiki/blob/gitbook/audit/Bifrost%20(veth-3.0%20%26%26slpx-v2).pdf",
+      "https://bifrost.io/images/v4/audit/common_prefix.svg",
+      "https://bifrost.io/images/v4/audit/certik.svg",
+      "https://bifrost.io/images/v4/audit/oak.svg",
+      "https://bifrost.io/images/v4/audit/beosin.svg",
+      "https://bifrost.io/images/v4/audit/slowmist.svg",
+      "https://bifrost.io/images/v4/audit/tokeninsight.svg"
+    ],
+    "auditors": [
+      "SlowMist"
+    ],
+    "bounty_policy_url": "href=\"https://docs.bifrost.io/for-builders/builder-programs/bug-bounty\"",
+    "chains_mentioned": [
+      "Base"
+    ]
+  },
+  "bitcoinsv": {
+    "slug": "bitcoinsv",
+    "website": "https://bitcoin.org",
+    "source": [
+      "docs_links",
+      "page:/security"
+    ],
+    "docs_url": "https://developer.bitcoin.org/",
+    "developer_docs_url": "https://developer.bitcoin.org/",
+    "whitepaper_url": "https://bitcoin.org/en/bitcoin-paper",
+    "bounty_policy_url": "https://bitcoin.org/security"
+  },
+  "bitflow": {
+    "slug": "bitflow",
+    "website": "https://bitflow.finance",
+    "source": [
+      "website_footer",
+      "docs_links"
+    ],
+    "twitter": "@bitflow",
+    "discord": "https://discord.gg/DY4yNyHyhT",
+    "docs_url": "https://docs.bitflow.finance/bitflow-documentation",
+    "auditors": [
+      "Immunefi"
+    ],
+    "bounty_policy_url": "https://immunefi.com/bounty/bitflow/"
+  },
+  "bitswift": {
+    "slug": "bitswift",
+    "website": "https://bits.financial",
+    "source": [
+      "website_body",
+      "meta_tags",
+      "docs_links"
+    ],
+    "twitter": "@bits_financial",
+    "telegram": "https://t.me/BITS_Official",
+    "og_site_name": "BITS",
+    "docs_url": "https://docs.bits.financial/",
+    "whitepaper_url": "https://drive.google.com/file/d/1IpV5h0w8iNIoDH4fVlCO66C4wzYfPJS0/view",
+    "auditors": [
+      "Halborn"
+    ]
+  },
+  "blackwing": {
+    "slug": "blackwing",
+    "website": "https://blackwing.fi",
+    "source": [
+      "website_footer",
+      "docs_subdomain"
+    ],
+    "telegram": "https://t.me/sirtradealots",
+    "docs_url": "https://docs.blackwing.fi"
+  },
+  "blockpinetwork": {
+    "slug": "blockpinetwork",
+    "website": "https://blockpi.io",
+    "source": [
+      "website_footer",
+      "meta_tags",
+      "docs_links",
+      "status_subdomain"
+    ],
+    "twitter": "@RealBlockPI",
+    "discord": "https://discord.gg/xTvGVrGVZv",
+    "telegram": "https://t.me/blockpidaily",
+    "blog": "https://medium.com/blockpi",
+    "og_site_name": "BlockPI",
+    "docs_url": "https://docs.blockpi.io/",
+    "auditors": [
+      "Immunefi",
+      "SlowMist"
+    ],
+    "bounty_policy_url": "https://immunefi.com/bounty/blockpinetwork/",
+    "chains_mentioned": [
+      "Ethereum",
+      "Optimism",
+      "Polygon",
+      "Base",
+      "Avalanche",
+      "Fantom",
+      "Gnosis",
+      "zkSync",
+      "Linea",
+      "Scroll",
+      "StarkNet",
+      "Cosmos",
+      "NEAR",
+      "Sui",
+      "Aptos",
+      "Mantle",
+      "Blast"
+    ],
+    "status_page_url": "https://status.blockpi.io"
+  },
+  "blockwallet": {
+    "slug": "blockwallet",
+    "website": "https://blockwallet.io",
+    "source": []
+  },
+  "bobanetwork": {
+    "slug": "bobanetwork",
+    "website": "https://gateway.boba.network",
+    "source": []
+  },
+  "bondprotocol": {
+    "slug": "bondprotocol",
+    "website": "https://bondprotocol.finance",
+    "source": [
+      "docs_subdomain"
+    ],
+    "docs_url": "https://docs.bondprotocol.finance"
+  },
+  "bonfida": {
+    "slug": "bonfida",
+    "website": "https://bonfida.org",
+    "source": [
+      "meta_tags",
+      "docs_subdomain"
+    ],
+    "twitter": "@bonfida",
+    "og_site_name": "Bonfida",
+    "chains_mentioned": [
+      "Solana"
+    ],
+    "docs_url": "https://docs.bonfida.org"
+  },
+  "bprotocol": {
+    "slug": "bprotocol",
+    "website": "https://b-lucky.gg",
+    "source": [
+      "meta_tags",
+      "docs_subdomain",
+      "page:/security"
+    ],
+    "twitter": "@BLuckygg",
+    "og_site_name": "B-Lucky",
+    "docs_url": "https://docs.b-lucky.gg",
+    "bounty_policy_url": "https://b-lucky.gg/security"
+  },
+  "burrow": {
+    "slug": "burrow",
+    "website": "https://burrow.finance",
+    "source": [
+      "docs_subdomain"
+    ],
+    "docs_url": "https://docs.burrow.finance"
+  },
+  "buttonwood": {
+    "slug": "buttonwood",
+    "website": "https://buttonwood.finance",
+    "source": []
+  },
+  "c3": {
+    "slug": "c3",
+    "website": "https://c3.io",
+    "source": []
+  },
+  "capyfi": {
+    "slug": "capyfi",
+    "website": "https://capyfi.com",
+    "source": [
+      "website_body",
+      "docs_links"
+    ],
+    "twitter": "@CapyFi_Protocol",
+    "discord": "https://discord.gg/jwEhKaPY",
+    "docs_url": "http://docs.capyfi.com/",
+    "audit_report_urls": [
+      "https://www.coinspect.com/doc/Coinspect%20-%20Smart%20Contract%20Audit%20-%20Capyfi%20-%20v250711.pdf"
+    ],
+    "auditors": [
+      "OpenZeppelin"
+    ],
+    "chains_mentioned": [
+      "Base",
+      "Scroll"
+    ]
+  },
+  "carbonbancor": {
+    "slug": "carbonbancor",
+    "website": "https://carbondefi.xyz",
+    "source": [
+      "website_footer",
+      "docs_links"
+    ],
+    "twitter": "@Ceazor7",
+    "discord": "https://discord.gg/bancor",
+    "telegram": "https://t.me/CarbonDeFixyz",
+    "github": "https://github.com/bancorprotocol",
+    "docs_url": "https://docs.carbondefi.xyz/",
+    "whitepaper_url": "https://carbondefi.xyz/whitepaper",
+    "chains_mentioned": [
+      "Ethereum",
+      "Sei"
+    ]
+  },
+  "cardanofoundation": {
+    "slug": "cardanofoundation",
+    "website": "https://cardano.org",
+    "source": [
+      "website_body",
+      "docs_links",
+      "page:/responsible-disclosure"
+    ],
+    "twitter": "@Cardano",
+    "telegram": "https://t.me/Cardano",
+    "reddit": "https://www.reddit.com/r/cardano",
+    "docs_url": "https://cardano.org/docs/communities/",
+    "developer_docs_url": "https://cardano.org/developers/",
+    "chains_mentioned": [
+      "Mode"
+    ],
+    "bounty_policy_url": "https://cardano.org/responsible-disclosure"
+  },
+  "cc-protocol": {
+    "slug": "cc-protocol",
+    "website": "https://cc.xyz",
+    "source": []
+  },
+  "ceres": {
+    "slug": "ceres",
+    "website": "https://cerestoken.io",
+    "source": [
+      "website_footer",
+      "meta_tags",
+      "docs_links"
+    ],
+    "twitter": "@TokenCeres",
+    "telegram": "https://t.me/cerestoken",
+    "blog": "https://medium.com/@TokenCeres",
+    "og_site_name": "CeresToken.io",
+    "whitepaper_url": "https://ceres-token.s3.eu-central-1.amazonaws.com/docs/Ceres Litepaper.pdf",
+    "audit_report_urls": [
+      "https://audits.quillhash.com/smart-contract-audit"
+    ],
+    "auditors": [
+      "Immunefi"
+    ]
+  },
+  "chainlink": {
+    "slug": "chainlink",
+    "website": "https://chain.link",
+    "source": [
+      "website_footer",
+      "docs_links",
+      "page:/security"
+    ],
+    "twitter": "@chainlink",
+    "telegram": "https://t.me/chainlinkofficial",
+    "reddit": "https://www.reddit.com/r/Chainlink",
+    "docs_url": "https://docs.chain.link/docs",
+    "whitepaper_url": "https://chain.link/whitepaper",
+    "auditors": [
+      "Cyfrin",
+      "Immunefi"
+    ],
+    "chains_mentioned": [
+      "Ethereum",
+      "Base",
+      "Scroll"
+    ],
+    "security_email": "security@chain.link.pub",
+    "bounty_policy_url": "https://chain.link/security"
+  },
+  "charm": {
+    "slug": "charm",
+    "website": "https://alpha.charm.fi",
+    "source": [
+      "website_footer"
+    ],
+    "twitter": "@CharmFinance",
+    "discord": "https://discord.gg/vpkJfFgY2m",
+    "telegram": "https://t.me/charmfinance",
+    "github": "https://github.com/charmfinance",
+    "blog": "https://medium.com/charmfinance",
+    "chains_mentioned": [
+      "Ethereum"
+    ]
+  },
+  "comdex": {
+    "slug": "comdex",
+    "website": "https://comdex.one",
+    "source": []
+  },
+  "composablefinance": {
+    "slug": "composablefinance",
+    "website": "https://composable.finance",
+    "source": []
+  },
+  "compoundfinance": {
+    "slug": "compoundfinance",
+    "website": "https://v3-app.compound.finance",
+    "source": [
+      "meta_tags",
+      "docs_subdomain"
+    ],
+    "twitter": "@compoundfinance",
+    "docs_url": "https://docs.compound.finance"
+  },
+  "connext": {
+    "slug": "connext",
+    "website": "https://connext.network",
+    "source": [
+      "website_footer",
+      "docs_links",
+      "status_subdomain"
+    ],
+    "twitter": "@Connext",
+    "discord": "https://discord.gg/connext",
+    "github": "https://github.com/connext",
+    "docs_url": "https://docs.connext.network/?_gl=1*hxq6t7*_ga*MTkxNzQ2NzY5MC4xNzE1NTk1ODY5*_ga_MPYZEDRVQ0*MTcxNzU5MzEwMy41LjAuMTcxNzU5MzEwMy4wLjAuMA..",
+    "audit_report_urls": [
+      "https://github.com/connext/audits"
+    ],
+    "auditors": [
+      "Immunefi"
+    ],
+    "bounty_policy_url": "https://immunefi.com/bounty/connext/",
+    "chains_mentioned": [
+      "Ethereum",
+      "Arbitrum",
+      "Optimism",
+      "Polygon",
+      "Base",
+      "Avalanche",
+      "BNB Chain",
+      "Gnosis",
+      "zkSync",
+      "Linea",
+      "Scroll",
+      "Mantle",
+      "Mode"
+    ],
+    "status_page_url": "https://status.connext.network"
+  },
+  "contrax": {
+    "slug": "contrax",
+    "website": "https://beta.contrax.finance",
+    "source": [
+      "docs_subdomain",
+      "page:/security"
+    ],
+    "docs_url": "https://docs.contrax.finance",
+    "bounty_policy_url": "https://beta.contrax.finance/security"
+  },
+  "coreum": {
+    "slug": "coreum",
+    "website": "https://coreum.com",
+    "source": [
+      "website_footer",
+      "website_body",
+      "docs_links",
+      "page:/security"
+    ],
+    "twitter": "@CoreumOfficial",
+    "discord": "https://discord.com/invite/VgkhYeWmTd",
+    "telegram": "https://t.me/CoreumOfficial",
+    "github": "https://github.com/CoreumFoundation",
+    "docs_url": "https://docs.coreum.dev/docs/next/modules/coreum-fungible-token",
+    "developer_docs_url": "https://coreum.com/developers-hub",
+    "bounty_policy_url": "https://coreum.com/security"
+  },
+  "cove": {
+    "slug": "cove",
+    "website": "https://cove.finance",
+    "source": [
+      "website_footer",
+      "meta_tags",
+      "docs_links",
+      "status_subdomain"
+    ],
+    "twitter": "@cove_fi",
+    "discord": "https://discord.gg/fvxc4p6gB2",
+    "og_site_name": "Cove",
+    "docs_url": "https://docs.cove.finance/ecosystem/cove-protocol",
+    "auditors": [
+      "Trail of Bits",
+      "Quantstamp",
+      "Zellic"
+    ],
+    "chains_mentioned": [
+      "Polygon",
+      "Blast"
+    ],
+    "status_page_url": "https://status.cove.finance"
+  },
+  "cyan": {
+    "slug": "cyan",
+    "website": "https://cyan.finance",
+    "source": []
+  },
+  "daimo-pay": {
+    "slug": "daimo-pay",
+    "website": "https://daimo.com",
+    "source": [
+      "website_footer",
+      "meta_tags",
+      "status_subdomain"
+    ],
+    "twitter": "@daimo_com",
+    "og_site_name": "Daimo",
+    "chains_mentioned": [
+      "Ethereum",
+      "Arbitrum",
+      "Optimism",
+      "Polygon",
+      "Base",
+      "BNB Chain",
+      "Solana",
+      "Linea",
+      "Scroll",
+      "Celo"
+    ],
+    "status_page_url": "https://status.daimo.com"
+  },
+  "darwinia": {
+    "slug": "darwinia",
+    "website": "https://darwinia.network",
+    "source": [
+      "docs_subdomain",
+      "status_subdomain",
+      "page:/security"
+    ],
+    "chains_mentioned": [
+      "Ethereum"
+    ],
+    "docs_url": "https://docs.darwinia.network",
+    "status_page_url": "https://status.darwinia.network",
+    "bounty_policy_url": "https://darwinia.network/security"
+  },
+  "davos": {
+    "slug": "davos",
+    "website": "https://davos.xyz",
+    "source": [
+      "website_footer",
+      "website_body",
+      "meta_tags",
+      "docs_links",
+      "page:/security"
+    ],
+    "contact_email": "info@davos.xyz",
+    "twitter": "@Davos_Protocol",
+    "discord": "https://discord.gg/davos-protocol-978896437612019722",
+    "telegram": "https://t.me/davosprotocol",
+    "og_site_name": "Davos: Collateral Liquid Staking Tokens (LSTs) Platform.",
+    "docs_url": "https://docs.davos.xyz",
+    "developer_docs_url": "https://docs.davos.xyz/for-developers/security-audit-reports",
+    "auditors": [
+      "Quantstamp",
+      "Immunefi",
+      "SlowMist",
+      "Veridise"
+    ],
+    "chains_mentioned": [
+      "Ethereum",
+      "Polygon",
+      "Linea"
+    ],
+    "bounty_policy_url": "https://davos.xyz/security"
+  },
+  "debridge": {
+    "slug": "debridge",
+    "website": "https://app.debridge.com",
+    "source": [
+      "docs_subdomain",
+      "status_subdomain"
+    ],
+    "chains_mentioned": [
+      "Ethereum",
+      "BNB Chain",
+      "Solana"
+    ],
+    "docs_url": "https://docs.debridge.com",
+    "status_page_url": "https://status.debridge.com"
+  },
+  "decentraland": {
+    "slug": "decentraland",
+    "website": "https://decentraland.org",
+    "source": [
+      "docs_links",
+      "status_subdomain",
+      "page:/security"
+    ],
+    "docs_url": "https://docs.decentraland.org/player/",
+    "status_page_url": "https://status.decentraland.org",
+    "auditors": [
+      "Immunefi"
+    ],
+    "bounty_policy_url": "https://decentraland.org/security",
+    "twitter": "@decentraland",
+    "github": "https://github.com/decentraland",
+    "reddit": "https://reddit.com/r/decentraland"
+  },
+  "defisaver": {
+    "slug": "defisaver",
+    "website": "https://defisaver.com",
+    "source": [
+      "website_footer",
+      "meta_tags",
+      "docs_links"
+    ],
+    "twitter": "@defisaver",
+    "discord": "https://discord.com/invite/XGDJHhZ",
+    "og_site_name": "DeFi Saver — Advanced DeFi Management",
+    "docs_url": "https://docs.defisaver.com/protocol/security-and-audits",
+    "auditors": [
+      "Immunefi",
+      "Dedaub"
+    ],
+    "chains_mentioned": [
+      "Ethereum",
+      "Arbitrum",
+      "Optimism",
+      "Base",
+      "Linea",
+      "NEAR",
+      "Mode"
+    ]
+  },
+  "defly": {
+    "slug": "defly",
+    "website": "https://defly.app",
+    "source": [
+      "website_body",
+      "docs_links"
+    ],
+    "twitter": "@deflyapp",
+    "discord": "https://discord.gg/r7a5Gsxr4e",
+    "telegram": "https://t.me/deflyapp",
+    "docs_url": "https://docs.defly.app/app/overview",
+    "developer_docs_url": "api.html",
+    "audit_report_urls": [
+      "https://docs.defly.app/security/audit"
+    ],
+    "auditors": [
+      "Immunefi",
+      "Kudelski"
+    ]
+  },
+  "degate": {
+    "slug": "degate",
+    "website": "https://app.degate.com",
+    "source": [
+      "docs_subdomain",
+      "status_subdomain",
+      "page:/security"
+    ],
+    "chains_mentioned": [
+      "Ethereum",
+      "Solana",
+      "Aptos"
+    ],
+    "docs_url": "https://docs.degate.com",
+    "status_page_url": "https://status.degate.com",
+    "bounty_policy_url": "https://app.degate.com/security"
+  },
+  "delv": {
+    "slug": "delv",
+    "website": "https://delv.tech",
+    "source": []
+  },
+  "deriprotocol": {
+    "slug": "deriprotocol",
+    "website": "https://deri.io",
+    "source": [
+      "meta_tags",
+      "docs_subdomain"
+    ],
+    "twitter": "@DeriProtocol",
+    "chains_mentioned": [
+      "Ethereum"
+    ],
+    "docs_url": "https://docs.deri.io"
+  },
+  "dex-protocol": {
+    "slug": "dex-protocol",
+    "website": "https://dexe.network",
+    "source": [
+      "website_footer",
+      "docs_links"
+    ],
+    "twitter": "@DexeNetwork",
+    "telegram": "https://t.me/Dexe_network",
+    "github": "https://github.com/dexe-network",
+    "docs_url": "https://docs.dexe.network/",
+    "whitepaper_url": "https://whitepaper.dexe.network",
+    "audit_report_urls": [
+      "https://github.com/dexe-network/investment-contracts/tree/master/audits"
+    ],
+    "auditors": [
+      "Cyfrin"
+    ],
+    "bounty_policy_url": "#",
+    "chains_mentioned": [
+      "Scroll",
+      "Mode"
+    ]
+  },
+  "dforce": {
+    "slug": "dforce",
+    "website": "https://dforce.network",
+    "source": [
+      "docs_subdomain",
+      "page:/security"
+    ],
+    "docs_url": "https://docs.dforce.network",
+    "bounty_policy_url": "https://dforce.network/security"
+  },
+  "dfxfinance": {
+    "slug": "dfxfinance",
+    "website": "https://app.dfx.finance",
+    "source": [
+      "docs_subdomain"
+    ],
+    "docs_url": "https://docs.dfx.finance"
+  },
+  "dhedge": {
+    "slug": "dhedge",
+    "website": "https://dhedge.org",
+    "source": [
+      "website_footer",
+      "meta_tags",
+      "docs_links"
+    ],
+    "twitter": "@dHedgeOrg",
+    "discord": "https://discord.gg/BAWTbRA",
+    "telegram": "https://t.me/dhedge",
+    "github": "https://github.com/dhedge",
+    "blog": "https://blog.dhedge.org",
+    "og_site_name": "dHEDGE",
+    "docs_url": "https://docs.dhedge.org",
+    "audit_report_urls": [
+      "https://docs.dhedge.org/security/audits-timeline"
+    ],
+    "auditors": [
+      "Immunefi"
+    ],
+    "bounty_policy_url": "https://immunefi.com/bounty/dhedge",
+    "chains_mentioned": [
+      "Ethereum",
+      "Arbitrum",
+      "Optimism",
+      "Polygon",
+      "Base",
+      "Solana",
+      "Sui"
+    ]
+  },
+  "dodo": {
+    "slug": "dodo",
+    "website": "https://dodoex.io",
+    "source": [
+      "meta_tags",
+      "docs_links",
+      "page:/security"
+    ],
+    "twitter": "@BreederDodo",
+    "og_site_name": "DODO Home",
+    "docs_url": "https://docs.dodoex.io/en/home/terms-of-service",
+    "chains_mentioned": [
+      "Ethereum",
+      "BNB Chain"
+    ],
+    "bounty_policy_url": "https://dodoex.io/security"
+  },
+  "driftprotocol": {
+    "slug": "driftprotocol",
+    "website": "https://app.drift.trade",
+    "source": [
+      "docs_subdomain",
+      "page:/security"
+    ],
+    "docs_url": "https://docs.drift.trade",
+    "bounty_policy_url": "https://app.drift.trade/security"
+  },
+  "drips": {
+    "slug": "drips",
+    "website": "https://drip.community",
+    "source": [
+      "page:/security"
+    ],
+    "bounty_policy_url": "https://drip.community/security"
+  },
+  "duetfinance": {
+    "slug": "duetfinance",
+    "website": "https://duet.finance",
+    "source": []
+  },
+  "ebtc": {
+    "slug": "ebtc",
+    "website": "https://ebtc.finance",
+    "source": [
+      "meta_tags"
+    ],
+    "og_site_name": "BadgerDAO"
+  },
+  "eckodao": {
+    "slug": "eckodao",
+    "website": "https://ecko.finance",
+    "source": [
+      "docs_subdomain"
+    ],
+    "docs_url": "https://docs.ecko.finance"
+  },
+  "eco": {
+    "slug": "eco",
+    "website": "https://econialabs.com",
+    "source": []
+  },
+  "eigenlayer": {
+    "slug": "eigenlayer",
+    "website": "https://eigenlayer.xyz",
+    "source": [
+      "website_body",
+      "meta_tags",
+      "docs_links",
+      "page:/security"
+    ],
+    "twitter": "@eigencloud",
+    "discord": "https://discord.gg/eigenlayer",
+    "github": "https://github.com/Layr-Labs",
+    "blog": "https://blog.eigencloud.xyz",
+    "og_site_name": "EigenCloud",
+    "docs_url": "https://docs.eigencloud.xyz/",
+    "developer_docs_url": "https://developers.eigencloud.xyz?utm_source=eigencloud&utm_medium=website&utm_campaign=nav_build&utm_content=index",
+    "bounty_policy_url": "https://eigenlayer.xyz/security"
+  },
+  "elixirprotocol": {
+    "slug": "elixirprotocol",
+    "website": "https://elixir.xyz",
+    "source": [
+      "docs_subdomain"
+    ],
+    "docs_url": "https://docs.elixir.xyz"
+  },
+  "enosys": {
+    "slug": "enosys",
+    "website": "https://enosys.global",
+    "source": [
+      "website_footer",
+      "meta_tags"
+    ],
+    "twitter": "@enosys_global",
+    "discord": "https://discord.gg/enosys-global",
+    "telegram": "https://t.me/enosys_global",
+    "github": "https://github.com/flrfinance",
+    "og_site_name": "Ēnosys",
+    "chains_mentioned": [
+      "Ethereum",
+      "Arbitrum",
+      "Base"
+    ]
+  },
+  "ens": {
+    "slug": "ens",
+    "website": "https://app.ens.domains",
+    "source": [
+      "docs_subdomain"
+    ],
+    "docs_url": "https://docs.ens.domains"
+  },
+  "ensuro": {
+    "slug": "ensuro",
+    "website": "https://ensuro.co",
+    "source": [
+      "website_footer",
+      "docs_links",
+      "page:/security"
+    ],
+    "twitter": "@Ensuroproject",
+    "discord": "https://discord.com/invite/sePJF7RRZC",
+    "telegram": "https://t.me/ensuroproject",
+    "github": "https://github.com/ensuro",
+    "docs_url": "https://docs.ensuro.co/ensuro-docs",
+    "chains_mentioned": [
+      "Polygon"
+    ],
+    "bounty_policy_url": "https://ensuro.co/security"
+  },
+  "enzyme-onyx": {
+    "slug": "enzyme-onyx",
+    "website": "https://enzyme.finance",
+    "source": [
+      "website_footer",
+      "docs_links",
+      "status_subdomain"
+    ],
+    "twitter": "@enzymefinance",
+    "docs_url": "https://docs.enzyme.finance/",
+    "developer_docs_url": "https://docs.enzyme.finance/developer-hub",
+    "whitepaper_url": "#",
+    "chains_mentioned": [
+      "Scroll"
+    ],
+    "status_page_url": "https://status.enzyme.finance"
+  },
+  "ethena": {
+    "slug": "ethena",
+    "website": "https://app.ethena.fi",
+    "source": [
+      "website_footer",
+      "docs_links",
+      "page:/security"
+    ],
+    "twitter": "@ethena",
+    "telegram": "https://t.me/ethena_labs",
+    "github": "https://github.com/ethena-labs",
+    "docs_url": "https://docs.ethena.fi",
+    "chains_mentioned": [
+      "Ethereum"
+    ],
+    "bounty_policy_url": "https://app.ethena.fi/security"
+  },
+  "etherfi": {
+    "slug": "etherfi",
+    "website": "https://ether.fi",
+    "source": [
+      "website_footer",
+      "docs_links"
+    ],
+    "twitter": "@ether_fi",
+    "discord": "https://discord.com/invite/etherfi",
+    "github": "https://github.com/etherfi-protocol",
+    "docs_url": "https://etherfi.gitbook.io/gov",
+    "audit_report_urls": [
+      "https://github.com/etherfi-protocol/smart-contracts/tree/master/audits"
+    ],
+    "auditors": [
+      "Certora",
+      "Immunefi",
+      "Nethermind"
+    ],
+    "bounty_policy_url": "href=\"https://immunefi.com/bug-bounty/etherfi/\""
+  },
+  "euphrates": {
+    "slug": "euphrates",
+    "website": "https://euphrates.finance",
+    "source": []
+  },
+  "exactly": {
+    "slug": "exactly",
+    "website": "https://exact.ly",
+    "source": [
+      "website_footer",
+      "website_body",
+      "docs_links"
+    ],
+    "github": "https://github.com/exactly",
+    "twitter": "@exactlyprotocol",
+    "telegram": "https://t.me/exactlyFinance",
+    "docs_url": "https://docs.exact.ly/security/audits",
+    "whitepaper_url": "https://docs.exact.ly/resources/white-paper",
+    "audit_report_urls": [
+      "https://docs.exact.ly/security/audits"
+    ],
+    "auditors": [
+      "Immunefi"
+    ]
+  },
+  "exodus": {
+    "slug": "exodus",
+    "website": "https://exodus.com",
+    "source": [
+      "website_footer",
+      "meta_tags"
+    ],
+    "twitter": "@exodus",
+    "discord": "https://discord.gg/exodus",
+    "github": "https://github.com/ExodusMovement",
+    "reddit": "https://www.reddit.com/r/ExodusWallet",
+    "og_site_name": "Exodus",
+    "chains_mentioned": [
+      "Ethereum",
+      "Base",
+      "Solana"
+    ]
+  },
+  "extrafinance": {
+    "slug": "extrafinance",
+    "website": "https://app.extrafi.io",
+    "source": [
+      "meta_tags",
+      "docs_subdomain",
+      "page:/security"
+    ],
+    "og_site_name": "Extra Finance",
+    "chains_mentioned": [
+      "Optimism",
+      "Base"
+    ],
+    "docs_url": "https://docs.extrafi.io",
+    "bounty_policy_url": "https://app.extrafi.io/security"
+  },
+  "farcaster": {
+    "slug": "farcaster",
+    "website": "https://farcaster.xyz",
+    "source": [
+      "meta_tags",
+      "docs_links",
+      "page:/security"
+    ],
+    "twitter": "@farcaster_xyz",
+    "og_site_name": "Farcaster",
+    "docs_url": "https://docs.farcaster.xyz",
+    "developer_docs_url": "https://docs.farcaster.xyz",
+    "bounty_policy_url": "https://farcaster.xyz/security"
+  },
+  "fassets": {
+    "slug": "fassets",
+    "website": "https://flare.network",
+    "source": [
+      "website_footer",
+      "website_body",
+      "meta_tags",
+      "docs_links",
+      "docs_subdomain"
+    ],
+    "twitter": "@FlareNetworks",
+    "discord": "https://discord.com/invite/flarenetwork",
+    "telegram": "https://t.me/FlareNetwork",
+    "github": "https://github.com/flare-foundation",
+    "blog": "https://medium.com/flarenetwork",
+    "contact_email": "media@vivopower.com",
+    "og_site_name": "Flare",
+    "developer_docs_url": "https://flare.network/resources/developer-hub",
+    "whitepaper_url": "https://flare.network/whitepapers",
+    "auditors": [
+      "OpenZeppelin",
+      "Immunefi"
+    ],
+    "chains_mentioned": [
+      "Ethereum",
+      "Scroll",
+      "NEAR"
+    ],
+    "docs_url": "https://docs.flare.network"
+  },
+  "fbtc": {
+    "slug": "fbtc",
+    "website": "https://fbtc.com",
+    "source": [
+      "meta_tags",
+      "docs_subdomain",
+      "page:/terms"
+    ],
+    "og_site_name": "FBTC",
+    "docs_url": "https://docs.fbtc.com",
+    "legal_email": "legal@fbtc.com"
+  },
+  "felix": {
+    "slug": "felix",
+    "website": "https://usefelix.xyz",
+    "source": []
+  },
+  "filecoin": {
+    "slug": "filecoin",
+    "website": "https://filecoin.io",
+    "source": [
+      "meta_tags",
+      "docs_subdomain",
+      "status_subdomain"
+    ],
+    "og_site_name": "Filecoin",
+    "docs_url": "https://docs.filecoin.io",
+    "status_page_url": "https://status.filecoin.io"
+  },
+  "firedancer": {
+    "slug": "firedancer",
+    "website": "https://jumpcrypto.com",
+    "source": [
+      "website_footer"
+    ],
+    "twitter": "@jump_",
+    "github": "https://github.com/JumpCrypto",
+    "auditors": [
+      "Certora"
+    ],
+    "chains_mentioned": [
+      "Scroll"
+    ]
+  },
+  "flamingofinance": {
+    "slug": "flamingofinance",
+    "website": "https://flamingo.finance",
+    "source": [
+      "meta_tags",
+      "page:/security"
+    ],
+    "twitter": "@FlamingoFinance",
+    "bounty_policy_url": "https://flamingo.finance/security"
+  },
+  "flexytech": {
+    "slug": "flexytech",
+    "website": "https://flexy.tech",
+    "source": []
+  },
+  "floki": {
+    "slug": "floki",
+    "website": "https://flokifi.com",
+    "source": [
+      "website_footer",
+      "website_body",
+      "docs_links",
+      "page:/terms"
+    ],
+    "twitter": "@flokifi",
+    "github": "https://github.com/Floki-Inu",
+    "discord": "https://discord.com/invite/floki",
+    "telegram": "https://t.me/FlokiInuToken",
+    "contact_email": "fi@floki.com",
+    "docs_url": "https://docs.floki.com/",
+    "chains_mentioned": [
+      "Ethereum",
+      "Arbitrum",
+      "Optimism",
+      "Polygon",
+      "Base",
+      "Avalanche",
+      "BNB Chain",
+      "Fantom",
+      "Blast"
+    ],
+    "legal_email": "legal@floki.com"
+  },
+  "fluxfinance": {
+    "slug": "fluxfinance",
+    "website": "https://fluxfinance.com",
+    "source": [
+      "website_body",
+      "docs_links"
+    ],
+    "twitter": "@FluxDeFi",
+    "blog": "https://blog.fluxfinance.com",
+    "docs_url": "https://docs.fluxfinance.com",
+    "auditors": [
+      "OpenZeppelin",
+      "Trail of Bits",
+      "Certora",
+      "Code4rena",
+      "Immunefi"
+    ],
+    "chains_mentioned": [
+      "Ethereum",
+      "Gnosis"
+    ]
+  },
+  "foil": {
+    "slug": "foil",
+    "website": "https://foil.xyz",
+    "source": [
+      "website_footer",
+      "docs_links"
+    ],
+    "twitter": "@sapiencemarkets",
+    "discord": "https://discord.gg/sapience",
+    "github": "https://github.com/sapiencexyz",
+    "docs_url": "https://docs.foil.xyz/terms-of-service",
+    "chains_mentioned": [
+      "Ethereum"
+    ]
+  },
+  "folksfinance": {
+    "slug": "folksfinance",
+    "website": "https://folks.finance",
+    "source": [
+      "website_footer",
+      "docs_links"
+    ],
+    "twitter": "@folksfinance",
+    "discord": "https://discord.com/invite/folksfinance",
+    "github": "https://github.com/Folks-Finance",
+    "reddit": "https://www.reddit.com/r/FolksFinance",
+    "docs_url": "https://docs.folks.finance",
+    "developer_docs_url": "https://docs.folks.finance/developer/security/bug-bounty/",
+    "audit_report_urls": [
+      "https://github.com/Folks-Finance/audits"
+    ],
+    "auditors": [
+      "Immunefi"
+    ],
+    "bounty_policy_url": "href=\"https://immunefi.com/bug-bounty/folksfinance/\"",
+    "chains_mentioned": [
+      "Ethereum",
+      "Arbitrum",
+      "Polygon",
+      "Base",
+      "Avalanche",
+      "BNB Chain",
+      "Sei"
+    ]
+  },
+  "forta": {
+    "slug": "forta",
+    "website": "https://forta.org",
+    "source": [
+      "website_footer",
+      "docs_links"
+    ],
+    "twitter": "@FortaNetwork",
+    "discord": "https://discord.com/invite/KACdTEutQq",
+    "docs_url": "https://docs.forta.network/en/latest/",
+    "auditors": [
+      "Nethermind"
+    ],
+    "chains_mentioned": [
+      "Celo"
+    ]
+  },
+  "foundation": {
+    "slug": "foundation",
+    "website": "https://foundation.app",
+    "source": [
+      "page:/security"
+    ],
+    "bounty_policy_url": "https://foundation.app/security"
+  },
+  "furucombo": {
+    "slug": "furucombo",
+    "website": "https://furucombo.app",
+    "source": [
+      "meta_tags",
+      "docs_subdomain",
+      "page:/security"
+    ],
+    "twitter": "@furucombo",
+    "docs_url": "https://docs.furucombo.app",
+    "bounty_policy_url": "https://furucombo.app/security"
+  },
+  "gainsnetwork": {
+    "slug": "gainsnetwork",
+    "website": "https://gains.trade",
+    "source": [
+      "website_footer",
+      "docs_links"
+    ],
+    "twitter": "@GainsNetwork_io",
+    "discord": "https://discord.com/invite/gains-network",
+    "telegram": "https://t.me/GainsNetwork",
+    "reddit": "https://reddit.com/r/GainsNetwork",
+    "blog": "https://medium.com/gains-network",
+    "docs_url": "https://docs.gains.trade",
+    "developer_docs_url": "https://docs.gains.trade/developer/integrators",
+    "chains_mentioned": [
+      "Arbitrum",
+      "Polygon",
+      "Base",
+      "Solana"
+    ]
+  },
+  "galagames": {
+    "slug": "galagames",
+    "website": "https://gala.com",
+    "source": [
+      "page:/security"
+    ],
+    "bounty_policy_url": "https://gala.com/security"
+  },
+  "gamma": {
+    "slug": "gamma",
+    "website": "https://gamma.xyz",
+    "source": [
+      "website_footer",
+      "docs_links"
+    ],
+    "twitter": "@GammaStrategies",
+    "discord": "https://discord.gg/gammastrategies1",
+    "telegram": "https://t.me/gammastrategies",
+    "github": "https://github.com/GammaStrategies",
+    "blog": "https://medium.com/gamma-strategies",
+    "docs_url": "https://docs.gamma.xyz/",
+    "chains_mentioned": [
+      "Arbitrum"
+    ]
+  },
+  "gear": {
+    "slug": "gear",
+    "website": "https://gearbox.finance",
+    "source": [
+      "docs_subdomain",
+      "page:/security"
+    ],
+    "docs_url": "https://docs.gearbox.finance",
+    "bounty_policy_url": "https://gearbox.finance/security"
+  },
+  "geniusyield": {
+    "slug": "geniusyield",
+    "website": "https://geniusyield.co",
+    "source": [
+      "docs_subdomain"
+    ],
+    "docs_url": "https://docs.geniusyield.co"
+  },
+  "gerowallet": {
+    "slug": "gerowallet",
+    "website": "https://gerowallet.io",
+    "source": [
+      "website_footer",
+      "meta_tags",
+      "page:/audits"
+    ],
+    "twitter": "@GeroWallet",
+    "discord": "https://discord.gg/37bvtyvchz",
+    "telegram": "https://t.me/GeroWallet",
+    "og_site_name": "Gerowallet",
+    "audit_report_urls": [
+      "https://www.gerowallet.io/audits"
+    ],
+    "chains_mentioned": [
+      "Scroll",
+      "Mode"
+    ],
+    "bounty_policy_url": "https://gerowallet.io/audits"
+  },
+  "ghostmarket": {
+    "slug": "ghostmarket",
+    "website": "https://ghostmarket.io",
+    "source": [
+      "website_footer",
+      "meta_tags",
+      "docs_links",
+      "page:/terms"
+    ],
+    "twitter": "@ghostmarketio",
+    "discord": "https://discord.gg/THHTS4F",
+    "telegram": "https://t.me/ghostmarketio",
+    "github": "https://github.com/onblockio",
+    "blog": "https://medium.com/ghostmarket",
+    "og_site_name": "GhostMarket",
+    "docs_url": "https://docs.ghostmarket.io/master/getting-started",
+    "chains_mentioned": [
+      "Polygon",
+      "Base",
+      "Avalanche",
+      "BNB Chain",
+      "Mode"
+    ],
+    "legal_email": "compliance@ghostmarket.io"
+  },
+  "glodollar": {
+    "slug": "glodollar",
+    "website": "https://glodollar.org",
+    "source": [
+      "website_footer"
+    ],
+    "twitter": "@glodollar",
+    "discord": "https://discord.gg/PUrBVdzzN5",
+    "github": "https://github.com/Glo-Foundation",
+    "bounty_policy_url": "https://r.xyz/program/glo-dollar",
+    "chains_mentioned": [
+      "Ethereum",
+      "Arbitrum",
+      "Optimism",
+      "Polygon",
+      "Base",
+      "Gnosis",
+      "Celo"
+    ]
+  },
+  "gmx": {
+    "slug": "gmx",
+    "website": "https://gmx.io",
+    "source": [
+      "meta_tags",
+      "docs_subdomain",
+      "page:/security"
+    ],
+    "og_site_name": "GMX",
+    "chains_mentioned": [
+      "Arbitrum"
+    ],
+    "docs_url": "https://docs.gmx.io",
+    "bounty_policy_url": "https://gmx.io/security"
+  },
+  "gnosischain": {
+    "slug": "gnosischain",
+    "website": "https://gnosis.io",
+    "source": [
+      "website_footer",
+      "docs_subdomain"
+    ],
+    "discord": "https://discord.gg/gnosis",
+    "chains_mentioned": [
+      "Gnosis"
+    ],
+    "docs_url": "https://docs.gnosis.io"
+  },
+  "goldfinch": {
+    "slug": "goldfinch",
+    "website": "https://goldfinch.finance",
+    "source": [
+      "website_footer",
+      "website_body",
+      "meta_tags",
+      "docs_links"
+    ],
+    "twitter": "@goldfinch_fi",
+    "discord": "https://discord.com/invite/HVeaca3fN8",
+    "blog": "https://medium.com/goldfinch-fi",
+    "github": "https://github.com/goldfinch-eng",
+    "og_site_name": "Goldfinch Prime: The world&#x27;s leading private credit funds onchain",
+    "docs_url": "https://docs.goldfinch.finance"
+  },
+  "granite-protocol": {
+    "slug": "granite-protocol",
+    "website": "https://app.granite.world",
+    "source": [
+      "meta_tags",
+      "docs_subdomain",
+      "status_subdomain",
+      "page:/security"
+    ],
+    "twitter": "@GraniteBTC",
+    "docs_url": "https://docs.granite.world",
+    "status_page_url": "https://status.granite.world",
+    "bounty_policy_url": "https://app.granite.world/security"
+  },
+  "gysr": {
+    "slug": "gysr",
+    "website": "https://gysr.io",
+    "source": [
+      "website_footer",
+      "docs_links"
+    ],
+    "twitter": "@gysr_io",
+    "discord": "https://discord.com/invite/qjWa7JB",
+    "telegram": "https://t.me/gysr_io",
+    "github": "https://github.com/gysr-io",
+    "blog": "https://medium.com/gysr",
+    "docs_url": "https://docs.gysr.io/guide/mechanisms#geyser",
+    "whitepaper_url": "https://resources.gysr.io/gysr_v2_whitepaper.pdf",
+    "auditors": [
+      "Immunefi",
+      "Dedaub"
+    ],
+    "chains_mentioned": [
+      "Optimism",
+      "Polygon"
+    ]
+  },
+  "hakkafinance": {
+    "slug": "hakkafinance",
+    "website": "https://hakka.finance",
+    "source": [
+      "page:/security"
+    ],
+    "bounty_policy_url": "https://hakka.finance/security"
+  },
+  "halogen": {
+    "slug": "halogen",
+    "website": "https://halogen.finance",
+    "source": []
+  },
+  "harvest": {
+    "slug": "harvest",
+    "website": "https://harvest.finance",
+    "source": [
+      "website_body",
+      "docs_links",
+      "page:/security"
+    ],
+    "twitter": "@harvest_finance",
+    "discord": "https://discord.gg/xHXe3tYjPY",
+    "blog": "https://medium.com/harvest-finance",
+    "docs_url": "https://docs.harvest.finance/",
+    "audit_report_urls": [
+      "https://github.com/harvestfi/audits/blob/main/LeastAuthority-Harvest.pdf",
+      "https://github.com/harvestfi/audits/blob/main/Haechi-Harvest.pdf",
+      "https://github.com/harvestfi/audits/blob/main/PeckShield-Harvest.pdf",
+      "https://github.com/harvestfi/audits/blob/main/CertiK-Harvest.pdf"
+    ],
+    "auditors": [
+      "Peckshield",
+      "PeckShield"
+    ],
+    "chains_mentioned": [
+      "Ethereum",
+      "Arbitrum",
+      "Polygon"
+    ],
+    "bounty_policy_url": "https://harvest.finance/security"
+  },
+  "hashflow": {
+    "slug": "hashflow",
+    "website": "https://hashflow.com",
+    "source": [
+      "docs_subdomain"
+    ],
+    "docs_url": "https://docs.hashflow.com"
+  },
+  "hathornetwork": {
+    "slug": "hathornetwork",
+    "website": "https://hathor.network",
+    "source": [
+      "website_footer",
+      "docs_subdomain"
+    ],
+    "twitter": "@HathorNetwork",
+    "telegram": "https://t.me/HathorOfficial",
+    "contact_email": "commercial@hathor.network",
+    "chains_mentioned": [
+      "Base"
+    ],
+    "docs_url": "https://docs.hathor.network"
+  },
+  "haven1": {
+    "slug": "haven1",
+    "website": "https://swap.haven1.org",
+    "source": [
+      "docs_subdomain"
+    ],
+    "docs_url": "https://docs.haven1.org"
+  },
+  "hedera": {
+    "slug": "hedera",
+    "website": "https://hedera.com",
+    "source": [
+      "website_footer",
+      "website_body",
+      "meta_tags",
+      "docs_links",
+      "status_subdomain"
+    ],
+    "twitter": "@hedera",
+    "github": "https://github.com/hashgraph",
+    "og_site_name": "Hedera",
+    "docs_url": "https://docs.hedera.com/hedera/",
+    "developer_docs_url": "https://hedera.com/developer-tooling/",
+    "bounty_policy_url": "href=\"/bug-bounty/\"",
+    "chains_mentioned": [
+      "Scroll",
+      "Mode"
+    ],
+    "status_page_url": "https://status.hedera.com",
+    "auditors": [
+      "Immunefi"
+    ]
+  },
+  "helios-finance": {
+    "slug": "helios-finance",
+    "website": "https://app.hel.io",
+    "source": [
+      "meta_tags",
+      "docs_subdomain"
+    ],
+    "twitter": "@moonpay",
+    "og_site_name": "MoonPay Commerce",
+    "docs_url": "https://docs.hel.io"
+  },
+  "hibachi": {
+    "slug": "hibachi",
+    "website": "https://hibachi.xyz",
+    "source": [
+      "docs_subdomain"
+    ],
+    "docs_url": "https://docs.hibachi.xyz"
+  },
+  "hoenn": {
+    "slug": "hoenn",
+    "website": "https://hoenn.finance",
+    "source": []
+  },
+  "horizen": {
+    "slug": "horizen",
+    "website": "https://horizen.io",
+    "source": [
+      "website_footer",
+      "website_body",
+      "meta_tags",
+      "docs_links"
+    ],
+    "twitter": "@horizenglobal",
+    "telegram": "https://t.me/horizencommunity",
+    "github": "https://github.com/horizenofficial",
+    "discord": "https://discord.com/invite/gamblorcasino",
+    "og_site_name": "Horizen",
+    "docs_url": "https://docs.horizen.io/governance/overview/about",
+    "whitepaper_url": "https://downloads.horizen.io/file/web-assets/Horizen+Whitepaper+v1.0.0.pdf",
+    "chains_mentioned": [
+      "Ethereum",
+      "Base"
+    ]
+  },
+  "hourglass": {
+    "slug": "hourglass",
+    "website": "https://hourglass.com",
+    "source": [
+      "docs_subdomain"
+    ],
+    "docs_url": "https://docs.hourglass.com"
+  },
+  "hydradx": {
+    "slug": "hydradx",
+    "website": "https://hydration.net",
+    "source": [
+      "website_footer",
+      "docs_links",
+      "page:/security"
+    ],
+    "twitter": "@hydration_net",
+    "discord": "https://discord.gg/kkmY35UxAG",
+    "telegram": "https://t.me/hydration_net",
+    "github": "https://github.com/galacticcouncil",
+    "docs_url": "https://docs.hydration.net",
+    "chains_mentioned": [
+      "Ethereum",
+      "Base",
+      "Solana"
+    ],
+    "bounty_policy_url": "https://hydration.net/security"
+  },
+  "hydro": {
+    "slug": "hydro",
+    "website": "https://app.hydroprotocol.finance",
+    "source": [
+      "meta_tags",
+      "docs_subdomain",
+      "page:/security"
+    ],
+    "og_site_name": "Hydro Protocol",
+    "docs_url": "https://docs.hydroprotocol.finance",
+    "bounty_policy_url": "https://app.hydroprotocol.finance/security"
+  },
+  "hyperlane": {
+    "slug": "hyperlane",
+    "website": "https://hyperlane.xyz",
+    "source": [
+      "website_footer",
+      "docs_links"
+    ],
+    "twitter": "@hyperlane",
+    "discord": "https://discord.gg/hyperlane",
+    "github": "https://github.com/hyperlane-xyz",
+    "docs_url": "https://docs.hyperlane.xyz/docs/operate/validators/run-validators",
+    "audit_report_urls": [
+      "https://docs.hyperlane.xyz/docs/resources/audits"
+    ],
+    "bounty_policy_url": "https://github.com/search?q=org%3Ahyperlane-xyz+label%3Abounty+is%3Aopen+is%3Aissue&amp;type=issues&amp;s=&amp;o=desc",
+    "chains_mentioned": [
+      "Ethereum",
+      "Solana",
+      "Fantom",
+      "StarkNet",
+      "Cosmos"
+    ]
+  },
+  "ichi": {
+    "slug": "ichi",
+    "website": "https://ichi.org",
+    "source": [
+      "website_footer",
+      "docs_links"
+    ],
+    "twitter": "@ichifoundation",
+    "discord": "https://discord.gg/cxPGjGTy8V",
+    "telegram": "https://t.me/ichifarm",
+    "blog": "https://medium.com/ichifarm",
+    "docs_url": "https://docs.ichi.org/",
+    "auditors": [
+      "Quantstamp"
+    ]
+  },
+  "icon": {
+    "slug": "icon",
+    "website": "https://icon.foundation",
+    "source": [
+      "website_footer"
+    ],
+    "twitter": "@ICONStiftung",
+    "github": "https://github.com/icon-project",
+    "chains_mentioned": [
+      "Arbitrum",
+      "Polygon",
+      "Base",
+      "Avalanche",
+      "BNB Chain",
+      "Solana",
+      "Cosmos",
+      "Sui",
+      "Mode"
+    ]
+  },
+  "idex": {
+    "slug": "idex",
+    "website": "https://kuma.bid",
+    "source": [
+      "website_body",
+      "docs_subdomain"
+    ],
+    "twitter": "@kumadotbid",
+    "discord": "https://discord.gg/kumadotbid",
+    "telegram": "https://t.me/kumadotbid",
+    "blog": "https://blog.kuma.bid",
+    "chains_mentioned": [
+      "Arbitrum"
+    ],
+    "docs_url": "https://docs.kuma.bid"
+  },
+  "idlefinance": {
+    "slug": "idlefinance",
+    "website": "https://idle.finance",
+    "source": [
+      "docs_subdomain"
+    ],
+    "auditors": [
+      "Consensys Diligence",
+      "Quantstamp",
+      "Immunefi"
+    ],
+    "docs_url": "https://docs.idle.finance"
+  },
+  "illuvium": {
+    "slug": "illuvium",
+    "website": "https://illuvium.io",
+    "source": [
+      "docs_subdomain"
+    ],
+    "docs_url": "https://docs.illuvium.io"
+  },
+  "immunefi": {
+    "slug": "immunefi",
+    "website": "https://immunefi.com",
+    "source": [
+      "meta_tags",
+      "docs_links"
+    ],
+    "twitter": "@immunefi",
+    "og_site_name": "Immunefi",
+    "whitepaper_url": "https://immunefi.com/whitepapers/web3-security-playbook.pdf",
+    "audit_report_urls": [
+      "https://immunefi.com/audits/",
+      "https://immunefi.com/audit-competitions/"
+    ],
+    "auditors": [
+      "Sigma Prime",
+      "Immunefi",
+      "Runtime Verification",
+      "OtterSec",
+      "OpenZeppelin",
+      "Sherlock"
+    ],
+    "bounty_policy_url": "href=\"/bug-bounty/\"",
+    "chains_mentioned": [
+      "Arbitrum",
+      "Optimism",
+      "Polygon",
+      "zkSync",
+      "Scroll",
+      "Sei"
+    ]
+  },
+  "immutable": {
+    "slug": "immutable",
+    "website": "https://immutable.com",
+    "source": [
+      "website_footer",
+      "docs_subdomain",
+      "status_subdomain"
+    ],
+    "twitter": "@Immutable",
+    "discord": "https://discord.com/invite/immutable-play",
+    "reddit": "https://www.reddit.com/r/ImmutableX",
+    "chains_mentioned": [
+      "Base",
+      "Scroll"
+    ],
+    "docs_url": "https://docs.immutable.com",
+    "status_page_url": "https://status.immutable.com"
+  },
+  "impossible-cloud-network": {
+    "slug": "impossible-cloud-network",
+    "website": "https://impossible.cloud",
+    "source": []
+  },
+  "impossiblefinance": {
+    "slug": "impossiblefinance",
+    "website": "https://impossible.finance",
+    "source": [
+      "website_footer",
+      "docs_subdomain"
+    ],
+    "twitter": "@impossible_",
+    "telegram": "https://t.me/ImpossibleFinance",
+    "github": "https://github.com/ImpossibleFinance",
+    "auditors": [
+      "Immunefi"
+    ],
+    "chains_mentioned": [
+      "Scroll"
+    ],
+    "docs_url": "https://docs.impossible.finance"
+  },
+  "indexcoop": {
+    "slug": "indexcoop",
+    "website": "https://indexcoop.com",
+    "source": [
+      "website_footer",
+      "docs_links"
+    ],
+    "twitter": "@indexcoop",
+    "discord": "https://discord.com/invite/indexcoop",
+    "github": "https://github.com/IndexCoop",
+    "docs_url": "https://docs.indexcoop.com/index-coop-community-handbook/products/trade",
+    "auditors": [
+      "OpenZeppelin",
+      "Immunefi"
+    ],
+    "bounty_policy_url": "href=\"https://immunefi.com/bug-bounty/indexcoop/information/\"",
+    "chains_mentioned": [
+      "Ethereum",
+      "Arbitrum",
+      "Base",
+      "Sui"
+    ]
+  },
+  "infinex": {
+    "slug": "infinex",
+    "website": "https://infinex.xyz",
+    "source": [
+      "meta_tags"
+    ],
+    "twitter": "@infinex",
+    "og_site_name": "Infinex",
+    "chains_mentioned": [
+      "Ethereum",
+      "Avalanche",
+      "Mantle"
+    ]
+  },
+  "injective": {
+    "slug": "injective",
+    "website": "https://injective.com",
+    "source": [
+      "website_footer",
+      "meta_tags",
+      "docs_links"
+    ],
+    "twitter": "@Injective",
+    "discord": "https://discord.com/invite/NK4qdbv",
+    "telegram": "https://t.me/joininjective",
+    "github": "https://github.com/InjectiveLabs",
+    "reddit": "https://www.reddit.com/r/injective",
+    "og_site_name": "Injective | The Blockchain Built for Finance & Web3 Innovation",
+    "developer_docs_url": "https://www.pyth.network/developers/testnet/",
+    "chains_mentioned": [
+      "Ethereum",
+      "Arbitrum",
+      "Polygon",
+      "Avalanche",
+      "BNB Chain",
+      "Solana",
+      "Cosmos",
+      "NEAR",
+      "Sui"
+    ]
+  },
+  "instadapp": {
+    "slug": "instadapp",
+    "website": "https://instadapp.io",
+    "source": [
+      "website_footer",
+      "docs_links",
+      "status_subdomain"
+    ],
+    "twitter": "@instadapp",
+    "discord": "https://discord.com/invite/C76CeZc",
+    "github": "https://github.com/Instadapp",
+    "blog": "https://blog.instadapp.io",
+    "contact_email": "info@instadapp.io",
+    "docs_url": "https://docs.instadapp.io",
+    "auditors": [
+      "Immunefi"
+    ],
+    "chains_mentioned": [
+      "Ethereum",
+      "Arbitrum",
+      "Optimism",
+      "Polygon",
+      "Base",
+      "Avalanche",
+      "Fantom",
+      "Gnosis",
+      "Scroll"
+    ],
+    "status_page_url": "https://status.instadapp.io"
+  },
+  "integral": {
+    "slug": "integral",
+    "website": "https://integral.link",
+    "source": [
+      "website_footer",
+      "docs_links"
+    ],
+    "twitter": "@integralhq",
+    "discord": "https://discord.gg/ANf3VufDvm",
+    "telegram": "https://t.me/integralresistance",
+    "github": "https://github.com/integralhq",
+    "docs_url": "https://docs.integral.link",
+    "audit_report_urls": [
+      "https://docs.integral.link/size/library/audit-report"
+    ],
+    "auditors": [
+      "Immunefi"
+    ],
+    "bounty_policy_url": "href=\"https://immunefi.com/bug-bounty/integral/\"",
+    "chains_mentioned": [
+      "Arbitrum"
+    ]
+  },
+  "integriteenetwork": {
+    "slug": "integriteenetwork",
+    "website": "https://integritee.network",
+    "source": [
+      "docs_subdomain"
+    ],
+    "docs_url": "https://docs.integritee.network"
+  },
+  "interlay": {
+    "slug": "interlay",
+    "website": "https://interlay.io",
+    "source": [
+      "website_footer",
+      "docs_links"
+    ],
+    "twitter": "@interlayHQ",
+    "discord": "https://discord.com/invite/interlay",
+    "telegram": "https://t.me/interlay_community",
+    "github": "https://github.com/interlay",
+    "blog": "https://medium.com/interlay",
+    "contact_email": "contact@interlay.io",
+    "docs_url": "https://docs.interlay.io/#/vault/overview",
+    "developer_docs_url": "https://docs.interlay.io/#/developers/overview",
+    "whitepaper_url": "https://gateway.pinata.cloud/ipfs/QmWp62gdLssFpAoG2JqK8sy3m3rTRUa8LyzoSY8ZFisYNB",
+    "audit_report_urls": [
+      "https://docs.interlay.io/#/about/audits"
+    ],
+    "bounty_policy_url": "href=\"https://docs.interlay.io/#/about/bug-bounty\"",
+    "chains_mentioned": [
+      "Moonbeam"
+    ]
+  },
+  "intmax": {
+    "slug": "intmax",
+    "website": "https://intmax.io",
+    "source": [
+      "website_footer",
+      "docs_links"
+    ],
+    "twitter": "@intmaxIO",
+    "discord": "https://discord.gg/TGMctchPR6",
+    "github": "https://github.com/InternetMaximalism",
+    "docs_url": "https://docs.network.intmax.io/developers-hub/",
+    "developer_docs_url": "./blog/developer-hub-everything-you-need-to-start-building-with-intmax",
+    "whitepaper_url": "https://eprint.iacr.org/2023/1082.pdf",
+    "auditors": [
+      "Nethermind"
+    ],
+    "chains_mentioned": [
+      "Ethereum"
+    ]
+  },
+  "ion-protocol": {
+    "slug": "ion-protocol",
+    "website": "https://ionprotocol.io",
+    "source": [
+      "website_footer",
+      "meta_tags",
+      "docs_links"
+    ],
+    "twitter": "@ionprotocol",
+    "discord": "https://discord.com/invite/CjQqUgPA6Y",
+    "contact_email": "team@molecularlabs.io",
+    "og_site_name": "Ion Protocol",
+    "docs_url": "https://docs.ionprotocol.io/",
+    "chains_mentioned": [
+      "Ethereum",
+      "Polygon",
+      "Base",
+      "Scroll",
+      "Mode"
+    ]
+  },
+  "ipor": {
+    "slug": "ipor",
+    "website": "https://ipor.io",
+    "source": [
+      "website_footer",
+      "docs_links",
+      "page:/security"
+    ],
+    "twitter": "@ipor_io",
+    "discord": "https://discord.com/invite/bSKzq6UMJ3",
+    "telegram": "https://t.me/IPOR_official_broadcast",
+    "github": "https://github.com/IPOR-Labs",
+    "docs_url": "https://docs.ipor.io/ipor-faq/fusn-snapshot-22446433",
+    "whitepaper_url": "https://docs.ipor.io/research-whitepapers/white-paper",
+    "audit_report_urls": [
+      "https://docs.ipor.io/audits"
+    ],
+    "auditors": [
+      "Immunefi"
+    ],
+    "chains_mentioned": [
+      "Ethereum",
+      "Arbitrum",
+      "Base"
+    ],
+    "bounty_policy_url": "https://ipor.io/security"
+  },
+  "jito-bam-client": {
+    "slug": "jito-bam-client",
+    "website": "https://jito.network",
+    "source": [
+      "website_footer",
+      "docs_links"
+    ],
+    "twitter": "@jito_sol",
+    "discord": "https://discord.com/invite/jitocommunity",
+    "telegram": "https://t.me/thejitocommunity",
+    "docs_url": "https://jito.network/docs/governance/",
+    "chains_mentioned": [
+      "Solana",
+      "Mode"
+    ]
+  },
+  "justlenddao": {
+    "slug": "justlenddao",
+    "website": "https://justlend.just.network",
+    "source": []
+  },
+  "kadena": {
+    "slug": "kadena",
+    "website": "https://kadena.io",
+    "source": [
+      "meta_tags",
+      "docs_subdomain"
+    ],
+    "og_site_name": "Kadena",
+    "docs_url": "https://docs.kadena.io"
+  },
+  "kamino": {
+    "slug": "kamino",
+    "website": "https://kamino.com",
+    "source": [
+      "page:/security"
+    ],
+    "chains_mentioned": [
+      "Solana"
+    ],
+    "bounty_policy_url": "https://kamino.com/security"
+  },
+  "keep3rnetwork": {
+    "slug": "keep3rnetwork",
+    "website": "https://keep3r.network",
+    "source": [
+      "website_footer",
+      "meta_tags",
+      "docs_links"
+    ],
+    "twitter": "@thekeep3r",
+    "discord": "https://discord.gg/Mwunmt7ZvD",
+    "telegram": "https://t.me/keep3r_official",
+    "blog": "https://medium.com/keep3r-network",
+    "og_site_name": "The Keep3r Network",
+    "docs_url": "https://docs.keep3r.network/core/keepers",
+    "chains_mentioned": [
+      "Ethereum"
+    ]
+  },
+  "kelp-dao": {
+    "slug": "kelp-dao",
+    "website": "https://kelpdao.xyz",
+    "source": [
+      "website_footer",
+      "page:/security"
+    ],
+    "twitter": "@kernel_dao",
+    "discord": "https://discord.gg/khSpqCFvGq",
+    "telegram": "https://t.me/KelpDAOxyz",
+    "audit_report_urls": [
+      "https://kelpdao.xyz/kelp/assets/hero/audits.png",
+      "https://kelpdao.xyz/kelp/assets/hero/audited.png"
+    ],
+    "chains_mentioned": [
+      "Ethereum"
+    ],
+    "bounty_policy_url": "https://kelpdao.xyz/security"
+  },
+  "kwenta": {
+    "slug": "kwenta",
+    "website": "https://kwenta.eth.limo",
+    "source": [
+      "meta_tags"
+    ],
+    "twitter": "@SNX_Exchange",
+    "og_site_name": "Synthetix Exchange"
+  },
+  "landx": {
+    "slug": "landx",
+    "website": "https://landx.fi",
+    "source": []
+  },
+  "layer3": {
+    "slug": "layer3",
+    "website": "https://layer3.xyz",
+    "source": [
+      "website_footer",
+      "meta_tags",
+      "docs_links",
+      "page:/security"
+    ],
+    "twitter": "@layer3",
+    "discord": "https://discord.com/invite/bzktXw3gEY",
+    "og_site_name": "Layer3",
+    "docs_url": "https://docs.layer3.xyz",
+    "chains_mentioned": [
+      "Arbitrum",
+      "Optimism",
+      "Base",
+      "Solana"
+    ],
+    "bounty_policy_url": "https://layer3.xyz/security"
+  },
+  "layerzero": {
+    "slug": "layerzero",
+    "website": "https://layerzero.network",
+    "source": [
+      "website_footer",
+      "meta_tags",
+      "docs_links",
+      "page:/terms"
+    ],
+    "twitter": "@layerzero_core",
+    "discord": "https://discord.gg/ktbvm8Nkcr",
+    "og_site_name": "LayerZero",
+    "docs_url": "https://docs.layerzero.network",
+    "developer_docs_url": "https://docs.layerzero.network",
+    "whitepaper_url": "https://layerzero.network/publications/LayerZero_Whitepaper_V2.1.1.pdf",
+    "legal_email": "notices@layerzero.network"
+  },
+  "lendr": {
+    "slug": "lendr",
+    "website": "https://lendr.xyz",
+    "source": []
+  },
+  "lido": {
+    "slug": "lido",
+    "website": "https://lido.fi",
+    "source": [
+      "security.txt",
+      "website_footer",
+      "docs_links"
+    ],
+    "security_policy_url": "https://immunefi.com/bug-bounty/lido/information/",
+    "preferred_languages": "en",
+    "security_email": "security@lido.fi",
+    "twitter": "@lidofinance",
+    "discord": "https://discord.com/invite/lido",
+    "telegram": "https://t.me/lidofinance",
+    "github": "https://github.com/lidofinance",
+    "blog": "https://blog.lido.fi",
+    "contact_email": "info@lido.fi",
+    "docs_url": "https://docs.lido.fi",
+    "audit_report_urls": [
+      "https://github.com/lidofinance/audits"
+    ],
+    "auditors": [
+      "OpenZeppelin",
+      "Certora",
+      "Chainsecurity",
+      "ChainSecurity",
+      "Immunefi",
+      "MixBytes",
+      "Nethermind"
+    ],
+    "bounty_policy_url": "href=\"https://immunefi.com/bug-bounty/lido/information/\"",
+    "chains_mentioned": [
+      "Ethereum",
+      "Arbitrum",
+      "Polygon"
+    ]
+  },
+  "lifi": {
+    "slug": "lifi",
+    "website": "https://lifinity.io",
+    "source": [
+      "website_body",
+      "meta_tags",
+      "docs_links"
+    ],
+    "twitter": "@Lifinity_io",
+    "discord": "https://discord.com/invite/K2tvfcXwWr",
+    "og_site_name": "LIFINITY",
+    "docs_url": "https://docs.lifinity.io/",
+    "chains_mentioned": [
+      "Solana"
+    ]
+  },
+  "light-protocol": {
+    "slug": "light-protocol",
+    "website": "https://lightprotocol.com",
+    "source": [
+      "website_body",
+      "docs_links",
+      "page:/security"
+    ],
+    "twitter": "@LightProtocol",
+    "discord": "https://discord.gg/rpddh53TeG",
+    "docs_url": "https://www.zkcompression.com",
+    "audit_report_urls": [
+      "https://github.com/Lightprotocol/light-protocol/tree/main/audits"
+    ],
+    "chains_mentioned": [
+      "Solana"
+    ],
+    "bounty_policy_url": "https://lightprotocol.com/security"
+  },
+  "linea": {
+    "slug": "linea",
+    "website": "https://bridge.linea.build",
+    "source": [
+      "docs_subdomain"
+    ],
+    "docs_url": "https://docs.linea.build"
+  },
+  "liquidswap": {
+    "slug": "liquidswap",
+    "website": "https://liquidswap.com",
+    "source": [
+      "docs_subdomain",
+      "page:/security"
+    ],
+    "chains_mentioned": [
+      "Aptos"
+    ],
+    "docs_url": "https://docs.liquidswap.com",
+    "bounty_policy_url": "https://liquidswap.com/security"
+  },
+  "listadao": {
+    "slug": "listadao",
+    "website": "https://lista.org",
+    "source": [
+      "page:/security"
+    ],
+    "chains_mentioned": [
+      "Ethereum",
+      "BNB Chain",
+      "Cosmos"
+    ],
+    "bounty_policy_url": "https://lista.org/security"
+  },
+  "livepeer": {
+    "slug": "livepeer",
+    "website": "https://livepeer.org",
+    "source": [
+      "website_footer",
+      "docs_links"
+    ],
+    "discord": "https://discord.com/invite/livepeer",
+    "telegram": "https://t.me/livepeerorg",
+    "reddit": "https://www.reddit.com/r/livepeer",
+    "docs_url": "https://docs.livepeer.org/developers/quick-start",
+    "developer_docs_url": "https://docs.livepeer.org/developers/quick-start"
+  },
+  "localtraders": {
+    "slug": "localtraders",
+    "website": "https://localtraders.com",
+    "source": []
+  },
+  "lombard-finance": {
+    "slug": "lombard-finance",
+    "website": "https://lombard.finance",
+    "source": [
+      "website_footer",
+      "meta_tags",
+      "docs_links"
+    ],
+    "twitter": "@lombard_finance",
+    "discord": "https://discord.com/invite/2HG7G69twc",
+    "og_site_name": "Lombard",
+    "docs_url": "https://docs.lombard.finance",
+    "audit_report_urls": [
+      "https://github.com/lombard-finance/evm-smart-contracts/tree/main/docs/audit"
+    ],
+    "chains_mentioned": [
+      "Arbitrum",
+      "Base",
+      "BNB Chain",
+      "Sui"
+    ]
+  },
+  "lossless": {
+    "slug": "lossless",
+    "website": "https://lossless.io",
+    "source": [
+      "website_footer",
+      "docs_links"
+    ],
+    "twitter": "@losslessdefi",
+    "discord": "https://discord.gg/5kruscwkJY",
+    "telegram": "https://t.me/lossless_io",
+    "github": "https://github.com/Lossless-Cash",
+    "docs_url": "https://docs.lossless.io/protocol/",
+    "developer_docs_url": "https://lossless.io/for-developers/",
+    "whitepaper_url": "https://docs.lossless.io/protocol/",
+    "chains_mentioned": [
+      "Ethereum",
+      "Arbitrum",
+      "Polygon",
+      "Avalanche",
+      "Fantom"
+    ]
+  },
+  "lybrafinance": {
+    "slug": "lybrafinance",
+    "website": "https://lybra.finance",
+    "source": []
+  },
+  "lyra": {
+    "slug": "lyra",
+    "website": "https://lyra.finance",
+    "source": [
+      "docs_subdomain",
+      "status_subdomain"
+    ],
+    "docs_url": "https://docs.lyra.finance",
+    "status_page_url": "https://status.lyra.finance"
+  },
+  "magpiexyz": {
+    "slug": "magpiexyz",
+    "website": "https://magpiexyz.io",
+    "source": [
+      "docs_subdomain",
+      "page:/security"
+    ],
+    "chains_mentioned": [
+      "Ethereum"
+    ],
+    "docs_url": "https://docs.magpiexyz.io",
+    "bounty_policy_url": "https://magpiexyz.io/security"
+  },
+  "mantlelsp": {
+    "slug": "mantlelsp",
+    "website": "https://mantle.xyz",
+    "source": [
+      "website_footer",
+      "website_body",
+      "docs_links"
+    ],
+    "discord": "https://discord.com/invite/0xMantle",
+    "telegram": "https://t.me/mantlenetwork",
+    "twitter": "@Mantle_Official",
+    "docs_url": "https://docs.mantle.xyz/network",
+    "chains_mentioned": [
+      "Ethereum",
+      "Scroll",
+      "Mantle"
+    ]
+  },
+  "maple": {
+    "slug": "maple",
+    "website": "https://maple.finance",
+    "source": [
+      "website_footer",
+      "docs_links"
+    ],
+    "twitter": "@maplefinance",
+    "telegram": "https://t.me/maplefinance",
+    "docs_url": "https://docs.maple.finance/integrate-syrupusd/get-started"
+  },
+  "marinade": {
+    "slug": "marinade",
+    "website": "https://app.marinade.finance",
+    "source": [
+      "docs_subdomain"
+    ],
+    "chains_mentioned": [
+      "Solana"
+    ],
+    "docs_url": "https://docs.marinade.finance"
+  },
+  "mars": {
+    "slug": "mars",
+    "website": "https://marsprotocol.io",
+    "source": [
+      "website_body",
+      "meta_tags",
+      "docs_links"
+    ],
+    "twitter": "@mars_protocol",
+    "telegram": "https://t.me/marsprotocol",
+    "og_site_name": "Mars Protocol",
+    "docs_url": "https://docs.marsprotocol.io/brand-kit",
+    "chains_mentioned": [
+      "Cosmos"
+    ]
+  },
+  "marsecosystem": {
+    "slug": "marsecosystem",
+    "website": "https://marsecosystem.com",
+    "source": [
+      "docs_subdomain",
+      "page:/security"
+    ],
+    "docs_url": "https://docs.marsecosystem.com",
+    "bounty_policy_url": "https://marsecosystem.com/security"
+  },
+  "mayaprotocol": {
+    "slug": "mayaprotocol",
+    "website": "https://mayaprotocol.com",
+    "source": [
+      "website_footer",
+      "docs_links"
+    ],
+    "twitter": "@Maya_Protocol",
+    "discord": "https://discord.com/invite/mayaprotocol",
+    "telegram": "https://t.me/MayaProtocolOfficial",
+    "docs_url": "https://docs.mayaprotocol.com/",
+    "developer_docs_url": "https://docs.mayaprotocol.com/mayachain-dev-docs/introduction",
+    "chains_mentioned": [
+      "Scroll"
+    ]
+  },
+  "meanfinance": {
+    "slug": "meanfinance",
+    "website": "https://mean.finance",
+    "source": [
+      "page:/security"
+    ],
+    "bounty_policy_url": "https://mean.finance/security"
+  },
+  "metalswap": {
+    "slug": "metalswap",
+    "website": "https://app.metalswap.finance",
+    "source": [
+      "docs_subdomain",
+      "page:/security"
+    ],
+    "docs_url": "https://docs.metalswap.finance",
+    "bounty_policy_url": "https://app.metalswap.finance/security"
+  },
+  "metastreet-yield-pass": {
+    "slug": "metastreet-yield-pass",
+    "website": "https://metastreet.xyz",
+    "source": [
+      "website_footer",
+      "docs_links"
+    ],
+    "twitter": "@metastreetxyz",
+    "discord": "https://discord.com/invite/metastreet",
+    "github": "https://github.com/metastreet-labs",
+    "blog": "https://medium.com/@MetaStreet",
+    "docs_url": "https://docs.metastreet.xyz/",
+    "auditors": [
+      "Immunefi"
+    ],
+    "chains_mentioned": [
+      "Ethereum",
+      "Arbitrum",
+      "Base",
+      "Blast"
+    ]
+  },
+  "meth": {
+    "slug": "meth",
+    "website": "https://methprotocol.xyz",
+    "source": [
+      "website_footer",
+      "meta_tags",
+      "docs_links"
+    ],
+    "twitter": "@mETHProtocol",
+    "discord": "https://discord.com/invite/methprotocol",
+    "telegram": "https://t.me/mETHProtocol_official",
+    "og_site_name": "mETH Protocol",
+    "docs_url": "https://docs.mantle.xyz/meth",
+    "whitepaper_url": "https://methprotocol.xyz/mica-whitepaper",
+    "audit_report_urls": [
+      "https://docs.mantle.xyz/meth/security/audits"
+    ],
+    "auditors": [
+      "Quantstamp",
+      "MixBytes"
+    ],
+    "chains_mentioned": [
+      "Ethereum"
+    ]
+  },
+  "metis": {
+    "slug": "metis",
+    "website": "https://metis.io",
+    "source": [
+      "website_footer",
+      "docs_links",
+      "status_subdomain"
+    ],
+    "twitter": "@MetisL2",
+    "discord": "https://discord.com/invite/metis",
+    "telegram": "https://t.me/metisafrica",
+    "github": "https://github.com/MetisProtocol",
+    "docs_url": "https://docs.metis.io/hyperion",
+    "developer_docs_url": "https://metis.io/developers",
+    "chains_mentioned": [
+      "Ethereum"
+    ],
+    "status_page_url": "https://status.metis.io"
+  },
+  "metronome": {
+    "slug": "metronome",
+    "website": "https://metronome.io",
+    "source": [
+      "website_footer",
+      "meta_tags",
+      "docs_links"
+    ],
+    "twitter": "@MetronomeDAO",
+    "discord": "https://discord.gg/metronome",
+    "telegram": "https://t.me/metronometoken",
+    "github": "https://github.com/autonomoussoftware",
+    "og_site_name": "Metronome",
+    "docs_url": "https://docs.metronome.io/metronome-2.0/master",
+    "auditors": [
+      "Immunefi"
+    ],
+    "chains_mentioned": [
+      "Optimism",
+      "Polygon",
+      "Scroll"
+    ]
+  },
+  "monero-oxide": {
+    "slug": "monero-oxide",
+    "website": "https://monero.com",
+    "source": [
+      "website_footer",
+      "website_body",
+      "page:/security"
+    ],
+    "twitter": "@MoneroCom",
+    "telegram": "https://t.me/cakewallet_bot",
+    "reddit": "https://reddit.com/r/MoneroSupport",
+    "chains_mentioned": [
+      "Ethereum"
+    ],
+    "bounty_policy_url": "https://monero.com/security"
+  },
+  "moneyonchain": {
+    "slug": "moneyonchain",
+    "website": "https://moneyonchain.com",
+    "source": [
+      "website_footer",
+      "meta_tags",
+      "docs_links",
+      "docs_subdomain"
+    ],
+    "twitter": "@moneyonchainok",
+    "discord": "https://discord.gg/9pt728aD5K",
+    "telegram": "https://t.me/MoneyOnChainCommunity",
+    "github": "https://github.com/money-on-chain",
+    "og_site_name": "Money On Chain",
+    "whitepaper_url": "https://drive.google.com/file/d/10HIs1T4pD5MFSGjr-pnPrPD29DpFYKZN/view",
+    "chains_mentioned": [
+      "Mode"
+    ],
+    "docs_url": "https://docs.moneyonchain.com"
+  },
+  "moonbeamnetwork": {
+    "slug": "moonbeamnetwork",
+    "website": "https://moonbeam.network",
+    "source": [
+      "website_footer",
+      "meta_tags",
+      "docs_links"
+    ],
+    "twitter": "@moonbeamnetwork",
+    "discord": "https://discord.com/invite/PfpUATX",
+    "telegram": "https://t.me/Moonbeam_Official",
+    "og_site_name": "Moonbeam",
+    "docs_url": "https://docs.moonbeam.network/",
+    "developer_docs_url": "https://moonbeam.network/build/grants/developer-relations/",
+    "auditors": [
+      "Immunefi"
+    ],
+    "chains_mentioned": [
+      "Moonbeam"
+    ]
+  },
+  "moonwell": {
+    "slug": "moonwell",
+    "website": "https://moonwell.fi",
+    "source": [
+      "meta_tags",
+      "docs_subdomain"
+    ],
+    "og_site_name": "Moonwell",
+    "chains_mentioned": [
+      "Optimism",
+      "Base"
+    ],
+    "docs_url": "https://docs.moonwell.fi"
+  },
+  "morpho": {
+    "slug": "morpho",
+    "website": "https://app.morpho.org",
+    "source": [
+      "docs_subdomain",
+      "status_subdomain",
+      "page:/security"
+    ],
+    "docs_url": "https://docs.morpho.org",
+    "status_page_url": "https://status.morpho.org",
+    "bounty_policy_url": "https://app.morpho.org/security"
+  },
+  "mountainprotocol": {
+    "slug": "mountainprotocol",
+    "website": "https://mountainprotocol.com",
+    "source": [
+      "website_footer",
+      "docs_links"
+    ],
+    "twitter": "@mountainusdm",
+    "github": "https://github.com/mountainprotocol",
+    "blog": "https://medium.com/@MountainUSDM",
+    "contact_email": "support@mountainprotocol.com",
+    "docs_url": "https://docs.mountainprotocol.com/usdm-wind-down-overview",
+    "developer_docs_url": "https://mountainprotocol.com/contact",
+    "chains_mentioned": [
+      "Ethereum",
+      "Arbitrum",
+      "Optimism",
+      "Polygon",
+      "Base",
+      "zkSync",
+      "Celo"
+    ]
+  },
+  "mtpelerin": {
+    "slug": "mtpelerin",
+    "website": "https://mtpelerin.com",
+    "source": [
+      "website_footer",
+      "meta_tags",
+      "docs_links"
+    ],
+    "discord": "https://discord.gg/WErDKTvMr7",
+    "github": "https://github.com/MtPelerin",
+    "reddit": "https://www.reddit.com/r/MtPelerin",
+    "twitter": "@mtpelerin",
+    "og_site_name": "Mt Pelerin",
+    "docs_url": "https://developers.mtpelerin.com/",
+    "developer_docs_url": "https://developers.mtpelerin.com/",
+    "auditors": [
+      "Immunefi"
+    ],
+    "bounty_policy_url": "https://immunefi.com/bounty/mtpelerin/",
+    "chains_mentioned": [
+      "Ethereum",
+      "Polygon",
+      "Avalanche",
+      "Celo"
+    ]
+  },
+  "mux": {
+    "slug": "mux",
+    "website": "https://mux.network",
+    "source": [
+      "docs_subdomain"
+    ],
+    "chains_mentioned": [
+      "Ethereum",
+      "Arbitrum",
+      "Avalanche",
+      "BNB Chain",
+      "Fantom"
+    ],
+    "docs_url": "https://docs.mux.network"
+  },
+  "myntandzero": {
+    "slug": "myntandzero",
+    "website": "https://sovryn.com",
+    "source": [
+      "website_footer"
+    ],
+    "twitter": "@SovrynBTC",
+    "discord": "https://discord.gg/5mAMAJb2X3",
+    "telegram": "https://t.me/SovrynBitcoin",
+    "github": "https://github.com/DistributedCollective"
+  },
+  "native": {
+    "slug": "native",
+    "website": "https://native.org",
+    "source": [
+      "docs_subdomain"
+    ],
+    "docs_url": "https://docs.native.org"
+  },
+  "nayms": {
+    "slug": "nayms",
+    "website": "https://nayms.com",
+    "source": [
+      "docs_subdomain"
+    ],
+    "docs_url": "https://docs.nayms.com"
+  },
+  "neo": {
+    "slug": "neo",
+    "website": "https://neotokyo.codes",
+    "source": []
+  },
+  "neutron": {
+    "slug": "neutron",
+    "website": "https://neutron.org",
+    "source": []
+  },
+  "nexusmutual": {
+    "slug": "nexusmutual",
+    "website": "https://nexusmutual.io",
+    "source": [
+      "website_footer",
+      "docs_links"
+    ],
+    "twitter": "@NexusMutual",
+    "discord": "https://discord.gg/gTBu4x6tKe",
+    "docs_url": "https://docs.nexusmutual.io/",
+    "audit_report_urls": [
+      "https://docs.nexusmutual.io/resources/audits-and-security/"
+    ],
+    "chains_mentioned": [
+      "Base"
+    ]
+  },
+  "nftfi": {
+    "slug": "nftfi",
+    "website": "https://nftfi.com",
+    "source": [
+      "website_footer",
+      "docs_links"
+    ],
+    "twitter": "@nftfi",
+    "discord": "https://discord.gg/nftfi",
+    "github": "https://github.com/NFTfi-Genesis",
+    "contact_email": "marketing@nftfi.com",
+    "docs_url": "https://docs.nftfi.com/overview/introduction",
+    "audit_report_urls": [
+      "https://github.com/HalbornSecurity/PublicReports/blob/master/Solidity%20Smart%20Contract%20Audits/NFTfi_Ethereum_Smart_Contract_Security_Audit_Report_Halborn_Final.pdf",
+      "https://github.com/HalbornSecurity/PublicReports/blob/master/Solidity%20Smart%20Contract%20Audits/NFTfi_eth_nftfi_Collection_Offer_Smart_Contract_Security_Audit_Report_Halborn_Final.pdf",
+      "https://github.com/HalbornSecurity/PublicReports/blob/master/Solidity%20Smart%20Contract%20Audits/NFTfi_DirectLoanFixedOffer_Redeployment_Smart_Contract_Security_Audit_Report_Halborn_Final.pdf",
+      "https://github.com/HalbornSecurity/PublicReports/blob/master/Solidity%20Smart%20Contract%20Audits/NFTfi_Bundles_Airdrop_Smart_Contract_Security_Audit_Report_Halborn_Final.pdf"
+    ],
+    "auditors": [
+      "Chainsecurity",
+      "ChainSecurity",
+      "Halborn",
+      "Immunefi"
+    ],
+    "bounty_policy_url": "https://nftfi.fibery.io/@public/forms/uPPxwzT0",
+    "chains_mentioned": [
+      "Ethereum"
+    ]
+  },
+  "nftx": {
+    "slug": "nftx",
+    "website": "https://nftx.io",
+    "source": [
+      "website_body",
+      "docs_links",
+      "status_subdomain"
+    ],
+    "discord": "https://discord.gg/nftx-779073151115984926",
+    "docs_url": "https://docs.nftx.io",
+    "chains_mentioned": [
+      "Arbitrum",
+      "Base"
+    ],
+    "status_page_url": "https://status.nftx.io"
+  },
+  "nodle": {
+    "slug": "nodle",
+    "website": "https://nodle.com",
+    "source": [
+      "website_footer",
+      "docs_links",
+      "status_subdomain"
+    ],
+    "twitter": "@nodlenetwork",
+    "discord": "https://discord.gg/N5nTUt8RWJ",
+    "telegram": "http://t.me/nodleecosystem",
+    "github": "https://github.com/NodleCode",
+    "docs_url": "https://docs.nodle.com/",
+    "whitepaper_url": "https://assets.nodle.com/white_paper_4_3",
+    "chains_mentioned": [
+      "Ethereum",
+      "zkSync"
+    ],
+    "status_page_url": "https://status.nodle.com"
+  },
+  "nomad": {
+    "slug": "nomad",
+    "website": "https://nomad.xyz",
+    "source": [
+      "website_footer",
+      "docs_links"
+    ],
+    "twitter": "@nomadxyz_",
+    "discord": "http://discord.gg/RurtmJApqm",
+    "github": "http://github.com/nomad-xyz",
+    "blog": "http://blog.nomad.xyz",
+    "docs_url": "https://docs.nomad.xyz/"
+  },
+  "notional": {
+    "slug": "notional",
+    "website": "https://notional.finance",
+    "source": [
+      "docs_subdomain",
+      "page:/security"
+    ],
+    "docs_url": "https://docs.notional.finance",
+    "bounty_policy_url": "https://notional.finance/security"
+  },
+  "nucleus": {
+    "slug": "nucleus",
+    "website": "https://nucleusearn.io",
+    "source": [
+      "docs_links"
+    ],
+    "docs_url": "https://docs.nucleusearn.io/nucleus-architecture/deprecation-guide",
+    "audit_report_urls": [
+      "https://nucleusearn.io/security/audits"
+    ],
+    "chains_mentioned": [
+      "Base",
+      "Scroll"
+    ]
+  },
+  "obyte": {
+    "slug": "obyte",
+    "website": "https://friends.obyte.org",
+    "source": [
+      "website_footer"
+    ],
+    "twitter": "@ObyteOrg",
+    "telegram": "https://t.me/obyteorg"
+  },
+  "oceanprotocol": {
+    "slug": "oceanprotocol",
+    "website": "https://ocean.one",
+    "source": [
+      "meta_tags"
+    ],
+    "twitter": "@RaydiumProtocol",
+    "og_site_name": "Ocean"
+  },
+  "octopusnetwork": {
+    "slug": "octopusnetwork",
+    "website": "https://omnity.network",
+    "source": [
+      "docs_subdomain",
+      "page:/security"
+    ],
+    "docs_url": "https://docs.omnity.network",
+    "bounty_policy_url": "https://omnity.network/security"
+  },
+  "ofza-1": {
+    "slug": "ofza-1",
+    "website": "https://ofza.io",
+    "source": []
+  },
+  "olafinance": {
+    "slug": "olafinance",
+    "website": "https://ola.finance",
+    "source": []
+  },
+  "olympus": {
+    "slug": "olympus",
+    "website": "https://olympusdao.finance",
+    "source": [
+      "website_footer",
+      "docs_links"
+    ],
+    "twitter": "@OlympusDAO",
+    "github": "https://github.com/OlympusDAO",
+    "docs_url": "https://docs.olympusdao.finance/main/security/audits",
+    "audit_report_urls": [
+      "https://docs.olympusdao.finance/main/security/audits"
+    ],
+    "chains_mentioned": [
+      "Ethereum"
+    ]
+  },
+  "omron": {
+    "slug": "omron",
+    "website": "https://omron.network",
+    "source": []
+  },
+  "ondofinance": {
+    "slug": "ondofinance",
+    "website": "https://ondo.finance",
+    "source": [
+      "meta_tags",
+      "docs_subdomain",
+      "status_subdomain"
+    ],
+    "og_site_name": "Ondo Finance",
+    "chains_mentioned": [
+      "Ethereum",
+      "Base",
+      "BNB Chain",
+      "Solana",
+      "NEAR"
+    ],
+    "docs_url": "https://docs.ondo.finance",
+    "status_page_url": "https://status.ondo.finance"
+  },
+  "openzeppelin-stellar": {
+    "slug": "openzeppelin-stellar",
+    "website": "https://openzeppelin.com",
+    "source": [
+      "website_footer",
+      "docs_links",
+      "page:/security",
+      "page:/privacy"
+    ],
+    "twitter": "@OpenZeppelin",
+    "github": "https://github.com/openzeppelin",
+    "docs_url": "https://docs.openzeppelin.com/upgrades-plugins/",
+    "developer_docs_url": "#",
+    "auditors": [
+      "OpenZeppelin"
+    ],
+    "chains_mentioned": [
+      "Ethereum",
+      "Arbitrum",
+      "Base",
+      "zkSync",
+      "Linea",
+      "StarkNet"
+    ],
+    "bounty_policy_url": "https://openzeppelin.com/security",
+    "legal_email": "legal@openzeppelin.com"
+  },
+  "optimism": {
+    "slug": "optimism",
+    "website": "https://app.optimism.io",
+    "source": [
+      "docs_subdomain",
+      "status_subdomain",
+      "page:/security"
+    ],
+    "chains_mentioned": [
+      "Ethereum",
+      "Optimism"
+    ],
+    "docs_url": "https://docs.optimism.io",
+    "status_page_url": "https://status.optimism.io",
+    "bounty_policy_url": "https://app.optimism.io/security"
+  },
+  "opyngamma": {
+    "slug": "opyngamma",
+    "website": "https://opyn.co",
+    "source": [],
+    "auditors": [
+      "Sherlock"
+    ],
+    "chains_mentioned": [
+      "Ethereum",
+      "Arbitrum"
+    ]
+  },
+  "opynsqueeth": {
+    "slug": "opynsqueeth",
+    "website": "https://squeeth.opyn.co",
+    "source": [
+      "meta_tags"
+    ],
+    "twitter": "@opyn_"
+  },
+  "orca": {
+    "slug": "orca",
+    "website": "https://orca.so",
+    "source": [
+      "docs_subdomain"
+    ],
+    "chains_mentioned": [
+      "Base",
+      "Solana"
+    ],
+    "docs_url": "https://docs.orca.so"
+  },
+  "orderlynetwork": {
+    "slug": "orderlynetwork",
+    "website": "https://orderly.network",
+    "source": [
+      "website_footer",
+      "meta_tags",
+      "docs_links"
+    ],
+    "twitter": "@OrderlyNetwork",
+    "discord": "https://discord.com/invite/orderlynetwork",
+    "telegram": "https://t.me/Orderly_Discussions",
+    "github": "https://github.com/OrderlyNetwork",
+    "blog": "https://medium.com/@orderlynetwork",
+    "og_site_name": "Orderly Network",
+    "docs_url": "https://orderly.network/docs/introduction/getting-started/what-is-orderly ",
+    "developer_docs_url": "https://orderly.network/docs/build-on-omnichain/building-on-omnichain",
+    "audit_report_urls": [
+      "https://github.com/OrderlyNetwork/Audits"
+    ],
+    "auditors": [
+      "Zellic"
+    ],
+    "chains_mentioned": [
+      "Ethereum",
+      "Arbitrum",
+      "Optimism",
+      "Polygon"
+    ]
+  },
+  "ostium": {
+    "slug": "ostium",
+    "website": "https://ostium.io",
+    "source": [
+      "website_footer",
+      "website_body",
+      "docs_links"
+    ],
+    "discord": "https://discord.gg/44hxSkfy9a",
+    "telegram": "https://t.me/ostiumio",
+    "blog": "https://medium.com/@ostiumlabs",
+    "twitter": "@ostiumlabs",
+    "contact_email": "team@ostium.io",
+    "docs_url": "https://ostium-labs.gitbook.io/ostium-docs",
+    "chains_mentioned": [
+      "Ethereum",
+      "Arbitrum",
+      "Base",
+      "Scroll"
+    ]
+  },
+  "overlay": {
+    "slug": "overlay",
+    "website": "https://overlay.market",
+    "source": [
+      "docs_subdomain",
+      "page:/security"
+    ],
+    "docs_url": "https://docs.overlay.market",
+    "bounty_policy_url": "https://overlay.market/security"
+  },
+  "pact": {
+    "slug": "pact",
+    "website": "https://app.pact.fi",
+    "source": [
+      "docs_subdomain",
+      "page:/security"
+    ],
+    "docs_url": "https://docs.pact.fi",
+    "bounty_policy_url": "https://app.pact.fi/security"
+  },
+  "pancakeswap": {
+    "slug": "pancakeswap",
+    "website": "https://pancakeswap.finance",
+    "source": [
+      "meta_tags",
+      "docs_subdomain"
+    ],
+    "twitter": "@PancakeSwap",
+    "docs_url": "https://docs.pancakeswap.finance"
+  },
+  "pantos": {
+    "slug": "pantos",
+    "website": "https://pantos.io",
+    "source": []
+  },
+  "paradex": {
+    "slug": "paradex",
+    "website": "https://app.paradex.trade",
+    "source": [
+      "docs_subdomain",
+      "status_subdomain",
+      "page:/security"
+    ],
+    "docs_url": "https://docs.paradex.trade",
+    "status_page_url": "https://status.paradex.trade",
+    "bounty_policy_url": "https://app.paradex.trade/security"
+  },
+  "paragonsdao": {
+    "slug": "paragonsdao",
+    "website": "https://app.paragonsdao.com",
+    "source": [
+      "docs_subdomain",
+      "page:/security"
+    ],
+    "docs_url": "https://docs.paragonsdao.com",
+    "bounty_policy_url": "https://app.paragonsdao.com/security"
+  },
+  "parallel": {
+    "slug": "parallel",
+    "website": "https://parallel.best",
+    "source": [
+      "website_footer",
+      "docs_links"
+    ],
+    "twitter": "@ParallelMoney",
+    "discord": "https://discord.gg/parallel",
+    "telegram": "https://t.me/parallel_money",
+    "github": "https://github.com/parallel-protocol",
+    "docs_url": "https://docs.parallel.best/",
+    "auditors": [
+      "Certora",
+      "Immunefi"
+    ],
+    "bounty_policy_url": "href=\"https://immunefi.com/bug-bounty/parallel/information/\""
+  },
+  "parallelwallet": {
+    "slug": "parallelwallet",
+    "website": "https://parallel.fi",
+    "source": []
+  },
+  "paribus": {
+    "slug": "paribus",
+    "website": "https://app.paribus.io",
+    "source": []
+  },
+  "pendle": {
+    "slug": "pendle",
+    "website": "https://pendle.finance",
+    "source": [
+      "website_footer",
+      "meta_tags",
+      "docs_links"
+    ],
+    "twitter": "@pendle_fi",
+    "discord": "https://discord.com/invite/EAujvncY2R",
+    "telegram": "https://t.me/pendle_info_bot",
+    "blog": "https://medium.com/pendle",
+    "og_site_name": "Pendle Finance",
+    "docs_url": "https://docs.pendle.finance/pendle-v2/introduction?utm_source=landing&amp;utm_medium=landing"
+  },
+  "perpetual": {
+    "slug": "perpetual",
+    "website": "https://app.perp.com",
+    "source": [
+      "docs_subdomain",
+      "page:/security"
+    ],
+    "docs_url": "https://docs.perp.com",
+    "bounty_policy_url": "https://app.perp.com/security"
+  },
+  "pikaprotocol": {
+    "slug": "pikaprotocol",
+    "website": "https://pikaprotocol.com",
+    "source": [
+      "meta_tags",
+      "docs_subdomain"
+    ],
+    "twitter": "@PikaProtocol",
+    "docs_url": "https://docs.pikaprotocol.com"
+  },
+  "pillar": {
+    "slug": "pillar",
+    "website": "https://pillarprotocol.com",
+    "source": [
+      "page:/security"
+    ],
+    "chains_mentioned": [
+      "Ethereum"
+    ],
+    "bounty_policy_url": "https://pillarprotocol.com/security"
+  },
+  "pinto": {
+    "slug": "pinto",
+    "website": "https://pinto.money",
+    "source": [
+      "docs_subdomain",
+      "page:/security"
+    ],
+    "docs_url": "https://docs.pinto.money",
+    "bounty_policy_url": "https://pinto.money/security"
+  },
+  "plaza-finance": {
+    "slug": "plaza-finance",
+    "website": "https://deposit.plaza.finance",
+    "source": []
+  },
+  "plume-network": {
+    "slug": "plume-network",
+    "website": "https://plumenetwork.xyz",
+    "source": [
+      "website_footer",
+      "docs_links"
+    ],
+    "twitter": "@plumenetwork",
+    "discord": "https://discord.com/invite/plume-network",
+    "telegram": "https://t.me/plumenetwork_community",
+    "docs_url": "https://docs.plume.org/",
+    "chains_mentioned": [
+      "Solana"
+    ]
+  },
+  "pnetwork": {
+    "slug": "pnetwork",
+    "website": "https://p.network",
+    "source": [
+      "page:/security"
+    ],
+    "bounty_policy_url": "https://p.network/security"
+  },
+  "pods": {
+    "slug": "pods",
+    "website": "https://yield.pods.finance",
+    "source": [
+      "meta_tags",
+      "page:/security"
+    ],
+    "og_site_name": "Deframe",
+    "bounty_policy_url": "https://yield.pods.finance/security"
+  },
+  "polkastarter": {
+    "slug": "polkastarter",
+    "website": "https://polkastarter.com",
+    "source": [
+      "meta_tags",
+      "docs_subdomain"
+    ],
+    "twitter": "@polkastarter",
+    "chains_mentioned": [
+      "Solana"
+    ],
+    "docs_url": "https://docs.polkastarter.com"
+  },
+  "polygon": {
+    "slug": "polygon",
+    "website": "https://polygon.technology",
+    "source": [
+      "security.txt",
+      "website_footer",
+      "meta_tags",
+      "docs_links"
+    ],
+    "preferred_languages": "en",
+    "hiring_url": "https://polygon.technology/careers",
+    "security_email": "security@polygon.technology",
+    "twitter": "@0xPolygon",
+    "discord": "https://discord.com/invite/0xPolygonCommunity",
+    "telegram": "https://t.me/PolygonHQ",
+    "github": "https://github.com/maticnetwork",
+    "reddit": "https://www.reddit.com/r/0xPolygon",
+    "og_site_name": "Polygon Labs",
+    "docs_url": "https://docs.polygon.technology/",
+    "whitepaper_url": "https://polygon.technology/papers/pol-whitepaper",
+    "chains_mentioned": [
+      "Ethereum",
+      "Polygon",
+      "Base",
+      "Mode"
+    ]
+  },
+  "polymarket": {
+    "slug": "polymarket",
+    "website": "https://polymarket.com",
+    "source": [
+      "website_footer",
+      "meta_tags",
+      "docs_links",
+      "status_subdomain"
+    ],
+    "twitter": "@Polymarket",
+    "discord": "https://discord.gg/Polymarket",
+    "contact_email": "hello@polymarket.com",
+    "og_site_name": "Polymarket",
+    "docs_url": "https://docs.polymarket.com/quickstart/overview",
+    "developer_docs_url": "https://docs.polymarket.com/quickstart/overview",
+    "chains_mentioned": [
+      "Ethereum",
+      "Avalanche",
+      "Solana",
+      "Blast"
+    ],
+    "status_page_url": "https://status.polymarket.com"
+  },
+  "polymesh": {
+    "slug": "polymesh",
+    "website": "https://polymesh.network",
+    "source": []
+  },
+  "poolshark": {
+    "slug": "poolshark",
+    "website": "https://poolshark.fi",
+    "source": [
+      "website_body",
+      "docs_links"
+    ],
+    "twitter": "@poolsharklabs",
+    "discord": "https://discord.com/invite/HJhrD9sZ6K",
+    "docs_url": "https://docs.poolshark.fi/"
+  },
+  "pooltogether": {
+    "slug": "pooltogether",
+    "website": "https://pooltogether.com",
+    "source": [
+      "website_footer",
+      "meta_tags",
+      "docs_links"
+    ],
+    "twitter": "@PoolTogether_",
+    "github": "https://github.com/pooltogether",
+    "blog": "https://medium.com/pooltogether",
+    "og_site_name": "PoolTogether",
+    "docs_url": "https://docs.pooltogether.com",
+    "audit_report_urls": [
+      "https://docs.pooltogether.com/security/audits"
+    ],
+    "auditors": [
+      "OpenZeppelin",
+      "Sherlock"
+    ],
+    "chains_mentioned": [
+      "Ethereum",
+      "Arbitrum",
+      "Optimism",
+      "Base",
+      "Gnosis",
+      "Scroll"
+    ]
+  },
+  "popsicle": {
+    "slug": "popsicle",
+    "website": "https://popsicle.finance",
+    "source": [
+      "docs_subdomain",
+      "page:/security"
+    ],
+    "docs_url": "https://docs.popsicle.finance",
+    "bounty_policy_url": "https://popsicle.finance/security"
+  },
+  "portfinance": {
+    "slug": "portfinance",
+    "website": "https://port.finance",
+    "source": [
+      "docs_subdomain"
+    ],
+    "docs_url": "https://docs.port.finance"
+  },
+  "pragmaoracle": {
+    "slug": "pragmaoracle",
+    "website": "https://pragma.build",
+    "source": [
+      "website_body",
+      "meta_tags",
+      "docs_links",
+      "page:/terms"
+    ],
+    "contact_email": "support@pragma.build",
+    "twitter": "@pragmaoracle",
+    "og_site_name": "Pragma",
+    "docs_url": "https://docs.pragma.build",
+    "auditors": [
+      "Immunefi"
+    ],
+    "chains_mentioned": [
+      "StarkNet",
+      "Sui"
+    ],
+    "legal_email": "legal@pragma.build"
+  },
+  "predyfinance": {
+    "slug": "predyfinance",
+    "website": "https://predy.finance",
+    "source": [
+      "docs_subdomain"
+    ],
+    "docs_url": "https://docs.predy.finance"
+  },
+  "primitive": {
+    "slug": "primitive",
+    "website": "https://primitive.xyz",
+    "source": []
+  },
+  "print3r": {
+    "slug": "print3r",
+    "website": "https://print3r.xyz",
+    "source": []
+  },
+  "pstake": {
+    "slug": "pstake",
+    "website": "https://pstake.finance",
+    "source": [
+      "website_body",
+      "docs_subdomain"
+    ],
+    "twitter": "@pStakeFinance",
+    "discord": "https://discord.com/invite/pstake",
+    "telegram": "https://t.me/pstakefinance",
+    "chains_mentioned": [
+      "Optimism",
+      "Base",
+      "Cosmos",
+      "NEAR"
+    ],
+    "docs_url": "https://docs.pstake.finance"
+  },
+  "pushprotocol": {
+    "slug": "pushprotocol",
+    "website": "https://push.org",
+    "source": [
+      "website_footer",
+      "docs_links"
+    ],
+    "twitter": "@PushChain",
+    "discord": "https://discord.com/invite/pushchain",
+    "telegram": "https://t.me/epnsproject",
+    "github": "https://github.com/pushchain",
+    "reddit": "https://www.reddit.com/r/pushprotocol",
+    "docs_url": "https://push.org/docs",
+    "whitepaper_url": "https://push.org/litepaper.pdf",
+    "chains_mentioned": [
+      "Ethereum",
+      "Base",
+      "BNB Chain",
+      "Solana"
+    ]
+  },
+  "pythnetwork": {
+    "slug": "pythnetwork",
+    "website": "https://pyth.network",
+    "source": [
+      "website_footer",
+      "docs_links",
+      "status_subdomain"
+    ],
+    "twitter": "@PythNetwork",
+    "discord": "https://discord.com/invite/PythNetwork",
+    "telegram": "https://t.me/Pyth_Network",
+    "github": "https://github.com/pyth-network",
+    "reddit": "https://www.reddit.com/r/PythNetwork",
+    "docs_url": "https://docs.pyth.network/price-feeds/contract-addresses",
+    "developer_docs_url": "https://api-reference.pyth.network/price-feeds/evm/getPriceNoOlderThan",
+    "chains_mentioned": [
+      "Ethereum",
+      "Arbitrum",
+      "Optimism",
+      "Solana",
+      "Scroll",
+      "Cosmos",
+      "Sui",
+      "Aptos"
+    ],
+    "status_page_url": "https://status.pyth.network"
+  },
+  "qblockchain": {
+    "slug": "qblockchain",
+    "website": "https://q.org",
+    "source": [
+      "docs_subdomain"
+    ],
+    "docs_url": "https://docs.q.org"
+  },
+  "quadrata": {
+    "slug": "quadrata",
+    "website": "https://plasma.finance",
+    "source": [
+      "docs_subdomain"
+    ],
+    "docs_url": "https://docs.plasma.finance"
+  },
+  "radiant": {
+    "slug": "radiant",
+    "website": "https://radiant.capital",
+    "source": [
+      "website_footer",
+      "docs_links",
+      "status_subdomain"
+    ],
+    "twitter": "@RDNTCapital",
+    "discord": "https://discord.gg/radiantcapital",
+    "telegram": "https://t.me/radiantcapitalofficial",
+    "docs_url": "https://docs.radiant.capital/radiant/contracts-and-security",
+    "auditors": [
+      "Peckshield",
+      "PeckShield",
+      "Immunefi"
+    ],
+    "chains_mentioned": [
+      "Ethereum"
+    ],
+    "status_page_url": "https://status.radiant.capital"
+  },
+  "rai": {
+    "slug": "rai",
+    "website": "https://railgun.org",
+    "source": [
+      "website_footer",
+      "meta_tags",
+      "docs_links"
+    ],
+    "twitter": "@railgun_project",
+    "discord": "https://discord.gg/jgUQjkYWzh",
+    "telegram": "https://t.me/railgun_privacy",
+    "github": "https://github.com/Railgun-Community",
+    "og_site_name": "RAILGUN",
+    "docs_url": "https://docs.railgun.org/wiki",
+    "developer_docs_url": "https://docs.railgun.org/developer-guide",
+    "audit_report_urls": [
+      "https://assets.railgun.org/docs/audits"
+    ],
+    "bounty_policy_url": "href=\"bug-bounty.html\"",
+    "chains_mentioned": [
+      "Ethereum",
+      "Arbitrum",
+      "Polygon",
+      "BNB Chain"
+    ]
+  },
+  "rangeprotocol": {
+    "slug": "rangeprotocol",
+    "website": "https://rangeprotocol.com",
+    "source": [
+      "website_footer"
+    ],
+    "twitter": "@skate_fi",
+    "discord": "https://discord.gg/skatechain",
+    "contact_email": "contact@rangeprotocol.com",
+    "auditors": [
+      "Halborn"
+    ]
+  },
+  "raydium": {
+    "slug": "raydium",
+    "website": "https://raydium.io",
+    "source": [
+      "meta_tags",
+      "docs_subdomain"
+    ],
+    "twitter": "@RaydiumProtocol",
+    "og_site_name": "Raydium",
+    "docs_url": "https://docs.raydium.io"
+  },
+  "reaperfarm": {
+    "slug": "reaperfarm",
+    "website": "https://app.re.xyz",
+    "source": [
+      "website_footer",
+      "docs_links"
+    ],
+    "twitter": "@re",
+    "discord": "https://discord.gg/reprotocol",
+    "telegram": "https://t.me/re_protocol",
+    "blog": "https://blog.re.xyz",
+    "docs_url": "https://docs.re.xyz",
+    "chains_mentioned": [
+      "Ethereum",
+      "Base"
+    ]
+  },
+  "renzoprotocol": {
+    "slug": "renzoprotocol",
+    "website": "https://app.renzoprotocol.com",
+    "source": [
+      "meta_tags",
+      "docs_subdomain",
+      "page:/security"
+    ],
+    "twitter": "@RenzoProtocol",
+    "og_site_name": "Renzo Protocol",
+    "chains_mentioned": [
+      "Ethereum"
+    ],
+    "docs_url": "https://docs.renzoprotocol.com",
+    "bounty_policy_url": "https://app.renzoprotocol.com/security"
+  },
+  "reserve": {
+    "slug": "reserve",
+    "website": "https://reserve.org",
+    "source": [
+      "security.txt",
+      "website_footer",
+      "website_body",
+      "docs_links"
+    ],
+    "preferred_languages": "en",
+    "security_email": "contact@reserve.org",
+    "contact_email": "contact@reserve.org",
+    "twitter": "@reserveprotocol",
+    "telegram": "https://t.me/reservecurrency",
+    "docs_url": "https://reserve-1.gitbook.io/docs"
+  },
+  "resolv": {
+    "slug": "resolv",
+    "website": "https://app.resolv.xyz",
+    "source": [
+      "docs_subdomain",
+      "page:/security"
+    ],
+    "docs_url": "https://docs.resolv.xyz",
+    "bounty_policy_url": "https://app.resolv.xyz/security"
+  },
+  "resonate": {
+    "slug": "resonate",
+    "website": "https://resonate.finance",
+    "source": [
+      "meta_tags",
+      "docs_subdomain"
+    ],
+    "og_site_name": "Resonate",
+    "docs_url": "https://docs.resonate.finance"
+  },
+  "revert": {
+    "slug": "revert",
+    "website": "https://revert.finance",
+    "source": [
+      "meta_tags",
+      "docs_subdomain",
+      "page:/security"
+    ],
+    "twitter": "@revertfinance",
+    "docs_url": "https://docs.revert.finance",
+    "bounty_policy_url": "https://revert.finance/security"
+  },
+  "revest": {
+    "slug": "revest",
+    "website": "https://revest.finance",
+    "source": []
+  },
+  "rhinofi": {
+    "slug": "rhinofi",
+    "website": "https://rhino.fi",
+    "source": [
+      "docs_links",
+      "status_subdomain"
+    ],
+    "docs_url": "https://docs.rhino.fi/get-started/introduction",
+    "developer_docs_url": "https://developers.rhino.fi",
+    "audit_report_urls": [
+      "./legal/audit"
+    ],
+    "chains_mentioned": [
+      "Solana",
+      "StarkNet"
+    ],
+    "status_page_url": "https://status.rhino.fi"
+  },
+  "ribbon": {
+    "slug": "ribbon",
+    "website": "https://ribbon.finance",
+    "source": [
+      "docs_subdomain",
+      "page:/security"
+    ],
+    "docs_url": "https://docs.ribbon.finance",
+    "bounty_policy_url": "https://ribbon.finance/security"
+  },
+  "ringdao": {
+    "slug": "ringdao",
+    "website": "https://ring.exchange",
+    "source": [
+      "page:/security"
+    ],
+    "bounty_policy_url": "https://ring.exchange/security"
+  },
+  "rocketpool": {
+    "slug": "rocketpool",
+    "website": "https://rocketpool.net",
+    "source": [
+      "meta_tags",
+      "docs_subdomain",
+      "page:/security"
+    ],
+    "twitter": "@rocket_pool",
+    "chains_mentioned": [
+      "Ethereum"
+    ],
+    "docs_url": "https://docs.rocketpool.net",
+    "bounty_policy_url": "https://rocketpool.net/security"
+  },
+  "router": {
+    "slug": "router",
+    "website": "https://routerprotocol.com",
+    "source": [
+      "website_footer",
+      "website_body",
+      "meta_tags",
+      "docs_links"
+    ],
+    "twitter": "@routerprotocol",
+    "discord": "https://discord.gg/rKf9UYMNWC",
+    "telegram": "https://t.me/routerprotocol",
+    "github": "https://github.com/router-protocol",
+    "contact_email": "social@routerprotocol.com",
+    "og_site_name": "Router Protocol",
+    "docs_url": "https://docs.routerprotocol.com/docs/api-reference/",
+    "developer_docs_url": "https://docs.routerprotocol.com/docs/api-reference/",
+    "chains_mentioned": [
+      "NEAR"
+    ]
+  },
+  "rubic": {
+    "slug": "rubic",
+    "website": "https://app.rubic.exchange",
+    "source": [
+      "meta_tags",
+      "docs_subdomain",
+      "page:/security"
+    ],
+    "twitter": "@CryptoRubic",
+    "og_site_name": "Cross-Chain DEX Aggregator",
+    "chains_mentioned": [
+      "Ethereum",
+      "Arbitrum",
+      "Polygon",
+      "Avalanche",
+      "BNB Chain",
+      "Solana",
+      "Fantom"
+    ],
+    "docs_url": "https://docs.rubic.exchange",
+    "bounty_policy_url": "https://app.rubic.exchange/security"
+  },
+  "ruscet": {
+    "slug": "ruscet",
+    "website": "https://ruscet.xyz",
+    "source": [
+      "docs_subdomain"
+    ],
+    "docs_url": "https://docs.ruscet.xyz"
+  },
+  "rysk": {
+    "slug": "rysk",
+    "website": "https://app.rysk.finance",
+    "source": [
+      "website_footer",
+      "meta_tags",
+      "docs_links"
+    ],
+    "twitter": "@ryskfinance",
+    "discord": "https://discord.gg/ZH34Fc3D5S",
+    "og_site_name": "Rysk V12",
+    "docs_url": "https://docs.rysk.finance/"
+  },
+  "scroll": {
+    "slug": "scroll",
+    "website": "https://portal.scroll.io",
+    "source": [
+      "meta_tags",
+      "docs_subdomain",
+      "status_subdomain"
+    ],
+    "og_site_name": "Scroll",
+    "chains_mentioned": [
+      "Ethereum",
+      "Scroll",
+      "Mode"
+    ],
+    "docs_url": "https://docs.scroll.io",
+    "status_page_url": "https://status.scroll.io"
+  },
+  "sectorfinance": {
+    "slug": "sectorfinance",
+    "website": "https://sector.finance",
+    "source": [
+      "website_footer",
+      "docs_links"
+    ],
+    "twitter": "@sector_fi",
+    "discord": "https://discord.gg/WdNBNx86RF",
+    "docs_url": "https://sector-finance.gitbook.io/sector-finance/",
+    "auditors": [
+      "Immunefi"
+    ],
+    "chains_mentioned": [
+      "Arbitrum",
+      "Optimism",
+      "Moonbeam"
+    ]
+  },
+  "securefi": {
+    "slug": "securefi",
+    "website": "https://securefi.io",
+    "source": [
+      "website_footer"
+    ],
+    "twitter": "@securefi_io",
+    "auditors": [
+      "Trail of Bits",
+      "Certora",
+      "Immunefi",
+      "Hacken",
+      "Runtime Verification",
+      "OtterSec",
+      "Nethermind",
+      "Veridise"
+    ],
+    "chains_mentioned": [
+      "Ethereum"
+    ]
+  },
+  "segmentfinance": {
+    "slug": "segmentfinance",
+    "website": "https://segment.finance",
+    "source": [
+      "website_footer",
+      "meta_tags",
+      "docs_links"
+    ],
+    "twitter": "@segment_fi",
+    "discord": "https://discord.gg/sNkaUFmxSb",
+    "github": "https://github.com/Segment-Finance",
+    "og_site_name": "Sega",
+    "docs_url": "https://docs.segment.finance/",
+    "audit_report_urls": [
+      "https://github.com/verichains/public-audit-reports/blob/main/Verichains%20Public%20Audit%20Report%20-%20Segment%20Finance%20Pool%20Register%20-%20v1.0.pdf",
+      "https://docs.segment.finance/protocol/audits"
+    ],
+    "auditors": [
+      "Immunefi"
+    ],
+    "bounty_policy_url": "href=\"https://docs.segment.finance/protocol/immunefi-bug-bounty\"",
+    "chains_mentioned": [
+      "Scroll",
+      "Mode"
+    ]
+  },
+  "sei": {
+    "slug": "sei",
+    "website": "https://sei.io",
+    "source": [
+      "website_footer",
+      "meta_tags",
+      "docs_links"
+    ],
+    "discord": "https://discord.com/invite/sei",
+    "telegram": "https://t.me/seinetwork",
+    "github": "https://github.com/sei-protocol",
+    "contact_email": "contact.us@seifdn.org",
+    "og_site_name": "Sei",
+    "docs_url": "https://docs.sei.io/",
+    "developer_docs_url": "https://sei.io/developers",
+    "whitepaper_url": "https://blog.sei.io/sei-labs-publishes-whitepaper-for-sei-giga-the-first-multi-proposer-evm-layer-1-blockchain/",
+    "chains_mentioned": [
+      "Ethereum",
+      "Sei"
+    ]
+  },
+  "serai": {
+    "slug": "serai",
+    "website": "https://serai.exchange",
+    "source": [
+      "website_footer",
+      "docs_links"
+    ],
+    "twitter": "@SeraiDEX",
+    "discord": "https://discord.gg/mpEUtJR3vz",
+    "docs_url": "https://github.com/serai-dex/serai/tree/develop/docs",
+    "chains_mentioned": [
+      "Ethereum"
+    ]
+  },
+  "shellprotocol": {
+    "slug": "shellprotocol",
+    "website": "https://shellprotocol.io",
+    "source": [
+      "website_footer",
+      "docs_links"
+    ],
+    "twitter": "@ShellProtocol",
+    "discord": "https://discord.com/invite/shell-protocol",
+    "telegram": "https://t.me/shellprotocol",
+    "github": "https://github.com/cowri",
+    "contact_email": "contact@cowri.io",
+    "docs_url": "https://docs.shellprotocol.io/",
+    "whitepaper_url": "https://wiki.shellprotocol.io/getting-started/overview/white-papers",
+    "auditors": [
+      "Immunefi"
+    ],
+    "chains_mentioned": [
+      "Arbitrum",
+      "Base"
+    ]
+  },
+  "sherlock": {
+    "slug": "sherlock",
+    "website": "https://sherlock.xyz",
+    "source": [
+      "website_footer",
+      "docs_links"
+    ],
+    "twitter": "@sherlockdefi",
+    "discord": "https://discord.com/invite/MABEWyASkp",
+    "github": "https://github.com/sherlock-protocol",
+    "docs_url": "https://docs.sherlock.xyz/",
+    "audit_report_urls": [
+      "https://sherlock.xyz/solutions/audit-contests",
+      "https://audits.sherlock.xyz/leaderboards",
+      "https://audits.sherlock.xyz/contests",
+      "https://audits.sherlock.xyz/bug-bounties"
+    ],
+    "auditors": [
+      "Sherlock"
+    ],
+    "chains_mentioned": [
+      "Ethereum",
+      "Scroll"
+    ]
+  },
+  "silofinance-v2": {
+    "slug": "silofinance-v2",
+    "website": "https://silo.finance",
+    "source": [
+      "website_footer",
+      "docs_links"
+    ],
+    "twitter": "@SiloFinance",
+    "discord": "https://discord.gg/silo-finance",
+    "telegram": "https://t.me/silo_finance",
+    "docs_url": "https://docs.silo.finance/docs/users/intro",
+    "developer_docs_url": "https://docs.silo.finance/docs/developers/protocol-overview/architecture#",
+    "audit_report_urls": [
+      "https://docs.silo.finance/docs/audits"
+    ],
+    "auditors": [
+      "Certora",
+      "Spearbit",
+      "Immunefi",
+      "Cantina"
+    ],
+    "bounty_policy_url": "href=\"https://immunefi.com/bug-bounty/silofinance-v2/information/#top\"",
+    "chains_mentioned": [
+      "Ethereum",
+      "Arbitrum",
+      "Avalanche",
+      "Mode"
+    ]
+  },
+  "singularitydao": {
+    "slug": "singularitydao",
+    "website": "https://singularitydao.ai",
+    "source": [
+      "website_footer",
+      "meta_tags",
+      "docs_subdomain"
+    ],
+    "twitter": "@SingularityDao",
+    "discord": "https://discord.gg/singularitydao",
+    "telegram": "https://t.me/SingDAO",
+    "github": "https://github.com/Singularity-DAO",
+    "blog": "https://medium.com/singularitydao",
+    "og_site_name": "Singularity DAO",
+    "auditors": [
+      "Immunefi",
+      "Hacken"
+    ],
+    "chains_mentioned": [
+      "Ethereum"
+    ],
+    "docs_url": "https://docs.singularitydao.ai"
+  },
+  "sky": {
+    "slug": "sky",
+    "website": "https://app.sky.money",
+    "source": [
+      "meta_tags",
+      "docs_subdomain",
+      "page:/security"
+    ],
+    "og_site_name": "Sky",
+    "docs_url": "https://docs.sky.money",
+    "bounty_policy_url": "https://app.sky.money/security"
+  },
+  "smardex": {
+    "slug": "smardex",
+    "website": "https://smardex.io",
+    "source": [
+      "meta_tags",
+      "docs_subdomain",
+      "page:/security"
+    ],
+    "twitter": "@SmarDex",
+    "og_site_name": "SmarDex",
+    "docs_url": "https://docs.smardex.io",
+    "bounty_policy_url": "https://smardex.io/security"
+  },
+  "sns": {
+    "slug": "sns",
+    "website": "https://sns.id",
+    "source": [
+      "meta_tags",
+      "docs_subdomain",
+      "page:/security"
+    ],
+    "twitter": "@sns",
+    "og_site_name": "Solana Name Service | SNS",
+    "auditors": [
+      "Immunefi"
+    ],
+    "chains_mentioned": [
+      "Base",
+      "Solana",
+      "Sui"
+    ],
+    "docs_url": "https://docs.sns.id",
+    "bounty_policy_url": "https://sns.id/security"
+  },
+  "sommelier": {
+    "slug": "sommelier",
+    "website": "https://somm.finance",
+    "source": [
+      "website_body",
+      "meta_tags"
+    ],
+    "twitter": "@sommfinance",
+    "discord": "https://discord.gg/sommelierfinance",
+    "telegram": "https://t.me/getsomm",
+    "og_site_name": "Sommelier",
+    "audit_report_urls": [
+      "https://somm.finance/audits"
+    ],
+    "bounty_policy_url": "href=\"/bug-bounty\"",
+    "chains_mentioned": [
+      "Ethereum",
+      "Base",
+      "Cosmos"
+    ],
+    "auditors": [
+      "OpenZeppelin"
+    ],
+    "contact_email": "bounty@peggy.cool"
+  },
+  "sora": {
+    "slug": "sora",
+    "website": "https://sorare.com",
+    "source": [
+      "security.txt",
+      "website_footer",
+      "meta_tags",
+      "docs_links",
+      "page:/security"
+    ],
+    "preferred_languages": "en,fr",
+    "security_email": "tech@sorare.com",
+    "reddit": "https://www.reddit.com/r/Sorare",
+    "twitter": "@sorare",
+    "developer_docs_url": "https://sorare.com/api-terms",
+    "chains_mentioned": [
+      "Scroll"
+    ],
+    "bounty_policy_url": "https://sorare.com/security"
+  },
+  "sovryn": {
+    "slug": "sovryn",
+    "website": "https://sovryn.app",
+    "source": [
+      "page:/security"
+    ],
+    "bounty_policy_url": "https://sovryn.app/security"
+  },
+  "sparklend": {
+    "slug": "sparklend",
+    "website": "https://app.spark.fi",
+    "source": [
+      "meta_tags",
+      "docs_subdomain",
+      "page:/security"
+    ],
+    "twitter": "@sparkdotfi",
+    "og_site_name": "spark",
+    "chains_mentioned": [
+      "Ethereum"
+    ],
+    "docs_url": "https://docs.spark.fi",
+    "bounty_policy_url": "https://app.spark.fi/security"
+  },
+  "spectral": {
+    "slug": "spectral",
+    "website": "https://spectral.finance",
+    "source": [
+      "website_body"
+    ],
+    "twitter": "@Spectral_Labs",
+    "discord": "https://discord.gg/2p5VXAZnmC",
+    "chains_mentioned": [
+      "Ethereum",
+      "Base",
+      "Scroll"
+    ]
+  },
+  "spookyswap": {
+    "slug": "spookyswap",
+    "website": "https://spookybase.io",
+    "source": []
+  },
+  "spool": {
+    "slug": "spool",
+    "website": "https://spool.fi",
+    "source": []
+  },
+  "spot": {
+    "slug": "spot",
+    "website": "https://spot.cash",
+    "source": [
+      "website_body",
+      "docs_links",
+      "status_subdomain"
+    ],
+    "twitter": "@spotprotocol",
+    "discord": "https://discord.gg/mptQ49m",
+    "telegram": "https://t.me/Ampleforth",
+    "github": "https://github.com/ampleforth",
+    "contact_email": "info@ampleforth.org",
+    "docs_url": "https://docs.spot.cash/spot-documentation/ecosystem",
+    "whitepaper_url": "https://drive.google.com/file/d/1MTp3vGLBtCp4Pte7ohHfnRfeKgFPaWQd/view?usp=share_link",
+    "chains_mentioned": [
+      "Base",
+      "Mode"
+    ],
+    "status_page_url": "https://status.spot.cash"
+  },
+  "ssv-network": {
+    "slug": "ssv-network",
+    "website": "https://ssv.network",
+    "source": [
+      "website_footer",
+      "docs_links"
+    ],
+    "twitter": "@ssv_network",
+    "docs_url": "https://docs.ssv.network/",
+    "developer_docs_url": "./developers",
+    "chains_mentioned": [
+      "Ethereum"
+    ]
+  },
+  "stackingdao": {
+    "slug": "stackingdao",
+    "website": "https://app.stackingdao.com",
+    "source": [
+      "meta_tags",
+      "docs_subdomain"
+    ],
+    "twitter": "@StackingDAO",
+    "docs_url": "https://docs.stackingdao.com"
+  },
+  "staderforbnb": {
+    "slug": "staderforbnb",
+    "website": "https://staderlabs.com",
+    "source": [
+      "website_footer",
+      "website_body",
+      "docs_links"
+    ],
+    "github": "https://github.com/stader-labs",
+    "twitter": "@staderlabs",
+    "discord": "https://discord.com/invite/xJURAhSmav",
+    "telegram": "https://t.me/staderlabs",
+    "reddit": "https://www.reddit.com/r/StaderLabs_Official",
+    "docs_url": "https://staderlabs.com/docs/",
+    "whitepaper_url": "https://www.staderlabs.com/docs/ETHx%20Litepaper.pdf",
+    "audit_report_urls": [
+      "https://www.staderlabs.com/docs-v1/category/auditors"
+    ],
+    "auditors": [
+      "Sigma Prime",
+      "Peckshield",
+      "PeckShield",
+      "Halborn",
+      "Code4rena",
+      "Immunefi",
+      "OtterSec"
+    ],
+    "chains_mentioned": [
+      "Ethereum",
+      "Polygon",
+      "Fantom",
+      "NEAR"
+    ]
+  },
+  "stafi": {
+    "slug": "stafi",
+    "website": "https://stafi.io",
+    "source": [
+      "docs_subdomain"
+    ],
+    "docs_url": "https://docs.stafi.io"
+  },
+  "stakeeasy": {
+    "slug": "stakeeasy",
+    "website": "https://stakee.org",
+    "source": [
+      "meta_tags",
+      "page:/security"
+    ],
+    "og_site_name": "Stakee",
+    "bounty_policy_url": "https://stakee.org/security"
+  },
+  "stakelink": {
+    "slug": "stakelink",
+    "website": "https://stake.link",
+    "source": [
+      "meta_tags",
+      "docs_subdomain",
+      "page:/security"
+    ],
+    "twitter": "@stakedotlink",
+    "og_site_name": "stake.link",
+    "chains_mentioned": [
+      "Polygon",
+      "Base"
+    ],
+    "docs_url": "https://docs.stake.link",
+    "bounty_policy_url": "https://stake.link/security"
+  },
+  "stakestone": {
+    "slug": "stakestone",
+    "website": "https://stakestone.io",
+    "source": [
+      "website_footer",
+      "meta_tags",
+      "docs_links"
+    ],
+    "twitter": "@stake_stone",
+    "discord": "https://discord.gg/YbGhFsuFK6",
+    "telegram": "https://t.me/stakestone",
+    "og_site_name": "StakeStone —  Where the Future of Banking Begins",
+    "docs_url": "https://docs.stakestone.io/stakestone",
+    "developer_docs_url": "https://info.stakestone.io/#/developers",
+    "whitepaper_url": "https://static.stakestone.io/whitepaper.pdf",
+    "chains_mentioned": [
+      "Scroll"
+    ]
+  },
+  "stakewise": {
+    "slug": "stakewise",
+    "website": "https://stakewise.io",
+    "source": [
+      "docs_subdomain",
+      "status_subdomain"
+    ],
+    "audit_report_urls": [
+      "https://github.com/stakewise/v3-core/tree/main/audits"
+    ],
+    "auditors": [
+      "Halborn"
+    ],
+    "chains_mentioned": [
+      "Ethereum"
+    ],
+    "docs_url": "https://docs.stakewise.io",
+    "status_page_url": "https://status.stakewise.io"
+  },
+  "stargate": {
+    "slug": "stargate",
+    "website": "https://stargate.vechain.org",
+    "source": [
+      "docs_links"
+    ],
+    "docs_url": "https://docs.stargate.vechain.org/",
+    "chains_mentioned": [
+      "Scroll"
+    ]
+  },
+  "starkex": {
+    "slug": "starkex",
+    "website": "https://starkware.co",
+    "source": [
+      "website_footer",
+      "meta_tags",
+      "docs_links"
+    ],
+    "twitter": "@StarkWareLtd",
+    "github": "https://github.com/starkware-libs",
+    "blog": "https://medium.com/starkware",
+    "og_site_name": "StarkWare",
+    "docs_url": "https://docs.starkware.co/starkex/index.html",
+    "auditors": [
+      "OpenZeppelin",
+      "Peckshield",
+      "PeckShield",
+      "Nethermind"
+    ],
+    "chains_mentioned": [
+      "Ethereum",
+      "Polygon",
+      "StarkNet",
+      "NEAR"
+    ]
+  },
+  "starknet-staking": {
+    "slug": "starknet-staking",
+    "website": "https://starknet.io",
+    "source": [
+      "website_footer",
+      "docs_links",
+      "status_subdomain",
+      "page:/security"
+    ],
+    "twitter": "@Starknet",
+    "discord": "https://discord.gg/starknet-community",
+    "telegram": "https://t.me/starknet_ecosystem",
+    "docs_url": "https://docs.starknet.io/learn/cheatsheets/tools#core-tools",
+    "developer_docs_url": "https://www.starknet.io/developers/",
+    "chains_mentioned": [
+      "Ethereum",
+      "StarkNet"
+    ],
+    "status_page_url": "https://status.starknet.io",
+    "bounty_policy_url": "https://starknet.io/security"
+  },
+  "starknet": {
+    "slug": "starknet",
+    "website": "https://starkgate.starknet.io",
+    "source": [
+      "meta_tags",
+      "page:/security"
+    ],
+    "twitter": "@Starknet",
+    "chains_mentioned": [
+      "Ethereum",
+      "Solana",
+      "StarkNet"
+    ],
+    "bounty_policy_url": "https://starkgate.starknet.io/security"
+  },
+  "stellar": {
+    "slug": "stellar",
+    "website": "https://developers.stellar.org",
+    "source": [
+      "website_footer",
+      "website_body",
+      "docs_links"
+    ],
+    "discord": "https://discord.gg/stellardev",
+    "github": "https://github.com/stellar",
+    "docs_url": "https://developers.stellar.org/docs/build",
+    "developer_docs_url": "https://developers.stellar.org/",
+    "auditors": [
+      "OpenZeppelin"
+    ],
+    "chains_mentioned": [
+      "Mode"
+    ]
+  },
+  "stellaswap": {
+    "slug": "stellaswap",
+    "website": "https://app.stellaxyz.io",
+    "source": [
+      "docs_links"
+    ],
+    "docs_url": "https://docs.stellaxyz.io/",
+    "audit_report_urls": [
+      "https://github.com/stellaxyz/audits"
+    ],
+    "chains_mentioned": [
+      "Arbitrum"
+    ]
+  },
+  "strikefinance": {
+    "slug": "strikefinance",
+    "website": "https://strikefinance.org",
+    "source": [
+      "website_footer",
+      "meta_tags",
+      "docs_links"
+    ],
+    "twitter": "@strikeperps",
+    "discord": "https://discord.com/invite/PuWbEmrEee",
+    "github": "https://github.com/strike-finance",
+    "og_site_name": "Strike Finance",
+    "docs_url": "https://docs.strikefinance.org/",
+    "developer_docs_url": "https://docs.strikefinance.org/api/getting-started",
+    "chains_mentioned": [
+      "Ethereum",
+      "Solana"
+    ]
+  },
+  "sturdy": {
+    "slug": "sturdy",
+    "website": "https://v2.sturdy.finance",
+    "source": [],
+    "auditors": [
+      "Immunefi"
+    ],
+    "chains_mentioned": [
+      "Ethereum",
+      "Base"
+    ]
+  },
+  "summerfi": {
+    "slug": "summerfi",
+    "website": "https://summer.fi",
+    "source": [
+      "docs_subdomain",
+      "page:/terms"
+    ],
+    "docs_url": "https://docs.summer.fi",
+    "legal_email": "legal@summer.fi"
+  },
+  "superbots": {
+    "slug": "superbots",
+    "website": "https://superbots.finance",
+    "source": [
+      "website_footer",
+      "meta_tags"
+    ],
+    "twitter": "@SuperBots_Fi",
+    "discord": "https://discord.com/invite/FA3mJAYrsu",
+    "telegram": "https://t.me/Upbots",
+    "og_site_name": "Superbots",
+    "auditors": [
+      "Immunefi"
+    ],
+    "chains_mentioned": [
+      "Ethereum",
+      "Scroll",
+      "Mode"
+    ]
+  },
+  "superfluid": {
+    "slug": "superfluid",
+    "website": "https://superfluid.org",
+    "source": [
+      "website_footer",
+      "docs_links",
+      "status_subdomain",
+      "page:/security"
+    ],
+    "twitter": "@Superfluid_HQ",
+    "discord": "https://discord.gg/EFAUmTnPd9",
+    "docs_url": "https://docs.superfluid.org",
+    "chains_mentioned": [
+      "Ethereum",
+      "Arbitrum",
+      "Optimism",
+      "Polygon",
+      "Base",
+      "Avalanche",
+      "Gnosis",
+      "Scroll",
+      "Celo"
+    ],
+    "status_page_url": "https://status.superfluid.org",
+    "bounty_policy_url": "https://superfluid.org/security"
+  },
+  "superform": {
+    "slug": "superform",
+    "website": "https://app.superform.xyz",
+    "source": [
+      "meta_tags",
+      "docs_subdomain",
+      "status_subdomain"
+    ],
+    "twitter": "@superformxyz",
+    "og_site_name": "Superform V2: Earn | Grow Your Onchain Wealth",
+    "auditors": [
+      "OpenZeppelin",
+      "Trail of Bits",
+      "Consensys Diligence",
+      "Certora",
+      "Chainsecurity",
+      "ChainSecurity",
+      "Sigma Prime",
+      "Peckshield",
+      "PeckShield",
+      "Quantstamp",
+      "Halborn",
+      "Cyfrin",
+      "Spearbit",
+      "Code4rena",
+      "Sherlock",
+      "Immunefi",
+      "Hacken",
+      "Runtime Verification",
+      "Zellic",
+      "Dedaub",
+      "MixBytes",
+      "Least Authority",
+      "Nethermind",
+      "Cantina"
+    ],
+    "chains_mentioned": [
+      "Ethereum",
+      "Arbitrum",
+      "Optimism",
+      "Polygon",
+      "Base",
+      "Avalanche",
+      "BNB Chain",
+      "Fantom",
+      "zkSync",
+      "Linea",
+      "StarkNet",
+      "Mantle",
+      "Blast"
+    ],
+    "docs_url": "https://docs.superform.xyz",
+    "status_page_url": "https://status.superform.xyz"
+  },
+  "sushiswap": {
+    "slug": "sushiswap",
+    "website": "https://sushi.com",
+    "source": [
+      "docs_subdomain"
+    ],
+    "docs_url": "https://docs.sushi.com"
+  },
+  "swappi": {
+    "slug": "swappi",
+    "website": "https://app.swappi.io",
+    "source": [
+      "docs_subdomain",
+      "page:/security"
+    ],
+    "docs_url": "https://docs.swappi.io",
+    "bounty_policy_url": "https://app.swappi.io/security"
+  },
+  "swell": {
+    "slug": "swell",
+    "website": "https://swellnetwork.io",
+    "source": [
+      "website_footer",
+      "docs_links"
+    ],
+    "twitter": "@swellnetworkio",
+    "discord": "https://discord.com/invite/swellnetworkdao",
+    "github": "https://github.com/SwellNetwork",
+    "reddit": "https://www.reddit.com/r/SwellNetwork",
+    "docs_url": "https://docs.swellnetwork.io/",
+    "auditors": [
+      "Sigma Prime",
+      "Cyfrin",
+      "Spearbit",
+      "Immunefi",
+      "Nethermind"
+    ],
+    "chains_mentioned": [
+      "Ethereum",
+      "Optimism",
+      "Polygon",
+      "Base",
+      "Scroll"
+    ]
+  },
+  "symbiosis": {
+    "slug": "symbiosis",
+    "website": "https://symbiosis.finance",
+    "source": [
+      "website_footer",
+      "docs_links"
+    ],
+    "twitter": "@symbiosis_fi",
+    "discord": "https://discord.com/invite/ymbRx6ADvR",
+    "telegram": "https://t.me/symbiosis_finance",
+    "github": "https://github.com/symbiosis-finance",
+    "docs_url": "https://docs.symbiosis.finance/developer-tools/symbiosis-developer-tools",
+    "developer_docs_url": "https://docs.symbiosis.finance/developer-tools/symbiosis-developer-tools",
+    "auditors": [
+      "Immunefi",
+      "SlowMist"
+    ],
+    "bounty_policy_url": "https://immunefi.com/bounty/symbiosis/",
+    "chains_mentioned": [
+      "Ethereum",
+      "Arbitrum",
+      "Optimism",
+      "Polygon",
+      "Base",
+      "Avalanche",
+      "BNB Chain",
+      "Solana",
+      "Gnosis",
+      "zkSync",
+      "Linea",
+      "Sei",
+      "Blast"
+    ]
+  },
+  "symbiotic": {
+    "slug": "symbiotic",
+    "website": "https://symbiotic.fi",
+    "source": [
+      "website_footer",
+      "docs_links"
+    ],
+    "twitter": "@symbioticfi",
+    "telegram": "https://t.me/symbioticannouncements",
+    "github": "https://github.com/symbioticfi",
+    "blog": "https://blog.symbiotic.fi",
+    "docs_url": "https://docs.symbiotic.fi",
+    "bounty_policy_url": "https://form.typeform.com/to/cQv4wWuO",
+    "chains_mentioned": [
+      "Ethereum",
+      "Base",
+      "Scroll",
+      "Mode"
+    ]
+  },
+  "synfutures": {
+    "slug": "synfutures",
+    "website": "https://trade.synfutures.com",
+    "source": [
+      "meta_tags",
+      "docs_subdomain"
+    ],
+    "twitter": "@synfuturesdefi",
+    "docs_url": "https://docs.synfutures.com"
+  },
+  "synthetix": {
+    "slug": "synthetix",
+    "website": "https://synthetix.io",
+    "source": [
+      "website_footer",
+      "docs_links",
+      "status_subdomain"
+    ],
+    "twitter": "@synthetix",
+    "discord": "https://discord.gg/synthetix",
+    "github": "https://github.com/synthetixio",
+    "reddit": "https://www.reddit.com/r/synthetix_io",
+    "docs_url": "https://developers.synthetix.io/",
+    "developer_docs_url": "https://developers.synthetix.io/",
+    "chains_mentioned": [
+      "Ethereum"
+    ],
+    "status_page_url": "https://status.synthetix.io"
+  },
+  "teahousefinance": {
+    "slug": "teahousefinance",
+    "website": "https://vault.teahouse.finance",
+    "source": []
+  },
+  "templar-protocol": {
+    "slug": "templar-protocol",
+    "website": "https://templarfi.org",
+    "source": [
+      "website_footer",
+      "docs_links"
+    ],
+    "twitter": "@TemplarProtocol",
+    "discord": "https://discord.gg/KAvMtYpbep",
+    "telegram": "https://t.me/templarprotocol",
+    "github": "https://github.com/Templar-Protocol",
+    "docs_url": "https://docs.templarfi.org/"
+  },
+  "termstructurelabs": {
+    "slug": "termstructurelabs",
+    "website": "https://termstructure.com",
+    "source": [
+      "website_footer",
+      "meta_tags",
+      "docs_subdomain"
+    ],
+    "twitter": "@TermMaxFi",
+    "telegram": "https://t.me/TermMaxFi",
+    "github": "https://github.com/term-structure",
+    "og_site_name": "Term Structure",
+    "audit_report_urls": [
+      "https://github.com/term-structure/audits"
+    ],
+    "auditors": [
+      "Immunefi"
+    ],
+    "bounty_policy_url": "href=\"https://immunefi.com/bug-bounty/termstructurelabs/\"",
+    "docs_url": "https://docs.termstructure.com"
+  },
+  "tetu": {
+    "slug": "tetu",
+    "website": "https://tetu.io",
+    "source": [
+      "docs_subdomain",
+      "page:/security"
+    ],
+    "docs_url": "https://docs.tetu.io",
+    "bounty_policy_url": "https://tetu.io/security"
+  },
+  "thala-protocol": {
+    "slug": "thala-protocol",
+    "website": "https://thala.fi",
+    "source": [
+      "website_footer",
+      "docs_links"
+    ],
+    "twitter": "@ThalaLabs",
+    "discord": "https://discord.gg/thala",
+    "docs_url": "https://docs.thala.fi/",
+    "auditors": [
+      "Zellic",
+      "OtterSec"
+    ],
+    "chains_mentioned": [
+      "Aptos"
+    ]
+  },
+  "thegraph": {
+    "slug": "thegraph",
+    "website": "https://thegraph.com",
+    "source": [
+      "website_footer",
+      "meta_tags",
+      "docs_links"
+    ],
+    "twitter": "@graphprotocol",
+    "discord": "https://discord.gg/graphprotocol",
+    "telegram": "https://t.me/graphprotocol",
+    "github": "https://github.com/graphprotocol",
+    "reddit": "https://www.reddit.com/r/thegraph",
+    "og_site_name": "The Graph",
+    "docs_url": "https://thegraph.com/docs/en/",
+    "auditors": [
+      "Immunefi"
+    ],
+    "chains_mentioned": [
+      "Ethereum",
+      "Arbitrum",
+      "Optimism",
+      "Polygon",
+      "Base",
+      "Avalanche",
+      "BNB Chain",
+      "Solana",
+      "Fantom",
+      "Gnosis",
+      "zkSync",
+      "Linea",
+      "Scroll",
+      "StarkNet",
+      "NEAR",
+      "Sei",
+      "Blast",
+      "Mode",
+      "Celo",
+      "Moonbeam"
+    ]
+  },
+  "thesandbox": {
+    "slug": "thesandbox",
+    "website": "https://sandbox.game",
+    "source": [
+      "docs_subdomain",
+      "status_subdomain"
+    ],
+    "docs_url": "https://docs.sandbox.game",
+    "status_page_url": "https://status.sandbox.game"
+  },
+  "thresholdnetwork": {
+    "slug": "thresholdnetwork",
+    "website": "https://app.thresholdusd.org",
+    "source": [
+      "page:/security"
+    ],
+    "bounty_policy_url": "https://app.thresholdusd.org/security"
+  },
+  "thusd": {
+    "slug": "thusd",
+    "website": "https://thuvault.com",
+    "source": []
+  },
+  "tidal": {
+    "slug": "tidal",
+    "website": "https://tidal.finance",
+    "source": [
+      "website_footer",
+      "docs_links"
+    ],
+    "twitter": "@tidaldefi",
+    "discord": "https://discord.com/invite/rZhuzJzXqV",
+    "telegram": "https://t.me/TidalGlobal",
+    "github": "https://github.com/TidalFinance",
+    "blog": "https://medium.com/tidal-finance",
+    "docs_url": "https://docs.tidal.finance/getting-started/network-roles/pool-manager"
+  },
+  "timelessandbunni": {
+    "slug": "timelessandbunni",
+    "website": "https://timelessfi.com",
+    "source": [
+      "docs_subdomain"
+    ],
+    "docs_url": "https://docs.timelessfi.com"
+  },
+  "tinyman": {
+    "slug": "tinyman",
+    "website": "https://tinyman.org",
+    "source": [
+      "website_body",
+      "docs_links"
+    ],
+    "twitter": "@tinymanorg",
+    "discord": "https://discord.gg/wvHnAdmEv6",
+    "telegram": "https://t.me/tinymanofficial",
+    "github": "https://github.com/tinymanorg",
+    "reddit": "https://www.reddit.com/r/Tinyman",
+    "docs_url": "https://docs.tinyman.org/"
+  },
+  "tokemak": {
+    "slug": "tokemak",
+    "website": "https://tokemak.xyz",
+    "source": [
+      "meta_tags",
+      "docs_subdomain",
+      "page:/security",
+      "page:/terms"
+    ],
+    "og_site_name": "Auto Finance",
+    "chains_mentioned": [
+      "Mode"
+    ],
+    "docs_url": "https://docs.tokemak.xyz",
+    "bounty_policy_url": "https://tokemak.xyz/security",
+    "legal_email": "legal@tokemak.xyz"
+  },
+  "toucan": {
+    "slug": "toucan",
+    "website": "https://toucan.earth",
+    "source": [
+      "website_footer",
+      "meta_tags",
+      "docs_links",
+      "page:/security"
+    ],
+    "twitter": "@ToucanProtocol",
+    "github": "https://github.com/ToucanProtocol",
+    "blog": "http://blog.toucan.earth",
+    "og_site_name": "Toucan",
+    "docs_url": "https://docs.toucan.earth/introduction/overview",
+    "chains_mentioned": [
+      "Scroll",
+      "Celo"
+    ],
+    "auditors": [
+      "Immunefi"
+    ],
+    "bounty_policy_url": "https://toucan.earth/security"
+  },
+  "traderjoe": {
+    "slug": "traderjoe",
+    "website": "https://traderjoexyz.com",
+    "source": [
+      "meta_tags",
+      "docs_subdomain",
+      "page:/security"
+    ],
+    "og_site_name": "LFJ",
+    "chains_mentioned": [
+      "Avalanche",
+      "Solana"
+    ],
+    "docs_url": "https://docs.traderjoexyz.com",
+    "bounty_policy_url": "https://traderjoexyz.com/security"
+  },
+  "tranchess": {
+    "slug": "tranchess",
+    "website": "https://tranchess.com",
+    "source": [
+      "meta_tags",
+      "docs_subdomain",
+      "page:/security"
+    ],
+    "og_site_name": "Tranchess",
+    "chains_mentioned": [
+      "BNB Chain"
+    ],
+    "docs_url": "https://docs.tranchess.com",
+    "bounty_policy_url": "https://tranchess.com/security"
+  },
+  "tropykus": {
+    "slug": "tropykus",
+    "website": "https://app.tropykus.com",
+    "source": [
+      "docs_subdomain",
+      "page:/security"
+    ],
+    "docs_url": "https://docs.tropykus.com",
+    "bounty_policy_url": "https://app.tropykus.com/security"
+  },
+  "trufin": {
+    "slug": "trufin",
+    "website": "https://trufin.io",
+    "source": [
+      "website_footer",
+      "meta_tags",
+      "page:/audits"
+    ],
+    "twitter": "@TruFinProtocol",
+    "og_site_name": "TruFin",
+    "audit_report_urls": [
+      "https://trufin.io/audits"
+    ],
+    "auditors": [
+      "OpenZeppelin",
+      "Zellic",
+      "Otter Sec",
+      "Nethermind",
+      "Halborn",
+      "OtterSec"
+    ],
+    "chains_mentioned": [
+      "Polygon",
+      "Solana",
+      "NEAR",
+      "Aptos",
+      "Mode"
+    ],
+    "bounty_policy_url": "https://trufin.io/audits"
+  },
+  "uniswaponzksync": {
+    "slug": "uniswaponzksync",
+    "website": "https://uniswap.org",
+    "source": [
+      "docs_subdomain",
+      "page:/bug-bounty"
+    ],
+    "chains_mentioned": [
+      "Ethereum",
+      "Arbitrum",
+      "Polygon",
+      "Base"
+    ],
+    "docs_url": "https://docs.uniswap.org",
+    "auditors": [
+      "Spearbit",
+      "Immunefi",
+      "Cantina"
+    ],
+    "bounty_policy_url": "https://uniswap.org/bug-bounty",
+    "twitter": "@Uniswap",
+    "github": "https://github.com/Uniswap"
+  },
+  "universalpage": {
+    "slug": "universalpage",
+    "website": "https://universal.page",
+    "source": []
+  },
+  "unstoppablewallet": {
+    "slug": "unstoppablewallet",
+    "website": "https://unstoppable.money",
+    "source": [
+      "website_footer",
+      "website_body"
+    ],
+    "twitter": "@unstoppablebyhs",
+    "telegram": "https://t.me/unstoppable_announcements",
+    "contact_email": "hello@horizontalsystems.io",
+    "github": "https://github.com/horizontalsystems",
+    "auditors": [
+      "Immunefi"
+    ],
+    "bounty_policy_url": "href=\"https://immunefi.com/bug-bounty/unstoppablewallet/information/\"",
+    "chains_mentioned": [
+      "Ethereum",
+      "Mode"
+    ]
+  },
+  "usdn": {
+    "slug": "usdn",
+    "website": "https://usdn.lol",
+    "source": []
+  },
+  "usdt0": {
+    "slug": "usdt0",
+    "website": "https://usdt0.to",
+    "source": [
+      "docs_subdomain"
+    ],
+    "docs_url": "https://docs.usdt0.to"
+  },
+  "usx": {
+    "slug": "usx",
+    "website": "https://usx.capital",
+    "source": [
+      "docs_subdomain"
+    ],
+    "docs_url": "https://docs.usx.capital"
+  },
+  "utix": {
+    "slug": "utix",
+    "website": "https://utix.io",
+    "source": [
+      "website_body",
+      "docs_links"
+    ],
+    "twitter": "@UTIX_US",
+    "contact_email": "info@utix.io",
+    "whitepaper_url": "https://www.utix.io/wp-content/uploads/2023/02/20230214_UTIX-Malta-Ltd._Whitepaper-Final_AL-2.pdf",
+    "chains_mentioned": [
+      "BNB Chain"
+    ]
+  },
+  "vaultcraft": {
+    "slug": "vaultcraft",
+    "website": "https://vaultcraft.io",
+    "source": [
+      "website_footer",
+      "docs_links"
+    ],
+    "twitter": "@VaultCraft_io",
+    "discord": "https://discord.com/invite/kgCun7SbkR",
+    "telegram": "https://t.me/vaultcraft",
+    "blog": "https://medium.com/vaultcraft",
+    "docs_url": "https://docs.vaultcraft.io/",
+    "auditors": [
+      "Code4rena",
+      "Immunefi"
+    ]
+  },
+  "vechain": {
+    "slug": "vechain",
+    "website": "https://vechain.org",
+    "source": [
+      "website_footer",
+      "docs_links",
+      "status_subdomain"
+    ],
+    "github": "https://github.com/vechain",
+    "reddit": "https://www.reddit.com/r/Vechain",
+    "docs_url": "https://docs.vechain.org/core-concepts/wallets/veworld",
+    "auditors": [
+      "OpenZeppelin"
+    ],
+    "status_page_url": "https://status.vechain.org"
+  },
+  "velodromefinance": {
+    "slug": "velodromefinance",
+    "website": "https://velodrome.finance",
+    "source": [
+      "meta_tags",
+      "page:/security"
+    ],
+    "twitter": "@VelodromeFi",
+    "og_site_name": "Velodrome Finance",
+    "chains_mentioned": [
+      "Optimism"
+    ],
+    "bounty_policy_url": "https://velodrome.finance/security"
+  },
+  "velvet-capital-v2": {
+    "slug": "velvet-capital-v2",
+    "website": "https://velvetcapital.com",
+    "source": []
+  },
+  "velvetcapital": {
+    "slug": "velvetcapital",
+    "website": "https://dapp.velvet.capital",
+    "source": []
+  },
+  "vesper": {
+    "slug": "vesper",
+    "website": "https://vesper.finance",
+    "source": [
+      "website_footer",
+      "meta_tags",
+      "docs_links",
+      "page:/security"
+    ],
+    "twitter": "@VesperFi",
+    "discord": "https://discord.com/invite/Pm8UDaazsK",
+    "github": "https://github.com/vesperfi",
+    "og_site_name": "Vesper Finance",
+    "docs_url": "https://docs.vesper.finance/",
+    "auditors": [
+      "Quantstamp",
+      "Halborn",
+      "Dedaub"
+    ],
+    "chains_mentioned": [
+      "Ethereum",
+      "Optimism",
+      "Polygon",
+      "Avalanche"
+    ],
+    "audit_report_urls": [
+      "https://github.com/vesperfi/doc/tree/main/audit/v3%2B"
+    ],
+    "bounty_policy_url": "https://vesper.finance/security"
+  },
+  "vesu": {
+    "slug": "vesu",
+    "website": "https://vesu.xyz",
+    "source": [
+      "docs_subdomain",
+      "page:/security"
+    ],
+    "docs_url": "https://docs.vesu.xyz",
+    "bounty_policy_url": "https://vesu.xyz/security"
+  },
+  "virtuals-protocol": {
+    "slug": "virtuals-protocol",
+    "website": "https://app.virtuals.io",
+    "source": [
+      "meta_tags",
+      "page:/security"
+    ],
+    "twitter": "@virtuals_io",
+    "bounty_policy_url": "https://app.virtuals.io/security"
+  },
+  "voltz": {
+    "slug": "voltz",
+    "website": "https://voltz.xyz",
+    "source": []
+  },
+  "waymont": {
+    "slug": "waymont",
+    "website": "https://waymont.co",
+    "source": [
+      "website_body"
+    ],
+    "twitter": "@waymontco",
+    "github": "https://github.com/Waymont"
+  },
+  "wepiggy": {
+    "slug": "wepiggy",
+    "website": "https://wepiggy.com",
+    "source": [
+      "page:/security"
+    ],
+    "bounty_policy_url": "https://wepiggy.com/security"
+  },
+  "wildcatprotocol": {
+    "slug": "wildcatprotocol",
+    "website": "https://wildcat.finance",
+    "source": [
+      "website_footer",
+      "docs_links"
+    ],
+    "twitter": "@wildcatfi",
+    "blog": "https://medium.com/@wildcatprotocol",
+    "contact_email": "contact@thewildcat.foundation",
+    "docs_url": "https://docs.wildcat.finance/",
+    "whitepaper_url": "https://docs.wildcat.finance/overview/whitepaper",
+    "chains_mentioned": [
+      "Ethereum"
+    ]
+  },
+  "wombatexchange": {
+    "slug": "wombatexchange",
+    "website": "https://wombat.exchange",
+    "source": [
+      "website_footer",
+      "meta_tags",
+      "docs_links"
+    ],
+    "twitter": "@WombatExchange",
+    "discord": "https://discord.gg/Wombat",
+    "telegram": "https://t.me/WombatExchange",
+    "blog": "https://medium.com/@wombatexchange",
+    "og_site_name": "Wombat Exchange",
+    "docs_url": "https://docs.wombat.exchange/resources/whitepapers",
+    "developer_docs_url": "https://docs.wombat.exchange/developers/contracts",
+    "whitepaper_url": "https://docs.wombat.exchange/resources/whitepapers",
+    "chains_mentioned": [
+      "Ethereum",
+      "Arbitrum",
+      "Optimism",
+      "Base",
+      "Avalanche",
+      "BNB Chain",
+      "Scroll"
+    ]
+  },
+  "woofi": {
+    "slug": "woofi",
+    "website": "https://fi.woo.org",
+    "source": [
+      "meta_tags",
+      "page:/security"
+    ],
+    "twitter": "@WOOFi",
+    "og_site_name": "WOOFi",
+    "chains_mentioned": [
+      "Ethereum",
+      "Arbitrum",
+      "Optimism",
+      "Polygon",
+      "Base",
+      "Avalanche",
+      "BNB Chain",
+      "zkSync",
+      "Linea"
+    ],
+    "bounty_policy_url": "https://fi.woo.org/security"
+  },
+  "xion": {
+    "slug": "xion",
+    "website": "https://xion.burnt.com",
+    "source": [
+      "website_footer",
+      "docs_links"
+    ],
+    "twitter": "@burnt_xion",
+    "discord": "https://discord.gg/burnt",
+    "telegram": "https://t.me/xion_announcements",
+    "github": "https://github.com/burnt-labs",
+    "developer_docs_url": "https://xion.burnt.com/developer-overview",
+    "whitepaper_url": "https://xion.burnt.com/whitepaper"
+  },
+  "xoxno": {
+    "slug": "xoxno",
+    "website": "https://xoxno.com",
+    "source": [
+      "website_footer",
+      "docs_links",
+      "page:/security"
+    ],
+    "twitter": "@XoxnoNetwork",
+    "discord": "https://discord.com/invite/PUNwbU3A6G",
+    "telegram": "https://t.me/xoxno",
+    "docs_url": "https://docs.xoxno.com",
+    "whitepaper_url": "https://media.xoxno.com/docs/whitepaper.pdf",
+    "chains_mentioned": [
+      "Ethereum",
+      "Arbitrum",
+      "Optimism",
+      "Polygon",
+      "Base",
+      "Avalanche",
+      "Solana",
+      "Sui",
+      "Mode"
+    ],
+    "bounty_policy_url": "https://xoxno.com/security"
+  },
+  "xterio": {
+    "slug": "xterio",
+    "website": "https://x.xyz",
+    "source": []
+  },
+  "yamatoprotocol": {
+    "slug": "yamatoprotocol",
+    "website": "https://app.yamato.fi",
+    "source": [
+      "docs_subdomain",
+      "page:/security"
+    ],
+    "docs_url": "https://docs.yamato.fi",
+    "bounty_policy_url": "https://app.yamato.fi/security"
+  },
+  "yearnfinance": {
+    "slug": "yearnfinance",
+    "website": "https://yearn.fi",
+    "source": [
+      "docs_subdomain",
+      "status_subdomain",
+      "page:/security"
+    ],
+    "docs_url": "https://docs.yearn.fi",
+    "status_page_url": "https://status.yearn.fi",
+    "bounty_policy_url": "https://yearn.fi/security"
+  },
+  "yelay": {
+    "slug": "yelay",
+    "website": "https://yelay.io",
+    "source": [
+      "website_footer",
+      "docs_subdomain",
+      "page:/security"
+    ],
+    "twitter": "@YieldLayer",
+    "telegram": "https://t.me/YelayAnn",
+    "audit_report_urls": [
+      "https://github.com/YieldLayer/yelay-lite/tree/main/audits"
+    ],
+    "chains_mentioned": [
+      "Scroll"
+    ],
+    "docs_url": "https://docs.yelay.io",
+    "bounty_policy_url": "https://yelay.io/security"
+  },
+  "yo-protocol": {
+    "slug": "yo-protocol",
+    "website": "https://app.yo.xyz",
+    "source": [
+      "docs_subdomain"
+    ],
+    "docs_url": "https://docs.yo.xyz"
+  },
+  "zano": {
+    "slug": "zano",
+    "website": "https://zano.org",
+    "source": [
+      "website_body",
+      "meta_tags",
+      "docs_links"
+    ],
+    "twitter": "@zano_project",
+    "discord": "https://discord.gg/zano",
+    "telegram": "https://t.me/zanocoin",
+    "reddit": "https://www.reddit.com/r/Zano",
+    "og_site_name": "Zano",
+    "docs_url": "https://docs.zano.org/",
+    "developer_docs_url": "https://zano.org/developers",
+    "auditors": [
+      "Immunefi"
+    ],
+    "bounty_policy_url": "href=\"https://immunefi.com/bug-bounty/zano/information/\"",
+    "chains_mentioned": [
+      "Ethereum",
+      "Mode"
+    ]
+  },
+  "zenlink": {
+    "slug": "zenlink",
+    "website": "https://zenlink.pro",
+    "source": []
+  },
+  "zerion": {
+    "slug": "zerion",
+    "website": "https://zerion.io",
+    "source": [
+      "website_body",
+      "docs_links",
+      "docs_subdomain",
+      "status_subdomain"
+    ],
+    "twitter": "@zerion",
+    "developer_docs_url": "https://zerion.io/api",
+    "auditors": [
+      "Trail of Bits",
+      "Peckshield",
+      "PeckShield",
+      "Immunefi"
+    ],
+    "bounty_policy_url": "https://immunefi.com/bounty/zerion/",
+    "chains_mentioned": [
+      "Ethereum",
+      "Arbitrum",
+      "Optimism",
+      "Polygon",
+      "Base",
+      "BNB Chain",
+      "Solana",
+      "Fantom",
+      "zkSync",
+      "Scroll"
+    ],
+    "docs_url": "https://docs.zerion.io",
+    "status_page_url": "https://status.zerion.io"
+  },
+  "zerolend": {
+    "slug": "zerolend",
+    "website": "https://zerolend.xyz",
+    "source": [
+      "meta_tags",
+      "docs_subdomain"
+    ],
+    "og_site_name": "ZeroLend",
+    "docs_url": "https://docs.zerolend.xyz"
+  },
+  "zest-protocol-v2": {
+    "slug": "zest-protocol-v2",
+    "website": "https://zestprotocol.com",
+    "source": [
+      "website_footer",
+      "docs_links"
+    ],
+    "twitter": "@zestprotocol",
+    "discord": "https://discord.com/invite/zestprotocol",
+    "telegram": "https://t.me/zestprotocol",
+    "docs_url": "https://docs.zestprotocol.com",
+    "audit_report_urls": [
+      "https://github.com/Clarity-Alliance/audits/blob/main/Clarity%20Alliance%20-%20Zest%20Protocol.pdf",
+      "https://github.com/Thesis-Defense/Security-Audit-Reports/blob/main/PDFs/240509_Thesis_Defense-Zest_Protocol_Smart_Contracts_Security_Audit_Report.pdf"
+    ],
+    "auditors": [
+      "Immunefi"
+    ]
+  },
+  "zksync-os": {
+    "slug": "zksync-os",
+    "website": "https://zksync.io",
+    "source": [
+      "website_body",
+      "docs_links",
+      "page:/terms"
+    ],
+    "twitter": "@zksync",
+    "github": "https://github.com/matter-labs",
+    "docs_url": "https://docs.zksync.io/zk-stack",
+    "developer_docs_url": "https://github.com/ZKsync-Community-Hub/zksync-developers/discussions",
+    "audit_report_urls": [
+      "https://docs.zksync.io/zksync-protocol/security/audits"
+    ],
+    "auditors": [
+      "Nethermind"
+    ],
+    "chains_mentioned": [
+      "Ethereum",
+      "zkSync"
+    ],
+    "legal_email": "legal@matterlabs.dev"
+  },
+  "zksync": {
+    "slug": "zksync",
+    "website": "https://app.txsync.io",
+    "source": [
+      "docs_subdomain"
+    ],
+    "docs_url": "https://docs.txsync.io"
+  },
+  "zkverify": {
+    "slug": "zkverify",
+    "website": "https://zkverify.io",
+    "source": [
+      "website_footer",
+      "meta_tags",
+      "docs_links"
+    ],
+    "twitter": "@ZKVProtocol",
+    "discord": "https://discord.gg/zkverify",
+    "telegram": "https://t.me/zkverify",
+    "github": "https://github.com/zkverify",
+    "og_site_name": "zkVerify",
+    "docs_url": "https://docs.zkverify.io/",
+    "whitepaper_url": "https://downloads.horizenlabs.io/file/labs-web-assets/zkverify-protocol-whitepaper.pdf",
+    "chains_mentioned": [
+      "Ethereum",
+      "Arbitrum",
+      "Optimism",
+      "Polygon",
+      "Base",
+      "zkSync"
+    ]
+  },
+  "zodiac": {
+    "slug": "zodiac",
+    "website": "https://zodiac.wiki",
+    "source": [
+      "docs_links"
+    ],
+    "docs_url": "https://zodiac.wiki/documentation"
+  },
+  "avalanche": {
+    "slug": "avalanche",
+    "website": "https://avax.network",
+    "source": [
+      "website_footer",
+      "meta_tags",
+      "docs_links",
+      "status_subdomain"
+    ],
+    "twitter": "@avax",
+    "discord": "https://discord.com/invite/avax",
+    "github": "https://github.com/ava-labs",
+    "og_site_name": "Avax.network — Homepage",
+    "docs_url": "https://build.avax.network/docs",
+    "developer_docs_url": "https://avax.network/build/developer-hub",
+    "auditors": [
+      "Immunefi"
+    ],
+    "bounty_policy_url": "href=\"https://immunefi.com/bug-bounty/avalanche/information/\"",
+    "chains_mentioned": [
+      "Avalanche",
+      "Scroll",
+      "Mode"
+    ],
+    "status_page_url": "https://status.avax.network"
+  },
+  "beets": {
+    "slug": "beets",
+    "website": "https://beets.fi",
+    "source": [
+      "docs_subdomain"
+    ],
+    "docs_url": "https://docs.beets.fi"
+  },
+  "berachain": {
+    "slug": "berachain",
+    "website": "https://berachain.com",
+    "source": [
+      "docs_subdomain"
+    ],
+    "docs_url": "https://docs.berachain.com"
+  },
+  "daimo": {
+    "slug": "daimo",
+    "website": "https://daimo.com",
+    "source": [
+      "website_footer",
+      "meta_tags",
+      "status_subdomain"
+    ],
+    "twitter": "@daimo_com",
+    "og_site_name": "Daimo",
+    "chains_mentioned": [
+      "Ethereum",
+      "Arbitrum",
+      "Optimism",
+      "Polygon",
+      "Base",
+      "BNB Chain",
+      "Solana",
+      "Linea",
+      "Scroll",
+      "Celo"
+    ],
+    "status_page_url": "https://status.daimo.com"
+  },
+  "dexeprotocol": {
+    "slug": "dexeprotocol",
+    "website": "https://dexe.network",
+    "source": [
+      "website_footer",
+      "docs_links"
+    ],
+    "twitter": "@DexeNetwork",
+    "telegram": "https://t.me/Dexe_network",
+    "github": "https://github.com/dexe-network",
+    "docs_url": "https://docs.dexe.network/",
+    "whitepaper_url": "https://whitepaper.dexe.network",
+    "audit_report_urls": [
+      "https://github.com/dexe-network/investment-contracts/tree/master/audits"
+    ],
+    "auditors": [
+      "Cyfrin"
+    ],
+    "bounty_policy_url": "#",
+    "chains_mentioned": [
+      "Scroll",
+      "Mode"
+    ]
+  },
+  "dodov3": {
+    "slug": "dodov3",
+    "website": "https://dodoex.io",
+    "source": [
+      "meta_tags",
+      "docs_links",
+      "page:/security"
+    ],
+    "twitter": "@BreederDodo",
+    "og_site_name": "DODO Home",
+    "docs_url": "https://docs.dodoex.io/en/home/terms-of-service",
+    "chains_mentioned": [
+      "Ethereum",
+      "BNB Chain"
+    ],
+    "bounty_policy_url": "https://dodoex.io/security"
+  },
+  "econia": {
+    "slug": "econia",
+    "website": "https://econialabs.com",
+    "source": []
+  },
+  "enzymefinance": {
+    "slug": "enzymefinance",
+    "website": "https://enzyme.finance",
+    "source": [
+      "website_footer",
+      "docs_links",
+      "status_subdomain"
+    ],
+    "twitter": "@enzymefinance",
+    "docs_url": "https://docs.enzyme.finance/",
+    "developer_docs_url": "https://docs.enzyme.finance/developer-hub",
+    "whitepaper_url": "#",
+    "chains_mentioned": [
+      "Scroll"
+    ],
+    "status_page_url": "https://status.enzyme.finance"
+  },
+  "flarenetwork": {
+    "slug": "flarenetwork",
+    "website": "https://flare.network",
+    "source": [
+      "website_footer",
+      "website_body",
+      "meta_tags",
+      "docs_links",
+      "docs_subdomain"
+    ],
+    "twitter": "@FlareNetworks",
+    "discord": "https://discord.com/invite/flarenetwork",
+    "telegram": "https://t.me/FlareNetwork",
+    "github": "https://github.com/flare-foundation",
+    "blog": "https://medium.com/flarenetwork",
+    "contact_email": "media@vivopower.com",
+    "og_site_name": "Flare",
+    "developer_docs_url": "https://flare.network/resources/developer-hub",
+    "whitepaper_url": "https://flare.network/whitepapers",
+    "auditors": [
+      "OpenZeppelin",
+      "Immunefi"
+    ],
+    "chains_mentioned": [
+      "Ethereum",
+      "Scroll",
+      "NEAR"
+    ],
+    "docs_url": "https://docs.flare.network"
+  },
+  "furucombofunds": {
+    "slug": "furucombofunds",
+    "website": "https://furucombo.app",
+    "source": [
+      "meta_tags",
+      "docs_subdomain",
+      "page:/security"
+    ],
+    "twitter": "@furucombo",
+    "docs_url": "https://docs.furucombo.app",
+    "bounty_policy_url": "https://furucombo.app/security"
+  },
+  "gammaswap": {
+    "slug": "gammaswap",
+    "website": "https://gamma.xyz",
+    "source": [
+      "website_footer",
+      "docs_links"
+    ],
+    "twitter": "@GammaStrategies",
+    "discord": "https://discord.gg/gammastrategies1",
+    "telegram": "https://t.me/gammastrategies",
+    "github": "https://github.com/GammaStrategies",
+    "blog": "https://medium.com/gamma-strategies",
+    "docs_url": "https://docs.gamma.xyz/",
+    "chains_mentioned": [
+      "Arbitrum"
+    ]
+  },
+  "gearbox": {
+    "slug": "gearbox",
+    "website": "https://gearbox.finance",
+    "source": [
+      "docs_subdomain",
+      "page:/security"
+    ],
+    "docs_url": "https://docs.gearbox.finance",
+    "bounty_policy_url": "https://gearbox.finance/security"
+  },
+  "hydration": {
+    "slug": "hydration",
+    "website": "https://hydration.net",
+    "source": [
+      "website_footer",
+      "docs_links",
+      "page:/security"
+    ],
+    "twitter": "@hydration_net",
+    "discord": "https://discord.gg/kkmY35UxAG",
+    "telegram": "https://t.me/hydration_net",
+    "github": "https://github.com/galacticcouncil",
+    "docs_url": "https://docs.hydration.net",
+    "chains_mentioned": [
+      "Ethereum",
+      "Base",
+      "Solana"
+    ],
+    "bounty_policy_url": "https://hydration.net/security"
+  },
+  "jito-foundation": {
+    "slug": "jito-foundation",
+    "website": "https://jito.network",
+    "source": [
+      "website_footer",
+      "docs_links"
+    ],
+    "twitter": "@jito_sol",
+    "discord": "https://discord.com/invite/jitocommunity",
+    "telegram": "https://t.me/thejitocommunity",
+    "docs_url": "https://jito.network/docs/governance/",
+    "chains_mentioned": [
+      "Solana",
+      "Mode"
+    ]
+  },
+  "jito": {
+    "slug": "jito",
+    "website": "https://jito.network",
+    "source": [
+      "website_footer",
+      "docs_links"
+    ],
+    "twitter": "@jito_sol",
+    "discord": "https://discord.com/invite/jitocommunity",
+    "telegram": "https://t.me/thejitocommunity",
+    "docs_url": "https://jito.network/docs/governance/",
+    "chains_mentioned": [
+      "Solana",
+      "Mode"
+    ]
+  },
+  "kinesis-bridge-on-kadena": {
+    "slug": "kinesis-bridge-on-kadena",
+    "website": "https://kadena.io",
+    "source": [
+      "meta_tags",
+      "docs_subdomain"
+    ],
+    "og_site_name": "Kadena",
+    "docs_url": "https://docs.kadena.io"
+  },
+  "lidoonpolygon": {
+    "slug": "lidoonpolygon",
+    "website": "https://lido.fi",
+    "source": [
+      "security.txt",
+      "website_footer",
+      "docs_links"
+    ],
+    "security_policy_url": "https://immunefi.com/bug-bounty/lido/information/",
+    "preferred_languages": "en",
+    "security_email": "security@lido.fi",
+    "twitter": "@lidofinance",
+    "discord": "https://discord.com/invite/lido",
+    "telegram": "https://t.me/lidofinance",
+    "github": "https://github.com/lidofinance",
+    "blog": "https://blog.lido.fi",
+    "contact_email": "info@lido.fi",
+    "docs_url": "https://docs.lido.fi",
+    "audit_report_urls": [
+      "https://github.com/lidofinance/audits"
+    ],
+    "auditors": [
+      "OpenZeppelin",
+      "Certora",
+      "Chainsecurity",
+      "ChainSecurity",
+      "Immunefi",
+      "MixBytes",
+      "Nethermind"
+    ],
+    "bounty_policy_url": "href=\"https://immunefi.com/bug-bounty/lido/information/\"",
+    "chains_mentioned": [
+      "Ethereum",
+      "Arbitrum",
+      "Polygon"
+    ]
+  },
+  "metastreet": {
+    "slug": "metastreet",
+    "website": "https://metastreet.xyz",
+    "source": [
+      "website_footer",
+      "docs_links"
+    ],
+    "twitter": "@metastreetxyz",
+    "discord": "https://discord.com/invite/metastreet",
+    "github": "https://github.com/metastreet-labs",
+    "blog": "https://medium.com/@MetaStreet",
+    "docs_url": "https://docs.metastreet.xyz/",
+    "auditors": [
+      "Immunefi"
+    ],
+    "chains_mentioned": [
+      "Ethereum",
+      "Arbitrum",
+      "Base",
+      "Blast"
+    ]
+  },
+  "nftfitestnetrefi": {
+    "slug": "nftfitestnetrefi",
+    "website": "https://nftfi.com",
+    "source": [
+      "website_footer",
+      "docs_links"
+    ],
+    "twitter": "@nftfi",
+    "discord": "https://discord.gg/nftfi",
+    "github": "https://github.com/NFTfi-Genesis",
+    "contact_email": "marketing@nftfi.com",
+    "docs_url": "https://docs.nftfi.com/overview/introduction",
+    "audit_report_urls": [
+      "https://github.com/HalbornSecurity/PublicReports/blob/master/Solidity%20Smart%20Contract%20Audits/NFTfi_Ethereum_Smart_Contract_Security_Audit_Report_Halborn_Final.pdf",
+      "https://github.com/HalbornSecurity/PublicReports/blob/master/Solidity%20Smart%20Contract%20Audits/NFTfi_eth_nftfi_Collection_Offer_Smart_Contract_Security_Audit_Report_Halborn_Final.pdf",
+      "https://github.com/HalbornSecurity/PublicReports/blob/master/Solidity%20Smart%20Contract%20Audits/NFTfi_DirectLoanFixedOffer_Redeployment_Smart_Contract_Security_Audit_Report_Halborn_Final.pdf",
+      "https://github.com/HalbornSecurity/PublicReports/blob/master/Solidity%20Smart%20Contract%20Audits/NFTfi_Bundles_Airdrop_Smart_Contract_Security_Audit_Report_Halborn_Final.pdf"
+    ],
+    "auditors": [
+      "Chainsecurity",
+      "ChainSecurity",
+      "Halborn",
+      "Immunefi"
+    ],
+    "bounty_policy_url": "https://nftfi.fibery.io/@public/forms/uPPxwzT0",
+    "chains_mentioned": [
+      "Ethereum"
+    ]
+  },
+  "openzeppelin": {
+    "slug": "openzeppelin",
+    "website": "https://openzeppelin.com",
+    "source": [
+      "website_footer",
+      "docs_links",
+      "page:/security",
+      "page:/privacy"
+    ],
+    "twitter": "@OpenZeppelin",
+    "github": "https://github.com/openzeppelin",
+    "docs_url": "https://docs.openzeppelin.com/upgrades-plugins/",
+    "developer_docs_url": "#",
+    "auditors": [
+      "OpenZeppelin"
+    ],
+    "chains_mentioned": [
+      "Ethereum",
+      "Arbitrum",
+      "Base",
+      "zkSync",
+      "Linea",
+      "StarkNet"
+    ],
+    "bounty_policy_url": "https://openzeppelin.com/security",
+    "legal_email": "legal@openzeppelin.com"
+  },
+  "polygonzkevm": {
+    "slug": "polygonzkevm",
+    "website": "https://polygon.technology",
+    "source": [
+      "security.txt",
+      "website_footer",
+      "meta_tags",
+      "docs_links"
+    ],
+    "preferred_languages": "en",
+    "hiring_url": "https://polygon.technology/careers",
+    "security_email": "security@polygon.technology",
+    "twitter": "@0xPolygon",
+    "discord": "https://discord.com/invite/0xPolygonCommunity",
+    "telegram": "https://t.me/PolygonHQ",
+    "github": "https://github.com/maticnetwork",
+    "reddit": "https://www.reddit.com/r/0xPolygon",
+    "og_site_name": "Polygon Labs",
+    "docs_url": "https://docs.polygon.technology/",
+    "whitepaper_url": "https://polygon.technology/papers/pol-whitepaper",
+    "chains_mentioned": [
+      "Ethereum",
+      "Polygon",
+      "Base",
+      "Mode"
+    ]
+  },
+  "pstakeoncosmos": {
+    "slug": "pstakeoncosmos",
+    "website": "https://pstake.finance",
+    "source": [
+      "website_body",
+      "docs_subdomain"
+    ],
+    "twitter": "@pStakeFinance",
+    "discord": "https://discord.com/invite/pstake",
+    "telegram": "https://t.me/pstakefinance",
+    "chains_mentioned": [
+      "Optimism",
+      "Base",
+      "Cosmos",
+      "NEAR"
+    ],
+    "docs_url": "https://docs.pstake.finance"
+  },
+  "ref-finance": {
+    "slug": "ref-finance",
+    "website": "https://app.re.xyz",
+    "source": [
+      "website_footer",
+      "docs_links"
+    ],
+    "twitter": "@re",
+    "discord": "https://discord.gg/reprotocol",
+    "telegram": "https://t.me/re_protocol",
+    "blog": "https://blog.re.xyz",
+    "docs_url": "https://docs.re.xyz",
+    "chains_mentioned": [
+      "Ethereum",
+      "Base"
+    ]
+  },
+  "silofinance": {
+    "slug": "silofinance",
+    "website": "https://silo.finance",
+    "source": [
+      "website_footer",
+      "docs_links"
+    ],
+    "twitter": "@SiloFinance",
+    "discord": "https://discord.gg/silo-finance",
+    "telegram": "https://t.me/silo_finance",
+    "docs_url": "https://docs.silo.finance/docs/users/intro",
+    "developer_docs_url": "https://docs.silo.finance/docs/developers/protocol-overview/architecture#",
+    "audit_report_urls": [
+      "https://docs.silo.finance/docs/audits"
+    ],
+    "auditors": [
+      "Certora",
+      "Spearbit",
+      "Immunefi",
+      "Cantina"
+    ],
+    "bounty_policy_url": "href=\"https://immunefi.com/bug-bounty/silofinance-v2/information/#top\"",
+    "chains_mentioned": [
+      "Ethereum",
+      "Arbitrum",
+      "Avalanche",
+      "Mode"
+    ]
+  },
+  "skatefi": {
+    "slug": "skatefi",
+    "website": "https://rangeprotocol.com",
+    "source": [
+      "website_footer"
+    ],
+    "twitter": "@skate_fi",
+    "discord": "https://discord.gg/skatechain",
+    "contact_email": "contact@rangeprotocol.com",
+    "auditors": [
+      "Halborn"
+    ]
+  },
+  "staderforeth": {
+    "slug": "staderforeth",
+    "website": "https://staderlabs.com",
+    "source": [
+      "website_footer",
+      "website_body",
+      "docs_links"
+    ],
+    "github": "https://github.com/stader-labs",
+    "twitter": "@staderlabs",
+    "discord": "https://discord.com/invite/xJURAhSmav",
+    "telegram": "https://t.me/staderlabs",
+    "reddit": "https://www.reddit.com/r/StaderLabs_Official",
+    "docs_url": "https://staderlabs.com/docs/",
+    "whitepaper_url": "https://www.staderlabs.com/docs/ETHx%20Litepaper.pdf",
+    "audit_report_urls": [
+      "https://www.staderlabs.com/docs-v1/category/auditors"
+    ],
+    "auditors": [
+      "Sigma Prime",
+      "Peckshield",
+      "PeckShield",
+      "Halborn",
+      "Code4rena",
+      "Immunefi",
+      "OtterSec"
+    ],
+    "chains_mentioned": [
+      "Ethereum",
+      "Polygon",
+      "Fantom",
+      "NEAR"
+    ]
+  },
+  "staderforpolygon": {
+    "slug": "staderforpolygon",
+    "website": "https://staderlabs.com",
+    "source": [
+      "website_footer",
+      "website_body",
+      "docs_links"
+    ],
+    "github": "https://github.com/stader-labs",
+    "twitter": "@staderlabs",
+    "discord": "https://discord.com/invite/xJURAhSmav",
+    "telegram": "https://t.me/staderlabs",
+    "reddit": "https://www.reddit.com/r/StaderLabs_Official",
+    "docs_url": "https://staderlabs.com/docs/",
+    "whitepaper_url": "https://www.staderlabs.com/docs/ETHx%20Litepaper.pdf",
+    "audit_report_urls": [
+      "https://www.staderlabs.com/docs-v1/category/auditors"
+    ],
+    "auditors": [
+      "Sigma Prime",
+      "Peckshield",
+      "PeckShield",
+      "Halborn",
+      "Code4rena",
+      "Immunefi",
+      "OtterSec"
+    ],
+    "chains_mentioned": [
+      "Ethereum",
+      "Polygon",
+      "Fantom",
+      "NEAR"
+    ]
+  },
+  "tinymanv2": {
+    "slug": "tinymanv2",
+    "website": "https://tinyman.org",
+    "source": [
+      "website_body",
+      "docs_links"
+    ],
+    "twitter": "@tinymanorg",
+    "discord": "https://discord.gg/wvHnAdmEv6",
+    "telegram": "https://t.me/tinymanofficial",
+    "github": "https://github.com/tinymanorg",
+    "reddit": "https://www.reddit.com/r/Tinyman",
+    "docs_url": "https://docs.tinyman.org/"
+  },
+  "zksyncera": {
+    "slug": "zksyncera",
+    "website": "https://zksync.io",
+    "source": [
+      "website_body",
+      "docs_links",
+      "page:/terms"
+    ],
+    "twitter": "@zksync",
+    "github": "https://github.com/matter-labs",
+    "docs_url": "https://docs.zksync.io/zk-stack",
+    "developer_docs_url": "https://github.com/ZKsync-Community-Hub/zksync-developers/discussions",
+    "audit_report_urls": [
+      "https://docs.zksync.io/zksync-protocol/security/audits"
+    ],
+    "auditors": [
+      "Nethermind"
+    ],
+    "chains_mentioned": [
+      "Ethereum",
+      "zkSync"
+    ],
+    "legal_email": "legal@matterlabs.dev"
   }
 }
