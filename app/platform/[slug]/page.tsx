@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { platformFeatures, openZeppelinResearch } from '@/lib/data/constants'
 import { auditCatalog, auditStats } from '@/lib/data/audits'
+import HackDatabaseClient from '@/components/platform/HackDatabaseClient'
 
 export function generateStaticParams() {
   return platformFeatures.map((f) => ({ slug: f.slug }))
@@ -173,51 +174,11 @@ function OpenClawSection() {
 
 function HackDatabaseSection() {
   return (
-    <>
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '12px', marginBottom: '32px' }}>
-        <div style={statBox}><div style={{ fontSize: '1.5rem', fontWeight: 700 }}>{auditStats.total}</div><div style={{ fontSize: '0.75rem', color: '#888' }}>Audit Reports</div></div>
-        <div style={statBox}><div style={{ fontSize: '1.5rem', fontWeight: 700 }}>{auditStats.protocols}</div><div style={{ fontSize: '0.75rem', color: '#888' }}>Protocols Covered</div></div>
-        <div style={statBox}><div style={{ fontSize: '1.5rem', fontWeight: 700 }}>{auditStats.auditors}</div><div style={{ fontSize: '0.75rem', color: '#888' }}>Auditors</div></div>
-        <div style={statBox}><div style={{ fontSize: '1.5rem', fontWeight: 700 }}>{openZeppelinResearch.length}</div><div style={{ fontSize: '0.75rem', color: '#888' }}>Research Docs</div></div>
-      </div>
-      <div style={label}>Exploit Research</div>
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px', marginBottom: '32px' }}>
-        {openZeppelinResearch.map((r) => (
-          <div key={r.id} style={card}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px' }}>
-              <span style={{ fontSize: '1.2rem' }}>{r.icon}</span>
-              <span style={{ fontWeight: 600, fontSize: '0.9rem' }}>{r.title}</span>
-            </div>
-            <div style={{ fontSize: '0.8rem', color: '#888', marginBottom: '8px', lineHeight: 1.5 }}>{r.description}</div>
-            <div>
-              <span style={tag}>{r.category}</span>
-              {r.chains.map(c => <span key={c} style={tag}>{c}</span>)}
-              <span style={greenTag}>{r.bountyValue}</span>
-            </div>
-          </div>
-        ))}
-      </div>
-      <div style={label}>Audit Report Library ({auditStats.total} reports)</div>
-      <div style={{ ...card, padding: 0, overflow: 'hidden' }}>
-        <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.85rem' }}>
-          <thead><tr style={{ borderBottom: '1px solid #222' }}>
-            <th style={thStyle}>Protocol</th><th style={thStyle}>Report</th><th style={thStyle}>Auditor</th><th style={thStyle}>Date</th><th style={thStyle}>Category</th><th style={{ ...thStyle, textAlign: 'right' as const }}>PDF</th>
-          </tr></thead>
-          <tbody>{auditCatalog.map((a, i) => (
-            <tr key={a.id} style={{ borderBottom: i < auditCatalog.length - 1 ? '1px solid #1a1a1a' : 'none' }}>
-              <td style={{ ...tdStyle, fontWeight: 500 }}>{a.protocol}</td>
-              <td style={{ ...tdStyle, color: '#aaa' }}>{a.title}</td>
-              <td style={{ ...tdStyle, color: '#888' }}>{a.auditor}</td>
-              <td style={{ ...tdStyle, color: '#888' }}>{a.date}</td>
-              <td style={tdStyle}><span style={tag}>{a.category}</span></td>
-              <td style={{ ...tdStyle, textAlign: 'right' as const }}>
-                <a href={a.pdfPath} target="_blank" rel="noopener noreferrer" style={{ color: '#4ade80', textDecoration: 'none', fontSize: '0.8rem' }}>Download &#8599;</a>
-              </td>
-            </tr>
-          ))}</tbody>
-        </table>
-      </div>
-    </>
+    <HackDatabaseClient
+      audits={auditCatalog}
+      research={openZeppelinResearch}
+      stats={auditStats}
+    />
   )
 }
 
