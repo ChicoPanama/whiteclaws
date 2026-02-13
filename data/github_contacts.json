@@ -1,0 +1,1265 @@
+[
+  {
+    "slug": "0x",
+    "github_org": "https://github.com/0xProject",
+    "contact_email": "team@0xproject.com",
+    "contact_twitter": "@0xProject",
+    "website_from_github": "0x.org",
+    "source": [
+      "github_profile",
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "88mphv3",
+    "github_org": "https://github.com/88mphapp",
+    "contact_email": "hello@88mph.app",
+    "contact_twitter": "@88mphapp",
+    "website_from_github": "https://88mph.app/",
+    "source": [
+      "github_profile",
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "aave",
+    "github_org": "https://github.com/aave-dao",
+    "source": []
+  },
+  {
+    "slug": "acala",
+    "github_org": "https://github.com/AcalaNetwork",
+    "contact_email": "hello@acala.network",
+    "contact_twitter": "@AcalaNetwork",
+    "website_from_github": "https://acala.network",
+    "source": [
+      "github_profile",
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "alchemix",
+    "github_org": "https://github.com/alchemix-finance",
+    "contact_email": "admin@alchemix.fi",
+    "contact_twitter": "@AlchemixFi",
+    "website_from_github": "https://alchemix.fi",
+    "source": [
+      "github_profile",
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "aleo",
+    "github_org": "https://github.com/ProvableHQ",
+    "contact_email": "hello@provable.com",
+    "website_from_github": "https://provable.com",
+    "source": [
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "alex",
+    "github_org": "https://github.com/alexgo-io",
+    "contact_twitter": "@ALEXLabBTC",
+    "website_from_github": "www.alexlab.co",
+    "source": [
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "alpen-labs",
+    "github_org": "https://github.com/alpenlabs",
+    "security_email": "security@alpenlabs.io",
+    "contact_twitter": "@AlpenLabs",
+    "security_md_repo": "alpenlabs/ckt",
+    "source": [
+      "github_profile",
+      "SECURITY.md(ckt)"
+    ]
+  },
+  {
+    "slug": "alphaventuredao",
+    "github_org": "https://github.com/n1punp",
+    "source": []
+  },
+  {
+    "slug": "arbitrum",
+    "github_org": "https://github.com/OffchainLabs",
+    "contact_email": "info@offchainlabs.com",
+    "website_from_github": "https://offchainlabs.com",
+    "source": [
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "astarnetwork",
+    "github_org": "https://github.com/AstarNetwork",
+    "contact_email": "info@astar.network",
+    "contact_twitter": "@AstarNetwork",
+    "website_from_github": "https://astar.network/",
+    "source": [
+      "github_profile",
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "aster",
+    "github_org": "https://github.com/asterdex",
+    "source": []
+  },
+  {
+    "slug": "astroport",
+    "github_org": "https://github.com/astroport-fi",
+    "contact_twitter": "@astroport_fi",
+    "website_from_github": "https://astroport.fi/",
+    "source": [
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "avail",
+    "github_org": "https://github.com/availproject",
+    "contact_email": "info@availproject.org",
+    "contact_twitter": "@AvailProject",
+    "website_from_github": "https://www.availproject.org/",
+    "source": [
+      "github_profile",
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "avalabs",
+    "github_org": "https://github.com/ava-labs",
+    "website_from_github": "https://www.avalabs.org",
+    "source": []
+  },
+  {
+    "slug": "avalanche",
+    "github_org": "https://github.com/ava-labs",
+    "website_from_github": "https://www.avalabs.org",
+    "source": []
+  },
+  {
+    "slug": "axelarnetwork",
+    "github_org": "https://github.com/axelarnetwork",
+    "contact_twitter": "@axelarnetwork",
+    "website_from_github": "https://axelar.network",
+    "source": [
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "babylon-labs",
+    "github_org": "https://github.com/babylonlabs-io",
+    "security_email": "security@babylonlabs.io",
+    "contact_twitter": "@babylonlabs_io",
+    "website_from_github": "https://babylonlabs.io",
+    "security_md_repo": "babylonlabs-io/babylon",
+    "source": [
+      "github_profile",
+      "SECURITY.md(babylon)"
+    ]
+  },
+  {
+    "slug": "basilisk",
+    "github_org": "https://github.com/galacticcouncil",
+    "website_from_github": "https://galacticcouncil.io",
+    "source": []
+  },
+  {
+    "slug": "berachain",
+    "github_org": "https://github.com/berachain",
+    "contact_email": "founders@berachain.com",
+    "contact_twitter": "@berachain",
+    "website_from_github": "https://berachain.com",
+    "source": [
+      "github_profile",
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "bifrostfinance",
+    "github_org": "https://github.com/bifrost-io",
+    "contact_email": "hello@bifrost.io",
+    "contact_twitter": "@Bifrost",
+    "website_from_github": "https://bifrost.io",
+    "source": [
+      "github_profile",
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "bitcoinsv",
+    "github_org": "https://github.com/bitcoin-sv",
+    "website_from_github": "https://www.bitcoinsv.com/",
+    "source": []
+  },
+  {
+    "slug": "bprotocol",
+    "github_org": "https://github.com/backstop-protocol",
+    "contact_twitter": "@bprotocoleth",
+    "website_from_github": "https://bprotocol.org",
+    "source": [
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "buttonwood",
+    "github_org": "https://github.com/buttonwood-protocol",
+    "source": []
+  },
+  {
+    "slug": "capyfi",
+    "github_org": "https://github.com/Capyfi",
+    "source": []
+  },
+  {
+    "slug": "cardanofoundation",
+    "github_org": "https://github.com/cardano-foundation",
+    "website_from_github": "https://cardanofoundation.org",
+    "source": []
+  },
+  {
+    "slug": "chainlink",
+    "github_org": "https://github.com/smartcontractkit",
+    "contact_twitter": "@chainlink",
+    "website_from_github": "https://chain.link/",
+    "source": [
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "charm",
+    "github_org": "https://github.com/charmfinance",
+    "contact_twitter": "@charmfinance",
+    "website_from_github": "charm.fi",
+    "source": [
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "compoundfinance",
+    "github_org": "https://github.com/compound-finance",
+    "website_from_github": "https://compound.finance/",
+    "source": []
+  },
+  {
+    "slug": "coreum",
+    "github_org": "https://github.com/CoreumFoundation",
+    "contact_twitter": "@CoreumOfficial",
+    "website_from_github": "https://coreum.com",
+    "source": [
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "cove",
+    "github_org": "https://github.com/Storm-Labs-Inc",
+    "contact_email": "hello@storm-labs.xyz",
+    "contact_twitter": "@stormlabs_xyz",
+    "website_from_github": "https://storm-labs.xyz",
+    "source": [
+      "github_profile",
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "cowprotocol",
+    "github_org": "https://github.com/cowprotocol",
+    "contact_email": "info@cow.fi",
+    "contact_twitter": "@CoWSwap",
+    "website_from_github": "cow.fi",
+    "source": [
+      "github_profile",
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "daimo-pay",
+    "github_org": "https://github.com/daimo-eth",
+    "source": []
+  },
+  {
+    "slug": "defisaver",
+    "github_org": "https://github.com/defisaver",
+    "contact_twitter": "@DeFiSaver",
+    "website_from_github": "https://defisaver.com",
+    "source": [
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "deriprotocol",
+    "github_org": "https://github.com/deri-protocol",
+    "website_from_github": "deri.io",
+    "source": []
+  },
+  {
+    "slug": "dforce",
+    "github_org": "https://github.com/dforce-network",
+    "contact_email": "contact@dforce.network",
+    "contact_twitter": "@dForcenet",
+    "website_from_github": "https://www.dforce.network",
+    "source": [
+      "github_profile",
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "dodo",
+    "github_org": "https://github.com/DODOEX",
+    "website_from_github": "https://dodoex.io/",
+    "source": []
+  },
+  {
+    "slug": "ens",
+    "github_org": "https://github.com/ensdomains",
+    "contact_twitter": "@ensdomains",
+    "website_from_github": "https://ens.domains/",
+    "source": [
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "enzyme-onyx",
+    "github_org": "https://github.com/enzymefinance",
+    "security_email": "security@enzyme.finance",
+    "contact_email": "council@enzyme.finance",
+    "website_from_github": "https://enzyme.finance",
+    "security_md_repo": "enzymefinance/protocol",
+    "source": [
+      "github_profile",
+      "SECURITY.md(protocol)"
+    ]
+  },
+  {
+    "slug": "enzymefinance",
+    "github_org": "https://github.com/enzymefinance",
+    "security_email": "security@enzyme.finance",
+    "contact_email": "council@enzyme.finance",
+    "website_from_github": "https://enzyme.finance",
+    "security_md_repo": "enzymefinance/protocol",
+    "source": [
+      "github_profile",
+      "SECURITY.md(protocol)"
+    ]
+  },
+  {
+    "slug": "exodus",
+    "github_org": "https://github.com/ExodusMovement",
+    "contact_email": "support@exodus.com",
+    "contact_twitter": "@exodus",
+    "website_from_github": "https://www.exodus.com",
+    "source": [
+      "github_profile",
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "fassets",
+    "github_org": "https://github.com/flare-foundation",
+    "contact_twitter": "@FlareNetworks",
+    "website_from_github": "https://flare.network",
+    "source": [
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "fbtc",
+    "github_org": "https://github.com/fbtc-com",
+    "source": []
+  },
+  {
+    "slug": "filecoin",
+    "github_org": "https://github.com/whyrusleeping",
+    "source": []
+  },
+  {
+    "slug": "firedancer",
+    "github_org": "https://github.com/firedancer-io",
+    "website_from_github": "https://firedancer.io",
+    "source": []
+  },
+  {
+    "slug": "flamingofinance",
+    "github_org": "https://github.com/neo-project",
+    "contact_email": "dev@neo.org",
+    "website_from_github": "https://neo.org/",
+    "source": [
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "flarenetwork",
+    "github_org": "https://github.com/flare-foundation",
+    "contact_twitter": "@FlareNetworks",
+    "website_from_github": "https://flare.network",
+    "source": [
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "foil",
+    "github_org": "https://github.com/foilxyz",
+    "source": []
+  },
+  {
+    "slug": "folksfinance",
+    "github_org": "https://github.com/Folks-Finance",
+    "contact_twitter": "@folksfinance",
+    "website_from_github": "https://folks.finance",
+    "source": [
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "gear",
+    "github_org": "https://github.com/gear-tech",
+    "contact_email": "hello@gear-tech.io",
+    "contact_twitter": "@gear_techs",
+    "website_from_github": "https://gear-tech.io",
+    "source": [
+      "github_profile",
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "gearbox",
+    "github_org": "https://github.com/Gearbox-protocol",
+    "contact_email": "hello@gearbox.foundation",
+    "contact_twitter": "@GearboxProtocol",
+    "website_from_github": "https://gearbox.fi",
+    "source": [
+      "github_profile",
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "geniusyield",
+    "github_org": "https://github.com/geniusyield",
+    "contact_twitter": "@GeniusyieldO",
+    "website_from_github": "https://www.geniusyield.co/",
+    "source": [
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "granite-protocol",
+    "github_org": "https://github.com/GraniteProtocol",
+    "contact_email": "operations@granite.world",
+    "contact_twitter": "@granitebtc",
+    "website_from_github": "https://granite.world",
+    "source": [
+      "github_profile",
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "harvest",
+    "github_org": "https://github.com/harvestfi",
+    "contact_email": "dev@harvest.finance",
+    "contact_twitter": "@harvest_finance",
+    "website_from_github": "https://harvest.finance",
+    "source": [
+      "github_profile",
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "hathornetwork",
+    "github_org": "https://github.com/HathorNetwork",
+    "contact_email": "contact@hathor.network",
+    "website_from_github": "https://hathor.network/",
+    "source": [
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "hedera",
+    "github_org": "https://github.com/hashgraph",
+    "contact_email": "admin@hedera.com",
+    "website_from_github": "https://hedera.com",
+    "source": [
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "horizen",
+    "github_org": "https://github.com/HorizenOfficial",
+    "contact_email": "info@horizen.io",
+    "contact_twitter": "@horizenglobal",
+    "website_from_github": "https://horizen.io",
+    "source": [
+      "github_profile",
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "hydration",
+    "github_org": "https://github.com/galacticcouncil",
+    "website_from_github": "https://galacticcouncil.io",
+    "source": []
+  },
+  {
+    "slug": "ichi",
+    "github_org": "https://github.com/ichifarm",
+    "contact_email": "core@ichi.org",
+    "website_from_github": "ichi.org",
+    "source": [
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "immutable",
+    "github_org": "https://github.com/immutable",
+    "contact_email": "hello@immutable.com",
+    "website_from_github": "immutable.com",
+    "source": [
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "impossiblefinance",
+    "github_org": "https://github.com/ImpossibleFinance",
+    "source": []
+  },
+  {
+    "slug": "injective",
+    "github_org": "https://github.com/injectivelabs",
+    "contact_email": "contact@injectivelabs.org",
+    "contact_twitter": "@InjectiveLabs",
+    "website_from_github": "https://injective.com",
+    "source": [
+      "github_profile",
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "instadapp",
+    "github_org": "https://github.com/Instadapp",
+    "contact_email": "info@instadapp.io",
+    "contact_twitter": "@instadapp",
+    "website_from_github": "https://instadapp.io",
+    "source": [
+      "github_profile",
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "interlay",
+    "github_org": "https://github.com/interlay",
+    "contact_email": "contact@interlay.io",
+    "contact_twitter": "@interlayHQ",
+    "website_from_github": "https://interlay.io",
+    "source": [
+      "github_profile",
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "intmax",
+    "github_org": "https://github.com/InternetMaximalism",
+    "contact_email": "team@intmax.io",
+    "contact_twitter": "@intmaxIO",
+    "website_from_github": "https://intmax.io/",
+    "source": [
+      "github_profile",
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "jito",
+    "github_org": "https://github.com/jito-foundation",
+    "contact_twitter": "@jito_sol",
+    "website_from_github": "https://jito.network",
+    "source": [
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "jito-bam-client",
+    "github_org": "https://github.com/jito-labs",
+    "source": []
+  },
+  {
+    "slug": "kamino",
+    "github_org": "https://github.com/Kamino-Finance",
+    "contact_twitter": "@KaminoFinance",
+    "website_from_github": "https://kamino.com",
+    "source": [
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "layerzero",
+    "github_org": "https://github.com/LayerZero-Labs",
+    "website_from_github": "https://layerzero.network",
+    "source": []
+  },
+  {
+    "slug": "lido",
+    "github_org": "https://github.com/lidofinance",
+    "contact_twitter": "@lidofinance",
+    "website_from_github": "https://lido.fi",
+    "source": [
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "light-protocol",
+    "github_org": "https://github.com/Lightprotocol",
+    "contact_email": "friends@lightprotocol.com",
+    "contact_twitter": "@lightprotocol",
+    "website_from_github": "https://lightprotocol.com",
+    "source": [
+      "github_profile",
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "linea",
+    "github_org": "https://github.com/Consensys",
+    "contact_email": "info@consensys.net",
+    "contact_twitter": "@consensys",
+    "website_from_github": "https://www.consensys.io",
+    "source": [
+      "github_profile",
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "marinade",
+    "github_org": "https://github.com/marinade-finance",
+    "contact_twitter": "@MarinadeFinance",
+    "website_from_github": "https://marinade.finance",
+    "source": [
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "metastreet",
+    "github_org": "https://github.com/metastreet-labs",
+    "contact_email": "hello@metastreet.xyz",
+    "website_from_github": "https://www.metastreet.xyz/",
+    "source": [
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "monero-oxide",
+    "github_org": "https://github.com/monero-oxide",
+    "source": []
+  },
+  {
+    "slug": "moneyonchain",
+    "github_org": "https://github.com/money-on-chain",
+    "contact_email": "info@moneyonchain.com",
+    "website_from_github": "https://moneyonchain.com/",
+    "source": [
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "moonbeamnetwork",
+    "github_org": "https://github.com/moonbeam-foundation",
+    "source": []
+  },
+  {
+    "slug": "mtpelerin",
+    "github_org": "https://github.com/MtPelerin",
+    "contact_email": "hello@mtpelerin.com",
+    "contact_twitter": "@mtpelerin",
+    "website_from_github": "https://www.mtpelerin.com",
+    "source": [
+      "github_profile",
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "mux",
+    "github_org": "https://github.com/mux-world",
+    "contact_twitter": "@muxprotocol",
+    "website_from_github": "https://mux.network/",
+    "source": [
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "myntandzero",
+    "github_org": "https://github.com/DistributedCollective",
+    "contact_email": "elan@remake.money",
+    "website_from_github": "www.sovryn.com",
+    "source": [
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "neo",
+    "github_org": "https://github.com/neo-project",
+    "contact_email": "dev@neo.org",
+    "website_from_github": "https://neo.org/",
+    "source": [
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "neutron",
+    "github_org": "https://github.com/neutron-org",
+    "security_email": "security@neutron.org",
+    "website_from_github": "https://neutron.org",
+    "security_md_repo": "neutron-org/neutron",
+    "source": [
+      "SECURITY.md(neutron)"
+    ]
+  },
+  {
+    "slug": "nexusmutual",
+    "github_org": "https://github.com/NexusMutual",
+    "contact_email": "info@nexusmutual.io",
+    "contact_twitter": "@NexusMutual",
+    "website_from_github": "https://nexusmutual.io",
+    "source": [
+      "github_profile",
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "oasis",
+    "github_org": "https://github.com/oasisprotocol",
+    "website_from_github": "https://oasisprotocol.org",
+    "source": []
+  },
+  {
+    "slug": "obyte",
+    "github_org": "https://github.com/byteball",
+    "website_from_github": "https://obyte.org",
+    "source": []
+  },
+  {
+    "slug": "omron",
+    "github_org": "https://github.com/inference-labs-inc",
+    "contact_email": "info@inferencelabs.com",
+    "contact_twitter": "@inference_labs",
+    "website_from_github": "https://inferencelabs.com",
+    "source": [
+      "github_profile",
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "openzeppelin",
+    "github_org": "https://github.com/OpenZeppelin",
+    "security_email": "security@openzeppelin.com",
+    "contact_email": "contact@openzeppelin.com",
+    "website_from_github": "https://openzeppelin.com",
+    "security_md_repo": "OpenZeppelin/openzeppelin-relayer",
+    "source": [
+      "github_profile",
+      "SECURITY.md(openzeppelin-relayer)"
+    ]
+  },
+  {
+    "slug": "openzeppelin-stellar",
+    "github_org": "https://github.com/OpenZeppelin",
+    "security_email": "security@openzeppelin.com",
+    "contact_email": "contact@openzeppelin.com",
+    "website_from_github": "https://openzeppelin.com",
+    "security_md_repo": "OpenZeppelin/openzeppelin-relayer",
+    "source": [
+      "github_profile",
+      "SECURITY.md(openzeppelin-relayer)"
+    ]
+  },
+  {
+    "slug": "optimism",
+    "github_org": "https://github.com/ethereum-optimism",
+    "security_email": "security@oplabs.co",
+    "contact_twitter": "@optimism",
+    "website_from_github": "https://optimism.io",
+    "security_md_repo": "ethereum-optimism/infra",
+    "source": [
+      "github_profile",
+      "SECURITY.md(infra)"
+    ]
+  },
+  {
+    "slug": "orca",
+    "github_org": "https://github.com/orca-so",
+    "source": []
+  },
+  {
+    "slug": "orderlynetwork",
+    "github_org": "https://github.com/OrderlyNetwork",
+    "contact_twitter": "@OrderlyNetwork",
+    "website_from_github": "orderly.network",
+    "source": [
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "pancakeswap",
+    "github_org": "https://github.com/pancakeswap",
+    "contact_twitter": "@PancakeSwap",
+    "website_from_github": "https://pancakeswap.finance",
+    "source": [
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "parallel",
+    "github_org": "https://github.com/parallel-protocol",
+    "contact_email": "contact@parallel.best",
+    "contact_twitter": "@ParallelMoney",
+    "website_from_github": "https://parallel.best/",
+    "source": [
+      "github_profile",
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "paribus",
+    "github_org": "https://github.com/Paribus",
+    "contact_email": "hello@paribus.io",
+    "contact_twitter": "@paribus_io",
+    "website_from_github": "https://paribus.io/",
+    "source": [
+      "github_profile",
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "pinto",
+    "github_org": "https://github.com/pinto-org",
+    "contact_twitter": "@pintodotmoney",
+    "website_from_github": "https://pinto.money",
+    "source": [
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "polygon",
+    "github_org": "https://github.com/0xPolygon",
+    "contact_email": "info@polygon.technology",
+    "contact_twitter": "@0xPolygon",
+    "website_from_github": "https://polygon.technology/",
+    "source": [
+      "github_profile",
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "polymesh",
+    "github_org": "https://github.com/PolymeshAssociation",
+    "contact_twitter": "@PolymeshNetwork",
+    "website_from_github": "https://polymesh.network/",
+    "source": [
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "pushprotocol",
+    "github_org": "https://github.com/pushchain",
+    "contact_email": "team@push.org",
+    "contact_twitter": "@pushchain",
+    "website_from_github": "https://x.com/pushchain",
+    "source": [
+      "github_profile",
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "pythnetwork",
+    "github_org": "https://github.com/pyth-network",
+    "contact_twitter": "@PythNetwork",
+    "website_from_github": "https://pyth.network",
+    "source": [
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "quadrata",
+    "github_org": "https://github.com/QuadrataNetwork",
+    "source": []
+  },
+  {
+    "slug": "raydium",
+    "github_org": "https://github.com/raydium-io",
+    "contact_email": "connect@raydium.io",
+    "contact_twitter": "@Raydium",
+    "website_from_github": "https://raydium.io/",
+    "source": [
+      "github_profile",
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "ref-finance",
+    "github_org": "https://github.com/ref-finance",
+    "contact_twitter": "@finance_ref",
+    "website_from_github": "https://ref.finance",
+    "source": [
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "reserve",
+    "github_org": "https://github.com/reserve-protocol",
+    "contact_twitter": "@reserveprotocol",
+    "website_from_github": "reserve.org",
+    "source": [
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "resolv",
+    "github_org": "https://github.com/resolv-im",
+    "source": []
+  },
+  {
+    "slug": "resonate",
+    "github_org": "https://github.com/Revest-Finance",
+    "contact_twitter": "@RevestFinance",
+    "website_from_github": "https://revest.finance/",
+    "source": [
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "revert",
+    "github_org": "https://github.com/revert-finance",
+    "contact_email": "hi@revert.finance",
+    "contact_twitter": "@revertfinance",
+    "website_from_github": "https://revert.finance",
+    "source": [
+      "github_profile",
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "revest",
+    "github_org": "https://github.com/Revest-Finance",
+    "contact_twitter": "@RevestFinance",
+    "website_from_github": "https://revest.finance/",
+    "source": [
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "rocketpool",
+    "github_org": "https://github.com/rocket-pool",
+    "contact_twitter": "@Rocket_Pool",
+    "website_from_github": "https://rocketpool.net",
+    "source": [
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "royco",
+    "github_org": "https://github.com/roycoprotocol",
+    "contact_twitter": "@roycoprotocol",
+    "website_from_github": "royco.org",
+    "source": [
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "rubic",
+    "github_org": "https://github.com/Cryptorubic",
+    "source": []
+  },
+  {
+    "slug": "scroll",
+    "github_org": "https://github.com/scroll-tech",
+    "contact_twitter": "@Scroll_ZKP",
+    "source": [
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "segmentfinance",
+    "github_org": "https://github.com/Segment-Finance",
+    "source": []
+  },
+  {
+    "slug": "sei",
+    "github_org": "https://github.com/sei-protocol",
+    "source": []
+  },
+  {
+    "slug": "serai",
+    "github_org": "https://github.com/serai-dex",
+    "source": []
+  },
+  {
+    "slug": "silofinance-v2",
+    "github_org": "https://github.com/silo-finance",
+    "contact_email": "info@silo.finance",
+    "contact_twitter": "@SiloFinance",
+    "website_from_github": "https://www.silo.finance/",
+    "source": [
+      "github_profile",
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "skatefi",
+    "github_org": "https://github.com/Range-Protocol",
+    "source": []
+  },
+  {
+    "slug": "sky",
+    "github_org": "https://github.com/sky-ecosystem",
+    "contact_twitter": "@SkyEcosystem",
+    "source": [
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "sns",
+    "github_org": "https://github.com/SolanaNameService",
+    "source": []
+  },
+  {
+    "slug": "sora",
+    "github_org": "https://github.com/sora-xor",
+    "contact_twitter": "@sora_xor",
+    "website_from_github": "https://sora.org",
+    "source": [
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "sovryn",
+    "github_org": "https://github.com/DistributedCollective",
+    "contact_email": "elan@remake.money",
+    "website_from_github": "www.sovryn.com",
+    "source": [
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "sparklend",
+    "github_org": "https://github.com/marsfoundation",
+    "source": []
+  },
+  {
+    "slug": "stacks",
+    "github_org": "https://github.com/stacks-sbtc",
+    "website_from_github": "https://www.stacks.co/sbtc",
+    "source": []
+  },
+  {
+    "slug": "stakelink",
+    "github_org": "https://github.com/stakedotlink",
+    "contact_twitter": "@stakedotlink",
+    "website_from_github": "https://stake.link",
+    "source": [
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "starkex",
+    "github_org": "https://github.com/starkware-libs",
+    "website_from_github": "www.starkware.co",
+    "source": []
+  },
+  {
+    "slug": "starknet",
+    "github_org": "https://github.com/starkware-libs",
+    "website_from_github": "www.starkware.co",
+    "source": []
+  },
+  {
+    "slug": "starknet-staking",
+    "github_org": "https://github.com/starkware-libs",
+    "website_from_github": "www.starkware.co",
+    "source": []
+  },
+  {
+    "slug": "stellar",
+    "github_org": "https://github.com/stellar",
+    "website_from_github": "https://www.stellar.org",
+    "source": []
+  },
+  {
+    "slug": "superform",
+    "github_org": "https://github.com/superform-xyz",
+    "contact_twitter": "@superformxyz",
+    "website_from_github": "https://superform.xyz/",
+    "source": [
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "sweateconomy",
+    "github_org": "https://github.com/sweatco",
+    "contact_email": "info@sweatco.in",
+    "website_from_github": "https://sweatco.in/",
+    "source": [
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "symbiotic",
+    "github_org": "https://github.com/symbioticfi",
+    "contact_twitter": "@symbioticfi",
+    "website_from_github": "https://symbiotic.fi",
+    "source": [
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "synthetix",
+    "github_org": "https://github.com/Synthetixio",
+    "contact_email": "info@snxdao.io",
+    "website_from_github": "https://synthetix.io",
+    "source": [
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "termstructurelabs",
+    "github_org": "https://github.com/term-structure",
+    "source": []
+  },
+  {
+    "slug": "thresholdnetwork",
+    "github_org": "https://github.com/threshold-network",
+    "contact_email": "hello@threshold.network",
+    "contact_twitter": "@TheTNetwork",
+    "website_from_github": "https://threshold.network",
+    "source": [
+      "github_profile",
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "tinyman",
+    "github_org": "https://github.com/tinymanorg",
+    "contact_email": "hello@tinyman.org",
+    "contact_twitter": "@tinymanorg",
+    "website_from_github": "tinyman.org",
+    "source": [
+      "github_profile",
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "trufin",
+    "github_org": "https://github.com/TruFin-io",
+    "website_from_github": "https://trufin.io",
+    "source": []
+  },
+  {
+    "slug": "usx",
+    "github_org": "https://github.com/scroll-tech",
+    "contact_twitter": "@Scroll_ZKP",
+    "source": [
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "vechain",
+    "github_org": "https://github.com/vechain",
+    "website_from_github": "https://vechain.org/",
+    "source": []
+  },
+  {
+    "slug": "vesu",
+    "github_org": "https://github.com/vesuxyz",
+    "contact_twitter": "@vesuxyz",
+    "source": [
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "wepiggy",
+    "github_org": "https://github.com/WePiggy",
+    "contact_twitter": "@wepiggydotcom",
+    "website_from_github": "https://WePiggy.com",
+    "source": [
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "wormhole",
+    "github_org": "https://github.com/wormhole-foundation",
+    "contact_twitter": "@wormhole",
+    "website_from_github": "https://wormhole.com/",
+    "source": [
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "xion",
+    "github_org": "https://github.com/burnt-lab",
+    "source": []
+  },
+  {
+    "slug": "xoxno",
+    "github_org": "https://github.com/xoxno",
+    "contact_email": "contact@xoxno.com",
+    "contact_twitter": "@xoxnonetwork",
+    "website_from_github": "https://xoxno.com",
+    "source": [
+      "github_profile",
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "zano",
+    "github_org": "https://github.com/hyle-team",
+    "contact_email": "info@zano.org",
+    "contact_twitter": "@zano_project",
+    "website_from_github": "https://zano.org",
+    "source": [
+      "github_profile",
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "zest-protocol-v2",
+    "github_org": "https://github.com/Zest-Protocol",
+    "contact_twitter": "@ZestProtocol",
+    "website_from_github": "https://www.zestprotocol.com/",
+    "source": [
+      "github_profile"
+    ]
+  },
+  {
+    "slug": "zksync",
+    "github_org": "https://github.com/matter-labs",
+    "security_email": "security@matterlabs.dev",
+    "contact_email": "hello@matter-labs.io",
+    "website_from_github": "https://matter-labs.io",
+    "security_md_repo": "matter-labs/zksync-js",
+    "source": [
+      "github_profile",
+      "SECURITY.md(zksync-js)"
+    ]
+  },
+  {
+    "slug": "zksync-os",
+    "github_org": "https://github.com/matter-labs",
+    "security_email": "security@matterlabs.dev",
+    "contact_email": "hello@matter-labs.io",
+    "website_from_github": "https://matter-labs.io",
+    "security_md_repo": "matter-labs/zksync-js",
+    "source": [
+      "github_profile",
+      "SECURITY.md(zksync-js)"
+    ]
+  },
+  {
+    "slug": "zksyncera",
+    "github_org": "https://github.com/matter-labs",
+    "security_email": "security@matterlabs.dev",
+    "contact_email": "hello@matter-labs.io",
+    "website_from_github": "https://matter-labs.io",
+    "security_md_repo": "matter-labs/zksync-js",
+    "source": [
+      "github_profile",
+      "SECURITY.md(zksync-js)"
+    ]
+  }
+]

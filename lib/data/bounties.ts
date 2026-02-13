@@ -62,7 +62,7 @@ export async function getBounties(): Promise<Bounty[]> {
   const supabase = createClient()
   const { data, error } = await supabase
     .from('protocols')
-    .select('id,slug,name,chains,max_bounty,description,category,logo_url')
+    .select('id,slug,name,chains,max_bounty,description,category,logo_url,website_url,twitter,discord,telegram,github_url,docs_url,security_email,contact_email,bounty_policy_url,auditors,audit_report_urls,whitepaper_url,coingecko_id,market_cap_rank')
     .order('max_bounty', { ascending: false })
 
   if (error) throw error
@@ -82,5 +82,20 @@ export async function getBounties(): Promise<Bounty[]> {
     liveSince: 'Live',
     type: 'Smart Contract',
     description: protocol.description || '',
+    // Enrichment
+    website_url: protocol.website_url || null,
+    twitter: protocol.twitter || null,
+    discord: protocol.discord || null,
+    telegram: protocol.telegram || null,
+    github_url: protocol.github_url || null,
+    docs_url: protocol.docs_url || null,
+    security_email: protocol.security_email || null,
+    contact_email: protocol.contact_email || null,
+    bounty_policy_url: protocol.bounty_policy_url || null,
+    auditors: protocol.auditors as string[] | null,
+    audit_report_urls: protocol.audit_report_urls as string[] | null,
+    whitepaper_url: protocol.whitepaper_url || null,
+    coingecko_id: protocol.coingecko_id || null,
+    market_cap_rank: protocol.market_cap_rank || null,
   }))
 }

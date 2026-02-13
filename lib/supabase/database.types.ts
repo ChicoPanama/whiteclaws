@@ -115,6 +115,20 @@ export interface Database {
           immunefi_slug: string | null
           security_email: string | null
           github_org: string | null
+          twitter: string | null
+          discord: string | null
+          telegram: string | null
+          legal_email: string | null
+          whitepaper_url: string | null
+          bounty_policy_url: string | null
+          developer_docs_url: string | null
+          status_page_url: string | null
+          reddit_url: string | null
+          blog_url: string | null
+          coingecko_id: string | null
+          market_cap_rank: number | null
+          auditors: Json | null
+          audit_report_urls: Json | null
         }
         Insert: Partial<Database['public']['Tables']['protocols']['Row']> & { slug: string; name: string }
         Update: Partial<Database['public']['Tables']['protocols']['Row']>

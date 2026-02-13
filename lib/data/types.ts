@@ -26,6 +26,21 @@ export interface Bounty {
   severityHigh?: number;
   scopeCount?: number;
   contractCount?: number;
+  // Enrichment — hunter toolkit
+  website_url?: string | null;
+  twitter?: string | null;
+  discord?: string | null;
+  telegram?: string | null;
+  github_url?: string | null;
+  docs_url?: string | null;
+  security_email?: string | null;
+  contact_email?: string | null;
+  bounty_policy_url?: string | null;
+  auditors?: string[] | null;
+  audit_report_urls?: string[] | null;
+  whitepaper_url?: string | null;
+  coingecko_id?: string | null;
+  market_cap_rank?: number | null;
 }
 
 export interface Finding {

@@ -15,7 +15,7 @@ export async function GET(request: NextRequest) {
     if (slug) {
       const { data, error } = await supabase
         .from("protocols")
-        .select("id,name,slug,description,website_url,logo_url,chains,max_bounty,category,verified,created_at,updated_at")
+        .select("id,name,slug,description,website_url,logo_url,chains,max_bounty,category,verified,created_at,updated_at,twitter,discord,telegram,github_url,github_org,docs_url,security_email,contact_email,legal_email,bounty_policy_url,auditors,audit_report_urls,whitepaper_url,developer_docs_url,status_page_url,reddit_url,blog_url,coingecko_id,market_cap_rank,immunefi_url")
         .eq("slug", slug)
         .maybeSingle();
 
@@ -28,7 +28,7 @@ export async function GET(request: NextRequest) {
 
     let query = supabase
       .from("protocols")
-      .select("id,name,slug,description,website_url,logo_url,chains,max_bounty,category,verified,created_at", { count: "exact" })
+      .select("id,name,slug,description,website_url,logo_url,chains,max_bounty,category,verified,created_at,twitter,discord,telegram,github_url,docs_url,security_email,contact_email,auditors,bounty_policy_url,coingecko_id,market_cap_rank,immunefi_url", { count: "exact" })
       .order("name")
       .range(offset, offset + limit - 1);
 
