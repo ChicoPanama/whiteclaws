@@ -1,0 +1,2421 @@
+{
+  "0x": {
+    "slug": "0x",
+    "twitter": "@zeroexprotocol",
+    "telegram": "https://t.me/official_0x",
+    "telegram_handle": "official_0x",
+    "subreddit": "https://www.reddit.com/r/0xProject/",
+    "homepage": "https://www.0xprotocol.org/",
+    "github_repos": [
+      "https://github.com/0xProject/0x-monorepo",
+      "https://github.com/0xProject/0x-launch-kit",
+      "https://github.com/0xProject/ZEIPs",
+      "https://github.com/0xProject/0x-starter-project"
+    ],
+    "forum": [
+      "https://mirror.xyz/zeroexprotocol.eth"
+    ],
+    "telegram_members": 1233,
+    "coingecko_id": "0x",
+    "coingecko_name": "0x Protocol",
+    "symbol": "zrx",
+    "market_cap_rank": 292,
+    "source": "coingecko"
+  },
+  "88mphv3": {
+    "slug": "88mphv3",
+    "twitter": "@88mphapp",
+    "telegram": "https://t.me/join_88mphapp",
+    "telegram_handle": "join_88mphapp",
+    "discord": "https://discord.com/invite/QThgeYxDuM",
+    "homepage": "https://88mph.app/",
+    "github_repos": [
+      "https://github.com/88mphapp"
+    ],
+    "telegram_members": 901,
+    "coingecko_id": "88mph",
+    "coingecko_name": "88mph",
+    "symbol": "mph",
+    "market_cap_rank": 8886,
+    "source": "coingecko"
+  },
+  "acala": {
+    "slug": "acala",
+    "twitter": "@AcalaNetwork",
+    "telegram": "https://t.me/acalaofficial",
+    "telegram_handle": "acalaofficial",
+    "discord": "https://discord.gg/fNGtR4A42N",
+    "subreddit": "https://www.reddit.com/r/AcalaNetwork/",
+    "homepage": "https://acala.network/",
+    "github_repos": [
+      "https://github.com/AcalaNetwork/Acala"
+    ],
+    "telegram_members": 16060,
+    "coingecko_id": "acala",
+    "coingecko_name": "Acala",
+    "symbol": "aca",
+    "market_cap_rank": 2288,
+    "source": "coingecko"
+  },
+  "alchemix": {
+    "slug": "alchemix",
+    "twitter": "@alchemixfi",
+    "discord": "https://discord.gg/zAd6dzgwaj",
+    "homepage": "https://alchemix.fi/",
+    "github_repos": [
+      "https://github.com/alchemix-finance"
+    ],
+    "coingecko_id": "alchemix",
+    "coingecko_name": "Alchemix",
+    "symbol": "alcx",
+    "market_cap_rank": 984,
+    "source": "coingecko"
+  },
+  "alex": {
+    "slug": "alex",
+    "twitter": "@alexlabBTC",
+    "telegram": "https://t.me/AlexCommunity",
+    "telegram_handle": "AlexCommunity",
+    "discord": "https://discord.gg/alexlab",
+    "other_chat": [
+      "https://medium.com/alexgobtc"
+    ],
+    "homepage": "https://www.alexgo.io/",
+    "github_repos": [
+      "https://github.com/alexgo-io/alex-v1"
+    ],
+    "telegram_members": 4210,
+    "coingecko_id": "alexgo",
+    "coingecko_name": "ALEX Lab",
+    "symbol": "alex",
+    "market_cap_rank": 3097,
+    "source": "coingecko"
+  },
+  "alongside": {
+    "slug": "alongside",
+    "twitter": "@alongsidefi",
+    "discord": "https://discord.com/invite/Gh8k9WHJzZ",
+    "homepage": "https://Alongside.xyz",
+    "github_repos": [
+      "https://github.com/Alongside-Finance"
+    ],
+    "coingecko_id": "alongside-crypto-market-index",
+    "coingecko_name": "Alongside Crypto Market Index",
+    "symbol": "amkt",
+    "market_cap_rank": 4189,
+    "source": "coingecko"
+  },
+  "ambire": {
+    "slug": "ambire",
+    "twitter": "@ambire",
+    "telegram": "https://t.me/AmbireOfficial",
+    "telegram_handle": "AmbireOfficial",
+    "discord": "https://discord.gg/ambire",
+    "other_chat": [
+      "https://www.youtube.com/@AmbireTech"
+    ],
+    "subreddit": "https://www.reddit.com/r/AdEx/",
+    "homepage": "https://www.ambire.com/",
+    "github_repos": [
+      "https://github.com/AmbireTech"
+    ],
+    "telegram_members": 5741,
+    "coingecko_id": "ambire-wallet",
+    "coingecko_name": "Ambire Wallet",
+    "symbol": "wallet",
+    "market_cap_rank": 1528,
+    "source": "coingecko"
+  },
+  "angleprotocol": {
+    "slug": "angleprotocol",
+    "twitter": "@AngleProtocol",
+    "discord": "https://discord.gg/bsfZjvgx2s",
+    "homepage": "https://www.angle.money",
+    "github_repos": [
+      "https://github.com/AngleProtocol"
+    ],
+    "coingecko_id": "angle-protocol",
+    "coingecko_name": "ANGLE",
+    "symbol": "angle",
+    "market_cap_rank": 1866,
+    "source": "coingecko"
+  },
+  "ankr": {
+    "slug": "ankr",
+    "twitter": "@ankr",
+    "telegram": "https://t.me/ankrnetwork",
+    "telegram_handle": "ankrnetwork",
+    "discord": "https://discord.gg/GGzJ6A6fEg",
+    "other_chat": [
+      "https://medium.com/ankr-network"
+    ],
+    "subreddit": "https://www.reddit.com/r/Ankrofficial",
+    "homepage": "https://www.ankr.com/",
+    "github_repos": [
+      "https://github.com/Ankr-network",
+      "https://github.com/Ankr-network/dccn-common",
+      "https://github.com/Ankr-network/dccn-ui",
+      "https://github.com/Ankr-network/dccn-hub",
+      "https://github.com/Ankr-network/dccn-daemon",
+      "https://github.com/Ankr-network/dccn-cli"
+    ],
+    "forum": [
+      "https://www.instagram.com/ankr/",
+      "https://www.linkedin.com/company/ankr",
+      "https://www.youtube.com/@AnkrOfficial"
+    ],
+    "telegram_members": 19159,
+    "coingecko_id": "ankr",
+    "coingecko_name": "Ankr Network",
+    "symbol": "ankr",
+    "market_cap_rank": 469,
+    "source": "coingecko"
+  },
+  "anvil": {
+    "slug": "anvil",
+    "twitter": "@anvil_xyz",
+    "homepage": "https://www.anvil.xyz",
+    "github_repos": [
+      "https://github.com/AcronymFoundation"
+    ],
+    "forum": [
+      "https://www.linkedin.com/company/acronym-foundation/"
+    ],
+    "coingecko_id": "anvil",
+    "coingecko_name": "Anvil",
+    "symbol": "anvl",
+    "market_cap_rank": 471,
+    "source": "coingecko"
+  },
+  "apecoinmainnet": {
+    "slug": "apecoinmainnet",
+    "twitter": "@apecoin",
+    "homepage": "https://apechain.com/",
+    "forum": [
+      "https://x.com/ApeChainHUB"
+    ],
+    "coingecko_id": "apecoin",
+    "coingecko_name": "ApeCoin",
+    "symbol": "ape",
+    "market_cap_rank": 245,
+    "source": "coingecko"
+  },
+  "arbitrum": {
+    "slug": "arbitrum",
+    "twitter": "@arbitrum",
+    "telegram": "https://t.me/arbitrum",
+    "telegram_handle": "arbitrum",
+    "discord": "https://discord.com/invite/Arbitrum",
+    "homepage": "https://arbitrum.io/",
+    "github_repos": [
+      "https://github.com/ArbitrumFoundation/docs",
+      "https://github.com/ArbitrumFoundation",
+      "https://github.com/ArbitrumFoundation/governance-seatbelt",
+      "https://github.com/ArbitrumFoundation/sybil-detection",
+      "https://github.com/ArbitrumFoundation/governance"
+    ],
+    "telegram_members": 10887,
+    "coingecko_id": "arbitrum",
+    "coingecko_name": "Arbitrum",
+    "symbol": "arb",
+    "market_cap_rank": 87,
+    "source": "coingecko"
+  },
+  "arcade": {
+    "slug": "arcade",
+    "twitter": "@Arcade_xyz",
+    "discord": "https://discord.gg/arcadexyz",
+    "homepage": "https://arcade.xyz",
+    "github_repos": [
+      "https://github.com/arcadexyz/"
+    ],
+    "coingecko_id": "arcade-protocol",
+    "coingecko_name": "Arcade",
+    "symbol": "arcd",
+    "market_cap_rank": 6165,
+    "source": "coingecko"
+  },
+  "arkadiko": {
+    "slug": "arkadiko",
+    "twitter": "@ArkadikoFinance",
+    "telegram": "https://t.me/arkadikofin",
+    "telegram_handle": "arkadikofin",
+    "discord": "https://discord.gg/7UB6JjjCNV",
+    "homepage": "https://arkadiko.finance/",
+    "github_repos": [
+      "https://github.com/arkadiko-dao/arkadiko"
+    ],
+    "forum": [
+      "https://arkadikofinance.medium.com/"
+    ],
+    "telegram_members": 853,
+    "coingecko_id": "arkadiko-protocol",
+    "coingecko_name": "Arkadiko",
+    "symbol": "diko",
+    "market_cap_rank": 4227,
+    "source": "coingecko"
+  },
+  "arkham": {
+    "slug": "arkham",
+    "twitter": "@arkham",
+    "telegram": "https://t.me/arkhamintelligence",
+    "telegram_handle": "arkhamintelligence",
+    "discord": "https://discord.com/invite/arkham",
+    "other_chat": [
+      "https://www.linkedin.com/company/arkhamintelligence/",
+      "https://www.youtube.com/@arkhamintel"
+    ],
+    "homepage": "http://arkm.com/",
+    "telegram_members": 15898,
+    "coingecko_id": "arkham",
+    "coingecko_name": "Arkham",
+    "symbol": "arkm",
+    "market_cap_rank": 378,
+    "source": "coingecko"
+  },
+  "astarnetwork": {
+    "slug": "astarnetwork",
+    "twitter": "@AstarNetwork",
+    "telegram": "https://t.me/PlasmOfficial",
+    "telegram_handle": "PlasmOfficial",
+    "discord": "https://discord.gg/astarnetwork",
+    "other_chat": [
+      "https://astar.network/blog/",
+      "https://www.youtube.com/@AstarNetwork"
+    ],
+    "homepage": "https://astar.network/",
+    "github_repos": [
+      "https://github.com/AstarNetwork/Astar"
+    ],
+    "telegram_members": 16692,
+    "coingecko_id": "astar",
+    "coingecko_name": "Astar",
+    "symbol": "astr",
+    "market_cap_rank": 374,
+    "source": "coingecko"
+  },
+  "aurafinance": {
+    "slug": "aurafinance",
+    "twitter": "@aurafinance",
+    "telegram": "https://t.me/aurafinance",
+    "telegram_handle": "aurafinance",
+    "discord": "https://discord.gg/aurafinanceofficial",
+    "homepage": "https://aura.finance",
+    "github_repos": [
+      "https://github.com/aurafinance/"
+    ],
+    "forum": [
+      "https://mirror.xyz/0xfEE0Bbe31345a7c27368534fEf45a57133FF3A86"
+    ],
+    "telegram_members": 242,
+    "coingecko_id": "aura-finance",
+    "coingecko_name": "Aura Finance",
+    "symbol": "aura",
+    "market_cap_rank": 2496,
+    "source": "coingecko"
+  },
+  "avalabs": {
+    "slug": "avalabs",
+    "twitter": "@avax",
+    "telegram": "https://t.me/avalancheavax",
+    "telegram_handle": "avalancheavax",
+    "discord": "https://discord.com/invite/avax",
+    "other_chat": [
+      "https://www.facebook.com/avalancheavax"
+    ],
+    "subreddit": "https://www.reddit.com/r/Avax",
+    "homepage": "https://www.avax.network",
+    "github_repos": [
+      "https://github.com/ava-labs/avalanchego"
+    ],
+    "telegram_members": 30440,
+    "coingecko_id": "avalanche-2",
+    "coingecko_name": "Avalanche",
+    "symbol": "avax",
+    "market_cap_rank": 27,
+    "source": "coingecko"
+  },
+  "avalanche": {
+    "slug": "avalanche",
+    "twitter": "@avax",
+    "telegram": "https://t.me/avalancheavax",
+    "telegram_handle": "avalancheavax",
+    "discord": "https://discord.com/invite/avax",
+    "other_chat": [
+      "https://www.facebook.com/avalancheavax"
+    ],
+    "subreddit": "https://www.reddit.com/r/Avax",
+    "homepage": "https://www.avax.network",
+    "github_repos": [
+      "https://github.com/ava-labs/avalanchego"
+    ],
+    "telegram_members": 30440,
+    "coingecko_id": "avalanche-2",
+    "coingecko_name": "Avalanche",
+    "symbol": "avax",
+    "market_cap_rank": 27,
+    "source": "coingecko"
+  },
+  "babylon-labs": {
+    "slug": "babylon-labs",
+    "homepage": "https://babylon.foundation/",
+    "github_repos": [
+      "https://github.com/babylonlabs-io/"
+    ],
+    "telegram_members": 167283,
+    "coingecko_id": "babylon",
+    "coingecko_name": "Babylon",
+    "symbol": "baby",
+    "market_cap_rank": 503,
+    "source": "coingecko"
+  },
+  "badger": {
+    "slug": "badger",
+    "twitter": "@badgerdao",
+    "telegram": "https://t.me/badger_dao",
+    "telegram_handle": "badger_dao",
+    "discord": "https://discord.com/invite/badgerdao",
+    "homepage": "https://badger.com/",
+    "github_repos": [
+      "https://github.com/Badger-Finance",
+      "https://github.com/Badger-Finance/badger-system"
+    ],
+    "telegram_members": 3719,
+    "coingecko_id": "badger-dao",
+    "coingecko_name": "Badger",
+    "symbol": "badger",
+    "market_cap_rank": 1356,
+    "source": "coingecko"
+  },
+  "beefyfinance": {
+    "slug": "beefyfinance",
+    "twitter": "@beefyfinance",
+    "telegram": "https://t.me/beefyfinance",
+    "telegram_handle": "beefyfinance",
+    "discord": "https://discord.com/invite/yq8wfHd",
+    "other_chat": [
+      "https://t.me/bifinews"
+    ],
+    "subreddit": "https://www.reddit.com/r/Beefy/",
+    "homepage": "https://beefy.com/",
+    "github_repos": [
+      "https://github.com/beefyfinance/beefy-app",
+      "https://github.com/beefyfinance"
+    ],
+    "forum": [
+      "https://www.youtube.com/c/BeefyFinance"
+    ],
+    "telegram_members": 12888,
+    "coingecko_id": "beefy-finance",
+    "coingecko_name": "Beefy",
+    "symbol": "bifi",
+    "market_cap_rank": 1181,
+    "source": "coingecko"
+  },
+  "benqi": {
+    "slug": "benqi",
+    "twitter": "@BenqiFinance",
+    "telegram": "https://t.me/BenqiFinance",
+    "telegram_handle": "BenqiFinance",
+    "homepage": "https://app.benqi.fi/",
+    "telegram_members": 10137,
+    "coingecko_id": "benqi",
+    "coingecko_name": "BENQI",
+    "symbol": "qi",
+    "market_cap_rank": 902,
+    "source": "coingecko"
+  },
+  "beradrome": {
+    "slug": "beradrome",
+    "twitter": "@beradrome",
+    "discord": "https://discord.beradrome.com/",
+    "homepage": "https://www.beradrome.com/",
+    "github_repos": [
+      "https://github.com/beralabs"
+    ],
+    "coingecko_id": "beradrome",
+    "coingecko_name": "Beradrome",
+    "symbol": "bero",
+    "source": "coingecko"
+  },
+  "bifi": {
+    "slug": "bifi",
+    "twitter": "@BiFi_lending",
+    "telegram": "https://t.me/Bifrost_Global",
+    "telegram_handle": "Bifrost_Global",
+    "subreddit": "https://www.reddit.com/r/BFC_BiFi/",
+    "homepage": "https://bifi.finance/",
+    "github_repos": [
+      "https://github.com/bifrost-platform/BIFI"
+    ],
+    "telegram_members": 8398,
+    "coingecko_id": "bifi",
+    "coingecko_name": "BiFi",
+    "symbol": "bifi",
+    "market_cap_rank": 4272,
+    "source": "coingecko"
+  },
+  "bitcoinsv": {
+    "slug": "bitcoinsv",
+    "twitter": "@bitcoin",
+    "subreddit": "https://www.reddit.com/r/Bitcoin/",
+    "homepage": "http://www.bitcoin.org",
+    "github_repos": [
+      "https://github.com/bitcoin/bitcoin",
+      "https://github.com/bitcoin/bips"
+    ],
+    "forum": [
+      "https://bitcointalk.org/"
+    ],
+    "coingecko_id": "bitcoin",
+    "coingecko_name": "Bitcoin",
+    "symbol": "btc",
+    "market_cap_rank": 1,
+    "source": "coingecko"
+  },
+  "bprotocol": {
+    "slug": "bprotocol",
+    "twitter": "@BLuckygg",
+    "homepage": "https://b-lucky.gg",
+    "coingecko_id": "lucky",
+    "coingecko_name": "LUCKY",
+    "symbol": "lucky",
+    "market_cap_rank": 2113,
+    "source": "coingecko"
+  },
+  "cardanofoundation": {
+    "slug": "cardanofoundation",
+    "twitter": "@Cardano_CF",
+    "telegram": "https://t.me/Cardano",
+    "telegram_handle": "Cardano",
+    "subreddit": "https://www.reddit.com/r/cardano",
+    "homepage": "https://cardano.org/",
+    "github_repos": [
+      "https://github.com/input-output-hk/cardano-sl",
+      "https://github.com/input-output-hk/js-cardano-wasm",
+      "https://github.com/input-output-hk/plutus",
+      "https://github.com/input-output-hk/rust-cardano",
+      "https://github.com/input-output-hk/cardano-chain"
+    ],
+    "forum": [
+      "https://forum.cardano.org/"
+    ],
+    "telegram_members": 16323,
+    "coingecko_id": "cardano",
+    "coingecko_name": "Cardano",
+    "symbol": "ada",
+    "market_cap_rank": 14,
+    "source": "coingecko"
+  },
+  "cowprotocol": {
+    "slug": "cowprotocol",
+    "twitter": "@CoWSwap",
+    "discord": "https://discord.gg/cowprotocol",
+    "homepage": "https://cow.fi",
+    "github_repos": [
+      "https://github.com/gnosis/cow-token/"
+    ],
+    "coingecko_id": "cow-protocol",
+    "coingecko_name": "CoW Protocol",
+    "symbol": "cow",
+    "market_cap_rank": 266,
+    "source": "coingecko"
+  },
+  "debridge": {
+    "slug": "debridge",
+    "twitter": "@debridge",
+    "discord": "https://discord.com/invite/debridge",
+    "other_chat": [
+      "https://www.facebook.com/deBridgeFinance/",
+      "https://www.linkedin.com/company/debridge-finance/"
+    ],
+    "homepage": "https://debridge.com",
+    "github_repos": [
+      "https://github.com/debridge-finance"
+    ],
+    "forum": [
+      "https://debridge.com/learn/blog/"
+    ],
+    "telegram_members": 4436,
+    "coingecko_id": "debridge",
+    "coingecko_name": "deBridge",
+    "symbol": "dbr",
+    "market_cap_rank": 341,
+    "source": "coingecko"
+  },
+  "degate": {
+    "slug": "degate",
+    "discord": "https://discord.gg/degate",
+    "homepage": "https://degate.com/",
+    "github_repos": [
+      "https://github.com/degatedev"
+    ],
+    "telegram_members": 6597,
+    "coingecko_id": "degate",
+    "coingecko_name": "DeGate",
+    "symbol": "dg",
+    "market_cap_rank": 888,
+    "source": "coingecko"
+  },
+  "drips": {
+    "slug": "drips",
+    "twitter": "@DRIPcommunity",
+    "telegram": "https://t.me/DRIPtoken_Chat",
+    "telegram_handle": "DRIPtoken_Chat",
+    "homepage": "https://drip.community/",
+    "telegram_members": 15624,
+    "coingecko_id": "drip-network",
+    "coingecko_name": "Drip Network",
+    "symbol": "drip",
+    "source": "coingecko"
+  },
+  "elixirprotocol": {
+    "slug": "elixirprotocol",
+    "twitter": "@elixir",
+    "telegram": "https://t.me/elixir_network",
+    "telegram_handle": "elixir_network",
+    "discord": "https://discord.gg/elixirnetwork",
+    "homepage": "https://www.elixir.xyz/",
+    "forum": [
+      "https://www.linkedin.com/company/elixir-protocol/"
+    ],
+    "telegram_members": 7151,
+    "coingecko_id": "elixir-finance",
+    "coingecko_name": "Elixir",
+    "symbol": "elx",
+    "market_cap_rank": 3511,
+    "source": "coingecko"
+  },
+  "ens": {
+    "slug": "ens",
+    "twitter": "@ensdomains",
+    "other_chat": [
+      "https://chat.ens.domains/"
+    ],
+    "homepage": "https://ens.domains/",
+    "forum": [
+      "https://discuss.ens.domains/"
+    ],
+    "coingecko_id": "ethereum-name-service",
+    "coingecko_name": "Ethereum Name Service",
+    "symbol": "ens",
+    "market_cap_rank": 162,
+    "source": "coingecko"
+  },
+  "enzyme-onyx": {
+    "slug": "enzyme-onyx",
+    "twitter": "@enzymefinance",
+    "telegram": "https://t.me/+nLYr_ITGTzVhOGFl",
+    "telegram_handle": "+nLYr_ITGTzVhOGFl",
+    "discord": "https://discord.enzyme.finance",
+    "other_chat": [
+      "https://medium.enzyme.finance",
+      "https://youtube.enzyme.finance"
+    ],
+    "homepage": "https://enzyme.finance/",
+    "github_repos": [
+      "https://github.com/enzymefinance/protocol",
+      "https://github.com/enzymefinance",
+      "https://github.com/melonproject/protocol"
+    ],
+    "telegram_members": 2464,
+    "coingecko_id": "melon",
+    "coingecko_name": "Enzyme",
+    "symbol": "mln",
+    "market_cap_rank": 1133,
+    "source": "coingecko"
+  },
+  "enzymefinance": {
+    "slug": "enzymefinance",
+    "twitter": "@enzymefinance",
+    "telegram": "https://t.me/+nLYr_ITGTzVhOGFl",
+    "telegram_handle": "+nLYr_ITGTzVhOGFl",
+    "discord": "https://discord.enzyme.finance",
+    "other_chat": [
+      "https://medium.enzyme.finance",
+      "https://youtube.enzyme.finance"
+    ],
+    "homepage": "https://enzyme.finance/",
+    "github_repos": [
+      "https://github.com/enzymefinance/protocol",
+      "https://github.com/enzymefinance",
+      "https://github.com/melonproject/protocol"
+    ],
+    "telegram_members": 2464,
+    "coingecko_id": "melon",
+    "coingecko_name": "Enzyme",
+    "symbol": "mln",
+    "market_cap_rank": 1133,
+    "source": "coingecko"
+  },
+  "exactly": {
+    "slug": "exactly",
+    "twitter": "@exactlyprotocol",
+    "telegram": "https://t.me/exactlyfinance",
+    "telegram_handle": "exactlyfinance",
+    "discord": "https://exact.ly/discord",
+    "other_chat": [
+      "https://medium.com/@exactly_protocol",
+      "https://www.youtube.com/channel/UCA6rQtOZSvGFIB8ON5SDNNg"
+    ],
+    "homepage": "https://exact.ly/",
+    "github_repos": [
+      "https://github.com/exactly"
+    ],
+    "telegram_members": 419,
+    "coingecko_id": "exa",
+    "coingecko_name": "Exactly Protocol",
+    "symbol": "exa",
+    "market_cap_rank": 3081,
+    "source": "coingecko"
+  },
+  "fassets": {
+    "slug": "fassets",
+    "twitter": "@FlareNetworks",
+    "telegram": "https://t.me/FlareNetwork",
+    "telegram_handle": "FlareNetwork",
+    "discord": "https://discord.com/invite/flarenetwork",
+    "other_chat": [
+      "https://medium.com/flarenetwork"
+    ],
+    "subreddit": "https://www.reddit.com/r/FlareNetworks",
+    "homepage": "https://flare.network/",
+    "forum": [
+      "https://t.me/Flare_China",
+      "https://t.me/FlareNetworks_Korea"
+    ],
+    "telegram_members": 18210,
+    "coingecko_id": "flare-networks",
+    "coingecko_name": "Flare",
+    "symbol": "flr",
+    "market_cap_rank": 75,
+    "source": "coingecko"
+  },
+  "filecoin": {
+    "slug": "filecoin",
+    "twitter": "@Filecoin",
+    "homepage": "https://filecoin.io/",
+    "github_repos": [
+      "https://github.com/filecoin-project/lotus",
+      "https://github.com/filecoin-project/"
+    ],
+    "forum": [
+      "https://filecoin.io/blog/",
+      "https://discuss.filecoin.io/"
+    ],
+    "coingecko_id": "filecoin",
+    "coingecko_name": "Filecoin",
+    "symbol": "fil",
+    "market_cap_rank": 84,
+    "source": "coingecko"
+  },
+  "flarenetwork": {
+    "slug": "flarenetwork",
+    "twitter": "@FlareNetworks",
+    "telegram": "https://t.me/FlareNetwork",
+    "telegram_handle": "FlareNetwork",
+    "discord": "https://discord.com/invite/flarenetwork",
+    "other_chat": [
+      "https://medium.com/flarenetwork"
+    ],
+    "subreddit": "https://www.reddit.com/r/FlareNetworks",
+    "homepage": "https://flare.network/",
+    "forum": [
+      "https://t.me/Flare_China",
+      "https://t.me/FlareNetworks_Korea"
+    ],
+    "telegram_members": 18210,
+    "coingecko_id": "flare-networks",
+    "coingecko_name": "Flare",
+    "symbol": "flr",
+    "market_cap_rank": 75,
+    "source": "coingecko"
+  },
+  "floki": {
+    "slug": "floki",
+    "twitter": "@realflokiinu",
+    "telegram": "https://t.me/FlokiInuToken",
+    "telegram_handle": "FlokiInuToken",
+    "homepage": "https://www.floki.com/",
+    "telegram_members": 71823,
+    "coingecko_id": "floki",
+    "coingecko_name": "FLOKI",
+    "symbol": "floki",
+    "market_cap_rank": 140,
+    "source": "coingecko"
+  },
+  "forta": {
+    "slug": "forta",
+    "twitter": "@FortaNetwork",
+    "homepage": "https://forta.org/",
+    "github_repos": [
+      "https://github.com/forta-network"
+    ],
+    "coingecko_id": "forta",
+    "coingecko_name": "Forta",
+    "symbol": "fort",
+    "market_cap_rank": 1186,
+    "source": "coingecko"
+  },
+  "furucombo": {
+    "slug": "furucombo",
+    "twitter": "@furucombo",
+    "telegram": "https://t.me/furucombo",
+    "telegram_handle": "furucombo",
+    "discord": "https://discord.furucombo.app/",
+    "homepage": "https://furucombo.app/",
+    "telegram_members": 59,
+    "coingecko_id": "furucombo",
+    "coingecko_name": "Furucombo",
+    "symbol": "combo",
+    "market_cap_rank": 8789,
+    "source": "coingecko"
+  },
+  "furucombofunds": {
+    "slug": "furucombofunds",
+    "twitter": "@furucombo",
+    "telegram": "https://t.me/furucombo",
+    "telegram_handle": "furucombo",
+    "discord": "https://discord.furucombo.app/",
+    "homepage": "https://furucombo.app/",
+    "telegram_members": 59,
+    "coingecko_id": "furucombo",
+    "coingecko_name": "Furucombo",
+    "symbol": "combo",
+    "market_cap_rank": 8789,
+    "source": "coingecko"
+  },
+  "gainsnetwork": {
+    "slug": "gainsnetwork",
+    "twitter": "@GainsNetwork_io",
+    "telegram": "https://t.me/GainsNetwork",
+    "telegram_handle": "GainsNetwork",
+    "discord": "https://discord.com/invite/gains-network",
+    "subreddit": "https://www.reddit.com/r/GainsNetwork/",
+    "homepage": "https://gains.trade/",
+    "telegram_members": 4598,
+    "coingecko_id": "gains-network",
+    "coingecko_name": "Gains Network",
+    "symbol": "gns",
+    "market_cap_rank": 781,
+    "source": "coingecko"
+  },
+  "gamma": {
+    "slug": "gamma",
+    "twitter": "@GammaStrategies",
+    "discord": "https://discord.gg/gammastrategies",
+    "subreddit": "https://www.reddit.com/r/gamma",
+    "homepage": "https://www.gamma.xyz/",
+    "github_repos": [
+      "https://github.com/GammaStrategies/"
+    ],
+    "telegram_members": 1715,
+    "coingecko_id": "gamma-strategies",
+    "coingecko_name": "Gamma Strategies",
+    "symbol": "gamma",
+    "market_cap_rank": 5255,
+    "source": "coingecko"
+  },
+  "gammaswap": {
+    "slug": "gammaswap",
+    "twitter": "@GammaStrategies",
+    "discord": "https://discord.gg/gammastrategies",
+    "subreddit": "https://www.reddit.com/r/gamma",
+    "homepage": "https://www.gamma.xyz/",
+    "github_repos": [
+      "https://github.com/GammaStrategies/"
+    ],
+    "telegram_members": 1715,
+    "coingecko_id": "gamma-strategies",
+    "coingecko_name": "Gamma Strategies",
+    "symbol": "gamma",
+    "market_cap_rank": 5255,
+    "source": "coingecko"
+  },
+  "gear": {
+    "slug": "gear",
+    "twitter": "@GearboxProtocol",
+    "discord": "https://discord.com/invite/gearbox",
+    "homepage": "https://gearbox.fi",
+    "github_repos": [
+      "https://github.com/Gearbox-protocol"
+    ],
+    "coingecko_id": "gearbox",
+    "coingecko_name": "Gearbox",
+    "symbol": "gear",
+    "market_cap_rank": 1763,
+    "source": "coingecko"
+  },
+  "gearbox": {
+    "slug": "gearbox",
+    "twitter": "@GearboxProtocol",
+    "discord": "https://discord.com/invite/gearbox",
+    "homepage": "https://gearbox.fi",
+    "github_repos": [
+      "https://github.com/Gearbox-protocol"
+    ],
+    "coingecko_id": "gearbox",
+    "coingecko_name": "Gearbox",
+    "symbol": "gear",
+    "market_cap_rank": 1763,
+    "source": "coingecko"
+  },
+  "geniusyield": {
+    "slug": "geniusyield",
+    "twitter": "@GeniusyieldO",
+    "telegram": "https://t.me/geniusyield_official",
+    "telegram_handle": "geniusyield_official",
+    "discord": "https://discord.com/invite/TNHf4fs626",
+    "other_chat": [
+      "https://www.linkedin.com/company/geniusyield/mycompany/",
+      "https://cexplorer.io/policy/dda5fdb1002f7389b33e036b6afee82a8189becb6cba852e8b79b4fb"
+    ],
+    "subreddit": "https://www.reddit.com/r/Genius_Yield/",
+    "homepage": "https://www.geniusyield.co/",
+    "forum": [
+      "https://www.youtube.com/channel/UC0Lw_flS1WokWYH9ZHIQv2g"
+    ],
+    "telegram_members": 2892,
+    "coingecko_id": "genius-yield",
+    "coingecko_name": "Genius Yield",
+    "symbol": "gens",
+    "source": "coingecko"
+  },
+  "gnosischain": {
+    "slug": "gnosischain",
+    "twitter": "@gnosisdao",
+    "subreddit": "https://www.reddit.com/r/gnosisPM",
+    "homepage": "https://www.gnosis.io/",
+    "github_repos": [
+      "https://github.com/gnosis/safe-contracts/",
+      "https://github.com/gnosis/gnosis.js",
+      "https://github.com/gnosis/safe-react/",
+      "https://github.com/gnosis/gp-v2-contracts",
+      "https://github.com/gnosis/conditional-tokens-market-makers",
+      "https://github.com/gnosis/conditional-tokens-explorer"
+    ],
+    "forum": [
+      "https://forum.gnosis.io/",
+      "https://blog.gnosis.io/",
+      "https://chat.gnosis.io/"
+    ],
+    "coingecko_id": "gnosis",
+    "coingecko_name": "Gnosis",
+    "symbol": "gno",
+    "market_cap_rank": 127,
+    "source": "coingecko"
+  },
+  "goldfinch": {
+    "slug": "goldfinch",
+    "twitter": "@goldfinch_fi",
+    "telegram": "https://t.me/goldfinch_finance",
+    "telegram_handle": "goldfinch_finance",
+    "discord": "https://discord.gg/HVeaca3fN8",
+    "homepage": "https://goldfinch.finance/",
+    "github_repos": [
+      "https://github.com/goldfinch-eng/community-docs"
+    ],
+    "telegram_members": 3449,
+    "coingecko_id": "goldfinch",
+    "coingecko_name": "Goldfinch",
+    "symbol": "gfi",
+    "market_cap_rank": 1072,
+    "source": "coingecko"
+  },
+  "gysr": {
+    "slug": "gysr",
+    "twitter": "@gysr_io",
+    "telegram": "https://t.me/gysr_io",
+    "telegram_handle": "gysr_io",
+    "discord": "https://discord.gg/n9TEs46",
+    "homepage": "https://gysr.io",
+    "github_repos": [
+      "https://github.com/gysr-io"
+    ],
+    "telegram_members": 668,
+    "coingecko_id": "geyser",
+    "coingecko_name": "Geyser",
+    "symbol": "gysr",
+    "market_cap_rank": 7840,
+    "source": "coingecko"
+  },
+  "hakkafinance": {
+    "slug": "hakkafinance",
+    "twitter": "@hakkafinance",
+    "telegram": "https://t.me/hakkafinance",
+    "telegram_handle": "hakkafinance",
+    "discord": "https://discord.gg/3KuW3spUdu",
+    "homepage": "https://hakka.finance/",
+    "github_repos": [
+      "https://github.com/hakkafinance/blackholeswap.com"
+    ],
+    "forum": [
+      "https://medium.com/@hakkafinance"
+    ],
+    "telegram_members": 1335,
+    "coingecko_id": "hakka-finance",
+    "coingecko_name": "Hakka Finance",
+    "symbol": "hakka",
+    "market_cap_rank": 3592,
+    "source": "coingecko"
+  },
+  "harvest": {
+    "slug": "harvest",
+    "twitter": "@harvest_finance",
+    "discord": "https://discord.com/invite/gzWAG3Wx7Y",
+    "homepage": "https://harvest.finance/",
+    "github_repos": [
+      "https://github.com/harvestfi/ethparser",
+      "https://github.com/harvest-finance"
+    ],
+    "telegram_members": 275,
+    "coingecko_id": "harvest-finance",
+    "coingecko_name": "Harvest Finance",
+    "symbol": "farm",
+    "market_cap_rank": 1267,
+    "source": "coingecko"
+  },
+  "hashflow": {
+    "slug": "hashflow",
+    "twitter": "@hashflow",
+    "telegram": "https://t.me/hashflowdex",
+    "telegram_handle": "hashflowdex",
+    "discord": "https://discord.com/invite/hashflow",
+    "other_chat": [
+      "https://blog.hashflow.com/",
+      "https://youtube.com/@hashflowdex"
+    ],
+    "subreddit": "https://www.reddit.com/r/Hashflow",
+    "homepage": "https://hashflow.com/",
+    "telegram_members": 4894,
+    "coingecko_id": "hashflow",
+    "coingecko_name": "Hashflow",
+    "symbol": "hft",
+    "market_cap_rank": 1022,
+    "source": "coingecko"
+  },
+  "hedera": {
+    "slug": "hedera",
+    "twitter": "@hedera",
+    "telegram": "https://t.me/hederahashgraph",
+    "telegram_handle": "hederahashgraph",
+    "discord": "https://hedera.com/discord",
+    "other_chat": [
+      "https://www.linkedin.com/company/hashgraph",
+      "https://www.youtube.com/hederahashgraph"
+    ],
+    "subreddit": "https://www.reddit.com/r/Hedera/",
+    "homepage": "https://www.hedera.com/",
+    "github_repos": [
+      "https://github.com/hashgraph",
+      "https://github.com/hashgraph/hashgraph.github.io"
+    ],
+    "telegram_members": 22236,
+    "coingecko_id": "hedera-hashgraph",
+    "coingecko_name": "Hedera",
+    "symbol": "hbar",
+    "market_cap_rank": 25,
+    "source": "coingecko"
+  },
+  "hydradx": {
+    "slug": "hydradx",
+    "telegram": "https://t.me/hydration_net",
+    "telegram_handle": "hydration_net",
+    "discord": "https://discord.gg/kkmY35UxAG",
+    "subreddit": "https://www.reddit.com/r/hdx/",
+    "homepage": "https://hydration.net",
+    "github_repos": [
+      "https://github.com/galacticcouncil"
+    ],
+    "forum": [
+      "https://hydration.substack.com/",
+      "https://hydradx.substack.com/"
+    ],
+    "telegram_members": 5251,
+    "coingecko_id": "hydradx",
+    "coingecko_name": "Hydration",
+    "symbol": "hdx",
+    "market_cap_rank": 889,
+    "source": "coingecko"
+  },
+  "hydration": {
+    "slug": "hydration",
+    "telegram": "https://t.me/hydration_net",
+    "telegram_handle": "hydration_net",
+    "discord": "https://discord.gg/kkmY35UxAG",
+    "subreddit": "https://www.reddit.com/r/hdx/",
+    "homepage": "https://hydration.net",
+    "github_repos": [
+      "https://github.com/galacticcouncil"
+    ],
+    "forum": [
+      "https://hydration.substack.com/",
+      "https://hydradx.substack.com/"
+    ],
+    "telegram_members": 5251,
+    "coingecko_id": "hydradx",
+    "coingecko_name": "Hydration",
+    "symbol": "hdx",
+    "market_cap_rank": 889,
+    "source": "coingecko"
+  },
+  "illuvium": {
+    "slug": "illuvium",
+    "twitter": "@illuviumio",
+    "telegram": "https://t.me/illuvium",
+    "telegram_handle": "illuvium",
+    "discord": "https://discord.gg/illuvium",
+    "other_chat": [
+      "https://illuvium.io/news",
+      "https://www.youtube.com/@Illuvium"
+    ],
+    "subreddit": "https://www.reddit.com/r/illuviumio",
+    "homepage": "https://illuvium.io/",
+    "github_repos": [
+      "https://github.com/IlluviumGame"
+    ],
+    "forum": [
+      "https://tiktok.com/@illuviumio",
+      "https://www.instagram.com/illuviumio/",
+      "https://www.linkedin.com/company/illuvium-io/"
+    ],
+    "telegram_members": 14368,
+    "coingecko_id": "illuvium",
+    "coingecko_name": "Illuvium",
+    "symbol": "ilv",
+    "market_cap_rank": 547,
+    "source": "coingecko"
+  },
+  "impossiblefinance": {
+    "slug": "impossiblefinance",
+    "twitter": "@impossiblefi",
+    "telegram": "https://t.me/ImpossibleFinance",
+    "telegram_handle": "ImpossibleFinance",
+    "discord": "https://discord.com/invite/SyF3RzxQCZ",
+    "homepage": "https://impossible.finance/",
+    "github_repos": [
+      "https://github.com/ImpossibleFinance"
+    ],
+    "telegram_members": 53382,
+    "coingecko_id": "idia",
+    "coingecko_name": "Impossible Finance Launchpad",
+    "symbol": "idia",
+    "market_cap_rank": 1020,
+    "source": "coingecko"
+  },
+  "indexcoop": {
+    "slug": "indexcoop",
+    "twitter": "@indexcoop",
+    "discord": "https://discord.com/invite/indexcoop",
+    "other_chat": [
+      "https://www.youtube.com/channel/UCsNqHm_2LKh0E4A0vf25pIw"
+    ],
+    "homepage": "https://indexcoop.com/index-token",
+    "forum": [
+      "https://gov.indexcoop.com/"
+    ],
+    "coingecko_id": "index-cooperative",
+    "coingecko_name": "Index Cooperative",
+    "symbol": "index",
+    "market_cap_rank": 2305,
+    "source": "coingecko"
+  },
+  "integral": {
+    "slug": "integral",
+    "twitter": "@integralhq",
+    "telegram": "https://t.me/integralresistance",
+    "telegram_handle": "integralresistance",
+    "discord": "https://discord.gg/ANf3VufDvm",
+    "homepage": "https://integral.link/",
+    "github_repos": [
+      "https://github.com/ProfessorJEY/Integral-Smart-Contracts/"
+    ],
+    "telegram_members": 1185,
+    "coingecko_id": "integral",
+    "coingecko_name": "Integral",
+    "symbol": "itgr",
+    "market_cap_rank": 5477,
+    "source": "coingecko"
+  },
+  "justlenddao": {
+    "slug": "justlenddao",
+    "twitter": "@DeFi_JUST",
+    "telegram": "https://t.me/just_defi",
+    "telegram_handle": "just_defi",
+    "homepage": "https://www.just.network/",
+    "telegram_members": 13469,
+    "coingecko_id": "just",
+    "coingecko_name": "JUST",
+    "symbol": "jst",
+    "market_cap_rank": 121,
+    "source": "coingecko"
+  },
+  "keep3rnetwork": {
+    "slug": "keep3rnetwork",
+    "twitter": "@thekeep3r ",
+    "homepage": "https://keep3r.network/",
+    "coingecko_id": "keep3rv1",
+    "coingecko_name": "Keep3rV1",
+    "symbol": "kp3r",
+    "market_cap_rank": 3244,
+    "source": "coingecko"
+  },
+  "kwenta": {
+    "slug": "kwenta",
+    "twitter": "@kwenta_io",
+    "discord": "https://discord.gg/kwentaio",
+    "homepage": "https://kwenta.eth.limo/",
+    "github_repos": [
+      "https://github.com/Kwenta"
+    ],
+    "forum": [
+      "https://mirror.xyz/kwenta.eth"
+    ],
+    "coingecko_id": "kwenta",
+    "coingecko_name": "Kwenta",
+    "symbol": "kwenta",
+    "market_cap_rank": 2115,
+    "source": "coingecko"
+  },
+  "landx": {
+    "slug": "landx",
+    "twitter": "@landxfinance",
+    "telegram": "https://t.me/landxfin",
+    "telegram_handle": "landxfin",
+    "other_chat": [
+      "https://medium.com/@landxfinance",
+      "https://www.youtube.com/@landx5518"
+    ],
+    "homepage": "https://landx.fi",
+    "github_repos": [
+      "https://github.com/LandXit/land-x-smart-contracts"
+    ],
+    "telegram_members": 683,
+    "coingecko_id": "landx-governance-token",
+    "coingecko_name": "LandX Governance Token",
+    "symbol": "lndx",
+    "market_cap_rank": 4699,
+    "source": "coingecko"
+  },
+  "layerzero": {
+    "slug": "layerzero",
+    "twitter": "@LayerZero_Core",
+    "discord": "https://layerzero.network/discord",
+    "other_chat": [
+      "https://medium.com/layerzero-official"
+    ],
+    "homepage": "https://layerzero.network/",
+    "telegram_members": 32129,
+    "coingecko_id": "layerzero",
+    "coingecko_name": "LayerZero",
+    "symbol": "zro",
+    "market_cap_rank": 115,
+    "source": "coingecko"
+  },
+  "lido": {
+    "slug": "lido",
+    "twitter": "@lidofinance",
+    "telegram": "https://t.me/lidofinance",
+    "telegram_handle": "lidofinance",
+    "discord": "https://discord.com/invite/vgdPfhZ",
+    "subreddit": "https://www.reddit.com/r/lidofinance",
+    "homepage": "https://stake.lido.fi/",
+    "github_repos": [
+      "https://github.com/lidofinance/lido-dao"
+    ],
+    "telegram_members": 10535,
+    "coingecko_id": "lido-dao",
+    "coingecko_name": "Lido DAO",
+    "symbol": "ldo",
+    "market_cap_rank": 143,
+    "source": "coingecko"
+  },
+  "lidoonpolygon": {
+    "slug": "lidoonpolygon",
+    "twitter": "@lidofinance",
+    "telegram": "https://t.me/lidofinance",
+    "telegram_handle": "lidofinance",
+    "discord": "https://discord.com/invite/vgdPfhZ",
+    "subreddit": "https://www.reddit.com/r/lidofinance",
+    "homepage": "https://stake.lido.fi/",
+    "github_repos": [
+      "https://github.com/lidofinance/lido-dao"
+    ],
+    "telegram_members": 10535,
+    "coingecko_id": "lido-dao",
+    "coingecko_name": "Lido DAO",
+    "symbol": "ldo",
+    "market_cap_rank": 143,
+    "source": "coingecko"
+  },
+  "liquidswap": {
+    "slug": "liquidswap",
+    "twitter": "@PontemNetwork",
+    "telegram": "https://t.me/pontemnetworkchat",
+    "telegram_handle": "pontemnetworkchat",
+    "homepage": "https://liquidswap.com/",
+    "telegram_members": 15018,
+    "coingecko_id": "liquidswap-2",
+    "coingecko_name": "Liquidswap",
+    "symbol": "lsd",
+    "source": "coingecko"
+  },
+  "magpiexyz": {
+    "slug": "magpiexyz",
+    "telegram": "https://t.me/101118",
+    "telegram_handle": "101118",
+    "discord": "https://discord.gg/magpiexyz",
+    "other_chat": [
+      "https://blog.magpiexyz.io/"
+    ],
+    "homepage": "https://www.magpiexyz.io/",
+    "github_repos": [
+      "https://github.com/magpiexyz"
+    ],
+    "telegram_members": 503,
+    "coingecko_id": "magpie",
+    "coingecko_name": "Magpie",
+    "symbol": "mgp",
+    "market_cap_rank": 2551,
+    "source": "coingecko"
+  },
+  "marsecosystem": {
+    "slug": "marsecosystem",
+    "twitter": "@MarsEcosystem",
+    "telegram": "https://t.me/mars_ecosystem",
+    "telegram_handle": "mars_ecosystem",
+    "discord": "https://discord.com/invite/gEWC4VVnNt",
+    "homepage": "https://marsdao.finance/",
+    "github_repos": [
+      "https://github.com/MarsEcosystem"
+    ],
+    "telegram_members": 10822,
+    "coingecko_id": "mars-ecosystem-token",
+    "coingecko_name": "Mars Ecosystem",
+    "symbol": "xms",
+    "market_cap_rank": 5100,
+    "source": "coingecko"
+  },
+  "mayaprotocol": {
+    "slug": "mayaprotocol",
+    "twitter": "@Maya_Protocol",
+    "telegram": "https://t.me/MayaProtocolOfficial",
+    "telegram_handle": "MayaProtocolOfficial",
+    "discord": "https://discord.gg/mayaprotocol",
+    "other_chat": [
+      "https://mayaprotocol-eng.medium.com/",
+      "https://www.youtube.com/@mayaprotocol8106"
+    ],
+    "homepage": "https://www.mayaprotocol.com/",
+    "forum": [
+      "https://www.instagram.com/mayaprotocolesp/",
+      "https://www.tiktok.com/@mayaprotocol"
+    ],
+    "telegram_members": 1039,
+    "coingecko_id": "cacao",
+    "coingecko_name": "Maya Protocol",
+    "symbol": "cacao",
+    "market_cap_rank": 1203,
+    "source": "coingecko"
+  },
+  "metalswap": {
+    "slug": "metalswap",
+    "twitter": "@MetalSwapNet",
+    "telegram": "https://t.me/metalswap",
+    "telegram_handle": "metalswap",
+    "discord": "https://discord.gg/6P7CKSZF4D",
+    "homepage": "https://www.metalswap.finance/",
+    "telegram_members": 4141,
+    "coingecko_id": "metalswap",
+    "coingecko_name": "MetalSwap",
+    "symbol": "xmt",
+    "source": "coingecko"
+  },
+  "metis": {
+    "slug": "metis",
+    "twitter": "@MetisL2",
+    "telegram": "https://t.me/MetisL2",
+    "telegram_handle": "MetisL2",
+    "other_chat": [
+      "https://www.youtube.com/@Metis_L2",
+      "https://github.com/MetisProtocol/metis-sdk",
+      "https://alith.lazai.network/docs/get-started"
+    ],
+    "homepage": "https://www.metis.io/",
+    "github_repos": [
+      "https://github.com/MetisProtoco"
+    ],
+    "forum": [
+      "https://metisl2.medium.com/",
+      "https://www.linkedin.com/company/metisl2/"
+    ],
+    "telegram_members": 19355,
+    "coingecko_id": "metis-token",
+    "coingecko_name": "Metis",
+    "symbol": "metis",
+    "market_cap_rank": 705,
+    "source": "coingecko"
+  },
+  "metronome": {
+    "slug": "metronome",
+    "twitter": "@MetronomeDAO",
+    "telegram": "https://t.me/metronometoken",
+    "telegram_handle": "metronometoken",
+    "discord": "https://discord.gg/metronome",
+    "other_chat": [
+      "https://metronomedao.medium.com/",
+      "https://www.youtube.com/@metronome_dao"
+    ],
+    "subreddit": "https://www.reddit.com/r/MetronomeToken/",
+    "homepage": "https://metronome.io/",
+    "github_repos": [
+      "https://github.com/autonomoussoftware/metronome.io"
+    ],
+    "telegram_members": 1507,
+    "coingecko_id": "metronome",
+    "coingecko_name": "Metronome",
+    "symbol": "met",
+    "market_cap_rank": 1614,
+    "source": "coingecko"
+  },
+  "moneyonchain": {
+    "slug": "moneyonchain",
+    "twitter": "@moneyonchainok",
+    "telegram": "https://t.me/58301",
+    "telegram_handle": "58301",
+    "discord": "https://discord.gg/FsfPzEGs",
+    "homepage": "https://moneyonchain.com",
+    "github_repos": [
+      "https://github.com/money-on-chain/"
+    ],
+    "telegram_members": 573,
+    "coingecko_id": "money-on-chain",
+    "coingecko_name": "Money On Chain",
+    "symbol": "moc",
+    "source": "coingecko"
+  },
+  "moonbeamnetwork": {
+    "slug": "moonbeamnetwork",
+    "twitter": "@moonbeamnetwork",
+    "telegram": "https://t.me/Moonbeam_Official",
+    "telegram_handle": "Moonbeam_Official",
+    "discord": "https://discord.com/invite/PfpUATX",
+    "subreddit": "https://www.reddit.com/r/moonbeam/",
+    "homepage": "https://moonbeam.network/",
+    "github_repos": [
+      "https://github.com/PureStake/moonbeam"
+    ],
+    "telegram_members": 17476,
+    "coingecko_id": "moonbeam",
+    "coingecko_name": "Moonbeam",
+    "symbol": "glmr",
+    "market_cap_rank": 943,
+    "source": "coingecko"
+  },
+  "moonwell": {
+    "slug": "moonwell",
+    "twitter": "@MoonwellDeFi",
+    "telegram": "https://t.me/moonwellfichat",
+    "telegram_handle": "moonwellfichat",
+    "discord": "https://discord.gg/moonwellfi",
+    "homepage": "https://www.moonwell.fi",
+    "telegram_members": 7614,
+    "coingecko_id": "moonwell",
+    "coingecko_name": "Moonwell Apollo",
+    "symbol": "mfam",
+    "market_cap_rank": 7739,
+    "source": "coingecko"
+  },
+  "nayms": {
+    "slug": "nayms",
+    "twitter": "@nayms",
+    "telegram": "https://t.me/naymscommunity",
+    "telegram_handle": "naymscommunity",
+    "homepage": "https://www.naymtoken.com",
+    "forum": [
+      "https://www.linkedin.com/company/nayms",
+      "https://medium.com/nayms"
+    ],
+    "telegram_members": 12499,
+    "coingecko_id": "naym",
+    "coingecko_name": "Naym",
+    "symbol": "naym",
+    "market_cap_rank": 10294,
+    "source": "coingecko"
+  },
+  "neo": {
+    "slug": "neo",
+    "twitter": "@NeoTokyoCode",
+    "discord": "https://discord.gg/neotokyocitadel",
+    "homepage": "https://neotokyo.codes/",
+    "coingecko_id": "neo-tokyo",
+    "coingecko_name": "Neo Tokyo",
+    "symbol": "bytes",
+    "source": "coingecko"
+  },
+  "nexusmutual": {
+    "slug": "nexusmutual",
+    "twitter": "@NexusMutual",
+    "discord": "https://discord.gg/xxFaAEn",
+    "homepage": "https://nexusmutual.io/",
+    "telegram_members": 1028,
+    "coingecko_id": "nxm",
+    "coingecko_name": "Nexus Mutual",
+    "symbol": "nxm",
+    "market_cap_rank": 283,
+    "source": "coingecko"
+  },
+  "nftfi": {
+    "slug": "nftfi",
+    "twitter": "@NFTfiFoundation",
+    "discord": "http://discord.gg/nftfi",
+    "homepage": "https://nftfifoundation.org/",
+    "forum": [
+      "https://twitter.com/NFTfi"
+    ],
+    "coingecko_id": "nftfi",
+    "coingecko_name": "NFTFI",
+    "symbol": "nftfi",
+    "market_cap_rank": 7835,
+    "source": "coingecko"
+  },
+  "nftfitestnetrefi": {
+    "slug": "nftfitestnetrefi",
+    "twitter": "@NFTfiFoundation",
+    "discord": "http://discord.gg/nftfi",
+    "homepage": "https://nftfifoundation.org/",
+    "forum": [
+      "https://twitter.com/NFTfi"
+    ],
+    "coingecko_id": "nftfi",
+    "coingecko_name": "NFTFI",
+    "symbol": "nftfi",
+    "market_cap_rank": 7835,
+    "source": "coingecko"
+  },
+  "nftx": {
+    "slug": "nftx",
+    "twitter": "@nftx_",
+    "discord": "https://discord.gg/5ygF8rxdYR",
+    "homepage": "https://nftx.org/",
+    "github_repos": [
+      "https://github.com/NFTX-project/x-contracts"
+    ],
+    "coingecko_id": "nftx",
+    "coingecko_name": "NFTX",
+    "symbol": "nftx",
+    "market_cap_rank": 1786,
+    "source": "coingecko"
+  },
+  "octopusnetwork": {
+    "slug": "octopusnetwork",
+    "twitter": "@OmnityNetwork",
+    "telegram": "https://t.me/omnityofficial",
+    "telegram_handle": "omnityofficial",
+    "discord": "https://discord.com/invite/6GTJBkZA9Q",
+    "other_chat": [
+      "https://medium.com/omnity"
+    ],
+    "homepage": "https://www.omnity.network/",
+    "github_repos": [
+      "https://github.com/octopus-network"
+    ],
+    "telegram_members": 7122,
+    "coingecko_id": "octopus-network",
+    "coingecko_name": "Omnity Convertible Token",
+    "symbol": "oct",
+    "market_cap_rank": 3190,
+    "source": "coingecko"
+  },
+  "olympus": {
+    "slug": "olympus",
+    "twitter": "@OlympusDAO",
+    "telegram": "https://t.me/OlympusTG",
+    "telegram_handle": "OlympusTG",
+    "discord": "https://discord.gg/olympusdao",
+    "subreddit": "https://www.reddit.com/r/olympusdao/",
+    "homepage": "https://olympusdao.finance/",
+    "github_repos": [
+      "https://github.com/OlympusDAO"
+    ],
+    "forum": [
+      "https://olympusdao.medium.com/",
+      "https://www.youtube.com/c/olympusdao"
+    ],
+    "telegram_members": 3520,
+    "coingecko_id": "olympus",
+    "coingecko_name": "Olympus",
+    "symbol": "ohm",
+    "market_cap_rank": 147,
+    "source": "coingecko"
+  },
+  "omni-network": {
+    "slug": "omni-network",
+    "twitter": "@OmniFDN",
+    "telegram": "https://t.me/OmniFDN",
+    "telegram_handle": "OmniFDN",
+    "discord": "https://discord.com/invite/bKNXmaX9VD",
+    "other_chat": [
+      "https://news.omni.network/"
+    ],
+    "homepage": "https://omni.network/",
+    "github_repos": [
+      "https://github.com/omni-network/omni"
+    ],
+    "telegram_members": 24512,
+    "coingecko_id": "omni-network",
+    "coingecko_name": "Omni Network [Old]",
+    "symbol": "omni",
+    "market_cap_rank": 455,
+    "source": "coingecko"
+  },
+  "paragonsdao": {
+    "slug": "paragonsdao",
+    "twitter": "@ParagonsDAO",
+    "discord": "https://discord.com/invite/paragonsdao",
+    "homepage": "https://paragonsdao.com/",
+    "coingecko_id": "paragonsdao",
+    "coingecko_name": "ParagonsDAO",
+    "symbol": "pdt",
+    "market_cap_rank": 1507,
+    "source": "coingecko"
+  },
+  "paribus": {
+    "slug": "paribus",
+    "twitter": "@paribus_io",
+    "telegram": "https://t.me/paribus_io",
+    "telegram_handle": "paribus_io",
+    "other_chat": [
+      "https://www.linkedin.com/company/paribusdefi/"
+    ],
+    "homepage": "https://paribus.io/",
+    "github_repos": [
+      "https://github.com/paribus"
+    ],
+    "telegram_members": 5816,
+    "coingecko_id": "paribus",
+    "coingecko_name": "Paribus",
+    "symbol": "pbx",
+    "market_cap_rank": 7495,
+    "source": "coingecko"
+  },
+  "pendle": {
+    "slug": "pendle",
+    "twitter": "@pendle_fi",
+    "telegram": "https://t.me/pendlefinance",
+    "telegram_handle": "pendlefinance",
+    "discord": "https://discord.com/invite/EAujvncY2R",
+    "homepage": "https://pendle.finance/",
+    "github_repos": [
+      "https://github.com/pendle-finance/pendle-core-v2-public",
+      "https://github.com/pendle-finance"
+    ],
+    "telegram_members": 7729,
+    "coingecko_id": "pendle",
+    "coingecko_name": "Pendle",
+    "symbol": "pendle",
+    "market_cap_rank": 183,
+    "source": "coingecko"
+  },
+  "perpetual": {
+    "slug": "perpetual",
+    "twitter": "@perpprotocol",
+    "telegram": "https://t.me/perpetualprotocol",
+    "telegram_handle": "perpetualprotocol",
+    "discord": "https://discord.com/invite/mYKKRTn",
+    "homepage": "https://app.perp.com",
+    "telegram_members": 3651,
+    "coingecko_id": "perpetual-protocol",
+    "coingecko_name": "Perpetual Protocol",
+    "symbol": "perp",
+    "market_cap_rank": 2533,
+    "source": "coingecko"
+  },
+  "pinto": {
+    "slug": "pinto",
+    "twitter": "@pintodotmoney",
+    "homepage": "https://pinto.money/",
+    "github_repos": [
+      "https://github.com/pinto-org/exchange"
+    ],
+    "forum": [
+      "https://discord.com/invite/MZVQaZPRry"
+    ],
+    "coingecko_id": "pinto",
+    "coingecko_name": "Pinto",
+    "symbol": "pinto",
+    "market_cap_rank": 2826,
+    "source": "coingecko"
+  },
+  "pnetwork": {
+    "slug": "pnetwork",
+    "twitter": "@pNetworkDeFi",
+    "telegram": "https://t.me/pNetworkDefi",
+    "telegram_handle": "pNetworkDefi",
+    "subreddit": "https://www.reddit.com/r/pTokens/",
+    "homepage": "https://p.network",
+    "github_repos": [
+      "https://github.com/provable-things/ethereum-bridge",
+      "https://github.com/provable-things/ethereum-api",
+      "https://github.com/provable-things/ptokens-core",
+      "https://github.com/provable-things/ptokens.js"
+    ],
+    "telegram_members": 3574,
+    "coingecko_id": "pnetwork",
+    "coingecko_name": "pNetwork",
+    "symbol": "pnt",
+    "market_cap_rank": 7398,
+    "source": "coingecko"
+  },
+  "polkastarter": {
+    "slug": "polkastarter",
+    "twitter": "@polkastarter",
+    "telegram": "https://t.me/polkastarter",
+    "telegram_handle": "polkastarter",
+    "other_chat": [
+      "https://www.linkedin.com/company/polkastarter/"
+    ],
+    "homepage": "https://polkastarter.com/",
+    "telegram_members": 48617,
+    "coingecko_id": "polkastarter",
+    "coingecko_name": "Polkastarter",
+    "symbol": "pols",
+    "market_cap_rank": 1564,
+    "source": "coingecko"
+  },
+  "polygon": {
+    "slug": "polygon",
+    "twitter": "@0xPolygon",
+    "telegram": "https://t.me/PolygonHQ",
+    "telegram_handle": "PolygonHQ",
+    "subreddit": "https://www.reddit.com/r/0xPolygon/",
+    "homepage": "https://polygon.technology/",
+    "github_repos": [
+      "https://github.com/0xpolygon"
+    ],
+    "forum": [
+      "https://discord.com/invite/0xPolygonCommunity"
+    ],
+    "telegram_members": 3143,
+    "coingecko_id": "polygon-ecosystem-token",
+    "coingecko_name": "POL (ex-MATIC)",
+    "symbol": "pol",
+    "market_cap_rank": 66,
+    "source": "coingecko"
+  },
+  "popsicle": {
+    "slug": "popsicle",
+    "twitter": "@PopsicleFinance",
+    "discord": "https://discord.gg/GDwhREgj5E",
+    "homepage": "https://popsicle.finance/",
+    "github_repos": [
+      "https://github.com/Popsicle-Finance/"
+    ],
+    "coingecko_id": "ice-token",
+    "coingecko_name": "Popsicle Finance",
+    "symbol": "ice",
+    "market_cap_rank": 6480,
+    "source": "coingecko"
+  },
+  "portfinance": {
+    "slug": "portfinance",
+    "twitter": "@port_finance",
+    "telegram": "https://t.me/port_finance",
+    "telegram_handle": "port_finance",
+    "discord": "https://discord.com/invite/nAMXAYhTb2",
+    "homepage": "https://port.finance/",
+    "github_repos": [
+      "https://github.com/port-finance/"
+    ],
+    "telegram_members": 4895,
+    "coingecko_id": "port-finance",
+    "coingecko_name": "Port Finance",
+    "symbol": "port",
+    "market_cap_rank": 5969,
+    "source": "coingecko"
+  },
+  "rai": {
+    "slug": "rai",
+    "twitter": "@railgun_project",
+    "telegram": "https://t.me/railgunproject",
+    "telegram_handle": "railgunproject",
+    "homepage": "https://railgun.org",
+    "github_repos": [
+      "https://github.com/Railgun-Privacy/"
+    ],
+    "telegram_members": 2199,
+    "coingecko_id": "railgun",
+    "coingecko_name": "Railgun",
+    "symbol": "rail",
+    "market_cap_rank": 328,
+    "source": "coingecko"
+  },
+  "renzoprotocol": {
+    "slug": "renzoprotocol",
+    "twitter": "@RenzoProtocol",
+    "telegram": "https://t.me/RenzoProtocolChat",
+    "telegram_handle": "RenzoProtocolChat",
+    "discord": "https://discord.gg/renzoprotocol",
+    "homepage": "https://www.renzoprotocol.com/",
+    "github_repos": [
+      "https://github.com/Renzo-Protocol"
+    ],
+    "forum": [
+      "https://www.linkedin.com/company/renzoprotocol"
+    ],
+    "telegram_members": 7246,
+    "coingecko_id": "renzo",
+    "coingecko_name": "Renzo",
+    "symbol": "rez",
+    "market_cap_rank": 999,
+    "source": "coingecko"
+  },
+  "reserve": {
+    "slug": "reserve",
+    "discord": "https://discord.gg/reserveprotocol",
+    "homepage": "https://reserve.org/",
+    "github_repos": [
+      "https://github.com/reserve-protocol/rsr"
+    ],
+    "telegram_members": 10880,
+    "coingecko_id": "reserve-rights-token",
+    "coingecko_name": "Reserve Rights",
+    "symbol": "rsr",
+    "market_cap_rank": 278,
+    "source": "coingecko"
+  },
+  "resolv": {
+    "slug": "resolv",
+    "twitter": "@ResolvLabs",
+    "telegram": "https://t.me/Resolv_Community",
+    "telegram_handle": "Resolv_Community",
+    "homepage": "https://resolv.xyz/",
+    "forum": [
+      "https://discord.com/invite/resolvcommunity",
+      "https://resolvlabs.substack.com/",
+      "https://resolv.xyz/blog"
+    ],
+    "telegram_members": 4208,
+    "coingecko_id": "resolv",
+    "coingecko_name": "Resolv",
+    "symbol": "resolv",
+    "market_cap_rank": 759,
+    "source": "coingecko"
+  },
+  "revest": {
+    "slug": "revest",
+    "twitter": "@RevestFinance",
+    "discord": "https://discord.gg/TdJSzW9H4G",
+    "homepage": "https://revest.finance",
+    "telegram_members": 2496,
+    "coingecko_id": "revest-finance",
+    "coingecko_name": "Revest Finance",
+    "symbol": "rvst",
+    "market_cap_rank": 5289,
+    "source": "coingecko"
+  },
+  "rocketpool": {
+    "slug": "rocketpool",
+    "twitter": "@Rocket_Pool",
+    "discord": "https://discordapp.com/invite/tCRG54c",
+    "subreddit": "https://www.reddit.com/r/rocketpool",
+    "homepage": "https://www.rocketpool.net",
+    "github_repos": [
+      "https://github.com/rocket-pool/rocketpool",
+      "https://github.com/rocket-pool/smartnode"
+    ],
+    "coingecko_id": "rocket-pool",
+    "coingecko_name": "Rocket Pool",
+    "symbol": "rpl",
+    "market_cap_rank": 568,
+    "source": "coingecko"
+  },
+  "router": {
+    "slug": "router",
+    "twitter": "@routerprotocol",
+    "telegram": "https://t.me/routerprotocol",
+    "telegram_handle": "routerprotocol",
+    "discord": "https://discord.gg/8Sg6N4HJpB",
+    "other_chat": [
+      "https://routerprotocol.medium.com/"
+    ],
+    "homepage": "https://www.routerprotocol.com/",
+    "github_repos": [
+      "https://github.com/router-protocol"
+    ],
+    "telegram_members": 8360,
+    "coingecko_id": "router-protocol-2",
+    "coingecko_name": "Router Protocol",
+    "symbol": "route",
+    "market_cap_rank": 3289,
+    "source": "coingecko"
+  },
+  "rubic": {
+    "slug": "rubic",
+    "twitter": "@CryptoRubic",
+    "telegram": "https://t.me/cryptorubic_chat",
+    "telegram_handle": "cryptorubic_chat",
+    "discord": "https://discord.gg/dZuxJZXGPa",
+    "subreddit": "https://www.reddit.com/r/Rubic/",
+    "homepage": "https://app.rubic.exchange/",
+    "github_repos": [
+      "https://github.com/Cryptorubic"
+    ],
+    "telegram_members": 6869,
+    "coingecko_id": "rubic",
+    "coingecko_name": "Rubic",
+    "symbol": "rbc",
+    "market_cap_rank": 3362,
+    "source": "coingecko"
+  },
+  "sei": {
+    "slug": "sei",
+    "twitter": "@SeiNetwork",
+    "telegram": "https://t.me/seinetwork",
+    "telegram_handle": "seinetwork",
+    "discord": "https://discord.com/invite/Sei",
+    "subreddit": "https://www.reddit.com/r/Sei_Network/",
+    "homepage": "https://www.sei.io",
+    "github_repos": [
+      "https://github.com/sei-protocol"
+    ],
+    "telegram_members": 1347,
+    "coingecko_id": "sei-network",
+    "coingecko_name": "Sei",
+    "symbol": "sei",
+    "market_cap_rank": 99,
+    "source": "coingecko"
+  },
+  "singularitydao": {
+    "slug": "singularitydao",
+    "twitter": "@SingularityDao",
+    "telegram": "https://t.me/SingDAO",
+    "telegram_handle": "SingDAO",
+    "discord": "https://discord.gg/singularitydao",
+    "homepage": "https://www.singularitydao.ai/",
+    "github_repos": [
+      "https://github.com/singularitydao"
+    ],
+    "telegram_members": 7336,
+    "coingecko_id": "singularitydao",
+    "coingecko_name": "SingularityDAO",
+    "symbol": "sdao",
+    "market_cap_rank": 3395,
+    "source": "coingecko"
+  },
+  "sns": {
+    "slug": "sns",
+    "twitter": "@sns",
+    "homepage": "https://www.sns.id/",
+    "coingecko_id": "solana-name-service",
+    "coingecko_name": "Solana Name Service",
+    "symbol": "sns",
+    "market_cap_rank": 1864,
+    "source": "coingecko"
+  },
+  "sommelier": {
+    "slug": "sommelier",
+    "twitter": "@sommfinance",
+    "telegram": "https://t.me/getsomm",
+    "telegram_handle": "getsomm",
+    "discord": "https://discord.gg/ZcAYgSBxvY",
+    "homepage": "https://sommelier.finance/",
+    "telegram_members": 2796,
+    "coingecko_id": "sommelier",
+    "coingecko_name": "Sommelier",
+    "symbol": "somm",
+    "market_cap_rank": 5003,
+    "source": "coingecko"
+  },
+  "staderforbnb": {
+    "slug": "staderforbnb",
+    "twitter": "@staderlabs",
+    "telegram": "https://t.me/staderlabs",
+    "telegram_handle": "staderlabs",
+    "homepage": "https://staderlabs.com/",
+    "github_repos": [
+      "https://github.com/stader-labs"
+    ],
+    "telegram_members": 12783,
+    "coingecko_id": "stader",
+    "coingecko_name": "Stader",
+    "symbol": "sd",
+    "market_cap_rank": 1121,
+    "source": "coingecko"
+  },
+  "staderforeth": {
+    "slug": "staderforeth",
+    "twitter": "@staderlabs",
+    "telegram": "https://t.me/staderlabs",
+    "telegram_handle": "staderlabs",
+    "homepage": "https://staderlabs.com/",
+    "github_repos": [
+      "https://github.com/stader-labs"
+    ],
+    "telegram_members": 12783,
+    "coingecko_id": "stader",
+    "coingecko_name": "Stader",
+    "symbol": "sd",
+    "market_cap_rank": 1121,
+    "source": "coingecko"
+  },
+  "staderforpolygon": {
+    "slug": "staderforpolygon",
+    "twitter": "@staderlabs",
+    "telegram": "https://t.me/staderlabs",
+    "telegram_handle": "staderlabs",
+    "homepage": "https://staderlabs.com/",
+    "github_repos": [
+      "https://github.com/stader-labs"
+    ],
+    "telegram_members": 12783,
+    "coingecko_id": "stader",
+    "coingecko_name": "Stader",
+    "symbol": "sd",
+    "market_cap_rank": 1121,
+    "source": "coingecko"
+  },
+  "stafi": {
+    "slug": "stafi",
+    "twitter": "@Stafi_Protocol",
+    "telegram": "https://t.me/stafi_protocol",
+    "telegram_handle": "stafi_protocol",
+    "discord": "https://discord.com/invite/jB77etn",
+    "homepage": "https://www.stafi.io/",
+    "telegram_members": 4492,
+    "coingecko_id": "stafi",
+    "coingecko_name": "Stafi",
+    "symbol": "fis",
+    "market_cap_rank": 2070,
+    "source": "coingecko"
+  },
+  "starknet": {
+    "slug": "starknet",
+    "twitter": "@Starknet",
+    "discord": "http://starknet.io/discord",
+    "other_chat": [
+      "https://starkware.medium.com/"
+    ],
+    "homepage": "https://starknet.io/",
+    "github_repos": [
+      "https://github.com/starkware-libs/starknet-specs"
+    ],
+    "coingecko_id": "starknet",
+    "coingecko_name": "Starknet",
+    "symbol": "strk",
+    "market_cap_rank": 153,
+    "source": "coingecko"
+  },
+  "stellaswap": {
+    "slug": "stellaswap",
+    "twitter": "@stellaxyz_",
+    "telegram": "https://t.me/Stellaxyz_io",
+    "telegram_handle": "Stellaxyz_io",
+    "discord": "https://discord.stellaxyz.io/",
+    "other_chat": [
+      "https://blog.stellaxyz.io/",
+      "https://youtube.stellaxyz.io/"
+    ],
+    "homepage": "https://stellaxyz.io/",
+    "github_repos": [
+      "https://github.com/AlphaFinanceLab/alphahomora",
+      "https://github.com/AlphaFinanceLab/alpha-lending-smart-contract"
+    ],
+    "telegram_members": 3456,
+    "coingecko_id": "alpha-finance",
+    "coingecko_name": "Stella",
+    "symbol": "alpha",
+    "market_cap_rank": 1874,
+    "source": "coingecko"
+  },
+  "superfluid": {
+    "slug": "superfluid",
+    "twitter": "@Superfluid_HQ",
+    "other_chat": [
+      "https://medium.com/superfluid-blog"
+    ],
+    "homepage": "https://superfluid.org/",
+    "forum": [
+      "https://superfluid.org/blog",
+      "https://farcaster.xyz/superfluid",
+      "https://www.linkedin.com/company/superfluid/"
+    ],
+    "coingecko_id": "superfluid",
+    "coingecko_name": "Superfluid",
+    "symbol": "sup",
+    "market_cap_rank": 2612,
+    "source": "coingecko"
+  },
+  "swappi": {
+    "slug": "swappi",
+    "twitter": "@SwappiDEX",
+    "telegram": "https://t.me/Swappi_DEX",
+    "telegram_handle": "Swappi_DEX",
+    "homepage": "https://app.swappi.io",
+    "github_repos": [
+      "https://github.com/swappidex"
+    ],
+    "telegram_members": 7460,
+    "coingecko_id": "swappi",
+    "coingecko_name": "Swappi",
+    "symbol": "ppi",
+    "source": "coingecko"
+  },
+  "symbiosis": {
+    "slug": "symbiosis",
+    "twitter": "@symbiosis_fi",
+    "telegram": "https://t.me/symbiosis_finance",
+    "telegram_handle": "symbiosis_finance",
+    "discord": "https://discord.com/invite/YHgDSJ42eG",
+    "homepage": "https://symbiosis.finance/",
+    "github_repos": [
+      "https://github.com/symbiosis-finance"
+    ],
+    "telegram_members": 9089,
+    "coingecko_id": "symbiosis-finance",
+    "coingecko_name": "Symbiosis",
+    "symbol": "sis",
+    "market_cap_rank": 2794,
+    "source": "coingecko"
+  },
+  "thegraph": {
+    "slug": "thegraph",
+    "twitter": "@graphprotocol",
+    "telegram": "https://t.me/graphprotocol",
+    "telegram_handle": "graphprotocol",
+    "discord": "https://discord.gg/vtvv7FP",
+    "subreddit": "https://www.reddit.com/r/thegraph",
+    "homepage": "https://thegraph.com/",
+    "github_repos": [
+      "https://github.com/graphprotocol/graph-node",
+      "https://github.com/graphprotocol/graph-ts",
+      "https://github.com/graphprotocol/graph-cli"
+    ],
+    "telegram_members": 17659,
+    "coingecko_id": "the-graph",
+    "coingecko_name": "The Graph",
+    "symbol": "grt",
+    "market_cap_rank": 142,
+    "source": "coingecko"
+  },
+  "thesandbox": {
+    "slug": "thesandbox",
+    "twitter": "@TheSandboxGame",
+    "telegram": "https://t.me/sandboxgame",
+    "telegram_handle": "sandboxgame",
+    "homepage": "https://www.sandbox.game/en/",
+    "github_repos": [
+      "https://github.com/thesandboxgame/sandbox-smart-contracts"
+    ],
+    "telegram_members": 34683,
+    "coingecko_id": "the-sandbox",
+    "coingecko_name": "The Sandbox",
+    "symbol": "sand",
+    "market_cap_rank": 164,
+    "source": "coingecko"
+  },
+  "tidal": {
+    "slug": "tidal",
+    "twitter": "@tidaldefi",
+    "telegram": "https://t.me/TidalGlobal",
+    "telegram_handle": "TidalGlobal",
+    "discord": "https://discord.com/invite/rZhuzJzXqV",
+    "homepage": "https://tidal.finance/",
+    "github_repos": [
+      "https://github.com/tidalfinance"
+    ],
+    "telegram_members": 12109,
+    "coingecko_id": "tidal-finance",
+    "coingecko_name": "Tidal Finance",
+    "symbol": "tidal",
+    "market_cap_rank": 7358,
+    "source": "coingecko"
+  },
+  "timelessandbunni": {
+    "slug": "timelessandbunni",
+    "twitter": "@Timeless_fi",
+    "homepage": "https://bunni.xyz/",
+    "github_repos": [
+      "https://github.com/timeless-fi"
+    ],
+    "forum": [
+      "https://discord.gg/bunnixyz"
+    ],
+    "coingecko_id": "timeless",
+    "coingecko_name": "Timeless",
+    "symbol": "lit",
+    "market_cap_rank": 3465,
+    "source": "coingecko"
+  },
+  "tinyman": {
+    "slug": "tinyman",
+    "twitter": "@tinymanorg",
+    "telegram": "https://t.me/tinymanofficial",
+    "telegram_handle": "tinymanofficial",
+    "other_chat": [
+      "https://tinymanorg.medium.com",
+      "https://www.youtube.com/@Tinymanorg"
+    ],
+    "homepage": "https://tinyman.org",
+    "telegram_members": 2332,
+    "coingecko_id": "tiny",
+    "coingecko_name": "TINY",
+    "symbol": "tiny",
+    "source": "coingecko"
+  },
+  "tinymanv2": {
+    "slug": "tinymanv2",
+    "twitter": "@tinymanorg",
+    "telegram": "https://t.me/tinymanofficial",
+    "telegram_handle": "tinymanofficial",
+    "other_chat": [
+      "https://tinymanorg.medium.com",
+      "https://www.youtube.com/@Tinymanorg"
+    ],
+    "homepage": "https://tinyman.org",
+    "telegram_members": 2332,
+    "coingecko_id": "tiny",
+    "coingecko_name": "TINY",
+    "symbol": "tiny",
+    "source": "coingecko"
+  },
+  "vesper": {
+    "slug": "vesper",
+    "twitter": "@VesperFi",
+    "telegram": "https://t.me/vesperfinance",
+    "telegram_handle": "vesperfinance",
+    "discord": "https://discord.com/invite/Pm8UDaazsK",
+    "homepage": "https://vesper.finance/",
+    "github_repos": [
+      "https://github.com/vesperfi"
+    ],
+    "telegram_members": 1687,
+    "coingecko_id": "vesper-finance",
+    "coingecko_name": "Vesper Finance",
+    "symbol": "vsp",
+    "market_cap_rank": 2761,
+    "source": "coingecko"
+  },
+  "virtuals-protocol": {
+    "slug": "virtuals-protocol",
+    "twitter": "@virtuals_io",
+    "telegram": "https://t.me/virtuals",
+    "telegram_handle": "virtuals",
+    "homepage": "https://www.virtuals.io/",
+    "telegram_members": 22945,
+    "coingecko_id": "virtual-protocol",
+    "coingecko_name": "Virtuals Protocol",
+    "symbol": "virtual",
+    "market_cap_rank": 117,
+    "source": "coingecko"
+  },
+  "wombatexchange": {
+    "slug": "wombatexchange",
+    "twitter": "@WombatExchange",
+    "telegram": "https://t.me/WombatExchange",
+    "telegram_handle": "WombatExchange",
+    "discord": "https://discord.com/invite/DjQKaRwmVb",
+    "other_chat": [
+      "https://medium.com/wombat-exchange"
+    ],
+    "homepage": "https://www.wombat.exchange/",
+    "telegram_members": 5840,
+    "coingecko_id": "wombat-exchange",
+    "coingecko_name": "Wombat Exchange",
+    "symbol": "wom",
+    "market_cap_rank": 4325,
+    "source": "coingecko"
+  },
+  "xterio": {
+    "slug": "xterio",
+    "twitter": "@Xdotxyz",
+    "telegram": "https://t.me/xdotxyz",
+    "telegram_handle": "xdotxyz",
+    "discord": "https://discord.com/invite/a7jWVMNqc6",
+    "homepage": "https://x.xyz/",
+    "telegram_members": 150,
+    "coingecko_id": "x-2",
+    "coingecko_name": "X",
+    "symbol": "x",
+    "market_cap_rank": 4548,
+    "source": "coingecko"
+  },
+  "yieldnest": {
+    "slug": "yieldnest",
+    "twitter": "@YieldNestFi",
+    "telegram": "https://t.me/YieldNest",
+    "telegram_handle": "YieldNest",
+    "discord": "https://discord.com/invite/ayAZuQgFaE",
+    "other_chat": [
+      "https://medium.com/@yieldnest",
+      "https://www.youtube.com/@YieldNest"
+    ],
+    "homepage": "https://yieldnest.finance",
+    "github_repos": [
+      "https://github.com/yieldnest/"
+    ],
+    "telegram_members": 1348,
+    "coingecko_id": "yieldnest",
+    "coingecko_name": "YieldNest",
+    "symbol": "ynd",
+    "source": "coingecko"
+  },
+  "zksync-os": {
+    "slug": "zksync-os",
+    "twitter": "@zksync",
+    "homepage": "https://zksync.io/",
+    "github_repos": [
+      "https://github.com/matter-labs/zksync-era",
+      "https://github.com/matter-labs/zksync-web-era-docs"
+    ],
+    "forum": [
+      "https://zksync.mirror.xyz/",
+      "https://join.zksync.dev/"
+    ],
+    "coingecko_id": "zksync",
+    "coingecko_name": "ZKsync",
+    "symbol": "zk",
+    "market_cap_rank": 152,
+    "source": "coingecko"
+  },
+  "zksyncera": {
+    "slug": "zksyncera",
+    "twitter": "@zksync",
+    "homepage": "https://zksync.io/",
+    "github_repos": [
+      "https://github.com/matter-labs/zksync-era",
+      "https://github.com/matter-labs/zksync-web-era-docs"
+    ],
+    "forum": [
+      "https://zksync.mirror.xyz/",
+      "https://join.zksync.dev/"
+    ],
+    "coingecko_id": "zksync",
+    "coingecko_name": "ZKsync",
+    "symbol": "zk",
+    "market_cap_rank": 152,
+    "source": "coingecko"
+  },
+  "astroport": {
+    "slug": "astroport",
+    "twitter": "@astroport_fi",
+    "telegram": "https://t.me/astroport_fi",
+    "telegram_handle": "astroport_fi",
+    "discord": "https://discord.com/invite/astroport",
+    "subreddit": "https://www.reddit.com/r/Astroport/",
+    "homepage": "https://astroport.fi/",
+    "github_repos": [
+      "https://github.com/astroport-fi"
+    ],
+    "source": "manual"
+  },
+  "connext": {
+    "slug": "connext",
+    "twitter": "@EverclearOrg",
+    "telegram": "https://t.me/EverclearCommunity",
+    "telegram_handle": "EverclearCommunity",
+    "discord": "https://discord.gg/everclear",
+    "homepage": "https://www.everclear.org/",
+    "github_repos": [
+      "https://github.com/everclearorg"
+    ],
+    "source": "manual"
+  },
+  "ghostmarket": {
+    "slug": "ghostmarket",
+    "twitter": "@ghostmarketio",
+    "telegram": "https://t.me/ghostmarketio",
+    "telegram_handle": "ghostmarketio",
+    "discord": "https://discord.com/invite/THHTS4F",
+    "subreddit": "https://www.reddit.com/r/ghostmarket/",
+    "homepage": "https://ghostmarket.io/",
+    "github_repos": [
+      "https://github.com/OnBlockIO"
+    ],
+    "source": "manual"
+  },
+  "ichi": {
+    "slug": "ichi",
+    "twitter": "@ichifoundation",
+    "telegram": "https://t.me/ichifarm",
+    "telegram_handle": "ichifarm",
+    "discord": "https://discord.gg/9Vu6CDPZZv",
+    "homepage": "https://www.ichi.org/",
+    "github_repos": [
+      "https://github.com/ichifarm"
+    ],
+    "source": "manual"
+  },
+  "idlefinance": {
+    "slug": "idlefinance",
+    "twitter": "@idlefinance",
+    "telegram": "https://t.me/idlefinance",
+    "telegram_handle": "idlefinance",
+    "discord": "https://discord.gg/mpySAJp",
+    "homepage": "https://idle.finance/",
+    "github_repos": [
+      "https://github.com/Idle-Finance"
+    ],
+    "source": "manual"
+  },
+  "poolshark": {
+    "slug": "poolshark",
+    "twitter": "@PoolsharkLabs",
+    "discord": "https://discord.com/invite/HJhrD9sZ6K",
+    "homepage": "https://www.poolshark.fi/",
+    "github_repos": [
+      "https://github.com/poolshark-protocol"
+    ],
+    "source": "manual"
+  },
+  "segmentfinance": {
+    "slug": "segmentfinance",
+    "twitter": "@segment_fi",
+    "telegram": "https://t.me/segmentfi",
+    "telegram_handle": "segmentfi",
+    "discord": "https://discord.com/invite/sNkaUFmxSb",
+    "homepage": "https://app.segment.finance/",
+    "github_repos": [
+      "https://github.com/Segment-Finance"
+    ],
+    "source": "manual"
+  },
+  "shellprotocol": {
+    "slug": "shellprotocol",
+    "twitter": "@ShellProtocol",
+    "telegram": "https://t.me/shellprotocol",
+    "telegram_handle": "shellprotocol",
+    "discord": "https://discord.gg/shell-protocol",
+    "homepage": "https://shellprotocol.io/",
+    "github_repos": [
+      "https://github.com/cowri",
+      "https://github.com/Shell-Protocol"
+    ],
+    "source": "manual"
+  },
+  "vaultcraft": {
+    "slug": "vaultcraft",
+    "twitter": "@VaultCraft_io",
+    "telegram": "https://t.me/popcorndaochat",
+    "telegram_handle": "popcorndaochat",
+    "discord": "https://discord.com/invite/kgCun7SbkR",
+    "homepage": "https://app.vaultcraft.io/",
+    "github_repos": [
+      "https://github.com/Popcorn-Limited",
+      "https://github.com/VaultCraft"
+    ],
+    "source": "manual"
+  },
+  "wepiggy": {
+    "slug": "wepiggy",
+    "twitter": "@wepiggydotcom",
+    "telegram": "https://t.me/wepiggy",
+    "telegram_handle": "wepiggy",
+    "discord": "https://discord.com/invite/pew9k58",
+    "homepage": "https://www.wepiggy.com/",
+    "github_repos": [
+      "https://github.com/WePiggy"
+    ],
+    "source": "manual"
+  }
+}
