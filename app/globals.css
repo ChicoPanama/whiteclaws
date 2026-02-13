@@ -2010,61 +2010,47 @@ a { color: inherit; text-decoration: none; }
 
 /* ─── ENRICHMENT SECTION ─── */
 .pd-enrich {
-  border: 1px solid var(--brand-border, var(--border));
+  border: 1px solid var(--border-2);
   border-radius: 14px;
-  padding: 22px 24px;
-  background: var(--surface);
-  position: relative;
-  overflow: hidden;
-}
-
-.pd-enrich-glow {
-  position: absolute;
-  top: -40px;
-  right: -40px;
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  background: var(--brand, var(--green));
-  opacity: 0.04;
-  filter: blur(50px);
-  pointer-events: none;
-  animation: enrichGlow 4s ease-in-out infinite;
-}
-
-@keyframes enrichGlow {
-  0%, 100% { opacity: 0.03; transform: scale(1); }
-  50% { opacity: 0.06; transform: scale(1.15); }
+  padding: 24px 26px;
+  background: var(--surface-2);
 }
 
 .pd-enrich .pd-heading {
-  position: relative;
+  color: #F0F0F0;
+  font-size: 1.15rem;
+  margin-bottom: 18px;
+}
+
+.pd-enrich .pd-num {
+  color: var(--brand, var(--green));
+  font-size: .7rem;
 }
 
 .pd-enrich-label {
   font-family: var(--fm);
-  font-size: .58rem;
-  font-weight: 600;
+  font-size: .65rem;
+  font-weight: 700;
   letter-spacing: .06em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: #F0F0F0;
   margin-bottom: 10px;
   display: block;
 }
 
 .pd-enrich-sublabel {
   font-family: var(--fm);
-  font-size: .58rem;
-  font-weight: 500;
-  color: var(--dim);
+  font-size: .62rem;
+  font-weight: 600;
+  color: #C0C0C0;
   display: block;
   margin-bottom: 6px;
 }
 
 .pd-enrich-block {
-  padding-top: 16px;
-  margin-top: 16px;
-  border-top: 1px solid var(--border);
+  padding-top: 18px;
+  margin-top: 18px;
+  border-top: 1px solid var(--border-2);
 }
 
 /* ─── Social cards row ─── */
@@ -2077,11 +2063,11 @@ a { color: inherit; text-decoration: none; }
 .pd-social-card {
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 10px 16px;
+  gap: 10px;
+  padding: 12px 18px;
   border-radius: 10px;
-  background: var(--bg);
-  border: 1px solid var(--border);
+  background: var(--surface-3);
+  border: 1px solid var(--border-2);
   text-decoration: none;
   transition: all .25s cubic-bezier(.4,0,.2,1);
   flex: 1;
@@ -2089,45 +2075,46 @@ a { color: inherit; text-decoration: none; }
 }
 
 .pd-social-card:hover {
-  border-color: var(--brand-border, var(--border-2));
-  background: var(--brand-surface, var(--surface-2));
-  transform: translateY(-1px);
-  box-shadow: 0 4px 20px rgba(0,0,0,.3);
+  border-color: var(--brand, var(--green));
+  background: var(--surface-3);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(0,0,0,.4);
 }
 
 .pd-social-icon {
-  font-size: .9rem;
-  width: 28px;
-  height: 28px;
+  font-size: 1rem;
+  width: 32px;
+  height: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 8px;
-  background: var(--surface-2);
+  background: var(--border-2);
   flex-shrink: 0;
-  transition: background .25s;
+  transition: all .25s;
 }
 
 .pd-social-card:hover .pd-social-icon {
-  background: var(--brand-border, var(--border-2));
+  background: var(--brand, var(--green));
+  color: var(--bg);
 }
 
 .pd-social-name {
   font-family: var(--fm);
-  font-size: .72rem;
-  font-weight: 600;
-  color: var(--ink-2);
+  font-size: .78rem;
+  font-weight: 700;
+  color: #F0F0F0;
   flex: 1;
   transition: color .25s;
 }
 
 .pd-social-card:hover .pd-social-name {
-  color: var(--brand, var(--ink));
+  color: #FFFFFF;
 }
 
 .pd-social-arrow {
-  font-size: .7rem;
-  color: var(--dim);
+  font-size: .75rem;
+  color: #707070;
   transition: all .25s;
 }
 
@@ -2139,13 +2126,14 @@ a { color: inherit; text-decoration: none; }
 /* Rank card variant */
 .pd-rank-card {
   cursor: default;
-  border-color: var(--brand-border, rgba(137,224,109,.15));
+  border-color: var(--brand, rgba(137,224,109,.25));
+  background: rgba(137,224,109,.04);
 }
 
 .pd-rank-value {
   font-family: var(--fm);
-  font-size: .82rem;
-  font-weight: 700;
+  font-size: .9rem;
+  font-weight: 800;
   color: var(--brand, var(--green));
   font-variant-numeric: tabular-nums;
 }
@@ -2154,31 +2142,34 @@ a { color: inherit; text-decoration: none; }
 .pd-resource-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 6px;
+  gap: 4px;
 }
 
 .pd-resource-link {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 8px 12px;
+  padding: 9px 12px;
   border-radius: 8px;
   text-decoration: none;
   transition: all .2s;
-  color: var(--ink-2);
+  color: #F0F0F0;
+  border: 1px solid transparent;
 }
 
 .pd-resource-link:hover {
-  background: var(--surface-2);
-  color: var(--brand, var(--ink));
+  background: var(--surface-3);
+  color: #FFFFFF;
+  border-color: var(--border-2);
 }
 
 .pd-resource-icon {
-  font-size: .7rem;
-  width: 20px;
+  font-size: .75rem;
+  width: 22px;
   text-align: center;
   flex-shrink: 0;
-  opacity: 0.6;
+  opacity: 0.7;
+  transition: opacity .2s;
 }
 
 .pd-resource-link:hover .pd-resource-icon {
@@ -2187,14 +2178,14 @@ a { color: inherit; text-decoration: none; }
 
 .pd-resource-name {
   font-family: var(--fm);
-  font-size: .68rem;
-  font-weight: 500;
+  font-size: .72rem;
+  font-weight: 600;
   flex: 1;
 }
 
 .pd-resource-arrow {
-  font-size: .6rem;
-  color: var(--dim);
+  font-size: .65rem;
+  color: #707070;
   opacity: 0;
   transform: translate(-4px, 0);
   transition: all .2s;
@@ -2210,69 +2201,64 @@ a { color: inherit; text-decoration: none; }
 .pd-auditor-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
+  gap: 7px;
   margin-bottom: 12px;
 }
 
 .pd-auditor-chip {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 7px;
   font-family: var(--fm);
-  font-size: .64rem;
-  font-weight: 500;
-  padding: 5px 12px;
+  font-size: .68rem;
+  font-weight: 600;
+  padding: 6px 14px;
   border-radius: 100px;
-  background: var(--bg);
-  color: var(--ink-2);
-  border: 1px solid var(--border);
+  background: var(--surface-3);
+  color: #F0F0F0;
+  border: 1px solid var(--border-2);
   transition: all .2s;
 }
 
 .pd-auditor-chip:hover {
-  border-color: var(--brand-border, var(--border-2));
+  border-color: var(--brand, var(--green));
+  color: #FFFFFF;
 }
 
 .pd-auditor-dot {
-  width: 5px;
-  height: 5px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
   background: var(--brand, var(--green));
   flex-shrink: 0;
-  animation: auditPulse 2.5s ease-in-out infinite;
-}
-
-@keyframes auditPulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.3; }
 }
 
 .pd-audit-reports {
-  padding-top: 8px;
+  padding-top: 10px;
 }
 
 .pd-audit-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 4px;
+  gap: 5px;
 }
 
 .pd-audit-link {
   font-family: var(--fm);
-  font-size: .58rem;
-  font-weight: 500;
-  padding: 3px 10px;
+  font-size: .62rem;
+  font-weight: 600;
+  padding: 4px 12px;
   border-radius: 100px;
-  color: var(--muted);
+  color: #C0C0C0;
   text-decoration: none;
   transition: all .2s;
-  border: 1px solid transparent;
+  border: 1px solid var(--border);
+  background: var(--bg);
 }
 
 .pd-audit-link:hover {
   color: var(--brand, var(--green));
-  border-color: var(--brand-border, var(--border));
-  background: var(--bg);
+  border-color: var(--brand, var(--green));
 }
 
 /* ─── Contact cards ─── */
@@ -2285,34 +2271,33 @@ a { color: inherit; text-decoration: none; }
 .pd-contact-card {
   display: flex;
   flex-direction: column;
-  gap: 2px;
-  padding: 10px 14px;
+  gap: 3px;
+  padding: 12px 16px;
   border-radius: 10px;
-  background: var(--bg);
-  border: 1px solid var(--border);
+  background: var(--surface-3);
+  border: 1px solid var(--border-2);
   text-decoration: none;
   transition: all .2s;
 }
 
 .pd-contact-card:hover {
-  border-color: var(--brand-border, var(--border-2));
-  background: var(--surface-2);
+  border-color: var(--brand, var(--green));
 }
 
 .pd-contact-type {
   font-family: var(--fm);
-  font-size: .56rem;
-  font-weight: 600;
+  font-size: .58rem;
+  font-weight: 700;
   letter-spacing: .04em;
   text-transform: uppercase;
-  color: var(--dim);
+  color: #C0C0C0;
 }
 
 .pd-contact-email {
   font-family: var(--fm);
-  font-size: .7rem;
-  font-weight: 500;
-  color: var(--ink-2);
+  font-size: .74rem;
+  font-weight: 600;
+  color: #F0F0F0;
   transition: color .2s;
 }
 
