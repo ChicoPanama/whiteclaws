@@ -62,8 +62,14 @@ export interface Database {
           github_url: string | null
           docs_url: string | null
           contact_email: string | null
-          verified: boolean
           owner_id: string | null
+          verified: boolean
+          claimed: boolean
+          claimed_at: string | null
+          immunefi_slug: string | null
+          immunefi_url: string | null
+          security_email: string | null
+          github_org: string | null
         }
         Insert: Partial<Database['public']['Tables']['protocols']['Row']> & { slug: string; name: string }
         Update: Partial<Database['public']['Tables']['protocols']['Row']>
@@ -132,6 +138,12 @@ export interface Database {
           poc_url: string | null
           encrypted_report: Json | null
           description: string | null
+          quality_score: number | null
+          similarity_hash: string | null
+          submission_source: string
+          immunefi_routed: boolean
+          immunefi_routed_at: string | null
+          notification_sent: boolean
         }
         Insert: Partial<Database['public']['Tables']['findings']['Row']> & { researcher_id: string; title: string; severity: string }
         Update: Partial<Database['public']['Tables']['findings']['Row']>
@@ -204,6 +216,88 @@ export interface Database {
         }
         Insert: Partial<Database['public']['Tables']['messages']['Row']>
         Update: Partial<Database['public']['Tables']['messages']['Row']>
+      }
+      participation_events: {
+        Row: {
+          id: string
+          user_id: string
+          event_type: string
+          points: number
+          metadata: Json
+          wallet_address: string | null
+          verified: boolean
+          season: number
+          week: number
+          created_at: string
+        }
+        Insert: Partial<Database['public']['Tables']['participation_events']['Row']> & { user_id: string; event_type: string; season: number; week: number }
+        Update: Partial<Database['public']['Tables']['participation_events']['Row']>
+      }
+      contribution_scores: {
+        Row: {
+          id: string
+          user_id: string
+          season: number
+          security_points: number
+          growth_points: number
+          engagement_points: number
+          social_points: number
+          penalty_points: number
+          total_score: number
+          rank: number | null
+          streak_weeks: number
+          last_active_at: string | null
+          sybil_multiplier: number
+          updated_at: string
+        }
+        Insert: Partial<Database['public']['Tables']['contribution_scores']['Row']> & { user_id: string; season: number }
+        Update: Partial<Database['public']['Tables']['contribution_scores']['Row']>
+      }
+      spam_flags: {
+        Row: {
+          id: string
+          user_id: string
+          flag_type: string
+          severity: string
+          points_deducted: number
+          metadata: Json
+          finding_id: string | null
+          reviewed: boolean
+          reviewed_by: string | null
+          created_at: string
+        }
+        Insert: Partial<Database['public']['Tables']['spam_flags']['Row']> & { user_id: string; flag_type: string }
+        Update: Partial<Database['public']['Tables']['spam_flags']['Row']>
+      }
+      finding_notifications: {
+        Row: {
+          id: string
+          finding_id: string | null
+          protocol_id: string | null
+          channel: string
+          recipient: string
+          sent_at: string
+          status: string
+          error: string | null
+          created_at: string
+        }
+        Insert: Partial<Database['public']['Tables']['finding_notifications']['Row']> & { channel: string; recipient: string }
+        Update: Partial<Database['public']['Tables']['finding_notifications']['Row']>
+      }
+      anti_sybil_flags: {
+        Row: {
+          id: string
+          wallet_address: string
+          risk_score: number
+          flags: Json
+          cluster_id: string | null
+          reviewed: boolean
+          reviewed_by: string | null
+          created_at: string
+          updated_at: string
+        }
+        Insert: Partial<Database['public']['Tables']['anti_sybil_flags']['Row']> & { wallet_address: string }
+        Update: Partial<Database['public']['Tables']['anti_sybil_flags']['Row']>
       }
     }
     Views: Record<string, never>

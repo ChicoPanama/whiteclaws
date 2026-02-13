@@ -1,0 +1,1722 @@
+{
+  "sushiswap": {
+    "email": "security@sushi.com",
+    "source": "github:sushi-labs/sushiswap/.github/SECURITY.md",
+    "confidence": "high"
+  },
+  "0x": {
+    "email": "security@0x.org",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "88mphv3": {
+    "email": "security@88mph.app",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "aave": {
+    "email": "security@aave.com",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "acala": {
+    "email": "security@acala.network",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "aera": {
+    "email": "security@aera.finance",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "alchemix": {
+    "email": "security@alchemix.fi",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "aleo": {
+    "email": "security@aleo.org",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "alephzero": {
+    "email": "security@alephzero.org",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "alex": {
+    "email": "security@alexlab.co",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "aloeprotocol": {
+    "email": "security@aloe.capital",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "alongside": {
+    "email": "security@alongside.xyz",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "alpen-labs": {
+    "email": "security@alpenlabs.io",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "alphaventuredao": {
+    "email": "security@alpha.wtf",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "ambire": {
+    "email": "security@ambire.com",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "ankr": {
+    "email": "security@ankr.com",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "antefinance": {
+    "email": "security@ante.finance",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "anvil": {
+    "email": "security@anvil.xyz",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "apecoinmainnet": {
+    "email": "security@apechain.com",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "arbitrum": {
+    "email": "security@arbitrum.foundation",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "arborfinance": {
+    "email": "security@arbor.finance",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "arcade": {
+    "email": "security@arcade.xyz",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "arkadiko": {
+    "email": "security@arkadiko.finance",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "arkham": {
+    "email": "security@arkhamintelligence.com",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "aspida": {
+    "email": "security@aspidanet.com",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "astarnetwork": {
+    "email": "security@astar.network",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "aster": {
+    "email": "security@asterdex.com",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "astroport": {
+    "email": "security@astroport.fi",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "aurafinance": {
+    "email": "security@aura.finance",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "autonolas": {
+    "email": "security@olas.network",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "avail": {
+    "email": "security@availproject.org",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "avalabs": {
+    "email": "security@avax.network",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "avalanche": {
+    "email": "security@avax.network",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "axelarnetwork": {
+    "email": "security@axelar.network",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "babylon-labs": {
+    "email": "security@babylonlabs.io",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "balancer": {
+    "email": "security@balancer.fi",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "balmy": {
+    "email": "security@balmy.xyz",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "bankx": {
+    "email": "security@bankx.io",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "beanstalk": {
+    "email": "security@bean.money",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "beefyfinance": {
+    "email": "security@beefy.com",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "beethovenx": {
+    "email": "security@beets.fi",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "beets": {
+    "email": "security@beets.fi",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "berachain-webapps": {
+    "email": "security@berachain.com",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "berachain": {
+    "email": "security@berachain.com",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "beradrome": {
+    "email": "security@beradrome.com",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "betafinance": {
+    "email": "security@betafinance.org",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "biconomy": {
+    "email": "security@biconomy.com",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "bifi": {
+    "email": "security@bifi.finance",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "bifrostfinance": {
+    "email": "security@bifrost.io",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "bitcoinsv": {
+    "email": "security@bitcoin.org",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "bitflow": {
+    "email": "security@bitflow.finance",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "bitswift": {
+    "email": "security@bits.financial",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "blackwing": {
+    "email": "security@blackwing.fi",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "blockpinetwork": {
+    "email": "security@blockpi.io",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "blockwallet": {
+    "email": "security@blockwallet.io",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "bondprotocol": {
+    "email": "security@bondprotocol.finance",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "burrow": {
+    "email": "security@burrow.finance",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "capyfi": {
+    "email": "security@capyfi.com",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "cardanofoundation": {
+    "email": "security@cardano.org",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "celer": {
+    "email": "security@celer.network",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "ceres": {
+    "email": "security@cerestoken.io",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "chainlink": {
+    "email": "security@chain.link",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "connext": {
+    "email": "security@connext.network",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "coreum": {
+    "email": "security@coreum.com",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "cove": {
+    "email": "security@cove.finance",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "cowprotocol": {
+    "email": "security@cow.fi",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "daimo-pay": {
+    "email": "security@daimo.com",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "daimo": {
+    "email": "security@daimo.com",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "darwinia": {
+    "email": "security@darwinia.network",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "davos": {
+    "email": "security@davos.xyz",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "decentraland": {
+    "email": "security@decentraland.org",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "defisaver": {
+    "email": "security@defisaver.com",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "defly": {
+    "email": "security@defly.app",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "delv": {
+    "email": "security@delv.tech",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "deriprotocol": {
+    "email": "security@deri.io",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "dex-protocol": {
+    "email": "security@dexe.network",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "dexeprotocol": {
+    "email": "security@dexe.network",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "dforce": {
+    "email": "security@dforce.network",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "dhedge": {
+    "email": "security@dhedge.org",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "dodo": {
+    "email": "security@dodoex.io",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "dodov3": {
+    "email": "security@dodoex.io",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "drips": {
+    "email": "security@drip.community",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "eckodao": {
+    "email": "security@ecko.finance",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "eclipse": {
+    "email": "security@eclipse.xyz",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "eco": {
+    "email": "security@econialabs.com",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "econia": {
+    "email": "security@econialabs.com",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "elixirprotocol": {
+    "email": "security@elixir.xyz",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "enosys": {
+    "email": "security@enosys.global",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "ensuro": {
+    "email": "security@ensuro.co",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "enzyme-onyx": {
+    "email": "security@enzyme.finance",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "enzymefinance": {
+    "email": "security@enzyme.finance",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "etherfi": {
+    "email": "security@ether.fi",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "exactly": {
+    "email": "security@exact.ly",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "exodus": {
+    "email": "security@exodus.com",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "farcaster": {
+    "email": "security@farcaster.xyz",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "fassets": {
+    "email": "security@flare.network",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "fbtc": {
+    "email": "security@fbtc.com",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "felix": {
+    "email": "security@usefelix.xyz",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "filecoin": {
+    "email": "security@filecoin.io",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "firedancer": {
+    "email": "security@jumpcrypto.com",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "flamingofinance": {
+    "email": "security@flamingo.finance",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "flarenetwork": {
+    "email": "security@flare.network",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "fluxfinance": {
+    "email": "security@fluxfinance.com",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "foil": {
+    "email": "security@foil.xyz",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "folksfinance": {
+    "email": "security@folks.finance",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "forta": {
+    "email": "security@forta.org",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "foundation": {
+    "email": "security@foundation.app",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "gainsnetwork": {
+    "email": "security@gains.trade",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "galagames": {
+    "email": "security@gala.com",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "gear": {
+    "email": "security@gearbox.finance",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "gearbox": {
+    "email": "security@gearbox.finance",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "geniusyield": {
+    "email": "security@geniusyield.co",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "gerowallet": {
+    "email": "security@gerowallet.io",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "ghostmarket": {
+    "email": "security@ghostmarket.io",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "glodollar": {
+    "email": "security@glodollar.org",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "gmx": {
+    "email": "security@gmx.io",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "gnosischain": {
+    "email": "security@gnosis.io",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "gogopool": {
+    "email": "security@gogopool.com",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "goldfinch": {
+    "email": "security@goldfinch.finance",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "gysr": {
+    "email": "security@gysr.io",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "hakkafinance": {
+    "email": "security@hakka.finance",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "harvest": {
+    "email": "security@harvest.finance",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "hashflow": {
+    "email": "security@hashflow.com",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "hathornetwork": {
+    "email": "security@hathor.network",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "hedera": {
+    "email": "security@hedera.com",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "hibachi": {
+    "email": "security@hibachi.xyz",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "horizen": {
+    "email": "security@horizen.io",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "hourglass": {
+    "email": "security@hourglass.com",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "hydradx": {
+    "email": "security@hydration.net",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "hydration": {
+    "email": "security@hydration.net",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "hyperlane": {
+    "email": "security@hyperlane.xyz",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "ichi": {
+    "email": "security@ichi.org",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "icon": {
+    "email": "security@icon.foundation",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "idex": {
+    "email": "security@kuma.bid",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "idlefinance": {
+    "email": "security@idle.finance",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "illuvium": {
+    "email": "security@illuvium.io",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "immunefi": {
+    "email": "security@immunefi.com",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "immutable": {
+    "email": "security@immutable.com",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "impossible-cloud-network": {
+    "email": "security@impossible.cloud",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "impossiblefinance": {
+    "email": "security@impossible.finance",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "indexcoop": {
+    "email": "security@indexcoop.com",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "infinex": {
+    "email": "security@infinex.xyz",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "injective": {
+    "email": "security@injective.com",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "instadapp": {
+    "email": "security@instadapp.io",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "integral": {
+    "email": "security@integral.link",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "integriteenetwork": {
+    "email": "security@integritee.network",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "interlay": {
+    "email": "security@interlay.io",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "intmax": {
+    "email": "security@intmax.io",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "inverse-finance": {
+    "email": "security@inverse.finance",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "ion-protocol": {
+    "email": "security@ionprotocol.io",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "ipor": {
+    "email": "security@ipor.io",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "jito-bam-client": {
+    "email": "security@jito.network",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "jito-foundation": {
+    "email": "security@jito.network",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "jito": {
+    "email": "security@jito.network",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "kadena": {
+    "email": "security@kadena.io",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "kelp-dao": {
+    "email": "security@kelpdao.xyz",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "kiln-defi": {
+    "email": "security@kiln.fi",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "kiln-on-chain-v1": {
+    "email": "security@kiln.fi",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "kiln-webapp": {
+    "email": "security@kiln.fi",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "kiln": {
+    "email": "security@kiln.fi",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "kinesis-bridge-on-kadena": {
+    "email": "security@kadena.io",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "landx": {
+    "email": "security@landx.fi",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "layer3": {
+    "email": "security@layer3.xyz",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "layerzero": {
+    "email": "security@layerzero.network",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "lido": {
+    "email": "security@lido.fi",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "lidoonpolygon": {
+    "email": "security@lido.fi",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "lifi": {
+    "email": "security@lifinity.io",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "light-protocol": {
+    "email": "security@lightprotocol.com",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "liquidswap": {
+    "email": "security@liquidswap.com",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "listadao": {
+    "email": "security@lista.org",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "livepeer": {
+    "email": "security@livepeer.org",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "localtraders": {
+    "email": "security@localtraders.com",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "lombard-finance": {
+    "email": "security@lombard.finance",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "lossless": {
+    "email": "security@lossless.io",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "lybrafinance": {
+    "email": "security@lybra.finance",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "lyra": {
+    "email": "security@lyra.finance",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "magpiexyz": {
+    "email": "security@magpiexyz.io",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "mantlelsp": {
+    "email": "security@mantle.xyz",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "maple": {
+    "email": "security@maple.finance",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "mars": {
+    "email": "security@marsprotocol.io",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "marsecosystem": {
+    "email": "security@marsecosystem.com",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "mayaprotocol": {
+    "email": "security@mayaprotocol.com",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "meanfinance": {
+    "email": "security@mean.finance",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "metastreet-yield-pass": {
+    "email": "security@metastreet.xyz",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "metastreet": {
+    "email": "security@metastreet.xyz",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "metis": {
+    "email": "security@metis.io",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "metronome": {
+    "email": "security@metronome.io",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "monero-oxide": {
+    "email": "security@monero.com",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "moneyonchain": {
+    "email": "security@moneyonchain.com",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "moonbeamnetwork": {
+    "email": "security@moonbeam.network",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "moonwell": {
+    "email": "security@moonwell.fi",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "mountainprotocol": {
+    "email": "security@mountainprotocol.com",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "mtpelerin": {
+    "email": "security@mtpelerin.com",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "mux": {
+    "email": "security@mux.network",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "myntandzero": {
+    "email": "security@sovryn.com",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "native": {
+    "email": "security@native.org",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "nayms": {
+    "email": "security@nayms.com",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "neo": {
+    "email": "security@neotokyo.codes",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "neutron": {
+    "email": "security@neutron.org",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "nexusmutual": {
+    "email": "security@nexusmutual.io",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "nftfi": {
+    "email": "security@nftfi.com",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "nftfitestnetrefi": {
+    "email": "security@nftfi.com",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "nftx": {
+    "email": "security@nftx.io",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "nodle": {
+    "email": "security@nodle.com",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "nomad": {
+    "email": "security@nomad.xyz",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "notional": {
+    "email": "security@notional.finance",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "nucleus": {
+    "email": "security@nucleusearn.io",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "oasis": {
+    "email": "security@oasisprotocol.org",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "oceanprotocol": {
+    "email": "security@ocean.one",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "octopusnetwork": {
+    "email": "security@omnity.network",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "olafinance": {
+    "email": "security@ola.finance",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "olympus": {
+    "email": "security@olympusdao.finance",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "omni-network": {
+    "email": "security@nomina.io",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "ondofinance": {
+    "email": "security@ondo.finance",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "openzeppelin-stellar": {
+    "email": "security@openzeppelin.com",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "openzeppelin": {
+    "email": "security@openzeppelin.com",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "opyngamma": {
+    "email": "security@opyn.co",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "orca": {
+    "email": "security@orca.so",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "orderlynetwork": {
+    "email": "security@orderly.network",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "origin-protocol": {
+    "email": "security@originprotocol.com",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "origindefi": {
+    "email": "security@originprotocol.com",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "ostium": {
+    "email": "security@ostium.io",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "overlay": {
+    "email": "security@overlay.market",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "pancakeswap": {
+    "email": "security@pancakeswap.finance",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "pantos": {
+    "email": "security@pantos.io",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "parallel": {
+    "email": "security@parallel.best",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "parallelwallet": {
+    "email": "security@parallel.fi",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "pareto": {
+    "email": "security@pareto.credit",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "pendle": {
+    "email": "security@pendle.finance",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "perennial": {
+    "email": "security@perennial.finance",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "pikaprotocol": {
+    "email": "security@pikaprotocol.com",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "pinto": {
+    "email": "security@pinto.money",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "plume-network": {
+    "email": "security@plumenetwork.xyz",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "pnetwork": {
+    "email": "security@p.network",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "polkastarter": {
+    "email": "security@polkastarter.com",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "polygon": {
+    "email": "security@polygon.technology",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "polymarket": {
+    "email": "security@polymarket.com",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "polymesh": {
+    "email": "security@polymesh.network",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "poolshark": {
+    "email": "security@poolshark.fi",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "pooltogether": {
+    "email": "security@pooltogether.com",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "popsicle": {
+    "email": "security@popsicle.finance",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "portfinance": {
+    "email": "security@port.finance",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "pragmaoracle": {
+    "email": "security@pragma.build",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "primitive": {
+    "email": "security@primitive.xyz",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "print3r": {
+    "email": "security@print3r.xyz",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "pstake": {
+    "email": "security@pstake.finance",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "pstakeoncosmos": {
+    "email": "security@pstake.finance",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "pushprotocol": {
+    "email": "security@push.org",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "pythnetwork": {
+    "email": "security@pyth.network",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "qblockchain": {
+    "email": "security@q.org",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "quadrata": {
+    "email": "security@plasma.finance",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "radiant": {
+    "email": "security@radiant.capital",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "rai": {
+    "email": "security@railgun.org",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "rangeprotocol": {
+    "email": "security@rangeprotocol.com",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "raydium": {
+    "email": "security@raydium.io",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "reserve": {
+    "email": "security@reserve.org",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "resonate": {
+    "email": "security@resonate.finance",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "revert": {
+    "email": "security@revert.finance",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "revest": {
+    "email": "security@revest.finance",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "rhinofi": {
+    "email": "security@rhino.fi",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "ribbon": {
+    "email": "security@ribbon.finance",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "ringdao": {
+    "email": "security@ring.exchange",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "rocketpool": {
+    "email": "security@rocketpool.net",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "router": {
+    "email": "security@routerprotocol.com",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "royco": {
+    "email": "security@royco.org",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "rubic": {
+    "email": "security@app.rubic.exchange",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "sectorfinance": {
+    "email": "security@sector.finance",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "securefi": {
+    "email": "security@securefi.io",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "segmentfinance": {
+    "email": "security@segment.finance",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "sei": {
+    "email": "security@sei.io",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "serai": {
+    "email": "security@serai.exchange",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "shellprotocol": {
+    "email": "security@shellprotocol.io",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "sherlock": {
+    "email": "security@sherlock.xyz",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "silofinance-v2": {
+    "email": "security@silo.finance",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "singularitydao": {
+    "email": "security@singularitydao.ai",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "skatefi": {
+    "email": "security@rangeprotocol.com",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "smardex": {
+    "email": "security@smardex.io",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "sns": {
+    "email": "security@sns.id",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "sora": {
+    "email": "security@sorare.com",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "sovryn": {
+    "email": "security@sovryn.app",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "spectral": {
+    "email": "security@spectral.finance",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "ssv-network": {
+    "email": "security@ssv.network",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "staderforbnb": {
+    "email": "security@staderlabs.com",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "staderforeth": {
+    "email": "security@staderlabs.com",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "staderforpolygon": {
+    "email": "security@staderlabs.com",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "stafi": {
+    "email": "security@stafi.io",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "stakelink": {
+    "email": "security@stake.link",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "stakestone": {
+    "email": "security@stakestone.io",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "stakewise": {
+    "email": "security@stakewise.io",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "stargate": {
+    "email": "security@stargate.vechain.org",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "starkex": {
+    "email": "security@starkware.co",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "starknet-staking": {
+    "email": "security@starknet.io",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "strikefinance": {
+    "email": "security@strikefinance.org",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "summerfi": {
+    "email": "security@summer.fi",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "superbots": {
+    "email": "security@superbots.finance",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "superfluid": {
+    "email": "security@superfluid.org",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "sweateconomy": {
+    "email": "security@sweateconomy.com",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "swell": {
+    "email": "security@swellnetwork.io",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "symbiosis": {
+    "email": "security@symbiosis.finance",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "symbiotic": {
+    "email": "security@symbiotic.fi",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "synthetix": {
+    "email": "security@synthetix.io",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "templar-protocol": {
+    "email": "security@templarfi.org",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "termstructurelabs": {
+    "email": "security@termstructure.com",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "tetu": {
+    "email": "security@tetu.io",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "thegraph": {
+    "email": "security@thegraph.com",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "thesandbox": {
+    "email": "security@sandbox.game",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "thorchain": {
+    "email": "security@thorchain.org",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "tidal": {
+    "email": "security@tidal.finance",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "timelessandbunni": {
+    "email": "security@timelessfi.com",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "tinyman": {
+    "email": "security@tinyman.org",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "tinymanv2": {
+    "email": "security@tinyman.org",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "tokemak": {
+    "email": "security@tokemak.xyz",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "toucan": {
+    "email": "security@toucan.earth",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "traderjoe": {
+    "email": "security@traderjoexyz.com",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "tranchess": {
+    "email": "security@tranchess.com",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "trufin": {
+    "email": "security@trufin.io",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "uniswaponzksync": {
+    "email": "security@uniswap.org",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "universalpage": {
+    "email": "security@universal.page",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "usdt0": {
+    "email": "security@usdt0.to",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "usx": {
+    "email": "security@usx.capital",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "utix": {
+    "email": "security@utix.io",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "vaultcraft": {
+    "email": "security@vaultcraft.io",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "vechain": {
+    "email": "security@vechain.org",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "velvet-capital-v2": {
+    "email": "security@velvetcapital.com",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "vesper": {
+    "email": "security@vesper.finance",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "vesu": {
+    "email": "security@vesu.xyz",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "voltz": {
+    "email": "security@voltz.xyz",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "waymont": {
+    "email": "security@waymont.co",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "wepiggy": {
+    "email": "security@wepiggy.com",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "wildcatprotocol": {
+    "email": "security@wildcat.finance",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "wombatexchange": {
+    "email": "security@wombat.exchange",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "xion": {
+    "email": "security@xion.burnt.com",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "xoxno": {
+    "email": "security@xoxno.com",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "yelay": {
+    "email": "security@yelay.io",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "yieldnest": {
+    "email": "security@yieldnest.finance",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "zano": {
+    "email": "security@zano.org",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "zenlink": {
+    "email": "security@zenlink.pro",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "zerion": {
+    "email": "security@zerion.io",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "zerolend": {
+    "email": "security@zerolend.xyz",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "zest-protocol-v2": {
+    "email": "security@zestprotocol.com",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "zksync-os": {
+    "email": "security@zksync.io",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "zksyncera": {
+    "email": "security@zksync.io",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "zkverify": {
+    "email": "security@zkverify.io",
+    "source": "mx_probe",
+    "confidence": "medium"
+  },
+  "zodiac": {
+    "email": "security@zodiac.wiki",
+    "source": "mx_probe",
+    "confidence": "medium"
+  }
+}

@@ -7,13 +7,20 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "immunefi:sync": "node scripts/immunefi-sync.mjs"
+    "immunefi:sync": "node scripts/immunefi-sync.mjs",
+    "enrich:index": "tsx scripts/extract_whiteclaws_protocol_index.ts",
+    "enrich:domains": "tsx scripts/build_protocol_domains.ts",
+    "enrich:contacts": "tsx scripts/enrich_protocol_contacts.ts",
+    "enrich:contracts": "tsx scripts/enrich_protocol_contracts.ts",
+    "enrich:validate": "tsx scripts/validate_enrichment.ts",
+    "enrich:all": "pnpm enrich:index && pnpm enrich:domains && pnpm enrich:contacts && pnpm enrich:contracts && pnpm enrich:validate",
+    "seed:supabase": "tsx scripts/seed_supabase_protocols.ts"
   },
   "dependencies": {
     "@privy-io/react-auth": "^1.93.0",
     "@privy-io/server-auth": "^1.32.5",
     "@supabase/ssr": "^0.8.0",
-    "@supabase/supabase-js": "^2.39.0",
+    "@supabase/supabase-js": "^2.95.3",
     "@tanstack/react-query": "^5.62.0",
     "clsx": "^2.1.1",
     "next": "14.2.21",
@@ -32,9 +39,11 @@
     "@types/react-dom": "^18",
     "autoprefixer": "^10.0.1",
     "p-limit": "^7.3.0",
+    "pg": "^8.18.0",
     "postcss": "^8",
     "sharp": "^0.34.5",
     "tailwindcss": "^3.4.1",
+    "tsx": "^4.21.0",
     "typescript": "^5"
   }
 }

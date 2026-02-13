@@ -1,0 +1,29 @@
+{
+  "deny_exact": [
+    "images.ctfassets.net",
+    "assets.coingecko.com",
+    "static.coingecko.com",
+    "icons.llamao.fi",
+    "raw.githubusercontent.com",
+    "user-images.githubusercontent.com",
+    "avatars.githubusercontent.com",
+    "ipfs.io",
+    "cloudflare-ipfs.com",
+    "gateway.pinata.cloud",
+    "arweave.net",
+    "storage.googleapis.com",
+    "cdn.jsdelivr.net"
+  ],
+  "deny_contains": [
+    "vercel-storage.com",
+    "blob.vercel",
+    "cloudfront.net",
+    "akamai",
+    "fastly",
+    "cdn.",
+    "img.",
+    "images.",
+    "static.",
+    "assets."
+  ]
+}

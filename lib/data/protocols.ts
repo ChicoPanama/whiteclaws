@@ -1,5 +1,6 @@
 import fs from 'fs'
 import path from 'path'
+import { type Disclosure, withProtocolDisclosure } from '@/lib/protocolContacts'
 
 export interface ProtocolJSON {
   slug: string
@@ -61,6 +62,7 @@ export interface ProtocolJSON {
   }
   source?: string
   updated_at?: string
+  disclosure?: Disclosure | null
 }
 
 function getProtocolsDir(): string {
@@ -76,7 +78,8 @@ export function getProtocolsFromJSON(): ProtocolJSON[] {
     .map((slug) => {
       try {
         const filePath = path.join(getProtocolsDir(), `${slug}.json`)
-        return JSON.parse(fs.readFileSync(filePath, 'utf-8')) as ProtocolJSON
+        const protocol = JSON.parse(fs.readFileSync(filePath, 'utf-8')) as ProtocolJSON
+        return withProtocolDisclosure(protocol)
       } catch {
         return null
       }
@@ -89,7 +92,8 @@ export function getProtocolBySlug(slug: string): ProtocolJSON | null {
   try {
     const safe = slug.replace(/[^a-z0-9-]/g, '')
     const filePath = path.join(getProtocolsDir(), `${safe}.json`)
-    return JSON.parse(fs.readFileSync(filePath, 'utf-8')) as ProtocolJSON
+    const protocol = JSON.parse(fs.readFileSync(filePath, 'utf-8')) as ProtocolJSON
+    return withProtocolDisclosure(protocol)
   } catch {
     return null
   }

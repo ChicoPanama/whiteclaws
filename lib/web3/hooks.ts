@@ -5,7 +5,8 @@
 
 'use client'
 
-import { useState, useCallback, useEffect } from 'react'
+import { useState, useCallback } from 'react'
+import { usePrivy, useWallets } from '@privy-io/react-auth'
 
 // ─── Types ───
 export interface WhiteClawsState {
@@ -22,31 +23,12 @@ export interface AccessStatusState {
   checkAccess: (address?: string) => Promise<boolean>
 }
 
-// ─── Privy helpers (lazy import to avoid crash when not configured) ───
-function usePrivySafe() {
-  try {
-    const privy = require('@privy-io/react-auth')
-    return privy.usePrivy()
-  } catch {
-    return { authenticated: false, user: null, login: () => {}, logout: () => {}, ready: false }
-  }
-}
-
-function useWalletsSafe() {
-  try {
-    const privy = require('@privy-io/react-auth')
-    return privy.useWallets()
-  } catch {
-    return { wallets: [] }
-  }
-}
-
 /**
  * Wallet connection hook — uses Privy when configured.
  */
 export function useWhiteClaws(): WhiteClawsState {
-  const { authenticated, user, login, logout, ready } = usePrivySafe()
-  const { wallets } = useWalletsSafe()
+  const { authenticated, user, login, logout, ready } = usePrivy()
+  const { wallets } = useWallets()
 
   const address = wallets?.[0]?.address || user?.wallet?.address || null
   const isConnected = authenticated && !!address
@@ -68,10 +50,6 @@ export function useWhiteClaws(): WhiteClawsState {
   }
 }
 
-/**
- * Access status hook — checks Supabase for access records.
- * Will check on-chain SBT once contract is deployed.
- */
 export function useAccessStatus(): AccessStatusState {
   const [hasAccess, setHasAccess] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
@@ -93,7 +71,6 @@ export function useAccessStatus(): AccessStatusState {
       // API not available — fall through
     }
 
-    // Default: grant access if wallet is connected (open beta)
     setHasAccess(true)
     setIsLoading(false)
     return true
@@ -102,10 +79,6 @@ export function useAccessStatus(): AccessStatusState {
   return { hasAccess, isLoading, checkAccess }
 }
 
-/**
- * Token balance hook — placeholder until wcToken contract is deployed.
- * Will use viem readContract for ERC-20 balance.
- */
 export function useTokenBalance(): {
   balance: string
   isLoading: boolean
@@ -115,8 +88,7 @@ export function useTokenBalance(): {
   const [isLoading] = useState(false)
 
   const refetch = useCallback(async () => {
-    // Phase 4B: Once wcToken is deployed, use:
-    // const result = await readContract({ address: CONTRACTS.wcToken, abi: erc20Abi, functionName: 'balanceOf', args: [address] })
+    // Phase 4B: Once wcToken is deployed, use contract reads.
   }, [])
 
   return { balance, isLoading, refetch }

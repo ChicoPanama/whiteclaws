@@ -1,0 +1,496 @@
+# Contact DB Validation Report
+
+Generated: 2026-02-12T04:57:28.218Z
+
+## Summary
+- Total protocols: 457
+- Direct-ready: 1
+- Portal-required: 0
+- Immunefi-only: 0
+- Missing: 456
+
+## URL Validation
+- Passed (200/3xx): 0
+- Failed: 0
+- Skipped: 1
+
+## Missing
+- 0x (0x): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- 88mphv3 (88mphv3): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- aave (AAVE): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- acala (Acala): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- aera (Aera): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- aevo (Aevo): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- alchemix (Alchemix): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- aleo (Aleo): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- alephzero (Alephzero): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- alex (Alex): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- aloeprotocol (Aloeprotocol): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- alongside (Alongside): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- alpacafinance (Alpacafinance): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- alpen-labs (Alpen Labs): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- alphaventuredao (Alpha Venture DAO): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- ambire (Ambire): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- angleprotocol (Angleprotocol): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- ankr (Ankr): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- antefinance (Antefinance): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- anvil (Anvil): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- apecoinmainnet (Apecoinmainnet): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- arbitrum (Arbitrum): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- arborfinance (Arborfinance): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- arcade (Arcade): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- arkadiko (Arkadiko): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- arkham (Arkham): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- aspida (Aspida): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- astarnetwork (Astarnetwork): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- aster (Aster): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- astroport (Astroport): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- aurafinance (Aura Finance): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- autonolas (Autonolas): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- avail (Avail): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- avalabs (Avalabs): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- avalanche (Avalanche): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- axelarnetwork (Axelar Network): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- axiom (Axiom): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- baanx (Baanx): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- babylon-labs (Babylon Labs): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- badger (Badger): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- balancer (Balancer): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- balmy (Balmy): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- bankx (Bankx): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- baofinance (Baofinance): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- basilisk (Basilisk): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- beanstalk (Beanstalk): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- beefyfinance (Beefy Finance): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- beethovenx (Beethovenx): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- beets (Beets): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- benddao (Benddao): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- benqi (BENQI): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- berachain (Berachain): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- berachain-webapps (Berachain Webapps): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- beradrome (Beradrome): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- betafinance (Betafinance): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- biconomy (Biconomy): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- bifi (Bifi): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- bifrostfinance (Bifrost): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- bitcoinsv (Bitcoinsv): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- bitflow (Bitflow): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- bitswift (Bitswift): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- blackwing (Blackwing): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- blockpinetwork (Blockpinetwork): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- blockwallet (Blockwallet): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- bobanetwork (Boba Network): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- bondprotocol (Bondprotocol): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- bonfida (Bonfida): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- bprotocol (Bprotocol): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- burrow (Burrow): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- buttonwood (Buttonwood): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- c3 (C3): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- capyfi (CapyFi): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- carbonbancor (Carbonbancor): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- cardanofoundation (Cardanofoundation): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- cc-protocol (CC Protocol): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- celer (Celer): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- ceres (Ceres): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- chainlink (Chainlink): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- charm (Charm): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- comdex (Comdex): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- composablefinance (Composablefinance): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- compoundfinance (Compound Finance): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- connext (Connext): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- contrax (Contrax): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- coreum (Coreum): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- cove (Cove): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- cowprotocol (CoW Protocol): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- cyan (Cyan): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- daimo (Daimo): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- daimo-pay (Daimo Pay): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- darwinia (Darwinia): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- davos (Davos): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- debridge (deBridge): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- decentraland (Decentraland): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- defisaver (DeFi Saver): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- defly (Defly): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- degate (Degate): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- delv (Delv): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- deriprotocol (Deriprotocol): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- dex-protocol (DeXe Protocol): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- dexeprotocol (DeXe Protocol): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- dforce (dForce): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- dfxfinance (Dfxfinance): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- dhedge (dHEDGE): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- dodo (Dodo): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- dodov3 (Dodov3): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- driftprotocol (Driftprotocol): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- drips (Drips): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- duetfinance (Duetfinance): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- ebtc (Ebtc): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- eckodao (Eckodao): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- eclipse (Eclipse): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- eco (Eco): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- econia (Econia): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- eigenlayer (EigenLayer): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- elixirprotocol (Elixirprotocol): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- enosys (Enosys): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- ens (ENS): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- ensuro (Ensuro): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- enzyme-onyx (Enzyme Onyx): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- enzymefinance (Enzymefinance): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- ethena (Ethena): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- etherfi (Ether.fi): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- euphrates (Euphrates): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- exactly (Exactly): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- exodus (Exodus): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- extrafinance (Extrafinance): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- farcaster (Farcaster): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- fassets (Fassets): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- fbtc (Fbtc): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- felix (Felix): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- filecoin (Filecoin): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- firedancer (Firedancer): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- flamingofinance (Flamingo Finance): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- flarenetwork (Flarenetwork): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- flexytech (Flexytech): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- floki (Floki): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- fluxfinance (Flux Finance): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- foil (Foil): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- folksfinance (Folksfinance): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- forta (Forta): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- foundation (Foundation): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- furucombo (Furucombo): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- furucombofunds (Furucombofunds): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- gainsnetwork (Gains Network): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- galagames (Galagames): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- gamma (Gamma): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- gammaswap (Gammaswap): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- gear (Gear): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- gearbox (Gearbox): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- geniusyield (Geniusyield): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- gerowallet (Gerowallet): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- ghostmarket (Ghostmarket): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- glodollar (Glodollar): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- gmx (GMX): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- gnosischain (Gnosis Chain): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- gogopool (Gogopool): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- goldfinch (Goldfinch): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- granite-protocol (Granite Protocol): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- gysr (Gysr): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- hakkafinance (Hakkafinance): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- halogen (Halogen): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- harvest (Harvest): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- hashflow (Hashflow): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- hathornetwork (Hathornetwork): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- haven1 (Haven1): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- hedera (Hedera): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- helios-finance (Helios Finance): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- hibachi (Hibachi): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- hoenn (Hoenn): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- horizen (Horizen): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- hourglass (Hourglass): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- hydradx (Hydradx): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- hydration (Hydration): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- hydro (Hydro): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- hyperlane (Hyperlane): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- ichi (Ichi): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- icon (Icon): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- idex (Idex): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- idlefinance (Idlefinance): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- illuvium (Illuvium): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- immunefi (Immunefi): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- immutable (Immutable): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- impossible-cloud-network (Impossible Cloud Network): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- impossiblefinance (Impossiblefinance): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- indexcoop (Index Coop): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- infinex (Infinex): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- injective (Injective): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- instadapp (Instadapp): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- integral (Integral): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- integriteenetwork (Integriteenetwork): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- interlay (Interlay): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- intmax (INTMAX): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- inverse-finance (Inverse Finance): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- ion-protocol (Ion Protocol): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- ipor (IPOR): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- jito (Jito): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- jito-bam-client (Jito Bam Client): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- jito-foundation (Jito Foundation): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- justlenddao (Justlenddao): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- kadena (Kadena): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- kamino (Kamino): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- keep3rnetwork (Keep3rnetwork): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- kelp-dao (Kelp DAO): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- kiln (Kiln On-Chain v2): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- kiln-defi (Kiln DeFi): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- kiln-on-chain-v1 (Kiln On-Chain v1): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- kiln-webapp (Kiln Webapp): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- kinesis-bridge-on-kadena (Kinesis Bridge On Kadena): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- kwenta (Kwenta): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- landx (Landx): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- layer3 (Layer3.xyz): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- layerzero (LayerZero): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- lendr (Lendr): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- lido (Lido): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- lidoonpolygon (Lidoonpolygon): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- lifi (Lifi): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- light-protocol (Light Protocol): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- linea (Linea): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- liquidswap (Liquidswap): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- listadao (Lista DAO): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- livepeer (Livepeer): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- localtraders (Localtraders): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- lombard-finance (Lombard Finance): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- lossless (Lossless): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- lybrafinance (Lybrafinance): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- lyra (Lyra): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- magpiexyz (Magpiexyz): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- mantlelsp (Mantlelsp): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- maple (Maple): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- marinade (Marinade): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- mars (Mars): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- marsecosystem (Marsecosystem): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- mayaprotocol (Mayaprotocol): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- meanfinance (Meanfinance): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- metalswap (Metalswap): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- metastreet (Metastreet): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- metastreet-yield-pass (Metastreet Yield Pass): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- meth (mETH Protocol): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- metis (Metis): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- metronome (Metronome): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- monero-oxide (Monero Oxide): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- moneyonchain (Moneyonchain): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- moonbeamnetwork (Moonbeamnetwork): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- moonwell (Moonwell): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- morpho (Morpho): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- mountainprotocol (Mountainprotocol): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- mtpelerin (Mtpelerin): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- mux (Mux): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- myntandzero (Myntandzero): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- native (Native): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- nayms (Nayms): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- neo (Neo): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- neutron (Neutron): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- nexusmutual (Nexus Mutual): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- nftfi (Nftfi): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- nftfitestnetrefi (Nftfitestnetrefi): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- nftx (Nftx): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- nodle (Nodle): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- nomad (Nomad): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- notional (Notional): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- nucleus (Nucleus): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- oasis (Oasis): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- obyte (Obyte): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- oceanprotocol (Oceanprotocol): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- octopusnetwork (Octopusnetwork): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- ofza-1 (Ofza 1): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- olafinance (Olafinance): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- olympus (Olympus): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- omni-network (Omni Network): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- omron (Omron): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- ondofinance (Ondo Finance): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- openzeppelin (Openzeppelin): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- openzeppelin-stellar (Openzeppelin Stellar): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- optimism (Optimism): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- opyngamma (Opyngamma): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- opynsqueeth (Opynsqueeth): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- orca (Orca): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- orderlynetwork (Orderlynetwork): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- origin-protocol (Origin Protocol): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- origindefi (Origindefi): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- ostium (Ostium): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- overlay (Overlay): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- pact (Pact): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- pancakeswap (PancakeSwap): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- pantos (Pantos): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- paradex (Paradex): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- paragonsdao (Paragonsdao): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- parallel (Parallel): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- parallelwallet (Parallelwallet): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- pareto (Pareto): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- paribus (Paribus): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- pendle (Pendle): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- perennial (Perennial): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- perpetual (Perpetual): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- pikaprotocol (Pikaprotocol): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- pillar (Pillar): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- pinto (Pinto): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- plaza-finance (Plaza Finance): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- plume-network (Plume Network): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- pnetwork (Pnetwork): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- pods (Pods): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- polkastarter (Polkastarter): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- polygon (Polygon): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- polygonzkevm (Polygonzkevm): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- polymarket (Polymarket): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- polymesh (Polymesh): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- poolshark (Poolshark): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- pooltogether (PoolTogether): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- popsicle (Popsicle): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- portfinance (Portfinance): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- pragmaoracle (Pragmaoracle): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- predyfinance (Predyfinance): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- primitive (Primitive): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- print3r (Print3r): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- pstake (Pstake): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- pstakeoncosmos (Pstakeoncosmos): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- pushprotocol (Pushprotocol): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- pythnetwork (Pyth Network): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- qblockchain (Qblockchain): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- quadrata (Quadrata): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- radiant (Radiant): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- rai (Rai): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- rangeprotocol (Rangeprotocol): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- raydium (Raydium): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- reaperfarm (Reaperfarm): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- ref-finance (Ref Finance): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- renzoprotocol (Renzo Protocol): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- reserve (Reserve): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- resolv (Resolv): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- resonate (Resonate): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- revert (Revert): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- revest (Revest): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- rhinofi (Rhino.fi): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- ribbon (Ribbon): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- ringdao (Ringdao): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- rocketpool (Rocket Pool): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- router (Router): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- royco (Royco): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- rubic (Rubic): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- ruscet (Ruscet): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- rysk (Rysk): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- scroll (Scroll): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- sectorfinance (Sectorfinance): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- securefi (Securefi): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- segmentfinance (Segmentfinance): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- sei (Sei): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- serai (Serai): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- shellprotocol (Shellprotocol): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- sherlock (Sherlock): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- silofinance (Silofinance): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- silofinance-v2 (Silo Finance V2): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- singularitydao (Singularitydao): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- skatefi (Skatefi): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- sky (Sky): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- smardex (Smardex): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- sns (Sns): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- sommelier (Sommelier): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- sora (Sora): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- sovryn (Sovryn): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- sparklend (Spark): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- spectral (Spectral): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- spookyswap (Spookyswap): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- spool (Spool): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- spot (Spot): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- ssv-network (SSV Network): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- stackingdao (StackingDAO): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- stacks (Stacks): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- staderforbnb (Staderforbnb): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- staderforeth (Stader for ETH): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- staderforpolygon (StaderforPolygon): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- stafi (Stafi): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- stakeeasy (Stakeeasy): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- stakelink (Stakelink): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- stakestone (StakeStone): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- stakewise (Stakewise): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- stargate (Stargate): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- starkex (StarkEx): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- starknet (StarkNet): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- starknet-staking (Starknet Staking): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- stellar (Stellar): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- stellaswap (Stellaswap): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- strikefinance (Strikefinance): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- sturdy (Sturdy): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- summerfi (Summerfi): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- superbots (Superbots): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- superfluid (Superfluid): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- superform (Superform): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- sushiswap (SushiSwap): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- swappi (Swappi): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- sweateconomy (Sweat Economy): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- swell (Swell): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- symbiosis (Symbiosis): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- symbiotic (Symbiotic): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- synfutures (SynFutures): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- synthetix (Synthetix): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- teahousefinance (Teahousefinance): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- templar-protocol (Templar Protocol): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- termstructurelabs (Termstructurelabs): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- tetu (Tetu): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- thala-protocol (Thala Protocol): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- thegraph (The Graph): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- thesandbox (Thesandbox): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- thorchain (THORChain): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- thresholdnetwork (Threshold Network): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- thusd (Thusd): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- tidal (Tidal): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- timelessandbunni (Timelessandbunni): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- tinyman (Tinyman): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- tinymanv2 (Tinymanv2): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- tokemak (Tokemak): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- toucan (Toucan): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- traderjoe (Trader Joe): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- tranchess (Tranchess): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- tropykus (Tropykus): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- trufin (Trufin): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- uniswaponzksync (Uniswaponzksync): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- universalpage (Universalpage): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- unstoppablewallet (Unstoppablewallet): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- usdn (Usdn): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- usdt0 (USDT0): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- usx (Usx): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- utix (Utix): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- vaultcraft (Vaultcraft): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- vechain (Vechain): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- velodromefinance (Velodrome Finance): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- velvet-capital-v2 (Velvet Capital V2): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- velvetcapital (Velvetcapital): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- vesper (Vesper): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- vesu (Vesu): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- virtuals-protocol (Virtuals Protocol): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- voltz (Voltz): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- waymont (Waymont): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- wepiggy (Wepiggy): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- wildcatprotocol (Wildcatprotocol): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- wombatexchange (Wombatexchange): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- woofi (WOOFi): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- wormhole (Wormhole): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- xion (XION): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- xoxno (Xoxno): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- xterio (Xterio): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- yamatoprotocol (Yamatoprotocol): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- yearnfinance (Yearn Finance): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- yelay (Yelay): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- yieldnest (Yieldnest): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- yo-protocol (Yo Protocol): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- zano (Zano): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- zenlink (Zenlink): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- zerion (Zerion): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- zerolend (Zerolend): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- zest-protocol-v2 (Zest Protocol V2): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- zksync (ZKsync Lite): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- zksync-os (Zksync Os): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- zksyncera (ZKsync Era): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- zkverify (Zkverify): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+- zodiac (Zodiac): missing security_emails/contact_form_url/policy_url. Suggestion: verify official website and security policy manually.
+
+## Ambiguous
+- bankx (Bankx): uncertain domain or multiple security emails; confidence=0
+- blockpinetwork (Blockpinetwork): uncertain domain or multiple security emails; confidence=0
+- defly (Defly): uncertain domain or multiple security emails; confidence=0
+- flexytech (Flexytech): uncertain domain or multiple security emails; confidence=0
+- foil (Foil): uncertain domain or multiple security emails; confidence=0
+- gerowallet (Gerowallet): uncertain domain or multiple security emails; confidence=0
+- halogen (Halogen): uncertain domain or multiple security emails; confidence=0
+- helios-finance (Helios Finance): uncertain domain or multiple security emails; confidence=0
+- hoenn (Hoenn): uncertain domain or multiple security emails; confidence=0
+- impossible-cloud-network (Impossible Cloud Network): uncertain domain or multiple security emails; confidence=0
+- lendr (Lendr): uncertain domain or multiple security emails; confidence=0
+- localtraders (Localtraders): uncertain domain or multiple security emails; confidence=0
+- nftfitestnetrefi (Nftfitestnetrefi): uncertain domain or multiple security emails; confidence=0
+- ofza-1 (Ofza 1): uncertain domain or multiple security emails; confidence=0
+- omron (Omron): uncertain domain or multiple security emails; confidence=0
+- quadrata (Quadrata): uncertain domain or multiple security emails; confidence=0
+- securefi (Securefi): uncertain domain or multiple security emails; confidence=0
+- thusd (Thusd): uncertain domain or multiple security emails; confidence=0
+
+## Policy conflicts
+- None

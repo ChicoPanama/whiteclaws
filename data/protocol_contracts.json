@@ -1,0 +1,3161 @@
+{
+  "0x": {
+    "slug": "0x",
+    "name": "0x",
+    "contracts": [],
+    "needs_review": true
+  },
+  "88mphv3": {
+    "slug": "88mphv3",
+    "name": "88mphv3",
+    "contracts": [],
+    "needs_review": true
+  },
+  "aave": {
+    "slug": "aave",
+    "name": "AAVE",
+    "contracts": [
+      {
+        "address": "0x87870bca3f3fd6335c3f4ce8392d69350b4fa4e2",
+        "chain": "ethereum",
+        "label": "Aave V3 Pool",
+        "source": {
+          "kind": "whiteclaws_protocol_json",
+          "url": "public/protocols/aave.json"
+        },
+        "needs_review": false,
+        "explorer": {
+          "url": "https://etherscan.io/address/0x87870bca3f3fd6335c3f4ce8392d69350b4fa4e2"
+        }
+      }
+    ],
+    "needs_review": false
+  },
+  "acala": {
+    "slug": "acala",
+    "name": "Acala",
+    "contracts": [],
+    "needs_review": true
+  },
+  "aera": {
+    "slug": "aera",
+    "name": "Aera",
+    "contracts": [],
+    "needs_review": true
+  },
+  "aevo": {
+    "slug": "aevo",
+    "name": "Aevo",
+    "contracts": [],
+    "needs_review": true
+  },
+  "alchemix": {
+    "slug": "alchemix",
+    "name": "Alchemix",
+    "contracts": [
+      {
+        "address": "0x5c6374a2ac4ebc38dea0fc1f8716e5ea1add94dd",
+        "chain": "ethereum",
+        "label": "Alchemix alETH AlToken",
+        "source": {
+          "kind": "verified_onchain",
+          "url": "https://etherscan.io/address/0x5c6374a2ac4ebc38dea0fc1f8716e5ea1add94dd"
+        },
+        "explorer": {
+          "url": "https://etherscan.io/address/0x5c6374a2ac4ebc38dea0fc1f8716e5ea1add94dd"
+        },
+        "needs_review": false
+      }
+    ],
+    "needs_review": false
+  },
+  "aleo": {
+    "slug": "aleo",
+    "name": "Aleo",
+    "contracts": [],
+    "needs_review": true
+  },
+  "alephzero": {
+    "slug": "alephzero",
+    "name": "Alephzero",
+    "contracts": [],
+    "needs_review": true
+  },
+  "alex": {
+    "slug": "alex",
+    "name": "Alex",
+    "contracts": [],
+    "needs_review": true
+  },
+  "aloeprotocol": {
+    "slug": "aloeprotocol",
+    "name": "Aloeprotocol",
+    "contracts": [],
+    "needs_review": true
+  },
+  "alongside": {
+    "slug": "alongside",
+    "name": "Alongside",
+    "contracts": [],
+    "needs_review": true
+  },
+  "alpacafinance": {
+    "slug": "alpacafinance",
+    "name": "Alpacafinance",
+    "contracts": [],
+    "needs_review": true
+  },
+  "alpen-labs": {
+    "slug": "alpen-labs",
+    "name": "Alpen Labs",
+    "contracts": [],
+    "needs_review": true
+  },
+  "alphaventuredao": {
+    "slug": "alphaventuredao",
+    "name": "Alpha Venture DAO",
+    "contracts": [],
+    "needs_review": true
+  },
+  "ambire": {
+    "slug": "ambire",
+    "name": "Ambire",
+    "contracts": [],
+    "needs_review": true
+  },
+  "angleprotocol": {
+    "slug": "angleprotocol",
+    "name": "Angleprotocol",
+    "contracts": [],
+    "needs_review": true
+  },
+  "ankr": {
+    "slug": "ankr",
+    "name": "Ankr",
+    "contracts": [],
+    "needs_review": true
+  },
+  "antefinance": {
+    "slug": "antefinance",
+    "name": "Antefinance",
+    "contracts": [],
+    "needs_review": true
+  },
+  "anvil": {
+    "slug": "anvil",
+    "name": "Anvil",
+    "contracts": [],
+    "needs_review": true
+  },
+  "apecoinmainnet": {
+    "slug": "apecoinmainnet",
+    "name": "Apecoinmainnet",
+    "contracts": [],
+    "needs_review": true
+  },
+  "arbitrum": {
+    "slug": "arbitrum",
+    "name": "Arbitrum",
+    "contracts": [
+      {
+        "address": "0x1c479675ad559dc151f6ec7ed3fbf8cee79582b6",
+        "chain": "ethereum",
+        "label": "Arbitrum Rollup",
+        "source": {
+          "kind": "whiteclaws_protocol_json",
+          "url": "public/protocols/arbitrum.json"
+        },
+        "needs_review": false,
+        "explorer": {
+          "url": "https://etherscan.io/address/0x1c479675ad559dc151f6ec7ed3fbf8cee79582b6"
+        }
+      }
+    ],
+    "needs_review": false
+  },
+  "arborfinance": {
+    "slug": "arborfinance",
+    "name": "Arborfinance",
+    "contracts": [],
+    "needs_review": true
+  },
+  "arcade": {
+    "slug": "arcade",
+    "name": "Arcade",
+    "contracts": [],
+    "needs_review": true
+  },
+  "arkadiko": {
+    "slug": "arkadiko",
+    "name": "Arkadiko",
+    "contracts": [],
+    "needs_review": true
+  },
+  "arkham": {
+    "slug": "arkham",
+    "name": "Arkham",
+    "contracts": [],
+    "needs_review": true
+  },
+  "aspida": {
+    "slug": "aspida",
+    "name": "Aspida",
+    "contracts": [],
+    "needs_review": true
+  },
+  "astarnetwork": {
+    "slug": "astarnetwork",
+    "name": "Astarnetwork",
+    "contracts": [],
+    "needs_review": true
+  },
+  "aster": {
+    "slug": "aster",
+    "name": "Aster",
+    "contracts": [],
+    "needs_review": true
+  },
+  "astroport": {
+    "slug": "astroport",
+    "name": "Astroport",
+    "contracts": [],
+    "needs_review": true
+  },
+  "aurafinance": {
+    "slug": "aurafinance",
+    "name": "Aura Finance",
+    "contracts": [],
+    "needs_review": true
+  },
+  "autonolas": {
+    "slug": "autonolas",
+    "name": "Autonolas",
+    "contracts": [],
+    "needs_review": true
+  },
+  "avail": {
+    "slug": "avail",
+    "name": "Avail",
+    "contracts": [],
+    "needs_review": true
+  },
+  "avalabs": {
+    "slug": "avalabs",
+    "name": "Avalabs",
+    "contracts": [],
+    "needs_review": true
+  },
+  "avalanche": {
+    "slug": "avalanche",
+    "name": "Avalanche",
+    "contracts": [],
+    "needs_review": true
+  },
+  "axelarnetwork": {
+    "slug": "axelarnetwork",
+    "name": "Axelar Network",
+    "contracts": [
+      {
+        "address": "0x4f4495243837681061c4743b74b3eedf548d56a5",
+        "chain": "ethereum",
+        "label": "Axelar Gateway",
+        "source": {
+          "kind": "whiteclaws_protocol_json",
+          "url": "public/protocols/axelarnetwork.json"
+        },
+        "needs_review": false,
+        "explorer": {
+          "url": "https://etherscan.io/address/0x4f4495243837681061c4743b74b3eedf548d56a5"
+        }
+      }
+    ],
+    "needs_review": false
+  },
+  "axiom": {
+    "slug": "axiom",
+    "name": "Axiom",
+    "contracts": [],
+    "needs_review": true
+  },
+  "baanx": {
+    "slug": "baanx",
+    "name": "Baanx",
+    "contracts": [],
+    "needs_review": true
+  },
+  "babylon-labs": {
+    "slug": "babylon-labs",
+    "name": "Babylon Labs",
+    "contracts": [],
+    "needs_review": true
+  },
+  "badger": {
+    "slug": "badger",
+    "name": "Badger",
+    "contracts": [],
+    "needs_review": true
+  },
+  "balancer": {
+    "slug": "balancer",
+    "name": "Balancer",
+    "contracts": [
+      {
+        "address": "0xba12222222228d8ba445958a75a0704d566bf2c8",
+        "chain": "ethereum",
+        "label": "Balancer Vault",
+        "source": {
+          "kind": "whiteclaws_protocol_json",
+          "url": "public/protocols/balancer.json"
+        },
+        "needs_review": false,
+        "explorer": {
+          "url": "https://etherscan.io/address/0xba12222222228d8ba445958a75a0704d566bf2c8"
+        }
+      }
+    ],
+    "needs_review": false
+  },
+  "balmy": {
+    "slug": "balmy",
+    "name": "Balmy",
+    "contracts": [],
+    "needs_review": true
+  },
+  "bankx": {
+    "slug": "bankx",
+    "name": "Bankx",
+    "contracts": [],
+    "needs_review": true
+  },
+  "baofinance": {
+    "slug": "baofinance",
+    "name": "Baofinance",
+    "contracts": [],
+    "needs_review": true
+  },
+  "basilisk": {
+    "slug": "basilisk",
+    "name": "Basilisk",
+    "contracts": [],
+    "needs_review": true
+  },
+  "beanstalk": {
+    "slug": "beanstalk",
+    "name": "Beanstalk",
+    "contracts": [],
+    "needs_review": true
+  },
+  "beefyfinance": {
+    "slug": "beefyfinance",
+    "name": "Beefy Finance",
+    "contracts": [],
+    "needs_review": true
+  },
+  "beethovenx": {
+    "slug": "beethovenx",
+    "name": "Beethovenx",
+    "contracts": [],
+    "needs_review": true
+  },
+  "beets": {
+    "slug": "beets",
+    "name": "Beets",
+    "contracts": [],
+    "needs_review": true
+  },
+  "benddao": {
+    "slug": "benddao",
+    "name": "Benddao",
+    "contracts": [],
+    "needs_review": true
+  },
+  "benqi": {
+    "slug": "benqi",
+    "name": "BENQI",
+    "contracts": [],
+    "needs_review": true
+  },
+  "berachain-webapps": {
+    "slug": "berachain-webapps",
+    "name": "Berachain Webapps",
+    "contracts": [],
+    "needs_review": true
+  },
+  "berachain": {
+    "slug": "berachain",
+    "name": "Berachain",
+    "contracts": [],
+    "needs_review": true
+  },
+  "beradrome": {
+    "slug": "beradrome",
+    "name": "Beradrome",
+    "contracts": [],
+    "needs_review": true
+  },
+  "betafinance": {
+    "slug": "betafinance",
+    "name": "Betafinance",
+    "contracts": [],
+    "needs_review": true
+  },
+  "biconomy": {
+    "slug": "biconomy",
+    "name": "Biconomy",
+    "contracts": [],
+    "needs_review": true
+  },
+  "bifi": {
+    "slug": "bifi",
+    "name": "Bifi",
+    "contracts": [],
+    "needs_review": true
+  },
+  "bifrostfinance": {
+    "slug": "bifrostfinance",
+    "name": "Bifrost",
+    "contracts": [],
+    "needs_review": true
+  },
+  "bitcoinsv": {
+    "slug": "bitcoinsv",
+    "name": "Bitcoinsv",
+    "contracts": [],
+    "needs_review": true
+  },
+  "bitflow": {
+    "slug": "bitflow",
+    "name": "Bitflow",
+    "contracts": [],
+    "needs_review": true
+  },
+  "bitswift": {
+    "slug": "bitswift",
+    "name": "Bitswift",
+    "contracts": [],
+    "needs_review": true
+  },
+  "blackwing": {
+    "slug": "blackwing",
+    "name": "Blackwing",
+    "contracts": [],
+    "needs_review": true
+  },
+  "blockpinetwork": {
+    "slug": "blockpinetwork",
+    "name": "Blockpinetwork",
+    "contracts": [],
+    "needs_review": true
+  },
+  "blockwallet": {
+    "slug": "blockwallet",
+    "name": "Blockwallet",
+    "contracts": [],
+    "needs_review": true
+  },
+  "bobanetwork": {
+    "slug": "bobanetwork",
+    "name": "Boba Network",
+    "contracts": [],
+    "needs_review": true
+  },
+  "bondprotocol": {
+    "slug": "bondprotocol",
+    "name": "Bondprotocol",
+    "contracts": [],
+    "needs_review": true
+  },
+  "bonfida": {
+    "slug": "bonfida",
+    "name": "Bonfida",
+    "contracts": [],
+    "needs_review": true
+  },
+  "bprotocol": {
+    "slug": "bprotocol",
+    "name": "Bprotocol",
+    "contracts": [],
+    "needs_review": true
+  },
+  "burrow": {
+    "slug": "burrow",
+    "name": "Burrow",
+    "contracts": [],
+    "needs_review": true
+  },
+  "buttonwood": {
+    "slug": "buttonwood",
+    "name": "Buttonwood",
+    "contracts": [],
+    "needs_review": true
+  },
+  "c3": {
+    "slug": "c3",
+    "name": "C3",
+    "contracts": [],
+    "needs_review": true
+  },
+  "capyfi": {
+    "slug": "capyfi",
+    "name": "CapyFi",
+    "contracts": [],
+    "needs_review": true
+  },
+  "carbonbancor": {
+    "slug": "carbonbancor",
+    "name": "Carbonbancor",
+    "contracts": [],
+    "needs_review": true
+  },
+  "cardanofoundation": {
+    "slug": "cardanofoundation",
+    "name": "Cardanofoundation",
+    "contracts": [],
+    "needs_review": true
+  },
+  "cc-protocol": {
+    "slug": "cc-protocol",
+    "name": "CC Protocol",
+    "contracts": [],
+    "needs_review": true
+  },
+  "celer": {
+    "slug": "celer",
+    "name": "Celer",
+    "contracts": [],
+    "needs_review": true
+  },
+  "ceres": {
+    "slug": "ceres",
+    "name": "Ceres",
+    "contracts": [],
+    "needs_review": true
+  },
+  "chainlink": {
+    "slug": "chainlink",
+    "name": "Chainlink",
+    "contracts": [
+      {
+        "address": "0x47fb2585d2c56fe188d0e6ec628a38b74fceeedf",
+        "chain": "ethereum",
+        "label": "Chainlink Feed Registry",
+        "source": {
+          "kind": "whiteclaws_protocol_json",
+          "url": "public/protocols/chainlink.json"
+        },
+        "needs_review": false,
+        "explorer": {
+          "url": "https://etherscan.io/address/0x47fb2585d2c56fe188d0e6ec628a38b74fceeedf"
+        }
+      }
+    ],
+    "needs_review": false
+  },
+  "charm": {
+    "slug": "charm",
+    "name": "Charm",
+    "contracts": [],
+    "needs_review": true
+  },
+  "comdex": {
+    "slug": "comdex",
+    "name": "Comdex",
+    "contracts": [],
+    "needs_review": true
+  },
+  "composablefinance": {
+    "slug": "composablefinance",
+    "name": "Composablefinance",
+    "contracts": [],
+    "needs_review": true
+  },
+  "compoundfinance": {
+    "slug": "compoundfinance",
+    "name": "Compound Finance",
+    "contracts": [
+      {
+        "address": "0xc3d688b66703497daa19211eedff47f25384cdc3",
+        "chain": "ethereum",
+        "label": "Compound V3 (cUSDCv3)",
+        "source": {
+          "kind": "whiteclaws_protocol_json",
+          "url": "public/protocols/compoundfinance.json"
+        },
+        "needs_review": false,
+        "explorer": {
+          "url": "https://etherscan.io/address/0xc3d688b66703497daa19211eedff47f25384cdc3"
+        }
+      }
+    ],
+    "needs_review": false
+  },
+  "connext": {
+    "slug": "connext",
+    "name": "Connext",
+    "contracts": [],
+    "needs_review": true
+  },
+  "contrax": {
+    "slug": "contrax",
+    "name": "Contrax",
+    "contracts": [],
+    "needs_review": true
+  },
+  "coreum": {
+    "slug": "coreum",
+    "name": "Coreum",
+    "contracts": [],
+    "needs_review": true
+  },
+  "cove": {
+    "slug": "cove",
+    "name": "Cove",
+    "contracts": [],
+    "needs_review": true
+  },
+  "cowprotocol": {
+    "slug": "cowprotocol",
+    "name": "CoW Protocol",
+    "contracts": [
+      {
+        "address": "0x9008d19f58aabd9ed0d60971565aa8510560ab41",
+        "chain": "ethereum",
+        "label": "CoW Protocol Settlement",
+        "source": {
+          "kind": "whiteclaws_protocol_json",
+          "url": "public/protocols/cowprotocol.json"
+        },
+        "needs_review": false,
+        "explorer": {
+          "url": "https://etherscan.io/address/0x9008d19f58aabd9ed0d60971565aa8510560ab41"
+        }
+      }
+    ],
+    "needs_review": false
+  },
+  "cyan": {
+    "slug": "cyan",
+    "name": "Cyan",
+    "contracts": [],
+    "needs_review": true
+  },
+  "daimo-pay": {
+    "slug": "daimo-pay",
+    "name": "Daimo Pay",
+    "contracts": [],
+    "needs_review": true
+  },
+  "daimo": {
+    "slug": "daimo",
+    "name": "Daimo",
+    "contracts": [],
+    "needs_review": true
+  },
+  "darwinia": {
+    "slug": "darwinia",
+    "name": "Darwinia",
+    "contracts": [],
+    "needs_review": true
+  },
+  "davos": {
+    "slug": "davos",
+    "name": "Davos",
+    "contracts": [],
+    "needs_review": true
+  },
+  "debridge": {
+    "slug": "debridge",
+    "name": "deBridge",
+    "contracts": [],
+    "needs_review": true
+  },
+  "decentraland": {
+    "slug": "decentraland",
+    "name": "Decentraland",
+    "contracts": [],
+    "needs_review": true
+  },
+  "defisaver": {
+    "slug": "defisaver",
+    "name": "DeFi Saver",
+    "contracts": [],
+    "needs_review": true
+  },
+  "defly": {
+    "slug": "defly",
+    "name": "Defly",
+    "contracts": [],
+    "needs_review": true
+  },
+  "degate": {
+    "slug": "degate",
+    "name": "Degate",
+    "contracts": [],
+    "needs_review": true
+  },
+  "delv": {
+    "slug": "delv",
+    "name": "Delv",
+    "contracts": [],
+    "needs_review": true
+  },
+  "deriprotocol": {
+    "slug": "deriprotocol",
+    "name": "Deriprotocol",
+    "contracts": [],
+    "needs_review": true
+  },
+  "dex-protocol": {
+    "slug": "dex-protocol",
+    "name": "DeXe Protocol",
+    "contracts": [],
+    "needs_review": true
+  },
+  "dexeprotocol": {
+    "slug": "dexeprotocol",
+    "name": "DeXe Protocol",
+    "contracts": [],
+    "needs_review": true
+  },
+  "dforce": {
+    "slug": "dforce",
+    "name": "dForce",
+    "contracts": [],
+    "needs_review": true
+  },
+  "dfxfinance": {
+    "slug": "dfxfinance",
+    "name": "Dfxfinance",
+    "contracts": [],
+    "needs_review": true
+  },
+  "dhedge": {
+    "slug": "dhedge",
+    "name": "dHEDGE",
+    "contracts": [],
+    "needs_review": true
+  },
+  "dodo": {
+    "slug": "dodo",
+    "name": "Dodo",
+    "contracts": [],
+    "needs_review": true
+  },
+  "dodov3": {
+    "slug": "dodov3",
+    "name": "Dodov3",
+    "contracts": [],
+    "needs_review": true
+  },
+  "driftprotocol": {
+    "slug": "driftprotocol",
+    "name": "Driftprotocol",
+    "contracts": [],
+    "needs_review": true
+  },
+  "drips": {
+    "slug": "drips",
+    "name": "Drips",
+    "contracts": [],
+    "needs_review": true
+  },
+  "duetfinance": {
+    "slug": "duetfinance",
+    "name": "Duetfinance",
+    "contracts": [],
+    "needs_review": true
+  },
+  "ebtc": {
+    "slug": "ebtc",
+    "name": "Ebtc",
+    "contracts": [],
+    "needs_review": true
+  },
+  "eckodao": {
+    "slug": "eckodao",
+    "name": "Eckodao",
+    "contracts": [],
+    "needs_review": true
+  },
+  "eclipse": {
+    "slug": "eclipse",
+    "name": "Eclipse",
+    "contracts": [],
+    "needs_review": true
+  },
+  "eco": {
+    "slug": "eco",
+    "name": "Eco",
+    "contracts": [],
+    "needs_review": true
+  },
+  "econia": {
+    "slug": "econia",
+    "name": "Econia",
+    "contracts": [],
+    "needs_review": true
+  },
+  "eigenlayer": {
+    "slug": "eigenlayer",
+    "name": "EigenLayer",
+    "contracts": [
+      {
+        "address": "0x39053d51b77dc0d36036fc1fcc8cb819df8ef37a",
+        "chain": "ethereum",
+        "label": "EigenLayer StrategyManager",
+        "source": {
+          "kind": "whiteclaws_protocol_json",
+          "url": "public/protocols/eigenlayer.json"
+        },
+        "needs_review": false,
+        "explorer": {
+          "url": "https://etherscan.io/address/0x39053d51b77dc0d36036fc1fcc8cb819df8ef37a"
+        }
+      }
+    ],
+    "needs_review": false
+  },
+  "elixirprotocol": {
+    "slug": "elixirprotocol",
+    "name": "Elixirprotocol",
+    "contracts": [],
+    "needs_review": true
+  },
+  "enosys": {
+    "slug": "enosys",
+    "name": "Enosys",
+    "contracts": [],
+    "needs_review": true
+  },
+  "ens": {
+    "slug": "ens",
+    "name": "ENS",
+    "contracts": [
+      {
+        "address": "0x00000000000c2e074ec69a0dfb2997ba6c7d2e1e",
+        "chain": "ethereum",
+        "label": "ENSRegistry",
+        "source": {
+          "kind": "whiteclaws_protocol_json",
+          "url": "public/protocols/ens.json"
+        },
+        "needs_review": false,
+        "explorer": {
+          "url": "https://etherscan.io/address/0x00000000000c2e074ec69a0dfb2997ba6c7d2e1e"
+        }
+      },
+      {
+        "address": "0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85",
+        "chain": "ethereum",
+        "label": "ENSBaseRegistrar",
+        "source": {
+          "kind": "whiteclaws_protocol_json",
+          "url": "public/protocols/ens.json"
+        },
+        "needs_review": false,
+        "explorer": {
+          "url": "https://etherscan.io/address/0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85"
+        }
+      }
+    ],
+    "needs_review": false
+  },
+  "ensuro": {
+    "slug": "ensuro",
+    "name": "Ensuro",
+    "contracts": [],
+    "needs_review": true
+  },
+  "enzyme-onyx": {
+    "slug": "enzyme-onyx",
+    "name": "Enzyme Onyx",
+    "contracts": [],
+    "needs_review": true
+  },
+  "enzymefinance": {
+    "slug": "enzymefinance",
+    "name": "Enzymefinance",
+    "contracts": [],
+    "needs_review": true
+  },
+  "ethena": {
+    "slug": "ethena",
+    "name": "Ethena",
+    "contracts": [
+      {
+        "address": "0x4c9edd5852cd905f086c759e8383e09bff1e68b3",
+        "chain": "ethereum",
+        "label": "USDe",
+        "source": {
+          "kind": "verified_onchain",
+          "url": "https://etherscan.io/address/0x4c9edd5852cd905f086c759e8383e09bff1e68b3"
+        },
+        "explorer": {
+          "url": "https://etherscan.io/address/0x4c9edd5852cd905f086c759e8383e09bff1e68b3"
+        },
+        "needs_review": false
+      },
+      {
+        "address": "0x9d39a5de30e57443bff2a8307a4256c8797a3497",
+        "chain": "ethereum",
+        "label": "Staked USDe (sUSDe)",
+        "source": {
+          "kind": "verified_onchain",
+          "url": "https://etherscan.io/address/0x9d39a5de30e57443bff2a8307a4256c8797a3497"
+        },
+        "explorer": {
+          "url": "https://etherscan.io/address/0x9d39a5de30e57443bff2a8307a4256c8797a3497"
+        },
+        "needs_review": false
+      }
+    ],
+    "needs_review": false
+  },
+  "etherfi": {
+    "slug": "etherfi",
+    "name": "Ether.fi",
+    "contracts": [],
+    "needs_review": true
+  },
+  "euphrates": {
+    "slug": "euphrates",
+    "name": "Euphrates",
+    "contracts": [],
+    "needs_review": true
+  },
+  "exactly": {
+    "slug": "exactly",
+    "name": "Exactly",
+    "contracts": [],
+    "needs_review": true
+  },
+  "example-protocol": {
+    "slug": "example-protocol",
+    "name": "Example Protocol",
+    "contracts": [],
+    "needs_review": true
+  },
+  "exodus": {
+    "slug": "exodus",
+    "name": "Exodus",
+    "contracts": [],
+    "needs_review": true
+  },
+  "extrafinance": {
+    "slug": "extrafinance",
+    "name": "Extrafinance",
+    "contracts": [],
+    "needs_review": true
+  },
+  "farcaster": {
+    "slug": "farcaster",
+    "name": "Farcaster",
+    "contracts": [],
+    "needs_review": true
+  },
+  "fassets": {
+    "slug": "fassets",
+    "name": "Fassets",
+    "contracts": [],
+    "needs_review": true
+  },
+  "fbtc": {
+    "slug": "fbtc",
+    "name": "Fbtc",
+    "contracts": [],
+    "needs_review": true
+  },
+  "felix": {
+    "slug": "felix",
+    "name": "Felix",
+    "contracts": [],
+    "needs_review": true
+  },
+  "filecoin": {
+    "slug": "filecoin",
+    "name": "Filecoin",
+    "contracts": [],
+    "needs_review": true
+  },
+  "firedancer": {
+    "slug": "firedancer",
+    "name": "Firedancer",
+    "contracts": [],
+    "needs_review": true
+  },
+  "flamingofinance": {
+    "slug": "flamingofinance",
+    "name": "Flamingo Finance",
+    "contracts": [],
+    "needs_review": true
+  },
+  "flarenetwork": {
+    "slug": "flarenetwork",
+    "name": "Flarenetwork",
+    "contracts": [],
+    "needs_review": true
+  },
+  "flexytech": {
+    "slug": "flexytech",
+    "name": "Flexytech",
+    "contracts": [],
+    "needs_review": true
+  },
+  "floki": {
+    "slug": "floki",
+    "name": "Floki",
+    "contracts": [],
+    "needs_review": true
+  },
+  "fluxfinance": {
+    "slug": "fluxfinance",
+    "name": "Flux Finance",
+    "contracts": [],
+    "needs_review": true
+  },
+  "foil": {
+    "slug": "foil",
+    "name": "Foil",
+    "contracts": [],
+    "needs_review": true
+  },
+  "folksfinance": {
+    "slug": "folksfinance",
+    "name": "Folksfinance",
+    "contracts": [],
+    "needs_review": true
+  },
+  "forta": {
+    "slug": "forta",
+    "name": "Forta",
+    "contracts": [],
+    "needs_review": true
+  },
+  "foundation": {
+    "slug": "foundation",
+    "name": "Foundation",
+    "contracts": [],
+    "needs_review": true
+  },
+  "furucombo": {
+    "slug": "furucombo",
+    "name": "Furucombo",
+    "contracts": [],
+    "needs_review": true
+  },
+  "furucombofunds": {
+    "slug": "furucombofunds",
+    "name": "Furucombofunds",
+    "contracts": [],
+    "needs_review": true
+  },
+  "gainsnetwork": {
+    "slug": "gainsnetwork",
+    "name": "Gains Network",
+    "contracts": [],
+    "needs_review": true
+  },
+  "galagames": {
+    "slug": "galagames",
+    "name": "Galagames",
+    "contracts": [],
+    "needs_review": true
+  },
+  "gamma": {
+    "slug": "gamma",
+    "name": "Gamma",
+    "contracts": [],
+    "needs_review": true
+  },
+  "gammaswap": {
+    "slug": "gammaswap",
+    "name": "Gammaswap",
+    "contracts": [],
+    "needs_review": true
+  },
+  "gear": {
+    "slug": "gear",
+    "name": "Gear",
+    "contracts": [],
+    "needs_review": true
+  },
+  "gearbox": {
+    "slug": "gearbox",
+    "name": "Gearbox",
+    "contracts": [],
+    "needs_review": true
+  },
+  "geniusyield": {
+    "slug": "geniusyield",
+    "name": "Geniusyield",
+    "contracts": [],
+    "needs_review": true
+  },
+  "gerowallet": {
+    "slug": "gerowallet",
+    "name": "Gerowallet",
+    "contracts": [],
+    "needs_review": true
+  },
+  "ghostmarket": {
+    "slug": "ghostmarket",
+    "name": "Ghostmarket",
+    "contracts": [],
+    "needs_review": true
+  },
+  "glodollar": {
+    "slug": "glodollar",
+    "name": "Glodollar",
+    "contracts": [],
+    "needs_review": true
+  },
+  "gmx": {
+    "slug": "gmx",
+    "name": "GMX",
+    "contracts": [
+      {
+        "address": "0x489ee077994b6658eafa855c308275ead8097c4a",
+        "chain": "arbitrum",
+        "label": "GMX Vault",
+        "source": {
+          "kind": "whiteclaws_protocol_json",
+          "url": "public/protocols/gmx.json"
+        },
+        "needs_review": false,
+        "explorer": {
+          "url": "https://arbiscan.io/address/0x489ee077994b6658eafa855c308275ead8097c4a"
+        }
+      }
+    ],
+    "needs_review": false
+  },
+  "gnosischain": {
+    "slug": "gnosischain",
+    "name": "Gnosis Chain",
+    "contracts": [],
+    "needs_review": true
+  },
+  "gogopool": {
+    "slug": "gogopool",
+    "name": "Gogopool",
+    "contracts": [],
+    "needs_review": true
+  },
+  "goldfinch": {
+    "slug": "goldfinch",
+    "name": "Goldfinch",
+    "contracts": [],
+    "needs_review": true
+  },
+  "granite-protocol": {
+    "slug": "granite-protocol",
+    "name": "Granite Protocol",
+    "contracts": [],
+    "needs_review": true
+  },
+  "gysr": {
+    "slug": "gysr",
+    "name": "Gysr",
+    "contracts": [],
+    "needs_review": true
+  },
+  "hakkafinance": {
+    "slug": "hakkafinance",
+    "name": "Hakkafinance",
+    "contracts": [],
+    "needs_review": true
+  },
+  "halogen": {
+    "slug": "halogen",
+    "name": "Halogen",
+    "contracts": [],
+    "needs_review": true
+  },
+  "harvest": {
+    "slug": "harvest",
+    "name": "Harvest",
+    "contracts": [],
+    "needs_review": true
+  },
+  "hashflow": {
+    "slug": "hashflow",
+    "name": "Hashflow",
+    "contracts": [],
+    "needs_review": true
+  },
+  "hathornetwork": {
+    "slug": "hathornetwork",
+    "name": "Hathornetwork",
+    "contracts": [],
+    "needs_review": true
+  },
+  "haven1": {
+    "slug": "haven1",
+    "name": "Haven1",
+    "contracts": [],
+    "needs_review": true
+  },
+  "hedera": {
+    "slug": "hedera",
+    "name": "Hedera",
+    "contracts": [],
+    "needs_review": true
+  },
+  "helios-finance": {
+    "slug": "helios-finance",
+    "name": "Helios Finance",
+    "contracts": [],
+    "needs_review": true
+  },
+  "hibachi": {
+    "slug": "hibachi",
+    "name": "Hibachi",
+    "contracts": [],
+    "needs_review": true
+  },
+  "hoenn": {
+    "slug": "hoenn",
+    "name": "Hoenn",
+    "contracts": [],
+    "needs_review": true
+  },
+  "horizen": {
+    "slug": "horizen",
+    "name": "Horizen",
+    "contracts": [],
+    "needs_review": true
+  },
+  "hourglass": {
+    "slug": "hourglass",
+    "name": "Hourglass",
+    "contracts": [],
+    "needs_review": true
+  },
+  "hydradx": {
+    "slug": "hydradx",
+    "name": "Hydradx",
+    "contracts": [],
+    "needs_review": true
+  },
+  "hydration": {
+    "slug": "hydration",
+    "name": "Hydration",
+    "contracts": [],
+    "needs_review": true
+  },
+  "hydro": {
+    "slug": "hydro",
+    "name": "Hydro",
+    "contracts": [],
+    "needs_review": true
+  },
+  "hyperlane": {
+    "slug": "hyperlane",
+    "name": "Hyperlane",
+    "contracts": [
+      {
+        "address": "0xc005dc82818d67af737725bd4bf75435d065d239",
+        "chain": "ethereum",
+        "label": "Hyperlane Mailbox",
+        "source": {
+          "kind": "whiteclaws_protocol_json",
+          "url": "public/protocols/hyperlane.json"
+        },
+        "needs_review": false,
+        "explorer": {
+          "url": "https://etherscan.io/address/0xc005dc82818d67af737725bd4bf75435d065d239"
+        }
+      }
+    ],
+    "needs_review": false
+  },
+  "ichi": {
+    "slug": "ichi",
+    "name": "Ichi",
+    "contracts": [],
+    "needs_review": true
+  },
+  "icon": {
+    "slug": "icon",
+    "name": "Icon",
+    "contracts": [],
+    "needs_review": true
+  },
+  "idex": {
+    "slug": "idex",
+    "name": "Idex",
+    "contracts": [],
+    "needs_review": true
+  },
+  "idlefinance": {
+    "slug": "idlefinance",
+    "name": "Idlefinance",
+    "contracts": [],
+    "needs_review": true
+  },
+  "illuvium": {
+    "slug": "illuvium",
+    "name": "Illuvium",
+    "contracts": [],
+    "needs_review": true
+  },
+  "immunefi": {
+    "slug": "immunefi",
+    "name": "Immunefi",
+    "contracts": [],
+    "needs_review": true
+  },
+  "immutable": {
+    "slug": "immutable",
+    "name": "Immutable",
+    "contracts": [],
+    "needs_review": true
+  },
+  "impossible-cloud-network": {
+    "slug": "impossible-cloud-network",
+    "name": "Impossible Cloud Network",
+    "contracts": [],
+    "needs_review": true
+  },
+  "impossiblefinance": {
+    "slug": "impossiblefinance",
+    "name": "Impossiblefinance",
+    "contracts": [],
+    "needs_review": true
+  },
+  "indexcoop": {
+    "slug": "indexcoop",
+    "name": "Index Coop",
+    "contracts": [],
+    "needs_review": true
+  },
+  "infinex": {
+    "slug": "infinex",
+    "name": "Infinex",
+    "contracts": [],
+    "needs_review": true
+  },
+  "injective": {
+    "slug": "injective",
+    "name": "Injective",
+    "contracts": [],
+    "needs_review": true
+  },
+  "instadapp": {
+    "slug": "instadapp",
+    "name": "Instadapp",
+    "contracts": [],
+    "needs_review": true
+  },
+  "integral": {
+    "slug": "integral",
+    "name": "Integral",
+    "contracts": [],
+    "needs_review": true
+  },
+  "integriteenetwork": {
+    "slug": "integriteenetwork",
+    "name": "Integriteenetwork",
+    "contracts": [],
+    "needs_review": true
+  },
+  "interlay": {
+    "slug": "interlay",
+    "name": "Interlay",
+    "contracts": [],
+    "needs_review": true
+  },
+  "intmax": {
+    "slug": "intmax",
+    "name": "INTMAX",
+    "contracts": [],
+    "needs_review": true
+  },
+  "inverse-finance": {
+    "slug": "inverse-finance",
+    "name": "Inverse Finance",
+    "contracts": [
+      {
+        "address": "0x865377367054516e17014ccded1e7d814edc9ce4",
+        "chain": "ethereum",
+        "label": "DOLA Stablecoin",
+        "source": {
+          "kind": "verified_onchain",
+          "url": "https://etherscan.io/address/0x865377367054516e17014ccded1e7d814edc9ce4"
+        },
+        "explorer": {
+          "url": "https://etherscan.io/address/0x865377367054516e17014ccded1e7d814edc9ce4"
+        },
+        "needs_review": false
+      }
+    ],
+    "needs_review": false
+  },
+  "ion-protocol": {
+    "slug": "ion-protocol",
+    "name": "Ion Protocol",
+    "contracts": [],
+    "needs_review": true
+  },
+  "ipor": {
+    "slug": "ipor",
+    "name": "IPOR",
+    "contracts": [],
+    "needs_review": true
+  },
+  "jito-bam-client": {
+    "slug": "jito-bam-client",
+    "name": "Jito Bam Client",
+    "contracts": [],
+    "needs_review": true
+  },
+  "jito-foundation": {
+    "slug": "jito-foundation",
+    "name": "Jito Foundation",
+    "contracts": [],
+    "needs_review": true
+  },
+  "jito": {
+    "slug": "jito",
+    "name": "Jito",
+    "contracts": [],
+    "needs_review": true
+  },
+  "justlenddao": {
+    "slug": "justlenddao",
+    "name": "Justlenddao",
+    "contracts": [],
+    "needs_review": true
+  },
+  "kadena": {
+    "slug": "kadena",
+    "name": "Kadena",
+    "contracts": [],
+    "needs_review": true
+  },
+  "kamino": {
+    "slug": "kamino",
+    "name": "Kamino",
+    "contracts": [],
+    "needs_review": true
+  },
+  "keep3rnetwork": {
+    "slug": "keep3rnetwork",
+    "name": "Keep3rnetwork",
+    "contracts": [],
+    "needs_review": true
+  },
+  "kelp-dao": {
+    "slug": "kelp-dao",
+    "name": "Kelp DAO",
+    "contracts": [],
+    "needs_review": true
+  },
+  "kiln-defi": {
+    "slug": "kiln-defi",
+    "name": "Kiln DeFi",
+    "contracts": [],
+    "needs_review": true
+  },
+  "kiln-on-chain-v1": {
+    "slug": "kiln-on-chain-v1",
+    "name": "Kiln On-Chain v1",
+    "contracts": [],
+    "needs_review": true
+  },
+  "kiln-webapp": {
+    "slug": "kiln-webapp",
+    "name": "Kiln Webapp",
+    "contracts": [],
+    "needs_review": true
+  },
+  "kiln": {
+    "slug": "kiln",
+    "name": "Kiln On-Chain v2",
+    "contracts": [],
+    "needs_review": true
+  },
+  "kinesis-bridge-on-kadena": {
+    "slug": "kinesis-bridge-on-kadena",
+    "name": "Kinesis Bridge On Kadena",
+    "contracts": [],
+    "needs_review": true
+  },
+  "kwenta": {
+    "slug": "kwenta",
+    "name": "Kwenta",
+    "contracts": [],
+    "needs_review": true
+  },
+  "landx": {
+    "slug": "landx",
+    "name": "Landx",
+    "contracts": [],
+    "needs_review": true
+  },
+  "layer3": {
+    "slug": "layer3",
+    "name": "Layer3.xyz",
+    "contracts": [],
+    "needs_review": true
+  },
+  "layerzero": {
+    "slug": "layerzero",
+    "name": "LayerZero",
+    "contracts": [
+      {
+        "address": "0x66a71dcef29a0ffbdbe3c6a460a3b5bc225cd675",
+        "chain": "ethereum",
+        "label": "LayerZero Endpoint",
+        "source": {
+          "kind": "whiteclaws_protocol_json",
+          "url": "public/protocols/layerzero.json"
+        },
+        "needs_review": false,
+        "explorer": {
+          "url": "https://etherscan.io/address/0x66a71dcef29a0ffbdbe3c6a460a3b5bc225cd675"
+        }
+      }
+    ],
+    "needs_review": false
+  },
+  "lendr": {
+    "slug": "lendr",
+    "name": "Lendr",
+    "contracts": [],
+    "needs_review": true
+  },
+  "lido": {
+    "slug": "lido",
+    "name": "Lido",
+    "contracts": [
+      {
+        "address": "0xae7ab96520de3a18e5e111b5eaab095312d7fe84",
+        "chain": "ethereum",
+        "label": "Lido stETH",
+        "source": {
+          "kind": "whiteclaws_protocol_json",
+          "url": "public/protocols/lido.json"
+        },
+        "needs_review": false,
+        "explorer": {
+          "url": "https://etherscan.io/address/0xae7ab96520de3a18e5e111b5eaab095312d7fe84"
+        }
+      }
+    ],
+    "needs_review": false
+  },
+  "lidoonpolygon": {
+    "slug": "lidoonpolygon",
+    "name": "Lidoonpolygon",
+    "contracts": [],
+    "needs_review": true
+  },
+  "lifi": {
+    "slug": "lifi",
+    "name": "Lifi",
+    "contracts": [],
+    "needs_review": true
+  },
+  "light-protocol": {
+    "slug": "light-protocol",
+    "name": "Light Protocol",
+    "contracts": [],
+    "needs_review": true
+  },
+  "linea": {
+    "slug": "linea",
+    "name": "Linea",
+    "contracts": [],
+    "needs_review": true
+  },
+  "liquidswap": {
+    "slug": "liquidswap",
+    "name": "Liquidswap",
+    "contracts": [],
+    "needs_review": true
+  },
+  "listadao": {
+    "slug": "listadao",
+    "name": "Lista DAO",
+    "contracts": [],
+    "needs_review": true
+  },
+  "livepeer": {
+    "slug": "livepeer",
+    "name": "Livepeer",
+    "contracts": [],
+    "needs_review": true
+  },
+  "localtraders": {
+    "slug": "localtraders",
+    "name": "Localtraders",
+    "contracts": [],
+    "needs_review": true
+  },
+  "lombard-finance": {
+    "slug": "lombard-finance",
+    "name": "Lombard Finance",
+    "contracts": [],
+    "needs_review": true
+  },
+  "lossless": {
+    "slug": "lossless",
+    "name": "Lossless",
+    "contracts": [],
+    "needs_review": true
+  },
+  "lybrafinance": {
+    "slug": "lybrafinance",
+    "name": "Lybrafinance",
+    "contracts": [],
+    "needs_review": true
+  },
+  "lyra": {
+    "slug": "lyra",
+    "name": "Lyra",
+    "contracts": [],
+    "needs_review": true
+  },
+  "magpiexyz": {
+    "slug": "magpiexyz",
+    "name": "Magpiexyz",
+    "contracts": [],
+    "needs_review": true
+  },
+  "mantlelsp": {
+    "slug": "mantlelsp",
+    "name": "Mantlelsp",
+    "contracts": [],
+    "needs_review": true
+  },
+  "maple": {
+    "slug": "maple",
+    "name": "Maple",
+    "contracts": [],
+    "needs_review": true
+  },
+  "marinade": {
+    "slug": "marinade",
+    "name": "Marinade",
+    "contracts": [],
+    "needs_review": true
+  },
+  "mars": {
+    "slug": "mars",
+    "name": "Mars",
+    "contracts": [],
+    "needs_review": true
+  },
+  "marsecosystem": {
+    "slug": "marsecosystem",
+    "name": "Marsecosystem",
+    "contracts": [],
+    "needs_review": true
+  },
+  "mayaprotocol": {
+    "slug": "mayaprotocol",
+    "name": "Mayaprotocol",
+    "contracts": [],
+    "needs_review": true
+  },
+  "meanfinance": {
+    "slug": "meanfinance",
+    "name": "Meanfinance",
+    "contracts": [],
+    "needs_review": true
+  },
+  "metalswap": {
+    "slug": "metalswap",
+    "name": "Metalswap",
+    "contracts": [],
+    "needs_review": true
+  },
+  "metastreet-yield-pass": {
+    "slug": "metastreet-yield-pass",
+    "name": "Metastreet Yield Pass",
+    "contracts": [],
+    "needs_review": true
+  },
+  "metastreet": {
+    "slug": "metastreet",
+    "name": "Metastreet",
+    "contracts": [],
+    "needs_review": true
+  },
+  "meth": {
+    "slug": "meth",
+    "name": "mETH Protocol",
+    "contracts": [],
+    "needs_review": true
+  },
+  "metis": {
+    "slug": "metis",
+    "name": "Metis",
+    "contracts": [],
+    "needs_review": true
+  },
+  "metronome": {
+    "slug": "metronome",
+    "name": "Metronome",
+    "contracts": [],
+    "needs_review": true
+  },
+  "monero-oxide": {
+    "slug": "monero-oxide",
+    "name": "Monero Oxide",
+    "contracts": [],
+    "needs_review": true
+  },
+  "moneyonchain": {
+    "slug": "moneyonchain",
+    "name": "Moneyonchain",
+    "contracts": [],
+    "needs_review": true
+  },
+  "moonbeamnetwork": {
+    "slug": "moonbeamnetwork",
+    "name": "Moonbeamnetwork",
+    "contracts": [],
+    "needs_review": true
+  },
+  "moonwell": {
+    "slug": "moonwell",
+    "name": "Moonwell",
+    "contracts": [],
+    "needs_review": true
+  },
+  "morpho": {
+    "slug": "morpho",
+    "name": "Morpho",
+    "contracts": [],
+    "needs_review": true
+  },
+  "mountainprotocol": {
+    "slug": "mountainprotocol",
+    "name": "Mountainprotocol",
+    "contracts": [],
+    "needs_review": true
+  },
+  "mtpelerin": {
+    "slug": "mtpelerin",
+    "name": "Mtpelerin",
+    "contracts": [],
+    "needs_review": true
+  },
+  "mux": {
+    "slug": "mux",
+    "name": "Mux",
+    "contracts": [],
+    "needs_review": true
+  },
+  "myntandzero": {
+    "slug": "myntandzero",
+    "name": "Myntandzero",
+    "contracts": [],
+    "needs_review": true
+  },
+  "native": {
+    "slug": "native",
+    "name": "Native",
+    "contracts": [],
+    "needs_review": true
+  },
+  "nayms": {
+    "slug": "nayms",
+    "name": "Nayms",
+    "contracts": [],
+    "needs_review": true
+  },
+  "neo": {
+    "slug": "neo",
+    "name": "Neo",
+    "contracts": [],
+    "needs_review": true
+  },
+  "neutron": {
+    "slug": "neutron",
+    "name": "Neutron",
+    "contracts": [],
+    "needs_review": true
+  },
+  "nexusmutual": {
+    "slug": "nexusmutual",
+    "name": "Nexus Mutual",
+    "contracts": [],
+    "needs_review": true
+  },
+  "nftfi": {
+    "slug": "nftfi",
+    "name": "Nftfi",
+    "contracts": [],
+    "needs_review": true
+  },
+  "nftfitestnetrefi": {
+    "slug": "nftfitestnetrefi",
+    "name": "Nftfitestnetrefi",
+    "contracts": [],
+    "needs_review": true
+  },
+  "nftx": {
+    "slug": "nftx",
+    "name": "Nftx",
+    "contracts": [],
+    "needs_review": true
+  },
+  "nodle": {
+    "slug": "nodle",
+    "name": "Nodle",
+    "contracts": [],
+    "needs_review": true
+  },
+  "nomad": {
+    "slug": "nomad",
+    "name": "Nomad",
+    "contracts": [],
+    "needs_review": true
+  },
+  "notional": {
+    "slug": "notional",
+    "name": "Notional",
+    "contracts": [],
+    "needs_review": true
+  },
+  "nucleus": {
+    "slug": "nucleus",
+    "name": "Nucleus",
+    "contracts": [],
+    "needs_review": true
+  },
+  "oasis": {
+    "slug": "oasis",
+    "name": "Oasis",
+    "contracts": [],
+    "needs_review": true
+  },
+  "obyte": {
+    "slug": "obyte",
+    "name": "Obyte",
+    "contracts": [],
+    "needs_review": true
+  },
+  "oceanprotocol": {
+    "slug": "oceanprotocol",
+    "name": "Oceanprotocol",
+    "contracts": [],
+    "needs_review": true
+  },
+  "octopusnetwork": {
+    "slug": "octopusnetwork",
+    "name": "Octopusnetwork",
+    "contracts": [],
+    "needs_review": true
+  },
+  "ofza-1": {
+    "slug": "ofza-1",
+    "name": "Ofza 1",
+    "contracts": [],
+    "needs_review": true
+  },
+  "olafinance": {
+    "slug": "olafinance",
+    "name": "Olafinance",
+    "contracts": [],
+    "needs_review": true
+  },
+  "olympus": {
+    "slug": "olympus",
+    "name": "Olympus",
+    "contracts": [
+      {
+        "address": "0x64aa3364f17a4d01c6f1751fd97c2bd3d7e7f1d5",
+        "chain": "ethereum",
+        "label": "OHM Token",
+        "source": {
+          "kind": "whiteclaws_protocol_json",
+          "url": "public/protocols/olympus.json"
+        },
+        "needs_review": false,
+        "explorer": {
+          "url": "https://etherscan.io/address/0x64aa3364f17a4d01c6f1751fd97c2bd3d7e7f1d5"
+        }
+      }
+    ],
+    "needs_review": false
+  },
+  "omni-network": {
+    "slug": "omni-network",
+    "name": "Omni Network",
+    "contracts": [],
+    "needs_review": true
+  },
+  "omron": {
+    "slug": "omron",
+    "name": "Omron",
+    "contracts": [],
+    "needs_review": true
+  },
+  "ondofinance": {
+    "slug": "ondofinance",
+    "name": "Ondo Finance",
+    "contracts": [],
+    "needs_review": true
+  },
+  "openzeppelin-stellar": {
+    "slug": "openzeppelin-stellar",
+    "name": "Openzeppelin Stellar",
+    "contracts": [],
+    "needs_review": true
+  },
+  "openzeppelin": {
+    "slug": "openzeppelin",
+    "name": "Openzeppelin",
+    "contracts": [],
+    "needs_review": true
+  },
+  "optimism": {
+    "slug": "optimism",
+    "name": "Optimism",
+    "contracts": [
+      {
+        "address": "0x25ace71c97b33cc4729cf772ae268934f7ab5fa1",
+        "chain": "ethereum",
+        "label": "L1CrossDomainMessenger",
+        "source": {
+          "kind": "whiteclaws_protocol_json",
+          "url": "public/protocols/optimism.json"
+        },
+        "needs_review": false,
+        "explorer": {
+          "url": "https://etherscan.io/address/0x25ace71c97b33cc4729cf772ae268934f7ab5fa1"
+        }
+      }
+    ],
+    "needs_review": false
+  },
+  "opyngamma": {
+    "slug": "opyngamma",
+    "name": "Opyngamma",
+    "contracts": [],
+    "needs_review": true
+  },
+  "opynsqueeth": {
+    "slug": "opynsqueeth",
+    "name": "Opynsqueeth",
+    "contracts": [],
+    "needs_review": true
+  },
+  "orca": {
+    "slug": "orca",
+    "name": "Orca",
+    "contracts": [],
+    "needs_review": true
+  },
+  "orderlynetwork": {
+    "slug": "orderlynetwork",
+    "name": "Orderlynetwork",
+    "contracts": [],
+    "needs_review": true
+  },
+  "origin-protocol": {
+    "slug": "origin-protocol",
+    "name": "Origin Protocol",
+    "contracts": [],
+    "needs_review": true
+  },
+  "origindefi": {
+    "slug": "origindefi",
+    "name": "Origindefi",
+    "contracts": [],
+    "needs_review": true
+  },
+  "ostium": {
+    "slug": "ostium",
+    "name": "Ostium",
+    "contracts": [],
+    "needs_review": true
+  },
+  "overlay": {
+    "slug": "overlay",
+    "name": "Overlay",
+    "contracts": [],
+    "needs_review": true
+  },
+  "pact": {
+    "slug": "pact",
+    "name": "Pact",
+    "contracts": [],
+    "needs_review": true
+  },
+  "pancakeswap": {
+    "slug": "pancakeswap",
+    "name": "PancakeSwap",
+    "contracts": [
+      {
+        "address": "0x13f4ea83d0bd40e75c8222255bc855a974568dd4",
+        "chain": "bsc",
+        "label": "PancakeSwap V3 Factory",
+        "source": {
+          "kind": "whiteclaws_protocol_json",
+          "url": "public/protocols/pancakeswap.json"
+        },
+        "needs_review": false,
+        "explorer": {
+          "url": "https://bscscan.com/address/0x13f4ea83d0bd40e75c8222255bc855a974568dd4"
+        }
+      }
+    ],
+    "needs_review": false
+  },
+  "pantos": {
+    "slug": "pantos",
+    "name": "Pantos",
+    "contracts": [],
+    "needs_review": true
+  },
+  "paradex": {
+    "slug": "paradex",
+    "name": "Paradex",
+    "contracts": [],
+    "needs_review": true
+  },
+  "paragonsdao": {
+    "slug": "paragonsdao",
+    "name": "Paragonsdao",
+    "contracts": [],
+    "needs_review": true
+  },
+  "parallel": {
+    "slug": "parallel",
+    "name": "Parallel",
+    "contracts": [],
+    "needs_review": true
+  },
+  "parallelwallet": {
+    "slug": "parallelwallet",
+    "name": "Parallelwallet",
+    "contracts": [],
+    "needs_review": true
+  },
+  "pareto": {
+    "slug": "pareto",
+    "name": "Pareto",
+    "contracts": [],
+    "needs_review": true
+  },
+  "paribus": {
+    "slug": "paribus",
+    "name": "Paribus",
+    "contracts": [],
+    "needs_review": true
+  },
+  "pendle": {
+    "slug": "pendle",
+    "name": "Pendle",
+    "contracts": [],
+    "needs_review": true
+  },
+  "perennial": {
+    "slug": "perennial",
+    "name": "Perennial",
+    "contracts": [],
+    "needs_review": true
+  },
+  "perpetual": {
+    "slug": "perpetual",
+    "name": "Perpetual",
+    "contracts": [],
+    "needs_review": true
+  },
+  "pikaprotocol": {
+    "slug": "pikaprotocol",
+    "name": "Pikaprotocol",
+    "contracts": [],
+    "needs_review": true
+  },
+  "pillar": {
+    "slug": "pillar",
+    "name": "Pillar",
+    "contracts": [],
+    "needs_review": true
+  },
+  "pinto": {
+    "slug": "pinto",
+    "name": "Pinto",
+    "contracts": [],
+    "needs_review": true
+  },
+  "plaza-finance": {
+    "slug": "plaza-finance",
+    "name": "Plaza Finance",
+    "contracts": [],
+    "needs_review": true
+  },
+  "plume-network": {
+    "slug": "plume-network",
+    "name": "Plume Network",
+    "contracts": [],
+    "needs_review": true
+  },
+  "pnetwork": {
+    "slug": "pnetwork",
+    "name": "Pnetwork",
+    "contracts": [],
+    "needs_review": true
+  },
+  "pods": {
+    "slug": "pods",
+    "name": "Pods",
+    "contracts": [],
+    "needs_review": true
+  },
+  "polkastarter": {
+    "slug": "polkastarter",
+    "name": "Polkastarter",
+    "contracts": [],
+    "needs_review": true
+  },
+  "polygon": {
+    "slug": "polygon",
+    "name": "Polygon",
+    "contracts": [
+      {
+        "address": "0xa0c68c638235ee32657e8f720a23cec1bfc77c77",
+        "chain": "ethereum",
+        "label": "Polygon Bridge",
+        "source": {
+          "kind": "whiteclaws_protocol_json",
+          "url": "public/protocols/polygon.json"
+        },
+        "needs_review": false,
+        "explorer": {
+          "url": "https://etherscan.io/address/0xa0c68c638235ee32657e8f720a23cec1bfc77c77"
+        }
+      }
+    ],
+    "needs_review": false
+  },
+  "polygonzkevm": {
+    "slug": "polygonzkevm",
+    "name": "Polygonzkevm",
+    "contracts": [],
+    "needs_review": true
+  },
+  "polymarket": {
+    "slug": "polymarket",
+    "name": "Polymarket",
+    "contracts": [],
+    "needs_review": true
+  },
+  "polymesh": {
+    "slug": "polymesh",
+    "name": "Polymesh",
+    "contracts": [],
+    "needs_review": true
+  },
+  "poolshark": {
+    "slug": "poolshark",
+    "name": "Poolshark",
+    "contracts": [],
+    "needs_review": true
+  },
+  "pooltogether": {
+    "slug": "pooltogether",
+    "name": "PoolTogether",
+    "contracts": [],
+    "needs_review": true
+  },
+  "popsicle": {
+    "slug": "popsicle",
+    "name": "Popsicle",
+    "contracts": [],
+    "needs_review": true
+  },
+  "portfinance": {
+    "slug": "portfinance",
+    "name": "Portfinance",
+    "contracts": [],
+    "needs_review": true
+  },
+  "pragmaoracle": {
+    "slug": "pragmaoracle",
+    "name": "Pragmaoracle",
+    "contracts": [],
+    "needs_review": true
+  },
+  "predyfinance": {
+    "slug": "predyfinance",
+    "name": "Predyfinance",
+    "contracts": [],
+    "needs_review": true
+  },
+  "primitive": {
+    "slug": "primitive",
+    "name": "Primitive",
+    "contracts": [],
+    "needs_review": true
+  },
+  "print3r": {
+    "slug": "print3r",
+    "name": "Print3r",
+    "contracts": [],
+    "needs_review": true
+  },
+  "pstake": {
+    "slug": "pstake",
+    "name": "Pstake",
+    "contracts": [],
+    "needs_review": true
+  },
+  "pstakeoncosmos": {
+    "slug": "pstakeoncosmos",
+    "name": "Pstakeoncosmos",
+    "contracts": [],
+    "needs_review": true
+  },
+  "pushprotocol": {
+    "slug": "pushprotocol",
+    "name": "Pushprotocol",
+    "contracts": [],
+    "needs_review": true
+  },
+  "pythnetwork": {
+    "slug": "pythnetwork",
+    "name": "Pyth Network",
+    "contracts": [],
+    "needs_review": true
+  },
+  "qblockchain": {
+    "slug": "qblockchain",
+    "name": "Qblockchain",
+    "contracts": [],
+    "needs_review": true
+  },
+  "quadrata": {
+    "slug": "quadrata",
+    "name": "Quadrata",
+    "contracts": [],
+    "needs_review": true
+  },
+  "radiant": {
+    "slug": "radiant",
+    "name": "Radiant",
+    "contracts": [],
+    "needs_review": true
+  },
+  "rai": {
+    "slug": "rai",
+    "name": "Rai",
+    "contracts": [],
+    "needs_review": true
+  },
+  "rangeprotocol": {
+    "slug": "rangeprotocol",
+    "name": "Rangeprotocol",
+    "contracts": [],
+    "needs_review": true
+  },
+  "raydium": {
+    "slug": "raydium",
+    "name": "Raydium",
+    "contracts": [],
+    "needs_review": true
+  },
+  "reaperfarm": {
+    "slug": "reaperfarm",
+    "name": "Reaperfarm",
+    "contracts": [],
+    "needs_review": true
+  },
+  "ref-finance": {
+    "slug": "ref-finance",
+    "name": "Ref Finance",
+    "contracts": [],
+    "needs_review": true
+  },
+  "renzoprotocol": {
+    "slug": "renzoprotocol",
+    "name": "Renzo Protocol",
+    "contracts": [],
+    "needs_review": true
+  },
+  "reserve": {
+    "slug": "reserve",
+    "name": "Reserve",
+    "contracts": [
+      {
+        "address": "0x320623b8e4ff03373931769a31fc52a4e78b5d70",
+        "chain": "ethereum",
+        "label": "Reserve RToken Main",
+        "source": {
+          "kind": "whiteclaws_protocol_json",
+          "url": "public/protocols/reserve.json"
+        },
+        "needs_review": false,
+        "explorer": {
+          "url": "https://etherscan.io/address/0x320623b8e4ff03373931769a31fc52a4e78b5d70"
+        }
+      }
+    ],
+    "needs_review": false
+  },
+  "resolv": {
+    "slug": "resolv",
+    "name": "Resolv",
+    "contracts": [],
+    "needs_review": true
+  },
+  "resonate": {
+    "slug": "resonate",
+    "name": "Resonate",
+    "contracts": [],
+    "needs_review": true
+  },
+  "revert": {
+    "slug": "revert",
+    "name": "Revert",
+    "contracts": [],
+    "needs_review": true
+  },
+  "revest": {
+    "slug": "revest",
+    "name": "Revest",
+    "contracts": [],
+    "needs_review": true
+  },
+  "rhinofi": {
+    "slug": "rhinofi",
+    "name": "Rhino.fi",
+    "contracts": [],
+    "needs_review": true
+  },
+  "ribbon": {
+    "slug": "ribbon",
+    "name": "Ribbon",
+    "contracts": [],
+    "needs_review": true
+  },
+  "ringdao": {
+    "slug": "ringdao",
+    "name": "Ringdao",
+    "contracts": [],
+    "needs_review": true
+  },
+  "rocketpool": {
+    "slug": "rocketpool",
+    "name": "Rocket Pool",
+    "contracts": [],
+    "needs_review": true
+  },
+  "router": {
+    "slug": "router",
+    "name": "Router",
+    "contracts": [],
+    "needs_review": true
+  },
+  "royco": {
+    "slug": "royco",
+    "name": "Royco",
+    "contracts": [],
+    "needs_review": true
+  },
+  "rubic": {
+    "slug": "rubic",
+    "name": "Rubic",
+    "contracts": [],
+    "needs_review": true
+  },
+  "ruscet": {
+    "slug": "ruscet",
+    "name": "Ruscet",
+    "contracts": [],
+    "needs_review": true
+  },
+  "rysk": {
+    "slug": "rysk",
+    "name": "Rysk",
+    "contracts": [],
+    "needs_review": true
+  },
+  "scroll": {
+    "slug": "scroll",
+    "name": "Scroll",
+    "contracts": [
+      {
+        "address": "0x6774bcbd5cecef1336b5300fb5186a12ddd8b367",
+        "chain": "ethereum",
+        "label": "L1ScrollMessenger",
+        "source": {
+          "kind": "verified_onchain",
+          "url": "https://etherscan.io/address/0x6774bcbd5cecef1336b5300fb5186a12ddd8b367"
+        },
+        "explorer": {
+          "url": "https://etherscan.io/address/0x6774bcbd5cecef1336b5300fb5186a12ddd8b367"
+        },
+        "needs_review": false
+      }
+    ],
+    "needs_review": false
+  },
+  "sectorfinance": {
+    "slug": "sectorfinance",
+    "name": "Sectorfinance",
+    "contracts": [],
+    "needs_review": true
+  },
+  "securefi": {
+    "slug": "securefi",
+    "name": "Securefi",
+    "contracts": [],
+    "needs_review": true
+  },
+  "segmentfinance": {
+    "slug": "segmentfinance",
+    "name": "Segmentfinance",
+    "contracts": [],
+    "needs_review": true
+  },
+  "sei": {
+    "slug": "sei",
+    "name": "Sei",
+    "contracts": [],
+    "needs_review": true
+  },
+  "serai": {
+    "slug": "serai",
+    "name": "Serai",
+    "contracts": [],
+    "needs_review": true
+  },
+  "shellprotocol": {
+    "slug": "shellprotocol",
+    "name": "Shellprotocol",
+    "contracts": [],
+    "needs_review": true
+  },
+  "sherlock": {
+    "slug": "sherlock",
+    "name": "Sherlock",
+    "contracts": [],
+    "needs_review": true
+  },
+  "silofinance-v2": {
+    "slug": "silofinance-v2",
+    "name": "Silo Finance V2",
+    "contracts": [],
+    "needs_review": true
+  },
+  "silofinance": {
+    "slug": "silofinance",
+    "name": "Silofinance",
+    "contracts": [],
+    "needs_review": true
+  },
+  "singularitydao": {
+    "slug": "singularitydao",
+    "name": "Singularitydao",
+    "contracts": [],
+    "needs_review": true
+  },
+  "skatefi": {
+    "slug": "skatefi",
+    "name": "Skatefi",
+    "contracts": [],
+    "needs_review": true
+  },
+  "sky": {
+    "slug": "sky",
+    "name": "Sky",
+    "contracts": [
+      {
+        "address": "0x35d1b3f3d7966a1dfe207aa4514c12a259a0492b",
+        "chain": "ethereum",
+        "label": "MCD Vat",
+        "source": {
+          "kind": "whiteclaws_protocol_json",
+          "url": "public/protocols/sky.json"
+        },
+        "needs_review": false,
+        "explorer": {
+          "url": "https://etherscan.io/address/0x35d1b3f3d7966a1dfe207aa4514c12a259a0492b"
+        }
+      }
+    ],
+    "needs_review": false
+  },
+  "smardex": {
+    "slug": "smardex",
+    "name": "Smardex",
+    "contracts": [],
+    "needs_review": true
+  },
+  "sns": {
+    "slug": "sns",
+    "name": "Sns",
+    "contracts": [],
+    "needs_review": true
+  },
+  "sommelier": {
+    "slug": "sommelier",
+    "name": "Sommelier",
+    "contracts": [],
+    "needs_review": true
+  },
+  "sora": {
+    "slug": "sora",
+    "name": "Sora",
+    "contracts": [],
+    "needs_review": true
+  },
+  "sovryn": {
+    "slug": "sovryn",
+    "name": "Sovryn",
+    "contracts": [],
+    "needs_review": true
+  },
+  "sparklend": {
+    "slug": "sparklend",
+    "name": "Spark",
+    "contracts": [],
+    "needs_review": true
+  },
+  "spectral": {
+    "slug": "spectral",
+    "name": "Spectral",
+    "contracts": [],
+    "needs_review": true
+  },
+  "spookyswap": {
+    "slug": "spookyswap",
+    "name": "Spookyswap",
+    "contracts": [],
+    "needs_review": true
+  },
+  "spool": {
+    "slug": "spool",
+    "name": "Spool",
+    "contracts": [],
+    "needs_review": true
+  },
+  "spot": {
+    "slug": "spot",
+    "name": "Spot",
+    "contracts": [],
+    "needs_review": true
+  },
+  "ssv-network": {
+    "slug": "ssv-network",
+    "name": "SSV Network",
+    "contracts": [
+      {
+        "address": "0xdd9bc35ae942ef0cfa76930954a156b3ff30a4e1",
+        "chain": "ethereum",
+        "label": "SSVNetwork",
+        "source": {
+          "kind": "whiteclaws_protocol_json",
+          "url": "public/protocols/ssv-network.json"
+        },
+        "needs_review": false,
+        "explorer": {
+          "url": "https://etherscan.io/address/0xdd9bc35ae942ef0cfa76930954a156b3ff30a4e1"
+        }
+      },
+      {
+        "address": "0x9d65ff81a3c488d585bbfb0bfe3c7707c7917f54",
+        "chain": "ethereum",
+        "label": "SSVToken",
+        "source": {
+          "kind": "whiteclaws_protocol_json",
+          "url": "public/protocols/ssv-network.json"
+        },
+        "needs_review": false,
+        "explorer": {
+          "url": "https://etherscan.io/address/0x9d65ff81a3c488d585bbfb0bfe3c7707c7917f54"
+        }
+      }
+    ],
+    "needs_review": false
+  },
+  "stackingdao": {
+    "slug": "stackingdao",
+    "name": "StackingDAO",
+    "contracts": [],
+    "needs_review": true
+  },
+  "stacks": {
+    "slug": "stacks",
+    "name": "Stacks",
+    "contracts": [],
+    "needs_review": true
+  },
+  "staderforbnb": {
+    "slug": "staderforbnb",
+    "name": "Staderforbnb",
+    "contracts": [],
+    "needs_review": true
+  },
+  "staderforeth": {
+    "slug": "staderforeth",
+    "name": "Stader for ETH",
+    "contracts": [],
+    "needs_review": true
+  },
+  "staderforpolygon": {
+    "slug": "staderforpolygon",
+    "name": "StaderforPolygon",
+    "contracts": [],
+    "needs_review": true
+  },
+  "stafi": {
+    "slug": "stafi",
+    "name": "Stafi",
+    "contracts": [],
+    "needs_review": true
+  },
+  "stakeeasy": {
+    "slug": "stakeeasy",
+    "name": "Stakeeasy",
+    "contracts": [],
+    "needs_review": true
+  },
+  "stakelink": {
+    "slug": "stakelink",
+    "name": "Stakelink",
+    "contracts": [],
+    "needs_review": true
+  },
+  "stakestone": {
+    "slug": "stakestone",
+    "name": "StakeStone",
+    "contracts": [],
+    "needs_review": true
+  },
+  "stakewise": {
+    "slug": "stakewise",
+    "name": "Stakewise",
+    "contracts": [],
+    "needs_review": true
+  },
+  "stargate": {
+    "slug": "stargate",
+    "name": "Stargate",
+    "contracts": [
+      {
+        "address": "0x8731d54e9d02c286767d56ac03e8037c07e01e98",
+        "chain": "ethereum",
+        "label": "Stargate Router",
+        "source": {
+          "kind": "whiteclaws_protocol_json",
+          "url": "public/protocols/stargate.json"
+        },
+        "needs_review": false,
+        "explorer": {
+          "url": "https://etherscan.io/address/0x8731d54e9d02c286767d56ac03e8037c07e01e98"
+        }
+      }
+    ],
+    "needs_review": false
+  },
+  "starkex": {
+    "slug": "starkex",
+    "name": "StarkEx",
+    "contracts": [],
+    "needs_review": true
+  },
+  "starknet-staking": {
+    "slug": "starknet-staking",
+    "name": "Starknet Staking",
+    "contracts": [],
+    "needs_review": true
+  },
+  "starknet": {
+    "slug": "starknet",
+    "name": "StarkNet",
+    "contracts": [
+      {
+        "address": "0xc662c410c0ecf747543f5ba90660f6abebd9c8c4",
+        "chain": "ethereum",
+        "label": "StarkNet Core Contract",
+        "source": {
+          "kind": "whiteclaws_protocol_json",
+          "url": "public/protocols/starknet.json"
+        },
+        "needs_review": false,
+        "explorer": {
+          "url": "https://etherscan.io/address/0xc662c410c0ecf747543f5ba90660f6abebd9c8c4"
+        }
+      }
+    ],
+    "needs_review": false
+  },
+  "stellar": {
+    "slug": "stellar",
+    "name": "Stellar",
+    "contracts": [],
+    "needs_review": true
+  },
+  "stellaswap": {
+    "slug": "stellaswap",
+    "name": "Stellaswap",
+    "contracts": [],
+    "needs_review": true
+  },
+  "strikefinance": {
+    "slug": "strikefinance",
+    "name": "Strikefinance",
+    "contracts": [],
+    "needs_review": true
+  },
+  "sturdy": {
+    "slug": "sturdy",
+    "name": "Sturdy",
+    "contracts": [],
+    "needs_review": true
+  },
+  "summerfi": {
+    "slug": "summerfi",
+    "name": "Summerfi",
+    "contracts": [],
+    "needs_review": true
+  },
+  "superbots": {
+    "slug": "superbots",
+    "name": "Superbots",
+    "contracts": [],
+    "needs_review": true
+  },
+  "superfluid": {
+    "slug": "superfluid",
+    "name": "Superfluid",
+    "contracts": [],
+    "needs_review": true
+  },
+  "superform": {
+    "slug": "superform",
+    "name": "Superform",
+    "contracts": [],
+    "needs_review": true
+  },
+  "sushiswap": {
+    "slug": "sushiswap",
+    "name": "SushiSwap",
+    "contracts": [],
+    "needs_review": true
+  },
+  "swappi": {
+    "slug": "swappi",
+    "name": "Swappi",
+    "contracts": [],
+    "needs_review": true
+  },
+  "sweateconomy": {
+    "slug": "sweateconomy",
+    "name": "Sweat Economy",
+    "contracts": [],
+    "needs_review": true
+  },
+  "swell": {
+    "slug": "swell",
+    "name": "Swell",
+    "contracts": [],
+    "needs_review": true
+  },
+  "symbiosis": {
+    "slug": "symbiosis",
+    "name": "Symbiosis",
+    "contracts": [],
+    "needs_review": true
+  },
+  "symbiotic": {
+    "slug": "symbiotic",
+    "name": "Symbiotic",
+    "contracts": [],
+    "needs_review": true
+  },
+  "synfutures": {
+    "slug": "synfutures",
+    "name": "SynFutures",
+    "contracts": [],
+    "needs_review": true
+  },
+  "synthetix": {
+    "slug": "synthetix",
+    "name": "Synthetix",
+    "contracts": [],
+    "needs_review": true
+  },
+  "teahousefinance": {
+    "slug": "teahousefinance",
+    "name": "Teahousefinance",
+    "contracts": [],
+    "needs_review": true
+  },
+  "templar-protocol": {
+    "slug": "templar-protocol",
+    "name": "Templar Protocol",
+    "contracts": [],
+    "needs_review": true
+  },
+  "termstructurelabs": {
+    "slug": "termstructurelabs",
+    "name": "Termstructurelabs",
+    "contracts": [],
+    "needs_review": true
+  },
+  "tetu": {
+    "slug": "tetu",
+    "name": "Tetu",
+    "contracts": [],
+    "needs_review": true
+  },
+  "thala-protocol": {
+    "slug": "thala-protocol",
+    "name": "Thala Protocol",
+    "contracts": [],
+    "needs_review": true
+  },
+  "thegraph": {
+    "slug": "thegraph",
+    "name": "The Graph",
+    "contracts": [],
+    "needs_review": true
+  },
+  "thesandbox": {
+    "slug": "thesandbox",
+    "name": "Thesandbox",
+    "contracts": [],
+    "needs_review": true
+  },
+  "thorchain": {
+    "slug": "thorchain",
+    "name": "THORChain",
+    "contracts": [],
+    "needs_review": true
+  },
+  "thresholdnetwork": {
+    "slug": "thresholdnetwork",
+    "name": "Threshold Network",
+    "contracts": [],
+    "needs_review": true
+  },
+  "thusd": {
+    "slug": "thusd",
+    "name": "Thusd",
+    "contracts": [],
+    "needs_review": true
+  },
+  "tidal": {
+    "slug": "tidal",
+    "name": "Tidal",
+    "contracts": [],
+    "needs_review": true
+  },
+  "timelessandbunni": {
+    "slug": "timelessandbunni",
+    "name": "Timelessandbunni",
+    "contracts": [],
+    "needs_review": true
+  },
+  "tinyman": {
+    "slug": "tinyman",
+    "name": "Tinyman",
+    "contracts": [],
+    "needs_review": true
+  },
+  "tinymanv2": {
+    "slug": "tinymanv2",
+    "name": "Tinymanv2",
+    "contracts": [],
+    "needs_review": true
+  },
+  "tokemak": {
+    "slug": "tokemak",
+    "name": "Tokemak",
+    "contracts": [],
+    "needs_review": true
+  },
+  "toucan": {
+    "slug": "toucan",
+    "name": "Toucan",
+    "contracts": [],
+    "needs_review": true
+  },
+  "traderjoe": {
+    "slug": "traderjoe",
+    "name": "Trader Joe",
+    "contracts": [],
+    "needs_review": true
+  },
+  "tranchess": {
+    "slug": "tranchess",
+    "name": "Tranchess",
+    "contracts": [],
+    "needs_review": true
+  },
+  "tropykus": {
+    "slug": "tropykus",
+    "name": "Tropykus",
+    "contracts": [],
+    "needs_review": true
+  },
+  "trufin": {
+    "slug": "trufin",
+    "name": "Trufin",
+    "contracts": [],
+    "needs_review": true
+  },
+  "uniswaponzksync": {
+    "slug": "uniswaponzksync",
+    "name": "Uniswaponzksync",
+    "contracts": [],
+    "needs_review": true
+  },
+  "universalpage": {
+    "slug": "universalpage",
+    "name": "Universalpage",
+    "contracts": [],
+    "needs_review": true
+  },
+  "unstoppablewallet": {
+    "slug": "unstoppablewallet",
+    "name": "Unstoppablewallet",
+    "contracts": [],
+    "needs_review": true
+  },
+  "usdn": {
+    "slug": "usdn",
+    "name": "Usdn",
+    "contracts": [],
+    "needs_review": true
+  },
+  "usdt0": {
+    "slug": "usdt0",
+    "name": "USDT0",
+    "contracts": [],
+    "needs_review": true
+  },
+  "usx": {
+    "slug": "usx",
+    "name": "Usx",
+    "contracts": [],
+    "needs_review": true
+  },
+  "utix": {
+    "slug": "utix",
+    "name": "Utix",
+    "contracts": [],
+    "needs_review": true
+  },
+  "vaultcraft": {
+    "slug": "vaultcraft",
+    "name": "Vaultcraft",
+    "contracts": [],
+    "needs_review": true
+  },
+  "vechain": {
+    "slug": "vechain",
+    "name": "Vechain",
+    "contracts": [],
+    "needs_review": true
+  },
+  "velodromefinance": {
+    "slug": "velodromefinance",
+    "name": "Velodrome Finance",
+    "contracts": [],
+    "needs_review": true
+  },
+  "velvet-capital-v2": {
+    "slug": "velvet-capital-v2",
+    "name": "Velvet Capital V2",
+    "contracts": [],
+    "needs_review": true
+  },
+  "velvetcapital": {
+    "slug": "velvetcapital",
+    "name": "Velvetcapital",
+    "contracts": [],
+    "needs_review": true
+  },
+  "vesper": {
+    "slug": "vesper",
+    "name": "Vesper",
+    "contracts": [],
+    "needs_review": true
+  },
+  "vesu": {
+    "slug": "vesu",
+    "name": "Vesu",
+    "contracts": [],
+    "needs_review": true
+  },
+  "virtuals-protocol": {
+    "slug": "virtuals-protocol",
+    "name": "Virtuals Protocol",
+    "contracts": [],
+    "needs_review": true
+  },
+  "voltz": {
+    "slug": "voltz",
+    "name": "Voltz",
+    "contracts": [],
+    "needs_review": true
+  },
+  "waymont": {
+    "slug": "waymont",
+    "name": "Waymont",
+    "contracts": [],
+    "needs_review": true
+  },
+  "wepiggy": {
+    "slug": "wepiggy",
+    "name": "Wepiggy",
+    "contracts": [],
+    "needs_review": true
+  },
+  "wildcatprotocol": {
+    "slug": "wildcatprotocol",
+    "name": "Wildcatprotocol",
+    "contracts": [],
+    "needs_review": true
+  },
+  "wombatexchange": {
+    "slug": "wombatexchange",
+    "name": "Wombatexchange",
+    "contracts": [],
+    "needs_review": true
+  },
+  "woofi": {
+    "slug": "woofi",
+    "name": "WOOFi",
+    "contracts": [],
+    "needs_review": true
+  },
+  "wormhole": {
+    "slug": "wormhole",
+    "name": "Wormhole",
+    "contracts": [
+      {
+        "address": "0x98f3c9e6e3face36baad05fe09d375ef1464288b",
+        "chain": "ethereum",
+        "label": "Wormhole Core Bridge",
+        "source": {
+          "kind": "whiteclaws_protocol_json",
+          "url": "public/protocols/wormhole.json"
+        },
+        "needs_review": false,
+        "explorer": {
+          "url": "https://etherscan.io/address/0x98f3c9e6e3face36baad05fe09d375ef1464288b"
+        }
+      }
+    ],
+    "needs_review": false
+  },
+  "xion": {
+    "slug": "xion",
+    "name": "XION",
+    "contracts": [],
+    "needs_review": true
+  },
+  "xoxno": {
+    "slug": "xoxno",
+    "name": "Xoxno",
+    "contracts": [],
+    "needs_review": true
+  },
+  "xterio": {
+    "slug": "xterio",
+    "name": "Xterio",
+    "contracts": [],
+    "needs_review": true
+  },
+  "yamatoprotocol": {
+    "slug": "yamatoprotocol",
+    "name": "Yamatoprotocol",
+    "contracts": [],
+    "needs_review": true
+  },
+  "yearnfinance": {
+    "slug": "yearnfinance",
+    "name": "Yearn Finance",
+    "contracts": [],
+    "needs_review": true
+  },
+  "yelay": {
+    "slug": "yelay",
+    "name": "Yelay",
+    "contracts": [],
+    "needs_review": true
+  },
+  "yieldnest": {
+    "slug": "yieldnest",
+    "name": "Yieldnest",
+    "contracts": [],
+    "needs_review": true
+  },
+  "yo-protocol": {
+    "slug": "yo-protocol",
+    "name": "Yo Protocol",
+    "contracts": [],
+    "needs_review": true
+  },
+  "zano": {
+    "slug": "zano",
+    "name": "Zano",
+    "contracts": [],
+    "needs_review": true
+  },
+  "zenlink": {
+    "slug": "zenlink",
+    "name": "Zenlink",
+    "contracts": [],
+    "needs_review": true
+  },
+  "zerion": {
+    "slug": "zerion",
+    "name": "Zerion",
+    "contracts": [],
+    "needs_review": true
+  },
+  "zerolend": {
+    "slug": "zerolend",
+    "name": "Zerolend",
+    "contracts": [],
+    "needs_review": true
+  },
+  "zest-protocol-v2": {
+    "slug": "zest-protocol-v2",
+    "name": "Zest Protocol V2",
+    "contracts": [],
+    "needs_review": true
+  },
+  "zksync-os": {
+    "slug": "zksync-os",
+    "name": "Zksync Os",
+    "contracts": [],
+    "needs_review": true
+  },
+  "zksync": {
+    "slug": "zksync",
+    "name": "ZKsync Lite",
+    "contracts": [],
+    "needs_review": true
+  },
+  "zksyncera": {
+    "slug": "zksyncera",
+    "name": "ZKsync Era",
+    "contracts": [],
+    "needs_review": true
+  },
+  "zkverify": {
+    "slug": "zkverify",
+    "name": "Zkverify",
+    "contracts": [],
+    "needs_review": true
+  },
+  "zodiac": {
+    "slug": "zodiac",
+    "name": "Zodiac",
+    "contracts": [],
+    "needs_review": true
+  }
+}

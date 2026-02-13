@@ -1,0 +1,5941 @@
+{
+  "0x": {
+    "slug": "0x",
+    "name": "0x",
+    "domain": "0x.org",
+    "url": "https://0x.org",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "88mphv3": {
+    "slug": "88mphv3",
+    "name": "88mphv3",
+    "domain": "88mph.app",
+    "url": "https://88mph.app",
+    "confidence": 0.8,
+    "method": "normalized",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "aave": {
+    "slug": "aave",
+    "name": "AAVE",
+    "domain": "aave.com",
+    "url": "https://aave.com",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "acala": {
+    "slug": "acala",
+    "name": "Acala",
+    "domain": "acala.network",
+    "url": "https://acala.network",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "aera": {
+    "slug": "aera",
+    "name": "Aera",
+    "domain": "aera.finance",
+    "url": "https://aera.finance",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "aevo": {
+    "slug": "aevo",
+    "name": "Aevo",
+    "domain": "app.aevo.xyz",
+    "url": "https://app.aevo.xyz",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "alchemix": {
+    "slug": "alchemix",
+    "name": "Alchemix",
+    "domain": "alchemix.fi",
+    "url": "https://alchemix.fi",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "aleo": {
+    "slug": "aleo",
+    "name": "Aleo",
+    "domain": "aleo.org",
+    "url": "https://aleo.org",
+    "confidence": 0.9,
+    "method": "coingecko",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "alephzero": {
+    "slug": "alephzero",
+    "name": "Alephzero",
+    "domain": "alephzero.org",
+    "url": "https://alephzero.org",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "alex": {
+    "slug": "alex",
+    "name": "Alex",
+    "domain": "alexlab.co",
+    "url": "https://alexlab.co",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "aloeprotocol": {
+    "slug": "aloeprotocol",
+    "name": "Aloeprotocol",
+    "domain": "aloe.capital",
+    "url": "https://aloe.capital",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "alongside": {
+    "slug": "alongside",
+    "name": "Alongside",
+    "domain": "alongside.xyz",
+    "url": "https://alongside.xyz",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "alpacafinance": {
+    "slug": "alpacafinance",
+    "name": "Alpacafinance",
+    "domain": "alpacafinance.org",
+    "url": "https://alpacafinance.org",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "alpen-labs": {
+    "slug": "alpen-labs",
+    "name": "Alpen Labs",
+    "domain": "alpenlabs.io",
+    "url": "https://alpenlabs.io",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "alphaventuredao": {
+    "slug": "alphaventuredao",
+    "name": "Alpha Venture DAO",
+    "domain": "alpha.wtf",
+    "url": "https://alpha.wtf",
+    "confidence": 0.8,
+    "method": "normalized",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "ambire": {
+    "slug": "ambire",
+    "name": "Ambire",
+    "domain": "ambire.com",
+    "url": "https://ambire.com",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "angleprotocol": {
+    "slug": "angleprotocol",
+    "name": "Angleprotocol",
+    "domain": "app.angle.money",
+    "url": "https://app.angle.money",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "ankr": {
+    "slug": "ankr",
+    "name": "Ankr",
+    "domain": "ankr.com",
+    "url": "https://ankr.com",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "antefinance": {
+    "slug": "antefinance",
+    "name": "Antefinance",
+    "domain": "ante.finance",
+    "url": "https://ante.finance",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "anvil": {
+    "slug": "anvil",
+    "name": "Anvil",
+    "domain": "anvil.xyz",
+    "url": "https://anvil.xyz",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "apecoinmainnet": {
+    "slug": "apecoinmainnet",
+    "name": "Apecoinmainnet",
+    "domain": "apechain.com",
+    "url": "https://apechain.com",
+    "confidence": 0.8,
+    "method": "normalized",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "arbitrum": {
+    "slug": "arbitrum",
+    "name": "Arbitrum",
+    "domain": "arbitrum.foundation",
+    "url": "https://arbitrum.foundation",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "arborfinance": {
+    "slug": "arborfinance",
+    "name": "Arborfinance",
+    "domain": "arbor.finance",
+    "url": "https://arbor.finance",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "arcade": {
+    "slug": "arcade",
+    "name": "Arcade",
+    "domain": "arcade.xyz",
+    "url": "https://arcade.xyz",
+    "confidence": 0.8,
+    "method": "normalized",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "arkadiko": {
+    "slug": "arkadiko",
+    "name": "Arkadiko",
+    "domain": "arkadiko.finance",
+    "url": "https://arkadiko.finance",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "arkham": {
+    "slug": "arkham",
+    "name": "Arkham",
+    "domain": "arkhamintelligence.com",
+    "url": "https://arkhamintelligence.com",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "aspida": {
+    "slug": "aspida",
+    "name": "Aspida",
+    "domain": "aspidanet.com",
+    "url": "https://aspidanet.com",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "astarnetwork": {
+    "slug": "astarnetwork",
+    "name": "Astarnetwork",
+    "domain": "astar.network",
+    "url": "https://astar.network",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "aster": {
+    "slug": "aster",
+    "name": "Aster",
+    "domain": "asterdex.com",
+    "url": "https://asterdex.com",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "astroport": {
+    "slug": "astroport",
+    "name": "Astroport",
+    "domain": "astroport.fi",
+    "url": "https://astroport.fi",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "aurafinance": {
+    "slug": "aurafinance",
+    "name": "Aura Finance",
+    "domain": "aura.finance",
+    "url": "https://aura.finance",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "autonolas": {
+    "slug": "autonolas",
+    "name": "Autonolas",
+    "domain": "olas.network",
+    "url": "https://olas.network",
+    "confidence": 0.9,
+    "method": "coingecko",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "avail": {
+    "slug": "avail",
+    "name": "Avail",
+    "domain": "availproject.org",
+    "url": "https://availproject.org",
+    "confidence": 0.9,
+    "method": "coingecko",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "avalabs": {
+    "slug": "avalabs",
+    "name": "Avalabs",
+    "domain": "avax.network",
+    "url": "https://avax.network",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "avalanche": {
+    "slug": "avalanche",
+    "name": "Avalanche",
+    "domain": "avax.network",
+    "url": "https://avax.network",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "axelarnetwork": {
+    "slug": "axelarnetwork",
+    "name": "Axelar Network",
+    "domain": "axelar.network",
+    "url": "https://axelar.network",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "axiom": {
+    "slug": "axiom",
+    "name": "Axiom",
+    "domain": "axiom.trade",
+    "url": "https://axiom.trade",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "baanx": {
+    "slug": "baanx",
+    "name": "Baanx",
+    "domain": "withcl.com",
+    "url": "https://withcl.com",
+    "confidence": 0.9,
+    "method": "coingecko",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "babylon-labs": {
+    "slug": "babylon-labs",
+    "name": "Babylon Labs",
+    "domain": "babylonlabs.io",
+    "url": "https://babylonlabs.io",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "badger": {
+    "slug": "badger",
+    "name": "Badger",
+    "domain": "badger.com",
+    "url": "https://badger.com",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "balancer": {
+    "slug": "balancer",
+    "name": "Balancer",
+    "domain": "balancer.fi",
+    "url": "https://balancer.fi",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "balmy": {
+    "slug": "balmy",
+    "name": "Balmy",
+    "domain": "balmy.xyz",
+    "url": "https://balmy.xyz",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "bankx": {
+    "slug": "bankx",
+    "name": "Bankx",
+    "domain": "bankx.io",
+    "url": "https://bankx.io",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "baofinance": {
+    "slug": "baofinance",
+    "name": "Baofinance",
+    "domain": "baoswap.xyz",
+    "url": "https://baoswap.xyz",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "basilisk": {
+    "slug": "basilisk",
+    "name": "Basilisk",
+    "domain": "basilisk.org",
+    "url": "https://basilisk.org",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "beanstalk": {
+    "slug": "beanstalk",
+    "name": "Beanstalk",
+    "domain": "bean.money",
+    "url": "https://bean.money",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "beefyfinance": {
+    "slug": "beefyfinance",
+    "name": "Beefy Finance",
+    "domain": "beefy.com",
+    "url": "https://beefy.com",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "beethovenx": {
+    "slug": "beethovenx",
+    "name": "Beethovenx",
+    "domain": "beets.fi",
+    "url": "https://beets.fi",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "beets": {
+    "slug": "beets",
+    "name": "Beets",
+    "domain": "beets.fi",
+    "url": "https://beets.fi",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "benddao": {
+    "slug": "benddao",
+    "name": "Benddao",
+    "domain": "bend.berachain.com",
+    "url": "https://bend.berachain.com",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "benqi": {
+    "slug": "benqi",
+    "name": "BENQI",
+    "domain": "app.benqi.fi",
+    "url": "https://app.benqi.fi",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "berachain-webapps": {
+    "slug": "berachain-webapps",
+    "name": "Berachain Webapps",
+    "domain": "berachain.com",
+    "url": "https://berachain.com",
+    "confidence": 0.8,
+    "method": "normalized",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "berachain": {
+    "slug": "berachain",
+    "name": "Berachain",
+    "domain": "berachain.com",
+    "url": "https://berachain.com",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "beradrome": {
+    "slug": "beradrome",
+    "name": "Beradrome",
+    "domain": "beradrome.com",
+    "url": "https://beradrome.com",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "betafinance": {
+    "slug": "betafinance",
+    "name": "Betafinance",
+    "domain": "betafinance.org",
+    "url": "https://betafinance.org",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "biconomy": {
+    "slug": "biconomy",
+    "name": "Biconomy",
+    "domain": "biconomy.com",
+    "url": "https://biconomy.com",
+    "confidence": 0.8,
+    "method": "normalized",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "bifi": {
+    "slug": "bifi",
+    "name": "Bifi",
+    "domain": "bifi.finance",
+    "url": "https://bifi.finance",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "bifrostfinance": {
+    "slug": "bifrostfinance",
+    "name": "Bifrost",
+    "domain": "bifrost.io",
+    "url": "https://bifrost.io",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "bitcoinsv": {
+    "slug": "bitcoinsv",
+    "name": "Bitcoinsv",
+    "domain": "bitcoin.org",
+    "url": "https://bitcoin.org",
+    "confidence": 0.8,
+    "method": "normalized",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "bitflow": {
+    "slug": "bitflow",
+    "name": "Bitflow",
+    "domain": "bitflow.finance",
+    "url": "https://bitflow.finance",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "bitswift": {
+    "slug": "bitswift",
+    "name": "Bitswift",
+    "domain": "bits.financial",
+    "url": "https://bits.financial",
+    "confidence": 0.8,
+    "method": "normalized",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "blackwing": {
+    "slug": "blackwing",
+    "name": "Blackwing",
+    "domain": "blackwing.fi",
+    "url": "https://blackwing.fi",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "blockpinetwork": {
+    "slug": "blockpinetwork",
+    "name": "Blockpinetwork",
+    "domain": "blockpi.io",
+    "url": "https://blockpi.io",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "blockwallet": {
+    "slug": "blockwallet",
+    "name": "Blockwallet",
+    "domain": "blockwallet.io",
+    "url": "https://blockwallet.io",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "bobanetwork": {
+    "slug": "bobanetwork",
+    "name": "Boba Network",
+    "domain": "gateway.boba.network",
+    "url": "https://gateway.boba.network",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "bondprotocol": {
+    "slug": "bondprotocol",
+    "name": "Bondprotocol",
+    "domain": "bondprotocol.finance",
+    "url": "https://bondprotocol.finance",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "bonfida": {
+    "slug": "bonfida",
+    "name": "Bonfida",
+    "domain": "bonfida.org",
+    "url": "https://bonfida.org",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "bprotocol": {
+    "slug": "bprotocol",
+    "name": "Bprotocol",
+    "domain": "b-lucky.gg",
+    "url": "https://b-lucky.gg",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "burrow": {
+    "slug": "burrow",
+    "name": "Burrow",
+    "domain": "burrow.finance",
+    "url": "https://burrow.finance",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "buttonwood": {
+    "slug": "buttonwood",
+    "name": "Buttonwood",
+    "domain": "buttonwood.finance",
+    "url": "https://buttonwood.finance",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "c3": {
+    "slug": "c3",
+    "name": "C3",
+    "domain": "c3.io",
+    "url": "https://c3.io",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "capyfi": {
+    "slug": "capyfi",
+    "name": "CapyFi",
+    "domain": "capyfi.com",
+    "url": "https://capyfi.com",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "carbonbancor": {
+    "slug": "carbonbancor",
+    "name": "Carbonbancor",
+    "domain": "carbondefi.xyz",
+    "url": "https://carbondefi.xyz",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "cardanofoundation": {
+    "slug": "cardanofoundation",
+    "name": "Cardanofoundation",
+    "domain": "cardano.org",
+    "url": "https://cardano.org",
+    "confidence": 0.8,
+    "method": "normalized",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "cc-protocol": {
+    "slug": "cc-protocol",
+    "name": "CC Protocol",
+    "domain": "cc.xyz",
+    "url": "https://cc.xyz",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "celer": {
+    "slug": "celer",
+    "name": "Celer",
+    "domain": "celer.network",
+    "url": "https://celer.network",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "ceres": {
+    "slug": "ceres",
+    "name": "Ceres",
+    "domain": "cerestoken.io",
+    "url": "https://cerestoken.io",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "chainlink": {
+    "slug": "chainlink",
+    "name": "Chainlink",
+    "domain": "chain.link",
+    "url": "https://chain.link",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "charm": {
+    "slug": "charm",
+    "name": "Charm",
+    "domain": "alpha.charm.fi",
+    "url": "https://alpha.charm.fi",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "comdex": {
+    "slug": "comdex",
+    "name": "Comdex",
+    "domain": "comdex.one",
+    "url": "https://comdex.one",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "composablefinance": {
+    "slug": "composablefinance",
+    "name": "Composablefinance",
+    "domain": "composable.finance",
+    "url": "https://composable.finance",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "compoundfinance": {
+    "slug": "compoundfinance",
+    "name": "Compound Finance",
+    "domain": "v3-app.compound.finance",
+    "url": "https://v3-app.compound.finance",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "connext": {
+    "slug": "connext",
+    "name": "Connext",
+    "domain": "connext.network",
+    "url": "https://connext.network",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "contrax": {
+    "slug": "contrax",
+    "name": "Contrax",
+    "domain": "beta.contrax.finance",
+    "url": "https://beta.contrax.finance",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "coreum": {
+    "slug": "coreum",
+    "name": "Coreum",
+    "domain": "coreum.com",
+    "url": "https://coreum.com",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "cove": {
+    "slug": "cove",
+    "name": "Cove",
+    "domain": "cove.finance",
+    "url": "https://cove.finance",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "cowprotocol": {
+    "slug": "cowprotocol",
+    "name": "CoW Protocol",
+    "domain": "cow.fi",
+    "url": "https://cow.fi",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "cyan": {
+    "slug": "cyan",
+    "name": "Cyan",
+    "domain": "cyan.finance",
+    "url": "https://cyan.finance",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "daimo-pay": {
+    "slug": "daimo-pay",
+    "name": "Daimo Pay",
+    "domain": "daimo.com",
+    "url": "https://daimo.com",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "daimo": {
+    "slug": "daimo",
+    "name": "Daimo",
+    "domain": "daimo.com",
+    "url": "https://daimo.com",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "darwinia": {
+    "slug": "darwinia",
+    "name": "Darwinia",
+    "domain": "darwinia.network",
+    "url": "https://darwinia.network",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "davos": {
+    "slug": "davos",
+    "name": "Davos",
+    "domain": "davos.xyz",
+    "url": "https://davos.xyz",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "debridge": {
+    "slug": "debridge",
+    "name": "deBridge",
+    "domain": "app.debridge.com",
+    "url": "https://app.debridge.com",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "decentraland": {
+    "slug": "decentraland",
+    "name": "Decentraland",
+    "domain": "decentraland.org",
+    "url": "https://decentraland.org",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "defisaver": {
+    "slug": "defisaver",
+    "name": "DeFi Saver",
+    "domain": "defisaver.com",
+    "url": "https://defisaver.com",
+    "confidence": 0.9,
+    "method": "exact_name",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "defly": {
+    "slug": "defly",
+    "name": "Defly",
+    "domain": "defly.app",
+    "url": "https://defly.app",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "degate": {
+    "slug": "degate",
+    "name": "Degate",
+    "domain": "app.degate.com",
+    "url": "https://app.degate.com",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "delv": {
+    "slug": "delv",
+    "name": "Delv",
+    "domain": "delv.tech",
+    "url": "https://delv.tech",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "deriprotocol": {
+    "slug": "deriprotocol",
+    "name": "Deriprotocol",
+    "domain": "deri.io",
+    "url": "https://deri.io",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "dex-protocol": {
+    "slug": "dex-protocol",
+    "name": "DeXe Protocol",
+    "domain": "dexe.network",
+    "url": "https://dexe.network",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "dexeprotocol": {
+    "slug": "dexeprotocol",
+    "name": "DeXe Protocol",
+    "domain": "dexe.network",
+    "url": "https://dexe.network",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "dforce": {
+    "slug": "dforce",
+    "name": "dForce",
+    "domain": "dforce.network",
+    "url": "https://dforce.network",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "dfxfinance": {
+    "slug": "dfxfinance",
+    "name": "Dfxfinance",
+    "domain": "app.dfx.finance",
+    "url": "https://app.dfx.finance",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "dhedge": {
+    "slug": "dhedge",
+    "name": "dHEDGE",
+    "domain": "dhedge.org",
+    "url": "https://dhedge.org",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "dodo": {
+    "slug": "dodo",
+    "name": "Dodo",
+    "domain": "dodoex.io",
+    "url": "https://dodoex.io",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "dodov3": {
+    "slug": "dodov3",
+    "name": "Dodov3",
+    "domain": "dodoex.io",
+    "url": "https://dodoex.io",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "driftprotocol": {
+    "slug": "driftprotocol",
+    "name": "Driftprotocol",
+    "domain": "app.drift.trade",
+    "url": "https://app.drift.trade",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "drips": {
+    "slug": "drips",
+    "name": "Drips",
+    "domain": "drip.community",
+    "url": "https://drip.community",
+    "confidence": 0.8,
+    "method": "normalized",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "duetfinance": {
+    "slug": "duetfinance",
+    "name": "Duetfinance",
+    "domain": "duet.finance",
+    "url": "https://duet.finance",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "ebtc": {
+    "slug": "ebtc",
+    "name": "Ebtc",
+    "domain": "ebtc.finance",
+    "url": "https://ebtc.finance",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "eckodao": {
+    "slug": "eckodao",
+    "name": "Eckodao",
+    "domain": "ecko.finance",
+    "url": "https://ecko.finance",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "eclipse": {
+    "slug": "eclipse",
+    "name": "Eclipse",
+    "domain": "eclipse.xyz",
+    "url": "https://eclipse.xyz",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "eco": {
+    "slug": "eco",
+    "name": "Eco",
+    "domain": "econialabs.com",
+    "url": "https://econialabs.com",
+    "confidence": 0.8,
+    "method": "normalized",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "econia": {
+    "slug": "econia",
+    "name": "Econia",
+    "domain": "econialabs.com",
+    "url": "https://econialabs.com",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "eigenlayer": {
+    "slug": "eigenlayer",
+    "name": "EigenLayer",
+    "domain": "eigenlayer.xyz",
+    "url": "https://eigenlayer.xyz",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "elixirprotocol": {
+    "slug": "elixirprotocol",
+    "name": "Elixirprotocol",
+    "domain": "elixir.xyz",
+    "url": "https://elixir.xyz",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "enosys": {
+    "slug": "enosys",
+    "name": "Enosys",
+    "domain": "enosys.global",
+    "url": "https://enosys.global",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "ens": {
+    "slug": "ens",
+    "name": "ENS",
+    "domain": "app.ens.domains",
+    "url": "https://app.ens.domains",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "ensuro": {
+    "slug": "ensuro",
+    "name": "Ensuro",
+    "domain": "ensuro.co",
+    "url": "https://ensuro.co",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "enzyme-onyx": {
+    "slug": "enzyme-onyx",
+    "name": "Enzyme Onyx",
+    "domain": "enzyme.finance",
+    "url": "https://enzyme.finance",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "enzymefinance": {
+    "slug": "enzymefinance",
+    "name": "Enzymefinance",
+    "domain": "enzyme.finance",
+    "url": "https://enzyme.finance",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "ethena": {
+    "slug": "ethena",
+    "name": "Ethena",
+    "domain": "app.ethena.fi",
+    "url": "https://app.ethena.fi",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "etherfi": {
+    "slug": "etherfi",
+    "name": "Ether.fi",
+    "domain": "ether.fi",
+    "url": "https://ether.fi",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "euphrates": {
+    "slug": "euphrates",
+    "name": "Euphrates",
+    "domain": "euphrates.finance",
+    "url": "https://euphrates.finance",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "exactly": {
+    "slug": "exactly",
+    "name": "Exactly",
+    "domain": "exact.ly",
+    "url": "https://exact.ly",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "example-protocol": {
+    "slug": "example-protocol",
+    "name": "Example Protocol",
+    "domain": null,
+    "url": null,
+    "confidence": 0,
+    "method": "unresolved",
+    "sources": [],
+    "needs_review": true,
+    "reason": "domain_unresolved"
+  },
+  "exodus": {
+    "slug": "exodus",
+    "name": "Exodus",
+    "domain": "exodus.com",
+    "url": "https://exodus.com",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "extrafinance": {
+    "slug": "extrafinance",
+    "name": "Extrafinance",
+    "domain": "app.extrafi.io",
+    "url": "https://app.extrafi.io",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "farcaster": {
+    "slug": "farcaster",
+    "name": "Farcaster",
+    "domain": "farcaster.xyz",
+    "url": "https://farcaster.xyz",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "fassets": {
+    "slug": "fassets",
+    "name": "Fassets",
+    "domain": "flare.network",
+    "url": "https://flare.network",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "fbtc": {
+    "slug": "fbtc",
+    "name": "Fbtc",
+    "domain": "fbtc.com",
+    "url": "https://fbtc.com",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "felix": {
+    "slug": "felix",
+    "name": "Felix",
+    "domain": "usefelix.xyz",
+    "url": "https://usefelix.xyz",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "filecoin": {
+    "slug": "filecoin",
+    "name": "Filecoin",
+    "domain": "filecoin.io",
+    "url": "https://filecoin.io",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "firedancer": {
+    "slug": "firedancer",
+    "name": "Firedancer",
+    "domain": "jumpcrypto.com",
+    "url": "https://jumpcrypto.com",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "flamingofinance": {
+    "slug": "flamingofinance",
+    "name": "Flamingo Finance",
+    "domain": "flamingo.finance",
+    "url": "https://flamingo.finance",
+    "confidence": 0.9,
+    "method": "exact_name",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "flarenetwork": {
+    "slug": "flarenetwork",
+    "name": "Flarenetwork",
+    "domain": "flare.network",
+    "url": "https://flare.network",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "flexytech": {
+    "slug": "flexytech",
+    "name": "Flexytech",
+    "domain": "flexy.tech",
+    "url": "https://flexy.tech",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "floki": {
+    "slug": "floki",
+    "name": "Floki",
+    "domain": "flokifi.com",
+    "url": "https://flokifi.com",
+    "confidence": 0.8,
+    "method": "normalized",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "fluxfinance": {
+    "slug": "fluxfinance",
+    "name": "Flux Finance",
+    "domain": "fluxfinance.com",
+    "url": "https://fluxfinance.com",
+    "confidence": 0.9,
+    "method": "exact_name",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "foil": {
+    "slug": "foil",
+    "name": "Foil",
+    "domain": "foil.xyz",
+    "url": "https://foil.xyz",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "folksfinance": {
+    "slug": "folksfinance",
+    "name": "Folksfinance",
+    "domain": "folks.finance",
+    "url": "https://folks.finance",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "forta": {
+    "slug": "forta",
+    "name": "Forta",
+    "domain": "forta.org",
+    "url": "https://forta.org",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "foundation": {
+    "slug": "foundation",
+    "name": "Foundation",
+    "domain": "foundation.app",
+    "url": "https://foundation.app",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "furucombo": {
+    "slug": "furucombo",
+    "name": "Furucombo",
+    "domain": "furucombo.app",
+    "url": "https://furucombo.app",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "furucombofunds": {
+    "slug": "furucombofunds",
+    "name": "Furucombofunds",
+    "domain": "furucombo.app",
+    "url": "https://furucombo.app",
+    "confidence": 0.8,
+    "method": "normalized",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "gainsnetwork": {
+    "slug": "gainsnetwork",
+    "name": "Gains Network",
+    "domain": "gains.trade",
+    "url": "https://gains.trade",
+    "confidence": 0.9,
+    "method": "exact_name",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "galagames": {
+    "slug": "galagames",
+    "name": "Galagames",
+    "domain": "gala.com",
+    "url": "https://gala.com",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "gamma": {
+    "slug": "gamma",
+    "name": "Gamma",
+    "domain": "gamma.xyz",
+    "url": "https://gamma.xyz",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "gammaswap": {
+    "slug": "gammaswap",
+    "name": "Gammaswap",
+    "domain": "gamma.xyz",
+    "url": "https://gamma.xyz",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "gear": {
+    "slug": "gear",
+    "name": "Gear",
+    "domain": "gearbox.finance",
+    "url": "https://gearbox.finance",
+    "confidence": 0.8,
+    "method": "normalized",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "gearbox": {
+    "slug": "gearbox",
+    "name": "Gearbox",
+    "domain": "gearbox.finance",
+    "url": "https://gearbox.finance",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "geniusyield": {
+    "slug": "geniusyield",
+    "name": "Geniusyield",
+    "domain": "geniusyield.co",
+    "url": "https://geniusyield.co",
+    "confidence": 0.8,
+    "method": "normalized",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "gerowallet": {
+    "slug": "gerowallet",
+    "name": "Gerowallet",
+    "domain": "gerowallet.io",
+    "url": "https://gerowallet.io",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "ghostmarket": {
+    "slug": "ghostmarket",
+    "name": "Ghostmarket",
+    "domain": "ghostmarket.io",
+    "url": "https://ghostmarket.io",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "glodollar": {
+    "slug": "glodollar",
+    "name": "Glodollar",
+    "domain": "glodollar.org",
+    "url": "https://glodollar.org",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "gmx": {
+    "slug": "gmx",
+    "name": "GMX",
+    "domain": "gmx.io",
+    "url": "https://gmx.io",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "gnosischain": {
+    "slug": "gnosischain",
+    "name": "Gnosis Chain",
+    "domain": "gnosis.io",
+    "url": "https://gnosis.io",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "gogopool": {
+    "slug": "gogopool",
+    "name": "Gogopool",
+    "domain": "gogopool.com",
+    "url": "https://gogopool.com",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "goldfinch": {
+    "slug": "goldfinch",
+    "name": "Goldfinch",
+    "domain": "goldfinch.finance",
+    "url": "https://goldfinch.finance",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "granite-protocol": {
+    "slug": "granite-protocol",
+    "name": "Granite Protocol",
+    "domain": "app.granite.world",
+    "url": "https://app.granite.world",
+    "confidence": 0.8,
+    "method": "normalized",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "gysr": {
+    "slug": "gysr",
+    "name": "Gysr",
+    "domain": "gysr.io",
+    "url": "https://gysr.io",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "hakkafinance": {
+    "slug": "hakkafinance",
+    "name": "Hakkafinance",
+    "domain": "hakka.finance",
+    "url": "https://hakka.finance",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "halogen": {
+    "slug": "halogen",
+    "name": "Halogen",
+    "domain": "halogen.finance",
+    "url": "https://halogen.finance",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "harvest": {
+    "slug": "harvest",
+    "name": "Harvest",
+    "domain": "harvest.finance",
+    "url": "https://harvest.finance",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "hashflow": {
+    "slug": "hashflow",
+    "name": "Hashflow",
+    "domain": "hashflow.com",
+    "url": "https://hashflow.com",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "hathornetwork": {
+    "slug": "hathornetwork",
+    "name": "Hathornetwork",
+    "domain": "hathor.network",
+    "url": "https://hathor.network",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "haven1": {
+    "slug": "haven1",
+    "name": "Haven1",
+    "domain": "swap.haven1.org",
+    "url": "https://swap.haven1.org",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "hedera": {
+    "slug": "hedera",
+    "name": "Hedera",
+    "domain": "hedera.com",
+    "url": "https://hedera.com",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "helios-finance": {
+    "slug": "helios-finance",
+    "name": "Helios Finance",
+    "domain": "app.hel.io",
+    "url": "https://app.hel.io",
+    "confidence": 0.8,
+    "method": "normalized",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "hibachi": {
+    "slug": "hibachi",
+    "name": "Hibachi",
+    "domain": "hibachi.xyz",
+    "url": "https://hibachi.xyz",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "hoenn": {
+    "slug": "hoenn",
+    "name": "Hoenn",
+    "domain": "hoenn.finance",
+    "url": "https://hoenn.finance",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "horizen": {
+    "slug": "horizen",
+    "name": "Horizen",
+    "domain": "horizen.io",
+    "url": "https://horizen.io",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "hourglass": {
+    "slug": "hourglass",
+    "name": "Hourglass",
+    "domain": "hourglass.com",
+    "url": "https://hourglass.com",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "hydradx": {
+    "slug": "hydradx",
+    "name": "Hydradx",
+    "domain": "hydration.net",
+    "url": "https://hydration.net",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "hydration": {
+    "slug": "hydration",
+    "name": "Hydration",
+    "domain": "hydration.net",
+    "url": "https://hydration.net",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "hydro": {
+    "slug": "hydro",
+    "name": "Hydro",
+    "domain": "app.hydroprotocol.finance",
+    "url": "https://app.hydroprotocol.finance",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "hyperlane": {
+    "slug": "hyperlane",
+    "name": "Hyperlane",
+    "domain": "hyperlane.xyz",
+    "url": "https://hyperlane.xyz",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "ichi": {
+    "slug": "ichi",
+    "name": "Ichi",
+    "domain": "ichi.org",
+    "url": "https://ichi.org",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "icon": {
+    "slug": "icon",
+    "name": "Icon",
+    "domain": "icon.foundation",
+    "url": "https://icon.foundation",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "idex": {
+    "slug": "idex",
+    "name": "Idex",
+    "domain": "kuma.bid",
+    "url": "https://kuma.bid",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "idlefinance": {
+    "slug": "idlefinance",
+    "name": "Idlefinance",
+    "domain": "idle.finance",
+    "url": "https://idle.finance",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "illuvium": {
+    "slug": "illuvium",
+    "name": "Illuvium",
+    "domain": "illuvium.io",
+    "url": "https://illuvium.io",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "immunefi": {
+    "slug": "immunefi",
+    "name": "Immunefi",
+    "domain": "immunefi.com",
+    "url": "https://immunefi.com",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "immutable": {
+    "slug": "immutable",
+    "name": "Immutable",
+    "domain": "immutable.com",
+    "url": "https://immutable.com",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "impossible-cloud-network": {
+    "slug": "impossible-cloud-network",
+    "name": "Impossible Cloud Network",
+    "domain": "impossible.cloud",
+    "url": "https://impossible.cloud",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "impossiblefinance": {
+    "slug": "impossiblefinance",
+    "name": "Impossiblefinance",
+    "domain": "impossible.finance",
+    "url": "https://impossible.finance",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "indexcoop": {
+    "slug": "indexcoop",
+    "name": "Index Coop",
+    "domain": "indexcoop.com",
+    "url": "https://indexcoop.com",
+    "confidence": 0.9,
+    "method": "exact_name",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "infinex": {
+    "slug": "infinex",
+    "name": "Infinex",
+    "domain": "infinex.xyz",
+    "url": "https://infinex.xyz",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "injective": {
+    "slug": "injective",
+    "name": "Injective",
+    "domain": "injective.com",
+    "url": "https://injective.com",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "instadapp": {
+    "slug": "instadapp",
+    "name": "Instadapp",
+    "domain": "instadapp.io",
+    "url": "https://instadapp.io",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "integral": {
+    "slug": "integral",
+    "name": "Integral",
+    "domain": "integral.link",
+    "url": "https://integral.link",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "integriteenetwork": {
+    "slug": "integriteenetwork",
+    "name": "Integriteenetwork",
+    "domain": "integritee.network",
+    "url": "https://integritee.network",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "interlay": {
+    "slug": "interlay",
+    "name": "Interlay",
+    "domain": "interlay.io",
+    "url": "https://interlay.io",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "intmax": {
+    "slug": "intmax",
+    "name": "INTMAX",
+    "domain": "intmax.io",
+    "url": "https://intmax.io",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "inverse-finance": {
+    "slug": "inverse-finance",
+    "name": "Inverse Finance",
+    "domain": "inverse.finance",
+    "url": "https://inverse.finance",
+    "confidence": 0.8,
+    "method": "normalized",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "ion-protocol": {
+    "slug": "ion-protocol",
+    "name": "Ion Protocol",
+    "domain": "ionprotocol.io",
+    "url": "https://ionprotocol.io",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "ipor": {
+    "slug": "ipor",
+    "name": "IPOR",
+    "domain": "ipor.io",
+    "url": "https://ipor.io",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "jito-bam-client": {
+    "slug": "jito-bam-client",
+    "name": "Jito Bam Client",
+    "domain": "jito.network",
+    "url": "https://jito.network",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "jito-foundation": {
+    "slug": "jito-foundation",
+    "name": "Jito Foundation",
+    "domain": "jito.network",
+    "url": "https://jito.network",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "jito": {
+    "slug": "jito",
+    "name": "Jito",
+    "domain": "jito.network",
+    "url": "https://jito.network",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "justlenddao": {
+    "slug": "justlenddao",
+    "name": "Justlenddao",
+    "domain": "justlend.just.network",
+    "url": "https://justlend.just.network",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "kadena": {
+    "slug": "kadena",
+    "name": "Kadena",
+    "domain": "kadena.io",
+    "url": "https://kadena.io",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "kamino": {
+    "slug": "kamino",
+    "name": "Kamino",
+    "domain": "kamino.com",
+    "url": "https://kamino.com",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "keep3rnetwork": {
+    "slug": "keep3rnetwork",
+    "name": "Keep3rnetwork",
+    "domain": "keep3r.network",
+    "url": "https://keep3r.network",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "kelp-dao": {
+    "slug": "kelp-dao",
+    "name": "Kelp DAO",
+    "domain": "kelpdao.xyz",
+    "url": "https://kelpdao.xyz",
+    "confidence": 0.8,
+    "method": "normalized",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "kiln-defi": {
+    "slug": "kiln-defi",
+    "name": "Kiln DeFi",
+    "domain": "kiln.fi",
+    "url": "https://kiln.fi",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "kiln-on-chain-v1": {
+    "slug": "kiln-on-chain-v1",
+    "name": "Kiln On-Chain v1",
+    "domain": "kiln.fi",
+    "url": "https://kiln.fi",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "kiln-webapp": {
+    "slug": "kiln-webapp",
+    "name": "Kiln Webapp",
+    "domain": "kiln.fi",
+    "url": "https://kiln.fi",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "kiln": {
+    "slug": "kiln",
+    "name": "Kiln On-Chain v2",
+    "domain": "kiln.fi",
+    "url": "https://kiln.fi",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "kinesis-bridge-on-kadena": {
+    "slug": "kinesis-bridge-on-kadena",
+    "name": "Kinesis Bridge On Kadena",
+    "domain": "kadena.io",
+    "url": "https://kadena.io",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "kwenta": {
+    "slug": "kwenta",
+    "name": "Kwenta",
+    "domain": "kwenta.eth.limo",
+    "url": "https://kwenta.eth.limo",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "landx": {
+    "slug": "landx",
+    "name": "Landx",
+    "domain": "landx.fi",
+    "url": "https://landx.fi",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "layer3": {
+    "slug": "layer3",
+    "name": "Layer3.xyz",
+    "domain": "layer3.xyz",
+    "url": "https://layer3.xyz",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "layerzero": {
+    "slug": "layerzero",
+    "name": "LayerZero",
+    "domain": "layerzero.network",
+    "url": "https://layerzero.network",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "lendr": {
+    "slug": "lendr",
+    "name": "Lendr",
+    "domain": "lendr.xyz",
+    "url": "https://lendr.xyz",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "lido": {
+    "slug": "lido",
+    "name": "Lido",
+    "domain": "lido.fi",
+    "url": "https://lido.fi",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "lidoonpolygon": {
+    "slug": "lidoonpolygon",
+    "name": "Lidoonpolygon",
+    "domain": "lido.fi",
+    "url": "https://lido.fi",
+    "confidence": 0.8,
+    "method": "normalized",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "lifi": {
+    "slug": "lifi",
+    "name": "Lifi",
+    "domain": "lifinity.io",
+    "url": "https://lifinity.io",
+    "confidence": 0.8,
+    "method": "normalized",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "light-protocol": {
+    "slug": "light-protocol",
+    "name": "Light Protocol",
+    "domain": "lightprotocol.com",
+    "url": "https://lightprotocol.com",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "linea": {
+    "slug": "linea",
+    "name": "Linea",
+    "domain": "bridge.linea.build",
+    "url": "https://bridge.linea.build",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "liquidswap": {
+    "slug": "liquidswap",
+    "name": "Liquidswap",
+    "domain": "liquidswap.com",
+    "url": "https://liquidswap.com",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "listadao": {
+    "slug": "listadao",
+    "name": "Lista DAO",
+    "domain": "lista.org",
+    "url": "https://lista.org",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "livepeer": {
+    "slug": "livepeer",
+    "name": "Livepeer",
+    "domain": "livepeer.org",
+    "url": "https://livepeer.org",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "localtraders": {
+    "slug": "localtraders",
+    "name": "Localtraders",
+    "domain": "localtraders.com",
+    "url": "https://localtraders.com",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "lombard-finance": {
+    "slug": "lombard-finance",
+    "name": "Lombard Finance",
+    "domain": "lombard.finance",
+    "url": "https://lombard.finance",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "lossless": {
+    "slug": "lossless",
+    "name": "Lossless",
+    "domain": "lossless.io",
+    "url": "https://lossless.io",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "lybrafinance": {
+    "slug": "lybrafinance",
+    "name": "Lybrafinance",
+    "domain": "lybra.finance",
+    "url": "https://lybra.finance",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "lyra": {
+    "slug": "lyra",
+    "name": "Lyra",
+    "domain": "lyra.finance",
+    "url": "https://lyra.finance",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "magpiexyz": {
+    "slug": "magpiexyz",
+    "name": "Magpiexyz",
+    "domain": "magpiexyz.io",
+    "url": "https://magpiexyz.io",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "mantlelsp": {
+    "slug": "mantlelsp",
+    "name": "Mantlelsp",
+    "domain": "mantle.xyz",
+    "url": "https://mantle.xyz",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "maple": {
+    "slug": "maple",
+    "name": "Maple",
+    "domain": "maple.finance",
+    "url": "https://maple.finance",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "marinade": {
+    "slug": "marinade",
+    "name": "Marinade",
+    "domain": "app.marinade.finance",
+    "url": "https://app.marinade.finance",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "mars": {
+    "slug": "mars",
+    "name": "Mars",
+    "domain": "marsprotocol.io",
+    "url": "https://marsprotocol.io",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "marsecosystem": {
+    "slug": "marsecosystem",
+    "name": "Marsecosystem",
+    "domain": "marsecosystem.com",
+    "url": "https://marsecosystem.com",
+    "confidence": 0.8,
+    "method": "normalized",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "mayaprotocol": {
+    "slug": "mayaprotocol",
+    "name": "Mayaprotocol",
+    "domain": "mayaprotocol.com",
+    "url": "https://mayaprotocol.com",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "meanfinance": {
+    "slug": "meanfinance",
+    "name": "Meanfinance",
+    "domain": "mean.finance",
+    "url": "https://mean.finance",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "metalswap": {
+    "slug": "metalswap",
+    "name": "Metalswap",
+    "domain": "app.metalswap.finance",
+    "url": "https://app.metalswap.finance",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "metastreet-yield-pass": {
+    "slug": "metastreet-yield-pass",
+    "name": "Metastreet Yield Pass",
+    "domain": "metastreet.xyz",
+    "url": "https://metastreet.xyz",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "metastreet": {
+    "slug": "metastreet",
+    "name": "Metastreet",
+    "domain": "metastreet.xyz",
+    "url": "https://metastreet.xyz",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "meth": {
+    "slug": "meth",
+    "name": "mETH Protocol",
+    "domain": "methprotocol.xyz",
+    "url": "https://methprotocol.xyz",
+    "confidence": 0.9,
+    "method": "exact_name",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "metis": {
+    "slug": "metis",
+    "name": "Metis",
+    "domain": "metis.io",
+    "url": "https://metis.io",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "metronome": {
+    "slug": "metronome",
+    "name": "Metronome",
+    "domain": "metronome.io",
+    "url": "https://metronome.io",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "monero-oxide": {
+    "slug": "monero-oxide",
+    "name": "Monero Oxide",
+    "domain": "monero.com",
+    "url": "https://monero.com",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "moneyonchain": {
+    "slug": "moneyonchain",
+    "name": "Moneyonchain",
+    "domain": "moneyonchain.com",
+    "url": "https://moneyonchain.com",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "moonbeamnetwork": {
+    "slug": "moonbeamnetwork",
+    "name": "Moonbeamnetwork",
+    "domain": "moonbeam.network",
+    "url": "https://moonbeam.network",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "moonwell": {
+    "slug": "moonwell",
+    "name": "Moonwell",
+    "domain": "moonwell.fi",
+    "url": "https://moonwell.fi",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "morpho": {
+    "slug": "morpho",
+    "name": "Morpho",
+    "domain": "app.morpho.org",
+    "url": "https://app.morpho.org",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "mountainprotocol": {
+    "slug": "mountainprotocol",
+    "name": "Mountainprotocol",
+    "domain": "mountainprotocol.com",
+    "url": "https://mountainprotocol.com",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "mtpelerin": {
+    "slug": "mtpelerin",
+    "name": "Mtpelerin",
+    "domain": "mtpelerin.com",
+    "url": "https://mtpelerin.com",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "mux": {
+    "slug": "mux",
+    "name": "Mux",
+    "domain": "mux.network",
+    "url": "https://mux.network",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "myntandzero": {
+    "slug": "myntandzero",
+    "name": "Myntandzero",
+    "domain": "sovryn.com",
+    "url": "https://sovryn.com",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "native": {
+    "slug": "native",
+    "name": "Native",
+    "domain": "native.org",
+    "url": "https://native.org",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "nayms": {
+    "slug": "nayms",
+    "name": "Nayms",
+    "domain": "nayms.com",
+    "url": "https://nayms.com",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "neo": {
+    "slug": "neo",
+    "name": "Neo",
+    "domain": "neotokyo.codes",
+    "url": "https://neotokyo.codes",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "neutron": {
+    "slug": "neutron",
+    "name": "Neutron",
+    "domain": "neutron.org",
+    "url": "https://neutron.org",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "nexusmutual": {
+    "slug": "nexusmutual",
+    "name": "Nexus Mutual",
+    "domain": "nexusmutual.io",
+    "url": "https://nexusmutual.io",
+    "confidence": 0.9,
+    "method": "exact_name",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "nftfi": {
+    "slug": "nftfi",
+    "name": "Nftfi",
+    "domain": "nftfi.com",
+    "url": "https://nftfi.com",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "nftfitestnetrefi": {
+    "slug": "nftfitestnetrefi",
+    "name": "Nftfitestnetrefi",
+    "domain": "nftfi.com",
+    "url": "https://nftfi.com",
+    "confidence": 0.8,
+    "method": "normalized",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "nftx": {
+    "slug": "nftx",
+    "name": "Nftx",
+    "domain": "nftx.io",
+    "url": "https://nftx.io",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "nodle": {
+    "slug": "nodle",
+    "name": "Nodle",
+    "domain": "nodle.com",
+    "url": "https://nodle.com",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "nomad": {
+    "slug": "nomad",
+    "name": "Nomad",
+    "domain": "nomad.xyz",
+    "url": "https://nomad.xyz",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "notional": {
+    "slug": "notional",
+    "name": "Notional",
+    "domain": "notional.finance",
+    "url": "https://notional.finance",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "nucleus": {
+    "slug": "nucleus",
+    "name": "Nucleus",
+    "domain": "nucleusearn.io",
+    "url": "https://nucleusearn.io",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "oasis": {
+    "slug": "oasis",
+    "name": "Oasis",
+    "domain": "oasisprotocol.org",
+    "url": "https://oasisprotocol.org",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "obyte": {
+    "slug": "obyte",
+    "name": "Obyte",
+    "domain": "friends.obyte.org",
+    "url": "https://friends.obyte.org",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "oceanprotocol": {
+    "slug": "oceanprotocol",
+    "name": "Oceanprotocol",
+    "domain": "ocean.one",
+    "url": "https://ocean.one",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "octopusnetwork": {
+    "slug": "octopusnetwork",
+    "name": "Octopusnetwork",
+    "domain": "omnity.network",
+    "url": "https://omnity.network",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "ofza-1": {
+    "slug": "ofza-1",
+    "name": "Ofza 1",
+    "domain": "ofza.io",
+    "url": "https://ofza.io",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "olafinance": {
+    "slug": "olafinance",
+    "name": "Olafinance",
+    "domain": "ola.finance",
+    "url": "https://ola.finance",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "olympus": {
+    "slug": "olympus",
+    "name": "Olympus",
+    "domain": "olympusdao.finance",
+    "url": "https://olympusdao.finance",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "omni-network": {
+    "slug": "omni-network",
+    "name": "Omni Network",
+    "domain": "nomina.io",
+    "url": "https://nomina.io",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "omron": {
+    "slug": "omron",
+    "name": "Omron",
+    "domain": "omron.network",
+    "url": "https://omron.network",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "ondofinance": {
+    "slug": "ondofinance",
+    "name": "Ondo Finance",
+    "domain": "ondo.finance",
+    "url": "https://ondo.finance",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "openzeppelin-stellar": {
+    "slug": "openzeppelin-stellar",
+    "name": "Openzeppelin Stellar",
+    "domain": "openzeppelin.com",
+    "url": "https://openzeppelin.com",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "openzeppelin": {
+    "slug": "openzeppelin",
+    "name": "Openzeppelin",
+    "domain": "openzeppelin.com",
+    "url": "https://openzeppelin.com",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "optimism": {
+    "slug": "optimism",
+    "name": "Optimism",
+    "domain": "app.optimism.io",
+    "url": "https://app.optimism.io",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "opyngamma": {
+    "slug": "opyngamma",
+    "name": "Opyngamma",
+    "domain": "opyn.co",
+    "url": "https://opyn.co",
+    "confidence": 0.8,
+    "method": "normalized",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "opynsqueeth": {
+    "slug": "opynsqueeth",
+    "name": "Opynsqueeth",
+    "domain": "squeeth.opyn.co",
+    "url": "https://squeeth.opyn.co",
+    "confidence": 0.8,
+    "method": "normalized",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "orca": {
+    "slug": "orca",
+    "name": "Orca",
+    "domain": "orca.so",
+    "url": "https://orca.so",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "orderlynetwork": {
+    "slug": "orderlynetwork",
+    "name": "Orderlynetwork",
+    "domain": "orderly.network",
+    "url": "https://orderly.network",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "origin-protocol": {
+    "slug": "origin-protocol",
+    "name": "Origin Protocol",
+    "domain": "originprotocol.com",
+    "url": "https://originprotocol.com",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "origindefi": {
+    "slug": "origindefi",
+    "name": "Origindefi",
+    "domain": "originprotocol.com",
+    "url": "https://originprotocol.com",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "ostium": {
+    "slug": "ostium",
+    "name": "Ostium",
+    "domain": "ostium.io",
+    "url": "https://ostium.io",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "overlay": {
+    "slug": "overlay",
+    "name": "Overlay",
+    "domain": "overlay.market",
+    "url": "https://overlay.market",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "pact": {
+    "slug": "pact",
+    "name": "Pact",
+    "domain": "app.pact.fi",
+    "url": "https://app.pact.fi",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "pancakeswap": {
+    "slug": "pancakeswap",
+    "name": "PancakeSwap",
+    "domain": "pancakeswap.finance",
+    "url": "https://pancakeswap.finance",
+    "confidence": 0.8,
+    "method": "normalized",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "pantos": {
+    "slug": "pantos",
+    "name": "Pantos",
+    "domain": "pantos.io",
+    "url": "https://pantos.io",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "paradex": {
+    "slug": "paradex",
+    "name": "Paradex",
+    "domain": "app.paradex.trade",
+    "url": "https://app.paradex.trade",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "paragonsdao": {
+    "slug": "paragonsdao",
+    "name": "Paragonsdao",
+    "domain": "app.paragonsdao.com",
+    "url": "https://app.paragonsdao.com",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "parallel": {
+    "slug": "parallel",
+    "name": "Parallel",
+    "domain": "parallel.best",
+    "url": "https://parallel.best",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "parallelwallet": {
+    "slug": "parallelwallet",
+    "name": "Parallelwallet",
+    "domain": "parallel.fi",
+    "url": "https://parallel.fi",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "pareto": {
+    "slug": "pareto",
+    "name": "Pareto",
+    "domain": "pareto.credit",
+    "url": "https://pareto.credit",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "paribus": {
+    "slug": "paribus",
+    "name": "Paribus",
+    "domain": "app.paribus.io",
+    "url": "https://app.paribus.io",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "pendle": {
+    "slug": "pendle",
+    "name": "Pendle",
+    "domain": "pendle.finance",
+    "url": "https://pendle.finance",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "perennial": {
+    "slug": "perennial",
+    "name": "Perennial",
+    "domain": "perennial.finance",
+    "url": "https://perennial.finance",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "perpetual": {
+    "slug": "perpetual",
+    "name": "Perpetual",
+    "domain": "app.perp.com",
+    "url": "https://app.perp.com",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "pikaprotocol": {
+    "slug": "pikaprotocol",
+    "name": "Pikaprotocol",
+    "domain": "pikaprotocol.com",
+    "url": "https://pikaprotocol.com",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "pillar": {
+    "slug": "pillar",
+    "name": "Pillar",
+    "domain": "pillarprotocol.com",
+    "url": "https://pillarprotocol.com",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "pinto": {
+    "slug": "pinto",
+    "name": "Pinto",
+    "domain": "pinto.money",
+    "url": "https://pinto.money",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "plaza-finance": {
+    "slug": "plaza-finance",
+    "name": "Plaza Finance",
+    "domain": "deposit.plaza.finance",
+    "url": "https://deposit.plaza.finance",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "plume-network": {
+    "slug": "plume-network",
+    "name": "Plume Network",
+    "domain": "plumenetwork.xyz",
+    "url": "https://plumenetwork.xyz",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "pnetwork": {
+    "slug": "pnetwork",
+    "name": "Pnetwork",
+    "domain": "p.network",
+    "url": "https://p.network",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "pods": {
+    "slug": "pods",
+    "name": "Pods",
+    "domain": "yield.pods.finance",
+    "url": "https://yield.pods.finance",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "polkastarter": {
+    "slug": "polkastarter",
+    "name": "Polkastarter",
+    "domain": "polkastarter.com",
+    "url": "https://polkastarter.com",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "polygon": {
+    "slug": "polygon",
+    "name": "Polygon",
+    "domain": "polygon.technology",
+    "url": "https://polygon.technology",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "polygonzkevm": {
+    "slug": "polygonzkevm",
+    "name": "Polygonzkevm",
+    "domain": "portal.polygon.technology",
+    "url": "https://portal.polygon.technology",
+    "confidence": 0.8,
+    "method": "normalized",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "polymarket": {
+    "slug": "polymarket",
+    "name": "Polymarket",
+    "domain": "polymarket.com",
+    "url": "https://polymarket.com",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "polymesh": {
+    "slug": "polymesh",
+    "name": "Polymesh",
+    "domain": "polymesh.network",
+    "url": "https://polymesh.network",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "poolshark": {
+    "slug": "poolshark",
+    "name": "Poolshark",
+    "domain": "poolshark.fi",
+    "url": "https://poolshark.fi",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "pooltogether": {
+    "slug": "pooltogether",
+    "name": "PoolTogether",
+    "domain": "pooltogether.com",
+    "url": "https://pooltogether.com",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "popsicle": {
+    "slug": "popsicle",
+    "name": "Popsicle",
+    "domain": "popsicle.finance",
+    "url": "https://popsicle.finance",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "portfinance": {
+    "slug": "portfinance",
+    "name": "Portfinance",
+    "domain": "port.finance",
+    "url": "https://port.finance",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "pragmaoracle": {
+    "slug": "pragmaoracle",
+    "name": "Pragmaoracle",
+    "domain": "pragma.build",
+    "url": "https://pragma.build",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "predyfinance": {
+    "slug": "predyfinance",
+    "name": "Predyfinance",
+    "domain": "predy.finance",
+    "url": "https://predy.finance",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "primitive": {
+    "slug": "primitive",
+    "name": "Primitive",
+    "domain": "primitive.xyz",
+    "url": "https://primitive.xyz",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "print3r": {
+    "slug": "print3r",
+    "name": "Print3r",
+    "domain": "print3r.xyz",
+    "url": "https://print3r.xyz",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "pstake": {
+    "slug": "pstake",
+    "name": "Pstake",
+    "domain": "pstake.finance",
+    "url": "https://pstake.finance",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "pstakeoncosmos": {
+    "slug": "pstakeoncosmos",
+    "name": "Pstakeoncosmos",
+    "domain": "pstake.finance",
+    "url": "https://pstake.finance",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "pushprotocol": {
+    "slug": "pushprotocol",
+    "name": "Pushprotocol",
+    "domain": "push.org",
+    "url": "https://push.org",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "pythnetwork": {
+    "slug": "pythnetwork",
+    "name": "Pyth Network",
+    "domain": "pyth.network",
+    "url": "https://pyth.network",
+    "confidence": 0.9,
+    "method": "exact_name",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "qblockchain": {
+    "slug": "qblockchain",
+    "name": "Qblockchain",
+    "domain": "q.org",
+    "url": "https://q.org",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "quadrata": {
+    "slug": "quadrata",
+    "name": "Quadrata",
+    "domain": "plasma.finance",
+    "url": "https://plasma.finance",
+    "confidence": 0.8,
+    "method": "normalized",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "radiant": {
+    "slug": "radiant",
+    "name": "Radiant",
+    "domain": "radiant.capital",
+    "url": "https://radiant.capital",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "rai": {
+    "slug": "rai",
+    "name": "Rai",
+    "domain": "railgun.org",
+    "url": "https://railgun.org",
+    "confidence": 0.8,
+    "method": "normalized",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "rangeprotocol": {
+    "slug": "rangeprotocol",
+    "name": "Rangeprotocol",
+    "domain": "rangeprotocol.com",
+    "url": "https://rangeprotocol.com",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "raydium": {
+    "slug": "raydium",
+    "name": "Raydium",
+    "domain": "raydium.io",
+    "url": "https://raydium.io",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "reaperfarm": {
+    "slug": "reaperfarm",
+    "name": "Reaperfarm",
+    "domain": "app.re.xyz",
+    "url": "https://app.re.xyz",
+    "confidence": 0.8,
+    "method": "normalized",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "ref-finance": {
+    "slug": "ref-finance",
+    "name": "Ref Finance",
+    "domain": "app.re.xyz",
+    "url": "https://app.re.xyz",
+    "confidence": 0.8,
+    "method": "normalized",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "renzoprotocol": {
+    "slug": "renzoprotocol",
+    "name": "Renzo Protocol",
+    "domain": "app.renzoprotocol.com",
+    "url": "https://app.renzoprotocol.com",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "reserve": {
+    "slug": "reserve",
+    "name": "Reserve",
+    "domain": "reserve.org",
+    "url": "https://reserve.org",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "resolv": {
+    "slug": "resolv",
+    "name": "Resolv",
+    "domain": "app.resolv.xyz",
+    "url": "https://app.resolv.xyz",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "resonate": {
+    "slug": "resonate",
+    "name": "Resonate",
+    "domain": "resonate.finance",
+    "url": "https://resonate.finance",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "revert": {
+    "slug": "revert",
+    "name": "Revert",
+    "domain": "revert.finance",
+    "url": "https://revert.finance",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "revest": {
+    "slug": "revest",
+    "name": "Revest",
+    "domain": "revest.finance",
+    "url": "https://revest.finance",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "rhinofi": {
+    "slug": "rhinofi",
+    "name": "Rhino.fi",
+    "domain": "rhino.fi",
+    "url": "https://rhino.fi",
+    "confidence": 0.9,
+    "method": "exact_name",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "ribbon": {
+    "slug": "ribbon",
+    "name": "Ribbon",
+    "domain": "ribbon.finance",
+    "url": "https://ribbon.finance",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "ringdao": {
+    "slug": "ringdao",
+    "name": "Ringdao",
+    "domain": "ring.exchange",
+    "url": "https://ring.exchange",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "rocketpool": {
+    "slug": "rocketpool",
+    "name": "Rocket Pool",
+    "domain": "rocketpool.net",
+    "url": "https://rocketpool.net",
+    "confidence": 0.9,
+    "method": "exact_name",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "router": {
+    "slug": "router",
+    "name": "Router",
+    "domain": "routerprotocol.com",
+    "url": "https://routerprotocol.com",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "royco": {
+    "slug": "royco",
+    "name": "Royco",
+    "domain": "royco.org",
+    "url": "https://royco.org",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "rubic": {
+    "slug": "rubic",
+    "name": "Rubic",
+    "domain": "app.rubic.exchange",
+    "url": "https://app.rubic.exchange",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "ruscet": {
+    "slug": "ruscet",
+    "name": "Ruscet",
+    "domain": "ruscet.xyz",
+    "url": "https://ruscet.xyz",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "rysk": {
+    "slug": "rysk",
+    "name": "Rysk",
+    "domain": "app.rysk.finance",
+    "url": "https://app.rysk.finance",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "scroll": {
+    "slug": "scroll",
+    "name": "Scroll",
+    "domain": "portal.scroll.io",
+    "url": "https://portal.scroll.io",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "sectorfinance": {
+    "slug": "sectorfinance",
+    "name": "Sectorfinance",
+    "domain": "sector.finance",
+    "url": "https://sector.finance",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "securefi": {
+    "slug": "securefi",
+    "name": "Securefi",
+    "domain": "securefi.io",
+    "url": "https://securefi.io",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "segmentfinance": {
+    "slug": "segmentfinance",
+    "name": "Segmentfinance",
+    "domain": "segment.finance",
+    "url": "https://segment.finance",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "sei": {
+    "slug": "sei",
+    "name": "Sei",
+    "domain": "sei.io",
+    "url": "https://sei.io",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "serai": {
+    "slug": "serai",
+    "name": "Serai",
+    "domain": "serai.exchange",
+    "url": "https://serai.exchange",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "shellprotocol": {
+    "slug": "shellprotocol",
+    "name": "Shellprotocol",
+    "domain": "shellprotocol.io",
+    "url": "https://shellprotocol.io",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "sherlock": {
+    "slug": "sherlock",
+    "name": "Sherlock",
+    "domain": "sherlock.xyz",
+    "url": "https://sherlock.xyz",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "silofinance-v2": {
+    "slug": "silofinance-v2",
+    "name": "Silo Finance V2",
+    "domain": "silo.finance",
+    "url": "https://silo.finance",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "silofinance": {
+    "slug": "silofinance",
+    "name": "Silofinance",
+    "domain": "app.silo.finance",
+    "url": "https://app.silo.finance",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "singularitydao": {
+    "slug": "singularitydao",
+    "name": "Singularitydao",
+    "domain": "singularitydao.ai",
+    "url": "https://singularitydao.ai",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "skatefi": {
+    "slug": "skatefi",
+    "name": "Skatefi",
+    "domain": "rangeprotocol.com",
+    "url": "https://rangeprotocol.com",
+    "confidence": 0.8,
+    "method": "normalized",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "sky": {
+    "slug": "sky",
+    "name": "Sky",
+    "domain": "app.sky.money",
+    "url": "https://app.sky.money",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "smardex": {
+    "slug": "smardex",
+    "name": "Smardex",
+    "domain": "smardex.io",
+    "url": "https://smardex.io",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "sns": {
+    "slug": "sns",
+    "name": "Sns",
+    "domain": "sns.id",
+    "url": "https://sns.id",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "sommelier": {
+    "slug": "sommelier",
+    "name": "Sommelier",
+    "domain": "somm.finance",
+    "url": "https://somm.finance",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "sora": {
+    "slug": "sora",
+    "name": "Sora",
+    "domain": "sorare.com",
+    "url": "https://sorare.com",
+    "confidence": 0.8,
+    "method": "normalized",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "sovryn": {
+    "slug": "sovryn",
+    "name": "Sovryn",
+    "domain": "sovryn.app",
+    "url": "https://sovryn.app",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "sparklend": {
+    "slug": "sparklend",
+    "name": "Spark",
+    "domain": "app.spark.fi",
+    "url": "https://app.spark.fi",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "spectral": {
+    "slug": "spectral",
+    "name": "Spectral",
+    "domain": "spectral.finance",
+    "url": "https://spectral.finance",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "spookyswap": {
+    "slug": "spookyswap",
+    "name": "Spookyswap",
+    "domain": "spookybase.io",
+    "url": "https://spookybase.io",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "spool": {
+    "slug": "spool",
+    "name": "Spool",
+    "domain": "spool.fi",
+    "url": "https://spool.fi",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "spot": {
+    "slug": "spot",
+    "name": "Spot",
+    "domain": "spot.cash",
+    "url": "https://spot.cash",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "ssv-network": {
+    "slug": "ssv-network",
+    "name": "SSV Network",
+    "domain": "ssv.network",
+    "url": "https://ssv.network",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "stackingdao": {
+    "slug": "stackingdao",
+    "name": "StackingDAO",
+    "domain": "app.stackingdao.com",
+    "url": "https://app.stackingdao.com",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "stacks": {
+    "slug": "stacks",
+    "name": "Stacks",
+    "domain": "docs.stacks.co",
+    "url": "https://docs.stacks.co",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "staderforbnb": {
+    "slug": "staderforbnb",
+    "name": "Staderforbnb",
+    "domain": "staderlabs.com",
+    "url": "https://staderlabs.com",
+    "confidence": 0.8,
+    "method": "normalized",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "staderforeth": {
+    "slug": "staderforeth",
+    "name": "Stader for ETH",
+    "domain": "staderlabs.com",
+    "url": "https://staderlabs.com",
+    "confidence": 0.8,
+    "method": "normalized",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "staderforpolygon": {
+    "slug": "staderforpolygon",
+    "name": "StaderforPolygon",
+    "domain": "staderlabs.com",
+    "url": "https://staderlabs.com",
+    "confidence": 0.8,
+    "method": "normalized",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "stafi": {
+    "slug": "stafi",
+    "name": "Stafi",
+    "domain": "stafi.io",
+    "url": "https://stafi.io",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "stakeeasy": {
+    "slug": "stakeeasy",
+    "name": "Stakeeasy",
+    "domain": "stakee.org",
+    "url": "https://stakee.org",
+    "confidence": 0.8,
+    "method": "normalized",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "stakelink": {
+    "slug": "stakelink",
+    "name": "Stakelink",
+    "domain": "stake.link",
+    "url": "https://stake.link",
+    "confidence": 0.8,
+    "method": "normalized",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "stakestone": {
+    "slug": "stakestone",
+    "name": "StakeStone",
+    "domain": "stakestone.io",
+    "url": "https://stakestone.io",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "stakewise": {
+    "slug": "stakewise",
+    "name": "Stakewise",
+    "domain": "stakewise.io",
+    "url": "https://stakewise.io",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "stargate": {
+    "slug": "stargate",
+    "name": "Stargate",
+    "domain": "stargate.vechain.org",
+    "url": "https://stargate.vechain.org",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "starkex": {
+    "slug": "starkex",
+    "name": "StarkEx",
+    "domain": "starkware.co",
+    "url": "https://starkware.co",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "starknet-staking": {
+    "slug": "starknet-staking",
+    "name": "Starknet Staking",
+    "domain": "starknet.io",
+    "url": "https://starknet.io",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "starknet": {
+    "slug": "starknet",
+    "name": "StarkNet",
+    "domain": "starkgate.starknet.io",
+    "url": "https://starkgate.starknet.io",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "stellar": {
+    "slug": "stellar",
+    "name": "Stellar",
+    "domain": "developers.stellar.org",
+    "url": "https://developers.stellar.org",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "stellaswap": {
+    "slug": "stellaswap",
+    "name": "Stellaswap",
+    "domain": "app.stellaxyz.io",
+    "url": "https://app.stellaxyz.io",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "strikefinance": {
+    "slug": "strikefinance",
+    "name": "Strikefinance",
+    "domain": "strikefinance.org",
+    "url": "https://strikefinance.org",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "sturdy": {
+    "slug": "sturdy",
+    "name": "Sturdy",
+    "domain": "v2.sturdy.finance",
+    "url": "https://v2.sturdy.finance",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "summerfi": {
+    "slug": "summerfi",
+    "name": "Summerfi",
+    "domain": "summer.fi",
+    "url": "https://summer.fi",
+    "confidence": 0.8,
+    "method": "normalized",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "superbots": {
+    "slug": "superbots",
+    "name": "Superbots",
+    "domain": "superbots.finance",
+    "url": "https://superbots.finance",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "superfluid": {
+    "slug": "superfluid",
+    "name": "Superfluid",
+    "domain": "superfluid.org",
+    "url": "https://superfluid.org",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "superform": {
+    "slug": "superform",
+    "name": "Superform",
+    "domain": "app.superform.xyz",
+    "url": "https://app.superform.xyz",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "sushiswap": {
+    "slug": "sushiswap",
+    "name": "SushiSwap",
+    "domain": "sushi.com",
+    "url": "https://sushi.com",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "swappi": {
+    "slug": "swappi",
+    "name": "Swappi",
+    "domain": "app.swappi.io",
+    "url": "https://app.swappi.io",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "sweateconomy": {
+    "slug": "sweateconomy",
+    "name": "Sweat Economy",
+    "domain": "sweateconomy.com",
+    "url": "https://sweateconomy.com",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "swell": {
+    "slug": "swell",
+    "name": "Swell",
+    "domain": "swellnetwork.io",
+    "url": "https://swellnetwork.io",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "symbiosis": {
+    "slug": "symbiosis",
+    "name": "Symbiosis",
+    "domain": "symbiosis.finance",
+    "url": "https://symbiosis.finance",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "symbiotic": {
+    "slug": "symbiotic",
+    "name": "Symbiotic",
+    "domain": "symbiotic.fi",
+    "url": "https://symbiotic.fi",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "synfutures": {
+    "slug": "synfutures",
+    "name": "SynFutures",
+    "domain": "trade.synfutures.com",
+    "url": "https://trade.synfutures.com",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "synthetix": {
+    "slug": "synthetix",
+    "name": "Synthetix",
+    "domain": "synthetix.io",
+    "url": "https://synthetix.io",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "teahousefinance": {
+    "slug": "teahousefinance",
+    "name": "Teahousefinance",
+    "domain": "vault.teahouse.finance",
+    "url": "https://vault.teahouse.finance",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "templar-protocol": {
+    "slug": "templar-protocol",
+    "name": "Templar Protocol",
+    "domain": "templarfi.org",
+    "url": "https://templarfi.org",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "termstructurelabs": {
+    "slug": "termstructurelabs",
+    "name": "Termstructurelabs",
+    "domain": "termstructure.com",
+    "url": "https://termstructure.com",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "tetu": {
+    "slug": "tetu",
+    "name": "Tetu",
+    "domain": "tetu.io",
+    "url": "https://tetu.io",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "thala-protocol": {
+    "slug": "thala-protocol",
+    "name": "Thala Protocol",
+    "domain": "thala.fi",
+    "url": "https://thala.fi",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "thegraph": {
+    "slug": "thegraph",
+    "name": "The Graph",
+    "domain": "thegraph.com",
+    "url": "https://thegraph.com",
+    "confidence": 0.9,
+    "method": "exact_name",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "thesandbox": {
+    "slug": "thesandbox",
+    "name": "Thesandbox",
+    "domain": "sandbox.game",
+    "url": "https://sandbox.game",
+    "confidence": 0.8,
+    "method": "normalized",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "thorchain": {
+    "slug": "thorchain",
+    "name": "THORChain",
+    "domain": "thorchain.org",
+    "url": "https://thorchain.org",
+    "confidence": 0.8,
+    "method": "normalized",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "thresholdnetwork": {
+    "slug": "thresholdnetwork",
+    "name": "Threshold Network",
+    "domain": "app.thresholdusd.org",
+    "url": "https://app.thresholdusd.org",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "thusd": {
+    "slug": "thusd",
+    "name": "Thusd",
+    "domain": "thuvault.com",
+    "url": "https://thuvault.com",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "tidal": {
+    "slug": "tidal",
+    "name": "Tidal",
+    "domain": "tidal.finance",
+    "url": "https://tidal.finance",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "timelessandbunni": {
+    "slug": "timelessandbunni",
+    "name": "Timelessandbunni",
+    "domain": "timelessfi.com",
+    "url": "https://timelessfi.com",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "tinyman": {
+    "slug": "tinyman",
+    "name": "Tinyman",
+    "domain": "tinyman.org",
+    "url": "https://tinyman.org",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "tinymanv2": {
+    "slug": "tinymanv2",
+    "name": "Tinymanv2",
+    "domain": "tinyman.org",
+    "url": "https://tinyman.org",
+    "confidence": 0.8,
+    "method": "normalized",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "tokemak": {
+    "slug": "tokemak",
+    "name": "Tokemak",
+    "domain": "tokemak.xyz",
+    "url": "https://tokemak.xyz",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "toucan": {
+    "slug": "toucan",
+    "name": "Toucan",
+    "domain": "toucan.earth",
+    "url": "https://toucan.earth",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "traderjoe": {
+    "slug": "traderjoe",
+    "name": "Trader Joe",
+    "domain": "traderjoexyz.com",
+    "url": "https://traderjoexyz.com",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "tranchess": {
+    "slug": "tranchess",
+    "name": "Tranchess",
+    "domain": "tranchess.com",
+    "url": "https://tranchess.com",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "tropykus": {
+    "slug": "tropykus",
+    "name": "Tropykus",
+    "domain": "app.tropykus.com",
+    "url": "https://app.tropykus.com",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "trufin": {
+    "slug": "trufin",
+    "name": "Trufin",
+    "domain": "trufin.io",
+    "url": "https://trufin.io",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "uniswaponzksync": {
+    "slug": "uniswaponzksync",
+    "name": "Uniswaponzksync",
+    "domain": "uniswap.org",
+    "url": "https://uniswap.org",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "universalpage": {
+    "slug": "universalpage",
+    "name": "Universalpage",
+    "domain": "universal.page",
+    "url": "https://universal.page",
+    "confidence": 0.8,
+    "method": "normalized",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "unstoppablewallet": {
+    "slug": "unstoppablewallet",
+    "name": "Unstoppablewallet",
+    "domain": "unstoppable.money",
+    "url": "https://unstoppable.money",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "usdn": {
+    "slug": "usdn",
+    "name": "Usdn",
+    "domain": "usdn.lol",
+    "url": "https://usdn.lol",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "usdt0": {
+    "slug": "usdt0",
+    "name": "USDT0",
+    "domain": "usdt0.to",
+    "url": "https://usdt0.to",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "usx": {
+    "slug": "usx",
+    "name": "Usx",
+    "domain": "usx.capital",
+    "url": "https://usx.capital",
+    "confidence": 0.8,
+    "method": "normalized",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "utix": {
+    "slug": "utix",
+    "name": "Utix",
+    "domain": "utix.io",
+    "url": "https://utix.io",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "vaultcraft": {
+    "slug": "vaultcraft",
+    "name": "Vaultcraft",
+    "domain": "vaultcraft.io",
+    "url": "https://vaultcraft.io",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "vechain": {
+    "slug": "vechain",
+    "name": "Vechain",
+    "domain": "vechain.org",
+    "url": "https://vechain.org",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "velodromefinance": {
+    "slug": "velodromefinance",
+    "name": "Velodrome Finance",
+    "domain": "velodrome.finance",
+    "url": "https://velodrome.finance",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "velvet-capital-v2": {
+    "slug": "velvet-capital-v2",
+    "name": "Velvet Capital V2",
+    "domain": "velvetcapital.com",
+    "url": "https://velvetcapital.com",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "velvetcapital": {
+    "slug": "velvetcapital",
+    "name": "Velvetcapital",
+    "domain": "dapp.velvet.capital",
+    "url": "https://dapp.velvet.capital",
+    "confidence": 0.8,
+    "method": "normalized",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "vesper": {
+    "slug": "vesper",
+    "name": "Vesper",
+    "domain": "vesper.finance",
+    "url": "https://vesper.finance",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "vesu": {
+    "slug": "vesu",
+    "name": "Vesu",
+    "domain": "vesu.xyz",
+    "url": "https://vesu.xyz",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "virtuals-protocol": {
+    "slug": "virtuals-protocol",
+    "name": "Virtuals Protocol",
+    "domain": "app.virtuals.io",
+    "url": "https://app.virtuals.io",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "voltz": {
+    "slug": "voltz",
+    "name": "Voltz",
+    "domain": "voltz.xyz",
+    "url": "https://voltz.xyz",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "waymont": {
+    "slug": "waymont",
+    "name": "Waymont",
+    "domain": "waymont.co",
+    "url": "https://waymont.co",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "wepiggy": {
+    "slug": "wepiggy",
+    "name": "Wepiggy",
+    "domain": "wepiggy.com",
+    "url": "https://wepiggy.com",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "wildcatprotocol": {
+    "slug": "wildcatprotocol",
+    "name": "Wildcatprotocol",
+    "domain": "wildcat.finance",
+    "url": "https://wildcat.finance",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "wombatexchange": {
+    "slug": "wombatexchange",
+    "name": "Wombatexchange",
+    "domain": "wombat.exchange",
+    "url": "https://wombat.exchange",
+    "confidence": 0.8,
+    "method": "normalized",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "woofi": {
+    "slug": "woofi",
+    "name": "WOOFi",
+    "domain": "fi.woo.org",
+    "url": "https://fi.woo.org",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "wormhole": {
+    "slug": "wormhole",
+    "name": "Wormhole",
+    "domain": "wormhole.com",
+    "url": "https://wormhole.com",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "xion": {
+    "slug": "xion",
+    "name": "XION",
+    "domain": "xion.burnt.com",
+    "url": "https://xion.burnt.com",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "xoxno": {
+    "slug": "xoxno",
+    "name": "Xoxno",
+    "domain": "xoxno.com",
+    "url": "https://xoxno.com",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "xterio": {
+    "slug": "xterio",
+    "name": "Xterio",
+    "domain": "x.xyz",
+    "url": "https://x.xyz",
+    "confidence": 0.8,
+    "method": "normalized",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "yamatoprotocol": {
+    "slug": "yamatoprotocol",
+    "name": "Yamatoprotocol",
+    "domain": "app.yamato.fi",
+    "url": "https://app.yamato.fi",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "yearnfinance": {
+    "slug": "yearnfinance",
+    "name": "Yearn Finance",
+    "domain": "yearn.fi",
+    "url": "https://yearn.fi",
+    "confidence": 0.9,
+    "method": "exact_name",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "yelay": {
+    "slug": "yelay",
+    "name": "Yelay",
+    "domain": "yelay.io",
+    "url": "https://yelay.io",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "yieldnest": {
+    "slug": "yieldnest",
+    "name": "Yieldnest",
+    "domain": "yieldnest.finance",
+    "url": "https://yieldnest.finance",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "yo-protocol": {
+    "slug": "yo-protocol",
+    "name": "Yo Protocol",
+    "domain": "app.yo.xyz",
+    "url": "https://app.yo.xyz",
+    "confidence": 0.9,
+    "method": "exact_slug",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "zano": {
+    "slug": "zano",
+    "name": "Zano",
+    "domain": "zano.org",
+    "url": "https://zano.org",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "zenlink": {
+    "slug": "zenlink",
+    "name": "Zenlink",
+    "domain": "zenlink.pro",
+    "url": "https://zenlink.pro",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "zerion": {
+    "slug": "zerion",
+    "name": "Zerion",
+    "domain": "zerion.io",
+    "url": "https://zerion.io",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "zerolend": {
+    "slug": "zerolend",
+    "name": "Zerolend",
+    "domain": "zerolend.xyz",
+    "url": "https://zerolend.xyz",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "zest-protocol-v2": {
+    "slug": "zest-protocol-v2",
+    "name": "Zest Protocol V2",
+    "domain": "zestprotocol.com",
+    "url": "https://zestprotocol.com",
+    "confidence": 0.8,
+    "method": "normalized",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "zksync-os": {
+    "slug": "zksync-os",
+    "name": "Zksync Os",
+    "domain": "zksync.io",
+    "url": "https://zksync.io",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "zksync": {
+    "slug": "zksync",
+    "name": "ZKsync Lite",
+    "domain": "app.txsync.io",
+    "url": "https://app.txsync.io",
+    "confidence": 0.85,
+    "method": "prefix",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "zksyncera": {
+    "slug": "zksyncera",
+    "name": "ZKsync Era",
+    "domain": "zksync.io",
+    "url": "https://zksync.io",
+    "confidence": 0.9,
+    "method": "exact_name",
+    "sources": [
+      "defillama"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "zkverify": {
+    "slug": "zkverify",
+    "name": "Zkverify",
+    "domain": "zkverify.io",
+    "url": "https://zkverify.io",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  },
+  "zodiac": {
+    "slug": "zodiac",
+    "name": "Zodiac",
+    "domain": "zodiac.wiki",
+    "url": "https://zodiac.wiki",
+    "confidence": 0.85,
+    "method": "curated",
+    "sources": [
+      "curated"
+    ],
+    "needs_review": false,
+    "reason": null
+  }
+}
