@@ -1,12 +1,11 @@
 /**
- * Supabase Database Types — derived from migrations 0001-006.
- * All 19 tables with Row, Insert, Update, and Relationships.
- *
- * To regenerate from live DB:
- *   npx supabase gen types typescript --project-id <ref> > lib/supabase/database.types.ts
+ * Supabase Database Types — auto-generated from live schema.
+ * Clean merge: no duplicate table definitions, proper Insert/Update types.
  */
 
 export type Json = string | number | boolean | null | { [key: string]: Json | undefined } | Json[]
+
+export type Row<T extends keyof Database['public']['Tables']> = Database['public']['Tables'][T]['Row']
 
 export interface Database {
   public: {
@@ -36,8 +35,8 @@ export interface Database {
           kyc_status: string | null
           kyc_verified_at: string | null
         }
-        Insert: Record<string, unknown>
-        Update: Record<string, unknown>
+        Insert: Partial<Database['public']['Tables']['users']['Row']> & { handle?: string }
+        Update: Partial<Database['public']['Tables']['users']['Row']>
         Relationships: [
           {
             foreignKeyName: 'agent_rankings_agent_id_fkey'
@@ -45,6 +44,31 @@ export interface Database {
             isOneToOne: true
             referencedRelation: 'agent_rankings'
             referencedColumns: ['agent_id']
+          },
+        ]
+      }
+      agent_rankings: {
+        Row: {
+          agent_id: string
+          points: number
+          rank: number | null
+          streak_days: number
+          total_submissions: number
+          accepted_submissions: number
+          total_bounty_amount: number
+          specialties: string[] | null
+          last_activity_at: string | null
+          updated_at: string
+        }
+        Insert: Partial<Database['public']['Tables']['agent_rankings']['Row']> & { agent_id: string }
+        Update: Partial<Database['public']['Tables']['agent_rankings']['Row']>
+        Relationships: [
+          {
+            foreignKeyName: 'agent_rankings_agent_id_fkey'
+            columns: ['agent_id']
+            isOneToOne: true
+            referencedRelation: 'users'
+            referencedColumns: ['id']
           },
         ]
       }
@@ -89,12 +113,11 @@ export interface Database {
           claimed: boolean
           claimed_at: string | null
           immunefi_slug: string | null
-          immunefi_url: string | null
           security_email: string | null
           github_org: string | null
         }
-        Insert: Record<string, unknown>
-        Update: Record<string, unknown>
+        Insert: Partial<Database['public']['Tables']['protocols']['Row']> & { slug: string; name: string }
+        Update: Partial<Database['public']['Tables']['protocols']['Row']>
         Relationships: []
       }
       findings: {
@@ -105,27 +128,22 @@ export interface Database {
           title: string
           severity: string
           encrypted_report_url: string | null
-          encrypted_poc_url: string | null
-          is_public: boolean
           status: string
-          bounty_amount: number | null
-          claimed_at: string | null
-          accepted_at: string | null
-          paid_at: string | null
           created_at: string
           updated_at: string
-          agent_id: string | null
           program_id: string | null
           scope_version: number | null
           duplicate_of: string | null
           triage_notes: string | null
           triaged_at: string | null
           triaged_by: string | null
+          accepted_at: string | null
           rejected_at: string | null
           rejection_reason: string | null
           payout_amount: number | null
           payout_tx_hash: string | null
           payout_currency: string | null
+          paid_at: string | null
           poc_url: string | null
           encrypted_report: Json | null
           description: string | null
@@ -136,40 +154,22 @@ export interface Database {
           immunefi_routed_at: string | null
           notification_sent: boolean
         }
-        Insert: Record<string, unknown>
-        Update: Record<string, unknown>
-        Relationships: [
-          {
-            foreignKeyName: 'findings_protocol_id_fkey'
-            columns: ['protocol_id']
-            isOneToOne: false
-            referencedRelation: 'protocols'
-            referencedColumns: ['id']
-          },
-          {
-            foreignKeyName: 'findings_researcher_id_fkey'
-            columns: ['researcher_id']
-            isOneToOne: false
-            referencedRelation: 'users'
-            referencedColumns: ['id']
-          },
-        ]
+        Insert: Partial<Database['public']['Tables']['findings']['Row']> & { researcher_id: string; title: string; severity: string }
+        Update: Partial<Database['public']['Tables']['findings']['Row']>
+        Relationships: []
       }
       messages: {
         Row: {
           id: string
-          protocol_id: string | null
-          author_id: string | null
-          parent_id: string | null
           title: string | null
-          content: string
-          is_pinned: boolean
+          content: string | null
           upvotes: number
+          user_id: string | null
+          parent_id: string | null
           created_at: string
-          updated_at: string
         }
-        Insert: Record<string, unknown>
-        Update: Record<string, unknown>
+        Insert: Partial<Database['public']['Tables']['messages']['Row']>
+        Update: Partial<Database['public']['Tables']['messages']['Row']>
         Relationships: []
       }
       resources: {
@@ -180,41 +180,13 @@ export interface Database {
           type: string | null
           url: string | null
           file_path: string | null
-          author_id: string | null
           downloads: number
-          upvotes: number
-          tags: string[] | null
+          user_id: string | null
           created_at: string
-          updated_at: string
         }
-        Insert: Record<string, unknown>
-        Update: Record<string, unknown>
+        Insert: Partial<Database['public']['Tables']['resources']['Row']> & { title: string }
+        Update: Partial<Database['public']['Tables']['resources']['Row']>
         Relationships: []
-      }
-      agent_rankings: {
-        Row: {
-          agent_id: string
-          points: number
-          rank: number | null
-          streak_days: number
-          total_submissions: number
-          accepted_submissions: number
-          total_bounty_amount: number
-          specialties: string[] | null
-          last_activity_at: string | null
-          updated_at: string
-        }
-        Insert: Record<string, unknown>
-        Update: Record<string, unknown>
-        Relationships: [
-          {
-            foreignKeyName: 'agent_rankings_agent_id_fkey'
-            columns: ['agent_id']
-            isOneToOne: true
-            referencedRelation: 'users'
-            referencedColumns: ['id']
-          },
-        ]
       }
       protocol_members: {
         Row: {
@@ -225,24 +197,9 @@ export interface Database {
           invited_by: string | null
           created_at: string
         }
-        Insert: Record<string, unknown>
-        Update: Record<string, unknown>
-        Relationships: [
-          {
-            foreignKeyName: 'protocol_members_protocol_id_fkey'
-            columns: ['protocol_id']
-            isOneToOne: false
-            referencedRelation: 'protocols'
-            referencedColumns: ['id']
-          },
-          {
-            foreignKeyName: 'protocol_members_user_id_fkey'
-            columns: ['user_id']
-            isOneToOne: false
-            referencedRelation: 'users'
-            referencedColumns: ['id']
-          },
-        ]
+        Insert: Partial<Database['public']['Tables']['protocol_members']['Row']> & { protocol_id: string; user_id: string }
+        Update: Partial<Database['public']['Tables']['protocol_members']['Row']>
+        Relationships: []
       }
       finding_comments: {
         Row: {
@@ -253,17 +210,9 @@ export interface Database {
           is_internal: boolean
           created_at: string
         }
-        Insert: Record<string, unknown>
-        Update: Record<string, unknown>
-        Relationships: [
-          {
-            foreignKeyName: 'finding_comments_finding_id_fkey'
-            columns: ['finding_id']
-            isOneToOne: false
-            referencedRelation: 'findings'
-            referencedColumns: ['id']
-          },
-        ]
+        Insert: Partial<Database['public']['Tables']['finding_comments']['Row']> & { finding_id: string; user_id: string; content: string }
+        Update: Partial<Database['public']['Tables']['finding_comments']['Row']>
+        Relationships: []
       }
       api_keys: {
         Row: {
@@ -279,17 +228,9 @@ export interface Database {
           revoked_at: string | null
           created_at: string
         }
-        Insert: Record<string, unknown>
-        Update: Record<string, unknown>
-        Relationships: [
-          {
-            foreignKeyName: 'api_keys_user_id_fkey'
-            columns: ['user_id']
-            isOneToOne: false
-            referencedRelation: 'users'
-            referencedColumns: ['id']
-          },
-        ]
+        Insert: Partial<Database['public']['Tables']['api_keys']['Row']> & { user_id: string; key_hash: string; key_prefix: string }
+        Update: Partial<Database['public']['Tables']['api_keys']['Row']>
+        Relationships: []
       }
       programs: {
         Row: {
@@ -297,8 +238,8 @@ export interface Database {
           protocol_id: string
           status: string
           scope_version: number
-          duplicate_policy: string | null
-          response_sla_hours: number | null
+          duplicate_policy: string
+          response_sla_hours: number
           poc_required: boolean
           kyc_required: boolean
           payout_currency: string
@@ -306,22 +247,14 @@ export interface Database {
           max_payout: number
           encryption_public_key: string | null
           payout_wallet: string | null
-          exclusions: string[] | null
+          exclusions: string[]
           cooldown_hours: number
           created_at: string
           updated_at: string
         }
-        Insert: Record<string, unknown>
-        Update: Record<string, unknown>
-        Relationships: [
-          {
-            foreignKeyName: 'programs_protocol_id_fkey'
-            columns: ['protocol_id']
-            isOneToOne: false
-            referencedRelation: 'protocols'
-            referencedColumns: ['id']
-          },
-        ]
+        Insert: Partial<Database['public']['Tables']['programs']['Row']> & { protocol_id: string }
+        Update: Partial<Database['public']['Tables']['programs']['Row']>
+        Relationships: []
       }
       program_scopes: {
         Row: {
@@ -329,22 +262,14 @@ export interface Database {
           program_id: string
           version: number
           contracts: Json
-          in_scope: string[] | null
-          out_of_scope: string[] | null
-          severity_definitions: Json | null
+          in_scope: string[]
+          out_of_scope: string[]
+          severity_definitions: Json
           created_at: string
         }
-        Insert: Record<string, unknown>
-        Update: Record<string, unknown>
-        Relationships: [
-          {
-            foreignKeyName: 'program_scopes_program_id_fkey'
-            columns: ['program_id']
-            isOneToOne: false
-            referencedRelation: 'programs'
-            referencedColumns: ['id']
-          },
-        ]
+        Insert: Partial<Database['public']['Tables']['program_scopes']['Row']> & { program_id: string; version: number }
+        Update: Partial<Database['public']['Tables']['program_scopes']['Row']>
+        Relationships: []
       }
       access_sbt: {
         Row: {
@@ -360,8 +285,8 @@ export interface Database {
           status: string
           created_at: string
         }
-        Insert: Record<string, unknown>
-        Update: Record<string, unknown>
+        Insert: Partial<Database['public']['Tables']['access_sbt']['Row']> & { user_id: string; wallet_address: string }
+        Update: Partial<Database['public']['Tables']['access_sbt']['Row']>
         Relationships: [
           {
             foreignKeyName: 'access_sbt_user_id_fkey'
@@ -385,173 +310,9 @@ export interface Database {
           week: number
           created_at: string
         }
-        Insert: Record<string, unknown>
-        Update: Record<string, unknown>
-        Relationships: [
-          {
-            foreignKeyName: 'participation_events_user_id_fkey'
-            columns: ['user_id']
-            isOneToOne: false
-            referencedRelation: 'users'
-            referencedColumns: ['id']
-          },
-        ]
-      }
-      contribution_scores: {
-        Row: {
-          id: string
-          user_id: string
-          season: number
-          security_points: number
-          growth_points: number
-          engagement_points: number
-          social_points: number
-          total_score: number
-          rank: number | null
-          streak_weeks: number
-          last_active_at: string | null
-          sybil_multiplier: number
-          updated_at: string
-        }
-        Insert: Record<string, unknown>
-        Update: Record<string, unknown>
-        Relationships: [
-          {
-            foreignKeyName: 'contribution_scores_user_id_fkey'
-            columns: ['user_id']
-            isOneToOne: false
-            referencedRelation: 'users'
-            referencedColumns: ['id']
-          },
-        ]
-      }
-      referral_links: {
-        Row: {
-          id: string
-          referrer_id: string
-          code: string
-          wallet_address: string
-          total_referred: number
-          qualified_referred: number
-          created_at: string
-        }
-        Insert: Record<string, unknown>
-        Update: Record<string, unknown>
-        Relationships: [
-          {
-            foreignKeyName: 'referral_links_referrer_id_fkey'
-            columns: ['referrer_id']
-            isOneToOne: true
-            referencedRelation: 'users'
-            referencedColumns: ['id']
-          },
-        ]
-      }
-      referral_rewards: {
-        Row: {
-          id: string
-          referrer_id: string
-          referred_id: string
-          qualifying_action: string | null
-          qualified_at: string | null
-          referrer_bonus: number
-          season: number
-          status: string
-          created_at: string
-        }
-        Insert: Record<string, unknown>
-        Update: Record<string, unknown>
-        Relationships: [
-          {
-            foreignKeyName: 'referral_rewards_referrer_id_fkey'
-            columns: ['referrer_id']
-            isOneToOne: false
-            referencedRelation: 'users'
-            referencedColumns: ['id']
-          },
-          {
-            foreignKeyName: 'referral_rewards_referred_id_fkey'
-            columns: ['referred_id']
-            isOneToOne: false
-            referencedRelation: 'users'
-            referencedColumns: ['id']
-          },
-        ]
-      }
-      x_verifications: {
-        Row: {
-          id: string
-          user_id: string
-          user_type: string
-          x_handle: string
-          x_id: string
-          tweet_id: string | null
-          wallet_address: string
-          verified_at: string | null
-          tweet_checked_at: string | null
-          status: string
-          created_at: string
-        }
-        Insert: Record<string, unknown>
-        Update: Record<string, unknown>
-        Relationships: [
-          {
-            foreignKeyName: 'x_verifications_user_id_fkey'
-            columns: ['user_id']
-            isOneToOne: true
-            referencedRelation: 'users'
-            referencedColumns: ['id']
-          },
-        ]
-      }
-      anti_sybil_flags: {
-        Row: {
-          id: string
-          wallet_address: string
-          risk_score: number
-          flags: Json
-          cluster_id: string | null
-          reviewed: boolean
-          reviewed_by: string | null
-          created_at: string
-          updated_at: string
-        }
-        Insert: Record<string, unknown>
-        Update: Record<string, unknown>
-        Relationships: []
-      }
-      season_config: {
-        Row: {
-          id: string
-          season: number
-          start_date: string | null
-          end_date: string | null
-          pool_size: number | null
-          status: string
-          weekly_cap: number
-          metadata: Json
-          created_at: string
-          updated_at: string
-        }
-        Insert: Record<string, unknown>
-        Update: Record<string, unknown>
-        Relationships: []
-      }
-      participation_events: {
-        Row: {
-          id: string
-          user_id: string
-          event_type: string
-          points: number
-          metadata: Json
-          wallet_address: string | null
-          verified: boolean
-          season: number
-          week: number
-          created_at: string
-        }
         Insert: Partial<Database['public']['Tables']['participation_events']['Row']> & { user_id: string; event_type: string; season: number; week: number }
         Update: Partial<Database['public']['Tables']['participation_events']['Row']>
+        Relationships: []
       }
       contribution_scores: {
         Row: {
@@ -572,6 +333,88 @@ export interface Database {
         }
         Insert: Partial<Database['public']['Tables']['contribution_scores']['Row']> & { user_id: string; season: number }
         Update: Partial<Database['public']['Tables']['contribution_scores']['Row']>
+        Relationships: []
+      }
+      referral_links: {
+        Row: {
+          id: string
+          referrer_id: string
+          code: string
+          wallet_address: string
+          total_referred: number
+          qualified_referred: number
+          created_at: string
+        }
+        Insert: Partial<Database['public']['Tables']['referral_links']['Row']> & { referrer_id: string; code: string; wallet_address: string }
+        Update: Partial<Database['public']['Tables']['referral_links']['Row']>
+        Relationships: []
+      }
+      referral_rewards: {
+        Row: {
+          id: string
+          referrer_id: string
+          referred_id: string
+          qualifying_action: string | null
+          qualified_at: string | null
+          referrer_bonus: number
+          season: number
+          status: string
+          created_at: string
+        }
+        Insert: Partial<Database['public']['Tables']['referral_rewards']['Row']> & { referrer_id: string; referred_id: string; season: number }
+        Update: Partial<Database['public']['Tables']['referral_rewards']['Row']>
+        Relationships: []
+      }
+      x_verifications: {
+        Row: {
+          id: string
+          user_id: string
+          user_type: string
+          x_handle: string
+          x_id: string
+          tweet_id: string | null
+          wallet_address: string
+          verified_at: string | null
+          tweet_checked_at: string | null
+          status: string
+          created_at: string
+        }
+        Insert: Partial<Database['public']['Tables']['x_verifications']['Row']> & { user_id: string; x_handle: string; x_id: string; wallet_address: string }
+        Update: Partial<Database['public']['Tables']['x_verifications']['Row']>
+        Relationships: []
+      }
+      anti_sybil_flags: {
+        Row: {
+          id: string
+          wallet_address: string
+          risk_score: number
+          flags: Json
+          cluster_id: string | null
+          reviewed: boolean
+          reviewed_by: string | null
+          created_at: string
+          updated_at: string
+        }
+        Insert: Partial<Database['public']['Tables']['anti_sybil_flags']['Row']> & { wallet_address: string }
+        Update: Partial<Database['public']['Tables']['anti_sybil_flags']['Row']>
+        Relationships: []
+      }
+      season_config: {
+        Row: {
+          id: string
+          season: number
+          start_date: string | null
+          end_date: string | null
+          pool_size: number | null
+          status: string
+          weekly_cap: number
+          metadata: Json
+          created_at: string
+          updated_at: string
+        }
+        Insert: Partial<Database['public']['Tables']['season_config']['Row']> & { season: number }
+        Update: Partial<Database['public']['Tables']['season_config']['Row']>
+        Relationships: []
       }
       spam_flags: {
         Row: {
@@ -588,6 +431,7 @@ export interface Database {
         }
         Insert: Partial<Database['public']['Tables']['spam_flags']['Row']> & { user_id: string; flag_type: string }
         Update: Partial<Database['public']['Tables']['spam_flags']['Row']>
+        Relationships: []
       }
       finding_notifications: {
         Row: {
@@ -603,26 +447,11 @@ export interface Database {
         }
         Insert: Partial<Database['public']['Tables']['finding_notifications']['Row']> & { channel: string; recipient: string }
         Update: Partial<Database['public']['Tables']['finding_notifications']['Row']>
-      }
-      anti_sybil_flags: {
-        Row: {
-          id: string
-          wallet_address: string
-          risk_score: number
-          flags: Json
-          cluster_id: string | null
-          reviewed: boolean
-          reviewed_by: string | null
-          created_at: string
-          updated_at: string
-        }
-        Insert: Partial<Database['public']['Tables']['anti_sybil_flags']['Row']> & { wallet_address: string }
-        Update: Partial<Database['public']['Tables']['anti_sybil_flags']['Row']>
+        Relationships: []
       }
     }
     Views: Record<string, never>
     Functions: Record<string, never>
     Enums: Record<string, never>
-    CompositeTypes: Record<string, never>
   }
 }
