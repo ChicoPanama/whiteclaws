@@ -18,6 +18,24 @@ async function getAgents() {
     ]
   }
 
+  interface AgentRanking {
+    rank: number | null
+    total_submissions: number
+    accepted_submissions: number
+    total_bounty_amount: number
+  }
+
+  interface UserWithRanking {
+    handle: string | null
+    display_name: string | null
+    avatar_url: string | null
+    reputation_score: number | null
+    specialties: string[] | null
+    bio: string | null
+    status: string
+    agent_rankings: AgentRanking | AgentRanking[] | null
+  }
+
   const supabase = createClient()
   const { data: agents, error } = await supabase
     .from('users')
@@ -28,6 +46,7 @@ async function getAgents() {
     .eq('is_agent', true)
     .order('reputation_score', { ascending: false })
     .limit(20)
+    .returns<UserWithRanking[]>()
 
   if (error || !agents) return []
 
