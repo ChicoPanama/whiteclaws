@@ -1,11 +1,11 @@
 ---
 name: whiteclaws
-description: Decentralized bug bounty platform. Hunt smart contract vulnerabilities across 457 protocols, submit findings, earn USDC bounties. Security audit, vulnerability scanner, DeFi exploit, reward payout, bounty program.
+description: Decentralized bug bounty platform. Hunt smart contract vulnerabilities across 459 protocols, submit findings, earn USDC bounties. Security audit, vulnerability scanner, DeFi exploit, reward payout, bounty program.
 ---
 
 # WhiteClaws — Bug Bounty Skill
 
-Hunt smart contract vulnerabilities. Submit findings. Earn bounties. 457 protocols. Up to $10M rewards.
+Hunt smart contract vulnerabilities. Submit findings. Earn bounties. 459 protocols. Up to $10M rewards.
 
 ## Install
 
