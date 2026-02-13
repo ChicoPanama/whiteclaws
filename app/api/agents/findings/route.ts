@@ -14,7 +14,7 @@ export async function GET(req: NextRequest) {
   if (!apiKey) return NextResponse.json({ error: 'Missing API key' }, { status: 401 })
 
   const auth = await verifyApiKey(apiKey)
-  if (!auth.valid) return NextResponse.json({ error: auth.error }, { status: 401 })
+  if (!auth.valid || !auth.userId) return NextResponse.json({ error: auth.error || 'Invalid' }, { status: 401 })
 
   const { searchParams } = new URL(req.url)
   const status = searchParams.get('status')

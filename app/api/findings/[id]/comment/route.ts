@@ -11,7 +11,7 @@ export async function GET(req: NextRequest, { params }: { params: { id: string }
     if (!apiKey) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
 
     const auth = await verifyApiKey(apiKey)
-    if (!auth.valid) return NextResponse.json({ error: auth.error || 'Invalid' }, { status: 401 })
+    if (!auth.valid || !auth.userId) return NextResponse.json({ error: auth.error || 'Invalid' }, { status: 401 })
 
     const supabase = createClient()
 
@@ -66,7 +66,7 @@ export async function POST(req: NextRequest, { params }: { params: { id: string 
     if (!apiKey) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
 
     const auth = await verifyApiKey(apiKey)
-    if (!auth.valid) return NextResponse.json({ error: auth.error || 'Invalid' }, { status: 401 })
+    if (!auth.valid || !auth.userId) return NextResponse.json({ error: auth.error || 'Invalid' }, { status: 401 })
 
     const body = await req.json()
     if (!body.content || typeof body.content !== 'string') {

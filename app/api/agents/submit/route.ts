@@ -19,7 +19,7 @@ export async function POST(req: NextRequest) {
     if (!apiKey) return NextResponse.json({ error: 'Missing API key. Use Authorization: Bearer wc_xxx' }, { status: 401 })
 
     const auth = await verifyApiKey(apiKey)
-    if (!auth.valid) return NextResponse.json({ error: auth.error }, { status: 401 })
+    if (!auth.valid || !auth.userId) return NextResponse.json({ error: auth.error || 'Invalid key' }, { status: 401 })
     if (!auth.scopes?.includes('agent:submit')) return NextResponse.json({ error: 'Missing agent:submit scope' }, { status: 403 })
 
     const body = await req.json()

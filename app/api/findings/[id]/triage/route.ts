@@ -20,7 +20,7 @@ export async function PATCH(req: NextRequest, { params }: { params: { id: string
     if (!apiKey) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
 
     const auth = await verifyApiKey(apiKey)
-    if (!auth.valid || !auth.userId!) return NextResponse.json({ error: auth.error || 'Invalid' }, { status: 401 })
+    if (!auth.valid || !auth.userId) return NextResponse.json({ error: auth.error || 'Invalid' }, { status: 401 })
     if (!auth.scopes || !auth.scopes.includes('protocol:triage')) {
       return NextResponse.json({ error: 'Missing protocol:triage scope' }, { status: 403 })
     }

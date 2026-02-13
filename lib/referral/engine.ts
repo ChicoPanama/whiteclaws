@@ -148,8 +148,8 @@ export async function applyReferralCode(
     .insert({
       referrer_id: link.referrer_id,
       referred_id: referredUserId,
-      status: 'pending',
       season: 1,
+      status: 'pending',
     }))
 
   if (error) {

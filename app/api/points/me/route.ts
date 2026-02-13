@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
+import type { Row } from '@/lib/supabase/helpers'
 import { createClient } from '@/lib/supabase/admin'
 import { extractApiKey, verifyApiKey } from '@/lib/auth/api-key'
 import { getCurrentSeason, getCurrentWeek, WEEKLY_CAP, TIER_WEIGHTS } from '@/lib/services/points-engine'
@@ -18,7 +19,7 @@ export async function GET(req: NextRequest) {
     if (!apiKey) return NextResponse.json({ error: 'Missing API key' }, { status: 401 })
 
     const auth = await verifyApiKey(apiKey)
-    if (!auth.valid) return NextResponse.json({ error: auth.error }, { status: 401 })
+    if (!auth.valid || !auth.userId) return NextResponse.json({ error: auth.error || 'Invalid' }, { status: 401 })
 
     const supabase = createClient()
     const season = getCurrentSeason()

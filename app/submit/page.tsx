@@ -149,11 +149,11 @@ export default function SubmitPage() {
         .from('findings')
         .insert({
           protocol_id: protocol?.id || null,
+          researcher_id: authUser?.id || 'anonymous',
           title: `[ENCRYPTED] ${formData.title}`,
           severity: formData.severity,
           encrypted_report_url: 'supabase://encrypted-reports/' + Date.now(),
           status: 'submitted',
-          researcher_id: authUser?.id || '',
           submission_source: 'whiteclaws',
           encrypted_report: {
             protocol_slug: protocolSlug,

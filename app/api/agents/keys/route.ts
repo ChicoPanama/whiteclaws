@@ -15,7 +15,7 @@ export async function GET(req: NextRequest) {
   if (!apiKey) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
 
   const auth = await verifyApiKey(apiKey)
-  if (!auth.valid) return NextResponse.json({ error: auth.error }, { status: 401 })
+  if (!auth.valid || !auth.userId) return NextResponse.json({ error: auth.error || 'Invalid' }, { status: 401 })
 
   const supabase = createClient()
   const { data: keys, error } = await supabase
@@ -39,7 +39,7 @@ export async function POST(req: NextRequest) {
   if (!apiKey) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
 
   const auth = await verifyApiKey(apiKey)
-  if (!auth.valid) return NextResponse.json({ error: auth.error }, { status: 401 })
+  if (!auth.valid || !auth.userId) return NextResponse.json({ error: auth.error || 'Invalid' }, { status: 401 })
 
   const body = await req.json().catch(() => ({}))
   const name = body.name || 'new-key'
@@ -62,7 +62,7 @@ export async function DELETE(req: NextRequest) {
   if (!apiKey) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
 
   const auth = await verifyApiKey(apiKey)
-  if (!auth.valid) return NextResponse.json({ error: auth.error }, { status: 401 })
+  if (!auth.valid || !auth.userId) return NextResponse.json({ error: auth.error || 'Invalid' }, { status: 401 })
 
   const body = await req.json()
   if (!body.key_id) return NextResponse.json({ error: 'key_id required' }, { status: 400 })
