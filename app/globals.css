@@ -388,6 +388,8 @@ a { color: inherit; text-decoration: none; }
 .hero h1 .line {
   display: block;
   overflow: hidden;
+  padding-bottom: .1em;
+  margin-bottom: -.1em;
 }
 
 .hero h1 .line-inner {
