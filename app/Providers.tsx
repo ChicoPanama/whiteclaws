@@ -3,7 +3,7 @@
 import { PrivyProvider } from '@privy-io/react-auth'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { base, mainnet, arbitrum, optimism } from 'viem/chains'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { OnchainKitProvider } from '@coinbase/onchainkit'
 
 const PRIVY_APP_ID = process.env.NEXT_PUBLIC_PRIVY_APP_ID || ''
@@ -13,12 +13,15 @@ export default function Providers({ children }: { children: React.ReactNode }) {
     defaultOptions: { queries: { staleTime: 60_000 } },
   }))
 
+  // PrivyProvider must only mount in the browser — it validates the app ID
+  // via a network call that fails during Vercel's SSR prerender phase.
+  const [mounted, setMounted] = useState(false)
+  useEffect(() => { setMounted(true) }, [])
+
   return (
     <QueryClientProvider client={queryClient}>
       <OnchainKitProvider
         chain={base}
-        // No OnchainKit API key in repo env yet. Wallet connect works without it;
-        // paymaster/tx features should be added only when CDP is wired server-side.
         config={{
           appearance: {
             name: 'WhiteClaws',
@@ -32,7 +35,7 @@ export default function Providers({ children }: { children: React.ReactNode }) {
           },
         }}
       >
-        {!PRIVY_APP_ID ? (
+        {!PRIVY_APP_ID || !mounted ? (
           children
         ) : (
           <PrivyProvider
