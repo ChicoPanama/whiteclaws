@@ -3,6 +3,8 @@ import type { Row } from '@/lib/supabase/helpers'
 import { createClient } from '@/lib/supabase/admin'
 import { getForwardedIp, requireProtocolMember, requireSessionUserId } from '@/lib/auth/protocol-guards'
 import { z } from 'zod'
+import { checkRateLimit } from '@/lib/rate-limit'
+import { hashKey } from '@/lib/rate-limit/keys'
 
 export const dynamic = 'force-dynamic'
 
@@ -11,20 +13,6 @@ const commentSchema = z.object({
   content: z.string().min(1).max(10_000),
   is_internal: z.boolean().optional(),
 })
-
-// Simple in-memory rate limiter (best-effort). Serverless runtimes may not preserve state.
-const ipBuckets = new Map<string, { count: number; resetAt: number }>()
-function rateLimit(ip: string, limit: number, windowMs: number): boolean {
-  const now = Date.now()
-  const existing = ipBuckets.get(ip)
-  if (!existing || existing.resetAt <= now) {
-    ipBuckets.set(ip, { count: 1, resetAt: now + windowMs })
-    return true
-  }
-  if (existing.count >= limit) return false
-  existing.count += 1
-  return true
-}
 
 export async function GET(req: NextRequest, { params }: { params: { id: string } }) {
   try {
@@ -83,9 +71,8 @@ export async function POST(req: NextRequest, { params }: { params: { id: string 
     if (!session.ok) return session.res
 
     const ip = getForwardedIp(req)
-    if (!rateLimit(ip, 30, 60_000)) {
-      return NextResponse.json({ error: 'Rate limited' }, { status: 429 })
-    }
+    const rl = await checkRateLimit({ key: `finding_comment:${hashKey(ip)}`, limit: 30, windowSeconds: 60 })
+    if (!rl.ok) return NextResponse.json({ error: 'Too many requests' }, { status: 429 })
 
     const parsedId = idSchema.safeParse(params.id)
     if (!parsedId.success) {
