@@ -5601,6 +5601,7 @@ a { color: inherit; text-decoration: none; }
 .st-terminal-tabs {
   display: flex;
   border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
 }
 
 .st-terminal-tabs button {
@@ -5608,8 +5609,8 @@ a { color: inherit; text-decoration: none; }
   border: none;
   color: var(--muted);
   font-family: var(--fm);
-  font-size: .72rem;
-  padding: 10px 16px;
+  font-size: .68rem;
+  padding: 8px 12px;
   cursor: pointer;
   border-bottom: 2px solid transparent;
   transition: color .15s, border-color .15s;
@@ -5646,6 +5647,58 @@ a { color: inherit; text-decoration: none; }
   white-space: pre-wrap;
   word-break: break-all;
   margin: 0;
+}
+
+.st-terminal-note {
+  padding: 10px 16px;
+  font-family: var(--fm);
+  font-size: .68rem;
+  color: var(--muted);
+  line-height: 1.5;
+  border-top: 1px solid var(--border);
+  background: var(--surface-2);
+}
+
+/* Tier list (points breakdown, severity tiers) */
+.st-tier-list {
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.st-tier-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: .8rem;
+  color: var(--ink-2);
+  line-height: 1.55;
+}
+
+.st-tier-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 5px;
+}
+
+.st-tier-1 { background: var(--green); }
+.st-tier-2 { background: #3b82f6; }
+.st-tier-3 { background: #f59e0b; }
+.st-tier-4 { background: var(--dim); }
+
+.st-tier-item strong {
+  color: var(--ink);
+  display: inline;
+  font-size: .8rem;
+}
+
+/* Wider layout for agent page (more terminal space) */
+.st-wrap-wide {
+  max-width: 1320px;
+  grid-template-columns: 1fr 380px;
 }
 
 /* ── Sign-in panel (right column) ── */
@@ -5871,10 +5924,11 @@ a { color: inherit; text-decoration: none; }
 
 /* ── Responsive ── */
 @media (max-width: 860px) {
-  .st-wrap {
+  .st-wrap, .st-wrap-wide {
     grid-template-columns: 1fr;
     gap: 40px;
     padding: 40px 16px 80px;
+    max-width: 100%;
   }
 
   .st-title { font-size: 1.8rem; }
@@ -5889,6 +5943,10 @@ a { color: inherit; text-decoration: none; }
 
   .st-facts {
     flex-direction: column;
+  }
+
+  .st-terminal-tabs {
+    gap: 0;
   }
 }
 
