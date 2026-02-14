@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@/lib/supabase/admin'
 import { extractApiKey, verifyApiKey } from '@/lib/auth/api-key'
+import { createClient as createServerClient } from '@/lib/supabase/server'
 
 export const dynamic = 'force-dynamic'
 
@@ -8,11 +9,22 @@ export const dynamic = 'force-dynamic'
  * GET /api/agents/earnings — total earnings, per-protocol breakdown, pending payouts
  */
 export async function GET(req: NextRequest) {
-  const apiKey = extractApiKey(req)
-  if (!apiKey) return NextResponse.json({ error: 'Missing API key' }, { status: 401 })
+  // Prefer session cookie auth (web UI); fall back to API key (agents/back-compat).
+  let userId: string | null = null
 
-  const auth = await verifyApiKey(apiKey)
-  if (!auth.valid || !auth.userId) return NextResponse.json({ error: auth.error || 'Invalid key' }, { status: 401 })
+  const serverClient = createServerClient()
+  const { data: sessionData } = await serverClient.auth.getUser()
+  if (sessionData?.user?.id) {
+    userId = sessionData.user.id
+  } else {
+    const apiKey = extractApiKey(req)
+    if (apiKey) {
+      const auth = await verifyApiKey(apiKey)
+      if (auth.valid && auth.userId) userId = auth.userId
+    }
+  }
+
+  if (!userId) return NextResponse.json({ error: 'Authentication required' }, { status: 401 })
 
   const supabase = createClient()
 
@@ -32,7 +44,7 @@ export async function GET(req: NextRequest) {
       id, severity, status, payout_amount, payout_currency, paid_at,
       protocol:protocol_id (slug, name)
     `)
-    .eq('researcher_id', auth.userId)
+    .eq('researcher_id', userId)
     .in('status', ['accepted', 'paid'])
     .returns<EarningsFinding[]>()
 
