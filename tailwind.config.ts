@@ -8,8 +8,11 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['IBM Plex Sans', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
-        mono: ['IBM Plex Mono', 'SF Mono', 'monospace'],
+        // Keep Tailwind utility classes aligned with the site's existing brand font CSS variables.
+        // This avoids accidental overrides (e.g. `font-sans` on <body>) causing typography regressions.
+        sans: ['var(--font-body)', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+        mono: ['var(--font-mono)', 'SF Mono', 'monospace'],
+        display: ['var(--font-display)', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
       },
       colors: {
         g: {
