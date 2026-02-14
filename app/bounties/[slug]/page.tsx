@@ -3,27 +3,25 @@ import type { Row } from '@/lib/supabase/helpers'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
 import { createClient } from '@/lib/supabase/admin'
+import ProtocolIcon from '@/components/ProtocolIcon'
+import BountyEnrichment from '@/components/bounty/BountyEnrichment'
 
 export const dynamic = 'force-dynamic'
 
-function normalizeHttpUrl(input: string): string {
-  const v = input.trim()
-  if (!v) return v
-  if (v.startsWith('http://') || v.startsWith('https://')) return v
-  return `https://${v}`
+const CHAIN_SHORT: Record<string, string> = {
+  ethereum: 'ETH', arbitrum: 'ARB', optimism: 'OP', polygon: 'MATIC',
+  bsc: 'BSC', base: 'Base', avalanche: 'AVAX', fantom: 'FTM',
+  blast: 'BLAST', gnosis: 'GNO', celo: 'CELO', harmony: 'ONE',
+  kava: 'KAVA', aurora: 'AURORA', injective: 'INJ', near: 'NEAR',
+  solana: 'SOL', stacks: 'STX', cosmos: 'ATOM', hedera: 'HBAR',
+  scroll: 'SCROLL', linea: 'LINEA', zksync: 'zkSync',
 }
 
-function toTwitterUrl(input: string): string {
-  const v = input.trim()
-  if (!v) return v
-  if (v.includes('twitter.com/') || v.includes('x.com/')) return normalizeHttpUrl(v)
-  const handle = v.startsWith('@') ? v.slice(1) : v
-  return `https://x.com/${handle}`
-}
-
-function safeArray(v: unknown): string[] {
-  if (!Array.isArray(v)) return []
-  return v.filter((x) => typeof x === 'string' && x.trim().length > 0) as string[]
+const SEV: Record<string, { dot: string; bg: string; border: string }> = {
+  critical: { dot: '#FF4747', bg: 'rgba(255,71,71,0.06)', border: 'rgba(255,71,71,0.18)' },
+  high:     { dot: '#FF8C42', bg: 'rgba(255,140,66,0.06)', border: 'rgba(255,140,66,0.18)' },
+  medium:   { dot: '#FFD166', bg: 'rgba(255,209,102,0.06)', border: 'rgba(255,209,102,0.18)' },
+  low:      { dot: '#60A5FA', bg: 'rgba(96,165,250,0.06)', border: 'rgba(96,165,250,0.18)' },
 }
 
 async function getBountyDetail(slug: string) {
@@ -32,7 +30,6 @@ async function getBountyDetail(slug: string) {
 
     const { data: protocol } = await supabase
       .from('protocols')
-      // Include enrichment fields populated by scrapers (DeFiLlama, CoinGecko, etc.).
       .select(`
         id, slug, name, description, category, chains, max_bounty, logo_url,
         website_url, github_url, github_org, docs_url, developer_docs_url,
@@ -86,10 +83,16 @@ export default async function BountyDetailPage({ params }: { params: { slug: str
     return (
       <>
         <Nav />
-        <div className="section">
-          <div className="sh"><h2>Bounty Not Found</h2></div>
-          <p className="sd-text">No active bounty program found for this protocol.</p>
-          <Link href="/bounties" style={{ color: 'var(--text-link, #3b82f6)' }}>Back to Bounties</Link>
+        <div className="pd-page">
+          <div className="pd-wrap">
+            <div className="pd-hero">
+              <h1 className="pd-hero-name">Bounty Not Found</h1>
+              <p className="pd-hero-desc">No active bounty program found for this protocol.</p>
+            </div>
+            <div className="pd-cta">
+              <Link href="/bounties" className="pd-btn-secondary">← Back to Bounties</Link>
+            </div>
+          </div>
         </div>
         <Footer />
       </>
@@ -97,217 +100,219 @@ export default async function BountyDetailPage({ params }: { params: { slug: str
   }
 
   const { protocol, program, scope, totalFindings, acceptedFindings } = data
-  const auditReportUrls = safeArray(protocol.audit_report_urls)
-  const auditorsRaw = protocol.auditors
-  const auditors =
-    Array.isArray(auditorsRaw)
-      ? auditorsRaw
-          .map((a: any) => (typeof a === 'string' ? a : (a?.name || a?.auditor || '')))
-          .filter((s: string) => typeof s === 'string' && s.trim().length > 0)
-      : []
 
-  const links: Array<{ label: string; href: string }> = []
-  if (protocol.website_url) links.push({ label: 'Website', href: normalizeHttpUrl(protocol.website_url) })
-  if (protocol.docs_url) links.push({ label: 'Docs', href: normalizeHttpUrl(protocol.docs_url) })
-  if (protocol.developer_docs_url) links.push({ label: 'Developer Docs', href: normalizeHttpUrl(protocol.developer_docs_url) })
-  if (protocol.github_url) links.push({ label: 'GitHub', href: normalizeHttpUrl(protocol.github_url) })
-  if (protocol.status_page_url) links.push({ label: 'Status Page', href: normalizeHttpUrl(protocol.status_page_url) })
-  if (protocol.bounty_policy_url) links.push({ label: 'Bounty Policy', href: normalizeHttpUrl(protocol.bounty_policy_url) })
-  if (protocol.whitepaper_url) links.push({ label: 'Whitepaper', href: normalizeHttpUrl(protocol.whitepaper_url) })
-  if (protocol.blog_url) links.push({ label: 'Blog', href: normalizeHttpUrl(protocol.blog_url) })
-  if (protocol.reddit_url) links.push({ label: 'Reddit', href: normalizeHttpUrl(protocol.reddit_url) })
-  if (protocol.immunefi_url) links.push({ label: 'Immunefi', href: normalizeHttpUrl(protocol.immunefi_url) })
-  if (protocol.coingecko_id) links.push({ label: 'CoinGecko', href: `https://www.coingecko.com/en/coins/${protocol.coingecko_id}` })
+  const chains = protocol.chains || []
+  const maxChainShow = 8
+  const visibleChains = chains.slice(0, maxChainShow)
+  const extraChains = chains.length - maxChainShow
 
-  const socials: Array<{ label: string; href: string }> = []
-  if (protocol.twitter) socials.push({ label: 'X / Twitter', href: toTwitterUrl(protocol.twitter) })
-  if (protocol.discord) socials.push({ label: 'Discord', href: normalizeHttpUrl(protocol.discord) })
-  if (protocol.telegram) socials.push({ label: 'Telegram', href: normalizeHttpUrl(protocol.telegram) })
+  // Build enrichment object from protocol row for the enrichment component
+  const enrichment: Record<string, unknown> = {
+    website_url: protocol.website_url,
+    docs_url: protocol.docs_url,
+    developer_docs_url: protocol.developer_docs_url,
+    github_url: protocol.github_url,
+    immunefi_url: protocol.immunefi_url,
+    twitter: protocol.twitter,
+    discord: protocol.discord,
+    telegram: protocol.telegram,
+    security_email: protocol.security_email,
+    contact_email: protocol.contact_email,
+    legal_email: protocol.legal_email,
+    whitepaper_url: protocol.whitepaper_url,
+    bounty_policy_url: protocol.bounty_policy_url,
+    status_page_url: protocol.status_page_url,
+    reddit_url: protocol.reddit_url,
+    blog_url: protocol.blog_url,
+    coingecko_id: protocol.coingecko_id,
+    market_cap_rank: protocol.market_cap_rank,
+    auditors: protocol.auditors,
+    audit_report_urls: protocol.audit_report_urls,
+  }
+
+  // Build severity entries from scope severity_definitions
+  const sevEntries = scope?.severity_definitions
+    ? Object.entries(scope.severity_definitions as Record<string, { min: number; max: number; description: string }>)
+    : []
 
   return (
     <>
       <Nav />
-      <div className="section">
-        <div className="sh">
-          <h2>{protocol.name}</h2>
-        </div>
-        <p className="sd-text">{protocol.description}</p>
+      <div className="pd-page">
+        <div className="pd-wrap">
 
-        <div className="bg-hero-stats">
-          <div className="bg-hero-stat">
-            <span className="bg-hero-stat-value">${Number(program?.max_payout || protocol.max_bounty || 0).toLocaleString()}</span>
-            <span className="bg-hero-stat-label">Max Bounty</span>
-          </div>
-          <div className="bg-hero-stat">
-            <span className="bg-hero-stat-value">{totalFindings || 0}</span>
-            <span className="bg-hero-stat-label">Findings</span>
-          </div>
-          <div className="bg-hero-stat">
-            <span className="bg-hero-stat-value">{acceptedFindings || 0}</span>
-            <span className="bg-hero-stat-label">Accepted</span>
-          </div>
-          <div className="bg-hero-stat">
-            <span className="bg-hero-stat-value">{(protocol.chains || []).join(', ') || 'Multi-chain'}</span>
-            <span className="bg-hero-stat-label">Chains</span>
-          </div>
-        </div>
+          <a href="/bounties" className="pd-back">← All Bounties</a>
 
-        {/* Program Details */}
-        {program && (
-          <div className="ap-card" style={{ marginTop: '24px' }}>
-            <h2 className="ap-card-title">Program Details</h2>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '12px' }}>
-              <div><strong>Status:</strong> {program.status}</div>
-              <div><strong>Currency:</strong> {program.payout_currency}</div>
-              <div><strong>Min Payout:</strong> ${Number(program.min_payout).toLocaleString()}</div>
-              <div><strong>Max Payout:</strong> ${Number(program.max_payout).toLocaleString()}</div>
-              <div><strong>PoC Required:</strong> {program.poc_required ? 'Yes' : 'No'}</div>
-              <div><strong>KYC Required:</strong> {program.kyc_required ? 'Yes' : 'No'}</div>
-              <div><strong>Duplicate Policy:</strong> {program.duplicate_policy}</div>
-              <div><strong>Response SLA:</strong> {program.response_sla_hours}h</div>
+          {/* ─── HERO HEADER ─── */}
+          <header className="pd-hero">
+            <div className="pd-hero-orb" />
+
+            <div className="pd-hero-top">
+              <div className="pd-hero-icon">
+                <ProtocolIcon name={protocol.name} logo_url={protocol.logo_url} size={52} />
+              </div>
+              <div className="pd-hero-text">
+                <div className="pd-hero-name-row">
+                  <h1 className="pd-hero-name">{protocol.name}</h1>
+                  <span className="pd-badge-verified">✓ VERIFIED</span>
+                </div>
+                <p className="pd-hero-desc">
+                  {protocol.description || `${protocol.name} bounty program`}
+                </p>
+              </div>
+            </div>
+
+            {/* Chain & category badges */}
+            <div className="pd-hero-badges">
+              {visibleChains.map(c => (
+                <span key={c} className="pd-badge">{CHAIN_SHORT[c.toLowerCase()] || c.toUpperCase()}</span>
+              ))}
+              {extraChains > 0 && (
+                <span className="pd-badge">+{extraChains} more</span>
+              )}
+              {protocol.category && <span className="pd-badge brand">{protocol.category}</span>}
+              {program?.kyc_required && <span className="pd-badge warn">KYC Required</span>}
+              {program?.poc_required && <span className="pd-badge info">PoC Required</span>}
+            </div>
+          </header>
+
+          {/* ─── STATS BAR ─── */}
+          <div className="pd-stats">
+            <div className="pd-stat">
+              <span className="pd-stat-label">Max Bounty</span>
+              <span className="pd-stat-value accent">
+                ${Number(program?.max_payout || protocol.max_bounty || 0).toLocaleString()}
+              </span>
+            </div>
+            <div className="pd-stat">
+              <span className="pd-stat-label">Min Bounty</span>
+              <span className="pd-stat-value">
+                ${Number(program?.min_payout || 0).toLocaleString()}
+              </span>
+            </div>
+            <div className="pd-stat">
+              <span className="pd-stat-label">Findings</span>
+              <span className="pd-stat-value">{totalFindings || 0}</span>
+            </div>
+            <div className="pd-stat">
+              <span className="pd-stat-label">Accepted</span>
+              <span className="pd-stat-value">{acceptedFindings || 0}</span>
+            </div>
+            <div className="pd-stat">
+              <span className="pd-stat-label">Chains</span>
+              <span className="pd-stat-value">{chains.length || '—'}</span>
             </div>
           </div>
-        )}
 
-        {/* Scope */}
-        {scope && (
-          <div className="ap-card" style={{ marginTop: '16px' }}>
-            <h2 className="ap-card-title">Scope (v{scope.version})</h2>
-
-            {scope.in_scope && scope.in_scope.length > 0 && (
-              <div style={{ marginBottom: '12px' }}>
-                <strong>In Scope:</strong>
-                <ul style={{ margin: '4px 0', paddingLeft: '20px' }}>
-                  {scope.in_scope.map((item: string, i: number) => <li key={i}>{item}</li>)}
-                </ul>
+          {/* ─── SEVERITY TIERS ─── */}
+          {sevEntries.length > 0 && (
+            <section className="pd-section">
+              <h2 className="pd-heading"><span className="pd-num">01</span>Severity & Rewards</h2>
+              <div className="pd-sev-bar">
+                {sevEntries.map(([level]) => {
+                  const c = SEV[level] || SEV.low
+                  return <div key={level} className="pd-sev-bar-seg" style={{ background: c.dot }} />
+                })}
               </div>
-            )}
-
-            {scope.out_of_scope && scope.out_of_scope.length > 0 && (
-              <div style={{ marginBottom: '12px' }}>
-                <strong>Out of Scope:</strong>
-                <ul style={{ margin: '4px 0', paddingLeft: '20px' }}>
-                  {scope.out_of_scope.map((item: string, i: number) => <li key={i}>{item}</li>)}
-                </ul>
+              <div className="pd-sev-stack">
+                {sevEntries.map(([level, data]) => {
+                  const c = SEV[level] || SEV.low
+                  return (
+                    <div key={level} className="pd-sev-card" style={{ background: c.bg, borderColor: c.border }}>
+                      <div className="pd-sev-top">
+                        <div className="pd-sev-label">
+                          <span className="pd-sev-dot" style={{ background: c.dot }} />
+                          <span className="pd-sev-level" style={{ color: c.dot }}>{level.toUpperCase()}</span>
+                        </div>
+                        <div className="pd-sev-amount">
+                          <span className="pd-sev-max">${data.max?.toLocaleString()}</span>
+                          <span className="pd-sev-suffix">max</span>
+                        </div>
+                      </div>
+                      <div className="pd-sev-detail" style={{ borderColor: c.border }}>
+                        <p className="pd-sev-desc">{data.description}</p>
+                        <div className="pd-sev-range">
+                          <span>Min: <strong>${data.min?.toLocaleString()}</strong></span>
+                          <span>Max: <strong>${data.max?.toLocaleString()}</strong></span>
+                        </div>
+                      </div>
+                    </div>
+                  )
+                })}
               </div>
-            )}
-
-            {scope.contracts && Array.isArray(scope.contracts) && scope.contracts.length > 0 && (
-              <div style={{ marginBottom: '12px' }}>
-                <strong>Contracts:</strong>
-                {(scope.contracts as Array<{ name?: string; address?: string; chain?: string }>).map((c, i: number) => (
-                  <div key={i} style={{ padding: '6px', background: 'var(--bg-secondary, #111)', borderRadius: '4px', margin: '4px 0', fontSize: '13px' }}>
-                    {c.name || 'Contract'} — <code>{c.address}</code> ({c.chain})
-                  </div>
-                ))}
-              </div>
-            )}
-
-            {scope.severity_definitions && (
-              <div>
-                <strong>Severity Tiers:</strong>
-                {Object.entries(scope.severity_definitions as Record<string, { min: number; max: number; description: string }>).map(([level, def]) => (
-                  <div key={level} style={{ padding: '6px', background: 'var(--bg-secondary, #111)', borderRadius: '4px', margin: '4px 0', fontSize: '13px' }}>
-                    <strong style={{ textTransform: 'capitalize' }}>{level}:</strong> ${def.min.toLocaleString()} – ${def.max.toLocaleString()} — {def.description}
-                  </div>
-                ))}
-              </div>
-            )}
-          </div>
-        )}
-
-        {/* Links */}
-        <div className="ap-card" style={{ marginTop: '16px' }}>
-          <h2 className="ap-card-title">Links</h2>
-          {(links.length > 0 || socials.length > 0) ? (
-            <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
-              {links.map((l) => (
-                <a
-                  key={l.href}
-                  href={l.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ color: 'var(--text-link, #3b82f6)' }}
-                >
-                  {l.label}
-                </a>
-              ))}
-              {socials.map((s) => (
-                <a
-                  key={s.href}
-                  href={s.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ color: 'var(--text-link, #3b82f6)' }}
-                >
-                  {s.label}
-                </a>
-              ))}
-            </div>
-          ) : (
-            <p className="ap-card-text" style={{ opacity: 0.75 }}>No links found for this protocol yet.</p>
+            </section>
           )}
 
-          {protocol.security_email || protocol.contact_email || protocol.legal_email ? (
-            <div style={{ marginTop: 12, display: 'flex', gap: 16, flexWrap: 'wrap' }}>
-              {protocol.security_email && (
-                <a href={`mailto:${protocol.security_email}`} style={{ color: 'var(--text-link, #3b82f6)' }}>
-                  Security Email
-                </a>
-              )}
-              {protocol.contact_email && (
-                <a href={`mailto:${protocol.contact_email}`} style={{ color: 'var(--text-link, #3b82f6)' }}>
-                  Contact Email
-                </a>
-              )}
-              {protocol.legal_email && (
-                <a href={`mailto:${protocol.legal_email}`} style={{ color: 'var(--text-link, #3b82f6)' }}>
-                  Legal Email
-                </a>
-              )}
-            </div>
-          ) : null}
-
-          {(auditors.length > 0 || auditReportUrls.length > 0 || typeof protocol.market_cap_rank === 'number') ? (
-            <div style={{ marginTop: 14 }}>
-              {typeof protocol.market_cap_rank === 'number' ? (
-                <div className="wc-field-helper" style={{ marginTop: 4 }}>
-                  CoinGecko market cap rank: #{protocol.market_cap_rank}
+          {/* ─── PROGRAM DETAILS ─── */}
+          {program && (
+            <section className="pd-section">
+              <h2 className="pd-heading"><span className="pd-num">02</span>Program Details</h2>
+              <div className="pd-stats" style={{ marginTop: 16 }}>
+                <div className="pd-stat">
+                  <span className="pd-stat-label">Status</span>
+                  <span className="pd-stat-value">{program.status}</span>
                 </div>
-              ) : null}
-
-              {auditors.length > 0 ? (
-                <div className="wc-field-helper" style={{ marginTop: 6 }}>
-                  Auditors: {auditors.join(', ')}
+                <div className="pd-stat">
+                  <span className="pd-stat-label">Currency</span>
+                  <span className="pd-stat-value">{program.payout_currency}</span>
                 </div>
-              ) : null}
-
-              {auditReportUrls.length > 0 ? (
-                <div style={{ marginTop: 10 }}>
-                  <div className="wc-field-helper" style={{ marginBottom: 6 }}>Audit reports</div>
-                  <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-                    {auditReportUrls.map((u) => (
-                      <a
-                        key={u}
-                        href={normalizeHttpUrl(u)}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        style={{ color: 'var(--text-link, #3b82f6)' }}
-                      >
-                        Report
-                      </a>
-                    ))}
-                  </div>
+                <div className="pd-stat">
+                  <span className="pd-stat-label">Response SLA</span>
+                  <span className="pd-stat-value">{program.response_sla_hours}h</span>
                 </div>
-              ) : null}
-            </div>
-          ) : null}
-        </div>
+                <div className="pd-stat">
+                  <span className="pd-stat-label">Duplicate Policy</span>
+                  <span className="pd-stat-value">{program.duplicate_policy}</span>
+                </div>
+              </div>
+            </section>
+          )}
 
-        {/* Submit CTA */}
-        <div style={{ marginTop: '24px', display: 'flex', gap: '12px' }}>
-          <Link href={`/submit?protocol=${protocol.slug}`} className="ap-btn-primary">Submit Finding</Link>
-          <Link href="/bounties" style={{ color: 'var(--text-link, #3b82f6)', display: 'flex', alignItems: 'center' }}>Back to Bounties</Link>
+          {/* ─── SCOPE ─── */}
+          {scope && (
+            <section className="pd-section">
+              <h2 className="pd-heading"><span className="pd-num">03</span>Scope (v{scope.version})</h2>
+              <div className="pd-scope-grid">
+                <div className="pd-scope-panel pd-scope-in">
+                  <h3 className="pd-scope-title in">✓ IN SCOPE</h3>
+                  <ul className="pd-scope-list">
+                    {scope.in_scope && scope.in_scope.length > 0
+                      ? scope.in_scope.map((item: string, i: number) => (
+                          <li key={i}><span className="pd-scope-bullet in">●</span>{item}</li>
+                        ))
+                      : <li className="pd-empty">Scope details pending verification.</li>
+                    }
+                  </ul>
+                </div>
+                <div className="pd-scope-panel pd-scope-out">
+                  <h3 className="pd-scope-title out">✕ OUT OF SCOPE</h3>
+                  <ul className="pd-scope-list">
+                    {scope.out_of_scope && scope.out_of_scope.length > 0
+                      ? scope.out_of_scope.map((item: string, i: number) => (
+                          <li key={i}><span className="pd-scope-bullet out">●</span>{item}</li>
+                        ))
+                      : <li className="pd-empty">No exclusions listed.</li>
+                    }
+                  </ul>
+                </div>
+              </div>
+            </section>
+          )}
+
+          {/* ─── ENRICHMENT: LINKS & INFO ─── */}
+          <BountyEnrichment enrichment={enrichment} />
+
+          {/* ─── CTA ─── */}
+          <div className="pd-cta">
+            <Link href={`/submit?protocol=${protocol.slug}`} className="pd-btn-primary">Submit Finding →</Link>
+            <Link href="/bounties" className="pd-btn-secondary">← Browse All Programs</Link>
+          </div>
+
+          <div className="pd-meta">
+            <span>Bounty program indexed and verified by WhiteClaws</span>
+            <span>Program data sourced from on-chain analysis and public bounty disclosures.</span>
+          </div>
+
         </div>
       </div>
       <Footer />
