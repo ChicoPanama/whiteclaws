@@ -19,7 +19,7 @@ BEGIN
         USING (
           EXISTS (
             SELECT 1 FROM protocol_members
-            WHERE protocol_members.protocol_id = findings.protocol_id
+            WHERE protocol_members.protocol_id = findings.protocol_id::uuid
               AND protocol_members.user_id = auth.uid()
               AND protocol_members.role IN ('owner', 'admin', 'triager')
           )
@@ -28,24 +28,26 @@ BEGIN
   END IF;
 END $block$;
 
--- Fallback: protocol_access table (initial schema)
+-- Fallback: protocol_access table (initial schema — skip if table doesn't exist)
 DO $block$
 BEGIN
-  IF NOT EXISTS (
-    SELECT 1 FROM pg_policies
-    WHERE schemaname='public' AND tablename='findings'
-      AND policyname='protocol_access_view_findings'
-  ) THEN
-    CREATE POLICY "protocol_access_view_findings"
-      ON public.findings FOR SELECT
-      USING (
-        EXISTS (
-          SELECT 1 FROM protocol_access
-          WHERE protocol_access.protocol_id = findings.protocol_id
-            AND protocol_access.user_id = auth.uid()
-            AND protocol_access.access_level IN ('admin', 'researcher')
-        )
-      );
+  IF to_regclass('public.protocol_access') IS NOT NULL THEN
+    IF NOT EXISTS (
+      SELECT 1 FROM pg_policies
+      WHERE schemaname='public' AND tablename='findings'
+        AND policyname='protocol_access_view_findings'
+    ) THEN
+      CREATE POLICY "protocol_access_view_findings"
+        ON public.findings FOR SELECT
+        USING (
+          EXISTS (
+            SELECT 1 FROM protocol_access
+            WHERE protocol_access.protocol_id = findings.protocol_id
+              AND protocol_access.user_id = auth.uid()
+              AND protocol_access.access_level IN ('admin', 'researcher')
+          )
+        );
+    END IF;
   END IF;
 END $block$;
 
@@ -65,7 +67,7 @@ BEGIN
         USING (
           EXISTS (
             SELECT 1 FROM protocol_members
-            WHERE protocol_members.protocol_id = findings.protocol_id
+            WHERE protocol_members.protocol_id = findings.protocol_id::uuid
               AND protocol_members.user_id = auth.uid()
               AND protocol_members.role IN ('owner', 'admin')
           )
