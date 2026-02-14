@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "sh -c 'next dev -H 127.0.0.1 -p \"${PORT:-3001}\"'",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -17,6 +17,7 @@
     "seed:supabase": "tsx scripts/seed_supabase_protocols.ts"
   },
   "dependencies": {
+    "@coinbase/onchainkit": "^0.38.19",
     "@privy-io/react-auth": "^1.93.0",
     "@privy-io/server-auth": "^1.32.5",
     "@supabase/ssr": "^0.8.0",
