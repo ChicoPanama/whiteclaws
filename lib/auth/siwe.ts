@@ -7,6 +7,9 @@
  *   3. Agent → POST /api/auth/verify → { address, token }
  *
  * The nonce prevents replay attacks. Nonces expire after 5 minutes.
+ * Nonces are persisted in Supabase (siwe_nonces table) so they survive
+ * across separate Vercel Function invocations.
+ *
  * Uses viem for signature verification (same as wallet-signature.ts).
  */
 
@@ -18,10 +21,6 @@ const NONCE_EXPIRY_MS = 5 * 60 * 1000 // 5 minutes
 const DOMAIN = 'whiteclaws-dun.vercel.app'
 const URI = `https://${DOMAIN}`
 
-// In-memory nonce store (Supabase-backed for production persistence)
-// Format: Map<nonce, { address?: string, createdAt: number, used: boolean }>
-const nonceStore = new Map<string, { createdAt: number; used: boolean }>()
-
 /**
  * Generate a cryptographically random nonce.
  */
@@ -32,29 +31,21 @@ function generateNonce(): string {
 }
 
 /**
- * Clean up expired nonces periodically.
- */
-function cleanupNonces() {
-  const now = Date.now()
-  for (const [nonce, data] of Array.from(nonceStore.entries())) {
-    if (now - data.createdAt > NONCE_EXPIRY_MS * 2) {
-      nonceStore.delete(nonce)
-    }
-  }
-}
-
-/**
  * Create a SIWE challenge message.
  * Returns the EIP-4361 formatted message and nonce.
  */
-export function createChallenge(address?: string): { message: string; nonce: string } {
-  cleanupNonces()
-
+export async function createChallenge(address?: string): Promise<{ message: string; nonce: string }> {
+  const supabase = createClient()
   const nonce = generateNonce()
   const issuedAt = new Date().toISOString()
   const expirationTime = new Date(Date.now() + NONCE_EXPIRY_MS).toISOString()
 
-  nonceStore.set(nonce, { createdAt: Date.now(), used: false })
+  // Persist nonce in Supabase
+  await supabase.from('siwe_nonces').insert({ nonce, used: false })
+
+  // Clean up expired nonces opportunistically
+  const cutoff = new Date(Date.now() - NONCE_EXPIRY_MS * 2).toISOString()
+  await supabase.from('siwe_nonces').delete().lt('created_at', cutoff)
 
   // EIP-4361 message format
   const message = [
@@ -87,12 +78,20 @@ export async function verifyChallenge(
   if (!nonceMatch) return null
   const nonce = nonceMatch[1]
 
-  // Check nonce validity
-  const nonceData = nonceStore.get(nonce)
+  // Check nonce validity in Supabase
+  const supabase = createClient()
+  const { data: nonceData } = await supabase
+    .from('siwe_nonces')
+    .select('used, created_at')
+    .eq('nonce', nonce)
+    .maybeSingle()
+
   if (!nonceData) return null
   if (nonceData.used) return null
-  if (Date.now() - nonceData.createdAt > NONCE_EXPIRY_MS) {
-    nonceStore.delete(nonce)
+
+  const age = Date.now() - new Date(nonceData.created_at).getTime()
+  if (age > NONCE_EXPIRY_MS) {
+    await supabase.from('siwe_nonces').delete().eq('nonce', nonce)
     return null
   }
 
@@ -110,8 +109,8 @@ export async function verifyChallenge(
 
     if (!valid) return null
 
-    // Mark nonce as used
-    nonceData.used = true
+    // Mark nonce as used in Supabase (single use)
+    await supabase.from('siwe_nonces').update({ used: true }).eq('nonce', nonce)
 
     return { address: claimedAddress.toLowerCase(), nonce }
   } catch {

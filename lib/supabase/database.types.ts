@@ -500,6 +500,37 @@ export interface Database {
         Update: Partial<Database['public']['Tables']['finding_notifications']['Row']>
         Relationships: []
       }
+      x_oauth_states: {
+        Row: {
+          state: string
+          user_id: string
+          code_verifier: string
+          created_at: string
+        }
+        Insert: { state: string; user_id: string; code_verifier: string; created_at?: string }
+        Update: Partial<Database['public']['Tables']['x_oauth_states']['Row']>
+        Relationships: []
+      }
+      siwe_nonces: {
+        Row: {
+          nonce: string
+          used: boolean
+          created_at: string
+        }
+        Insert: { nonce: string; used?: boolean; created_at?: string }
+        Update: Partial<Database['public']['Tables']['siwe_nonces']['Row']>
+        Relationships: []
+      }
+      rate_limit_buckets: {
+        Row: {
+          key: string
+          tokens: number
+          last_refill: string
+        }
+        Insert: { key: string; tokens?: number; last_refill?: string }
+        Update: Partial<Database['public']['Tables']['rate_limit_buckets']['Row']>
+        Relationships: []
+      }
     }
     Views: Record<string, never>
     Functions: Record<string, never>

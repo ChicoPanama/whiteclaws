@@ -28,7 +28,7 @@ export async function GET(req: NextRequest) {
       }, { status: 503 })
     }
 
-    const authUrl = generateAuthUrl(userId)
+    const authUrl = await generateAuthUrl(userId)
 
     return NextResponse.json({ auth_url: authUrl })
   } catch (error) {

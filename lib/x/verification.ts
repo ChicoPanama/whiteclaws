@@ -4,6 +4,9 @@
  * OAuth 2.0 flow for X account linking. Supports all user types (agent, human, protocol).
  * Tweet verification ensures wallet↔X 1:1 binding.
  *
+ * State is persisted in Supabase (x_oauth_states table) so that it survives
+ * across separate Vercel Function invocations.
+ *
  * Requires env vars: X_CLIENT_ID, X_CLIENT_SECRET, X_CALLBACK_URL
  */
 
@@ -14,6 +17,7 @@ import crypto from 'crypto'
 
 const X_AUTH_URL = 'https://twitter.com/i/oauth2/authorize'
 const X_TOKEN_URL = 'https://api.twitter.com/2/oauth2/token'
+const STATE_EXPIRY_MS = 10 * 60 * 1000 // 10 minutes
 
 function getXConfig() {
   return {
@@ -22,18 +26,6 @@ function getXConfig() {
     callbackUrl: process.env.X_CALLBACK_URL || process.env.NEXT_PUBLIC_APP_URL + '/api/x/callback',
   }
 }
-
-// ── State Management (in-memory for now, move to Redis for production) ──
-
-const oauthStates = new Map<string, { userId: string; codeVerifier: string; createdAt: number }>()
-
-// Clean up stale states every 10 minutes
-setInterval(() => {
-  const now = Date.now()
-  for (const [key, val] of Array.from(oauthStates.entries())) {
-    if (now - val.createdAt > 600000) oauthStates.delete(key)
-  }
-}, 600000)
 
 // ── PKCE Helpers ──
 
@@ -47,13 +39,23 @@ function generateCodeChallenge(verifier: string): string {
 
 // ── OAuth Flow ──
 
-export function generateAuthUrl(userId: string): string {
+export async function generateAuthUrl(userId: string): Promise<string> {
   const config = getXConfig()
   const state = crypto.randomBytes(16).toString('hex')
   const codeVerifier = generateCodeVerifier()
   const codeChallenge = generateCodeChallenge(codeVerifier)
 
-  oauthStates.set(state, { userId, codeVerifier, createdAt: Date.now() })
+  // Persist state in Supabase so callback (different function invocation) can read it
+  const supabase = createClient()
+  await supabase.from('x_oauth_states').insert({
+    state,
+    user_id: userId,
+    code_verifier: codeVerifier,
+  })
+
+  // Clean up expired states opportunistically
+  const cutoff = new Date(Date.now() - STATE_EXPIRY_MS).toISOString()
+  await supabase.from('x_oauth_states').delete().lt('created_at', cutoff)
 
   const params = new URLSearchParams({
     response_type: 'code',
@@ -72,10 +74,28 @@ export async function handleCallback(
   code: string,
   state: string
 ): Promise<{ ok: boolean; userId?: string; xHandle?: string; xId?: string; error?: string }> {
-  const stateData = oauthStates.get(state)
-  if (!stateData) return { ok: false, error: 'Invalid or expired state' }
+  const supabase = createClient()
 
-  oauthStates.delete(state)
+  // Look up state from Supabase
+  const { data: stateRow } = await supabase
+    .from('x_oauth_states')
+    .select('user_id, code_verifier, created_at')
+    .eq('state', state)
+    .maybeSingle()
+
+  if (!stateRow) return { ok: false, error: 'Invalid or expired state' }
+
+  // Check expiry
+  const age = Date.now() - new Date(stateRow.created_at).getTime()
+  if (age > STATE_EXPIRY_MS) {
+    await supabase.from('x_oauth_states').delete().eq('state', state)
+    return { ok: false, error: 'OAuth state expired. Please try again.' }
+  }
+
+  // Delete state immediately (single use)
+  await supabase.from('x_oauth_states').delete().eq('state', state)
+
+  const stateData = { userId: stateRow.user_id, codeVerifier: stateRow.code_verifier }
   const config = getXConfig()
 
   try {

@@ -21,7 +21,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Invalid Ethereum address format' }, { status: 400 })
     }
 
-    const { message, nonce } = createChallenge(address)
+    const { message, nonce } = await createChallenge(address)
 
     return NextResponse.json({
       message,
