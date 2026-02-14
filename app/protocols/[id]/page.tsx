@@ -93,7 +93,7 @@ export default async function ProtocolPage({ params }: { params: { id: string } 
               <div className="pd-hero-text">
                 <div className="pd-hero-name-row">
                   <h1 className="pd-hero-name">{protocol.name}</h1>
-                  <span className="pd-badge-verified">✓ VERIFIED</span>
+                  {protocol.verified && <span className="pd-badge-verified">✓ VERIFIED</span>}
                 </div>
                 <p className="pd-hero-desc">
                   {protocol.description || `${protocol.name} bounty program`}

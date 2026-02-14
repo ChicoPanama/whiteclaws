@@ -27,6 +27,7 @@ export const POINTS = {
   protocol_registered:  100,
   bounty_created:       200,
   scope_published:      50,
+  referral_qualified:   75,
 
   // Tier 3: Engagement
   agent_registered:     5,
@@ -83,7 +84,7 @@ const SECURITY_EVENTS = new Set([
   'critical_finding', 'encrypted_report', 'poc_provided',
 ]);
 const GROWTH_EVENTS = new Set([
-  'protocol_registered', 'bounty_created', 'scope_published',
+  'protocol_registered', 'bounty_created', 'scope_published', 'referral_qualified',
 ]);
 const ENGAGEMENT_EVENTS = new Set([
   'agent_registered', 'weekly_active', 'weekly_submission',
@@ -102,6 +103,78 @@ function getTier(eventType: string): 'security' | 'growth' | 'engagement' | 'soc
   return 'social';
 }
 
+// ── SBT Gate ──
+async function requireSBT(userId: string): Promise<boolean> {
+  try {
+    const supabase = createClient();
+    const { data } = await supabase
+      .from('access_sbt')
+      .select('id')
+      .eq('user_id', userId)
+      .eq('status', 'active')
+      .maybeSingle();
+    return !!data;
+  } catch {
+    return false;
+  }
+}
+
+// Events that bypass the SBT gate (fire DURING mint/registration)
+const SBT_EXEMPT_EVENTS = new Set([
+  'sbt_minted',
+  'sbt_minted_early',
+  'agent_registered',
+]);
+
+// ── Cooldown Rules ──
+const COOLDOWN_RULES: Record<string, 'one-time' | 'weekly' | null> = {
+  sbt_minted: 'one-time',
+  sbt_minted_early: 'one-time',
+  agent_registered: 'one-time',
+  protocol_registered: 'one-time',
+  bounty_created: 'one-time',
+  x_claimed: 'one-time',
+  weekly_active: 'weekly',
+  weekly_submission: 'weekly',
+  heartbeat_active: 'weekly',
+};
+
+async function checkCooldown(
+  userId: string,
+  eventType: string,
+  season: number,
+  week: number,
+): Promise<boolean> {
+  const cooldown = COOLDOWN_RULES[eventType] ?? null;
+  if (!cooldown) return true;
+
+  const supabase = createClient();
+
+  if (cooldown === 'one-time') {
+    const { data } = await supabase
+      .from('participation_events')
+      .select('id')
+      .eq('user_id', userId)
+      .eq('event_type', eventType)
+      .limit(1);
+    return !data || data.length === 0;
+  }
+
+  if (cooldown === 'weekly') {
+    const { data } = await supabase
+      .from('participation_events')
+      .select('id')
+      .eq('user_id', userId)
+      .eq('event_type', eventType)
+      .eq('season', season)
+      .eq('week', week)
+      .limit(1);
+    return !data || data.length === 0;
+  }
+
+  return true;
+}
+
 // ── Core: Emit a participation event ──
 export async function emitParticipationEvent(params: {
   user_id: string;
@@ -115,6 +188,16 @@ export async function emitParticipationEvent(params: {
     const season = getCurrentSeason();
     const week = getCurrentWeek();
     const points = POINTS[params.event_type] ?? 0;
+
+    // Gate 1: SBT required (unless exempt)
+    if (!SBT_EXEMPT_EVENTS.has(params.event_type)) {
+      const hasSbt = await requireSBT(params.user_id);
+      if (!hasSbt) return { success: false, points: 0, error: 'no_sbt' };
+    }
+
+    // Gate 2: Cooldown check
+    const cooldownOk = await checkCooldown(params.user_id, params.event_type, season, week);
+    if (!cooldownOk) return { success: false, points: 0, error: 'cooldown_active' };
 
     // Check weekly cap (skip for penalties — those always apply)
     if (points > 0) {
@@ -155,6 +238,19 @@ export async function emitParticipationEvent(params: {
 
     // Update contribution scores
     await recalculateScore(params.user_id, season);
+
+    // Referral qualification check (non-blocking)
+    const QUALIFYING_EVENTS = new Set([
+      'finding_submitted', 'encrypted_report',
+      'protocol_registered', 'bounty_created',
+    ]);
+    if (QUALIFYING_EVENTS.has(params.event_type)) {
+      import('@/lib/referral/engine').then(({ checkQualification }) => {
+        checkQualification(params.user_id, params.event_type).catch(err => {
+          console.error('[Referral] Qualification check failed:', err);
+        });
+      });
+    }
 
     return { success: true, points, event_id: data.id };
   } catch (err: any) {
@@ -380,4 +476,92 @@ export async function checkAndAwardStreak(userId: string): Promise<void> {
       streak_weeks: streak,
       last_active_at: new Date().toISOString(),
     }, { onConflict: 'user_id,season' });
+}
+
+// ── Ranking ──
+
+/**
+ * Assign ranks based on total_score descending.
+ */
+export async function updateRanks(season: number = 1): Promise<void> {
+  const supabase = createClient();
+
+  const { data: scores } = await supabase
+    .from('contribution_scores')
+    .select('id, total_score')
+    .eq('season', season)
+    .order('total_score', { ascending: false });
+
+  if (!scores) return;
+
+  for (let i = 0; i < scores.length; i++) {
+    await supabase
+      .from('contribution_scores')
+      .update({ rank: i + 1 })
+      .eq('id', scores[i].id);
+  }
+}
+
+// ── Score Decay ──
+
+/**
+ * Apply score decay for inactive users.
+ * Graduated decay: 3 weeks = 5%, 5 weeks = 10%, 9+ weeks = 15%.
+ */
+export async function applyDecay(season: number = 1): Promise<number> {
+  const supabase = createClient();
+
+  const { data: scores } = await supabase
+    .from('contribution_scores')
+    .select('id, user_id, last_active_at, total_score')
+    .eq('season', season)
+    .gt('total_score', 0);
+
+  if (!scores) return 0;
+
+  let decayed = 0;
+  const now = Date.now();
+  const weekMs = 7 * 24 * 60 * 60 * 1000;
+
+  for (const score of scores) {
+    if (!score.last_active_at) continue;
+
+    const inactiveMs = now - new Date(score.last_active_at).getTime();
+    const inactiveWeeks = Math.floor(inactiveMs / weekMs);
+
+    let decayRate = 0;
+    if (inactiveWeeks >= 9) decayRate = 0.15;
+    else if (inactiveWeeks >= 5) decayRate = 0.10;
+    else if (inactiveWeeks >= 3) decayRate = 0.05;
+    else continue; // No decay within grace period
+
+    const newScore = score.total_score * (1 - decayRate);
+    await supabase
+      .from('contribution_scores')
+      .update({ total_score: newScore, updated_at: new Date().toISOString() })
+      .eq('id', score.id);
+    decayed++;
+  }
+
+  return decayed;
+}
+
+// ── Batch Recalculation ──
+
+/**
+ * Recalculate all user scores for a season, then update ranks.
+ */
+export async function recalculateAllScores(season: number): Promise<number> {
+  const supabase = createClient();
+  const { data: userIds } = await supabase
+    .from('participation_events')
+    .select('user_id')
+    .eq('season', season);
+  if (!userIds) return 0;
+  const uniqueUserIds = Array.from(new Set(userIds.map((r: any) => r.user_id)));
+  for (const userId of uniqueUserIds) {
+    await recalculateScore(userId, season);
+  }
+  await updateRanks(season);
+  return uniqueUserIds.length;
 }

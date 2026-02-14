@@ -7,7 +7,7 @@
  */
 
 import { createClient } from '@/lib/supabase/admin'
-import { recordEvent, getSeasonWeek } from '@/lib/points/engine'
+import { emitParticipationEvent, getCurrentSeason, getCurrentWeek } from '@/lib/services/points-engine'
 
 const STREAK_MILESTONES = [4, 8, 12, 26, 52] // weeks for bonus
 
@@ -21,7 +21,8 @@ export async function processWeeklyActivity(): Promise<{
   streakBonuses: number
 }> {
   const supabase = createClient()
-  const { season, week } = getSeasonWeek()
+  const season = getCurrentSeason()
+  const week = getCurrentWeek()
   const previousWeek = week - 1
 
   // Get all users with SBTs
@@ -52,7 +53,7 @@ export async function processWeeklyActivity(): Promise<{
 
     if (isActive) {
       activeUsers++
-      await recordEvent(userId, 'weekly_active', { season, week })
+      await emitParticipationEvent({ user_id: userId, event_type: 'weekly_active', metadata: { season, week } })
 
       // Check for submissions this week
       const { data: submissions } = await (supabase
@@ -65,7 +66,7 @@ export async function processWeeklyActivity(): Promise<{
         .limit(1))
 
       if (submissions && submissions.length > 0) {
-        await recordEvent(userId, 'weekly_submission', { season, week })
+        await emitParticipationEvent({ user_id: userId, event_type: 'weekly_submission', metadata: { season, week } })
       }
 
       // Calculate streak
@@ -94,12 +95,12 @@ export async function processWeeklyActivity(): Promise<{
 
       // Check for streak milestones
       if (STREAK_MILESTONES.includes(currentStreak)) {
-        await recordEvent(userId, 'streak_bonus', {
+        await emitParticipationEvent({ user_id: userId, event_type: 'streak_bonus' as any, metadata: {
           season,
           week,
           streak_weeks: currentStreak,
           milestone: currentStreak,
-        })
+        }})
         streakBonuses++
       }
     } else {

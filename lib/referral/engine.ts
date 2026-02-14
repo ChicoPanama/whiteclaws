@@ -233,7 +233,7 @@ export async function checkQualification(
   }
 
   // Fire referral bonus event for the referrer
-  fireEvent(reward.referrer_id, 'streak_bonus', {
+  fireEvent(reward.referrer_id, 'referral_qualified', {
     source: 'referral',
     referred_user: referredUserId,
     bonus,
@@ -310,7 +310,7 @@ function getTier(eventType: string): string {
     agent_registered: 'engagement',
     weekly_active: 'engagement',
     weekly_submission: 'engagement',
-    streak_bonus: 'engagement',
+    referral_qualified: 'growth',
     heartbeat_active: 'engagement',
     x_claimed: 'social',
     x_share_finding: 'social',

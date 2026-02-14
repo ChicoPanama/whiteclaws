@@ -45,6 +45,31 @@ export async function generateApiKey(
 
   const supabase = createServerClient()
 
+  // Enforce max 10 active keys per user — auto-rotate oldest
+  const { count } = await supabase
+    .from('api_keys')
+    .select('id', { count: 'exact', head: true })
+    .eq('user_id', userId)
+    .is('revoked_at', null)
+
+  if ((count || 0) >= 10) {
+    const { data: oldest } = await supabase
+      .from('api_keys')
+      .select('id')
+      .eq('user_id', userId)
+      .is('revoked_at', null)
+      .order('created_at', { ascending: true })
+      .limit(1)
+      .single()
+
+    if (oldest) {
+      await supabase
+        .from('api_keys')
+        .update({ revoked_at: new Date().toISOString() })
+        .eq('id', oldest.id)
+    }
+  }
+
   const { data, error } = await supabase
     .from('api_keys')
     .insert({

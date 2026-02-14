@@ -134,7 +134,7 @@ export default async function ResourcesPage() {
             <h3 style={{ fontSize: 16, fontWeight: 600, color: 'var(--ink)', marginBottom: 16 }}>Featured Resources</h3>
             <div className="fl">
               {dbResources.map((r) => (
-                <Link key={r.id} href={`/resources/${r.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+                <Link key={r.id} href={`/resources/${r.id}`} className="ob-link-reset">
                   <div className="fr">
                     <div className="fl-l">
                       <span className="fsv fc">
@@ -164,7 +164,7 @@ export default async function ResourcesPage() {
           <div className="fl">
             {Object.entries(grouped).map(([protocol, reports]) => (
               reports.map((a) => (
-                <a key={a.file} href={a.file} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
+                <a key={a.file} href={a.file} target="_blank" rel="noopener noreferrer" className="ob-link-reset">
                   <div className="fr">
                     <div className="fl-l">
                       <span className="fsv fc">

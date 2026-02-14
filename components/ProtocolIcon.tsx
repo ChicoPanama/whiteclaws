@@ -20,6 +20,8 @@ export default function ProtocolIcon({ name, logo_url, size = 36, className = ''
         alt={`${name} logo`}
         width={size}
         height={size}
+        loading="lazy"
+        decoding="async"
         onError={() => setImgError(true)}
         className={className}
         style={{ borderRadius: 8, objectFit: 'contain' }}

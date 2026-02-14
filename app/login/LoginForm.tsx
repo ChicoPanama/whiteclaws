@@ -56,7 +56,6 @@ export default function LoginForm() {
       // /api/auth/verify sets an httpOnly cookie for browser sessions.
       // Do not persist long-lived credentials in localStorage.
       localStorage.removeItem('wc_agent_api_key');
-      localStorage.setItem('wc_wallet_address', verified.address || address);
 
       router.push(callbackUrl);
     } catch (e: any) {

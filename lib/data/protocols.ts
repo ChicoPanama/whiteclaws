@@ -63,6 +63,7 @@ export interface ProtocolJSON {
   source?: string
   updated_at?: string
   disclosure?: Disclosure | null
+  verified?: boolean
 }
 
 function getProtocolsDir(): string {

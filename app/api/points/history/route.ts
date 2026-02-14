@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@/lib/supabase/admin'
 import { resolveIdentity } from '@/lib/auth/resolve'
-import { getSeasonWeek } from '@/lib/points/engine'
+import { getCurrentSeason, getCurrentWeek } from '@/lib/services/points-engine'
 import { createClient as createServerClient } from '@/lib/supabase/server'
 
 export const dynamic = 'force-dynamic'
@@ -22,7 +22,7 @@ export async function GET(req: NextRequest) {
     if (!userId) return NextResponse.json({ error: 'Authentication required' }, { status: 401 })
 
     const { searchParams } = new URL(req.url)
-    const season = parseInt(searchParams.get('season') || String(getSeasonWeek().season))
+    const season = parseInt(searchParams.get('season') || String(getCurrentSeason()))
     const eventType = searchParams.get('type')
     const limit = Math.min(parseInt(searchParams.get('limit') || '50'), 100)
     const offset = parseInt(searchParams.get('offset') || '0')

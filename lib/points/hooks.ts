@@ -1,38 +1,26 @@
 /**
- * Points Event Hooks — fire-and-forget wrappers for use in API routes.
- *
- * These never block the parent request and never throw.
- * Import and call at the end of successful route handlers.
- *
- * Usage:
- *   import { fireEvent } from '@/lib/points/hooks'
- *   // ... at end of successful handler:
- *   fireEvent(userId, 'finding_submitted', { protocol: slug, severity })
+ * Points Event Hooks — thin fire-and-forget wrappers.
+ * Delegates to the unified points engine.
  */
+import { emitParticipationEvent } from '@/lib/services/points-engine'
 
-import { recordEvent, type EventType } from '@/lib/points/engine'
-
-/**
- * Fire a participation event. Non-blocking — returns immediately.
- * The event is recorded asynchronously. Failures are logged, not thrown.
- */
 export function fireEvent(
   userId: string,
-  eventType: EventType,
+  eventType: string,
   metadata: Record<string, any> = {}
 ): void {
-  // Fire and forget — don't await
-  recordEvent(userId, eventType, metadata).catch((err) => {
+  emitParticipationEvent({
+    user_id: userId,
+    event_type: eventType as any,
+    metadata,
+  }).catch((err) => {
     console.error(`[Points] Failed to record ${eventType} for ${userId}:`, err)
   })
 }
 
-/**
- * Fire multiple events for a single action (e.g., submit with encryption + PoC).
- */
 export function fireEvents(
   userId: string,
-  events: Array<{ type: EventType; metadata?: Record<string, any> }>
+  events: Array<{ type: string; metadata?: Record<string, any> }>
 ): void {
   for (const event of events) {
     fireEvent(userId, event.type, event.metadata || {})

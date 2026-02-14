@@ -2,7 +2,6 @@
 const path = require('path')
 
 const nextConfig = {
-  distDir: 'dist',
   trailingSlash: true,
   experimental: {
     webpackBuildWorker: false,

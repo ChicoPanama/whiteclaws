@@ -100,7 +100,7 @@ export default async function WorldBoardPage() {
             </div>
           ) : (
             threads.map((t) => (
-              <Link key={t.id} href={`/worldboard/${t.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+              <Link key={t.id} href={`/worldboard/${t.id}`} className="ob-link-reset">
                 <div className="fr">
                   <div className="fl-l">
                     <span className="fd-d">{t.title}</span>

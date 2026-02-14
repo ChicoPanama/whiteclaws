@@ -108,8 +108,7 @@ export default function BountyGrid({ bounties }: { bounties: Bounty[] }) {
 	            <Link
 	              key={b.id}
 	              href={`/bounties/${b.id}`}
-	              className="bg-card"
-	              style={{ textDecoration: 'none', color: 'inherit' }}
+	              className="bg-card ob-link-reset"
 	            >
               {/* Header */}
               <div className="bg-card-head">

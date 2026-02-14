@@ -12,8 +12,8 @@
 
 import { createClient } from '@/lib/supabase/admin'
 import type { Row } from '@/lib/supabase/helpers'
-import { recalculateAllScores } from '@/lib/points/scores'
-import crypto from 'crypto'
+import { recalculateAllScores } from '@/lib/services/points-engine'
+import { keccak256 as viemKeccak256, encodePacked } from 'viem'
 
 export interface AllocationEntry {
   wallet_address: string
@@ -62,13 +62,24 @@ export async function generateSnapshot(
 
     const walletMap = new Map((users || []).map((u: any) => [u.id, u.wallet_address]))
 
+    // 2b. Filter out high-risk Sybil wallets
+    const walletAddrs = Array.from(walletMap.values()).filter(Boolean) as string[]
+    const { data: sybilFlags } = walletAddrs.length > 0
+      ? await supabase
+          .from('anti_sybil_flags')
+          .select('wallet_address, risk_score')
+          .in('wallet_address', walletAddrs)
+          .gt('risk_score', 0.8)
+      : { data: null }
+    const excludedWallets = new Set((sybilFlags || []).map((f: any) => f.wallet_address))
+
     // 3. Calculate total score and proportional shares
     const totalScore = scores.reduce((sum: number, s: any) => sum + (s.total_score * (s.sybil_multiplier || 1)), 0)
 
     if (totalScore === 0) return { ok: false, error: 'Total score is zero' }
 
     const allocations: AllocationEntry[] = scores
-      .filter((s: any) => walletMap.get(s.user_id))
+      .filter((s: any) => walletMap.get(s.user_id) && !excludedWallets.has(walletMap.get(s.user_id)))
       .map((s: any) => {
         const effectiveScore = s.total_score * (s.sybil_multiplier || 1)
         const sharePct = effectiveScore / totalScore
@@ -116,22 +127,15 @@ export async function generateSnapshot(
 
 // ── Merkle Tree ──
 
-function keccak256(data: string): string {
-  // Use SHA-256 as fallback (swap to keccak when ethers/viem is available)
-  // In production: use viem's keccak256
-  return '0x' + crypto.createHash('sha256').update(data).digest('hex')
-}
-
 function hashLeaf(wallet: string, amount: bigint): string {
-  // Standard: abi.encodePacked(address, uint256)
-  const encoded = wallet.toLowerCase() + amount.toString(16).padStart(64, '0')
-  return keccak256(encoded)
+  return viemKeccak256(
+    encodePacked(['address', 'uint256'], [wallet.toLowerCase() as `0x${string}`, amount])
+  )
 }
 
 function hashPair(a: string, b: string): string {
-  // Sort to ensure deterministic tree
   const [first, second] = a < b ? [a, b] : [b, a]
-  return keccak256(first + second.slice(2)) // Remove 0x from second
+  return viemKeccak256(encodePacked(['bytes32', 'bytes32'], [first as `0x${string}`, second as `0x${string}`]))
 }
 
 function buildMerkleTree(allocations: AllocationEntry[]): {

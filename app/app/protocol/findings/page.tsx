@@ -113,7 +113,7 @@ export default function ProtocolFindingsPage() {
         <div className="ap-card"><p className="ap-card-text">No findings yet.</p></div>
       ) : (
         findings.map(f => (
-          <Link key={f.id} href={`/app/protocol/findings/${f.id}`} style={{ textDecoration: 'none' }}>
+          <Link key={f.id} href={`/app/protocol/findings/${f.id}`} className="ob-link-reset">
             <div className="ap-card" style={{ marginBottom: '8px', cursor: 'pointer' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                 <div>

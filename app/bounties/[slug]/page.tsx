@@ -37,7 +37,7 @@ async function getBountyDetail(slug: string) {
         twitter, discord, telegram,
         whitepaper_url, bounty_policy_url, status_page_url, reddit_url, blog_url,
         coingecko_id, market_cap_rank,
-        auditors, audit_report_urls
+        auditors, audit_report_urls, verified
       `)
       .eq('slug', slug)
       .returns<Row<'protocols'>[]>().maybeSingle()
@@ -154,7 +154,7 @@ export default async function BountyDetailPage({ params }: { params: { slug: str
               <div className="pd-hero-text">
                 <div className="pd-hero-name-row">
                   <h1 className="pd-hero-name">{protocol.name}</h1>
-                  <span className="pd-badge-verified">✓ VERIFIED</span>
+                  {protocol.verified && <span className="pd-badge-verified">✓ VERIFIED</span>}
                 </div>
                 <p className="pd-hero-desc">
                   {protocol.description || `${protocol.name} bounty program`}

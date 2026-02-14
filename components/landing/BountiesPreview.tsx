@@ -43,7 +43,7 @@ export default function BountiesPreview({ bounties }: { bounties: Bounty[] }) {
         </div>
         <div className="bl">
           {filtered.slice(0, 6).map((b) => (
-            <Link key={b.id} href={`/bounties/${b.id}`} className="br" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <Link key={b.id} href={`/bounties/${b.id}`} className="br ob-link-reset">
               <div className="bi">
                 <ProtocolIcon name={b.name} logo_url={b.logo_url} size={36} />
               </div>

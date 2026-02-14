@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@/lib/supabase/admin'
 import { resolveIdentity } from '@/lib/auth/resolve'
-import { getSeasonWeek } from '@/lib/points/engine'
+import { getCurrentSeason, getCurrentWeek } from '@/lib/services/points-engine'
 
 export const dynamic = 'force-dynamic'
 
@@ -13,7 +13,7 @@ export async function GET(req: NextRequest) {
     }
 
     const supabase = createClient()
-    const { season } = getSeasonWeek()
+    const season = getCurrentSeason()
 
     // Get user's score
     const { data: userScore } = await (supabase

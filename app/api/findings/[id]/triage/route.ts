@@ -2,7 +2,6 @@ import { NextRequest, NextResponse } from 'next/server'
 import type { Row } from '@/lib/supabase/helpers'
 import { createClient } from '@/lib/supabase/admin'
 import { emitParticipationEvent, flagSpam } from '@/lib/services/points-engine'
-import { fireEvent } from '@/lib/points/hooks'
 import { requireProtocolAdmin, requireSessionUserId } from '@/lib/auth/protocol-guards'
 import { z } from 'zod'
 
@@ -121,14 +120,6 @@ export async function PATCH(req: NextRequest, { params }: { params: { id: string
       .returns<Row<'findings'>[]>().single()
 
     if (error) throw error
-
-    // Fire airdrop scoring events (non-blocking)
-    if (parsed.data.status === 'accepted' && finding.researcher_id) {
-      fireEvent(finding.researcher_id, 'finding_accepted', { findingId: finding.id })
-      if (finding.severity === 'critical') {
-        fireEvent(finding.researcher_id, 'critical_finding', { findingId: finding.id })
-      }
-    }
 
     return NextResponse.json({
       finding: updated,

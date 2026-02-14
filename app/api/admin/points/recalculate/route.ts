@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { recalculateAllScores, applyDecay } from '@/lib/points/scores'
+import { recalculateAllScores, applyDecay } from '@/lib/services/points-engine'
 
 export const dynamic = 'force-dynamic'
 

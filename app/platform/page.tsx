@@ -16,7 +16,7 @@ export default function PlatformPage() {
         </p>
         <div className="pg">
           {platformFeatures.map((f) => (
-            <Link key={f.slug} href={`/platform/${f.slug}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+            <Link key={f.slug} href={`/platform/${f.slug}`} className="ob-link-reset">
               <div className="pi" style={{ cursor: 'pointer', position: 'relative' }}>
                 {f.comingSoon && (
                   <span style={{

@@ -105,10 +105,10 @@ export default function LearnDetailPage({ params }: { params: { id: string } }) 
         </div>
 
         <div style={{ marginTop: '32px', display: 'flex', gap: '12px' }}>
-          <Link href="/platform/hack-database" className="bn" style={{ textDecoration: 'none' }}>
+          <Link href="/platform/hack-database" className="bn ob-link-reset">
             &#8592; Back to Hack Database
           </Link>
-          <Link href="/learn" className="lk" style={{ textDecoration: 'none', padding: '8px 0' }}>
+          <Link href="/learn" className="lk ob-link-reset" style={{ padding: '8px 0' }}>
             All Research
           </Link>
         </div>

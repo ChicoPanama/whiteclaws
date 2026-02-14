@@ -7,20 +7,20 @@
  * for all WhiteClaws protocols via the CoinGecko API.
  *
  * Strategy:
- *   1. Fetch DefiLlama /protocols (has gecko_id mapped for ~2200 protocols)
- *   2. Match our protocols to gecko_ids via DefiLlama slug bridge
- *   3. Fetch CoinGecko /coins/{id} for each matched protocol
- *   4. Extract: twitter, telegram, discord, subreddit, repos, homepage
- *   5. Save to data/coingecko_contacts.json
+ * 1. Fetch DefiLlama /protocols (has gecko_id mapped for ~2200 protocols)
+ * 2. Match our protocols to gecko_ids via DefiLlama slug bridge
+ * 3. Fetch CoinGecko /coins/{id} for each matched protocol
+ * 4. Extract: twitter, telegram, discord, subreddit, repos, homepage
+ * 5. Save to data/coingecko_contacts.json
  *
  * Rate Limits (CoinGecko free tier):
- *   - 10-30 calls/min (varies by load)
- *   - Script uses 2.5s delay between calls (~24/min, safe margin)
- *   - With Pro API key: set COINGECKO_API_KEY env var for 500 calls/min
+ * - 10-30 calls/min (varies by load)
+ * - Script uses 2.5s delay between calls (~24/min, safe margin)
+ * - With Pro API key: set COINGECKO_API_KEY env var for 500 calls/min
  *
  * Usage:
- *   node scripts/pull-coingecko-contacts.cjs
- *   COINGECKO_API_KEY=CG-xxxxx node scripts/pull-coingecko-contacts.cjs
+ * node scripts/pull-coingecko-contacts.cjs
+ * COINGECKO_API_KEY=CG-xxxxx node scripts/pull-coingecko-contacts.cjs
  *
  * Output: data/coingecko_contacts.json
  */
@@ -29,10 +29,9 @@ const fs = require("fs");
 const path = require("path");
 
 const API_KEY = process.env.COINGECKO_API_KEY || null;
-const BASE_URL = API_KEY
-  ? "https://pro-api.coingecko.com/api/v3"
-  : "https://api.coingecko.com/api/v3";
+const BASE_URL = API_KEY ? "https://pro-api.coingecko.com/api/v3" : "https://api.coingecko.com/api/v3";
 const DELAY_MS = API_KEY ? 500 : 2500; // Pro: 500ms, Free: 2.5s
+
 const DATA_DIR = path.join(__dirname, "..", "data");
 const OUTPUT_FILE = path.join(DATA_DIR, "coingecko_contacts.json");
 const CHECKPOINT_FILE = path.join(DATA_DIR, ".coingecko_checkpoint.json");
@@ -51,15 +50,16 @@ function loadOurProtocols() {
       website: typeof info === "object" ? info.url || info.website || "" : info,
     }));
   }
+
   if (fs.existsSync(indexPath)) {
     const raw = JSON.parse(fs.readFileSync(indexPath, "utf-8"));
-    if (Array.isArray(raw))
-      return raw.map((p) => ({ slug: p.slug, website: p.website || "" }));
+    if (Array.isArray(raw)) return raw.map((p) => ({ slug: p.slug, website: p.website || "" }));
     return Object.entries(raw).map(([slug, info]) => ({
       slug,
       website: typeof info === "string" ? info : info?.website || "",
     }));
   }
+
   console.error(
     "ERROR: No protocol list found. Need data/protocol_domains.json or data/whiteclaws_protocol_index.json"
   );
@@ -71,14 +71,17 @@ async function fetchJSON(url) {
   if (API_KEY) headers["x-cg-pro-api-key"] = API_KEY;
 
   const res = await fetch(url, { headers });
+
   if (res.status === 429) {
-    console.log("    ⚠️  Rate limited. Waiting 60s...");
+    console.log(" ⚠️ Rate limited. Waiting 60s...");
     await sleep(60000);
     return fetchJSON(url); // Retry
   }
+
   if (!res.ok) {
     throw new Error(`HTTP ${res.status}: ${res.statusText}`);
   }
+
   return res.json();
 }
 
@@ -118,6 +121,7 @@ function extractContacts(coin) {
       (u) => u && u.includes("discord")
     );
     if (discord) contacts.discord = discord;
+
     // Also grab non-discord chat links
     const others = links.chat_url.filter(
       (u) => u && !u.includes("discord")
@@ -195,6 +199,7 @@ async function main() {
   const llamaByDomain = {};
   const llamaBySlug = {};
   const llamaByName = {};
+
   for (const p of llamaData) {
     const d = getDomain(p.url || "");
     if (d) llamaByDomain[d] = p;
@@ -228,12 +233,10 @@ async function main() {
     }
   }
 
-  console.log(`\nMatched with gecko_id: ${toFetch.length}`);
+  console.log(`   Matched with gecko_id: ${toFetch.length}`);
   console.log(`Matched but no gecko_id: ${noGeckoId}`);
-  console.log(`No DefiLlama match: ${noMatch}`);
-  console.log(
-    `Estimated time: ${Math.ceil((toFetch.length * DELAY_MS) / 60000)} minutes`
-  );
+  console.log(`       No DefiLlama match: ${noMatch}`);
+  console.log(` Estimated time: ${Math.ceil((toFetch.length * DELAY_MS) / 60000)} minutes`);
   console.log();
 
   // 4. Load checkpoint for resume support
@@ -270,10 +273,12 @@ async function main() {
       ) {
         results[slug] = { slug, ...contacts, source: "coingecko" };
         hits++;
+
         const parts = [];
         if (contacts.twitter) parts.push(`tw:${contacts.twitter}`);
         if (contacts.telegram) parts.push(`tg:${contacts.telegram_handle}`);
         if (contacts.discord) parts.push("discord:✓");
+
         console.log(
           `[${i + 1}/${toFetch.length}] ✅ ${slug.padEnd(30)} ${parts.join(" | ")}`
         );
@@ -309,27 +314,17 @@ async function main() {
 
   // 7. Summary
   const vals = Object.values(results);
-  console.log("\n" + "=".repeat(60));
+  console.log(" " + "=".repeat(60));
   console.log("RESULTS SUMMARY");
   console.log("=".repeat(60));
-  console.log(`Total fetched:    ${vals.length}`);
-  console.log(
-    `Twitter:          ${vals.filter((v) => v.twitter).length}`
-  );
-  console.log(
-    `Telegram:         ${vals.filter((v) => v.telegram).length}`
-  );
-  console.log(
-    `Discord:          ${vals.filter((v) => v.discord).length}`
-  );
-  console.log(
-    `Reddit:           ${vals.filter((v) => v.subreddit).length}`
-  );
-  console.log(
-    `GitHub repos:     ${vals.filter((v) => v.github_repos).length}`
-  );
-  console.log(`Errors:           ${errors}`);
-  console.log(`\nSaved to: ${OUTPUT_FILE}`);
+  console.log(`Total fetched: ${vals.length}`);
+  console.log(`  Twitter: ${vals.filter((v) => v.twitter).length}`);
+  console.log(`  Telegram: ${vals.filter((v) => v.telegram).length}`);
+  console.log(`  Discord: ${vals.filter((v) => v.discord).length}`);
+  console.log(`  Reddit: ${vals.filter((v) => v.subreddit).length}`);
+  console.log(`  GitHub repos: ${vals.filter((v) => v.github_repos).length}`);
+  console.log(`Errors: ${errors}`);
+  console.log(`  Saved to: ${OUTPUT_FILE}`);
 }
 
 main().catch((err) => {
