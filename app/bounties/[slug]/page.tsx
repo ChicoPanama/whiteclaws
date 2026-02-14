@@ -6,13 +6,42 @@ import { createClient } from '@/lib/supabase/admin'
 
 export const dynamic = 'force-dynamic'
 
+function normalizeHttpUrl(input: string): string {
+  const v = input.trim()
+  if (!v) return v
+  if (v.startsWith('http://') || v.startsWith('https://')) return v
+  return `https://${v}`
+}
+
+function toTwitterUrl(input: string): string {
+  const v = input.trim()
+  if (!v) return v
+  if (v.includes('twitter.com/') || v.includes('x.com/')) return normalizeHttpUrl(v)
+  const handle = v.startsWith('@') ? v.slice(1) : v
+  return `https://x.com/${handle}`
+}
+
+function safeArray(v: unknown): string[] {
+  if (!Array.isArray(v)) return []
+  return v.filter((x) => typeof x === 'string' && x.trim().length > 0) as string[]
+}
+
 async function getBountyDetail(slug: string) {
   try {
     const supabase = createClient()
 
     const { data: protocol } = await supabase
       .from('protocols')
-      .select('id, slug, name, description, category, chains, max_bounty, logo_url, website_url, github_url')
+      // Include enrichment fields populated by scrapers (DeFiLlama, CoinGecko, etc.).
+      .select(`
+        id, slug, name, description, category, chains, max_bounty, logo_url,
+        website_url, github_url, github_org, docs_url, developer_docs_url,
+        immunefi_url, immunefi_slug, security_email, contact_email, legal_email,
+        twitter, discord, telegram,
+        whitepaper_url, bounty_policy_url, status_page_url, reddit_url, blog_url,
+        coingecko_id, market_cap_rank,
+        auditors, audit_report_urls
+      `)
       .eq('slug', slug)
       .returns<Row<'protocols'>[]>().maybeSingle()
 
@@ -68,6 +97,32 @@ export default async function BountyDetailPage({ params }: { params: { slug: str
   }
 
   const { protocol, program, scope, totalFindings, acceptedFindings } = data
+  const auditReportUrls = safeArray((protocol as any).audit_report_urls)
+  const auditorsRaw = (protocol as any).auditors
+  const auditors =
+    Array.isArray(auditorsRaw)
+      ? auditorsRaw
+          .map((a: any) => (typeof a === 'string' ? a : (a?.name || a?.auditor || '')))
+          .filter((s: string) => typeof s === 'string' && s.trim().length > 0)
+      : []
+
+  const links: Array<{ label: string; href: string }> = []
+  if ((protocol as any).website_url) links.push({ label: 'Website', href: normalizeHttpUrl((protocol as any).website_url) })
+  if ((protocol as any).docs_url) links.push({ label: 'Docs', href: normalizeHttpUrl((protocol as any).docs_url) })
+  if ((protocol as any).developer_docs_url) links.push({ label: 'Developer Docs', href: normalizeHttpUrl((protocol as any).developer_docs_url) })
+  if ((protocol as any).github_url) links.push({ label: 'GitHub', href: normalizeHttpUrl((protocol as any).github_url) })
+  if ((protocol as any).status_page_url) links.push({ label: 'Status Page', href: normalizeHttpUrl((protocol as any).status_page_url) })
+  if ((protocol as any).bounty_policy_url) links.push({ label: 'Bounty Policy', href: normalizeHttpUrl((protocol as any).bounty_policy_url) })
+  if ((protocol as any).whitepaper_url) links.push({ label: 'Whitepaper', href: normalizeHttpUrl((protocol as any).whitepaper_url) })
+  if ((protocol as any).blog_url) links.push({ label: 'Blog', href: normalizeHttpUrl((protocol as any).blog_url) })
+  if ((protocol as any).reddit_url) links.push({ label: 'Reddit', href: normalizeHttpUrl((protocol as any).reddit_url) })
+  if ((protocol as any).immunefi_url) links.push({ label: 'Immunefi', href: normalizeHttpUrl((protocol as any).immunefi_url) })
+  if ((protocol as any).coingecko_id) links.push({ label: 'CoinGecko', href: `https://www.coingecko.com/en/coins/${(protocol as any).coingecko_id}` })
+
+  const socials: Array<{ label: string; href: string }> = []
+  if ((protocol as any).twitter) socials.push({ label: 'X / Twitter', href: toTwitterUrl((protocol as any).twitter) })
+  if ((protocol as any).discord) socials.push({ label: 'Discord', href: normalizeHttpUrl((protocol as any).discord) })
+  if ((protocol as any).telegram) socials.push({ label: 'Telegram', href: normalizeHttpUrl((protocol as any).telegram) })
 
   return (
     <>
@@ -164,10 +219,89 @@ export default async function BountyDetailPage({ params }: { params: { slug: str
         {/* Links */}
         <div className="ap-card" style={{ marginTop: '16px' }}>
           <h2 className="ap-card-title">Links</h2>
-          <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
-            {protocol.website_url && <a href={protocol.website_url} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text-link, #3b82f6)' }}>Website</a>}
-            {protocol.github_url && <a href={protocol.github_url} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text-link, #3b82f6)' }}>GitHub</a>}
-          </div>
+          {(links.length > 0 || socials.length > 0) ? (
+            <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
+              {links.map((l) => (
+                <a
+                  key={l.href}
+                  href={l.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: 'var(--text-link, #3b82f6)' }}
+                >
+                  {l.label}
+                </a>
+              ))}
+              {socials.map((s) => (
+                <a
+                  key={s.href}
+                  href={s.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: 'var(--text-link, #3b82f6)' }}
+                >
+                  {s.label}
+                </a>
+              ))}
+            </div>
+          ) : (
+            <p className="ap-card-text" style={{ opacity: 0.75 }}>No links found for this protocol yet.</p>
+          )}
+
+          {(protocol as any).security_email || (protocol as any).contact_email || (protocol as any).legal_email ? (
+            <div style={{ marginTop: 12, display: 'flex', gap: 16, flexWrap: 'wrap' }}>
+              {(protocol as any).security_email && (
+                <a href={`mailto:${(protocol as any).security_email}`} style={{ color: 'var(--text-link, #3b82f6)' }}>
+                  Security Email
+                </a>
+              )}
+              {(protocol as any).contact_email && (
+                <a href={`mailto:${(protocol as any).contact_email}`} style={{ color: 'var(--text-link, #3b82f6)' }}>
+                  Contact Email
+                </a>
+              )}
+              {(protocol as any).legal_email && (
+                <a href={`mailto:${(protocol as any).legal_email}`} style={{ color: 'var(--text-link, #3b82f6)' }}>
+                  Legal Email
+                </a>
+              )}
+            </div>
+          ) : null}
+
+          {(auditors.length > 0 || auditReportUrls.length > 0 || typeof (protocol as any).market_cap_rank === 'number') ? (
+            <div style={{ marginTop: 14 }}>
+              {typeof (protocol as any).market_cap_rank === 'number' ? (
+                <div className="wc-field-helper" style={{ marginTop: 4 }}>
+                  CoinGecko market cap rank: #{(protocol as any).market_cap_rank}
+                </div>
+              ) : null}
+
+              {auditors.length > 0 ? (
+                <div className="wc-field-helper" style={{ marginTop: 6 }}>
+                  Auditors: {auditors.join(', ')}
+                </div>
+              ) : null}
+
+              {auditReportUrls.length > 0 ? (
+                <div style={{ marginTop: 10 }}>
+                  <div className="wc-field-helper" style={{ marginBottom: 6 }}>Audit reports</div>
+                  <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
+                    {auditReportUrls.map((u) => (
+                      <a
+                        key={u}
+                        href={normalizeHttpUrl(u)}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ color: 'var(--text-link, #3b82f6)' }}
+                      >
+                        Report
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              ) : null}
+            </div>
+          ) : null}
         </div>
 
         {/* Submit CTA */}
