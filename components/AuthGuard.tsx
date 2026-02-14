@@ -8,12 +8,14 @@ interface AuthGuardProps {
   children: React.ReactNode;
   fallback?: React.ReactNode;
   requireAgent?: boolean;
+  requireAdmin?: boolean;
 }
 
 export default function AuthGuard({
   children,
   fallback,
-  requireAgent = false
+  requireAgent = false,
+  requireAdmin = false,
 }: AuthGuardProps) {
   const { user, loading, isAuthenticated } = useAuth();
   const router = useRouter();
@@ -60,6 +62,27 @@ export default function AuthGuard({
         </div>
       </div>
     );
+  }
+
+  if (requireAdmin) {
+    const meta = (user?.user_metadata || {}) as any
+    const isAdmin =
+      meta?.role === 'admin' ||
+      meta?.is_admin === true ||
+      meta?.admin === true
+
+    if (!isAdmin) {
+      return (
+        <div className="lg-page">
+          <div className="lg-wrap" style={{ textAlign: 'center' }}>
+            <p className="ap-card-text">Admin access required</p>
+            <button onClick={() => router.push('/app')} className="ap-btn-primary" style={{ marginTop: 16 }}>
+              Go Back
+            </button>
+          </div>
+        </div>
+      );
+    }
   }
 
   return <>{children}</>;

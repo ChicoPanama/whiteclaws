@@ -47,13 +47,12 @@ export default function ProtocolFindingDetailPage() {
   const [privateKey, setPrivateKey] = useState('')
   const [decryptedReport, setDecryptedReport] = useState('')
 
-  const apiKey = typeof window !== 'undefined' ? localStorage.getItem('wc_protocol_api_key') || '' : ''
+  const slug = typeof window !== 'undefined' ? localStorage.getItem('wc_protocol_slug') || '' : ''
 
   const loadFinding = useCallback(async () => {
-    if (!apiKey) return
     try {
       const res = await fetch(`/api/findings/${findingId}/comment`, {
-        headers: { 'Authorization': `Bearer ${apiKey}` },
+        // session cookie auth
       })
       if (res.ok) {
         const data = await res.json()
@@ -62,16 +61,14 @@ export default function ProtocolFindingDetailPage() {
     } catch {
       // ignore
     }
-  }, [apiKey, findingId])
+  }, [findingId])
 
   useEffect(() => {
-    if (!apiKey || !findingId) return
+    if (!slug || !findingId) return
     setLoading(true)
 
-    // We need to fetch the finding from the protocol findings list
-    const slug = localStorage.getItem('wc_protocol_slug') || ''
     fetch(`/api/protocols/${slug}/findings`, {
-      headers: { 'Authorization': `Bearer ${apiKey}` },
+      // session cookie auth
     })
       .then(r => r.json())
       .then(data => {
@@ -81,7 +78,7 @@ export default function ProtocolFindingDetailPage() {
       .finally(() => setLoading(false))
 
     loadFinding()
-  }, [findingId, apiKey, loadFinding])
+  }, [findingId, slug, loadFinding])
 
   const handleTriage = async (status: string, extra: Record<string, unknown> = {}) => {
     setTriaging(true)
@@ -91,7 +88,6 @@ export default function ProtocolFindingDetailPage() {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${apiKey}`,
         },
         body: JSON.stringify({ status, ...extra }),
       })
@@ -117,7 +113,6 @@ export default function ProtocolFindingDetailPage() {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${apiKey}`,
         },
         body: JSON.stringify({ tx_hash: txHash, amount: Number(amount) }),
       })
@@ -139,7 +134,6 @@ export default function ProtocolFindingDetailPage() {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${apiKey}`,
         },
         body: JSON.stringify({ content: commentText, is_internal: isInternal }),
       })

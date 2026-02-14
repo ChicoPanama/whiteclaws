@@ -22,7 +22,6 @@ export default function ProtocolScopePage() {
   })
 
   const slug = typeof window !== 'undefined' ? localStorage.getItem('wc_protocol_slug') || '' : ''
-  const apiKey = typeof window !== 'undefined' ? localStorage.getItem('wc_protocol_api_key') || '' : ''
 
   useEffect(() => {
     if (!slug) return
@@ -52,7 +51,6 @@ export default function ProtocolScopePage() {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${apiKey}`,
         },
         body: JSON.stringify({
           contracts,

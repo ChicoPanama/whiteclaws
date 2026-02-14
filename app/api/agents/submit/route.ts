@@ -1,9 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@/lib/supabase/admin'
+import { createClient as createServerClient } from '@/lib/supabase/server'
 import { extractApiKey, verifyApiKey } from '@/lib/auth/api-key'
 import { emitParticipationEvent, checkSubmissionQuality, checkAndAwardStreak } from '@/lib/services/points-engine'
 import { notifyProtocolAboutFinding } from '@/lib/services/notifications'
 import { fireEvents } from '@/lib/points/hooks'
+import { z } from 'zod'
 
 export const dynamic = 'force-dynamic'
 
@@ -15,29 +17,80 @@ export const dynamic = 'force-dynamic'
  */
 export async function POST(req: NextRequest) {
   try {
-    const apiKey = extractApiKey(req)
-    if (!apiKey) return NextResponse.json({ error: 'Missing API key. Use Authorization: Bearer wc_xxx' }, { status: 401 })
+    // Auth: prefer Supabase session cookie; fall back to API key for agents.
+    let userId: string | null = null
+    let scopes: string[] | undefined
+    let authMethod: 'session' | 'api_key' = 'api_key'
 
-    const auth = await verifyApiKey(apiKey)
-    if (!auth.valid || !auth.userId) return NextResponse.json({ error: auth.error || 'Invalid key' }, { status: 401 })
-    if (!auth.scopes?.includes('agent:submit')) return NextResponse.json({ error: 'Missing agent:submit scope' }, { status: 403 })
+    const serverClient = createServerClient()
+    const { data: sessionUser } = await serverClient.auth.getUser()
+    if (sessionUser?.user?.id) {
+      userId = sessionUser.user.id
+      authMethod = 'session'
+    } else {
+      const apiKey = extractApiKey(req)
+      if (!apiKey) return NextResponse.json({ error: 'Authentication required' }, { status: 401 })
 
-    const body = await req.json()
-    const { protocol_slug, title, severity, scope_version, description, encrypted_report, poc_url } = body
+      const auth = await verifyApiKey(apiKey)
+      if (!auth.valid || !auth.userId) return NextResponse.json({ error: auth.error || 'Invalid key' }, { status: 401 })
+      if (!auth.scopes?.includes('agent:submit')) return NextResponse.json({ error: 'Missing agent:submit scope' }, { status: 403 })
 
-    if (!protocol_slug) return NextResponse.json({ error: 'protocol_slug is required' }, { status: 400 })
-    if (!title || title.length < 5) return NextResponse.json({ error: 'title is required (min 5 chars)' }, { status: 400 })
-    if (!['critical', 'high', 'medium', 'low'].includes(severity)) {
-      return NextResponse.json({ error: 'severity must be critical, high, medium, or low' }, { status: 400 })
+      userId = auth.userId
+      scopes = auth.scopes
+      authMethod = 'api_key'
     }
+
+    const submitSchema = z.object({
+      protocol_slug: z.string().min(1),
+      title: z.string().min(5),
+      severity: z.enum(['critical', 'high', 'medium', 'low']),
+      scope_version: z.number().int().positive().optional(),
+      description: z.string().max(50_000).optional().nullable(),
+      poc_url: z.string().url().optional().nullable(),
+      encrypted_report: z.union([
+        z.object({
+          ciphertext: z.string().min(1),
+          nonce: z.string().min(1),
+          sender_pubkey: z.string().min(1),
+        }),
+        z.object({
+          ciphertext: z.string().min(1),
+          nonce: z.string().min(1),
+          senderPublicKey: z.string().min(1),
+        }),
+      ]).optional().nullable(),
+    })
+
+    const body = await req.json().catch(() => ({}))
+    const parsed = submitSchema.safeParse(body)
+    if (!parsed.success) {
+      return NextResponse.json({ error: 'Validation error', details: parsed.error.issues }, { status: 400 })
+    }
+
+    const { protocol_slug, title, severity, scope_version, description, encrypted_report, poc_url } = parsed.data
+
+    let normalizedEncryptedReport: { ciphertext: string; nonce: string; sender_pubkey: string } | null = null
+    if (encrypted_report && typeof encrypted_report === 'object') {
+      if ('senderPublicKey' in encrypted_report) {
+        normalizedEncryptedReport = {
+          ciphertext: encrypted_report.ciphertext,
+          nonce: encrypted_report.nonce,
+          sender_pubkey: encrypted_report.senderPublicKey,
+        }
+      } else if ('sender_pubkey' in encrypted_report) {
+        normalizedEncryptedReport = encrypted_report
+      }
+    }
+
+    if (!userId) return NextResponse.json({ error: 'Authentication required' }, { status: 401 })
 
     const supabase = createClient()
 
     // ── 1. Quality check (anti-spam) ──
     const quality = await checkSubmissionQuality({
-      user_id: auth.userId!,
+      user_id: userId,
       title,
-      description,
+      description: description || undefined,
       protocol_slug,
     })
 
@@ -84,7 +137,7 @@ export async function POST(req: NextRequest) {
     }
 
     // Check PoC requirement
-    if (program.poc_required && !poc_url && !encrypted_report) {
+    if (program.poc_required && !poc_url && !normalizedEncryptedReport) {
       return NextResponse.json({ error: 'This program requires a proof of concept (poc_url or encrypted_report)' }, { status: 400 })
     }
 
@@ -93,7 +146,7 @@ export async function POST(req: NextRequest) {
     const { data: recentSubmission } = await supabase
       .from('findings')
       .select('id, created_at')
-      .eq('researcher_id', auth.userId!)
+      .eq('researcher_id', userId)
       .eq('protocol_id', protocol.id)
       .gte('created_at', cooldownDate)
       .limit(1)
@@ -112,12 +165,12 @@ export async function POST(req: NextRequest) {
       .insert({
         protocol_id: protocol.id,
         program_id: program.id,
-        researcher_id: auth.userId!,
+        researcher_id: userId,
         title,
         severity,
         description: description || null,
         scope_version: scope_version || program.scope_version,
-        encrypted_report: encrypted_report || null,
+        encrypted_report: normalizedEncryptedReport,
         poc_url: poc_url || null,
         status: 'submitted',
         submission_source: 'whiteclaws',
@@ -129,13 +182,13 @@ export async function POST(req: NextRequest) {
 
     // ── 4. Award points ──
     // Get wallet address for points
-    const { data: userRow } = await supabase.from('users').select('wallet_address').eq('id', auth.userId!).single()
+    const { data: userRow } = await supabase.from('users').select('wallet_address').eq('id', userId).single()
     const walletAddr = userRow?.wallet_address || undefined
     const pointsAwarded: Array<{ event: string; points: number }> = []
 
     // Base submission points (low — real value comes from acceptance)
     const submitResult = await emitParticipationEvent({
-      user_id: auth.userId!,
+      user_id: userId,
       event_type: 'finding_submitted',
       metadata: { protocol_slug, severity, finding_id: finding.id },
       wallet_address: walletAddr,
@@ -144,9 +197,9 @@ export async function POST(req: NextRequest) {
     if (submitResult.success) pointsAwarded.push({ event: 'finding_submitted', points: submitResult.points })
 
     // Encrypted report bonus
-    if (encrypted_report) {
+    if (normalizedEncryptedReport) {
       const encResult = await emitParticipationEvent({
-        user_id: auth.userId!,
+        user_id: userId,
         event_type: 'encrypted_report',
         metadata: { finding_id: finding.id },
         wallet_address: walletAddr,
@@ -158,7 +211,7 @@ export async function POST(req: NextRequest) {
     // PoC bonus
     if (poc_url) {
       const pocResult = await emitParticipationEvent({
-        user_id: auth.userId!,
+        user_id: userId,
         event_type: 'poc_provided',
         metadata: { finding_id: finding.id, poc_url },
         wallet_address: walletAddr,
@@ -168,16 +221,16 @@ export async function POST(req: NextRequest) {
     }
 
     // Check streaks
-    await checkAndAwardStreak(auth.userId!)
+    await checkAndAwardStreak(userId)
 
     // Fire airdrop scoring events (non-blocking)
-    if (auth.userId) {
+    if (userId) {
       const airdropEvents: Array<{ type: any; metadata?: Record<string, any> }> = [
         { type: 'finding_submitted', metadata: { protocol: protocol.slug, severity, findingId: finding.id } },
       ]
-      if (encrypted_report) airdropEvents.push({ type: 'encrypted_report', metadata: { findingId: finding.id } })
+      if (normalizedEncryptedReport) airdropEvents.push({ type: 'encrypted_report', metadata: { findingId: finding.id } })
       if (poc_url) airdropEvents.push({ type: 'poc_provided', metadata: { findingId: finding.id, poc_url } })
-      fireEvents(auth.userId, airdropEvents)
+      fireEvents(userId, airdropEvents)
     }
 
     // ── 5. Notify protocol + route to Immunefi ──
@@ -201,6 +254,7 @@ export async function POST(req: NextRequest) {
         scope_version: finding.scope_version,
         created_at: finding.created_at,
       },
+      auth: { method: authMethod, scopes: authMethod === 'api_key' ? (scopes || []) : [] },
       points: {
         awarded: pointsAwarded,
         total: pointsAwarded.reduce((s, p) => s + p.points, 0),

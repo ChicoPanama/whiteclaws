@@ -18,12 +18,14 @@ export interface AgentWallet {
  * Privy SDK to generate embedded wallets.
  */
 export async function createAgentWallet(): Promise<AgentWallet> {
-  // When Privy is configured, wallets are auto-created on login.
-  // This fallback generates a deterministic placeholder for demo mode.
-  const timestamp = Date.now().toString(16).padStart(12, '0')
-  const address = `0xAGENT${timestamp}${'0'.repeat(40 - 17)}`
-
-  return { address: address.slice(0, 42) }
+  // Wallet creation is handled by real wallet providers:
+  // - Privy embedded wallets (preferred for the current app)
+  // - Coinbase Smart Wallet via OnchainKit (Phase 2 foundation)
+  //
+  // This function previously returned a deterministic fake address, which is
+  // unsafe/confusing. Callers should instead read the connected wallet address
+  // from their auth/wallet provider and persist it server-side.
+  throw new Error('createAgentWallet() is not supported. Connect a wallet (Privy/OnchainKit) and use its address.')
 }
 
 /**

@@ -194,9 +194,44 @@ export async function verifyTweet(
   if (!verification) return { ok: false, error: 'No X OAuth record found. Complete OAuth first.' }
   if (verification.status === 'verified') return { ok: false, error: 'Already verified' }
 
-  // In production: verify tweet content via Twitter API
-  // For now: trust the tweet_id and mark as verified
-  // TODO: fetch tweet content and verify it contains wallet address + @WhiteClawsSec
+  // When TWITTER_BEARER_TOKEN is set, verify the tweet actually came from the linked X account
+  // and roughly matches the expected template. Without it, verification is "soft" (trusts tweet_id).
+  const bearerToken = process.env.TWITTER_BEARER_TOKEN
+  if (bearerToken) {
+    const { data: fullVerification } = await (supabase
+      .from('x_verifications')
+      .select('x_id, wallet_address')
+      .eq('user_id', userId)
+      .single())
+
+    if (!fullVerification?.x_id) {
+      return { ok: false, error: 'Missing linked X account. Complete OAuth first.' }
+    }
+
+    const res = await fetch(
+      `https://api.twitter.com/2/tweets/${tweetId}?tweet.fields=author_id,text`,
+      { headers: { Authorization: `Bearer ${bearerToken}` } }
+    )
+    if (!res.ok) {
+      return { ok: false, error: 'Failed to verify tweet via X API' }
+    }
+
+    const payload = await res.json().catch(() => null) as any
+    const authorId = payload?.data?.author_id as string | undefined
+    const text = payload?.data?.text as string | undefined
+
+    if (!authorId || !text) return { ok: false, error: 'X API returned an unexpected response' }
+    if (authorId !== fullVerification.x_id) return { ok: false, error: 'Tweet was not posted by the linked X account' }
+
+    const wallet = fullVerification.wallet_address || ''
+    const walletHint = wallet && wallet.length >= 10 ? `${wallet.slice(0, 6)}...${wallet.slice(-4)}` : null
+
+    const hasBrand = /@WhiteClawsSec|#WhiteClaws/i.test(text)
+    const hasWallet = walletHint ? text.includes(walletHint) : true
+    if (!hasBrand || !hasWallet) {
+      return { ok: false, error: 'Tweet content did not match the verification template' }
+    }
+  }
 
   const { error } = await (supabase
     .from('x_verifications')

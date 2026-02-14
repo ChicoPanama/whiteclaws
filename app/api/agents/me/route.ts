@@ -1,7 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { z } from 'zod'
 import type { Row } from '@/lib/supabase/helpers'
 import { createClient } from '@/lib/supabase/admin'
 import { extractApiKey, verifyApiKey } from '@/lib/auth/api-key'
+import { createClient as createServerClient } from '@/lib/supabase/server'
 
 export const dynamic = 'force-dynamic'
 
@@ -10,11 +12,22 @@ export const dynamic = 'force-dynamic'
  * PATCH /api/agents/me — update profile (payout_wallet, bio, specialties)
  */
 export async function GET(req: NextRequest) {
-  const apiKey = extractApiKey(req)
-  if (!apiKey) return NextResponse.json({ error: 'Missing API key' }, { status: 401 })
+  // Prefer session cookie auth; fall back to API key for backwards compatibility.
+  let userId: string | null = null
 
-  const auth = await verifyApiKey(apiKey)
-  if (!auth.valid || !auth.userId) return NextResponse.json({ error: auth.error || 'Invalid' }, { status: 401 })
+  const serverClient = createServerClient()
+  const { data: sessionData } = await serverClient.auth.getUser()
+  if (sessionData?.user?.id) {
+    userId = sessionData.user.id
+  } else {
+    const apiKey = extractApiKey(req)
+    if (apiKey) {
+      const auth = await verifyApiKey(apiKey)
+      if (auth.valid && auth.userId) userId = auth.userId
+    }
+  }
+
+  if (!userId) return NextResponse.json({ error: 'Authentication required' }, { status: 401 })
 
   const supabase = createClient()
 
@@ -25,7 +38,7 @@ export async function GET(req: NextRequest) {
       specialties, is_agent, reputation_score, status, kyc_status, created_at,
       agent_rankings (rank, points, total_submissions, accepted_submissions, total_bounty_amount)
     `)
-    .eq('id', auth.userId!)
+    .eq('id', userId)
     .maybeSingle()
 
   if (error) throw error
@@ -56,19 +69,40 @@ export async function GET(req: NextRequest) {
   })
 }
 
+const UpdateSchema = z.object({
+  payout_wallet: z.string().regex(/^0x[a-fA-F0-9]{40}$/).optional(),
+  bio: z.string().max(1000).optional(),
+  specialties: z.array(z.string().min(1).max(40)).max(24).optional(),
+  display_name: z.string().min(1).max(80).optional(),
+  avatar_url: z.string().url().max(500).optional(),
+  website: z.string().url().max(500).optional(),
+  twitter: z.string().max(64).optional(),
+}).strict()
+
 export async function PATCH(req: NextRequest) {
-  const apiKey = extractApiKey(req)
-  if (!apiKey) return NextResponse.json({ error: 'Missing API key' }, { status: 401 })
+  // Prefer session cookie auth; fall back to API key for backwards compatibility.
+  let userId: string | null = null
 
-  const auth = await verifyApiKey(apiKey)
-  if (!auth.valid || !auth.userId) return NextResponse.json({ error: auth.error || 'Invalid' }, { status: 401 })
-
-  const body = await req.json()
-  const allowed = ['payout_wallet', 'bio', 'specialties', 'display_name', 'avatar_url', 'website', 'twitter']
-  const updates: Record<string, any> = {}
-  for (const key of allowed) {
-    if (body[key] !== undefined) updates[key] = body[key]
+  const serverClient = createServerClient()
+  const { data: sessionData } = await serverClient.auth.getUser()
+  if (sessionData?.user?.id) {
+    userId = sessionData.user.id
+  } else {
+    const apiKey = extractApiKey(req)
+    if (apiKey) {
+      const auth = await verifyApiKey(apiKey)
+      if (auth.valid && auth.userId) userId = auth.userId
+    }
   }
+
+  if (!userId) return NextResponse.json({ error: 'Authentication required' }, { status: 401 })
+
+  const parsed = UpdateSchema.safeParse(await req.json().catch(() => null))
+  if (!parsed.success) {
+    return NextResponse.json({ error: 'Validation error', details: parsed.error.flatten() }, { status: 400 })
+  }
+
+  const updates: Record<string, any> = { ...parsed.data }
 
   if (Object.keys(updates).length === 0) {
     return NextResponse.json({ error: 'No valid fields to update' }, { status: 400 })
@@ -79,7 +113,7 @@ export async function PATCH(req: NextRequest) {
   const { data: user, error } = await supabase
     .from('users')
     .update(updates)
-    .eq('id', auth.userId!)
+    .eq('id', userId)
     .select('id, handle, display_name, bio, payout_wallet, specialties')
     .returns<Row<'users'>[]>().single()
 

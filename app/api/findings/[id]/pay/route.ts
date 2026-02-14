@@ -1,27 +1,39 @@
 import { NextRequest, NextResponse } from 'next/server'
 import type { Row } from '@/lib/supabase/helpers'
 import { createClient } from '@/lib/supabase/admin'
-import { extractApiKey, verifyApiKey } from '@/lib/auth/api-key'
 import { fireEvent } from '@/lib/points/hooks'
+import { getForwardedIp, requireProtocolAdmin, requireSessionUserId } from '@/lib/auth/protocol-guards'
+import { z } from 'zod'
+import { checkRateLimit } from '@/lib/rate-limit'
+import { hashKey } from '@/lib/rate-limit/keys'
 
 export const dynamic = 'force-dynamic'
 
+const idSchema = z.string().uuid()
+const paySchema = z.object({
+  tx_hash: z.string().min(1).max(256),
+  amount: z.number().positive(),
+  currency: z.string().min(1).max(16).optional(),
+})
+
 export async function POST(req: NextRequest, { params }: { params: { id: string } }) {
   try {
-    const apiKey = extractApiKey(req)
-    if (!apiKey) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+    const session = await requireSessionUserId()
+    if (!session.ok) return session.res
 
-    const auth = await verifyApiKey(apiKey)
-    if (!auth.valid || !auth.userId) return NextResponse.json({ error: auth.error || 'Invalid' }, { status: 401 })
+    const ip = getForwardedIp(req)
+    const rl = await checkRateLimit({ key: `finding_pay:${hashKey(ip)}`, limit: 10, windowSeconds: 60 })
+    if (!rl.ok) return NextResponse.json({ error: 'Too many requests' }, { status: 429 })
 
-    const body = await req.json()
-    const { tx_hash, amount, currency } = body
-
-    if (!tx_hash || typeof tx_hash !== 'string') {
-      return NextResponse.json({ error: 'tx_hash is required' }, { status: 400 })
+    const parsedId = idSchema.safeParse(params.id)
+    if (!parsedId.success) {
+      return NextResponse.json({ error: 'Validation error', details: parsedId.error.issues }, { status: 400 })
     }
-    if (!amount || typeof amount !== 'number' || amount <= 0) {
-      return NextResponse.json({ error: 'amount must be a positive number' }, { status: 400 })
+
+    const body = await req.json().catch(() => ({}))
+    const parsedBody = paySchema.safeParse(body)
+    if (!parsedBody.success) {
+      return NextResponse.json({ error: 'Validation error', details: parsedBody.error.issues }, { status: 400 })
     }
 
     const supabase = createClient()
@@ -29,7 +41,7 @@ export async function POST(req: NextRequest, { params }: { params: { id: string 
     const { data: finding } = await supabase
       .from('findings')
       .select('id, protocol_id, status, researcher_id')
-      .eq('id', params.id!)
+      .eq('id', parsedId.data)
       .returns<Row<'findings'>[]>().single()
 
     if (!finding) return NextResponse.json({ error: 'Finding not found' }, { status: 404 })
@@ -37,27 +49,19 @@ export async function POST(req: NextRequest, { params }: { params: { id: string 
       return NextResponse.json({ error: 'Finding must be accepted before payment' }, { status: 400 })
     }
 
-    const { data: member } = await supabase
-      .from('protocol_members')
-      .select('role')
-      .eq('protocol_id', finding.protocol_id!)
-      .eq('user_id', auth.userId!)
-      .returns<Row<'protocol_members'>[]>().maybeSingle()
-
-    if (!member || (member.role !== 'owner' && member.role !== 'admin')) {
-      return NextResponse.json({ error: 'Only owner/admin can record payments' }, { status: 403 })
-    }
+    const authz = await requireProtocolAdmin(session.userId, finding.protocol_id!)
+    if (!authz.ok) return authz.res
 
     const { data: updated, error } = await supabase
       .from('findings')
       .update({
         status: 'paid',
-        payout_tx_hash: tx_hash,
-        payout_amount: amount,
-        payout_currency: currency || 'USDC',
+        payout_tx_hash: parsedBody.data.tx_hash,
+        payout_amount: parsedBody.data.amount,
+        payout_currency: parsedBody.data.currency || 'USDC',
         paid_at: new Date().toISOString(),
       })
-      .eq('id', params.id!)
+      .eq('id', parsedId.data)
       .select('id, status, payout_amount, payout_currency, payout_tx_hash, paid_at')
       .single()
 
@@ -68,8 +72,8 @@ export async function POST(req: NextRequest, { params }: { params: { id: string 
       // Fire points event (non-blocking)
       fireEvent(finding.researcher_id, 'finding_paid', {
         findingId: finding.id,
-        amount,
-        tx_hash,
+        amount: parsedBody.data.amount,
+        tx_hash: parsedBody.data.tx_hash,
       })
 
       const { data: ranking } = await supabase
@@ -83,7 +87,7 @@ export async function POST(req: NextRequest, { params }: { params: { id: string 
           .from('agent_rankings')
           .update({
             accepted_submissions: (ranking.accepted_submissions || 0) + 1,
-            total_bounty_amount: (ranking.total_bounty_amount || 0) + amount,
+            total_bounty_amount: (ranking.total_bounty_amount || 0) + parsedBody.data.amount,
           })
           .eq('agent_id', ranking.agent_id)
       }

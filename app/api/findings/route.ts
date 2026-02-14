@@ -26,7 +26,7 @@ export async function POST(request: NextRequest) {
 
     if (!hasSupabaseConfig) {
       return NextResponse.json(
-        { status: "queued", findingId: "demo" },
+        { status: "queued", findingId: "demo", deprecated: true, use: "/api/agents/submit" },
         { status: 201 }
       );
     }
@@ -48,7 +48,15 @@ export async function POST(request: NextRequest) {
         researcher_id: sessionData.session.user.id,
         title: validated.title,
         severity: validated.severity,
-        encrypted_report_url: encryptedReport,
+        // Store the encrypted payload in the JSON column. This matches the
+        // protocol dashboard decrypt flow which expects `encrypted_report`.
+        encrypted_report: {
+          ciphertext: validated.encryptedPayload.ciphertext,
+          nonce: validated.encryptedPayload.nonce,
+          sender_pubkey: validated.encryptedPayload.senderPublicKey,
+        },
+        // Optional storage URL may be set by a later server-side upload step.
+        encrypted_report_url: null,
         status: "submitted",
       })
       .select("id")
@@ -59,7 +67,7 @@ export async function POST(request: NextRequest) {
     }
 
     return NextResponse.json(
-      { status: "queued", findingId: data.id },
+      { status: "queued", findingId: data.id, deprecated: true, use: "/api/agents/submit" },
       { status: 201 }
     );
   } catch (error) {

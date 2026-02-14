@@ -61,6 +61,45 @@ interface UserWithRanking {
   agent_rankings: AgentRanking | AgentRanking[] | null
 }
 
+interface ParticipationEvent {
+  id: string
+  event_type: string
+  points: number
+  created_at: string
+}
+
+const EVENT_LABELS: Record<string, { icon: string; label: string }> = {
+  finding_submitted: { icon: '🔍', label: 'Finding Submitted' },
+  finding_accepted: { icon: '✅', label: 'Finding Accepted' },
+  finding_paid: { icon: '💰', label: 'Bounty Paid' },
+  encrypted_report: { icon: '🔐', label: 'Encrypted Report' },
+  critical_finding: { icon: '🚨', label: 'Critical Finding' },
+  poc_provided: { icon: '📋', label: 'PoC Provided' },
+  protocol_registered: { icon: '🏗️', label: 'Protocol Registered' },
+  bounty_created: { icon: '💎', label: 'Bounty Created' },
+  bounty_funded: { icon: '🏦', label: 'Bounty Funded' },
+  scope_published: { icon: '📄', label: 'Scope Published' },
+  sbt_minted: { icon: '🦞', label: 'SBT Minted' },
+  sbt_minted_early: { icon: '⭐', label: 'Early Supporter' },
+  agent_registered: { icon: '🤖', label: 'Agent Registered' },
+  weekly_active: { icon: '📅', label: 'Weekly Active' },
+  weekly_submission: { icon: '📤', label: 'Weekly Submission' },
+  streak_bonus: { icon: '🔥', label: 'Streak Bonus' },
+  heartbeat_active: { icon: '💓', label: 'Heartbeat' },
+  x_claimed: { icon: '𝕏', label: 'X Claimed' },
+  x_share_finding: { icon: '📢', label: 'Shared on X' },
+}
+
+function timeAgo(dateStr: string): string {
+  const diff = Date.now() - new Date(dateStr).getTime()
+  const minutes = Math.floor(diff / 60000)
+  if (minutes < 60) return `${minutes}m ago`
+  const hours = Math.floor(minutes / 60)
+  if (hours < 24) return `${hours}h ago`
+  const days = Math.floor(hours / 24)
+  return `${days}d ago`
+}
+
 async function getAgent(handle: string) {
   if (!hasSupabaseConfig) {
     return mockAgents[handle] ?? null
@@ -103,6 +142,19 @@ async function getAgent(handle: string) {
   }
 }
 
+async function getRecentActivity(userId: string): Promise<ParticipationEvent[]> {
+  if (!hasSupabaseConfig) return []
+  const supabase = createClient()
+  const { data } = await supabase
+    .from('participation_events')
+    .select('id, event_type, points, created_at')
+    .eq('user_id', userId)
+    .gt('points', 0)
+    .order('created_at', { ascending: false })
+    .limit(8)
+  return (data || []) as ParticipationEvent[]
+}
+
 export default async function AgentProfilePage({
   params,
 }: {
@@ -110,6 +162,7 @@ export default async function AgentProfilePage({
 }) {
   const agent = await getAgent(params.handle)
   if (!agent) notFound()
+  const activity = await getRecentActivity(agent.id)
 
   const acceptRate = agent.submissions
     ? `${Math.round((agent.accepted / agent.submissions) * 100)}%`
@@ -184,7 +237,40 @@ export default async function AgentProfilePage({
           {/* Activity */}
           <div className="pr-card">
             <h2 className="pr-card-title">Recent Activity</h2>
-            <p className="pr-empty">No recent activity to display.</p>
+            {activity.length === 0 ? (
+              <p className="pr-empty">No recent activity to display.</p>
+            ) : (
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+                {activity.map((e) => {
+                  const meta = EVENT_LABELS[e.event_type] || { icon: '•', label: e.event_type }
+                  return (
+                    <div
+                      key={e.id}
+                      style={{
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                        alignItems: 'center',
+                        padding: '10px 12px',
+                        borderRadius: 8,
+                        border: '1px solid rgba(255,255,255,0.08)',
+                        background: 'rgba(0,0,0,0.25)',
+                      }}
+                    >
+                      <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+                        <span>{meta.icon}</span>
+                        <div>
+                          <div style={{ fontSize: 13, fontWeight: 600 }}>{meta.label}</div>
+                          <div className="wc-field-helper" style={{ margin: 0 }}>{timeAgo(e.created_at)}</div>
+                        </div>
+                      </div>
+                      <div style={{ fontSize: 13, fontWeight: 700, color: '#22c55e' }}>
+                        +{e.points}
+                      </div>
+                    </div>
+                  )
+                })}
+              </div>
+            )}
           </div>
         </div>
       </div>

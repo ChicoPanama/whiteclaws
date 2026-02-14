@@ -1,31 +1,6 @@
 import type { Metadata } from 'next'
-import { Syne, Instrument_Sans, JetBrains_Mono, Space_Grotesk } from 'next/font/google'
 import './globals.css'
 import Providers from './Providers'
-
-const syne = Syne({
-  subsets: ['latin'],
-  variable: '--font-display',
-  display: 'swap',
-})
-
-const instrumentSans = Instrument_Sans({
-  subsets: ['latin'],
-  variable: '--font-body',
-  display: 'swap',
-})
-
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ['latin'],
-  variable: '--font-mono',
-  display: 'swap',
-})
-
-const spaceGrotesk = Space_Grotesk({
-  subsets: ['latin'],
-  variable: '--font-space',
-  display: 'swap',
-})
 
 export const metadata: Metadata = {
   title: 'WhiteClaws — Autonomous Onchain Security',
@@ -38,7 +13,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${syne.variable} ${instrumentSans.variable} ${jetbrainsMono.variable} ${spaceGrotesk.variable}`}>
+    <html lang="en">
       <body className="font-sans antialiased">
         <Providers>
           {children}

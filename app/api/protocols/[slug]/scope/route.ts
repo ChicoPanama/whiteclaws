@@ -1,10 +1,18 @@
 import { NextRequest, NextResponse } from 'next/server'
 import type { Row } from '@/lib/supabase/helpers'
 import { createClient } from '@/lib/supabase/admin'
-import { extractApiKey, verifyApiKey } from '@/lib/auth/api-key'
+import { requireProtocolAdmin, requireSessionUserId } from '@/lib/auth/protocol-guards'
 import { fireEvent } from '@/lib/points/hooks'
+import { z } from 'zod'
 
 export const dynamic = 'force-dynamic'
+
+const scopePublishSchema = z.object({
+  contracts: z.array(z.any()).optional(),
+  in_scope: z.array(z.string()).optional(),
+  out_of_scope: z.array(z.string()).optional(),
+  severity_definitions: z.record(z.string(), z.any()).optional(),
+})
 
 /**
  * GET /api/protocols/[slug]/scope — get current scope (public, agents use this)
@@ -64,16 +72,14 @@ export async function GET(req: NextRequest, { params }: { params: { slug: string
 }
 
 export async function POST(req: NextRequest, { params }: { params: { slug: string } }) {
-  const apiKey = extractApiKey(req)
-  if (!apiKey) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+  const session = await requireSessionUserId()
+  if (!session.ok) return session.res
 
-  const auth = await verifyApiKey(apiKey)
-  if (!auth.valid || !auth.userId) return NextResponse.json({ error: auth.error || 'Invalid' }, { status: 401 })
-  if (!auth.scopes?.includes('protocol:write')) {
-    return NextResponse.json({ error: 'Missing protocol:write scope' }, { status: 403 })
+  const body = await req.json().catch(() => ({}))
+  const parsedBody = scopePublishSchema.safeParse(body)
+  if (!parsedBody.success) {
+    return NextResponse.json({ error: 'Validation error', details: parsedBody.error.issues }, { status: 400 })
   }
-
-  const body = await req.json()
   const supabase = createClient()
 
   const { data: protocol } = await supabase
@@ -84,17 +90,8 @@ export async function POST(req: NextRequest, { params }: { params: { slug: strin
 
   if (!protocol) return NextResponse.json({ error: 'Protocol not found' }, { status: 404 })
 
-  // Verify membership
-  const { data: member } = await supabase
-    .from('protocol_members')
-    .select('role')
-    .eq('protocol_id', protocol.id)
-    .eq('user_id', auth.userId!)
-    .returns<Row<'protocol_members'>[]>().maybeSingle()
-
-  if (!member || !['owner', 'admin'].includes(member.role)) {
-    return NextResponse.json({ error: 'Insufficient permissions' }, { status: 403 })
-  }
+  const authz = await requireProtocolAdmin(session.userId, protocol.id)
+  if (!authz.ok) return authz.res
 
   // Get current program
   const { data: program } = await supabase
@@ -115,10 +112,10 @@ export async function POST(req: NextRequest, { params }: { params: { slug: strin
     .insert({
       program_id: program.id,
       version: newVersion,
-      contracts: body.contracts || [],
-      in_scope: body.in_scope || [],
-      out_of_scope: body.out_of_scope || [],
-      severity_definitions: body.severity_definitions || {},
+      contracts: (parsedBody.data.contracts || []) as any,
+      in_scope: parsedBody.data.in_scope || [],
+      out_of_scope: parsedBody.data.out_of_scope || [],
+      severity_definitions: (parsedBody.data.severity_definitions || {}) as any,
     })
     .select('id, version')
     .single()
@@ -132,8 +129,8 @@ export async function POST(req: NextRequest, { params }: { params: { slug: strin
     .eq('id', program.id)
 
   // Fire points event (non-blocking)
-  if (auth.userId!) {
-    fireEvent(auth.userId, 'scope_published', { protocol: params.slug, version: newVersion })
+  if (session.userId) {
+    fireEvent(session.userId, 'scope_published', { protocol: params.slug, version: newVersion })
   }
 
   return NextResponse.json({

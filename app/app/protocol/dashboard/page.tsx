@@ -22,13 +22,10 @@ export default function ProtocolDashboardPage() {
   const [data, setData] = useState<DashboardData | null>(null)
   const [loading, setLoading] = useState(true)
   const [slug, setSlug] = useState('')
-  const [apiKey, setApiKey] = useState('')
 
   useEffect(() => {
     const stored = localStorage.getItem('wc_protocol_slug')
-    const key = localStorage.getItem('wc_protocol_api_key')
     if (stored) setSlug(stored)
-    if (key) setApiKey(key)
   }, [])
 
   const loadDashboard = async () => {
@@ -63,10 +60,6 @@ export default function ProtocolDashboardPage() {
           <div className="ap-field">
             <label className="ap-field-label">Protocol Slug</label>
             <input type="text" className="ap-field-input" placeholder="my-protocol" onKeyDown={(e) => { if (e.key === 'Enter') setSlug((e.target as HTMLInputElement).value) }} />
-          </div>
-          <div className="ap-field">
-            <label className="ap-field-label">API Key (stored locally)</label>
-            <input type="password" className="ap-field-input" placeholder="wc_xxxx_..." onChange={(e) => { setApiKey(e.target.value); localStorage.setItem('wc_protocol_api_key', e.target.value) }} />
           </div>
           <div className="ap-field-actions">
             <button onClick={() => { const input = document.querySelector<HTMLInputElement>('.ap-field-input'); if (input?.value) setSlug(input.value) }} className="ap-btn-primary">Load Dashboard</button>
@@ -130,15 +123,13 @@ export default function ProtocolDashboardPage() {
         </div>
       </div>
 
-      {apiKey && (
-        <div className="ap-section">
-          <h2 className="ap-section-title">Points & Activity</h2>
-          <PointsBreakdown apiKey={apiKey} />
-          <div style={{ marginTop: '16px' }}>
-            <ActivityFeed apiKey={apiKey} limit={6} />
-          </div>
+      <div className="ap-section">
+        <h2 className="ap-section-title">Points & Activity</h2>
+        <PointsBreakdown />
+        <div style={{ marginTop: '16px' }}>
+          <ActivityFeed limit={6} />
         </div>
-      )}
+      </div>
     </div>
   )
 }

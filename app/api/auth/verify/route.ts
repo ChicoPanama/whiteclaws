@@ -40,7 +40,7 @@ export async function POST(req: NextRequest) {
         ['agent:read', 'agent:submit']
       )
 
-      return NextResponse.json({
+      const res = NextResponse.json({
         verified: true,
         address: result.address,
         user: {
@@ -49,8 +49,22 @@ export async function POST(req: NextRequest) {
         },
         api_key: key,
         api_key_prefix: keyPrefix,
-        message: 'Wallet verified. API key issued. Save it — it will not be shown again.',
+        // Note: we now also set an httpOnly cookie for browser sessions.
+        // API keys should be treated as agent-only credentials, not UI auth.
+        message: 'Wallet verified.',
       })
+
+      res.cookies.set({
+        name: 'wc_agent_api_key',
+        value: key,
+        httpOnly: true,
+        sameSite: 'lax',
+        secure: process.env.NODE_ENV === 'production',
+        path: '/',
+        maxAge: 60 * 60 * 24 * 30, // 30 days
+      })
+
+      return res
     }
 
     // Unknown wallet — verified but not registered

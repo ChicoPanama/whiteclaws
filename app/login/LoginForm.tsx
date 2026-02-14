@@ -4,6 +4,8 @@ import { useState } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { useAuth } from '@/hooks/useAuth';
+import { ConnectWallet } from '@coinbase/onchainkit/wallet';
+import { useAccount, useDisconnect, useSignMessage } from 'wagmi';
 
 const HAS_PRIVY = !!process.env.NEXT_PUBLIC_PRIVY_APP_ID;
 
@@ -15,11 +17,53 @@ export default function LoginForm() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const [walletBusy, setWalletBusy] = useState(false);
 
-  const handleWalletLogin = () => {
-    // Phase 4: This will use Privy's login modal when configured.
-    // For now, show a helpful message.
-    setError('Wallet connection coming soon. Use email or social login for now.');
+  const { address, isConnected } = useAccount();
+  const { disconnect } = useDisconnect();
+  const { signMessageAsync } = useSignMessage();
+
+  const handleWalletLogin = async () => {
+    setError('');
+    if (!address || !isConnected) {
+      setError('Connect your wallet first.');
+      return;
+    }
+    setWalletBusy(true);
+    try {
+      const challengeRes = await fetch('/api/auth/challenge', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ address }),
+      });
+      const challenge = await challengeRes.json().catch(() => ({}));
+      if (!challengeRes.ok) throw new Error(challenge?.error || 'Failed to create challenge');
+
+      const signature = await signMessageAsync({ message: challenge.message });
+
+      const verifyRes = await fetch('/api/auth/verify', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message: challenge.message, signature }),
+      });
+      const verified = await verifyRes.json().catch(() => ({}));
+      if (!verifyRes.ok) throw new Error(verified?.error || 'Wallet verification failed');
+
+      if (!verified?.api_key) {
+        throw new Error('Wallet verified, but no agent is registered for this wallet yet.')
+      }
+
+      // /api/auth/verify sets an httpOnly cookie for browser sessions.
+      // Do not persist long-lived credentials in localStorage.
+      localStorage.removeItem('wc_agent_api_key');
+      localStorage.setItem('wc_wallet_address', verified.address || address);
+
+      router.push(callbackUrl);
+    } catch (e: any) {
+      setError(e?.message || 'Wallet login failed');
+    } finally {
+      setWalletBusy(false);
+    }
   };
 
   const handleEmailLogin = async (e: React.FormEvent) => {
@@ -60,14 +104,40 @@ export default function LoginForm() {
         )}
 
         {/* Wallet Connect — Primary CTA */}
-        <button onClick={handleWalletLogin} className="lg-wallet-btn">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <rect x="2" y="6" width="20" height="12" rx="2"/>
-            <path d="M22 10H2"/>
-            <circle cx="18" cy="14" r="1"/>
-          </svg>
-          Connect Wallet
-        </button>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+          <ConnectWallet className="lg-wallet-btn" text="Connect Wallet" />
+
+          {isConnected && address ? (
+            <div className="ap-card" style={{ padding: 12 }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', gap: 12, alignItems: 'center', flexWrap: 'wrap' }}>
+                <div>
+                  <div className="wc-field-helper" style={{ margin: 0 }}>Connected wallet</div>
+                  <code style={{ fontSize: 13 }}>{address}</code>
+                </div>
+                <button
+                  onClick={() => disconnect()}
+                  className="ap-btn-primary"
+                  style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.12)' }}
+                >
+                  Disconnect
+                </button>
+              </div>
+            </div>
+          ) : null}
+
+          <button
+            onClick={handleWalletLogin}
+            disabled={!isConnected || walletBusy}
+            className="sf-submit"
+            style={{ opacity: !isConnected ? 0.6 : 1 }}
+          >
+            {walletBusy ? 'Signing in...' : 'Sign in with Wallet →'}
+          </button>
+
+          <div className="wc-field-helper" style={{ marginTop: 4 }}>
+            Wallet login uses a server-verified signature (SIWE-style). No private keys leave your wallet.
+          </div>
+        </div>
 
         <div className="lg-divider">
           <span>Or sign in with</span>

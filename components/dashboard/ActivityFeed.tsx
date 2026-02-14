@@ -47,12 +47,12 @@ export default function ActivityFeed({ apiKey, limit = 10 }: { apiKey?: string; 
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    if (!apiKey) { setLoading(false); return; }
+    setLoading(true);
     fetch(`/api/points/history?limit=${limit}`, {
-      headers: { 'Authorization': `Bearer ${apiKey}` },
+      headers: apiKey ? { 'Authorization': `Bearer ${apiKey}` } : undefined,
     })
-      .then(r => r.json())
-      .then(d => { setEvents(d.events || []); setLoading(false); })
+      .then(async (r) => ({ ok: r.ok, body: await r.json().catch(() => ({})) }))
+      .then(({ ok, body }) => { setEvents(ok ? (body.events || []) : []); setLoading(false); })
       .catch(() => setLoading(false));
   }, [apiKey, limit]);
 

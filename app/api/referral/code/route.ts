@@ -1,19 +1,29 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { extractApiKey, verifyApiKey } from '@/lib/auth/api-key'
 import { getOrCreateReferralCode } from '@/lib/referral/engine'
+import { createClient as createServerClient } from '@/lib/supabase/server'
 
 export const dynamic = 'force-dynamic'
 
 export async function GET(req: NextRequest) {
   try {
-    const key = extractApiKey(req)
-    if (!key) return NextResponse.json({ error: 'Missing API key' }, { status: 401 })
+    let userId: string | null = null
 
-    const auth = await verifyApiKey(key)
-    if (!auth.valid) return NextResponse.json({ error: 'Invalid API key' }, { status: 401 })
-    if (!auth.userId) return NextResponse.json({ error: 'No user ID' }, { status: 401 })
+    const serverClient = createServerClient()
+    const { data: sessionData } = await serverClient.auth.getUser()
+    if (sessionData?.user?.id) {
+      userId = sessionData.user.id
+    } else {
+      const key = extractApiKey(req)
+      if (key) {
+        const auth = await verifyApiKey(key)
+        if (auth.valid && auth.userId) userId = auth.userId
+      }
+    }
 
-    const result = await getOrCreateReferralCode(auth.userId)
+    if (!userId) return NextResponse.json({ error: 'Authentication required' }, { status: 401 })
+
+    const result = await getOrCreateReferralCode(userId)
 
     if (!result.ok) {
       return NextResponse.json({ error: result.error }, { status: 400 })
