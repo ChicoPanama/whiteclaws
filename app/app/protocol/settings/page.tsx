@@ -20,7 +20,6 @@ export default function ProtocolSettingsPage() {
   })
 
   const slug = typeof window !== 'undefined' ? localStorage.getItem('wc_protocol_slug') || '' : ''
-  const apiKey = typeof window !== 'undefined' ? localStorage.getItem('wc_protocol_api_key') || '' : ''
 
   useEffect(() => {
     if (!slug) return
@@ -54,7 +53,6 @@ export default function ProtocolSettingsPage() {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${apiKey}`,
         },
         body: JSON.stringify({
           status: form.status,

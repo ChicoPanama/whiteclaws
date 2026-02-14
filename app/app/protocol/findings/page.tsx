@@ -34,34 +34,36 @@ export default function ProtocolFindingsPage() {
   const [total, setTotal] = useState(0)
   const [filterStatus, setFilterStatus] = useState('')
   const [filterSeverity, setFilterSeverity] = useState('')
+  const [error, setError] = useState<string | null>(null)
 
   const slug = typeof window !== 'undefined' ? localStorage.getItem('wc_protocol_slug') || '' : ''
-  const apiKey = typeof window !== 'undefined' ? localStorage.getItem('wc_protocol_api_key') || '' : ''
 
   const loadFindings = async () => {
-    if (!slug || !apiKey) return
+    if (!slug) return
     setLoading(true)
+    setError(null)
     const params = new URLSearchParams()
     if (filterStatus) params.set('status', filterStatus)
     if (filterSeverity) params.set('severity', filterSeverity)
 
     try {
-      const res = await fetch(`/api/protocols/${slug}/findings?${params}`, {
-        headers: { 'Authorization': `Bearer ${apiKey}` },
-      })
+      const res = await fetch(`/api/protocols/${slug}/findings?${params}`)
       if (res.ok) {
         const data = await res.json()
         setFindings(data.findings || [])
         setTotal(data.total || data.count || 0)
+      } else {
+        const data = await res.json().catch(() => ({}))
+        setError(data?.error || `Request failed (${res.status})`)
       }
     } catch {
-      // ignore
+      setError('Network error')
     } finally {
       setLoading(false)
     }
   }
 
-  useEffect(() => { loadFindings() }, [slug, apiKey, filterStatus, filterSeverity])
+  useEffect(() => { loadFindings() }, [slug, filterStatus, filterSeverity])
 
   if (!slug) {
     return (
@@ -80,6 +82,12 @@ export default function ProtocolFindingsPage() {
         <h1 className="ap-page-title">Findings ({total})</h1>
         <p className="ap-page-desc">Review and triage vulnerability submissions.</p>
       </div>
+
+      {error && (
+        <div className="ap-card" style={{ marginBottom: '12px' }}>
+          <p className="ap-card-text" style={{ color: 'var(--text-error, #ef4444)' }}>{error}</p>
+        </div>
+      )}
 
       <div style={{ display: 'flex', gap: '12px', marginBottom: '16px' }}>
         <select className="ap-field-input" style={{ width: 'auto' }} value={filterStatus} onChange={e => setFilterStatus(e.target.value)}>

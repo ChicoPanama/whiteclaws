@@ -19,20 +19,19 @@ export default function ProtocolPayoutsPage() {
   const [loading, setLoading] = useState(true)
 
   const slug = typeof window !== 'undefined' ? localStorage.getItem('wc_protocol_slug') || '' : ''
-  const apiKey = typeof window !== 'undefined' ? localStorage.getItem('wc_protocol_api_key') || '' : ''
 
   useEffect(() => {
-    if (!slug || !apiKey) return
+    if (!slug) return
     setLoading(true)
 
     Promise.all([
-      fetch(`/api/protocols/${slug}/findings?status=paid`, { headers: { 'Authorization': `Bearer ${apiKey}` } }).then(r => r.json()),
-      fetch(`/api/protocols/${slug}/findings?status=accepted`, { headers: { 'Authorization': `Bearer ${apiKey}` } }).then(r => r.json()),
+      fetch(`/api/protocols/${slug}/findings?status=paid`).then(r => r.json()),
+      fetch(`/api/protocols/${slug}/findings?status=accepted`).then(r => r.json()),
     ]).then(([paidData, pendingData]) => {
       setFindings(paidData.findings || [])
       setPendingFindings(pendingData.findings || [])
     }).finally(() => setLoading(false))
-  }, [slug, apiKey])
+  }, [slug])
 
   const totalPaid = findings.reduce((sum, f) => sum + (Number(f.payout_amount) || 0), 0)
   const totalPending = pendingFindings.reduce((sum, f) => sum + (Number(f.payout_amount) || 0), 0)

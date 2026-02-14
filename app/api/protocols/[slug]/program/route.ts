@@ -1,9 +1,27 @@
 import { NextRequest, NextResponse } from 'next/server'
 import type { Row } from '@/lib/supabase/helpers'
 import { createClient } from '@/lib/supabase/admin'
-import { extractApiKey, verifyApiKey } from '@/lib/auth/api-key'
+import { requireProtocolAdmin, requireSessionUserId } from '@/lib/auth/protocol-guards'
+import { z } from 'zod'
 
 export const dynamic = 'force-dynamic'
+
+const programCreateSchema = z.object({
+  status: z.string().optional(),
+  duplicate_policy: z.string().optional(),
+  response_sla_hours: z.number().int().min(1).max(24 * 365).optional(),
+  poc_required: z.boolean().optional(),
+  kyc_required: z.boolean().optional(),
+  payout_currency: z.string().max(16).optional(),
+  min_payout: z.number().nonnegative().optional(),
+  max_payout: z.number().nonnegative().optional(),
+  encryption_public_key: z.string().optional().nullable(),
+  payout_wallet: z.string().optional().nullable(),
+  exclusions: z.array(z.string()).optional(),
+  cooldown_hours: z.number().int().min(0).max(24 * 365).optional(),
+})
+
+const programPatchSchema = programCreateSchema.partial()
 
 export async function GET(_req: NextRequest, { params }: { params: { slug: string } }) {
   try {
@@ -36,16 +54,15 @@ export async function GET(_req: NextRequest, { params }: { params: { slug: strin
 
 export async function POST(req: NextRequest, { params }: { params: { slug: string } }) {
   try {
-    const apiKey = extractApiKey(req)
-    if (!apiKey) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+    const session = await requireSessionUserId()
+    if (!session.ok) return session.res
 
-    const auth = await verifyApiKey(apiKey)
-    if (!auth.valid || !auth.userId) return NextResponse.json({ error: auth.error || 'Invalid' }, { status: 401 })
-    if (!auth.scopes || !auth.scopes.includes('protocol:write')) {
-      return NextResponse.json({ error: 'Missing protocol:write scope' }, { status: 403 })
+    const body = await req.json().catch(() => ({}))
+    const parsedBody = programCreateSchema.safeParse(body)
+    if (!parsedBody.success) {
+      return NextResponse.json({ error: 'Validation error', details: parsedBody.error.issues }, { status: 400 })
     }
 
-    const body = await req.json()
     const supabase = createClient()
 
     const { data: protocol } = await supabase
@@ -56,31 +73,25 @@ export async function POST(req: NextRequest, { params }: { params: { slug: strin
 
     if (!protocol) return NextResponse.json({ error: 'Protocol not found' }, { status: 404 })
 
-    const { data: member } = await supabase
-      .from('protocol_members')
-      .select('role')
-      .eq('protocol_id', protocol.id)
-      .eq('user_id', auth.userId!)
-      .returns<Row<'protocol_members'>[]>().maybeSingle()
-
-    if (!member) return NextResponse.json({ error: 'Not a member' }, { status: 403 })
+    const authz = await requireProtocolAdmin(session.userId, protocol.id)
+    if (!authz.ok) return authz.res
 
     const { data: program, error } = await supabase
       .from('programs')
       .insert({
         protocol_id: protocol.id,
-        status: body.status || 'active',
-        duplicate_policy: body.duplicate_policy || 'first',
-        response_sla_hours: body.response_sla_hours || 72,
-        poc_required: body.poc_required !== undefined ? body.poc_required : true,
-        kyc_required: body.kyc_required !== undefined ? body.kyc_required : false,
-        payout_currency: body.payout_currency || 'USDC',
-        min_payout: body.min_payout || 500,
-        max_payout: body.max_payout || 100000,
-        encryption_public_key: body.encryption_public_key || null,
-        payout_wallet: body.payout_wallet || null,
-        exclusions: body.exclusions || [],
-        cooldown_hours: body.cooldown_hours || 24,
+        status: parsedBody.data.status || 'active',
+        duplicate_policy: parsedBody.data.duplicate_policy || 'first',
+        response_sla_hours: parsedBody.data.response_sla_hours || 72,
+        poc_required: parsedBody.data.poc_required !== undefined ? parsedBody.data.poc_required : true,
+        kyc_required: parsedBody.data.kyc_required !== undefined ? parsedBody.data.kyc_required : false,
+        payout_currency: parsedBody.data.payout_currency || 'USDC',
+        min_payout: parsedBody.data.min_payout || 500,
+        max_payout: parsedBody.data.max_payout || 100000,
+        encryption_public_key: parsedBody.data.encryption_public_key || null,
+        payout_wallet: parsedBody.data.payout_wallet || null,
+        exclusions: parsedBody.data.exclusions || [],
+        cooldown_hours: parsedBody.data.cooldown_hours || 24,
       })
       .select('id, status, max_payout, created_at')
       .single()
@@ -96,13 +107,14 @@ export async function POST(req: NextRequest, { params }: { params: { slug: strin
 
 export async function PATCH(req: NextRequest, { params }: { params: { slug: string } }) {
   try {
-    const apiKey = extractApiKey(req)
-    if (!apiKey) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+    const session = await requireSessionUserId()
+    if (!session.ok) return session.res
 
-    const auth = await verifyApiKey(apiKey)
-    if (!auth.valid) return NextResponse.json({ error: auth.error || 'Invalid' }, { status: 401 })
-
-    const body = await req.json()
+    const body = await req.json().catch(() => ({}))
+    const parsedBody = programPatchSchema.safeParse(body)
+    if (!parsedBody.success) {
+      return NextResponse.json({ error: 'Validation error', details: parsedBody.error.issues }, { status: 400 })
+    }
     const supabase = createClient()
 
     const { data: protocol } = await supabase
@@ -113,14 +125,8 @@ export async function PATCH(req: NextRequest, { params }: { params: { slug: stri
 
     if (!protocol) return NextResponse.json({ error: 'Protocol not found' }, { status: 404 })
 
-    const { data: member } = await supabase
-      .from('protocol_members')
-      .select('role')
-      .eq('protocol_id', protocol.id)
-      .eq('user_id', auth.userId!)
-      .returns<Row<'protocol_members'>[]>().maybeSingle()
-
-    if (!member) return NextResponse.json({ error: 'Not a member' }, { status: 403 })
+    const authz = await requireProtocolAdmin(session.userId, protocol.id)
+    if (!authz.ok) return authz.res
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const updates: any = {}
@@ -129,7 +135,7 @@ export async function PATCH(req: NextRequest, { params }: { params: { slug: stri
       'exclusions', 'cooldown_hours']
 
     for (const key of allowed) {
-      if (body[key] !== undefined) updates[key] = body[key]
+      if ((parsedBody.data as any)[key] !== undefined) updates[key] = (parsedBody.data as any)[key]
     }
 
     if (Object.keys(updates).length === 0) {

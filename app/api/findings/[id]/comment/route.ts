@@ -1,39 +1,55 @@
 import { NextRequest, NextResponse } from 'next/server'
 import type { Row } from '@/lib/supabase/helpers'
 import { createClient } from '@/lib/supabase/admin'
-import { extractApiKey, verifyApiKey } from '@/lib/auth/api-key'
+import { getForwardedIp, requireProtocolMember, requireSessionUserId } from '@/lib/auth/protocol-guards'
+import { z } from 'zod'
 
 export const dynamic = 'force-dynamic'
 
+const idSchema = z.string().uuid()
+const commentSchema = z.object({
+  content: z.string().min(1).max(10_000),
+  is_internal: z.boolean().optional(),
+})
+
+// Simple in-memory rate limiter (best-effort). Serverless runtimes may not preserve state.
+const ipBuckets = new Map<string, { count: number; resetAt: number }>()
+function rateLimit(ip: string, limit: number, windowMs: number): boolean {
+  const now = Date.now()
+  const existing = ipBuckets.get(ip)
+  if (!existing || existing.resetAt <= now) {
+    ipBuckets.set(ip, { count: 1, resetAt: now + windowMs })
+    return true
+  }
+  if (existing.count >= limit) return false
+  existing.count += 1
+  return true
+}
+
 export async function GET(req: NextRequest, { params }: { params: { id: string } }) {
   try {
-    const apiKey = extractApiKey(req)
-    if (!apiKey) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+    const session = await requireSessionUserId()
+    if (!session.ok) return session.res
 
-    const auth = await verifyApiKey(apiKey)
-    if (!auth.valid || !auth.userId) return NextResponse.json({ error: auth.error || 'Invalid' }, { status: 401 })
+    const parsedId = idSchema.safeParse(params.id)
+    if (!parsedId.success) {
+      return NextResponse.json({ error: 'Validation error', details: parsedId.error.issues }, { status: 400 })
+    }
 
     const supabase = createClient()
 
     const { data: finding } = await supabase
       .from('findings')
       .select('id, protocol_id, researcher_id')
-      .eq('id', params.id!)
+      .eq('id', parsedId.data)
       .returns<Row<'findings'>[]>().single()
 
     if (!finding) return NextResponse.json({ error: 'Finding not found' }, { status: 404 })
 
-    const isResearcher = finding.researcher_id === auth.userId
-    const { data: member } = await supabase
-      .from('protocol_members')
-      .select('role')
-      .eq('protocol_id', finding.protocol_id!)
-      .eq('user_id', auth.userId!)
-      .returns<Row<'protocol_members'>[]>().maybeSingle()
+    const isResearcher = finding.researcher_id === session.userId
+    const membership = isResearcher ? { ok: true as const } : await requireProtocolMember(session.userId, finding.protocol_id!)
 
-    if (!isResearcher && !member) {
-      return NextResponse.json({ error: 'Access denied' }, { status: 403 })
-    }
+    if (!membership.ok) return membership.res
 
     interface CommentWithUser {
       id: string; content: string; is_internal: boolean; created_at: string
@@ -46,7 +62,8 @@ export async function GET(req: NextRequest, { params }: { params: { id: string }
       .eq('finding_id', params.id!)
       .order('created_at', { ascending: true })
 
-    if (isResearcher && !member) {
+    // Researchers can only see public comments. Protocol members can see internal notes.
+    if (isResearcher) {
       query = query.eq('is_internal', false)
     }
 
@@ -62,15 +79,23 @@ export async function GET(req: NextRequest, { params }: { params: { id: string }
 
 export async function POST(req: NextRequest, { params }: { params: { id: string } }) {
   try {
-    const apiKey = extractApiKey(req)
-    if (!apiKey) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+    const session = await requireSessionUserId()
+    if (!session.ok) return session.res
 
-    const auth = await verifyApiKey(apiKey)
-    if (!auth.valid || !auth.userId) return NextResponse.json({ error: auth.error || 'Invalid' }, { status: 401 })
+    const ip = getForwardedIp(req)
+    if (!rateLimit(ip, 30, 60_000)) {
+      return NextResponse.json({ error: 'Rate limited' }, { status: 429 })
+    }
 
-    const body = await req.json()
-    if (!body.content || typeof body.content !== 'string') {
-      return NextResponse.json({ error: 'content is required' }, { status: 400 })
+    const parsedId = idSchema.safeParse(params.id)
+    if (!parsedId.success) {
+      return NextResponse.json({ error: 'Validation error', details: parsedId.error.issues }, { status: 400 })
+    }
+
+    const body = await req.json().catch(() => ({}))
+    const parsedBody = commentSchema.safeParse(body)
+    if (!parsedBody.success) {
+      return NextResponse.json({ error: 'Validation error', details: parsedBody.error.issues }, { status: 400 })
     }
 
     const supabase = createClient()
@@ -78,31 +103,24 @@ export async function POST(req: NextRequest, { params }: { params: { id: string 
     const { data: finding } = await supabase
       .from('findings')
       .select('id, protocol_id, researcher_id')
-      .eq('id', params.id!)
+      .eq('id', parsedId.data)
       .returns<Row<'findings'>[]>().single()
 
     if (!finding) return NextResponse.json({ error: 'Finding not found' }, { status: 404 })
 
-    const isResearcher = finding.researcher_id === auth.userId
-    const { data: member } = await supabase
-      .from('protocol_members')
-      .select('role')
-      .eq('protocol_id', finding.protocol_id!)
-      .eq('user_id', auth.userId!)
-      .returns<Row<'protocol_members'>[]>().maybeSingle()
+    const isResearcher = finding.researcher_id === session.userId
+    const membership = isResearcher ? { ok: true as const } : await requireProtocolMember(session.userId, finding.protocol_id!)
 
-    if (!isResearcher && !member) {
-      return NextResponse.json({ error: 'Access denied' }, { status: 403 })
-    }
+    if (!membership.ok) return membership.res
 
-    const isInternal = body.is_internal === true && !!member
+    const isInternal = parsedBody.data.is_internal === true && !isResearcher
 
     const { data: comment, error } = await supabase
       .from('finding_comments')
       .insert({
         finding_id: params.id,
-        user_id: auth.userId!,
-        content: body.content,
+        user_id: session.userId,
+        content: parsedBody.data.content,
         is_internal: isInternal,
       })
       .select('id, content, is_internal, created_at')

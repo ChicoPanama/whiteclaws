@@ -1,6 +1,55 @@
 import { NextRequest, NextResponse } from "next/server";
 import { createClient } from "@/lib/supabase/admin";
+import { createClient as createServerClient } from "@/lib/supabase/server";
+import { z } from "zod";
 export const dynamic = 'force-dynamic';
+
+const protocolCreateSchema = z.object({
+  name: z.string().min(2),
+  slug: z
+    .string()
+    .min(2)
+    .max(64)
+    .regex(/^[a-z0-9-]+$/i, "slug must be alphanumeric with hyphens only"),
+  description: z.string().max(10_000).optional().nullable(),
+  website_url: z.string().url().optional().nullable(),
+  logo_url: z.string().url().optional().nullable(),
+  category: z.string().max(80).optional().nullable(),
+  chains: z.array(z.string().max(40)).optional().nullable(),
+});
+
+async function requireAuthenticatedSession(): Promise<
+  { ok: true; userId: string } | { ok: false; res: NextResponse }
+> {
+  const supabase = createServerClient();
+  const { data, error } = await supabase.auth.getSession();
+  if (error || !data.session?.user?.id) {
+    return {
+      ok: false,
+      res: NextResponse.json({ error: "Unauthorized" }, { status: 401 }),
+    };
+  }
+  return { ok: true, userId: data.session.user.id };
+}
+
+function requireAdminKey(req: NextRequest): { ok: true } | { ok: false; res: NextResponse } {
+  const adminKey = process.env.ADMIN_API_KEY;
+  const authHeader = req.headers.get("authorization");
+  if (!adminKey) {
+    // Fail closed: if admin key isn't configured, do not allow creates.
+    return {
+      ok: false,
+      res: NextResponse.json({ error: "Forbidden" }, { status: 403 }),
+    };
+  }
+  if (authHeader !== `Bearer ${adminKey}`) {
+    return {
+      ok: false,
+      res: NextResponse.json({ error: "Forbidden" }, { status: 403 }),
+    };
+  }
+  return { ok: true };
+}
 
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
@@ -53,12 +102,22 @@ export async function GET(request: NextRequest) {
 
 export async function POST(request: NextRequest) {
   try {
-    const body = await request.json();
-    const { name, slug, description, website_url, logo_url, category, chains } = body;
+    const session = await requireAuthenticatedSession();
+    if (!session.ok) return session.res;
 
-    if (!name || !slug) {
-      return NextResponse.json({ error: "name and slug required" }, { status: 400 });
+    const admin = requireAdminKey(request);
+    if (!admin.ok) return admin.res;
+
+    const body = await request.json().catch(() => ({}));
+    const parsed = protocolCreateSchema.safeParse(body);
+    if (!parsed.success) {
+      return NextResponse.json(
+        { error: "Validation error", details: parsed.error.issues },
+        { status: 400 }
+      );
     }
+
+    const { name, slug, description, website_url, logo_url, category, chains } = parsed.data;
 
     const supabase = createClient();
     const { data, error } = await supabase

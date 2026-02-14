@@ -1,11 +1,20 @@
 import { NextRequest, NextResponse } from 'next/server'
 import type { Row } from '@/lib/supabase/helpers'
 import { createClient } from '@/lib/supabase/admin'
-import { extractApiKey, verifyApiKey } from '@/lib/auth/api-key'
 import { emitParticipationEvent, flagSpam } from '@/lib/services/points-engine'
 import { fireEvent } from '@/lib/points/hooks'
+import { requireProtocolAdmin, requireSessionUserId } from '@/lib/auth/protocol-guards'
+import { z } from 'zod'
 
 export const dynamic = 'force-dynamic'
+
+const triageSchema = z.object({
+  status: z.enum(['triaged', 'accepted', 'rejected', 'duplicate']),
+  notes: z.string().optional(),
+  payout_amount: z.number().optional(),
+  rejection_reason: z.string().optional(),
+  duplicate_of: z.string().uuid().optional(),
+})
 
 /**
  * PATCH /api/findings/[id]/triage
@@ -16,19 +25,13 @@ export const dynamic = 'force-dynamic'
  */
 export async function PATCH(req: NextRequest, { params }: { params: { id: string } }) {
   try {
-    const apiKey = extractApiKey(req)
-    if (!apiKey) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+    const session = await requireSessionUserId()
+    if (!session.ok) return session.res
 
-    const auth = await verifyApiKey(apiKey)
-    if (!auth.valid || !auth.userId) return NextResponse.json({ error: auth.error || 'Invalid' }, { status: 401 })
-    if (!auth.scopes || !auth.scopes.includes('protocol:triage')) {
-      return NextResponse.json({ error: 'Missing protocol:triage scope' }, { status: 403 })
-    }
-
-    const body = await req.json()
-    const validStatuses = ['triaged', 'accepted', 'rejected', 'duplicate']
-    if (!validStatuses.includes(body.status)) {
-      return NextResponse.json({ error: 'status must be: ' + validStatuses.join(', ') }, { status: 400 })
+    const body = await req.json().catch(() => ({}))
+    const parsed = triageSchema.safeParse(body)
+    if (!parsed.success) {
+      return NextResponse.json({ error: 'Validation error', details: parsed.error.issues }, { status: 400 })
     }
 
     const supabase = createClient()
@@ -41,30 +44,23 @@ export async function PATCH(req: NextRequest, { params }: { params: { id: string
 
     if (!finding) return NextResponse.json({ error: 'Finding not found' }, { status: 404 })
 
-    // Verify caller is protocol member
-    const { data: member } = await supabase
-      .from('protocol_members')
-      .select('role')
-      .eq('protocol_id', finding.protocol_id!)
-      .eq('user_id', auth.userId!)
-      .returns<Row<'protocol_members'>[]>().maybeSingle()
-
-    if (!member) return NextResponse.json({ error: 'Not a member of this protocol' }, { status: 403 })
+    const authz = await requireProtocolAdmin(session.userId, finding.protocol_id!)
+    if (!authz.ok) return authz.res
 
     // Build update
     const updates: Record<string, unknown> = {
-      status: body.status,
-      triage_notes: body.notes || null,
-      triaged_by: auth.userId,
+      status: parsed.data.status,
+      triage_notes: parsed.data.notes || null,
+      triaged_by: session.userId,
       triaged_at: new Date().toISOString(),
     }
 
     // ── Points based on triage outcome ──
     const pointsImpact: Array<{ event: string; points: number }> = []
 
-    if (body.status === 'accepted') {
+    if (parsed.data.status === 'accepted') {
       updates.accepted_at = new Date().toISOString()
-      if (body.payout_amount) updates.payout_amount = body.payout_amount
+      if (parsed.data.payout_amount) updates.payout_amount = parsed.data.payout_amount
 
       // MAJOR points for accepted finding
       const acceptResult = await emitParticipationEvent({
@@ -86,24 +82,24 @@ export async function PATCH(req: NextRequest, { params }: { params: { id: string
         if (critResult.success) pointsImpact.push({ event: 'critical_finding', points: critResult.points })
       }
 
-    } else if (body.status === 'rejected') {
+    } else if (parsed.data.status === 'rejected') {
       updates.rejected_at = new Date().toISOString()
-      updates.rejection_reason = body.rejection_reason || body.notes || null
+      updates.rejection_reason = parsed.data.rejection_reason || parsed.data.notes || null
 
       // PENALTY for rejected finding — deters false submissions
       await flagSpam({
         user_id: finding.researcher_id,
         flag_type: 'rejected_finding',
         finding_id: finding.id,
-        metadata: { reason: body.rejection_reason || 'rejected' },
+        metadata: { reason: parsed.data.rejection_reason || 'rejected' },
       })
       pointsImpact.push({ event: 'finding_rejected', points: -25 })
 
-    } else if (body.status === 'duplicate') {
-      if (!body.duplicate_of) {
+    } else if (parsed.data.status === 'duplicate') {
+      if (!parsed.data.duplicate_of) {
         return NextResponse.json({ error: 'duplicate_of required' }, { status: 400 })
       }
-      updates.duplicate_of = body.duplicate_of
+      updates.duplicate_of = parsed.data.duplicate_of
       updates.rejected_at = new Date().toISOString()
       updates.rejection_reason = 'Duplicate'
 
@@ -112,7 +108,7 @@ export async function PATCH(req: NextRequest, { params }: { params: { id: string
         user_id: finding.researcher_id,
         flag_type: 'duplicate_finding',
         finding_id: finding.id,
-        metadata: { duplicate_of: body.duplicate_of },
+        metadata: { duplicate_of: parsed.data.duplicate_of },
       })
       pointsImpact.push({ event: 'finding_duplicate', points: -15 })
     }
@@ -127,7 +123,7 @@ export async function PATCH(req: NextRequest, { params }: { params: { id: string
     if (error) throw error
 
     // Fire airdrop scoring events (non-blocking)
-    if (body.status === 'accepted' && finding.researcher_id) {
+    if (parsed.data.status === 'accepted' && finding.researcher_id) {
       fireEvent(finding.researcher_id, 'finding_accepted', { findingId: finding.id })
       if (finding.severity === 'critical') {
         fireEvent(finding.researcher_id, 'critical_finding', { findingId: finding.id })

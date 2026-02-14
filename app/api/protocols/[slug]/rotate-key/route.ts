@@ -1,8 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server'
 import type { Row } from '@/lib/supabase/helpers'
 import { createClient } from '@/lib/supabase/admin'
-import { extractApiKey, verifyApiKey } from '@/lib/auth/api-key'
 import { generateKeyPair } from '@/lib/crypto'
+import { requireProtocolOwner, requireSessionUserId } from '@/lib/auth/protocol-guards'
 
 export const dynamic = 'force-dynamic'
 
@@ -13,14 +13,8 @@ export const dynamic = 'force-dynamic'
  */
 export async function POST(req: NextRequest, { params }: { params: { slug: string } }) {
   try {
-    const apiKey = extractApiKey(req)
-    if (!apiKey) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
-
-    const auth = await verifyApiKey(apiKey)
-    if (!auth.valid || !auth.userId) return NextResponse.json({ error: auth.error || 'Invalid' }, { status: 401 })
-    if (!auth.scopes?.includes('protocol:write')) {
-      return NextResponse.json({ error: 'Missing protocol:write scope' }, { status: 403 })
-    }
+    const session = await requireSessionUserId()
+    if (!session.ok) return session.res
 
     const supabase = createClient()
 
@@ -32,17 +26,9 @@ export async function POST(req: NextRequest, { params }: { params: { slug: strin
 
     if (!protocol) return NextResponse.json({ error: 'Protocol not found' }, { status: 404 })
 
-    // Verify ownership (owner only for key rotation)
-    const { data: member } = await supabase
-      .from('protocol_members')
-      .select('role')
-      .eq('protocol_id', protocol.id)
-      .eq('user_id', auth.userId!)
-      .returns<Row<'protocol_members'>[]>().maybeSingle()
-
-    if (!member || member.role !== 'owner') {
-      return NextResponse.json({ error: 'Only protocol owner can rotate encryption keys' }, { status: 403 })
-    }
+    // Owner only: rotating encryption keys returns a private key (shown once).
+    const authz = await requireProtocolOwner(session.userId, protocol.id)
+    if (!authz.ok) return authz.res
 
     // Generate new keypair
     const newKeypair = generateKeyPair()
