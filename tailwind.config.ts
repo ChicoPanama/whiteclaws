@@ -8,11 +8,10 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        // Keep Tailwind utility classes aligned with the site's existing brand font CSS variables.
-        // This avoids accidental overrides (e.g. `font-sans` on <body>) causing typography regressions.
-        sans: ['var(--font-body)', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
-        mono: ['var(--font-mono)', 'SF Mono', 'monospace'],
-        display: ['var(--font-display)', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+        // next/font injects --font-body, --font-mono, --font-display on <html>.
+        sans: ['var(--fb)', 'sans-serif'],
+        mono: ['var(--fm)', 'monospace'],
+        display: ['var(--fd)', 'sans-serif'],
       },
       colors: {
         g: {

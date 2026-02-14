@@ -97,8 +97,8 @@ export default async function BountyDetailPage({ params }: { params: { slug: str
   }
 
   const { protocol, program, scope, totalFindings, acceptedFindings } = data
-  const auditReportUrls = safeArray((protocol as any).audit_report_urls)
-  const auditorsRaw = (protocol as any).auditors
+  const auditReportUrls = safeArray(protocol.audit_report_urls)
+  const auditorsRaw = protocol.auditors
   const auditors =
     Array.isArray(auditorsRaw)
       ? auditorsRaw
@@ -107,22 +107,22 @@ export default async function BountyDetailPage({ params }: { params: { slug: str
       : []
 
   const links: Array<{ label: string; href: string }> = []
-  if ((protocol as any).website_url) links.push({ label: 'Website', href: normalizeHttpUrl((protocol as any).website_url) })
-  if ((protocol as any).docs_url) links.push({ label: 'Docs', href: normalizeHttpUrl((protocol as any).docs_url) })
-  if ((protocol as any).developer_docs_url) links.push({ label: 'Developer Docs', href: normalizeHttpUrl((protocol as any).developer_docs_url) })
-  if ((protocol as any).github_url) links.push({ label: 'GitHub', href: normalizeHttpUrl((protocol as any).github_url) })
-  if ((protocol as any).status_page_url) links.push({ label: 'Status Page', href: normalizeHttpUrl((protocol as any).status_page_url) })
-  if ((protocol as any).bounty_policy_url) links.push({ label: 'Bounty Policy', href: normalizeHttpUrl((protocol as any).bounty_policy_url) })
-  if ((protocol as any).whitepaper_url) links.push({ label: 'Whitepaper', href: normalizeHttpUrl((protocol as any).whitepaper_url) })
-  if ((protocol as any).blog_url) links.push({ label: 'Blog', href: normalizeHttpUrl((protocol as any).blog_url) })
-  if ((protocol as any).reddit_url) links.push({ label: 'Reddit', href: normalizeHttpUrl((protocol as any).reddit_url) })
-  if ((protocol as any).immunefi_url) links.push({ label: 'Immunefi', href: normalizeHttpUrl((protocol as any).immunefi_url) })
-  if ((protocol as any).coingecko_id) links.push({ label: 'CoinGecko', href: `https://www.coingecko.com/en/coins/${(protocol as any).coingecko_id}` })
+  if (protocol.website_url) links.push({ label: 'Website', href: normalizeHttpUrl(protocol.website_url) })
+  if (protocol.docs_url) links.push({ label: 'Docs', href: normalizeHttpUrl(protocol.docs_url) })
+  if (protocol.developer_docs_url) links.push({ label: 'Developer Docs', href: normalizeHttpUrl(protocol.developer_docs_url) })
+  if (protocol.github_url) links.push({ label: 'GitHub', href: normalizeHttpUrl(protocol.github_url) })
+  if (protocol.status_page_url) links.push({ label: 'Status Page', href: normalizeHttpUrl(protocol.status_page_url) })
+  if (protocol.bounty_policy_url) links.push({ label: 'Bounty Policy', href: normalizeHttpUrl(protocol.bounty_policy_url) })
+  if (protocol.whitepaper_url) links.push({ label: 'Whitepaper', href: normalizeHttpUrl(protocol.whitepaper_url) })
+  if (protocol.blog_url) links.push({ label: 'Blog', href: normalizeHttpUrl(protocol.blog_url) })
+  if (protocol.reddit_url) links.push({ label: 'Reddit', href: normalizeHttpUrl(protocol.reddit_url) })
+  if (protocol.immunefi_url) links.push({ label: 'Immunefi', href: normalizeHttpUrl(protocol.immunefi_url) })
+  if (protocol.coingecko_id) links.push({ label: 'CoinGecko', href: `https://www.coingecko.com/en/coins/${protocol.coingecko_id}` })
 
   const socials: Array<{ label: string; href: string }> = []
-  if ((protocol as any).twitter) socials.push({ label: 'X / Twitter', href: toTwitterUrl((protocol as any).twitter) })
-  if ((protocol as any).discord) socials.push({ label: 'Discord', href: normalizeHttpUrl((protocol as any).discord) })
-  if ((protocol as any).telegram) socials.push({ label: 'Telegram', href: normalizeHttpUrl((protocol as any).telegram) })
+  if (protocol.twitter) socials.push({ label: 'X / Twitter', href: toTwitterUrl(protocol.twitter) })
+  if (protocol.discord) socials.push({ label: 'Discord', href: normalizeHttpUrl(protocol.discord) })
+  if (protocol.telegram) socials.push({ label: 'Telegram', href: normalizeHttpUrl(protocol.telegram) })
 
   return (
     <>
@@ -248,31 +248,31 @@ export default async function BountyDetailPage({ params }: { params: { slug: str
             <p className="ap-card-text" style={{ opacity: 0.75 }}>No links found for this protocol yet.</p>
           )}
 
-          {(protocol as any).security_email || (protocol as any).contact_email || (protocol as any).legal_email ? (
+          {protocol.security_email || protocol.contact_email || protocol.legal_email ? (
             <div style={{ marginTop: 12, display: 'flex', gap: 16, flexWrap: 'wrap' }}>
-              {(protocol as any).security_email && (
-                <a href={`mailto:${(protocol as any).security_email}`} style={{ color: 'var(--text-link, #3b82f6)' }}>
+              {protocol.security_email && (
+                <a href={`mailto:${protocol.security_email}`} style={{ color: 'var(--text-link, #3b82f6)' }}>
                   Security Email
                 </a>
               )}
-              {(protocol as any).contact_email && (
-                <a href={`mailto:${(protocol as any).contact_email}`} style={{ color: 'var(--text-link, #3b82f6)' }}>
+              {protocol.contact_email && (
+                <a href={`mailto:${protocol.contact_email}`} style={{ color: 'var(--text-link, #3b82f6)' }}>
                   Contact Email
                 </a>
               )}
-              {(protocol as any).legal_email && (
-                <a href={`mailto:${(protocol as any).legal_email}`} style={{ color: 'var(--text-link, #3b82f6)' }}>
+              {protocol.legal_email && (
+                <a href={`mailto:${protocol.legal_email}`} style={{ color: 'var(--text-link, #3b82f6)' }}>
                   Legal Email
                 </a>
               )}
             </div>
           ) : null}
 
-          {(auditors.length > 0 || auditReportUrls.length > 0 || typeof (protocol as any).market_cap_rank === 'number') ? (
+          {(auditors.length > 0 || auditReportUrls.length > 0 || typeof protocol.market_cap_rank === 'number') ? (
             <div style={{ marginTop: 14 }}>
-              {typeof (protocol as any).market_cap_rank === 'number' ? (
+              {typeof protocol.market_cap_rank === 'number' ? (
                 <div className="wc-field-helper" style={{ marginTop: 4 }}>
-                  CoinGecko market cap rank: #{(protocol as any).market_cap_rank}
+                  CoinGecko market cap rank: #{protocol.market_cap_rank}
                 </div>
               ) : null}
 

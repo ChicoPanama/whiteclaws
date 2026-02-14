@@ -1,4 +1,5 @@
 /* WhiteClaws v0.2.0 — card borders + hover glow */
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -29,13 +30,10 @@
   --g500: #707070;
   --g600: #9A9A9A;
   --g900: #F0F0F0;
-  --fd: 'Syne', 'Space Grotesk', -apple-system, sans-serif;
-  --fb: 'Instrument Sans', -apple-system, sans-serif;
-  --fm: 'JetBrains Mono', monospace;
-  /* Compatibility variables consumed by Tailwind config. */
-  --font-display: var(--fd);
-  --font-body: var(--fb);
-  --font-mono: var(--fm);
+  /* --font-display, --font-body, --font-mono are injected by next/font on <html> */
+  --fd: var(--font-display), 'Space Grotesk', -apple-system, sans-serif;
+  --fb: var(--font-body), -apple-system, sans-serif;
+  --fm: var(--font-mono), monospace;
 }
 
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
