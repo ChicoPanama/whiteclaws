@@ -45,7 +45,9 @@ export default function Providers({ children }: { children: React.ReactNode }) {
               },
               loginMethods: ['email', 'wallet', 'twitter', 'github'],
               embeddedWallets: {
-                createOnLogin: 'users-without-wallets',
+                ethereum: {
+                  createOnLogin: 'users-without-wallets',
+                },
               },
               defaultChain: base,
               supportedChains: [mainnet, base, arbitrum, optimism],
