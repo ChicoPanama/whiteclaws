@@ -2,17 +2,28 @@ import { NextRequest, NextResponse } from 'next/server'
 import { resolveIdentity } from '@/lib/auth/resolve'
 import { getXStatus, getVerificationTweetTemplate } from '@/lib/x/verification'
 import { createClient } from '@/lib/supabase/admin'
+import { createClient as createServerClient } from '@/lib/supabase/server'
 
 export const dynamic = 'force-dynamic'
 
 export async function GET(req: NextRequest) {
   try {
-    const identity = await resolveIdentity(req)
-    if (!identity) {
+    // Prefer session cookie auth; fall back to API key / wallet signature.
+    let userId: string | null = null
+    const serverClient = createServerClient()
+    const { data: sessionData } = await serverClient.auth.getUser()
+    if (sessionData?.user?.id) {
+      userId = sessionData.user.id
+    } else {
+      const identity = await resolveIdentity(req)
+      if (identity?.userId) userId = identity.userId
+    }
+
+    if (!userId) {
       return NextResponse.json({ error: 'Authentication required' }, { status: 401 })
     }
 
-    const status = await getXStatus(identity.userId)
+    const status = await getXStatus(userId)
 
     // If not verified yet, include tweet template
     let tweet_template = null
@@ -21,7 +32,7 @@ export async function GET(req: NextRequest) {
       const { data: user } = await (supabase
         .from('users')
         .select('wallet_address, is_agent, handle')
-        .eq('id', identity.userId)
+        .eq('id', userId)
         .single())
 
       if (user?.wallet_address) {

@@ -1,13 +1,24 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { resolveIdentity } from '@/lib/auth/resolve'
 import { generateAuthUrl } from '@/lib/x/verification'
+import { createClient as createServerClient } from '@/lib/supabase/server'
 
 export const dynamic = 'force-dynamic'
 
 export async function GET(req: NextRequest) {
   try {
-    const identity = await resolveIdentity(req)
-    if (!identity) {
+    // Prefer session cookie auth; fall back to API key / wallet signature.
+    let userId: string | null = null
+    const serverClient = createServerClient()
+    const { data: sessionData } = await serverClient.auth.getUser()
+    if (sessionData?.user?.id) {
+      userId = sessionData.user.id
+    } else {
+      const identity = await resolveIdentity(req)
+      if (identity?.userId) userId = identity.userId
+    }
+
+    if (!userId) {
       return NextResponse.json({ error: 'Authentication required' }, { status: 401 })
     }
 
@@ -17,7 +28,7 @@ export async function GET(req: NextRequest) {
       }, { status: 503 })
     }
 
-    const authUrl = generateAuthUrl(identity.userId)
+    const authUrl = generateAuthUrl(userId)
 
     return NextResponse.json({ auth_url: authUrl })
   } catch (error) {

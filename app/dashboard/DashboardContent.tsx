@@ -8,6 +8,7 @@ import PointsBreakdown from '@/components/dashboard/PointsBreakdown';
 import ActivityFeed from '@/components/dashboard/ActivityFeed';
 import ReferralWidget from '@/components/dashboard/ReferralWidget';
 import SBTMintWidget from '@/components/dashboard/SBTMintWidget';
+import XGrowthWidget from '@/components/dashboard/XGrowthWidget';
 
 interface Finding {
   id: string;
@@ -42,6 +43,10 @@ interface PointsData {
   recent_events: Array<{ event: string; points: number; at: string; finding_id: string | null }>;
 }
 
+interface ReferralCodeResponse {
+  code: string;
+}
+
 const statusColors: Record<string, string> = {
   submitted: '#8b5cf6',
   triaged: '#3b82f6',
@@ -60,6 +65,7 @@ export default function DashboardContent() {
     hasSBT: false, isEarly: false, mintedAt: null,
   });
   const [apiKey, setApiKey] = useState<string | null>(null);
+  const [referralCode, setReferralCode] = useState<string | null>(null);
 
   useEffect(() => {
     // Load recent bounties
@@ -67,6 +73,18 @@ export default function DashboardContent() {
       .then(r => r.json())
       .then(data => setBounties(data.bounties || []))
       .catch(() => {});
+
+    // Load points data (session cookie compatible; API key optional for back-compat).
+    fetch('/api/points/me')
+      .then(async (r) => ({ ok: r.ok, body: await r.json().catch(() => ({})) }))
+      .then(({ ok, body }) => { if (ok && body?.season) setPoints(body as PointsData); })
+      .catch(() => {});
+
+    // Load referral code (session cookie compatible).
+    fetch('/api/referral/code')
+      .then(async (r) => ({ ok: r.ok, body: await r.json().catch(() => ({})) }))
+      .then(({ ok, body }) => setReferralCode(ok ? ((body as ReferralCodeResponse).code || null) : null))
+      .catch(() => setReferralCode(null));
 
     // Check SBT status
     const walletAddr = ((user?.user_metadata?.wallet_address as string) || null);
@@ -114,7 +132,7 @@ export default function DashboardContent() {
 
       // Load points data
       fetch('/api/points/me', {
-        headers: { 'Authorization': `Bearer ${apiKey}` },
+        headers: { 'Authorization': `Bearer ${storedKey}` },
       })
         .then(r => r.json())
         .then(data => { if (data.season) setPoints(data); })
@@ -143,6 +161,16 @@ export default function DashboardContent() {
           {/* Points Breakdown */}
           <div className="ap-stat-grid" style={{ marginTop: 16 }}>
             <PointsBreakdown apiKey={apiKey || undefined} />
+          </div>
+
+          {/* X Verification + Share */}
+          <div className="ap-stat-grid" style={{ marginTop: 16 }}>
+            <XGrowthWidget
+              referralCode={referralCode}
+              streakWeeks={points?.streak_weeks || 0}
+              submissions={stats.submissions}
+              accepted={stats.accepted}
+            />
           </div>
 
           {/* Original Stats */}
@@ -244,10 +272,11 @@ export default function DashboardContent() {
           <div className="ap-section">
             <h2 className="ap-section-title">Active Bounty Programs</h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 10 }}>
-              {(bounties.length > 0 ? bounties.slice(0, 4) : [
-                { slug: 'aave', name: 'Aave V3', max_bounty: 2500000, description: 'Decentralized lending protocol' },
-                { slug: 'uniswap', name: 'Uniswap', max_bounty: 2250000, description: 'DEX and AMM protocol' },
-              ]).map(b => (
+              {bounties.length === 0 ? (
+                <div className="ap-card" style={{ gridColumn: '1 / -1' }}>
+                  <p className="ap-card-text">No active programs found.</p>
+                </div>
+              ) : bounties.slice(0, 4).map(b => (
                 <div key={b.slug} className="ap-card">
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
                     <div>

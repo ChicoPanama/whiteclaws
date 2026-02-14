@@ -23,12 +23,12 @@ export default function PointsBreakdown({ apiKey }: { apiKey?: string }) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    if (!apiKey) { setLoading(false); return; }
+    setLoading(true);
     fetch('/api/points/me', {
-      headers: { 'Authorization': `Bearer ${apiKey}` },
+      headers: apiKey ? { 'Authorization': `Bearer ${apiKey}` } : undefined,
     })
-      .then(r => r.json())
-      .then(d => { setData(d); setLoading(false); })
+      .then(async (r) => ({ ok: r.ok, body: await r.json().catch(() => ({})) }))
+      .then(({ ok, body }) => { setData(ok ? (body as PointsData) : null); setLoading(false); })
       .catch(() => setLoading(false));
   }, [apiKey]);
 

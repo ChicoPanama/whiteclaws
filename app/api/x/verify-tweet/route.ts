@@ -1,19 +1,57 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { z } from 'zod'
 import { resolveIdentity } from '@/lib/auth/resolve'
 import { verifyTweet } from '@/lib/x/verification'
 import { fireEvent } from '@/lib/points/hooks'
+import { createClient as createServerClient } from '@/lib/supabase/server'
 
 export const dynamic = 'force-dynamic'
 
+const BodySchema = z.object({
+  tweet_id: z.string().regex(/^\d+$/).optional(),
+  tweet_url: z.string().url().optional(),
+}).strict()
+
+type RateEntry = { count: number; resetAt: number }
+const rateLimitState = new Map<string, RateEntry>()
+
+function rateLimit(key: string, limit: number, windowMs: number): boolean {
+  const now = Date.now()
+  const entry = rateLimitState.get(key)
+  if (!entry || now > entry.resetAt) {
+    rateLimitState.set(key, { count: 1, resetAt: now + windowMs })
+    return true
+  }
+  if (entry.count >= limit) return false
+  entry.count += 1
+  return true
+}
+
 export async function POST(req: NextRequest) {
   try {
-    const identity = await resolveIdentity(req)
-    if (!identity) {
-      return NextResponse.json({ error: 'Authentication required' }, { status: 401 })
+    // Prefer session cookie auth; fall back to API key / wallet signature.
+    let userId: string | null = null
+    const serverClient = createServerClient()
+    const { data: sessionData } = await serverClient.auth.getUser()
+    if (sessionData?.user?.id) {
+      userId = sessionData.user.id
+    } else {
+      const identity = await resolveIdentity(req)
+      if (identity?.userId) userId = identity.userId
     }
 
-    const body = await req.json()
-    const { tweet_id, tweet_url } = body
+    if (!userId) return NextResponse.json({ error: 'Authentication required' }, { status: 401 })
+
+    if (!rateLimit(`x-verify:${userId}`, 5, 60 * 60_000)) {
+      return NextResponse.json({ error: 'Too many requests' }, { status: 429 })
+    }
+
+    const parsed = BodySchema.safeParse(await req.json().catch(() => null))
+    if (!parsed.success) {
+      return NextResponse.json({ error: 'Invalid request body', details: parsed.error.flatten() }, { status: 400 })
+    }
+
+    const { tweet_id, tweet_url } = parsed.data
 
     // Accept either tweet_id or tweet_url
     let resolvedTweetId = tweet_id
@@ -27,14 +65,14 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'tweet_id or tweet_url is required' }, { status: 400 })
     }
 
-    const result = await verifyTweet(identity.userId, resolvedTweetId)
+    const result = await verifyTweet(userId, resolvedTweetId)
 
     if (!result.ok) {
       return NextResponse.json({ error: result.error }, { status: 400 })
     }
 
     // Fire x_claimed points event
-    fireEvent(identity.userId, 'x_claimed', { tweet_id: resolvedTweetId })
+    fireEvent(userId, 'x_claimed', { tweet_id: resolvedTweetId })
 
     return NextResponse.json({
       ok: true,
