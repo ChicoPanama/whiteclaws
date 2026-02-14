@@ -31,7 +31,188 @@
     }
   },
   "source": "whiteclaws",
-  "contracts": [],
+  "contracts": [
+    {
+      "address": "0x6f04B655d5209E85E47D3920A2EF407A66e83f6c",
+      "network": "sei",
+      "name": "OndoMintBurnAdapter (Sei)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x54cD901491AeF397084453F4372B93c33260e2A6",
+      "network": "sei",
+      "name": "USDY Token (Sei)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xD2B65e851Be3d80D3c2ce795eB2E78f16cB088b2",
+      "network": "plume",
+      "name": "USDY Token (Plume)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x2D3Fa4e1AaB6E4BBd909CF81518A8084873c47B5",
+      "network": "bsc",
+      "name": "IssuanceHours (BSC)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x87b126e5518b6a1Bb8465779b4607C45C643DF90",
+      "network": "ethereum",
+      "name": "USDYOracleWrapper",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x898128F9f22c0192da0c5acD394D9eeAc461D911",
+      "network": "bsc",
+      "name": "OndoIDRegistry (BSC)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xbA11C5effA33c4D6F8f593CFA394241CfE925811",
+      "network": "polygon",
+      "name": "OUSG Token (Polygon)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x4D4E562D6882Dc523B8d629d2E9dF9230B699933",
+      "network": "bsc",
+      "name": "OndoOwner (BSC)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "i7u4r16TcsJTgq1kAG8opmVZyVnAKBwLKu6ZPMwzxNc",
+      "network": "solana",
+      "name": "OUSG Token (Solana)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x914D5Cb27cb30E80BdE8215ff577eD63Eb986B79",
+      "network": "ethereum",
+      "name": "OndoSanityCheckOracle",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x01bB8620c0aEF4390c983A5A792d178AF2733e82",
+      "network": "bsc",
+      "name": "GMTokenFactory (BSC)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x7cd852c0d7613aa869e632929560f310d4059ac1",
+      "network": "polygon",
+      "name": "KYCRegistry (Polygon)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "3cKyGYojYbFxeUnBf5xak3cTpaxmYuzpFbSnP9n3kyui",
+      "network": "solana",
+      "name": "Solana GMTokenManagerState",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "7YNReenG6AXgVUfmSizt6hoVXrznS4zDdgCj1UTLJ2S3",
+      "network": "solana",
+      "name": "OndoMintBurnAdapter (Solana)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xa0219aa5b31e65bc920b5b6dfb8edf0988121de0",
+      "network": "ethereum",
+      "name": "USDY Price Oracle",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "CKW82CT7QtJUDkxCa6sSHZ3UXvUSu6EuGDXUtKyXgn67",
+      "network": "solana",
+      "name": "Solana USDonManagerState",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x87786323ad9997924B22eac3AA9f71f562795633",
+      "network": "bsc",
+      "name": "OndoOFT (BSC)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x0bE393DC46248E4285dc5CAcA3084bc7e9bfbB41",
+      "network": "arbitrum",
+      "name": "OndoMintBurnAdapter (Arbitrum)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xCd6D30a1A585eb67E0d0ef5c1ae601BE20862897",
+      "network": "bsc",
+      "name": "OndoRateLimiter (BSC)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x91f8Aff3738825e8eB16FC6f6b1A7A4647bDB299",
+      "network": "bsc",
+      "name": "GMTokenManager (BSC)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x54043c656F0FAd0652D9Ae2603cDF347c5578d00",
+      "network": "ethereum",
+      "name": "rOUSG Token",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xe9b3c628103580702b465c052f67843cac61fb35",
+      "network": "ethereum",
+      "name": "BasicRecipient - USDC",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xcf6958D69d535FD03BD6Df3F4fe6CDcd127D97df",
+      "network": "ethereum",
+      "name": "OndoIDRegistry",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x98Db502215Da1ad9F626D4a0090A8A2f4971003c",
+      "network": "ethereum",
+      "name": "OndoRateLimiter",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xeA8dBF5F3456FaB742fc11b977330A58069758eF",
+      "network": "ethereum",
+      "name": "OndoOFT",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x14032815B65f6B65f23d2532ad5F5DFf7BE48C03",
+      "network": "bsc",
+      "name": "OndoSanityCheckOracle (BSC)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x99B8d1D1c17a10CD1A878d1A44c11fd7E4daD7bC",
+      "network": "ethereum",
+      "name": "OndoTokenRouter",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xfD48112E448417CA79305a518c4186dF4b0A200a",
+      "network": "ethereum",
+      "name": "TokenPauseManger",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xff2BABA46Df92919705E60120C477Ae5b7341Eb3",
+      "network": "ethereum",
+      "name": "Messenger",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xD2746617c58b72254785BDb483e04f311c858d5f",
+      "network": "ethereum",
+      "name": "TokenManagerRegistrar",
+      "type": "Bounty Scope"
+    }
+  ],
   "scope": {
     "in_scope": [
       "Core protocol smart contracts",
@@ -81,6 +262,6 @@
     "KYC verification required before payout",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
   ]
 }

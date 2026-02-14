@@ -31,7 +31,56 @@
     }
   },
   "source": "whiteclaws",
-  "contracts": [],
+  "contracts": [
+    {
+      "address": "0xf2F305D14DCD8aaef887E0428B3c9534795D0d60",
+      "network": "ethereum",
+      "name": "DepositQueue",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xbf5495Efe5DB9ce00f80364C8B423567e58d2110",
+      "network": "ethereum",
+      "name": "EzEthToken",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xbAf5f3A05BD7Af6f3a0BBA207803bf77e2657c8F",
+      "network": "ethereum",
+      "name": "OperatorDelegator1",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x5a12796f7e7EBbbc8a402667d266d2e65A814042",
+      "network": "ethereum",
+      "name": "RenzoOracle",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x74a09653A083691711cF8215a6ab074BB4e99ef5",
+      "network": "ethereum",
+      "name": "RestakeManager",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x22eEC85ba6a5cD97eAd4728eA1c69e1D9c6fa778",
+      "network": "ethereum",
+      "name": "RewardHandler",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x4994EFc62101A9e3F885d872514c2dC7b3235849",
+      "network": "ethereum",
+      "name": "RoleManager",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x5efc9D10E42FB517456f4ac41EB5e2eBe42C8918",
+      "network": "ethereum",
+      "name": "WithdrawQueue",
+      "type": "Bounty Scope"
+    }
+  ],
   "scope": {
     "in_scope": [
       "Staking and delegation contracts",
@@ -84,6 +133,6 @@
     "KYC verification required before payout",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
   ]
 }

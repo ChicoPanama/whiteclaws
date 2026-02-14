@@ -31,7 +31,74 @@
     }
   },
   "source": "whiteclaws",
-  "contracts": [],
+  "contracts": [
+    {
+      "address": "terra14x9fr055x5hvr48hzy2t4q7kvjvfttsvxusa4xsdcy702mnzsvuqprer8r",
+      "network": "terra",
+      "name": "Core Contract: Factory",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "terra1w579ysjvpx7xxhckxewk8sykxz70gm48wpcuruenl29rhe6p6raslhj0m6",
+      "network": "terra",
+      "name": "Core Contract: Pair (ASTRO-axlUSDC)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "terra1mpj7j25fw5a0q5vfasvsvdp6xytaqxh006lh6f5zpwxvadem9hwsy6m508",
+      "network": "terra",
+      "name": "Core Contract: Stable Pair",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "terra1fd68ah02gr2y8ze7tm9te7m70zlmc7vjyyhs6xlhsdmqqcjud4dql4wpxr",
+      "network": "terra",
+      "name": "Core Contract: Constant Product Pair",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "terra1j8hayvehh3yy02c2vtw5fdhz9f4drhtee8p5n5rguvg3nyd6m83qd2y90a",
+      "network": "terra",
+      "name": "Core Contract: Router",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "terra1nsuqsk6kh58ulczatwev87ttq2z6r3pusulg9r24mfj2fvtzd4uq3exn26",
+      "network": "terra",
+      "name": "Core Contract: ASTRO Token",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "terra1ksvlfex49desf4c452j6dewdjs6c48nafemetuwjyj6yexd7x3wqvwa7j9",
+      "network": "terra",
+      "name": "Core Contract: Generator",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "terra1ygcvxp9s054q8u2q4hvl52ke393zvgj0sllahlycm4mj8dm96zjsa45rzk",
+      "network": "terra",
+      "name": "Core Contract: Maker",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "terra1nyu6sk9rvtvsltm7tjjrp6rlavnm3e4sq03kltde6kesam260f8szar8ze",
+      "network": "terra",
+      "name": "Core Contract: xASTRO Staking",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "terra1x62mjnme4y0rdnag3r8rfgjuutsqlkkyuh4ndgex0wl3wue25uksau39q8",
+      "network": "terra",
+      "name": "Core Contract: xASTRO Token",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "terra1qyuarnzcc6uuft9n9mltraprreke4v8gvxd8u3nslngxhflhru9qw34nc3",
+      "network": "terra",
+      "name": "Core Contract: Generator Vesting",
+      "type": "Bounty Scope"
+    }
+  ],
   "scope": {
     "in_scope": [
       "Core protocol smart contracts",
@@ -77,9 +144,9 @@
     }
   },
   "eligibility": [
-    "Open to all researchers \u2014 pseudonymous submissions accepted",
+    "Open to all researchers — pseudonymous submissions accepted",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
   ]
 }

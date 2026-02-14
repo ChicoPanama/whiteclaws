@@ -31,7 +31,38 @@
     }
   },
   "source": "whiteclaws",
-  "contracts": [],
+  "contracts": [
+    {
+      "address": "0x679619FA685a18782a86dD5850124A75E83daD8F",
+      "network": "ethereum",
+      "name": "TBT Factory Proxy",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x0F2Ab62e91B115167dF40045477A55d3FFd0f1aa",
+      "network": "ethereum",
+      "name": "Depositor Base",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xa285bca8f01c8f18953443e645ef2786d31ada99",
+      "network": "ethereum",
+      "name": "Lombard Depositor Proxy",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x3d7fe7b7b207fb12f01295d402bd4380ccc833df",
+      "network": "ethereum",
+      "name": "Simple Depositor",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xf11fbb660b9950fecd38e13b446a28e8605535fc",
+      "network": "ethereum",
+      "name": "Liquid USD Depositor",
+      "type": "Bounty Scope"
+    }
+  ],
   "scope": {
     "in_scope": [
       "Core protocol smart contracts",
@@ -80,6 +111,6 @@
     "KYC verification required before payout",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
   ]
 }

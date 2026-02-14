@@ -31,7 +31,188 @@
     }
   },
   "source": "whiteclaws",
-  "contracts": [],
+  "contracts": [
+    {
+      "address": "0x0001A500A6B18995B03f44bb040A5fFc28E45CB0",
+      "network": "ethereum",
+      "name": "Autonolas (OLAS)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x3C1fF68f5aa342D296d4DEe4Bb1cACCA912D95fE",
+      "network": "ethereum",
+      "name": "Timelock",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x7e01A500805f8A52Fad229b3015AD130A332B7b3",
+      "network": "ethereum",
+      "name": "Voting Escrow OLAS (veOLAS)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x95418b46d5566d3d1ea62c12aea91227e566c5c1",
+      "network": "ethereum",
+      "name": "Vote Weighting",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x8e84b5055492901988b831817e4ace5275a3b401",
+      "network": "ethereum",
+      "name": "Governor OLAS",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x4039B809E0C0Ad04F6Fc880193366b251dDf4B40",
+      "network": "ethereum",
+      "name": "Wrapped Voting Escrow OLAS (wveOLAS)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x9338b5153AE39BB89f50468E608eD9d764B755fD",
+      "network": "polygon",
+      "name": "FxGovernorTunnel Polygon",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x15bd56669F57192a97dF41A2aa8f4403e9491776",
+      "network": "gnosis",
+      "name": "HomeMediator Gnosis",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x87c511c8aE3fAF0063b3F3CF9C6ab96c4AA5C60c",
+      "network": "optimism",
+      "name": "OptimismMessenger Optimism",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x397125902ED2cA2d42104F621f448A2cE1bC8Fb7",
+      "network": "celo",
+      "name": "WormholeMessenger Celo",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x15bd56669f57192a97df41a2aa8f4403e9491776",
+      "network": "ethereum",
+      "name": "Component Registry",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x7bB7998b210cFfE10ca1e41f16341Abe53f76f3a",
+      "network": "ethereum",
+      "name": "Smart Contract - GuardCM",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x2f1f7d38e4772884b88f3ecd8b6b9facdc319112",
+      "network": "ethereum",
+      "name": "Agent Registry",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x48b6af7B12C71f09e2fC8aF4855De4Ff54e775cA",
+      "network": "ethereum",
+      "name": "Service Registry",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x3Fb926116D454b95c669B6Bf2E7c3bad8d19affA",
+      "network": "ethereum",
+      "name": "Service Registry Token Utility",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x9ec9156def5c613b2a7d4c46c383f9b58dfcd6fe",
+      "network": "ethereum",
+      "name": "Registries Manager",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x2EA682121f815FBcF86EA3F3CaFdd5d67F2dB143",
+      "network": "ethereum",
+      "name": "Service Manager Token",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x42042799B0DE38AdD2a70dc996f69f98E1a85260",
+      "network": "ethereum",
+      "name": "Operator Whitelist",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x46C0D07F55d4F9B5Eed2Fc9680B5953e5fd7b461",
+      "network": "ethereum",
+      "name": " Gnosis Safe Multisig",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xfa517d01DaA100cB1932FA4345F68874f7E7eF46",
+      "network": "ethereum",
+      "name": "Gnosis Safe Multisig Same Address",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xE3607b00E75f6405248323A9417ff6b39B244b50",
+      "network": "polygon",
+      "name": "Service Registry L2",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xEBdde456EA288b49f7D5975E7659bA1Ccf607efc",
+      "network": "ethereum",
+      "name": "Staking Factory",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x0Dc23eEf3bC64CF3cbd8f9329B57AE4C4f28d5d2",
+      "network": "ethereum",
+      "name": "Staking Token",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x4503b79d468e81Ad2d4bd6Db991810da269bA777",
+      "network": "ethereum",
+      "name": "Staking Verifier",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xa0DA53447C0f6C4987964d8463da7e6628B30f82",
+      "network": "ethereum",
+      "name": "Treasury",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xc096362fa6f4A4B1a9ea68b1043416f3381ce300",
+      "network": "ethereum",
+      "name": "Tokenomics Proxy",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x2C1633765c66a7CF0EC801a1046347bBee7344C9",
+      "network": "ethereum",
+      "name": "Tokenomics",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x1521918961bDBC9Ed4C67a7103D5999e4130E6CB",
+      "network": "ethereum",
+      "name": "Generic Bond Calculator",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xff8697d8d2998d6aa2e09b405795c6f4beeb0c81",
+      "network": "ethereum",
+      "name": "Depository",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x5650300fCBab43A0D7D02F8Cb5d0f039402593f0",
+      "network": "ethereum",
+      "name": "Dispenser",
+      "type": "Bounty Scope"
+    }
+  ],
   "scope": {
     "in_scope": [
       "Core protocol smart contracts",
@@ -80,6 +261,6 @@
     "KYC verification required before payout",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
   ]
 }

@@ -31,7 +31,44 @@
     }
   },
   "source": "whiteclaws",
-  "contracts": [],
+  "contracts": [
+    {
+      "address": "0xc47c71ac21C5C02bc3B67D00Ef6bDA0f3737aefb",
+      "network": "ethereum-sepolia",
+      "name": "MATIC staker contract on Ethereum Sepolia",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x9B46d57ebDb35aC2D59AB500F69127Bb24DA62b1",
+      "network": "ethereum-sepolia",
+      "name": "MATIC whitelist contract on Ethereum Sepolia",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x89f93b7bf55b86e26d62cb508663cd6cb8ceaa8b4ae7509b642db3848824db79",
+      "network": "aptos",
+      "name": "APTOS staker contract on APTOS testnet",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x480791becb289aa1ea4678a4e29cd0661d35ff364c67a2a79b8b0132f8aecf96",
+      "network": "aptos",
+      "name": "APTOS whitelist contract on APTOS testnet",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "staker003.trufin.testnet",
+      "network": "near-testnet",
+      "name": "NEAR staker and whitelist contracts on NEAR testnet",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "6EZAJVrNQdnBJU6ULxXSDaEoK6fN7C3iXTCkZKRWDdGM",
+      "network": "solana",
+      "name": "Solana staker and whitelist contracts on testnet",
+      "type": "Bounty Scope"
+    }
+  ],
   "scope": {
     "in_scope": [
       "Core protocol smart contracts",
@@ -57,7 +94,7 @@
   "program_rules": [
     "Proof of Concept is required for all submissions. Reports without a working PoC demonstrating the vulnerability will not be considered.",
     "KYC verification is required before bounty payout. Researchers must complete identity verification to receive rewards.",
-    "This program follows Primacy of Impact \u2014 valid findings are rewarded based on demonstrated impact regardless of whether the specific attack vector was previously known.",
+    "This program follows Primacy of Impact — valid findings are rewarded based on demonstrated impact regardless of whether the specific attack vector was previously known.",
     "Only previously unreported vulnerabilities are eligible. Duplicate submissions will be closed.",
     "Vulnerabilities must be reported through the WhiteClaws platform. Public disclosure before resolution disqualifies the submission.",
     "Testing must not disrupt live protocol operations. Use mainnet forks or testnets for Proof of Concept execution."
@@ -82,6 +119,6 @@
     "KYC verification required before payout",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
   ]
 }

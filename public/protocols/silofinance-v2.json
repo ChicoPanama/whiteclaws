@@ -31,7 +31,68 @@
     }
   },
   "source": "whiteclaws",
-  "contracts": [],
+  "contracts": [
+    {
+      "address": "0x8509b92145Bb2645F47c6847Bb61A46bE61AE3F2",
+      "network": "sonic",
+      "name": "InterestRateModelV2.sol - Silo Lending",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xE83fDb15b5efeD3E3D3FD2a086219c33686b7231",
+      "network": "sonic",
+      "name": "ShareDebtToken.sol - Silo Lending",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x1a36C81756d09950AcBd1aBDC522C0DD41363353",
+      "network": "sonic",
+      "name": "ShareProtectedCollateralToken.sol - Silo Lending",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x435Ab368F5fCCcc71554f4A8ac5F5b922bC4Dc06",
+      "network": "sonic",
+      "name": "Silo.sol - Silo Lending",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x4e9dE3a64c911A37f7EB2fCb06D1e68c3cBe9203",
+      "network": "sonic",
+      "name": "SiloFactory.sol - Silo Lending",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x1D9289efd4424F50c9155cf8b591944B0fba0fD0",
+      "network": "sonic",
+      "name": "SiloHookV1.sol - Silo Lending",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xff1d0359CAd3BC603584A63D852D884BF5b17A67",
+      "network": "sonic",
+      "name": "SiloRouterV2.sol",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xC95149D52dA227cfeb0425ac6803086Db5A193b7",
+      "network": "sonic",
+      "name": "PublicAllocator.sol  - Silo Vaults",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x4e125E605FDcf3B07BDE441DECf8EDAd423D5DC6",
+      "network": "sonic",
+      "name": "SiloVaultsFactory.sol - Silo Vaults",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xDED4aC8645619334186f28B8798e07ca354CFa0e",
+      "network": "sonic",
+      "name": "Example of SiloVault.sol - Silo Vaults",
+      "type": "Bounty Scope"
+    }
+  ],
   "scope": {
     "in_scope": [
       "Lending and borrowing smart contracts",
@@ -80,6 +141,6 @@
     "KYC verification required before payout",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
   ]
 }

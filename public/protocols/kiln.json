@@ -31,7 +31,188 @@
     }
   },
   "source": "whiteclaws",
-  "contracts": [],
+  "contracts": [
+    {
+      "address": "0x8a113da63f02811e63c1e38ef615df94df5d9e70",
+      "network": "ethereum",
+      "name": "Nexus",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x2d5e65ff87d986d18ac224e725dc654bec3a04cd",
+      "network": "ethereum",
+      "name": "Coinbase Cloud",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x8eea6cc08d824b20efb3bf7c248de694cb1f75f4",
+      "network": "ethereum",
+      "name": "Coinbase Cloud Pool",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x4e6a0740aa4c89c7e36c430afe3dd3bec68b6aec",
+      "network": "ethereum",
+      "name": "Coinbase Cloud Pool",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xd54ede626441ae514b15743d6a78a74c664b30a2",
+      "network": "ethereum",
+      "name": "Coinbase Cloud Pool",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x99a6d933bd22040136b7ccd5dbc3acdf2c103be6",
+      "network": "ethereum",
+      "name": "Coinbase Cloud Pool",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xc63d9f0040d35f328274312fc8771a986fc4ba86",
+      "network": "ethereum",
+      "name": "Kiln",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x00a0be1bbc0c99898df7e6524bf16e893c1e3bb9",
+      "network": "ethereum",
+      "name": "Kiln Pool",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xd9f56e8a1b159b1482ec3bb6ce742fa5ce084f4c",
+      "network": "ethereum",
+      "name": "Kiln Pool",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xa748ae65ba11606492a9c57effa0d4b7be551ec2",
+      "network": "ethereum",
+      "name": "factoryHatcher",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x48005e62373277fbbe5584b351830b1b2ec1e3fd",
+      "network": "ethereum",
+      "name": "treasuryHatcher",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x1d6103243d0507a9d1314bac09379bf57a5cf155",
+      "network": "ethereum",
+      "name": "poolHatcher",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x066b6c3fca9034395068eb9d442ee5041eac33dc",
+      "network": "ethereum",
+      "name": "withdrawalRecipientHatcher",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xdac8cf86ca42185ebce7ed2dbec9bc2be1734ffc",
+      "network": "ethereum",
+      "name": "execLayerRecipientHatcher",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x24d6e12fa25b7f8fc6b4bba0ea77fc643d7210d3",
+      "network": "ethereum",
+      "name": "coverageRecipientHatcher",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xc2c48fbfec0e61683133aaff32c9c2e98fd17788",
+      "network": "ethereum",
+      "name": "oracleAggregatorHatcher",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x24a1dfebaec4e501c2152a5e4a434b236fce3d3b",
+      "network": "ethereum",
+      "name": "exitQueueHatcher",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x0a3d5e898fa7e7d593a940486095c156c01a0b0c",
+      "network": "ethereum",
+      "name": "ONTO Wallet Staked ETH (owsETH)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x18099b65842cada4d87075920986559d9216a5bf",
+      "network": "ethereum",
+      "name": "Staking Rewards Partial ETH (srpETH)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x2401c39d7ba9e283668a53fcc7b8f5fd9e716fdf",
+      "network": "ethereum",
+      "name": "On-Chain Staked Ethereum (ocsETH)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x2e3956e1ee8b44ab826556770f69e3b9ca04a2a7",
+      "network": "ethereum",
+      "name": "CDP Staked ETH (CDPstakedETH)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x30a4aa1d14d44f0f5bfe887447ab6facc94a549f",
+      "network": "ethereum",
+      "name": "Coinbase Wallet Staked ETH (cbwsETH)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x42ecf9bde9078d659663da66b97c4823f762005e",
+      "network": "ethereum",
+      "name": "CoolWallet Staked ETH (cwstETH)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x437636e4b984eae19045626aa269a89f906cf96c",
+      "network": "ethereum",
+      "name": "Crypto.com Defi Wallet ETH (cdwETH)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x594db36d6f3e747f2c7675659f712bf4d72a9f97",
+      "network": "ethereum",
+      "name": "Walletverse Staked ETH (wvETH)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x5b1c9ee05794e9667806f1bd1c6ae6d196498183",
+      "network": "ethereum",
+      "name": "Giddy Wallet Staked ETH (GiddyETH)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x5db5235b5c7e247488784986e58019fffd98fda4",
+      "network": "ethereum",
+      "name": "Pooled Staked ETH (psETH)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x61ac42269d0035cd86c52b6c5bb299daa73c7135",
+      "network": "ethereum",
+      "name": "Bitnovo Staked ETH (bnETH)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x7d4b92522df1c7d211cbab49148d9d260b5a5e41",
+      "network": "ethereum",
+      "name": "CDP Staked ETH (CDPstakedETH)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x9995f241c6a0d5b712281dfd3bd0e0289a5f2a98",
+      "network": "ethereum",
+      "name": "Dakota Kiln Staked ETH (dkETH)",
+      "type": "Bounty Scope"
+    }
+  ],
   "scope": {
     "in_scope": [
       "Staking and delegation contracts",
@@ -86,6 +267,6 @@
     "KYC verification required before payout",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
   ]
 }

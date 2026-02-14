@@ -31,7 +31,98 @@
     }
   },
   "source": "whiteclaws",
-  "contracts": [],
+  "contracts": [
+    {
+      "address": "0xb42CfaD450B46FDc9cAC5FBF14Bc2e6091AfC35c",
+      "network": "avalanche",
+      "name": "ClaimNodeOp",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x4169CF88c7Ed811E6f6e61917c5b915BeA49476c",
+      "network": "avalanche",
+      "name": "ClaimProtocolDAO",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xb84fA022c7fE1CE3a1F94C49f2F13236C3d1Ed08",
+      "network": "avalanche",
+      "name": "MinipoolManager",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x7fff419c562Dd8b3cf16C335a01CDb37ea1B6a3B",
+      "network": "avalanche",
+      "name": "MultisigManager",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x9189d18F453b1Ec1F02E40A8e3711334f9eA210B",
+      "network": "avalanche",
+      "name": "Ocyticus",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x30fb915258D844E9dC420B2C3AA97420AEA16Db7",
+      "network": "avalanche",
+      "name": "Oracle",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xAA8FD06cc3f1059b6d35870Bbf625C1Bac7c1B1D",
+      "network": "avalanche",
+      "name": "RewardsPool",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x1cEa17F9dE4De28FeB6A102988E12D4B90DfF1a9",
+      "network": "avalanche",
+      "name": "Storage",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xB6dDbf75e2F0C7FC363B47B84b5C03959526AecB",
+      "network": "avalanche",
+      "name": "Staking",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xf80Eb498bBfD45f5E2d123DFBdb752677757843E",
+      "network": "avalanche",
+      "name": "TokenggAVAXImpl",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x5313c309CD469B751Ad3947568D65d4a70B247cF",
+      "network": "avalanche",
+      "name": "TokenggAVAXProxyAdmin",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xA25EaF2906FA1a3a13EdAc9B9657108Af7B703e3",
+      "network": "avalanche",
+      "name": "TokenggAVAX",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x69260B9483F9871ca57f81A90D91E2F96c2Cd11d",
+      "network": "avalanche",
+      "name": "TokenGGP",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xd45Cb6F5AcA41AfAAAeBdBE4EFBA49c1bC41E6BA",
+      "network": "avalanche",
+      "name": "Vault",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x6C104D5b914931BA179168d63739A297Dc29bCF3",
+      "network": "avalanche",
+      "name": "Guardian Multisig",
+      "type": "Bounty Scope"
+    }
+  ],
   "scope": {
     "in_scope": [
       "Core protocol smart contracts",
@@ -82,9 +173,9 @@
     }
   },
   "eligibility": [
-    "Open to all researchers \u2014 pseudonymous submissions accepted",
+    "Open to all researchers — pseudonymous submissions accepted",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
   ]
 }

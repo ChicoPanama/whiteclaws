@@ -31,7 +31,92 @@
     }
   },
   "source": "whiteclaws",
-  "contracts": [],
+  "contracts": [
+    {
+      "address": "0x1bf23f0881f8fa149500ff6b7a047f608967c028a8ad7a2100caa84833ce851d",
+      "network": "aptos",
+      "name": "Manager",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x9c6d58fa009e08dfb2f5928ded14b3a790a94131da89891466b41ba1e61d83e1",
+      "network": "aptos",
+      "name": "Treasury",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x4dcae85fc5559071906cd5c76b7420fcbb4b0a92f00ab40ffc394aadbbff5ee9",
+      "network": "aptos",
+      "name": "FixedPoint64",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x93aa044a65a27bd89b163f8b3be3777b160b09a25c336643dcc2878dfd8f2a8d",
+      "network": "aptos",
+      "name": "ThalaManager",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xfb6e709add23c710c40e4844d889938f703719f72d2d4439ee682d67f07a15c5",
+      "network": "aptos",
+      "name": "ThalaSwapMath",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x48271d39d0b05bd6efca2278f22277d6fcc375504f9839fd73f74ace240861af",
+      "network": "aptos",
+      "name": "ThalaSwap",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x092e95ed77b5ac815d3fbc2227e76db238339e9ca43ace45031ec2589bea5b8c",
+      "network": "aptos",
+      "name": "ThalaOracle",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x07fd500c11216f0fe3095d0c4b8aa4d64a4e2e04f83758462f2b127255643615",
+      "network": "aptos",
+      "name": "THLCoin",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x6f986d146e4a90b828d8c12c14b6f4e003fdff11a8eecceceb63744363eaac01",
+      "network": "aptos",
+      "name": "ThalaProtocol",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x6b3720cd988adeaf721ed9d4730da4324d52364871a68eac62b46d21e4d2fa99",
+      "network": "aptos",
+      "name": "ThalaFarming",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x6970b4878c3aea96732be3f31c2dded12d94d9455ff0c76c67d84859dce35136",
+      "network": "aptos",
+      "name": "ThalaLaunch",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x7730cd28ee1cdc9e999336cbc430f99e7c44397c0aa77516f6f23a78559bb5",
+      "network": "aptos",
+      "name": "Thalaswap_v2",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x6a48c1554aa54128ea7acdea6d627cda9914f4a7ffd4c7aee3432b6043291938",
+      "network": "aptos",
+      "name": "Thalaswap_clamm",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x4a3cfa9444f84a45ffa70200ec902a37101ee842e8f94b99da18f851d50dec88",
+      "network": "aptos",
+      "name": "Thalaswap_clamm_math",
+      "type": "Bounty Scope"
+    }
+  ],
   "scope": {
     "in_scope": [
       "Core protocol smart contracts",
@@ -85,6 +170,6 @@
     "KYC verification required before payout",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
   ]
 }

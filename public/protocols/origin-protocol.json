@@ -46,7 +46,170 @@
       "Frontend only"
     ]
   },
-  "contracts": [],
+  "contracts": [
+    {
+      "address": "0xba0e352AB5c13861C26e4E773e7a833C3A223FE6",
+      "network": "ethereum",
+      "name": "Curve OETH+WETH (AMO) Strategy",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x3643cafA6eF3dd7Fcc2ADaD1cabf708075AFFf6e",
+      "network": "ethereum",
+      "name": "Morpho OUSD v2 Strategy",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x26a02ec47ACC2A3442b757F45E0A82B8e993Ce11",
+      "network": "ethereum",
+      "name": "Curve USDC AMO Strategy ",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x85b78aca6deae198fbf201c82daf6ca21942acc6",
+      "network": "ethereum",
+      "name": "ARM (stETH/WETH)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xF611cC500eEE7E4e4763A05FE623E2363c86d2Af",
+      "network": "base",
+      "name": "AerodromeAMOStrategyProxy",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x31a91336414d3b955e494e7d485a6b06b55fc8fb",
+      "network": "sonic",
+      "name": "Origin Timelock",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xe75d77b1865ae93c7eaa3040b038d7aa7bc02f70",
+      "network": "ethereum",
+      "name": "Vault",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xb1e25689D55734FD3ffFc939c4C3Eb52DFf8A794",
+      "network": "sonic",
+      "name": "Origin Sonic",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xaF04828Ed923216c77dC22a2fc8E077FDaDAA87d",
+      "network": "ethereum",
+      "name": "CompoundingStakingSSVStrategyProxy",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x7609c88e5880e934dd3a75bcfef44e31b1badb8b",
+      "network": "ethereum",
+      "name": "OGN rewards",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x63898b3b6ef3d39332082178656e9862bee45c57",
+      "network": "ethereum",
+      "name": "xOGN",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x501804B374EF06fa9C427476147ac09F1551B9A0",
+      "network": "ethereum",
+      "name": "OGN Staking",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xa3c0eCA00D2B76b4d1F170b0AB3FdeA16C180186",
+      "network": "sonic",
+      "name": "Origin Sonic Vault",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x80c864704DD06C3693ed5179190786EE38ACf835",
+      "network": "base",
+      "name": "BridgedWOETHStrategy",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x596B0401479f6DfE1cAF8c12838311FeE742B95c",
+      "network": "sonic",
+      "name": "Sonic Staking Strategy",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xDcEe70654261AF21C44c093C300eD3Bb97b78192",
+      "network": "ethereum",
+      "name": "wOETH Token",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xf817cb3092179083c48c014688d98b72fb61464f",
+      "network": "base",
+      "name": "Timelock",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x9F0dF7799f6FDAd409300080cfF680f5A23df4b1",
+      "network": "sonic",
+      "name": "Wrapped Origin Sonic",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x1D3Fbd4d129Ddd2372EA85c5Fa00b2682081c9EC",
+      "network": "ethereum",
+      "name": "Governor / Timelock",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xdbfefd2e8460a6ee4955a68582f85708baea60a3",
+      "network": "base",
+      "name": "SuperOETHb Token",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xEDf495F92c2eBdEE8B797E9C503aA7A3302A9c88",
+      "network": "ethereum",
+      "name": "CompoundingStakingStrategyView",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xc4444C5D9e7C1a5A0a01c5E4b11692d589DcAF22",
+      "network": "ethereum",
+      "name": "BeaconProofs",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x95c347d6214614a780847b8aaf4f96eb84f4da6d",
+      "network": "ethereum",
+      "name": "Migrator",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x39254033945AA2E4809Cc2977E7087BEE48bd7Ab",
+      "network": "ethereum",
+      "name": "OETH Vault",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x5b72992e9CDe8C07CE7C8217eB014EC7fD281f03",
+      "network": "sonic",
+      "name": "Origin Sonic Dripper",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x2A8e1E676Ec238d8A992307B495b45B3fEAa5e86",
+      "network": "ethereum",
+      "name": "OUSD",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x98a0cbef61bd2d21435f433be4cd42b56b38cc93",
+      "network": "base",
+      "name": "SuperOETHb Vault",
+      "type": "Bounty Scope"
+    }
+  ],
   "source": "whiteclaws",
   "branding": {
     "primary": "#0878E8",
@@ -78,6 +241,6 @@
   "eligibility": [
     "KYC verification required before payout",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
   ]
 }

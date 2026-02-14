@@ -35,7 +35,38 @@
     }
   },
   "source": "whiteclaws",
-  "contracts": [],
+  "contracts": [
+    {
+      "address": "0x6e5430C10fce10e5c6F67dC54506e4564dD7A6E5",
+      "network": "base",
+      "name": "TransferBlacklistHook",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x69dd4d44eed6bbc33b8a0bdfe17897ab9044372e",
+      "network": "base",
+      "name": "PriceAndFeeCalculator",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x000000000001CdB57E58Fa75Fe420a0f4D6640D5",
+      "network": "base",
+      "name": "MultiDepositervault",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x18cf8d963e1a727f9bbf3aeffa0bd04fb4dbda07",
+      "network": "base",
+      "name": "Provisioner",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xdDfd960a7150520548dD1F6E53CC2f201b364692",
+      "network": "base",
+      "name": "Whitelist",
+      "type": "Bounty Scope"
+    }
+  ],
   "scope": {
     "in_scope": [
       "Core protocol smart contracts",
@@ -89,6 +120,6 @@
     "KYC verification required before payout",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
   ]
 }

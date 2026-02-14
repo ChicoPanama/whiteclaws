@@ -54,6 +54,12 @@
       "network": "ethereum",
       "name": "SSVDAO",
       "type": "Governance"
+    },
+    {
+      "address": "0xafE830B6Ee262ba11cce5F32fDCd760FFE6a66e4",
+      "network": "ethereum",
+      "name": "SSV Network View",
+      "type": "Bounty Scope"
     }
   ],
   "scope": {
@@ -113,6 +119,6 @@
   "eligibility": [
     "KYC verification required before payout",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
   ]
 }

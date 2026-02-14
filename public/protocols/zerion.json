@@ -31,7 +31,182 @@
     }
   },
   "source": "whiteclaws",
-  "contracts": [],
+  "contracts": [
+    {
+      "address": "0xB2BE281e8b11b47FeC825973fc8BB95332022A54",
+      "network": "ethereum",
+      "name": "DEFI_SDK_ROUTER_ADDRESS",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xd291328a6c202c5b18dcb24f279f69de1e065f70",
+      "network": "ethereum",
+      "name": "DEFI_SDK_CORE_ADDRESS",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x8B62C02091FE06AE3454D3c12921B32611Ba5501",
+      "network": "ethereum",
+      "name": "AAVE_ASSET_ADAPTER",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x445830226347ef75867502e00e8D663842114F19",
+      "network": "ethereum",
+      "name": "WETH_ASSET_ADAPTER",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xE1F28c0D8527eb28784bA15F6FF0A4371d7598E1",
+      "network": "ethereum",
+      "name": "UNISWAP_ASSET_ADAPTER",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x3b862d6f9ef92D3fF2142EC80A8968895B09127F",
+      "network": "ethereum",
+      "name": "SUSHISWAP_EXCHANGE_ADAPTER",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xb8d9Ee15858799f9205a8d119C5050540feED6A5",
+      "network": "ethereum",
+      "name": "COMPOUND_ASSET_ADAPTER",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x77515760f30121Ea22D1cB9Fedcd5DD1BD8d3f15",
+      "network": "ethereum",
+      "name": "AAVE_ASSET_ADAPTER",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x30EC4Ba79d951FA780b3B09158002854B6067847",
+      "network": "ethereum",
+      "name": "AAVE_V2_ASSET_ADAPTER",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x1CeeA546AB6A3A3ee7Bc24cB1fac9e9Fe39a7368",
+      "network": "ethereum",
+      "name": "CURVE_ASSET_ADAPTER",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x8Da0A907a1bdbB440D1fdb450672a8C003bc4f3A",
+      "network": "ethereum",
+      "name": "CURVE_EXCHANGE_ADAPTER",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xD893569CEf4AE3603bb7d688ca9d9C7111706cb3",
+      "network": "ethereum",
+      "name": "BALANCER_ASSET_ADAPTER",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x6E02147cef2f078Da89f5913363C90420D934799",
+      "network": "ethereum",
+      "name": "BALANCER_V2_ASSET_ADAPTER",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x3516CA4cB19ECcc401a9C0D13C7fDb6b73990979",
+      "network": "ethereum",
+      "name": "YEARN_ASSET_ADAPTER",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xab1C497D853296881FE65BeD48861eFD6CeB74Ee",
+      "network": "ethereum",
+      "name": "TOKEN_SET_REBALANCING_ADAPTER",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x76Ee466c5957310cfB793AC21097FE5786665961",
+      "network": "ethereum",
+      "name": "TOKEN_SET_NAV_ADAPTER",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xAd748736E9436C8CB155a1F37c725C5a5170ba4A",
+      "network": "ethereum",
+      "name": "TOKEN_SET_BASIC_ADAPTER",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x0A1D55a66F89b683163FefC7AaCD83fECc9872B1",
+      "network": "ethereum",
+      "name": "BALANCER_MULTIINPUT_ADAPTER",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x2BcDedbEB99Fb3B9383Fd686faAbDb6172FC6503",
+      "network": "ethereum",
+      "name": "ONE_INCH_EXCHANGE_V2_ADAPTER",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xe6189b3Ad3Fb3fAa87A336F00c93ECd3ac25d80d",
+      "network": "ethereum",
+      "name": "ONE_INCH_EXCHANGE_V3_ADAPTER",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xD8f929FB13DAe09AAb49d812b8D0c80682d53696",
+      "network": "ethereum",
+      "name": "ONE_INCH_LP_ASSET_ADAPTER",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xe8C49A47f4385cCb6C90F5Fb0c0Aedc7E6e79EB0",
+      "network": "ethereum",
+      "name": "ZERO_EX_EXCHANGE_ADAPTER",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xC9d30Ea2188eF0525b6328173FC9101539D2AA5A",
+      "network": "ethereum",
+      "name": "DODO_ASSET_ADAPTER",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x278e57924Cd50cbE436586b35b8a1D5df9181165",
+      "network": "ethereum",
+      "name": "DODO_V2_ASSET_ADAPTER",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xAA048b52c765222008072472c5C2c2D47C02b4f1",
+      "network": "ethereum",
+      "name": "OUSD_ASSET_ADAPTER",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x31eb370a944213482B1B8990dC5A196d06b63F84",
+      "network": "ethereum",
+      "name": "ALPHA_HOMORA_V2_ASSET_ADAPTER",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xe07C8e0f18083E66C65522Befc29887231ca3629",
+      "network": "ethereum",
+      "name": "AMUN_BASKET_ASSET_ADAPTER",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x784d97c29Ef870eB5D94c90B146d86d829384FC6",
+      "network": "ethereum",
+      "name": "AMUN_LENDING_ASSET_ADAPTER",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xc63e807bC6D65b84971b0A8CF8A673e551C9F85a",
+      "network": "ethereum",
+      "name": "AMUN_LIQUIDITY_ASSET_ADAPTER",
+      "type": "Bounty Scope"
+    }
+  ],
   "scope": {
     "in_scope": [
       "Core protocol smart contracts",
@@ -80,6 +255,6 @@
     "KYC verification required before payout",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
   ]
 }

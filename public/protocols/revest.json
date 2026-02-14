@@ -31,7 +31,92 @@
     }
   },
   "source": "whiteclaws",
-  "contracts": [],
+  "contracts": [
+    {
+      "address": "0xD721A90dd7e010c8C5E022cc0100c55aC78E0FC4",
+      "network": "ethereum",
+      "name": "AddressRegistry",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x226124E83868812D3Dae87eB3C5F28047E1070B7",
+      "network": "ethereum",
+      "name": "LockManager",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x120a3879da835A5aF037bB2d1456beBd6B54d4bA",
+      "network": "ethereum",
+      "name": "RevestToken",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xA81bd16Aa6F6B25e66965A2f842e9C806c0AA11F",
+      "network": "ethereum",
+      "name": "TokenVault",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x412c1197E1d7F1C0FDF22998737D3E329eF42F1B",
+      "network": "ethereum",
+      "name": "Revest",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xa4e7f2a1edb5ad886baa09fb258f8aca7c934ba6",
+      "network": "ethereum",
+      "name": "RewardsHandler",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xe952bda8c06481506e4731C4f54CeD2d4ab81659",
+      "network": "ethereum",
+      "name": "FNFTHandler",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xED232B965F7d4162F64cD820Cd042Da2a4B0db18",
+      "network": "ethereum",
+      "name": "MetadataHandler",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xED941C481A6F602e47C871A6Ac53fcE4798cD992",
+      "network": "ethereum",
+      "name": "ChainlinkOracleDispatch",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xeb3bc40acebabf62d31b0d52fe3ff327b7c82cbc",
+      "network": "ethereum",
+      "name": "Binary Combo Lock",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xfd7e5a314b46b41a97d0c5ee6f2a9559e877a756",
+      "network": "ethereum",
+      "name": "Supply Lock",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x07317ed9204c9e76df03f106ceffd5b021c5f6a5",
+      "network": "ethereum",
+      "name": "Admin Time Lock",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x86169239aeeedefb9a571c952b809f2681c0e209",
+      "network": "ethereum",
+      "name": "Staking",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xb80f5a586bc247d993e6dbacd8add211ec6b0ca5",
+      "network": "fantom",
+      "name": "Revest-Liquid Driver Integration",
+      "type": "Bounty Scope"
+    }
+  ],
   "scope": {
     "in_scope": [
       "Core protocol smart contracts",
@@ -77,9 +162,9 @@
     }
   },
   "eligibility": [
-    "Open to all researchers \u2014 pseudonymous submissions accepted",
+    "Open to all researchers — pseudonymous submissions accepted",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
   ]
 }

@@ -31,7 +31,62 @@
     }
   },
   "source": "whiteclaws",
-  "contracts": [],
+  "contracts": [
+    {
+      "address": "0x0f864A3e50D1070adDE5100fd848446C0567362B",
+      "network": "ethereum",
+      "name": "caUSDT",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xF61159B4a0EE5b1615c9Afb3dA38111043344c32",
+      "network": "ethereum",
+      "name": "caRPC",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xDa5928d59ECE82808Af2cbBE4f2872FeA8E12CD6",
+      "network": "ethereum",
+      "name": "caWBTC",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x0b9af1fd73885aD52680A1aeAa7A3f17AC702afA",
+      "network": "ethereum",
+      "name": "Unitroller",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xf80eeec09f417Fa7FCc4A848Ef03af9dF2658d7B",
+      "network": "ethereum",
+      "name": "caWARS",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x00dc4965916e03A734190fA382633657c71f867E",
+      "network": "ethereum",
+      "name": "Comptroller",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xc3aD34De18B59A24BD0877e454Fb924181F09C8f",
+      "network": "ethereum",
+      "name": "caUSDC",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x0568F6cb5A0E84FACa107D02f81ddEB1803f3B50",
+      "network": "ethereum",
+      "name": "caLAC",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x37DE57183491Fa9745d8Fa5DCd950f0c3a4645c9",
+      "network": "ethereum",
+      "name": "caETH",
+      "type": "Bounty Scope"
+    }
+  ],
   "scope": {
     "in_scope": [
       "Core protocol smart contracts",
@@ -89,6 +144,6 @@
     "KYC verification required before payout",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
   ]
 }

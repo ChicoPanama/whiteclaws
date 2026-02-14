@@ -1935,6 +1935,16 @@ a { color: inherit; text-decoration: none; }
   border-radius: 4px;
   border: 1px solid var(--brand-border, var(--border));
 }
+.pd-contract-type--scope {
+  background: rgba(34,197,94,.12);
+  color: #22c55e;
+  border-color: rgba(34,197,94,.25);
+}
+.pd-contract-type--out {
+  background: rgba(245,158,11,.10);
+  color: #f59e0b;
+  border-color: rgba(245,158,11,.22);
+}
 
 .pd-contract-addr-row {
   display: flex;

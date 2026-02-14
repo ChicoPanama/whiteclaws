@@ -31,7 +31,170 @@
     }
   },
   "source": "whiteclaws",
-  "contracts": [],
+  "contracts": [
+    {
+      "address": "0x5bEA99BF18624AA504580546Ac9D9Ac3b9aeb747",
+      "network": "arbitrum",
+      "name": "ProxyAdmin (V2)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xdA381aeD086f544BaC66e73C071E158374cc105B",
+      "network": "arbitrum",
+      "name": "TimelockController (V2)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xDaD8A103473dfd47F90168A0E46766ed48e26EC7",
+      "network": "arbitrum",
+      "name": "MarketFactory",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x8CDa59615C993f925915D3eb4394BAdB3feEF413",
+      "network": "arbitrum",
+      "name": "OracleFactory",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xeea68DbE228210454D4443f4E1B37E842B848C3d",
+      "network": "arbitrum",
+      "name": "PayoffFactory",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x9F35B78c6502e2B19D45Dc275f24462B0fa577B4",
+      "network": "arbitrum",
+      "name": "PythFactory",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xad3565680aEcEe27A39249D8c2D55dAc79BE5Ad0",
+      "network": "arbitrum",
+      "name": "VaultFactory",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x2C19eac953048801FfE1358D109A1Ac2aF7930fD",
+      "network": "ethereum",
+      "name": "ChainlinkOracle_ETH",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x2d264EBDb6632A06A1726193D4d37FeF1E5dbDcd",
+      "network": "ethereum",
+      "name": "Collateral_Proxy",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x9df509186b6d3b7D033359f94c8b1BB5544d51b3",
+      "network": "ethereum",
+      "name": "Controller_Proxy",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xfC20BccA96BDE758E9C69151d99cEcfEAE3AB37E",
+      "network": "ethereum",
+      "name": "Forwarder",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xE77076D3EeE12dA1d7402Ff4e6Ca12A8d99FcE8B",
+      "network": "ethereum",
+      "name": "MultiInvoker_Proxy",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x69a682F90d58c8D1ABEa18aE1bc98c9A1be4f2EB",
+      "network": "ethereum",
+      "name": "Incentivizer_Proxy",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xD260A68a081f1D92f5Eb1F0aFDB29f00836dfa6b",
+      "network": "ethereum",
+      "name": "ProxyAdmin",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x13b7A79e050ef2C3fDc858EFD5c066c3655be841",
+      "network": "ethereum",
+      "name": "TimelockController",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x841d7C994aC0Bb17CcD65a021E686e3cFafE2118",
+      "network": "ethereum",
+      "name": "Product_UpgradeableBeacon",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xAEf566ca7E84d1E736f999765a804687f39D9094",
+      "network": "ethereum",
+      "name": "TwoWayBatcher",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xe8ee3b7d74bd6eebba0992353b9fec66abf28dc8",
+      "network": "arbitrum",
+      "name": "ChainlinkOracle_ETH",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xAF8CeD28FcE00ABD30463D55dA81156AA5aEEEc2",
+      "network": "arbitrum",
+      "name": "Collateral_Proxy",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xA59eF0208418559770a48D7ae4f260A28763167B",
+      "network": "arbitrum",
+      "name": "Controller_Proxy",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xe72E82b672d7D3e206327C0762E9805fbFCBCa92",
+      "network": "arbitrum",
+      "name": "MultiInvoker_Proxy",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xfC20BccA96BDE758E9C69151d99cEcfEAE3AB37E",
+      "network": "arbitrum",
+      "name": "Incentivizer_Proxy",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x4f75cFbfc8b4A109659471b8d4593f5b19Be169B",
+      "network": "arbitrum",
+      "name": "ProxyAdmin",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x4AA8B447417815807b955757a6D1b78b86f3aD22",
+      "network": "arbitrum",
+      "name": "TimelockController",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xC12b0fE62441bAAd525cd7d770cf21C883C77bc6",
+      "network": "arbitrum",
+      "name": "Product_UpgradeableBeacon",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x5a572b5fbbc43387b5ef8de2c4728a4108ef24a6",
+      "network": "arbitrum",
+      "name": "Balanced Vault",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x1960628db367281B1a186dD5B80B5dd6978F016F",
+      "network": "arbitrum",
+      "name": "Balanced Vault",
+      "type": "Bounty Scope"
+    }
+  ],
   "scope": {
     "in_scope": [
       "AMM / swap router smart contracts",
@@ -62,7 +225,7 @@
   "program_rules": [
     "Proof of Concept is required for all submissions. Reports without a working PoC demonstrating the vulnerability will not be considered.",
     "KYC verification is required before bounty payout. Researchers must complete identity verification to receive rewards.",
-    "This program follows Primacy of Impact \u2014 valid findings are rewarded based on demonstrated impact regardless of whether the specific attack vector was previously known.",
+    "This program follows Primacy of Impact — valid findings are rewarded based on demonstrated impact regardless of whether the specific attack vector was previously known.",
     "Only previously unreported vulnerabilities are eligible. Duplicate submissions will be closed.",
     "Vulnerabilities must be reported through the WhiteClaws platform. Public disclosure before resolution disqualifies the submission.",
     "Testing must not disrupt live protocol operations. Use mainnet forks or testnets for Proof of Concept execution."
@@ -87,6 +250,6 @@
     "KYC verification required before payout",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
   ]
 }

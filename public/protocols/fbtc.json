@@ -31,7 +31,188 @@
     }
   },
   "source": "whiteclaws",
-  "contracts": [],
+  "contracts": [
+    {
+      "address": "0xbee335BB44e75C4794a0b9B54E8027b111395943",
+      "network": "mantle",
+      "name": "FireBridge",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x80b534D4bB3D809FbDA809DCB26D3f220634AED7",
+      "network": "mantle",
+      "name": "Minter",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xC96dE26018A54D51c097160568752c4E3BD6C364",
+      "network": "mantle",
+      "name": "FToken",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xd12D39E682715a40dbC860fa07F02bF48841294e",
+      "network": "mantle",
+      "name": "FeeModel",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x09e4c43eD89E5972df026d94FdA3a7680637c59A",
+      "network": "mantle",
+      "name": "GovernorModule",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x4697F9b54Bf24776b81f42A5E2Da81FBA3763bA4",
+      "network": "mantle",
+      "name": "Factory Contract",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xbee335BB44e75C4794a0b9B54E8027b111395943",
+      "network": "ethereum",
+      "name": "FireBridge",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x80b534D4bB3D809FbDA809DCB26D3f220634AED7",
+      "network": "ethereum",
+      "name": "Minter",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xC96dE26018A54D51c097160568752c4E3BD6C364",
+      "network": "ethereum",
+      "name": "FToken",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xd12D39E682715a40dbC860fa07F02bF48841294e",
+      "network": "ethereum",
+      "name": "FeeModel",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x09e4c43eD89E5972df026d94FdA3a7680637c59A",
+      "network": "ethereum",
+      "name": "GovernorModule",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x722b9348712418469DD6bb6c92C2560072537584",
+      "network": "ethereum",
+      "name": "Factory Contract",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xbee335BB44e75C4794a0b9B54E8027b111395943",
+      "network": "bsc",
+      "name": "FireBridge",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x80b534D4bB3D809FbDA809DCB26D3f220634AED7",
+      "network": "bsc",
+      "name": "Minter",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xC96dE26018A54D51c097160568752c4E3BD6C364",
+      "network": "bsc",
+      "name": "FToken",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x84cFc251F9cC8B2cf9cc1D6EaB3D2bEAA2C128F5",
+      "network": "bsc",
+      "name": "FeeModel",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x09e4c43eD89E5972df026d94FdA3a7680637c59A",
+      "network": "bsc",
+      "name": "GovernorModule",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x0Ed3bb37CD17d17bD18dB0D36558D57520D76292",
+      "network": "bsc",
+      "name": "Factory Contract",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xbee335BB44e75C4794a0b9B54E8027b111395943",
+      "network": "arbitrum",
+      "name": "FireBridge",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x80b534D4bB3D809FbDA809DCB26D3f220634AED7",
+      "network": "arbitrum",
+      "name": "Minter",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xC96dE26018A54D51c097160568752c4E3BD6C364",
+      "network": "arbitrum",
+      "name": "FToken",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x84cFc251F9cC8B2cf9cc1D6EaB3D2bEAA2C128F5",
+      "network": "arbitrum",
+      "name": "FeeModel",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x0d771823c72CcCa4D74695934d5a346938914547",
+      "network": "arbitrum",
+      "name": "GovernorModule",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x0Ed3bb37CD17d17bD18dB0D36558D57520D76292",
+      "network": "arbitrum",
+      "name": "Factory Contract",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xbee335BB44e75C4794a0b9B54E8027b111395943",
+      "network": "bob",
+      "name": "FireBridge",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x80b534D4bB3D809FbDA809DCB26D3f220634AED7",
+      "network": "bob",
+      "name": "Minter",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xC96dE26018A54D51c097160568752c4E3BD6C364",
+      "network": "bob",
+      "name": "FToken",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x84cFc251F9cC8B2cf9cc1D6EaB3D2bEAA2C128F5",
+      "network": "bob",
+      "name": "FeeModel",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x0d771823c72CcCa4D74695934d5a346938914547",
+      "network": "bob",
+      "name": "GovernorModule",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xdDf20C1A73A2bCa6ad4D877EFe7c9029Ff82a37B",
+      "network": "bob",
+      "name": "Factory Contract",
+      "type": "Bounty Scope"
+    }
+  ],
   "scope": {
     "in_scope": [
       "Core protocol smart contracts",
@@ -86,6 +267,6 @@
     "KYC verification required before payout",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
   ]
 }

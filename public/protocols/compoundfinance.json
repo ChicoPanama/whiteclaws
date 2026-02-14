@@ -45,6 +45,138 @@
       "network": "ethereum",
       "name": "Compound V3 (cUSDCv3)",
       "type": "Core"
+    },
+    {
+      "address": "0x285617313887d43256F852cAE0Ee4de4b68D45B0",
+      "network": "ethereum",
+      "name": "cUSDCv3 Ext (Mainnet USDC)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x316f9708bB98af7dA9c68C1C3b5e79039cD336E3",
+      "network": "ethereum",
+      "name": "Configurator (Mainnet USDC)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x1EC63B5883C3481134FD50D5DAebc83Ecd2E8779",
+      "network": "ethereum",
+      "name": "Proxy Admin (Mainnet USDC)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xa7F7De6cCad4D83d81676717053883337aC2c1b4",
+      "network": "ethereum",
+      "name": "Comet Factory (Mainnet USDC)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x1B0e765F6224C21223AeA2af16c1C46E38885a40",
+      "network": "ethereum",
+      "name": "Rewards (Mainnet USDC)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x74a81F84268744a40FEBc48f8b812a1f188D80C3",
+      "network": "ethereum",
+      "name": "Bulker (Mainnet USDC)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x309a862bbC1A00e45506cB8A802D1ff10004c8C0",
+      "network": "ethereum",
+      "name": "Governor (Mainnet USDC)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x6d903f6003cca6255D85CcA4D3B5E5146dC33925",
+      "network": "ethereum",
+      "name": "Timelock (Mainnet USDC)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xc00e94Cb662C3520282E6f5717214004A7f26888",
+      "network": "ethereum",
+      "name": "COMP (Mainnet USDC)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xA17581A9E3356d9A858b789D68B4d866e593aE94",
+      "network": "ethereum",
+      "name": "cWETHv3 (Mainnet WETH)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xe2C1F54aFF6b38fD9DF7a69F22cB5fd3ba09F030",
+      "network": "ethereum",
+      "name": "cWETHv3 Ext (Mainnet WETH)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xa397a8C2086C554B531c02E29f3291c9704B00c7",
+      "network": "ethereum",
+      "name": "Bulker (Mainnet WETH)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xBe9895146f7AF43049ca1c1AE358B0541Ea49704",
+      "network": "ethereum",
+      "name": "cbETH (Mainnet WETH)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xbf5495Efe5DB9ce00f80364C8B423567e58d2110",
+      "network": "ethereum",
+      "name": "ezETH (Mainnet WETH)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xf1C9acDc66974dFB6dEcB12aA385b9cD01190E38",
+      "network": "ethereum",
+      "name": "osETH (Mainnet WETH)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xae78736Cd615f374D3085123A210448E74Fc6393",
+      "network": "ethereum",
+      "name": "rETH (Mainnet WETH)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xA1290d69c65A6Fe4DF752f95823fae25cB99e5A7",
+      "network": "ethereum",
+      "name": "rsETH (Mainnet WETH)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+      "network": "ethereum",
+      "name": "WBTC (Mainnet WETH)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xCd5fE23C85820F7B72D0926FC9b05b43E359b7ee",
+      "network": "ethereum",
+      "name": "weETH (Mainnet WETH)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+      "network": "ethereum",
+      "name": "WETH (Mainnet WETH)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
+      "network": "ethereum",
+      "name": "wstETH (Mainnet WETH)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x3Afdc9BCA9213A35503b077a6072F3D0d5AB0840",
+      "network": "ethereum",
+      "name": "cUSDTv3 (Mainnet USDT)",
+      "type": "Bounty Scope"
     }
   ],
   "scope": {
@@ -114,6 +246,6 @@
     "KYC verification required before payout",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
   ]
 }

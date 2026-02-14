@@ -31,7 +31,92 @@
     }
   },
   "source": "whiteclaws",
-  "contracts": [],
+  "contracts": [
+    {
+      "address": "0x462Dd07A79e5DDfBe0C171449C5c01788d5d03C3",
+      "network": "ethereum",
+      "name": "Consensus Layer Fee Dispatcher",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xD36B422a7EE65219732724d849B8b6BceD6155Fe",
+      "network": "ethereum-goerli",
+      "name": "Consensus Layer Fee Dispatcher (testnet)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xE8EC6F702D68ded71112031D78bBFf959c7234C7",
+      "network": "ethereum",
+      "name": "Consensus Layer Fee Dispatcher Proxy",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x50Dba42662FD69f5Fd9236540aaD9f99f7F6b3b2",
+      "network": "ethereum-goerli",
+      "name": "Consensus Layer Fee Dispatcher Proxy (testnet)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xca4DD914fA713214844c84F153A5e1627536a7fC",
+      "network": "ethereum",
+      "name": "Execution Layer Fee Dispatcher",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xa69dDEBd0B6893A6F3d34A5df610d0E2ED433D18",
+      "network": "ethereum-goerli",
+      "name": "Execution Layer Fee Dispatcher (testnet)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x72b4C52f18f52EbA3E4290a002dF7c387427b058",
+      "network": "ethereum",
+      "name": "Execution Layer Fee Dispatcher Proxy",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x639d818639B85a1892Bfbb40Bd724b4Ddea43C0C",
+      "network": "ethereum-goerli",
+      "name": "Execution Layer Fee Dispatcher Proxy (testnet)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x933fBfeb4Ed1F111D12A39c2aB48657e6fc875C6",
+      "network": "ethereum",
+      "name": "Fee Recipient",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x1AcD717aDF8A3A1e4c23C6510cfbE76834E3f1bf",
+      "network": "ethereum-goerli",
+      "name": "Fee Recipient (testnet)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x0A7272e8573aea8359FEC143ac02AED90F822bD0",
+      "network": "ethereum",
+      "name": "Staking Contract",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xcd01846F1b37aCE16916969989C136e3c52ef7d2",
+      "network": "ethereum-goerli",
+      "name": "Staking Contract (testnet)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x1e68238ce926dec62b3fbc99ab06eb1d85ce0270",
+      "network": "ethereum",
+      "name": "Staking Contract Proxy",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xe8Ff2a04837aac535199eEcB5ecE52b2735b3543",
+      "network": "ethereum-goerli",
+      "name": "Staking Contract Proxy (testnet)",
+      "type": "Bounty Scope"
+    }
+  ],
   "scope": {
     "in_scope": [
       "Staking and delegation contracts",
@@ -86,6 +171,6 @@
     "KYC verification required before payout",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
   ]
 }

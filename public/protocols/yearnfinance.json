@@ -31,7 +31,176 @@
     }
   },
   "source": "whiteclaws",
-  "contracts": [],
+  "contracts": [
+    {
+      "address": "0x1d02F6A86Ed5650f93E40FCD62fa5727c32ad746",
+      "network": "ethereum",
+      "name": "yYB Reward Distributor",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xca12459a931643BF28388c67639b3F352fe9e5Ce",
+      "network": "ethereum",
+      "name": "Role Manager Factory",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x5A74Cb32D36f2f517DB6f7b0A0591e09b22cDE69",
+      "network": "ethereum",
+      "name": "Accountant",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xbC587a495420aBB71Bbd40A0e291B64e80117526",
+      "network": "ethereum",
+      "name": "Auction Factory",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x7Fd8Af959B54A677a1D8F92265Bd0714274C56a3",
+      "network": "ethereum",
+      "name": "yGauge Curve YFI-ETH",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x22222222aEA0076fCA927a3f44dc0B4FdF9479D6",
+      "network": "ethereum",
+      "name": "yYB Token",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xE9A115b77A1057C918F997c32663FdcE24FB873f",
+      "network": "ethereum",
+      "name": "yCRV Boosted Staker",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x770D0d1Fb036483Ed4AbB6d53c1C88fb277D812F",
+      "network": "ethereum",
+      "name": "3.0.4 Vault V3 Factory",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xB226c52EB411326CdB54824a88aBaFDAAfF16D3d",
+      "network": "ethereum",
+      "name": "yCRV Boosted Staker Reward Distributor",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xFCc5c47bE19d06BF83eB04298b026F81069ff65b",
+      "network": "ethereum",
+      "name": "yCRV contract",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x7dC3A74F0684fc026f9163C6D5c3C99fda2cf60a",
+      "network": "ethereum",
+      "name": "dYFI",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x2fBa208E1B2106d40DaA472Cb7AE0c6C7EFc0224",
+      "network": "ethereum",
+      "name": "dYFI Redemption",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xD377919FA87120584B21279a491F82D5265A139c",
+      "network": "ethereum",
+      "name": "3.0.4 Tokenized Strategy",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x1111111Ecd5Ae05422aeCe517072ec33Dbf34af9",
+      "network": "ethereum",
+      "name": "yYB Operator",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xb287a1964AEE422911c7b8409f5E5A273c1412fA",
+      "network": "ethereum",
+      "name": "YFI Reward Pool",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x46b38522422D597dDbAA2D6E98D6C9b397028d5B",
+      "network": "ethereum",
+      "name": "veYFI Gauge Controller",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xF728f839796a399ACc2823c1e5591F05a31c32d1",
+      "network": "ethereum",
+      "name": "Accountant Factory",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x0bc529c00c6401aef6d220be8c6ea1667f6ad93e",
+      "network": "ethereum",
+      "name": "YFI Token",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x2391Fc8f5E417526338F5aa3968b1851C16D894E",
+      "network": "ethereum",
+      "name": "dYFI Reward Pool",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x03D43dF6FF894C848fC6F1A0a7E8a539Ef9A4C18",
+      "network": "ethereum",
+      "name": "Debt Allocator Factory",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xd0660cd418a64a1d44e9214ad8e459324d8157f1",
+      "network": "ethereum",
+      "name": "Woofy Token",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x1D0fdCb628b2f8c0e22354d45B3B2D4cE9936F8B",
+      "network": "ethereum",
+      "name": "veYFI Gauge Registry",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x5D2eA33449A60a70E8FCdc5251FDd86a030fAD91",
+      "network": "ethereum",
+      "name": "yYB Boosted Staker",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xf8dF17a35c88AbB25e83C92f9D293B4368b9D52D",
+      "network": "ethereum",
+      "name": "Common Report Trigger",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xe28fCC9FB2998ba57754789F6666DAa8C815614D",
+      "network": "ethereum",
+      "name": "Splitter Factory",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xd8063123BBA3B480569244AE66BFE72B6c84b00d",
+      "network": "ethereum",
+      "name": "3.0.4 Vault V3 ",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x90c1f9220d90d3966FbeE24045EDd73E1d588aD5",
+      "network": "ethereum",
+      "name": "veYFI",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x0000000C90799449af8eE0B240Da639144a36C6A",
+      "network": "ethereum",
+      "name": "yYB Locker",
+      "type": "Bounty Scope"
+    }
+  ],
   "scope": {
     "in_scope": [
       "Yield vault and strategy contracts",
@@ -82,9 +251,9 @@
     }
   },
   "eligibility": [
-    "Open to all researchers \u2014 pseudonymous submissions accepted",
+    "Open to all researchers — pseudonymous submissions accepted",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
   ]
 }

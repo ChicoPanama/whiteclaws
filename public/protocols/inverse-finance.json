@@ -60,6 +60,186 @@
       "network": "ethereum",
       "name": "DOLA",
       "type": "Stablecoin"
+    },
+    {
+      "address": "0x67fc21332d24fc5250a3b7fc988191ad7f38f9cc",
+      "network": "ethereum",
+      "name": "FED - PSMFed v2",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x1d02f2841afa3cc20435a8c804c24deac5f30dfa",
+      "network": "ethereum",
+      "name": "DOLA - PSM v2",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xD68d3a44d46dd50BFeBa8Cca544717B76e7C4b29",
+      "network": "ethereum",
+      "name": "FiRM - Convex DOLA-sUSDS Market",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x80842059330945523B0Fa0592FD53568D813F8E0",
+      "network": "ethereum",
+      "name": "FiRM - CurveDolaLPHelper v2",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x926df14a23be491164dcf93f4c468a50ef659d5b",
+      "network": "ethereum",
+      "name": "DAO - Treasury",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x63d27fc9d463ed727676367d3f818999962737e8",
+      "network": "ethereum",
+      "name": "FiRM - Convex sDola-scrvUSD Market",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xc182eb519D7E6d9a6200e93a761edF6A8bB65E6F",
+      "network": "ethereum",
+      "name": "FiRM - Yearn LP Feed (DOLA/sUSDS Market)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x63fAd99705a255fE2D500e498dbb3A9aE5AA1Ee8",
+      "network": "ethereum",
+      "name": "FiRM - CRV Market",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xb427fc22561f3963b04202f9bb5bcebd76c14a99",
+      "network": "ethereum",
+      "name": "FiRM - Convex DOLA-sUSDe Market",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xfc63C9c8Ba44AE89C01265453Ed4F427C80cBd4E",
+      "network": "optimism",
+      "name": "Optimism sDOLA",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x48BA574Edf0bc4E2E40B529863aaA6a67c264E7C",
+      "network": "ethereum",
+      "name": "FiRM - wBTC Market",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x37253d743d9edfd2d9aae1f1d08cfaaf805f4564",
+      "network": "ethereum",
+      "name": "FiRM - Yearn sDola-scrvUSD Feed",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xd5A3416f7863f306Ca7CD9B12f067FFFd5D57a61",
+      "network": "ethereum",
+      "name": "ExchangeRateUpdater (sDOLA)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xb1e65dbd24bf85ce8e0cb0dd93297144020a4cb8",
+      "network": "ethereum",
+      "name": "FiRM - Yearn DOLA/USR Feed",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x1ba87bE4C20Fa2d4cbD8e4Ae9998649226207F76",
+      "network": "ethereum",
+      "name": "DAO - MultiDelegator",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xb45ad160634c528cc3d2926d9807104fa3157305",
+      "network": "ethereum",
+      "name": "DOLA - sDOLA",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x1ff9c712b011cbf05b67a6850281b13ca27ecb2a",
+      "network": "ethereum",
+      "name": "Debt Repayments - Debt Converter",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x1dfE66A6265D071E433675e97A53Ed4932aBD774",
+      "network": "ethereum",
+      "name": "FiRM - ERC-4626 escrow",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xabe146cf570fd27ddd985895ce9b138a7110cce8",
+      "network": "ethereum",
+      "name": "FiRM - Oracle",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x0c0bb843fabda441edefb93331cfff8ec92bd168",
+      "network": "ethereum",
+      "name": "FiRM - st-yETH Market",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xb8bc1e9c0a2d445bc39d2a745f47619e954dd565",
+      "network": "ethereum",
+      "name": "FiRM - Yearn sDola-scrvUSD Market",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x6C5Fdc0c53b122Ae0f15a863C349f3A481DE8f1F",
+      "network": "ethereum",
+      "name": "DOLA - MainnetDolaFlashMinterV2",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xDE1697A5da5d06904C9755E3FC287D215579Daf0",
+      "network": "berachain",
+      "name": "ExchangeRateUpdater (sDOLA)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xdB0AAF9E1291A43fd7eeBD2967dca27e2BAba140",
+      "network": "ethereum",
+      "name": "FiRM - DOLA-sUSDS Feed",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x4ef6ba5ef7ddb259ad98cd86e1a282884cbe0c0f",
+      "network": "ethereum",
+      "name": "FiRM - CrvUSD-DOLA LP Feed",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xaf956837af704d825c1fcbe2651d5c3c37ad5289",
+      "network": "optimism",
+      "name": "Optimism GovernanceProxy (sDOLA)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x1230bd56bf23Bf7adF95b9F861711301E3CCd6b3",
+      "network": "arbitrum",
+      "name": "CCIP - Arbi GovernanceProxy (sINV)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x4e521fe7a9084067096d45a312b8feee39d5f1f3",
+      "network": "ethereum",
+      "name": "GovernanceSender (sDOLA)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xCbB162B761B83578b2a0226cbAf4C1adE0d60B2e",
+      "network": "optimism",
+      "name": "CCIP - Opti GovernanceProxy (sINV)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x0266445Ea652F8467cbaA344Fcf531FF8f3d6462",
+      "network": "ethereum",
+      "name": "FiRM - Convex Curve Price Feed",
+      "type": "Bounty Scope"
     }
   ],
   "source": "whiteclaws",
@@ -94,6 +274,6 @@
   "eligibility": [
     "KYC verification required before payout",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
   ]
 }

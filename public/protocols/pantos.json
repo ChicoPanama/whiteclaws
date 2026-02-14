@@ -31,7 +31,188 @@
     }
   },
   "source": "whiteclaws",
-  "contracts": [],
+  "contracts": [
+    {
+      "address": "0xEa949C52CA24B75A850591f98F1aA7736fD9a28E",
+      "network": "ethereum-holesky",
+      "name": "Pantos Hub",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xd07D3e1A11b75e4A84b0e36dC4b3734721F27793",
+      "network": "ethereum-holesky",
+      "name": "Pantos forwarder",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x2b3919b38B71c3ef575062CdfFc82f18d29Fe9F0",
+      "network": "ethereum-holesky",
+      "name": "PAN",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xC1e83DF551e95027A65925CC8bCfe80Db7078f21",
+      "network": "ethereum-holesky",
+      "name": "BEST",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x1d721765e6653aa1AA0143E5AD57FDe5c88F4957",
+      "network": "ethereum-holesky",
+      "name": "panAVAX",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xCaAe667bCd58577855e65241E07729F2BD85B99A",
+      "network": "ethereum-holesky",
+      "name": "panBNB",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xD0125Ba97A9af4aA51f020338B2521029c298578",
+      "network": "ethereum-holesky",
+      "name": "panETH",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x45C616585a359D9c3569bFFa72110826ab254f24",
+      "network": "ethereum-holesky",
+      "name": "panPOL",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xc4043292e51bd6C83D4740C97Bf7982BD6D60Bc8",
+      "network": "ethereum-holesky",
+      "name": "panCRO",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x331E90D2E72D6E5b1E6D5b661e21Ef505b3FDf45",
+      "network": "ethereum-holesky",
+      "name": "panS",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x80D1805cd4435FbF32aeD0BA2a81b1ACDbC2d444",
+      "network": "ethereum-holesky",
+      "name": "panCELO",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xbC953ac25cCf906Cf229EbE5C0f5101a253E94C3",
+      "network": "bsc-testnet",
+      "name": "Pantos Hub",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x586901f5391caaB3968194f4F76A6157993a4Bf4",
+      "network": "bsc-testnet",
+      "name": "Pantos forwarder",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x14Aa1254a741Cb742455bef48edc4018D3adb58B",
+      "network": "bsc-testnet",
+      "name": "PAN",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x8c517E9B0902DabB1c31347adB34CdF0b7a742Dc",
+      "network": "bsc-testnet",
+      "name": "BEST",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xF07B582f28B60178071FB8368fdFA4281BA0E500",
+      "network": "bsc-testnet",
+      "name": "panAVAX",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xCcF392D19b948E2fe11DB40E3FD0eeE6aE5F2ccf",
+      "network": "bsc-testnet",
+      "name": "panBNB",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x467cD471265Cd87832895CE872d0E4f4B08777c5",
+      "network": "bsc-testnet",
+      "name": "panETH",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x31259a74b8b94624f9f3Bdb3F4d53dF6006e5a90",
+      "network": "bsc-testnet",
+      "name": "panPOL",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xa153697d318F5BE360EA5F690F145315bF91a413",
+      "network": "bsc-testnet",
+      "name": "panCRO",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x49F196f1F17Cf73Ddf747f924a617655a7227283",
+      "network": "bsc-testnet",
+      "name": "panS",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x4842A05b1D64905C3e6209fd0F73E1D6c6458D0A",
+      "network": "bsc-testnet",
+      "name": "panCELO",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xbC953ac25cCf906Cf229EbE5C0f5101a253E94C3",
+      "network": "avalanche-testnet",
+      "name": "Pantos Hub",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x586901f5391caaB3968194f4F76A6157993a4Bf4",
+      "network": "avalanche-testnet",
+      "name": "Pantos Forwarder",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x14Aa1254a741Cb742455bef48edc4018D3adb58B",
+      "network": "avalanche-testnet",
+      "name": "PAN",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x8c517E9B0902DabB1c31347adB34CdF0b7a742Dc",
+      "network": "avalanche-testnet",
+      "name": "BEST",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xF07B582f28B60178071FB8368fdFA4281BA0E500",
+      "network": "avalanche-testnet",
+      "name": "panAVAX",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xCcF392D19b948E2fe11DB40E3FD0eeE6aE5F2ccf",
+      "network": "avalanche-testnet",
+      "name": "panBNB",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x467cD471265Cd87832895CE872d0E4f4B08777c5",
+      "network": "avalanche-testnet",
+      "name": "panETH",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x31259a74b8b94624f9f3Bdb3F4d53dF6006e5a90",
+      "network": "avalanche-testnet",
+      "name": "panPOL",
+      "type": "Bounty Scope"
+    }
+  ],
   "scope": {
     "in_scope": [
       "Core protocol smart contracts",
@@ -89,6 +270,6 @@
     "KYC verification required before payout",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
   ]
 }

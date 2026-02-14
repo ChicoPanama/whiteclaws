@@ -36,7 +36,188 @@
     }
   },
   "source": "whiteclaws",
-  "contracts": [],
+  "contracts": [
+    {
+      "address": "0x1d7f221965e68475d44d1a8357f3211799b55e24",
+      "network": "ethereum",
+      "name": "Vault Implementation",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x15f7f910e5a8c86e609fd11c58f7342d86d3a25c",
+      "network": "ethereum",
+      "name": "VaultUpgradeableBeacon",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xEEEBc7537717a39b747015FEaE221C1F069daE0b",
+      "network": "ethereum",
+      "name": "ConnectorRegistry",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xA59a98872393BE8410C42f8EED13821fa85A32a1",
+      "network": "ethereum",
+      "name": "VaultFactory",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x0D97Fa6C8F668E98C1ED9f6bB9Ec6d245d11DF41",
+      "network": "ethereum",
+      "name": "AaveV3Connector",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xF259CF58d4ddc9E3C8AbEA3EEBA5710db3F71045",
+      "network": "ethereum",
+      "name": "CompoundV3Connector",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x08f80358Ce68363Ec06304cE667F1727246C852D",
+      "network": "ethereum",
+      "name": "CompoundV3MarketRegistry",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xb569824646a31fc950abe23B150d020c38B59D26",
+      "network": "ethereum",
+      "name": "SDAIConnector",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xF4918Ef824a242602E0d3e5DB07fFd4DaC4ad3Ea",
+      "network": "ethereum",
+      "name": "Bitcoin.com Spark DAI vault",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x59d323355F4b257097e041C4776b7492Ed294Ea4",
+      "network": "bsc",
+      "name": "Vault Implementation",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x50006F2C5C914cEF560ceeD7686f038480199202",
+      "network": "bsc",
+      "name": "VaultUpgradeableBeacon",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xdaAd68A24d658F8e123b8620Fd8249C340749eCf",
+      "network": "bsc",
+      "name": "ConnectorRegistry",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x004074879Bc69E9B95084580A6Cc132a19b7A3Ac",
+      "network": "bsc",
+      "name": "VaultFactory",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x124d426898eF174aa8D23f548fCfd13c34F91D2B",
+      "network": "bsc",
+      "name": "AaveV3Connector",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x4d1806C26A728f2e1b82b4549b9E074DBE5940B9",
+      "network": "bsc",
+      "name": "Cool Wallet AaveV3 USDT",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x55Ee64c446c44e2bDcbD4242341D4a5A2DD61034",
+      "network": "arbitrum",
+      "name": "Vault Implementation",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xB03DDF4375E879B8E3bc240527bc55988c975ac4",
+      "network": "arbitrum",
+      "name": "VaultUpgradeableBeacon",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x75df468D9Aa3438cd12d98606Bb71B73145e9972",
+      "network": "arbitrum",
+      "name": "ConnectorRegistry",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xd717eDe67EE3c5cAf385E392f2176c320E06Dd9d",
+      "network": "arbitrum",
+      "name": "VaultFactory",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x431ed6d951c0d97d9b33fb5e26bc589d75c3d05d",
+      "network": "arbitrum",
+      "name": "AaveV3Connector",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x0F3Fa73dcF101F328AbFdD9176Cd11a16BD7bc16",
+      "network": "arbitrum",
+      "name": "CompoundV3Connector",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x9cb057f462BBd076E5dD30C5f5d5dfa97ab006D3",
+      "network": "arbitrum",
+      "name": "CompoundV3MarketRegistry",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x19A0F016Ac3989e754ab8216810beD8503bDA37e",
+      "network": "arbitrum",
+      "name": "Bitnovo Compound v3 USDC",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xD04a891b7d4c42f51FCF6e88e47800dAec5B0CbF",
+      "network": "polygon",
+      "name": "Vault Implementation",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x89312A13D978820F15bC9414ef6ec9cC004C5D1f",
+      "network": "polygon",
+      "name": "VaultUpgradeableBeacon",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xB55BCCcc4837FD5E960944cf2828e202deBF0891",
+      "network": "polygon",
+      "name": "ConnectorRegistry",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x8cC927d0CFb6F9ddC4E6d20f5e5d23E8162eA602",
+      "network": "polygon",
+      "name": "VaultFactory",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xa85aa46892D9a0087B59883F417bF23C3Ab4c920",
+      "network": "polygon",
+      "name": "AaveV3Connector",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x03441c89e7b751bb570f9dc8c92702b127c52c51",
+      "network": "polygon",
+      "name": "Cool Wallet AaveV3 USDT",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x4094fc930CcFe3fc3A9369BE7335467dac8b20fa",
+      "network": "optimism",
+      "name": "Vault Implementation",
+      "type": "Bounty Scope"
+    }
+  ],
   "scope": {
     "in_scope": [
       "Staking and delegation contracts",
@@ -91,6 +272,6 @@
     "KYC verification required before payout",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
   ]
 }

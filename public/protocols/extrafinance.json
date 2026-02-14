@@ -31,7 +31,110 @@
     }
   },
   "source": "whiteclaws",
-  "contracts": [],
+  "contracts": [
+    {
+      "address": "0xf9cfb8a62f50e10adde5aa888b44cf01c5957055",
+      "network": "optimism",
+      "name": "VeloPositionManage (LYF)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xbb505c54d71e9e599cb8435b4f0ceec05fc71cbd",
+      "network": "optimism",
+      "name": "LendingPool (LYF)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x2dad3a13ef0c6366220f989157009e501e7938f8",
+      "network": "optimism",
+      "name": "EXTRA (LYF)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xb7d8613728efcfbb18bcd63deec06f64441d322a",
+      "network": "optimism",
+      "name": "RewardDistributor (LYF)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xe0bec4f45aef64cec9dcb9010d4beffb13e91466",
+      "network": "optimism",
+      "name": "VeToken (LYF)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x345D2827f36621b02B783f7D5004B4a2fec00186",
+      "network": "optimism",
+      "name": "Pool_Proxy (Lending Market)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x0353b6221b23b8320202320ca450eeb9fb0de9e5",
+      "network": "optimism",
+      "name": "Pool_Impl (Lending Market)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x2B275176804dd01b6a90d61bDa3c80E3A470662E",
+      "network": "optimism",
+      "name": "A_Token (Lending Market)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xC0C88d2752C58263c2b7F4Ac6ecBedC78eDD5d5E",
+      "network": "optimism",
+      "name": "Debt_Token (Lending Market)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xc1504B3D0e72C717151957ceb0252FF8f93A9A1e",
+      "network": "optimism",
+      "name": "PoolConfigurator (Lending Market)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x9378C2e058D87DE7F9EDbF3574eD5B4128980ADC",
+      "network": "optimism",
+      "name": "PoolConfiguratorImpl (Lending Market)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xA98cC6031Ba6908d73dC5615ca82B607096D721d",
+      "network": "optimism",
+      "name": "PoolAddressProvider (Lending Market)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x70Cdb45f5b0660c122708286198446d23872595f",
+      "network": "optimism",
+      "name": "ACL_Manager (Lending Market)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x90cF2763CC710B9Ce215584A89c77F70bbb96B44",
+      "network": "optimism",
+      "name": "ExtraXAccountFactoryProxy",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x345e8250cb11f61f0d8cfabac6be59a356309a58",
+      "network": "optimism",
+      "name": "ExtraXAccountFactoryImpl",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x1EEA0464D31F349D31FF7D318ce236F48AD92438",
+      "network": "optimism",
+      "name": "ExtraXAccountCreatorSafe130",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xd4b5D2A9F8e9Ec1883Ef997eB508EA6Cc12B240f",
+      "network": "optimism",
+      "name": "ExtraXAccountCreatorCoinbase",
+      "type": "Bounty Scope"
+    }
+  ],
   "scope": {
     "in_scope": [
       "Core protocol smart contracts",
@@ -62,7 +165,7 @@
   "program_rules": [
     "Proof of Concept is required for all submissions. Reports without a working PoC demonstrating the vulnerability will not be considered.",
     "KYC is not required for this program. Pseudonymous submissions are accepted.",
-    "This program follows Primacy of Impact \u2014 valid findings are rewarded based on demonstrated impact regardless of whether the specific attack vector was previously known.",
+    "This program follows Primacy of Impact — valid findings are rewarded based on demonstrated impact regardless of whether the specific attack vector was previously known.",
     "Only previously unreported vulnerabilities are eligible. Duplicate submissions will be closed.",
     "Vulnerabilities must be reported through the WhiteClaws platform. Public disclosure before resolution disqualifies the submission.",
     "Testing must not disrupt live protocol operations. Use mainnet forks or testnets for Proof of Concept execution."
@@ -84,9 +187,9 @@
     }
   },
   "eligibility": [
-    "Open to all researchers \u2014 pseudonymous submissions accepted",
+    "Open to all researchers — pseudonymous submissions accepted",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
   ]
 }

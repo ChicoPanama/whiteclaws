@@ -32,7 +32,74 @@
     }
   },
   "source": "whiteclaws",
-  "contracts": [],
+  "contracts": [
+    {
+      "address": "0x41545f8b9472D758bB669ed8EaEEEcD7a9C4Ec29",
+      "network": "ethereum",
+      "name": "Forta Token Proxy and corresponding implementation",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x107Ac13567b1b5D84691f890A5bA07EdaE1a11c3",
+      "network": "polygon",
+      "name": "Access Proxy and corresponding implementation",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xbb12476ab9f27d3b441964B0aFC03D14a82e1D64",
+      "network": "polygon",
+      "name": "Router Proxy and corresponding implementation",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x61447385B019187daa48e91c55c02AF1F1f3F863",
+      "network": "polygon",
+      "name": "Agents (Detection Bots) Proxy and corresponding implementation",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xbF2920129f83d75DeC95D97A879942cCe3DcD387",
+      "network": "polygon",
+      "name": "Scanners Proxy and corresponding implementation",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xd46832F3f8EA8bDEFe5316696c0364F01b31a573",
+      "network": "polygon",
+      "name": "Dispatch Proxy and corresponding implementation",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x356A8ee5D3bCc183c2c7853F11D19f4C7622396F",
+      "network": "polygon",
+      "name": "Forwarder",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x9ff62d1FC52A907B6DCbA8077c2DDCA6E6a9d3e1",
+      "network": "polygon",
+      "name": "Forta Token (Bridged) and corresponding implementation",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xd2863157539b1D11F39ce23fC4834B62082F6874",
+      "network": "polygon",
+      "name": "Staking Proxy and corresponding implementation",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x587969Add789c13F64Bcc34Ff253BD9BFB78f38a",
+      "network": "polygon",
+      "name": "Staking Parameters Proxy and corresponding implementation",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x4720c872425876B6f4b4E9130CDef667aDE553b2",
+      "network": "polygon",
+      "name": "Scanner Node Version Proxy and corresponding implementation",
+      "type": "Bounty Scope"
+    }
+  ],
   "scope": {
     "in_scope": [
       "Core protocol smart contracts",
@@ -81,6 +148,6 @@
     "KYC verification required before payout",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
   ]
 }

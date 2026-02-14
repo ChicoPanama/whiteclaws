@@ -31,7 +31,26 @@
     }
   },
   "source": "whiteclaws",
-  "contracts": [],
+  "contracts": [
+    {
+      "address": "0xcd17fa52528f37facb3028688e62ec82d9417581",
+      "network": "ethereum",
+      "name": "MTRM",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xd1d2eb1b1e90b638588728b4130137d262c87cae",
+      "network": "ethereum",
+      "name": "GALA",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xb045f7f363fe4949954811b113bd56d208c67b23",
+      "network": "ethereum",
+      "name": "SILK",
+      "type": "Bounty Scope"
+    }
+  ],
   "scope": {
     "in_scope": [
       "Core protocol smart contracts",
@@ -79,6 +98,6 @@
     "KYC verification required before payout",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
   ]
 }

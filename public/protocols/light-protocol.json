@@ -31,7 +31,32 @@
     }
   },
   "source": "whiteclaws",
-  "contracts": [],
+  "contracts": [
+    {
+      "address": "SySTEM1eSU2p4BGQfQpimFEWWSC1XDFeun3Nqzz3rT7",
+      "network": "solana",
+      "name": "Crate - light_system_program",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "compr6CUsB5m2jS4Y3831ztGSTnDpnKJTKS95d64XVq",
+      "network": "solana",
+      "name": "Crate - account_compression",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "Lighton6oQpVkeewmo2mcPTQQp7kYHr4fWpAgJyEmDX",
+      "network": "solana",
+      "name": "Crate - light_registry",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "cTokenmWW8bLPjZEBAUgYy3zKxQZW6VKi7bqNFEVv3m",
+      "network": "solana",
+      "name": "Crate - light_compressed_token",
+      "type": "Bounty Scope"
+    }
+  ],
   "scope": {
     "in_scope": [
       "Core protocol smart contracts",
@@ -89,6 +114,6 @@
     "KYC verification required before payout",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
   ]
 }

@@ -31,7 +31,50 @@
     }
   },
   "source": "whiteclaws",
-  "contracts": [],
+  "contracts": [
+    {
+      "address": "0x93e5260Ac975B475aF8BF818c14DEEE7fEfd5927",
+      "network": "base",
+      "name": "YO Multisig",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x3a43aec53490cb9fa922847385d82fe25d0e9de7",
+      "network": "base",
+      "name": "yoETH vault proxy",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xbCbc8cb4D1e8ED048a6276a5E94A3e952660BcbC",
+      "network": "base",
+      "name": "yoBTC vault proxy",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x0000000f2eb9f69274678c76222b35eec7588a65",
+      "network": "base",
+      "name": "yoUSD vault proxy",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xfd62e454a75357b039fed34a0c92b60ef115c713",
+      "network": "base",
+      "name": "yoVaults implementation contract",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xF1EeE0957267b1A474323Ff9CfF7719E964969FA",
+      "network": "base",
+      "name": "YOGateway proxy",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x0cf9a84bb9e916229f3037dc079ef418b97bb0cf",
+      "network": "base",
+      "name": "YOGateway implementation",
+      "type": "Bounty Scope"
+    }
+  ],
   "scope": {
     "in_scope": [
       "Core protocol smart contracts",
@@ -85,6 +128,6 @@
     "KYC verification required before payout",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
   ]
 }

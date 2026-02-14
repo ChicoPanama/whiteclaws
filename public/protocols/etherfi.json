@@ -31,7 +31,188 @@
     }
   },
   "source": "whiteclaws",
-  "contracts": [],
+  "contracts": [
+    {
+      "address": "0xF4e147Db314947fC1275a8CbB6Cde48c510cd8CF",
+      "network": "scroll",
+      "name": "EtherFiSafeFactory",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xc5F2764383f93259Fba1D820b894B1DE0d47937e",
+      "network": "scroll",
+      "name": "SettlementDispatcherPix",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xC1ab383b81fD81803a54c4d50A7b7d4A31a317b4",
+      "network": "scroll",
+      "name": "StargateModule",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x96bae80F91DA04a59CeF9dCE3bB1081De041C1d5",
+      "network": "scroll",
+      "name": "WormholeModule",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x9623e86Df854FF3b48F7B4079a516a4F64861Db2",
+      "network": "scroll",
+      "name": "SettlementDispatcherReap",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x83393192c7e8B3b9250312387f7C6B26495736aA",
+      "network": "scroll",
+      "name": "TopUpDestNativeGateway",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x7DA874f3BacA1A8F0af27E5ceE1b8C66A772F84E",
+      "network": "scroll",
+      "name": "CashLens",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x7Ca0b75E67E33c0014325B739A8d019C4FE445F0",
+      "network": "scroll",
+      "name": "CashModule",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x5D3c4f5CF2208bB54e8fd129730d01D82d4611b3",
+      "network": "scroll",
+      "name": "EtherFiHook",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x5C1E3D653fcbC54Ae25c2AD9d59548D2082C687B",
+      "network": "scroll",
+      "name": "RoleRegistry",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x51142BC586A7b4cbECDCD5B0C68064714B322CBC",
+      "network": "scroll",
+      "name": "BeHYPEStakeModule",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x50A233C4a0Bb1d7124b0224880037d35767a501C",
+      "network": "scroll",
+      "name": "SettlementDispatcherRain",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x4dEAa5f2e1CD1A792304d1649EdfA35D565F9346",
+      "network": "scroll",
+      "name": "OpenOceanSwapModule",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x44dd2372FE7B97C4B4D6a7d4DeCf72466485BAcB",
+      "network": "scroll",
+      "name": "PriceProvider",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x40c8438e9cc3B7817aeb117cd0d7B829c32bfEd8",
+      "network": "scroll",
+      "name": "EtherFiStakeModule",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x3a6A724595184dda4be69dB1Ce726F2Ac3D66B87",
+      "network": "scroll",
+      "name": "TopUpDest",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x2A0E60E26a118fF6F181B98666E6FD6BBf3e1826",
+      "network": "scroll",
+      "name": "EtherFiLiquidModule",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x2539031cD38e98317Cd246c8ED36F31117e6725b",
+      "network": "scroll",
+      "name": "SettlementDispatcherCardOrder",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x23C4dc847Cd876D4ca2C15b4a1EAD349dC705082",
+      "network": "scroll",
+      "name": "LiquidUSDLiquifierModule",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x0078C5a459132e279056B2371fE8A8eC973A9553",
+      "network": "scroll",
+      "name": "DebtManager",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xf76f1bea29b5f63409a9d9797540A8E7934B52ea",
+      "network": "ethereum",
+      "name": "PixWalletAutoTopup",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xF4e147Db314947fC1275a8CbB6Cde48c510cd8CF",
+      "network": "ethereum",
+      "name": "TopUpSourceFactory",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xeb39db7a020DB2ac0890d51F9d5b817e7ef2b1A3",
+      "network": "ethereum",
+      "name": "StargateAdapter",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x86016539796E660d4cD333459378763FaFFa6Eee",
+      "network": "ethereum",
+      "name": "EtherFiLiquidBridgeAdapter",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x55963de88267Aa3D1D995c359e8068D0Df34BEBb",
+      "network": "ethereum",
+      "name": "RoleRegistry",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x3E0ccbce6c3beC4826397005c877BE66C39D9912",
+      "network": "ethereum",
+      "name": "EtherFiOFTBridgeAdapter",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x319a33b9A3080c17A825E3A539c49A60bbB2E793",
+      "network": "ethereum",
+      "name": "ScrollERC20BridgeAdapter",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x16B4AE4D4c96793524084A22E6f4c160cad08975",
+      "network": "ethereum",
+      "name": "NTTAdapter",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x1b7a4c3797236a1c37f8741c0be35c2c72736fff",
+      "network": "ethereum",
+      "name": "EtherFiRestaker",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x9ffdf407cde9a93c47611799da23924af3ef764f",
+      "network": "ethereum",
+      "name": "Liquifier",
+      "type": "Bounty Scope"
+    }
+  ],
   "scope": {
     "in_scope": [
       "Staking and delegation contracts",
@@ -64,7 +245,7 @@
   "program_rules": [
     "Proof of Concept is required for all submissions. Reports without a working PoC demonstrating the vulnerability will not be considered.",
     "KYC verification is required before bounty payout. Researchers must complete identity verification to receive rewards.",
-    "This program follows Primacy of Impact \u2014 valid findings are rewarded based on demonstrated impact regardless of whether the specific attack vector was previously known.",
+    "This program follows Primacy of Impact — valid findings are rewarded based on demonstrated impact regardless of whether the specific attack vector was previously known.",
     "Submissions are triaged by the security team. Expect initial response within 48 hours of submission.",
     "Only previously unreported vulnerabilities are eligible. Duplicate submissions will be closed.",
     "Vulnerabilities must be reported through the WhiteClaws platform. Public disclosure before resolution disqualifies the submission.",
@@ -90,6 +271,6 @@
     "KYC verification required before payout",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
   ]
 }

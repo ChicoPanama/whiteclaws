@@ -31,7 +31,86 @@
     }
   },
   "source": "whiteclaws",
-  "contracts": [],
+  "contracts": [
+    {
+      "address": "0x20234d842CC8502f583F1EfDc63950DEE047f462",
+      "network": "haven1",
+      "name": "Core Contracts",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xE352B5DE61d72e22e06A3bdDd5D3Fa6FF25A5C80",
+      "network": "haven1",
+      "name": "Core Contracts",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x064735F398E707752F9Eabd6F81D98Ac5cE672A8",
+      "network": "haven1",
+      "name": "Core Contracts",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x64833078c3665df17529E98bEF62fB90Dac53B67",
+      "network": "haven1",
+      "name": "Core Contracts",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x716ED8C844495aBf237C170E0a0a7b7a9566dBf6",
+      "network": "haven1",
+      "name": "Core Contracts",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x708E6dd0452D2C245e7d461c6c8B70F587ca3167",
+      "network": "haven1",
+      "name": "Core Contracts",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xac488B7E18Cef83aC300E9ffD9324BAa5BB62a13",
+      "network": "haven1",
+      "name": "Core Contracts",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xd10A542F088099b880B2CDF269B85df2F9dd3A23",
+      "network": "haven1",
+      "name": "Core Contracts",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x0F0B779e21579Cc56E00Bb018707e4449cA11E08",
+      "network": "haven1",
+      "name": "Core Contracts",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xEDf674ed9FEe3b568110ea9d6B664133FbE8D87a",
+      "network": "haven1",
+      "name": "Core Contracts",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x43eb2296AB0E642C11BBdb44847390C4869650eb",
+      "network": "haven1",
+      "name": "Core Contracts",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x1c82cD17C9D06ADB43E730713913369c43B5EE0c",
+      "network": "haven1",
+      "name": "Core Contracts",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x97AEE1CB38A055bCA22F0C998ccF7A2f6A865B87",
+      "network": "haven1",
+      "name": "Core Contracts",
+      "type": "Bounty Scope"
+    }
+  ],
   "scope": {
     "in_scope": [
       "Core protocol smart contracts",
@@ -62,7 +141,7 @@
   "program_rules": [
     "Proof of Concept is required for all submissions. Reports without a working PoC demonstrating the vulnerability will not be considered.",
     "KYC is not required for this program. Pseudonymous submissions are accepted.",
-    "This program follows Primacy of Impact \u2014 valid findings are rewarded based on demonstrated impact regardless of whether the specific attack vector was previously known.",
+    "This program follows Primacy of Impact — valid findings are rewarded based on demonstrated impact regardless of whether the specific attack vector was previously known.",
     "Only previously unreported vulnerabilities are eligible. Duplicate submissions will be closed.",
     "Vulnerabilities must be reported through the WhiteClaws platform. Public disclosure before resolution disqualifies the submission.",
     "Testing must not disrupt live protocol operations. Use mainnet forks or testnets for Proof of Concept execution."
@@ -84,9 +163,9 @@
     }
   },
   "eligibility": [
-    "Open to all researchers \u2014 pseudonymous submissions accepted",
+    "Open to all researchers — pseudonymous submissions accepted",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
   ]
 }

@@ -31,7 +31,62 @@
     }
   },
   "source": "whiteclaws",
-  "contracts": [],
+  "contracts": [
+    {
+      "address": "0xceA81F222e01d6c60A3a64b10A3F5BC512b2a7C9",
+      "network": "ethereum",
+      "name": "payIntentAddress",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xFdd1837483f03f8db66c679bB0bFcb963B5B4D19",
+      "network": "ethereum",
+      "name": "daimoPayCctpBridgerAddress",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x8E29a76DD752AD84fc92BAAB4Ac2002b3c960EE8",
+      "network": "ethereum",
+      "name": "DaimoPay entry point",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x90349056c9aFbAE6A649cC89Bd9E8e0C919E15eB",
+      "network": "ethereum",
+      "name": "daimoPayAxelarBridgerAddress",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x05795C2d6dd4e906cd896AbC466Ef276ac82d16b",
+      "network": "ethereum",
+      "name": "daimoPayRelayerAddress",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xFa296119a96f5bC8a58f2bB0e299FAD64096A4C8",
+      "network": "ethereum",
+      "name": "daimoPayBridgerAddress",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x08604D2d5fE72FedAD151d5e637181f31dF69E8F",
+      "network": "ethereum",
+      "name": "daimoPayCctpV2BridgerAddress",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x6eBebBb1D5ACF8bE4B4DC1877075fec043e8010a",
+      "network": "ethereum",
+      "name": "daimoPayExecutorAddress",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x9751572B505F244D9feCfcB9712B00974f458872",
+      "network": "ethereum",
+      "name": "payIntentFactoryAddress",
+      "type": "Bounty Scope"
+    }
+  ],
   "scope": {
     "in_scope": [
       "Core protocol smart contracts",
@@ -83,6 +138,6 @@
     "KYC verification required before payout",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
   ]
 }

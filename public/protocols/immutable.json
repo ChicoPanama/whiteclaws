@@ -31,7 +31,62 @@
     }
   },
   "source": "whiteclaws",
-  "contracts": [],
+  "contracts": [
+    {
+      "address": "0xBa5E35E26Ae59c7aea6F029B68c6460De2d13eB6",
+      "network": "ethereum",
+      "name": "L1 Ethereum Mainnet Chain ID 1 - Bridge Proxy",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x177EaFe0f1F3359375B1728dae0530a75C83E154",
+      "network": "ethereum",
+      "name": "L1 Ethereum Mainnet Chain ID 1 - Bridge Implementation",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x4f49b53928a71e553bb1b0f66a5bcb54fd4e8932",
+      "network": "ethereum",
+      "name": "L1 Ethereum Mainnet Chain ID 1 - Adapter Proxy",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xE2E91C1Ae2873720C3b975a8034e887A35323345",
+      "network": "ethereum",
+      "name": "L1 Ethereum Mainnet Chain ID 1 - Adapter Implementation",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xBa5E35E26Ae59c7aea6F029B68c6460De2d13eB6",
+      "network": "immutable",
+      "name": "L2 zkEVM Chain ID 13371 - Bridge Proxy",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xb4c3597e6b090A2f6117780cEd103FB16B071A84",
+      "network": "immutable",
+      "name": "L2 zkEVM Chain ID 13371 - Bridge Implementation",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x4f49B53928A71E553bB1B0F66a5BcB54Fd4E8932",
+      "network": "immutable",
+      "name": "L2 zkEVM Chain ID 13371 - Adapter Proxy",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x1d49c44dc4BbDE68D8D51a9C5732f3a24e48EFA6",
+      "network": "immutable",
+      "name": "L2 zkEVM Chain ID 13371 - Adapter Implementation",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x8804A8aA1F18f23aE8A456dD73806FdA3219FaD1",
+      "network": "immutable",
+      "name": "L2 zkEVM Chain ID 13371 - ChildERC20 Token Template",
+      "type": "Bounty Scope"
+    }
+  ],
   "scope": {
     "in_scope": [
       "NFT minting and transfer contracts",
@@ -84,6 +139,6 @@
     "KYC verification required before payout",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
   ]
 }

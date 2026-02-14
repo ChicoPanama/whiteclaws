@@ -31,7 +31,176 @@
     }
   },
   "source": "whiteclaws",
-  "contracts": [],
+  "contracts": [
+    {
+      "address": "0xECE8e30bFc92c2A8e11e6cb2e17B70868572E3f6",
+      "network": "ethereum",
+      "name": "EmergencyUpgradeBoard.sol",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xE30Dca3047B37dc7d88849dE4A4Dc07937ad5Ab3",
+      "network": "ethereum",
+      "name": "ProtocolUpgradeHandler proxy TransparentUpgradeableProxy.sol",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xc6f08efb7ba78f40d00f41afac00211d59eb9431",
+      "network": "ethereum",
+      "name": "L1Nullifier.sol",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x0000000000000000000000000000000000000100",
+      "network": "zksync",
+      "name": "P256Verify",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x0000000000000000000000000000000000000008",
+      "network": "zksync",
+      "name": "EcPairing",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x32400084c286cf3e17e7b677ea9583e60a000324",
+      "network": "ethereum",
+      "name": "DiamondProxy.sol",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x303a465B659cBB0ab36eE643eA362c509EEb5213",
+      "network": "ethereum",
+      "name": "Bridgehub proxy TransparentUpgradeableProxy.sol",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x0000000000000000000000000000000000000006",
+      "network": "zksync",
+      "name": "EcAdd",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x0000000000000000000000000000000000000007",
+      "network": "zksync",
+      "name": "EcMul",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x0000000000000000000000000000000000008010",
+      "network": "zksync",
+      "name": "Keccak256",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x08a98b1048fb61e9fff7d7d98305ac6286ae9f32",
+      "network": "ethereum",
+      "name": "Bridgehub.sol",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x57891966931Eb4Bb6FB81430E6cE0A03AAbDe063",
+      "network": "ethereum",
+      "name": "L1ERC20Bridge proxy TransparentUpgradeableProxy.sol",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x431449e2a28A69122860A4956A3f7191eE15aFBC",
+      "network": "ethereum",
+      "name": "AdminFacet.sol",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x2f116b9033d88Bb3Cf64C371AE5458fbA22BA39A",
+      "network": "ethereum",
+      "name": "ExecutorFacet.sol",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x76705327e682F2d96943280D99464Ab61219e34f",
+      "network": "zksync",
+      "name": "ZkProtocolGovernor.sol",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x365D0ae3ECA13004daf2A4ba1501c01AaEbb4fec",
+      "network": "ethereum",
+      "name": "MailboxFacet.sol",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x0000000000000000000000000000000000010006",
+      "network": "zksync",
+      "name": "SloadContract",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x0000000000000000000000000000000000008006",
+      "network": "zksync",
+      "name": "ContractDeployer",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x345314c7e4af84b763d98d23f772622e23afb5ce",
+      "network": "ethereum",
+      "name": "ChainTypeManager.sol",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x0000000000000000000000000000000000000002",
+      "network": "zksync",
+      "name": "SHA256",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x0000000000000000000000000000000000008011",
+      "network": "zksync",
+      "name": "PubdataChunkPublisher",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x0000000000000000000000000000000000000001",
+      "network": "zksync",
+      "name": "Ecrecover",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x66E4431266DC7E04E7d8b7FE9d2181253df7F410",
+      "network": "ethereum",
+      "name": "SecurityCouncil.sol",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x0a67f0fd2f7523057039f14969fe23a5f620f19a",
+      "network": "ethereum",
+      "name": "ProtocolUpgradeHandler.sol",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x000000000000000000000000000000000000800d",
+      "network": "zksync",
+      "name": "EventWriter",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x000000000000000000000000000000000000800e",
+      "network": "zksync",
+      "name": "Compressor",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x0000000000000000000000000000000000010001",
+      "network": "zksync",
+      "name": "L2GenesisUpgrade",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x000000000000000000000000000000000000800c",
+      "network": "zksync",
+      "name": "BootloaderUtilities",
+      "type": "Bounty Scope"
+    }
+  ],
   "scope": {
     "in_scope": [
       "Consensus and block production contracts",
@@ -57,7 +226,7 @@
   "program_rules": [
     "Proof of Concept is required for all submissions. Reports without a working PoC demonstrating the vulnerability will not be considered.",
     "KYC verification is required before bounty payout. Researchers must complete identity verification to receive rewards.",
-    "This program follows Primacy of Impact \u2014 valid findings are rewarded based on demonstrated impact regardless of whether the specific attack vector was previously known.",
+    "This program follows Primacy of Impact — valid findings are rewarded based on demonstrated impact regardless of whether the specific attack vector was previously known.",
     "Only previously unreported vulnerabilities are eligible. Duplicate submissions will be closed.",
     "Vulnerabilities must be reported through the WhiteClaws platform. Public disclosure before resolution disqualifies the submission.",
     "Testing must not disrupt live protocol operations. Use mainnet forks or testnets for Proof of Concept execution.",
@@ -83,6 +252,6 @@
     "KYC verification required before payout",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
   ]
 }
