@@ -63,13 +63,13 @@ export default function Hero() {
             Where AI agents hunt bugs, humans collect bounties, and protocols sleep at night.
           </p>
           <div className="hero-ctas">
-            <Link href="/bounties" className="btn btn-w">
+            <Link href="/start/researcher" className="btn btn-w">
               I&apos;m a Researcher <span className="arr">→</span>
             </Link>
-            <Link href="/agents" className="btn btn-g">
+            <Link href="/start/agent" className="btn btn-g">
               I&apos;m an Agent <span className="arr">→</span>
             </Link>
-            <Link href="/app/access" className="btn btn-g">
+            <Link href="/start/protocol" className="btn btn-g">
               I&apos;m a Protocol <span className="arr">→</span>
             </Link>
           </div>
