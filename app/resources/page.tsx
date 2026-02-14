@@ -1,5 +1,8 @@
 import Nav from '@/components/landing/Nav'
 import Footer from '@/components/Footer'
+import Link from 'next/link'
+import type { Row } from '@/lib/supabase/helpers'
+import { createClient } from '@/lib/supabase/server'
 
 const audits = [
   // Scroll (6 reports)
@@ -69,7 +72,53 @@ const grouped = audits.reduce<Record<string, typeof audits>>((acc, a) => {
   return acc
 }, {})
 
-export default function ResourcesPage() {
+export const dynamic = 'force-dynamic'
+
+const hasSupabaseConfig =
+  !!process.env.NEXT_PUBLIC_SUPABASE_URL &&
+  !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+
+async function getResourcesIndex() {
+  if (!hasSupabaseConfig) return []
+
+  const supabase = createClient()
+  const { data, error } = await supabase
+    .from('resources')
+    .select('id,title,description,type,downloads,created_at,users(handle)')
+    .order('created_at', { ascending: false })
+    .limit(50)
+    .returns<(Row<'resources'> & { users: { handle: string } | { handle: string }[] | null })[]>()
+
+  if (error) throw error
+
+  return (data ?? []).map((r) => {
+    const user = Array.isArray(r.users) ? r.users[0] : r.users
+    return {
+      id: r.id,
+      title: r.title,
+      description: r.description ?? '',
+      type: r.type ?? 'resource',
+      downloads: r.downloads ?? 0,
+      author: user?.handle ?? 'unknown',
+    }
+  })
+}
+
+export default async function ResourcesPage() {
+  let dbResources: Array<{
+    id: string
+    title: string
+    description: string
+    type: string
+    downloads: number
+    author: string
+  }> = []
+  try {
+    dbResources = await getResourcesIndex()
+  } catch {
+    dbResources = []
+  }
+
   return (
     <>
       <Nav />
@@ -79,6 +128,36 @@ export default function ResourcesPage() {
           <span className="lk">{audits.length} audit reports</span>
         </div>
         <p className="sd-text">Security tools, guides, and audit reports for whitehat researchers.</p>
+
+        {dbResources.length > 0 && (
+          <div style={{ marginBottom: 32 }}>
+            <h3 style={{ fontSize: 16, fontWeight: 600, color: 'var(--ink)', marginBottom: 16 }}>Featured Resources</h3>
+            <div className="fl">
+              {dbResources.map((r) => (
+                <Link key={r.id} href={`/resources/${r.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+                  <div className="fr">
+                    <div className="fl-l">
+                      <span className="fsv fc">
+                        <span className="dot"></span>
+                        {r.type}
+                      </span>
+                      <span className="fd-d">{r.title}</span>
+                      {r.description ? (
+                        <span className="wc-field-helper" style={{ marginTop: 6, display: 'block' }}>
+                          {r.description.length > 120 ? r.description.slice(0, 120) + '…' : r.description}
+                        </span>
+                      ) : null}
+                    </div>
+                    <div className="fl-r">
+                      <span className="fd-lk">@{r.author}</span>
+                      <span className="fd-tm">{r.downloads} downloads</span>
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
 
         <div style={{ marginBottom: 32 }}>
           <h3 style={{ fontSize: 16, fontWeight: 600, color: 'var(--ink)', marginBottom: 16 }}>Audit Reports</h3>

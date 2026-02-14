@@ -104,13 +104,13 @@ export default function BountyGrid({ bounties }: { bounties: Bounty[] }) {
           const visibleChains = b.chains.slice(0, maxChains)
           const extraChains = b.chains.length - maxChains
 
-          return (
-            <Link
-              key={b.id}
-              href={`/protocols/${b.id}`}
-              className="bg-card"
-              style={{ textDecoration: 'none', color: 'inherit' }}
-            >
+	          return (
+	            <Link
+	              key={b.id}
+	              href={`/bounties/${b.id}`}
+	              className="bg-card"
+	              style={{ textDecoration: 'none', color: 'inherit' }}
+	            >
               {/* Header */}
               <div className="bg-card-head">
                 <div className="bg-card-icon">
