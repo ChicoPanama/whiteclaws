@@ -31,7 +31,32 @@
     }
   },
   "source": "whiteclaws",
-  "contracts": [],
+  "contracts": [
+    {
+      "address": "0x4F604735c1cF31399C6E711D5962b2B3E0225AD3",
+      "network": "ethereum",
+      "name": "ERC1967Proxy for USDGLO on Ethereum",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xf8dbe4f52b7d4fe90cd360aa4f49b7a66783c56f",
+      "network": "ethereum",
+      "name": "current implementation contract of USDGLO on Ethereum",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x4F604735c1cF31399C6E711D5962b2B3E0225AD3",
+      "network": "polygon",
+      "name": "ERC1967Proxy for USDGLO on Polygon",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xf8dbe4f52b7d4fe90cd360aa4f49b7a66783c56f",
+      "network": "polygon",
+      "name": "current implementation contract of USDGLO on Polygon",
+      "type": "Bounty Scope"
+    }
+  ],
   "scope": {
     "in_scope": [
       "Core protocol smart contracts",
@@ -85,6 +110,6 @@
     "KYC verification required before payout",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
   ]
 }

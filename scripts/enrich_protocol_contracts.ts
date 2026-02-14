@@ -5,6 +5,7 @@ type ContractRecord = {
   address: string;
   chain: string | null;
   label: string | null;
+  type: string | null;
   source: { kind: string; url: string };
   explorer?: { url: string };
   needs_review: boolean;
@@ -38,7 +39,7 @@ function run() {
   const index = JSON.parse(fs.readFileSync(INDEX_PATH, 'utf8')) as { protocols: Array<{ slug: string | null; name: string | null; filepath: string }> };
   const result: Record<string, { slug: string; name: string; contracts: ContractRecord[]; needs_review: boolean }> = {};
   const sources: Record<string, Record<string, string[]>> = {};
-  const csv = [['slug','name','address','chain','label','source_kind','source_url','explorer_url','needs_review']];
+  const csv = [['slug','name','address','chain','label','type','source_kind','source_url','explorer_url','needs_review']];
 
   for (const p of index.protocols) {
     if (!p.slug || !p.name) continue;
@@ -57,19 +58,21 @@ function run() {
       if (!addr) continue;
       const chain = typeof obj.network === 'string' ? obj.network : typeof obj.chain === 'string' ? obj.chain : null;
       const label = typeof obj.name === 'string' ? obj.name : null;
+      const contractType = typeof obj.type === 'string' ? obj.type : null;
       const sourceUrl = p.filepath;
       const explorer = explorerFor(chain, addr);
       const entry: ContractRecord = {
         address: addr,
         chain,
         label,
+        type: contractType,
         source: { kind: 'whiteclaws_protocol_json', url: sourceUrl },
         needs_review: chain === null,
       };
       if (explorer) entry.explorer = { url: explorer };
       contracts.push(entry);
       perContractSources[addr] = [sourceUrl];
-      csv.push([p.slug, p.name, addr, chain ?? '', label ?? '', entry.source.kind, entry.source.url, explorer ?? '', String(entry.needs_review)]);
+      csv.push([p.slug, p.name, addr, chain ?? '', label ?? '', contractType ?? '', entry.source.kind, entry.source.url, explorer ?? '', String(entry.needs_review)]);
     }
 
     const unique = Object.values(Object.fromEntries(contracts.map((c) => [`${c.address}:${c.chain ?? ''}`, c])));

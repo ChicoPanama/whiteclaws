@@ -32,7 +32,26 @@
     }
   },
   "source": "whiteclaws",
-  "contracts": [],
+  "contracts": [
+    {
+      "address": "0xD7E4b67E735733aC98a88F13d087D8aac670E644",
+      "network": "ethereum",
+      "name": "Treasury v1.0.0",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xb23B2492f7A9631104A5877F7FFA00633660968d",
+      "network": "ethereum",
+      "name": "Mailbox v1.0.0",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x83cB71D80078bf670b3EfeC6AD9E5E6407cD0fd1",
+      "network": "ethereum",
+      "name": "EtherBridge v1.0.0",
+      "type": "Bounty Scope"
+    }
+  ],
   "scope": {
     "in_scope": [
       "Core protocol smart contracts",
@@ -66,7 +85,7 @@
   "program_rules": [
     "Proof of Concept is required for all submissions. Reports without a working PoC demonstrating the vulnerability will not be considered.",
     "KYC verification is required before bounty payout. Researchers must complete identity verification to receive rewards.",
-    "This program follows Primacy of Impact \u2014 valid findings are rewarded based on demonstrated impact regardless of whether the specific attack vector was previously known.",
+    "This program follows Primacy of Impact — valid findings are rewarded based on demonstrated impact regardless of whether the specific attack vector was previously known.",
     "Submissions are triaged by the security team. Expect initial response within 48 hours of submission.",
     "Only previously unreported vulnerabilities are eligible. Duplicate submissions will be closed.",
     "Vulnerabilities must be reported through the WhiteClaws platform. Public disclosure before resolution disqualifies the submission.",
@@ -93,6 +112,6 @@
     "KYC verification required before payout",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
   ]
 }

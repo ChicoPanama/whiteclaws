@@ -31,7 +31,20 @@
     }
   },
   "source": "whiteclaws",
-  "contracts": [],
+  "contracts": [
+    {
+      "address": "0xc24A365A870821EB83Fd216c9596eDD89479d8d7",
+      "network": "ethereum",
+      "name": "PolsStake (ETH)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xD558675a8c8E1fd45002010BaC970B115163dE3a",
+      "network": "bsc",
+      "name": "PolsStake (BSC)",
+      "type": "Bounty Scope"
+    }
+  ],
   "scope": {
     "in_scope": [
       "Core protocol smart contracts",
@@ -80,6 +93,6 @@
     "KYC verification required before payout",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
   ]
 }

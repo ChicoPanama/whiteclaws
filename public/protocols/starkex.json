@@ -31,7 +31,158 @@
     }
   },
   "source": "whiteclaws",
-  "contracts": [],
+  "contracts": [
+    {
+      "address": "0x1390f521A79BaBE99b69B37154D63D431da27A07",
+      "network": "ethereum",
+      "name": "Proxy (Brine contract)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x3318074ad502b7dee59463595fba226653944522",
+      "network": "ethereum",
+      "name": "EscapeVerifier (Brine contract)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x4F8B2dd49D958b6ac3e5f4705Bf1a9aDA5Bc4446",
+      "network": "ethereum",
+      "name": "Committee (Brine contract)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xdF2f24751F7e84ccDCD39e7b49904FAB0Fb0f583",
+      "network": "ethereum",
+      "name": "StarkExchange (Brine contract)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xfbea22FeB369DB10C0d3a2aAa8F4939E76815f12",
+      "network": "ethereum",
+      "name": "AllVerifiers (Brine contract)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x2Dbc18A3ac126abE1fF90A83Bbc3947ff7912Afb",
+      "network": "ethereum",
+      "name": "TokensAndRamping (Brine contract)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x67e198743BC19fa4757720eDd0e769f8291e1F1D",
+      "network": "ethereum",
+      "name": "StarkExState (Brine contract)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x613ee54C54D5548627064B4D648942bF3648f376",
+      "network": "ethereum",
+      "name": "ForcedActions (Brine contract)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xb2ED005D0278179001a49a9969BB22BA8e98f31F",
+      "network": "ethereum",
+      "name": "OnchainVaults (Brine contract)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xB5353268d8d4D711a92cb838F8fEDFC2A66E50Db",
+      "network": "ethereum",
+      "name": "ProxyUtils (Brine contract)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x5339AB7557b3152b91A57D10B0Caf5da88Db5143",
+      "network": "ethereum",
+      "name": "GpsFactRegistryAdapter (Brine contract)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x806d435a82B0381bD884540c2235147c13B97fe6",
+      "network": "ethereum",
+      "name": "OrderRegistry (Brine contract)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xF5C9F957705bea56a7e806943f98F7777B995826",
+      "network": "ethereum",
+      "name": "Proxy (Sorare contract)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x879cD57975d596004863D30c59d579ef78BBbe32",
+      "network": "ethereum",
+      "name": "Committee (Sorare contract)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x4EDD62189732e9fF476ABa880b48c29432A7AC9B",
+      "network": "ethereum",
+      "name": "StarkExchange (Sorare contract)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x62BCA4DB742A99c834e2c24b609656A70EA25379",
+      "network": "ethereum",
+      "name": "AllVerifiers (Sorare contract)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x8536850750956c2FEebeCAB786d82271a5467687",
+      "network": "ethereum",
+      "name": "TokensAndRamping (Sorare contract)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x1c3A4EfF75a287Fe6249CAb49606FA25659929A2",
+      "network": "ethereum",
+      "name": "StarkExState (Sorare contract)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x3799ad2a4Eb4E882219B02C036656d4ECbD437A1",
+      "network": "ethereum",
+      "name": "ForcedActions (Sorare contract)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x1688abB0B5c72F34B7f78e857Aa317deD5B5D339",
+      "network": "ethereum",
+      "name": "OnchainVaults (Sorare contract)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xB3788a88F063B217227E27ae16Ba550db3132bE6",
+      "network": "ethereum",
+      "name": "ProxyUtils (Sorare contract)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xbcc17446B99465fF01E6816d9bcb2d8b1D7cEdB1",
+      "network": "ethereum",
+      "name": "GpsFactRegistryAdapter (Sorare contract)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x518c4A79a1102eEDc987005CA8cE6B87Ca14dDf8",
+      "network": "ethereum",
+      "name": "OrderRegistry (Sorare contract)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xB62BcD40A24985f560b5a9745d478791d8F1945C",
+      "network": "ethereum",
+      "name": "Proxy (Reddio contract)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x4b2Bf1Cb06CB636e8A14540F76c477E61d8B6669",
+      "network": "ethereum",
+      "name": "Committee (Reddio contract)",
+      "type": "Bounty Scope"
+    }
+  ],
   "scope": {
     "in_scope": [
       "Consensus and block production contracts",
@@ -89,6 +240,6 @@
     "KYC verification required before payout",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
   ]
 }

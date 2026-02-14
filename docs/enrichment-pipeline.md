@@ -12,6 +12,20 @@ npx tsx scripts/validate_enrichment.ts
 
 Or all at once: `pnpm enrich:all`
 
+### Contract enrichment scripts (run separately)
+
+```bash
+# 1. Parse Immunefi explorer URLs into protocol JSONs (safe to run, no API keys needed)
+node scripts/enrich-contracts-from-immunefi.cjs
+
+# 2. Discover deployer contracts via Etherscan APIs (requires API keys)
+#    Set: ETHERSCAN_API_KEY, ARBISCAN_API_KEY, OPTIMISTIC_API_KEY, etc.
+node scripts/discover-deployer-contracts.cjs
+
+# 3. Merge deployer-discovered contracts into protocol JSONs (requires step 2 output)
+node scripts/merge-all-contracts.cjs
+```
+
 ## Domain Resolution Strategy
 
 1. **DefiLlama exact slug** — highest confidence (0.95)
@@ -46,7 +60,8 @@ Fabricated or non-contract addresses are removed and replaced with verified alte
 | `data/protocol_contacts.csv` | CSV export of contacts |
 | `data/protocol_contracts.json` | Verified contract addresses |
 | `data/protocol_contracts_sources.json` | Per-address provenance |
-| `data/protocol_contracts.csv` | CSV export of contracts |
+| `data/protocol_contracts.csv` | CSV export of contracts (includes type) |
+| `data/deployer_discovered_contracts.json` | Deployer-discovered contracts (Phase 2 output) |
 | `reports/enrichment-report.md` | Validation summary + CI gate |
 
 ## Optional env vars

@@ -31,7 +31,68 @@
     }
   },
   "source": "whiteclaws",
-  "contracts": [],
+  "contracts": [
+    {
+      "address": "0x947Cb49334e6571ccBFEF1f1f1178d8469D65ec7",
+      "network": "ethereum",
+      "name": "LRT Config",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xA1290d69c65A6Fe4DF752f95823fae25cB99e5A7",
+      "network": "ethereum",
+      "name": "rsETH",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x036676389e48133B63a802f8635AD39E752D375D",
+      "network": "ethereum",
+      "name": "LRT Deposit Pool",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x349A73444b1a310BAe67ef67973022020d70020d",
+      "network": "ethereum",
+      "name": "LRT Oracle",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x3D08ccb47ccCde84755924ED6B0642F9aB30dFd2",
+      "network": "ethereum",
+      "name": "EthXPriceOracle",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xdbc3363de051550d122d9c623cbaff441afb477c",
+      "network": "ethereum",
+      "name": "FeeReceiver",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x598dbcb99711e5577ff76ef4577417197b939dfa",
+      "network": "ethereum",
+      "name": "LRTConverter",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x62De59c08eB5dAE4b7E6F7a8cAd3006d6965ec16",
+      "network": "ethereum",
+      "name": "LRTWithdrawalManager",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xc66830e2667bc740c0bed9a71f18b14b8c8184ba",
+      "network": "ethereum",
+      "name": "LRTUnstakingVault",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x07b96cf1183c9bff2e43acf0e547a8c4e4429473",
+      "network": "ethereum",
+      "name": "NodeDelegator",
+      "type": "Bounty Scope"
+    }
+  ],
   "scope": {
     "in_scope": [
       "Staking and delegation contracts",
@@ -81,6 +142,6 @@
     "KYC verification required before payout",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
   ]
 }

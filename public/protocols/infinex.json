@@ -50,6 +50,54 @@
       "network": "ethereum",
       "name": "InfinexAccount",
       "type": "Account"
+    },
+    {
+      "address": "ifx1fqLJue8v2RoZCBr86HcBf4C9PbsmN5xFsqF9bqV",
+      "network": "solana",
+      "name": "Solana Main Program",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "g1mqFGrfzKs2LA2tEsTD6gDGL8njMCXSbvfASCD4mma",
+      "network": "solana",
+      "name": "Solana Supporting Program (Global State) V1",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "s1mBMQJ9MDCBsE6tKgAZHFArJbRUPtMpn4fYKNfYDpx",
+      "network": "solana",
+      "name": "Solana Supporting Program (Authoriser State)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "a1mYKMxKD42Q6L1e4KdYCDvvRkhVDUiAMS6uTDtz6rs",
+      "network": "solana",
+      "name": "Solana Supporting Program (Authoriser)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "g2mfRUfzyLsy1P163VK9qezTrtRB9Ag8DtzUHURheNe",
+      "network": "solana",
+      "name": "Solana Supporting Program (Global State) V2",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "s2m3yD2iPaNwtnFMXnSpim3V9VkTPB4wxnDBs5YXndk",
+      "network": "solana",
+      "name": "Smart Contract - Solana Supporting Program (Authoriser State V2)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "a2mi4g1fJLQeTBiJcNDmLuKBeAT5xgnxQ1S2BawhbJc",
+      "network": "solana",
+      "name": "Solana Supporting Program (Authoriser V2)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "a3mxvvP3f8NLLDoom1AqKNXb6ob1mvjqrfm6VaPBxTP",
+      "network": "solana",
+      "name": "Solana Supporting Program (Authoriser V3)",
+      "type": "Bounty Scope"
     }
   ],
   "source": "whiteclaws",
@@ -74,7 +122,7 @@
   "program_rules": [
     "Proof of Concept is required for all submissions. Reports without a working PoC demonstrating the vulnerability will not be considered.",
     "KYC is not required for this program. Pseudonymous submissions are accepted.",
-    "This program follows Primacy of Impact \u2014 valid findings are rewarded based on demonstrated impact regardless of whether the specific attack vector was previously known.",
+    "This program follows Primacy of Impact — valid findings are rewarded based on demonstrated impact regardless of whether the specific attack vector was previously known.",
     "Submissions are triaged by the security team. Expect initial response within 48 hours of submission.",
     "Only previously unreported vulnerabilities are eligible. Duplicate submissions will be closed.",
     "Vulnerabilities must be reported through the WhiteClaws platform. Public disclosure before resolution disqualifies the submission.",
@@ -97,9 +145,9 @@
     }
   },
   "eligibility": [
-    "Open to all researchers \u2014 pseudonymous submissions accepted",
+    "Open to all researchers — pseudonymous submissions accepted",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
   ]
 }

@@ -31,7 +31,20 @@
     }
   },
   "source": "whiteclaws",
-  "contracts": [],
+  "contracts": [
+    {
+      "address": "0xE9a88F0d543d3a0C14E487bed884B3dA49529e48",
+      "network": "polygon",
+      "name": "PillarDAO",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xFa2d028Ba398C20eE0A7483c00218F91FFEe47c6",
+      "network": "polygon",
+      "name": "MembershipNFT",
+      "type": "Bounty Scope"
+    }
+  ],
   "scope": {
     "in_scope": [
       "Core protocol smart contracts",
@@ -77,9 +90,9 @@
     }
   },
   "eligibility": [
-    "Open to all researchers \u2014 pseudonymous submissions accepted",
+    "Open to all researchers — pseudonymous submissions accepted",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
   ]
 }

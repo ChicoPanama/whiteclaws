@@ -152,7 +152,7 @@ export default function ProtocolDetailClient({
           Scope
         </button>
         <button type="button" className={`pd-tab ${tab === 'contracts' ? 'active' : ''}`} onClick={() => setTab('contracts')}>
-          Contracts{hasContracts ? ` (${contracts.length})` : ''}
+          Contracts{hasContracts ? ` (${contracts.filter(c => c.type === 'Bounty Scope').length} in scope · ${contracts.length} total)` : ''}
         </button>
         <button type="button" className={`pd-tab ${tab === 'submission' ? 'active' : ''}`} onClick={() => setTab('submission')}>
           Submission Format
@@ -207,7 +207,7 @@ export default function ProtocolDetailClient({
                 <div className="pd-contract-info">
                   <div className="pd-contract-head">
                     <span className="pd-contract-name">{c.name}</span>
-                    <span className="pd-contract-type">{c.type}</span>
+                    <span className={`pd-contract-type ${c.type === 'Bounty Scope' ? 'pd-contract-type--scope' : c.type === 'Out of Scope' ? 'pd-contract-type--out' : ''}`}>{c.type}</span>
                   </div>
                   <div className="pd-contract-addr-row">
                     <code className="pd-contract-addr">{c.address}</code>

@@ -31,7 +31,92 @@
     }
   },
   "source": "whiteclaws",
-  "contracts": [],
+  "contracts": [
+    {
+      "address": "0x8753C00D1a94D04A01b931830011d882A3F8Cc72",
+      "network": "ethereum",
+      "name": "stLINK Reward Pool",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x911D86C72155c33993d594B0Ec7E6206B4C803da",
+      "network": "ethereum",
+      "name": "wstLINK",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x4852e48215A4785eE99B640CACED5378Cc39D2A4",
+      "network": "ethereum",
+      "name": "Operator VCS",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xAc12290b097f6893322F5430627e472131fBC1B5",
+      "network": "ethereum",
+      "name": "Community VCS",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xDdC796a66E8b83d0BcCD97dF33A6CcFBA8fd60eA",
+      "network": "ethereum",
+      "name": "LINK Priority Pool",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xd2e7381d8d3FcC97C1b4d88761bDBc8Dd26a0200",
+      "network": "ethereum",
+      "name": "LINK Fund Flow Controller",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xa60B5146E44ff755e32BD51532842ceB41D0C248",
+      "network": "ethereum",
+      "name": "LINK Withdrawal Pool",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x3106E2e148525b3DB36795b04691D444c24972fB",
+      "network": "arbitrum",
+      "name": "wstLINK",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xa95c5ebb86e0de73b4fb8c47a45b792cfea28c23",
+      "network": "ethereum",
+      "name": "SDL",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xdFeA35757264F5b6C0ff21104151D9F991D0eEC0",
+      "network": "arbitrum",
+      "name": "BurnMint",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xb8b295df2cd735b15be5eb419517aa626fc43cd5",
+      "network": "ethereum",
+      "name": "LINK Staking Pool",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xc1b7a5346c4342D352205DEEB15b049f567Da740",
+      "network": "ethereum",
+      "name": "LINK Staking Proxy / Feeder Pool",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x1711e93eec78ba83D38C26f0fF284eB478bdbec4",
+      "network": "ethereum",
+      "name": "LINK Rebase Controller",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x0B2eF910ad0b34bf575Eb09d37fd7DA6c148CA4d",
+      "network": "ethereum",
+      "name": "SDL Pool",
+      "type": "Bounty Scope"
+    }
+  ],
   "scope": {
     "in_scope": [
       "Core protocol smart contracts",
@@ -88,6 +173,6 @@
     "KYC verification required before payout",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
   ]
 }

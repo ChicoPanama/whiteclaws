@@ -31,7 +31,68 @@
     }
   },
   "source": "whiteclaws",
-  "contracts": [],
+  "contracts": [
+    {
+      "address": "0x7127f0FEaEF8143241A5FaC62aC5b7be02Ef26A9",
+      "network": "ethereum",
+      "name": "TokenGateway",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xFC1759E75180aeE982DC08D0d6D365ebFA0296a7",
+      "network": "base",
+      "name": "MarketplaceV2",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xFC1759E75180aeE982DC08D0d6D365ebFA0296a7",
+      "network": "ethereum",
+      "name": "MarketplaceV2",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xFC1759E75180aeE982DC08D0d6D365ebFA0296a7",
+      "network": "bsc",
+      "name": "MarketplaceV2",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x7127f0FEaEF8143241A5FaC62aC5b7be02Ef26A9",
+      "network": "bsc",
+      "name": "TokenGateway",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xFC1759E75180aeE982DC08D0d6D365ebFA0296a7",
+      "network": "polygon",
+      "name": "MarketplaceV2",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x7127f0FEaEF8143241A5FaC62aC5b7be02Ef26A9",
+      "network": "opbnb",
+      "name": "TokenGateway",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xFC1759E75180aeE982DC08D0d6D365ebFA0296a7",
+      "network": "opbnb",
+      "name": "MarketplaceV2",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x7127f0FEaEF8143241A5FaC62aC5b7be02Ef26A9",
+      "network": "polygon",
+      "name": "TokenGateway",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x7127f0FEaEF8143241A5FaC62aC5b7be02Ef26A9",
+      "network": "base",
+      "name": "TokenGateway",
+      "type": "Bounty Scope"
+    }
+  ],
   "scope": {
     "in_scope": [
       "Core protocol smart contracts",
@@ -61,7 +122,7 @@
   "program_rules": [
     "Proof of Concept is required for all submissions. Reports without a working PoC demonstrating the vulnerability will not be considered.",
     "KYC verification is required before bounty payout. Researchers must complete identity verification to receive rewards.",
-    "This program follows Primacy of Impact \u2014 valid findings are rewarded based on demonstrated impact regardless of whether the specific attack vector was previously known.",
+    "This program follows Primacy of Impact — valid findings are rewarded based on demonstrated impact regardless of whether the specific attack vector was previously known.",
     "Only previously unreported vulnerabilities are eligible. Duplicate submissions will be closed.",
     "Vulnerabilities must be reported through the WhiteClaws platform. Public disclosure before resolution disqualifies the submission.",
     "Testing must not disrupt live protocol operations. Use mainnet forks or testnets for Proof of Concept execution."
@@ -86,6 +147,6 @@
     "KYC verification required before payout",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
   ]
 }

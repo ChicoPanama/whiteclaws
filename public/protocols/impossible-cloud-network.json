@@ -31,7 +31,128 @@
     }
   },
   "source": "whiteclaws",
-  "contracts": [],
+  "contracts": [
+    {
+      "address": "0xf97492a5B53eeF9AA10295dDAe6D6A58c7988D21",
+      "network": "base",
+      "name": "AccessControl (Implementation)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xe64Fab0952125a5A9968AD41D8a202014869a8cc",
+      "network": "base",
+      "name": "LinkRewards (Implementation)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xbA8d6AC691D0946d03e5A4c93bA9e711E82F4D27",
+      "network": "base",
+      "name": "LinkStaking (Implementation)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xA77168C879f7EBaA8CA3C981e389D4578b12C9d8",
+      "network": "base",
+      "name": "ICNLink (Implementation)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xa3A5C7a4aF29F5bA0d8D77EB6B6b2f25536fBc34",
+      "network": "base",
+      "name": "EraManager (Implementation)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x9Ed9A87e3237cE29fB1aCd30649dA9d2847987c3",
+      "network": "base",
+      "name": "ExternalContractManager (Implementation)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x9232ede9e52E75af165E73E7a9d8cd740CEeE6a0",
+      "network": "base",
+      "name": "ICNRegistryGetters (Implementation)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x86fED0FEA3C25D11430C242623CF439AbC3B8Bba",
+      "network": "base",
+      "name": "ICNRegistry (Implementation)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x6EC92B42a53F07b4C061F597CF6B3776B4542093",
+      "network": "base",
+      "name": "HPRewards (Implementation)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x5c86CC0b585295151966EC8fc2b590FB1dC737f7",
+      "network": "base",
+      "name": "ReservePool (Implementation)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x31fb85fD348F2F14AB70E7e41e7C3Df30A8C417d",
+      "network": "base",
+      "name": "Treasury (Implementation)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x2e38083d45A72bC12019C54DCC40109d088f7EB5",
+      "network": "base",
+      "name": "BookingManager (Implementation)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x2f9D478da5DC5304d3C8b3094c70411828C671EB",
+      "network": "base",
+      "name": "Slashing (Implementation)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x5AcBfF1f97CB82E69910a825d7d724880C62Eec8",
+      "network": "base",
+      "name": "ReservePool (Proxy)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xe5e0b73380181273abCfD88695F52C4D0C825661",
+      "network": "ethereum",
+      "name": "ICNToken",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x9131f272d9eAA4BeC30eb4254C78B50Df7bc8791",
+      "network": "base",
+      "name": "ICNProtocol (Proxy)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xDa24c1F7669bf9b12EAfE5A3967BC9358eE48A12",
+      "network": "base",
+      "name": "ICNLink (Proxy)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xFb2d8aDac4f3D5e7A834C28F6376E439c0171C31",
+      "network": "base",
+      "name": "Treasury (Proxy)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xE0Cd4cAcDdcBF4f36e845407CE53E87717b6601d",
+      "network": "base",
+      "name": "ICNToken",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xB81ea0EeceaF09166b559eeaCFA20F9379cB2372",
+      "network": "base",
+      "name": "HPDelegationICNT (Implementation)",
+      "type": "Bounty Scope"
+    }
+  ],
   "scope": {
     "in_scope": [
       "Core protocol smart contracts",
@@ -82,6 +203,6 @@
     "KYC verification required before payout",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
   ]
 }

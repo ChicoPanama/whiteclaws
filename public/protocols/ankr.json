@@ -33,7 +33,80 @@
     }
   },
   "source": "whiteclaws",
-  "contracts": [],
+  "contracts": [
+    {
+      "address": "0x9e347Af362059bf2E55839002c699F7A5BaFE86E",
+      "network": "bsc",
+      "name": "BNB Pool",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x52F24a5e03aee338Da5fd9Df68D2b6FAe1178827",
+      "network": "bsc",
+      "name": "ankrBNB",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x67428dE0680494E448F1A19d33C2022a51719348",
+      "network": "bsc",
+      "name": "BNBStakingConfig",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x84db6eE82b7Cf3b47E8F19270abdE5718B936670",
+      "network": "ethereum",
+      "name": "ETH Pool",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xE95A203B1a91a908F9B9CE46459d101078c2c3cb",
+      "network": "ethereum",
+      "name": "aETHc",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xd01ef7c0a5d8c432fc2d1a85c66cf2327362e5c6",
+      "network": "ethereum",
+      "name": "aETHb",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xCfD4B4Bc15C8bF0Fd820B0D4558c725727B3ce89",
+      "network": "ethereum",
+      "name": "PolygonPool",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x26dcFbFa8Bc267b250432c01C982Eaf81cC5480C",
+      "network": "ethereum",
+      "name": "ankrMATIC",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x99534Ef705Df1FFf4e4bD7bbaAF9b0dFf038EbFe",
+      "network": "ethereum",
+      "name": "aMATICb",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xad0dCC6635a5c38be6B87007210797Ad94AdB4B7",
+      "network": "ethereum",
+      "name": "MaticCrosschainStaking",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xad0dCC6635a5c38be6B87007210797Ad94AdB4B7",
+      "network": "polygon",
+      "name": "MaticCrosschainStaking",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x62a509ba95c75cabc7190469025e5abee4eddb2a",
+      "network": "polygon",
+      "name": " MaticSwapPool",
+      "type": "Bounty Scope"
+    }
+  ],
   "scope": {
     "in_scope": [
       "Core protocol smart contracts",
@@ -84,9 +157,9 @@
     }
   },
   "eligibility": [
-    "Open to all researchers \u2014 pseudonymous submissions accepted",
+    "Open to all researchers — pseudonymous submissions accepted",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
   ]
 }

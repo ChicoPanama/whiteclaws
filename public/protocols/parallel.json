@@ -36,7 +36,182 @@
     }
   },
   "source": "whiteclaws",
-  "contracts": [],
+  "contracts": [
+    {
+      "address": "0x9C68850E18EACD4ea7ca2998b6BBeD9cf55316cb",
+      "network": "polygon",
+      "name": "Protocol V3 - PRL - PeripheralMigrationContract",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x57265a3D7db8f4a4a155eadF6c7326926caC1490",
+      "network": "avalanche",
+      "name": "Protocol V3 - Parallelizer Module - Swapper",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x24cef236056834f38e9247a1fff6681dd313d3aa",
+      "network": "hyperliquid",
+      "name": "Protocol V3 - Core Protocol - TokenP",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x24CeF236056834f38e9247A1Fff6681Dd313d3aa",
+      "network": "base",
+      "name": "Protocol V3 - Parallelizer Module - DiamondLoupe",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xDa818995DdEee3AC36BF492133E1FeAE1FA377E6",
+      "network": "sonic",
+      "name": "Protocol V3 - Bridging Module - lz-USDp",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x9fFaCB3dB5cB74BdD4C68af3b7CF203130c699ec",
+      "network": "avalanche",
+      "name": "Protocol V3 - Bridging Module - lz-USDp",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xe5C82b4F09Fd4d079757e156Db44AFD2c8032CC8",
+      "network": "sonic",
+      "name": "Protocol V3 - Parallelizer Module - Redeemer",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x7790dd69aa10eD3f1271E41CD7222D2a7d2D5948",
+      "network": "polygon",
+      "name": "Protocol V3 - PRL - PeripheralPRL",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xF6Cc47E981ED5902BE382dbe7B54e3696De22dBb",
+      "network": "avalanche",
+      "name": "Protocol V3 - Parallelizer Module - Getters",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xa9C21Cf291ad935e0C9B05a55A42254fB159181d",
+      "network": "ethereum",
+      "name": "Protocol V3 - Parallelizer Module - Getters",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x506Ba37aa8e265bE445913B9c4080852277f3c5a",
+      "network": "ethereum",
+      "name": "Protocol V3 - Parallelizer Module - Swapper",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x472eD57b376fE400259FB28e5C46eB53f0E3e7E7",
+      "network": "hyperliquid",
+      "name": "Protocol V3 - Parallelizer Module - SettersGovernor",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xfD28f108e95f4D41daAE9dbfFf707D677985998E",
+      "network": "sei",
+      "name": "Protocol V3 - Core Protocol - ParallelAccessManager",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x9fFaCB3dB5cB74BdD4C68af3b7CF203130c699ec",
+      "network": "berachain",
+      "name": "Protocol V3 - Bridging Module - BridgeableTokenP",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xDB7Be3a50bdf5641757EBEa38e8014E1F0AA9475",
+      "network": "polygon",
+      "name": "Protocol V3 - PRL - SPRL1",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x6efeDDF9269c3683Ba516cb0e2124FE335F262a2",
+      "network": "avalanche",
+      "name": "Protocol V3 - Parallelizer Module - Redeemer",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x09f3964874d3c8494f2e98e9e003e53c2750ab72",
+      "network": "polygon",
+      "name": "Protocol V3 - Flashloan Module - FlashParallelToken",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xfD28f108e95f4D41daAE9dbfFf707D677985998E",
+      "network": "avalanche",
+      "name": "Protocol V3 - Core Protocol - ParallelAccessManager",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xd8cc2A51556Da84b5DB309e86f30Ff98B5309862",
+      "network": "ethereum",
+      "name": "Protocol V3 - Parallelizer Module - RewardHandler",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xe8a2d848fe656e34a6caa35f375b42979e322135",
+      "network": "ethereum",
+      "name": "Protocol V3 - PRL - sPRL2",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xfD28f108e95f4D41daAE9dbfFf707D677985998E",
+      "network": "bsc",
+      "name": "Protocol V3 - Core Protocol - ParallelAccessManager",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xe8a2d848fe656e34a6caa35f375b42979e322135",
+      "network": "optimism",
+      "name": "Protocol V3 - Core Protocol - TokenP",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xfD28f108e95f4D41daAE9dbfFf707D677985998E",
+      "network": "sonic",
+      "name": "Protocol V3 - PRL - PeripheralPRL",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xcB3e564293393E0d4F43305a250d4e1716dE600b",
+      "network": "ink",
+      "name": "Protocol V3 - Core Protocol - TokenP",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x9fFaCB3dB5cB74BdD4C68af3b7CF203130c699ec",
+      "network": "sei",
+      "name": "Protocol V3 - Flashloan Module - FlashParallelToken",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x9B3a8f7CEC208e247d97dEE13313690977e24459",
+      "network": "ethereum",
+      "name": "Protocol V3 - Core Protocol - USDp",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x76A9A0062ec6712b99B4f63bD2b4270185759dd5",
+      "network": "arbitrum",
+      "name": "Protocol V3 - Core Protocol - USDp",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x9e0DCF7a33bBde6689560C5c807dd2a3dF991277",
+      "network": "unichain",
+      "name": "Protocol V3 - Flashloan Module - FlashParallel",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xe23b5ded6f7b7cb56ebcd459b19dad4d7e05cf7b",
+      "network": "berachain",
+      "name": "Protocol V3 - Flashloan Module - FlashParallelToken",
+      "type": "Bounty Scope"
+    }
+  ],
   "scope": {
     "in_scope": [
       "Lending and borrowing smart contracts",
@@ -64,7 +239,7 @@
   "program_rules": [
     "Proof of Concept is required for all submissions. Reports without a working PoC demonstrating the vulnerability will not be considered.",
     "KYC verification is required before bounty payout. Researchers must complete identity verification to receive rewards.",
-    "This program follows Primacy of Impact \u2014 valid findings are rewarded based on demonstrated impact regardless of whether the specific attack vector was previously known.",
+    "This program follows Primacy of Impact — valid findings are rewarded based on demonstrated impact regardless of whether the specific attack vector was previously known.",
     "Submissions are triaged by the security team. Expect initial response within 48 hours of submission.",
     "Only previously unreported vulnerabilities are eligible. Duplicate submissions will be closed.",
     "Vulnerabilities must be reported through the WhiteClaws platform. Public disclosure before resolution disqualifies the submission.",
@@ -90,6 +265,6 @@
     "KYC verification required before payout",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
   ]
 }

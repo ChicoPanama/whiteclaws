@@ -31,7 +31,86 @@
     }
   },
   "source": "whiteclaws",
-  "contracts": [],
+  "contracts": [
+    {
+      "address": "0x6e3e0fe13dae2c42cca7ae2e849b0976e2e63e05",
+      "network": "base",
+      "name": "DepositBatch",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xe4e23120a38c4348d7e22ab23976fa0c4bf6e2ed",
+      "network": "base",
+      "name": "DepositManager",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xaead7d9202f3efb73657ca031f645c6b46cfe177",
+      "network": "base",
+      "name": "WithdrawBatch",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xa9452eaf5aa440790e6ca90e38c10b40fb611e59",
+      "network": "base",
+      "name": "WithdrawManager",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x6ec2a3a88a72943d2e87ed05cdf25914983ab7f6",
+      "network": "base",
+      "name": "EnsoHandler",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x3475dd4b852baf51279a463f0e5f38e5aed2e784",
+      "network": "base",
+      "name": "BasePortfolioAddress",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x4f69982392ba29e98c62b07482be190301d12ca7",
+      "network": "base",
+      "name": "BaseTokenExclusionManagerAddress",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x0827cf431c2f2a4f12584fddb6f01ab0e26ccbe0",
+      "network": "base",
+      "name": "BaseRebalancingAddress",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x17e14a8bc2380096f9e9eafea47fe1015502a09d",
+      "network": "base",
+      "name": "BaseAssetManagementConfigAddress",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xc05d2e4bbe442172c649faa1fdc503e627062bd3",
+      "network": "base",
+      "name": "FeeModuleImplementationAddress",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xf93659fb357899e092813bc3a2959ceDb3282a7f",
+      "network": "base",
+      "name": "PortfolioFactory",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x0490A477e4fc96392bDf1e2846E3230A1263a5D2",
+      "network": "base",
+      "name": "ProtocolConfig",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x608e93ad410f3e3288dfc1a60446925a0fcf967e",
+      "network": "base",
+      "name": "PriceOracle",
+      "type": "Bounty Scope"
+    }
+  ],
   "scope": {
     "in_scope": [
       "Core protocol smart contracts",
@@ -85,6 +164,6 @@
     "KYC verification required before payout",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
   ]
 }

@@ -46,6 +46,180 @@
       "network": "ethereum",
       "name": "Hyperlane Mailbox",
       "type": "Core"
+    },
+    {
+      "address": "0x1df063280C4166AF9a725e3828b4dAC6c7113B08",
+      "network": "arbitrum",
+      "name": "Arbitrum validatorAnnounce",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x80Cebd56A65e46c474a1A101e89E76C4c51D179c",
+      "network": "arbitrum",
+      "name": "Arbitrum proxyAdmin",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x979Ca5202784112f4738403dBec5D0F3B9daabB9",
+      "network": "arbitrum",
+      "name": "Arbitrum Mailbox proxy",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x4826ce713944d8b3eb98c73050bfc01e8fb6655a",
+      "network": "arbitrum",
+      "name": "Arbitrum Mailbox implementation",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x9e8fFb1c26099e75Dd5D794030e2E9AA51471c25",
+      "network": "arbitrum",
+      "name": "Arbitrum FallbackRoutingHook",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x5C17DD50232f330c928ce661116517D20859b08f",
+      "network": "arbitrum",
+      "name": "Arbitrum AggregationHook",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x9B5f440bBb64Fee337F37e03362b628711Ea09C7",
+      "network": "arbitrum",
+      "name": "Arbitrum staticAggregationHookFactory",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x6cA0B6D22da47f091B7613223cD4BB03a2d77918",
+      "network": "arbitrum",
+      "name": "Arbitrum interchainGasPaymaster proxy",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x3b6044acd6767f017e99318AA6Ef93b7B06A5a22",
+      "network": "arbitrum",
+      "name": "Arbitrum interchainGasPaymaster implementation",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xD3805207b65d99C075ceA938Fa7c0587026a5DF5",
+      "network": "arbitrum",
+      "name": "Arbitrum storageGasOracle",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x748040afB89B8FdBb992799808215419d36A0930",
+      "network": "arbitrum",
+      "name": "Arbitrum merkleTreeHook",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xa7ECcdb9Be08178f896c26b7BbD8C3D4E844d9Ba",
+      "network": "arbitrum",
+      "name": "Arbitrum pausableHook",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xd12C017529BE32c23150313F1E473B76e6B19773",
+      "network": "arbitrum",
+      "name": "Arbitrum staticAggregationIsm",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xD4883084389fC1Eeb4dAfB2ADcFc36B711c310EB",
+      "network": "arbitrum",
+      "name": "Arbitrum staticAggregationIsmFactory",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x5d759B5CeEb1C3b0181bEc0F80fb04f820cc35D1",
+      "network": "arbitrum",
+      "name": "Arbitrum domainRoutingIsm",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xa2931C37957f3079d3B21b877d56E1db930e02a5",
+      "network": "arbitrum",
+      "name": "Arbitrum domainRoutingIsmFactory",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x3c330d4a2e2b8443afab8e326e64ab4251b7eae0",
+      "network": "arbitrum",
+      "name": "Arbitrum staticMerkleRootMultisigIsm",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x29c02b9ad9483a1711a413d37b8126ec1a5eab0a",
+      "network": "arbitrum",
+      "name": "Arbitrum staticMessageIdMultisigIsm",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x12Df53079d399a47e9E730df095b712B0FDFA791",
+      "network": "arbitrum",
+      "name": "Arbitrum staticMessageIdMultisigIsmFactory",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x1E38556b4fE553e6249448960875883990efcf34",
+      "network": "arbitrum",
+      "name": "Arbitrum pausableIsm",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xfa8bfcE55B3A0631dF38257615cEF7FCD3523A48",
+      "network": "arbitrum",
+      "name": "Arbitrum interchainAccountIsm",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xCD0CFFf6eFD943b4b81f2c15847730dbcD30e3aE",
+      "network": "arbitrum",
+      "name": "Arbitrum interchainAccountRouter",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x9Cad0eC82328CEE2386Ec14a12E81d070a27712f",
+      "network": "avalanche",
+      "name": "Avalanche validatorAnnounce",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xd7CF8c05fd81b8cA7CfF8E6C49B08a9D63265c9B",
+      "network": "avalanche",
+      "name": "Avalanche proxyAdmin",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x35231d4c2D8B8ADcB5617A638A0c4548684c7C70",
+      "network": "avalanche",
+      "name": "Avalanche mailbox proxy",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xFf06aFcaABaDDd1fb08371f9ccA15D73D51FeBD6",
+      "network": "avalanche",
+      "name": "Avalanche mailbox implementation",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x61D15D571D5f7A9eF0D1938f072f430bBF024747",
+      "network": "avalanche",
+      "name": "Avalanche FallbackRoutingHook",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x0165a22BA489F7DA37DAf6397781777D9FCB5708",
+      "network": "avalanche",
+      "name": "Avalanche AggregationHook",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x3bF6Ac986C7Af9A9Ac356C0e99C0041EFd8D96e7",
+      "network": "avalanche",
+      "name": "Avalanche staticAggregationHookFactory",
+      "type": "Bounty Scope"
     }
   ],
   "scope": {
@@ -112,6 +286,6 @@
     "KYC verification required before payout",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
   ]
 }

@@ -31,7 +31,98 @@
     }
   },
   "source": "whiteclaws",
-  "contracts": [],
+  "contracts": [
+    {
+      "address": "0x8FdA5a7a8dCA67BBcDd10F02Fa0649A937215422",
+      "network": "zksync",
+      "name": "UniswapV3Factory",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x0c68a7C72f074d1c45C16d41fa74eEbC6D16a65C",
+      "network": "zksync",
+      "name": "UniswapInterfaceMulticall",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xBb79274aD9C7f68A5B6a7E31F431175BB889b557",
+      "network": "zksync",
+      "name": "ProxyAdmin",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xe10FF11b809f8EE07b056B452c3B2caa7FE24f89",
+      "network": "zksync",
+      "name": "TickLens",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x7d67b8Ff4AbFfc020641F5e430fbeEd03897674d",
+      "network": "zksync",
+      "name": "NFTDescriptor",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xa819De78cAB1163F8605809392068EdE3BFcDd1E",
+      "network": "zksync",
+      "name": "NonfungibleTokenPositionDescriptor",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xAeaBf2d69698C6810D2596fAE86099790A13Ee81",
+      "network": "zksync",
+      "name": "TransparentUpgradeableProxy",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x0616e5762c1E7Dc3723c50663dF10a162D690a86",
+      "network": "zksync",
+      "name": "NonfungiblePositionManager",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x611841b24E43C4ACfd290B427a3D6cf1A59dac8E",
+      "network": "zksync",
+      "name": "V3Migrator",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xf84268FA8EB857c2e4298720C1C617178F5e78e1",
+      "network": "zksync",
+      "name": "UniswapV3Staker",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x8Cb537fc92E26d8EBBb760E632c95484b6Ea3e28",
+      "network": "zksync",
+      "name": "QuoterV2",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x99c56385daBCE3E81d8499d0b8d0257aBC07E8A3",
+      "network": "zksync",
+      "name": "SwapRouter02",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x0000000000225e31d15943971f47ad3022f714fa",
+      "network": "zksync",
+      "name": "Permit2",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x28731BCC616B5f51dD52CF2e4dF0E78dD1136C06",
+      "network": "zksync",
+      "name": "UniversalRouter",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x8D8CDc86e8457DBa82D5Bc39A4451Ed7f4D744C7",
+      "network": "zksync",
+      "name": "UnsupportedProtocol",
+      "type": "Bounty Scope"
+    }
+  ],
   "scope": {
     "in_scope": [
       "Core protocol smart contracts",
@@ -85,6 +176,6 @@
     "KYC verification required before payout",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
   ]
 }

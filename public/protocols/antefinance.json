@@ -31,7 +31,50 @@
     }
   },
   "source": "whiteclaws",
-  "contracts": [],
+  "contracts": [
+    {
+      "address": "0xa03492a9a663f04c51684a3c172fc9c4d7e02edc",
+      "network": "ethereum",
+      "name": "Ante Pool Factory",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xE48f6A36f3712E389ce666BCEcD88BA60c30aE50",
+      "network": "ethereum",
+      "name": "Ante Pool",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x5f3555Febf9bF4930ad581dB008f8b0F6239C6Fc",
+      "network": "ethereum",
+      "name": "Ante Pool",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xFc2Bd420ae071a812Ea238C5916198024E00fE33",
+      "network": "ethereum",
+      "name": "Ante Pool",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x28b549845B6fE1939783ba0bDb3ba1a598da0394",
+      "network": "ethereum",
+      "name": "Ante Pool",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x6e1000a6088Eb3dD1493492626E556F6d9A17BD1",
+      "network": "ethereum",
+      "name": "Ante Pool",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x22075f4cD76299822Eb8D1546f5DcF775c90AA87",
+      "network": "ethereum",
+      "name": "Ante Pool",
+      "type": "Bounty Scope"
+    }
+  ],
   "scope": {
     "in_scope": [
       "Core protocol smart contracts",
@@ -85,6 +128,6 @@
     "KYC verification required before payout",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
   ]
 }

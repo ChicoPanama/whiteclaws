@@ -31,7 +31,152 @@
     }
   },
   "source": "whiteclaws",
-  "contracts": [],
+  "contracts": [
+    {
+      "address": "0xD502F487e1841Fdc805130e13eae80c61186Bc98",
+      "network": "ethereum",
+      "name": "IntegralToken",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xc8805cebd927941a3b26e2edced20d666fb118ba",
+      "network": "ethereum",
+      "name": "TimeRelease",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x36bD665392236b20bd42e161f02Bf0ae1d9441Ff",
+      "network": "ethereum",
+      "name": "Integral Staking  (6 Months)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xFFc0EAC1a1aE79C697607229Aca43Ef422625a40",
+      "network": "ethereum",
+      "name": "Integral Staking (3 Years)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xC480b33eE5229DE3FbDFAD1D2DCD3F3BAD0C56c6",
+      "network": "ethereum",
+      "name": "SIZE Factory",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x35cb375799b28c8d6b7c5c8d494ed180ae2e60cb",
+      "network": "ethereum",
+      "name": "SIZE Delay",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xF4418d9fe76A788F2868a558dD216549aD2d869B",
+      "network": "ethereum",
+      "name": "Fee governor",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x0800fcf3d8b46d56510f8360a4a4d9301cd78d91",
+      "network": "arbitrum",
+      "name": "Fee governor (Arbitrum)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xa400bad76f6bc487ef6acfcda3d68edd2a513d2a",
+      "network": "arbitrum",
+      "name": "SIZE (Arbitrum) Delay",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x2fe16Dd18bba26e457B7dD2080d5674312b026a2",
+      "network": "ethereum",
+      "name": "SIZE Pair (WETH-USDC)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x4bca34ad27df83566016b55c60dd80a9eb14913b",
+      "network": "arbitrum",
+      "name": "SIZE (Arbitrum) Pair (USDC-WETH)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x33B1ee377D97Ef58B5cba81e69aFdb2a4008dBB2",
+      "network": "ethereum",
+      "name": "Merkle Time Release (1)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x6A16630e78f95eEBB11a74dE0bA1503B9D0984d0",
+      "network": "ethereum",
+      "name": "Merkle Time Release (2)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xd25c6DA73ADBbB68508778621621568E07a1f284",
+      "network": "ethereum",
+      "name": "Merkle Time Release (3)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x2c66Ea3f4D8D056A20FFa14fCFC7956BBEfeB5FD",
+      "network": "ethereum",
+      "name": "Merkle Time Release (4)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x1c857a1e3a9687dd788A1B3921de34210708991E",
+      "network": "ethereum",
+      "name": "Merkle Time Release (5)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x5ADbc8e7458f5ba581BD8d3F4eC46Cd765a6706b",
+      "network": "ethereum",
+      "name": "Merkle Time Release (6)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x851456EBEE49c8A2A4dd66Fe3D19c431Dd8F56AE",
+      "network": "ethereum",
+      "name": "Merkle Time Release (7)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xe96f5A2680981AEc61C4980F2F7B9ad666698e61",
+      "network": "ethereum",
+      "name": "Merkle Time Release (8)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x048f0e7ea2CFD522a4a058D1b1bDd574A0486c46",
+      "network": "ethereum",
+      "name": "SIZE Pair (WETH-USDT)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x37f6df71b40c50b2038329cabf5fda3682df1ebf",
+      "network": "ethereum",
+      "name": " SIZE Pair (WETH-WBTC)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x6ec472b613012a492693697FA551420E60567eA7",
+      "network": "ethereum",
+      "name": "SIZE Pair (USDC-USDT)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xd17b3c9784510E33cD5B87b490E79253BcD81e2E",
+      "network": "ethereum",
+      "name": "SIZE Rrelayer",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x3c6951fdb433b5b8442e7aa126d50fbfb54b5f42",
+      "network": "arbitrum",
+      "name": "SIZE Relayer (Arbitrum)",
+      "type": "Bounty Scope"
+    }
+  ],
   "scope": {
     "in_scope": [
       "Core protocol smart contracts",
@@ -80,6 +225,6 @@
     "KYC verification required before payout",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
   ]
 }

@@ -31,7 +31,44 @@
     }
   },
   "source": "whiteclaws",
-  "contracts": [],
+  "contracts": [
+    {
+      "address": "0xf36AE63d89983E3aeA8AaaD1086C3280eb01438D",
+      "network": "moonriver",
+      "name": "Moonriver: Factory",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xe6fe3db4c5a2e4a9ab3301201b38724e578b35ca",
+      "network": "moonriver",
+      "name": "Moonriver: Router",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xafaff19679ab6baf75ed8098227be189ba47ba0f",
+      "network": "moonriver",
+      "name": "Moonriver: Farming",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xF49255205Dfd7933c4D0f25A57D40B1511F92fEF",
+      "network": "moonbeam",
+      "name": "Moonbeam: Factory",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x7a3909c7996efe42d425cd932fc44e3840fcab71",
+      "network": "moonbeam",
+      "name": "Moonbeam: Router",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xa226877393fc4e3b5f2b43a1bae3c5d72c918c2d",
+      "network": "moonbeam",
+      "name": "Moonbeam: Farming",
+      "type": "Bounty Scope"
+    }
+  ],
   "scope": {
     "in_scope": [
       "Core protocol smart contracts",
@@ -80,6 +117,6 @@
     "KYC verification required before payout",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
   ]
 }

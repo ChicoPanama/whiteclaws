@@ -31,7 +31,68 @@
     }
   },
   "source": "whiteclaws",
-  "contracts": [],
+  "contracts": [
+    {
+      "address": "0xB562127efDC97B417B3116efF2C23A29857C0F0B",
+      "network": "bsc",
+      "name": "DeXe DAO ",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x46B46629B674b4C0b48B111DEeB0eAfd9F84A1c0",
+      "network": "bsc",
+      "name": "ContractsRegistry",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x427a1214f12117b1AD48C817c203c5CF3Eb7E7C4",
+      "network": "bsc",
+      "name": "UserRegistry",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xaB9d2a2347D5fF5B760C0226C52d5C673b8D9e44",
+      "network": "bsc",
+      "name": "CoreProperties",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xc7730074736c10ed0d3F928A10Ee4162DA9a7983",
+      "network": "bsc",
+      "name": "PriceFeed",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x892B3292cF80CB298b7fA20D04EF4732640db404",
+      "network": "bsc",
+      "name": "ERC721Expert",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x85f86ef7E72e86BdEAb5F65e2B76A2c551f22109",
+      "network": "bsc",
+      "name": "PoolFactory ",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xFEB26AAB75638440B3CEFe8B10de6118972f9C6B",
+      "network": "bsc",
+      "name": "PoolRegistry",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x41260f637a993ce714Ece1ee9875F489e483e9b3",
+      "network": "bsc",
+      "name": "SphereXEngine",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x4fa2092E32934Dd3823E58C79ceD0e410a5B0D4b",
+      "network": "bsc",
+      "name": "PoolSphereXEngine",
+      "type": "Bounty Scope"
+    }
+  ],
   "scope": {
     "in_scope": [
       "Core protocol smart contracts",
@@ -58,7 +119,7 @@
   "program_rules": [
     "Proof of Concept is required for all submissions. Reports without a working PoC demonstrating the vulnerability will not be considered.",
     "KYC verification is required before bounty payout. Researchers must complete identity verification to receive rewards.",
-    "This program follows Primacy of Impact \u2014 valid findings are rewarded based on demonstrated impact regardless of whether the specific attack vector was previously known.",
+    "This program follows Primacy of Impact — valid findings are rewarded based on demonstrated impact regardless of whether the specific attack vector was previously known.",
     "Only previously unreported vulnerabilities are eligible. Duplicate submissions will be closed.",
     "Vulnerabilities must be reported through the WhiteClaws platform. Public disclosure before resolution disqualifies the submission.",
     "Testing must not disrupt live protocol operations. Use mainnet forks or testnets for Proof of Concept execution."
@@ -83,6 +144,6 @@
     "KYC verification required before payout",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
   ]
 }

@@ -31,7 +31,80 @@
     }
   },
   "source": "whiteclaws",
-  "contracts": [],
+  "contracts": [
+    {
+      "address": "KLend2g3cP87fffoy8q1mQqGKjrxjC8boSyAYavgmjD",
+      "network": "solana",
+      "name": "Kamino Lending Program - KLend",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "KvauGMspG5k6rtzrqqn7WNn3oZdyKqLKwK2XWQ8FLjd",
+      "network": "solana",
+      "name": "Kamino Lending Vault Program - KVault",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "HFn8GnPADiny6XqUoWE8uRPPxb29ikn4yTuPa9MF2fWJ",
+      "network": "solana",
+      "name": "Kamino's Price Oracle Aggregator - Onchain program",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "SBondMDrcV3K4kxZR1HNVT7osZxAHVHgYXL5Ze1oMUv",
+      "network": "solana",
+      "name": "Kamino's Price Oracle Aggregator - SBoD",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "LBUZKhRxPF3XUpBCjp4YzTKgLccjZhTSDM9YuVaPwxo",
+      "network": "solana",
+      "name": "Kamino's Price Oracle Aggregator - Meteora's interface",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "PERPHjGBqRHArX4DySjwM6UJHiR3sWAatqfdBS2qQJu",
+      "network": "solana",
+      "name": "Kamino's Price Oracle Aggregator - JUP's Perp Interface",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "REDSTBDUecGjwXd6YGPzHSvEUBHQqVRfCcjUVgPiHsr",
+      "network": "solana",
+      "name": "Kamino's Price Oracle Aggregator - RedStone's Interface",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "9N3yqarWXmXJ9NQBGgN47JXV82smby8nSMffkwetgYov",
+      "network": "solana",
+      "name": "Kamino's Price Oracle Aggregator - Securitize's Interface",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "SW1TCH7qEPTdLsDHRgPuMQjbQxKdH2aBStViMFnt64f",
+      "network": "solana",
+      "name": "Kamino's Price Oracle Aggregator - Switchboard's Interface",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "13gDzEXCdocbj8iAiqrScGo47NiSuYENGsRqi3SEAwet",
+      "network": "solana",
+      "name": "Kamino's Price Oracle Aggregator - Adrena's Perp Interface",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "FarmsPZpWu9i7Kky8tPN37rs2TpmMrAZrC7S7vJa91Hr",
+      "network": "solana",
+      "name": "Kamino Farms Program - KFarms",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "6LtLpnUFNByNXLyCoK9wA2MykKAmQNZKBdY8s47dehDc",
+      "network": "solana",
+      "name": "Kamino Liquidity Program",
+      "type": "Bounty Scope"
+    }
+  ],
   "scope": {
     "in_scope": [
       "Lending and borrowing smart contracts",
@@ -84,6 +157,6 @@
     "KYC verification required before payout",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
   ]
 }

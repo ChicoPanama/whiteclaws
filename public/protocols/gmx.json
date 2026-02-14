@@ -43,6 +43,180 @@
       "network": "arbitrum",
       "name": "GMX Vault",
       "type": "Core"
+    },
+    {
+      "address": "0xaBBc5F99639c9B6bCb58544ddf04EFA6802F4064",
+      "network": "arbitrum",
+      "name": "Router",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x321f653eed006ad1c29d174e17d96351bde22649",
+      "network": "arbitrum",
+      "name": "Glp Manager",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x5E4766F932ce00aA4a1A82d3Da85adf15C5694A1",
+      "network": "arbitrum",
+      "name": "Reward RouterV2",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x4277f8F2c384827B5273592FF7CeBd9f2C1ac258",
+      "network": "arbitrum",
+      "name": "GLP",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xfc5A1A6EB076a2C7aD06eD22C90d7E710E35ad0a",
+      "network": "arbitrum",
+      "name": "GMX",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xf42Ae1D54fd613C9bb14810b0588FaAa09a426cA",
+      "network": "arbitrum",
+      "name": "EsGMX",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x35247165119B69A40edD5304969560D0ef486921",
+      "network": "arbitrum",
+      "name": "BnGMX",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x45096e7aA921f27590f8F19e457794EB09678141",
+      "network": "arbitrum",
+      "name": "USDG",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x908c4d94d34924765f1edc22a1dd098397c59dd4",
+      "network": "arbitrum",
+      "name": "Staked Gmx Tracker",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x4d268a7d4C16ceB5a606c173Bd974984343fea13",
+      "network": "arbitrum",
+      "name": "Bonus Gmx Tracker",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x0755D33e45eD2B874c9ebF5B279023c8Bd1e5E93",
+      "network": "arbitrum",
+      "name": "Extended Gmx Tracker",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xd2D1162512F927a7e282Ef43a362659E4F2a728F",
+      "network": "arbitrum",
+      "name": "Fee Gmx Tracker",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x1aDDD80E6039594eE970E5872D247bf0414C8903",
+      "network": "arbitrum",
+      "name": "Staked Glp Tracker",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x4e971a87900b931fF39d1Aad67697F49835400b6",
+      "network": "arbitrum",
+      "name": "Fee Glp Tracker",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x23208b91a98c7c1cd9fe63085bff68311494f193",
+      "network": "arbitrum",
+      "name": "Staked Gmx Distributor",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x03f349b3cc4f200d7fae4d8ddaf1507f5a40d356",
+      "network": "arbitrum",
+      "name": "Bonus Gmx Distributor",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x1de098faf30bd74f22753c28db17a2560d4f5554",
+      "network": "arbitrum",
+      "name": "Fee Gmx Distributor",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x60519b48ec4183a61ca2b8e37869e675fd203b34",
+      "network": "arbitrum",
+      "name": "Staked Glp Distributor",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x5c04a12eb54a093c396f61355c6da0b15890150d",
+      "network": "arbitrum",
+      "name": "Fee Glp Distributor",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x199070DDfd1CFb69173aa2F7e20906F26B363004",
+      "network": "arbitrum",
+      "name": "Gmx Vester",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xA75287d2f8b217273E7FCD7E86eF07D33972042E",
+      "network": "arbitrum",
+      "name": "Glp Vester",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x3f3e77421e30271568ef7a0ab5c5f2667675341e",
+      "network": "arbitrum",
+      "name": "Timelock",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x01AF26b74409d10e15b102621EDd29c326ba1c55",
+      "network": "arbitrum",
+      "name": "Staked Glp",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x13E0BbE893B33b64D4f3F96725dd70531fA4EbCe",
+      "network": "arbitrum",
+      "name": "Glp Balance",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x09f77e8a13de9a35a7231028187e9fd5db8a2acb",
+      "network": "arbitrum",
+      "name": "Order Book",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x9ab2De34A33fB459b538c43f251eB825645e8595",
+      "network": "avalanche",
+      "name": "Vault",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x5f719c2f1095f7b9fc68a68e35b51194f4b6abe8",
+      "network": "avalanche",
+      "name": "Router",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xe1ae4d4b06A5Fe1fc288f6B4CD72f9F8323B107F",
+      "network": "avalanche",
+      "name": "Glp Manager",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x091eD806490Cc58Fd514441499e58984cCce0630",
+      "network": "avalanche",
+      "name": "Reward RouterV2",
+      "type": "Bounty Scope"
     }
   ],
   "scope": {
@@ -109,9 +283,9 @@
     }
   },
   "eligibility": [
-    "Open to all researchers \u2014 pseudonymous submissions accepted",
+    "Open to all researchers — pseudonymous submissions accepted",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
   ]
 }

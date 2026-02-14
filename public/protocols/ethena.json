@@ -60,6 +60,108 @@
       "network": "ethereum",
       "name": "StakedUSDe",
       "type": "Staking"
+    },
+    {
+      "address": "0x4c9edd5852cd905f086c759e8383e09bff1e68b3",
+      "network": "ethereum",
+      "name": "USDe.sol",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xe3490297a08d6fC8Da46Edb7B6142E4F461b62D3",
+      "network": "ethereum",
+      "name": "EthenaMinting.sol V2",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x9d39a5de30e57443bff2a8307a4256c8797a3497",
+      "network": "ethereum",
+      "name": "StakedUSDe.sol",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x7FC7c91D556B400AFa565013E3F32055a0713425",
+      "network": "ethereum",
+      "name": "USDeSilo.sol",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x2cc440b721d2cafd6d64908d6d8c4acc57f8afc3",
+      "network": "ethereum",
+      "name": "SingleAdminAccessControl.sol",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x8707f238936c12c309bfc2B9959C35828AcFc512",
+      "network": "ethereum",
+      "name": "EthenaLPStaking.sol. Present on both Ethereum and Mantle: https://explorer.mantle.xyz/address/0xf2fa332bD83149c66b09B45670bCe64746C6b439?tab=contract",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xf2fa332bd83149c66b09b45670bce64746c6b439",
+      "network": "ethereum",
+      "name": "StakingRewardsDistributor.sol",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x57e114B691Db790C35207b2e685D4A43181e6061",
+      "network": "ethereum",
+      "name": "ENA.sol",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x58538e6a46e07434d7e7375bc268d3cb839c0133",
+      "network": "ethereum",
+      "name": "ENAOFTAdapter.sol",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34",
+      "network": "ethereum",
+      "name": "USDeOFTAdapter.sol",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2",
+      "network": "ethereum",
+      "name": "StakedUSDeOFTAdapter.sol",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
+      "network": "mantle",
+      "name": "USDeOFT.sol - Present on the following chains: Mantle, Arbitrum One, Manta Pacific, Optimism, BNB, Kava, Scroll, Mode, Metis, Fraxtal, Linea, and some others updated here: https://docs.ethena.fi/solution-design/key-addresses",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x211Cc4DD073734dA055fbF44a2b4667d5E5fE5d2",
+      "network": "mantle",
+      "name": "StakedUSDeOFT.sol - Present on the following chains: Mantle, Arbitrum One, Manta Pacific, Optimism, BNB, Kava, Scroll, Mode, Metis, Fraxtal, Linea, and some others updated here: https://docs.ethena.fi/solution-design/key-a",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x58538e6A46E07434d7E7375Bc268D3cb839C0133",
+      "network": "mantle",
+      "name": "ENAOFT.sol - Present on the following chains: Mantle, Arbitrum One, Manta Pacific, Optimism, BNB, Kava, Scroll, Mode, Metis, Fraxtal, Linea, and some others updated here: https://docs.ethena.fi/solution-design/key-addresses",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x8bE3460A480c80728a8C4D7a5D5303c85ba7B3b9",
+      "network": "ethereum",
+      "name": "StakedENA.sol",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xc139190f447e929f090edeb554d95abb8b18ac1c",
+      "network": "ethereum",
+      "name": "USDtb.sol",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xa3DDBf92077b850E29C4805Df0a2459Ae048416a",
+      "network": "ethereum",
+      "name": "USDtbMinting.sol",
+      "type": "Bounty Scope"
     }
   ],
   "source": "whiteclaws",
@@ -79,7 +181,7 @@
   "program_rules": [
     "Proof of Concept is required for all submissions. Reports without a working PoC demonstrating the vulnerability will not be considered.",
     "KYC verification is required before bounty payout. Researchers must complete identity verification to receive rewards.",
-    "This program follows Primacy of Impact \u2014 valid findings are rewarded based on demonstrated impact regardless of whether the specific attack vector was previously known.",
+    "This program follows Primacy of Impact — valid findings are rewarded based on demonstrated impact regardless of whether the specific attack vector was previously known.",
     "Submissions are triaged by the security team. Expect initial response within 48 hours of submission.",
     "Only previously unreported vulnerabilities are eligible. Duplicate submissions will be closed.",
     "Vulnerabilities must be reported through the WhiteClaws platform. Public disclosure before resolution disqualifies the submission.",
@@ -105,6 +207,6 @@
     "KYC verification required before payout",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
   ]
 }

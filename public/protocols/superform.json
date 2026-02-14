@@ -37,7 +37,26 @@
     }
   },
   "source": "whiteclaws",
-  "contracts": [],
+  "contracts": [
+    {
+      "address": "0xF7DE3c70F2db39a188A81052d2f3C8e3e217822a",
+      "network": "ethereum",
+      "name": "SuperUSDC on Ethereum ",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xeF101508bf4DC6CF0f0a0C135f39a41faB4E4389",
+      "network": "ethereum",
+      "name": "SuperETH on Ethereum",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xe9F2a5F9f3c846f29066d7fB3564F8E6B6b2D65b",
+      "network": "base",
+      "name": "SuperUSDC on Base",
+      "type": "Bounty Scope"
+    }
+  ],
   "scope": {
     "in_scope": [
       "Yield vault and strategy contracts",
@@ -86,6 +105,6 @@
     "KYC verification required before payout",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
   ]
 }

@@ -31,7 +31,188 @@
     }
   },
   "source": "whiteclaws",
-  "contracts": [],
+  "contracts": [
+    {
+      "address": "0xD7dC9B366c027743D90761F71858BCa83C6899Ad",
+      "network": "ethereum",
+      "name": "NetworkMiddlewareService",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xb361894bC06cbBA7Ea8098BF0e32EB1906A5F891",
+      "network": "ethereum",
+      "name": "OperatorVaultOptInService",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x7133415b33B438843D581013f98A08704316633c",
+      "network": "ethereum",
+      "name": "OperatorNetworkOptInService",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xC773b1011461e7314CF05f97d95aa8e92C1Fd8aA",
+      "network": "ethereum",
+      "name": "NetworkRegistry",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xAd817a6Bc954F678451A71363f04150FDD81Af9F",
+      "network": "ethereum",
+      "name": "OperatorRegistry",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xc583e3E488C3CD8738850e2E7B19eF3f23e82e8A",
+      "network": "ethereum",
+      "name": "NetworkRestakeDelegator",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x1e006130f9Cf60E9C64942cf468E78F2f2a0E3F2",
+      "network": "ethereum",
+      "name": "FullRestakeDelegator",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x89391B703223511796F0778F0838E68Da66D90Fb",
+      "network": "ethereum",
+      "name": "OperatorNetworkSpecificDelegator",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xEF91D6730688b2966b959383A1B42Aa23130Aedf",
+      "network": "ethereum",
+      "name": "OperatorSpecificDelegator",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x4e6aE579b43B7DE1fc4CEd1DfB155714176c85fb",
+      "network": "ethereum",
+      "name": "Slasher",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xAE5Bb0C1b2f5d8fc077b2451E23439Ed88c458cc",
+      "network": "ethereum",
+      "name": "VetoSlasher",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xDd649AdaB2e67cAdC2EC29d75ABe73f3Df08065c",
+      "network": "ethereum",
+      "name": "Vault",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x5a0dC8e73d6846f12630b8f7D5197FA8Cf669cfe",
+      "network": "ethereum",
+      "name": "VaultTokenized",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x985Ed57AF9D475f1d83c1c1c8826A0E5A34E8C7B",
+      "network": "ethereum",
+      "name": "DelegatorFactory",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x685c2eD7D59814d2a597409058Ee7a92F21e48Fd",
+      "network": "ethereum",
+      "name": "SlasherFactory",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xAEb6bdd95c502390db8f52c8909F703E9Af6a346",
+      "network": "ethereum",
+      "name": "VaultFactory",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x29300b1d3150B4E2b12fE80BE72f365E200441EC",
+      "network": "ethereum",
+      "name": "VaultConfigurator",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x8F152FEAA99eb6656F902E94BD4E7bCf563D4A43",
+      "network": "ethereum",
+      "name": "DefaultCollateralMigrator",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x41f640B4F6a12170364589bCb3835DbE0C21C20B",
+      "network": "ethereum",
+      "name": "DefaultStakerRewards",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x16BFD34813e0FDabaA7591075280e9939f82Aa08",
+      "network": "ethereum",
+      "name": "DefaultOperatorRewards",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x290CAB97a312164Ccf095d75D6175dF1C4A0a25F",
+      "network": "ethereum",
+      "name": "DefaultStakerRewardsFactory",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x6D52fC402b2dA2669348Cc2682D85c61c122755D",
+      "network": "ethereum",
+      "name": "DefaultOperatorRewardsFactory",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x42dD40dC2130c658AB32d9989FF8aBe6c36463c0",
+      "network": "ethereum",
+      "name": "BurnerRouter",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x99F2B89fB3C363fBafD8d826E5AA77b28bAB70a0",
+      "network": "ethereum",
+      "name": "BurnerRouterFactory",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xdCaC890b14121FD5D925E2589017Be68C2B5B324",
+      "network": "ethereum",
+      "name": "wstETH_Burner",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x89e3915c9eb07d1bff5d78e24b28d409dba9b272",
+      "network": "ethereum",
+      "name": "rETH_Burner",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x919c4329ed4d4a72c72c126ff8ae351c1e7ce231",
+      "network": "ethereum",
+      "name": "mETH_Burner",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x1aca33ae8f57e2cdadd0375875ae12fb08c54529",
+      "network": "ethereum",
+      "name": "swETH_Burner",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xbe5821db563311750f6295e3cdb40abbdbff0c4b",
+      "network": "ethereum",
+      "name": "sfrxETH_Burner",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xcd669361d629380a70338d613d29c6f3a28a2b50",
+      "network": "ethereum",
+      "name": "ETHx_Burner",
+      "type": "Bounty Scope"
+    }
+  ],
   "scope": {
     "in_scope": [
       "Staking and delegation contracts",
@@ -86,9 +267,9 @@
     }
   },
   "eligibility": [
-    "Open to all researchers \u2014 pseudonymous submissions accepted",
+    "Open to all researchers — pseudonymous submissions accepted",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
   ]
 }

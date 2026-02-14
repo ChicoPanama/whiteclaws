@@ -32,7 +32,140 @@
     }
   },
   "source": "whiteclaws",
-  "contracts": [],
+  "contracts": [
+    {
+      "address": "0x421C69EAa54646294Db30026aeE80D01988a6876",
+      "network": "ethereum",
+      "name": "IporOracleProxy",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x9Bd2177027edEE300DC9F1fb88F24DB6e5e1edC6",
+      "network": "ethereum",
+      "name": "ipUSDT",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xEd7d74AA7eB1f12F83dA36DFaC1de2257b4e7523",
+      "network": "ethereum",
+      "name": "AmmTreasuryDaiProxy",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xB3d1c1aB4D30800162da40eb18B3024154924ba5",
+      "network": "ethereum",
+      "name": "AmmStorageUsdcProx",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xAc1C86CEacf03d5AFC8b08A22fc38Ec7c72338ed",
+      "network": "ethereum",
+      "name": "SpreadRouterProxy",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x70DdDE503edf4816B5991Ca5E2f9DE79e295F2D0",
+      "network": "arbitrum",
+      "name": "Arbitrum - IporOracleProxy",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xcC2fF2D38666723ea56c122097F6215B90d74196",
+      "network": "ethereum",
+      "name": "Ethereum - AmmTreasuryWeEthProxy",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xaC5B04988BC71bEE96f8D93040777Db3ef166125",
+      "network": "ethereum",
+      "name": "Ethereum - ipweETH",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x760Fa0aB719c4067D3A8d4727Cf07E8f3Bf118db",
+      "network": "arbitrum",
+      "name": "Arbitrum - IporProtocolRouterProxy",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x16d104009964e694761C0bf09d7Be49B7E3C26fd",
+      "network": "ethereum",
+      "name": "IporProtocolRouterProxy",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x364f116352EB95033D73822bA81257B8c1f5B1CE",
+      "network": "ethereum",
+      "name": "AmmStorageUsdtProx",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x8537b194BFf354c4738E9F3C81d67E3371DaDAf8",
+      "network": "ethereum",
+      "name": "ipDAI",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x137000352B4ed784e8fa8815d225c713AB2e7Dc9",
+      "network": "ethereum",
+      "name": "AmmTreasuryUsdcProxy",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x63395EDAF74a80aa1155dB7Cd9BBA976a88DeE4E",
+      "network": "ethereum",
+      "name": "AmmTreasuryEthProxy",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x28BC58e600eF718B9E97d294098abecb8c96b687",
+      "network": "ethereum",
+      "name": "AmmTreasuryUsdtProxy",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xbDa4b3e17a9B0ecb811E68c6f08907156CBa503C",
+      "network": "arbitrum",
+      "name": "Arbitrum - ipwstETH",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x326804339eC2a210e5f9246F4959aE50961c5C28",
+      "network": "arbitrum",
+      "name": "Arbitrum - AmmStorageWstEthProxy",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xBd013Ea2E01C2Ab3462dd67e9C83aa3834882A5D",
+      "network": "arbitrum",
+      "name": "Arbitrum - AmmTreasuryWstEthProxy",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x7c0e72f431FD69560D951e4C04A4de3657621a88",
+      "network": "ethereum",
+      "name": "ipUSDC",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x77Fe3a8E8d1d73Df54Ca07674Bf1bD6C5841e3b5",
+      "network": "ethereum",
+      "name": "Ethereum - AmmStorageWeEthProxy",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xb99f2a02c0851efdD417bd6935d2eFcd23c56e61",
+      "network": "ethereum",
+      "name": "AmmStorageDaiProxy",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xc40431b6C510AeB45Fbb5e21E40D49F12b0c1F0c",
+      "network": "ethereum",
+      "name": "ipstETH",
+      "type": "Bounty Scope"
+    }
+  ],
   "scope": {
     "in_scope": [
       "Core protocol smart contracts",
@@ -58,7 +191,7 @@
   "program_rules": [
     "Proof of Concept is required for all submissions. Reports without a working PoC demonstrating the vulnerability will not be considered.",
     "KYC is not required for this program. Pseudonymous submissions are accepted.",
-    "This program follows Primacy of Impact \u2014 valid findings are rewarded based on demonstrated impact regardless of whether the specific attack vector was previously known.",
+    "This program follows Primacy of Impact — valid findings are rewarded based on demonstrated impact regardless of whether the specific attack vector was previously known.",
     "Only previously unreported vulnerabilities are eligible. Duplicate submissions will be closed.",
     "Vulnerabilities must be reported through the WhiteClaws platform. Public disclosure before resolution disqualifies the submission.",
     "Testing must not disrupt live protocol operations. Use mainnet forks or testnets for Proof of Concept execution."
@@ -80,9 +213,9 @@
     }
   },
   "eligibility": [
-    "Open to all researchers \u2014 pseudonymous submissions accepted",
+    "Open to all researchers — pseudonymous submissions accepted",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
   ]
 }

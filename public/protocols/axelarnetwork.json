@@ -46,6 +46,90 @@
       "network": "ethereum",
       "name": "Axelar Gateway",
       "type": "Core"
+    },
+    {
+      "address": "0x5029C0EFf6C34351a0CEc334542cDb22c7928f78",
+      "network": "avalanche",
+      "name": "Avalanche Axelar Gateway contract address Proxy",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xfaB550568C688d5D8A52C7d794cb93Edc26eC0eC",
+      "network": "avalanche",
+      "name": "Avalanche axlUSDC token address",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x304acf330bbE08d1e512eefaa92F6a57871fD895",
+      "network": "bsc",
+      "name": "Binance Axelar Gateway contract address Proxy",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x4268B8F0B87b6Eae5d897996E6b845ddbD99Adf3",
+      "network": "bsc",
+      "name": "Binance  axlUSDC token address",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x304acf330bbE08d1e512eefaa92F6a57871fD895",
+      "network": "aurora",
+      "name": "Aurora Axelar Gateway contract address Proxy",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x5e3C572A97D898Fe359a2Cea31c7D46ba5386895",
+      "network": "fantom",
+      "name": "Fantom Axelar Gateway contract address Proxy",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x1B6382DBDEa11d97f24495C9A90b7c88469134a4",
+      "network": "fantom",
+      "name": "Fantom axlUSDC token address",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x6f015F16De9fC8791b234eF68D486d2bF203FBA8",
+      "network": "polygon",
+      "name": "Polygon Axelar Gateway contract address Proxy",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x750e4C4984a9e0f12978eA6742Bc1c5D248f40ed",
+      "network": "polygon",
+      "name": "Polygon axlUSDC token address",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x4F4495243837681061C4743b74B3eEdf548D56A5",
+      "network": "moonbeam",
+      "name": "Moonbeam Axelar Gateway contract address Proxy",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xCa01a1D0993565291051daFF390892518ACfAD3A",
+      "network": "moonbeam",
+      "name": "Moonbeam axlUSDC token address",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xB5FB4BE02232B1bBA4dC8f81dc24C26980dE9e3C",
+      "network": "ethereum",
+      "name": "Interchain Token Service contract address (all chains)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x83a93500d23Fbc3e82B410aD07A6a9F7A0670D66",
+      "network": "ethereum",
+      "name": "Interchain Token Factory contract address proxy (all chains)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x467719aD09025FcC6cF6F8311755809d45a5E5f3",
+      "network": "ethereum",
+      "name": "AXL token address",
+      "type": "Bounty Scope"
     }
   ],
   "scope": {
@@ -107,6 +191,6 @@
     "KYC verification required before payout",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
   ]
 }

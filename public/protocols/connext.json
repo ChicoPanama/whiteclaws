@@ -35,7 +35,188 @@
     }
   },
   "source": "whiteclaws",
-  "contracts": [],
+  "contracts": [
+    {
+      "address": "0xEE9deC2712cCE65174B561151701Bf54b99C24C8",
+      "network": "arbitrum",
+      "name": "Connext.sol",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xCd401c10afa37d641d2F594852DA94C700e4F2CE",
+      "network": "bsc",
+      "name": "Connext.sol",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x8898B472C54c31894e3B9bb83cEA802a5d0e63C6",
+      "network": "ethereum",
+      "name": "Connext.sol",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x11984dc4465481512eb5b777e44061c158cf2259",
+      "network": "polygon",
+      "name": "Connext.sol",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x8f7492DE823025b4CfaAB1D34c58963F2af5DEDA",
+      "network": "optimism",
+      "name": "Connext.sol",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x5bB83e95f63217CDa6aE3D181BA580Ef377D2109",
+      "network": "gnosis",
+      "name": "Connext.sol",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xa05eF29e9aC8C75c530c2795Fa6A800e188dE0a9",
+      "network": "linea",
+      "name": "Connext.sol",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xB8448C6f7f7887D36DcA487370778e419e9ebE3F",
+      "network": "base",
+      "name": "Connext.sol",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x5f0F58c8939565C0C553303849Bc5Bf7c530e816",
+      "network": "arbitrum",
+      "name": "ArbitrumSpokeConnector.sol",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x779D30a8BDD8f8A1cEC0292d7799350a8cCef119",
+      "network": "bsc",
+      "name": "WormholeSpokeConnector.sol",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x02fdF04AF077687CDA03Bd3162388b7972A4a1Cc",
+      "network": "ethereum",
+      "name": "MainnetSpokeConnector.sol",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xa052EF2D4Eb460c3886B0fd687FA33D3dc8b15EE",
+      "network": "polygon",
+      "name": "PolygonSpokeConnector.sol",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x432006CEd3BBa818e3D0d8730426B32Bb34a42aB",
+      "network": "optimism",
+      "name": "OptimismSpokeConnector.sol",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xDF97CadbcCeE9cfdB12A3e9BB7663E6753A71a0C",
+      "network": "gnosis",
+      "name": "GnosisSpokeConnector.sol",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x6E3f48301C13d31fC4448039c8F82EB99C2714b4",
+      "network": "base",
+      "name": "BaseSpokeConnector.sol",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xA401e30E6b7Eb50e9355a4FA8F29118d28386E33",
+      "network": "linea",
+      "name": "LineaSpokeConnector.sol",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x83096c7455f24E593aaC9A7c73f849d36d3EEb82",
+      "network": "ethereum",
+      "name": "ArbitrumHubConnector.sol",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xae6B9cDE6191b710F5A18D82f751Ba52B78a99DA",
+      "network": "ethereum",
+      "name": "WormholeHubConnector.sol",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xE8cF9EbB1cFB137c692a0a4E470E257B9417d116",
+      "network": "ethereum",
+      "name": "PolygonHubConnector.sol",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x5c2149869146DeA55cDD1CF2DD828e4e1548bb2A",
+      "network": "ethereum",
+      "name": "OptimismHubConnector.sol",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xF1c78967584D5E0ffF66dA103b8eb06c82EC020d",
+      "network": "ethereum",
+      "name": "GnosisHubConnector.sol",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x56Ab287e5c33Ee70158c951f34818bd095446255",
+      "network": "ethereum",
+      "name": "LineaHubConnector.sol",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x2d4C375Bc12292A339524fbcBa35D2a9F27f6C93",
+      "network": "ethereum",
+      "name": "BaseHubConnector.sol",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x523AB7424AD126809b1d7A134eb6E0ee414C9B3A",
+      "network": "ethereum",
+      "name": "RootManager.sol",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xEb12993c0c280782C3Ca4Ad27d690a2CD8507fc6",
+      "network": "arbitrum",
+      "name": "RelayerProxy.sol",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x3Aa5171f747591Ae8914acE179f23187B534D7b1",
+      "network": "bsc",
+      "name": "RelayerProxy.sol",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xAFCE6eAc6CdcEd6a54d367E1271C10d6595aE78C",
+      "network": "polygon",
+      "name": "RelayerProxy.sol",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x4778170Ff14883A8e0dC0313E303dCB6B4dAD493",
+      "network": "optimism",
+      "name": "RelayerProxy.sol",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xCbd3E4b6e152a80d701c3Db6c212709610BE1835",
+      "network": "gnosis",
+      "name": "RelayerProxy.sol",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x1b0e5e507f26F2c14839ABE6831dC36e09C7e41b",
+      "network": "linea",
+      "name": "RelayerProxy.sol",
+      "type": "Bounty Scope"
+    }
+  ],
   "scope": {
     "in_scope": [
       "Cross-chain messaging contracts",
@@ -81,9 +262,9 @@
     }
   },
   "eligibility": [
-    "Open to all researchers \u2014 pseudonymous submissions accepted",
+    "Open to all researchers — pseudonymous submissions accepted",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
   ]
 }

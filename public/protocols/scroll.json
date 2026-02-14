@@ -68,6 +68,186 @@
       "network": "ethereum",
       "name": "L1ETHGateway",
       "type": "Gateway"
+    },
+    {
+      "address": "0x33996CC9EEe2dc20B10b8E57d313d0FacC7a0828",
+      "network": "ethereum",
+      "name": "ZkEvmVerifierV1",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x1Ea29d57dAC237152d878758bAe4BeB2668998f6",
+      "network": "ethereum",
+      "name": "MultipleVersionRollupVerifier",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x259204DDd2bA29bD9b1B9A5c9B093f73d7EAcf37",
+      "network": "ethereum",
+      "name": "L1Whitelist",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x0d7E906BD9cAFa154b048cFa766Cc1E54E39AF9B",
+      "network": "ethereum",
+      "name": "L1MessageQueue",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x987e300fDfb06093859358522a79098848C33852",
+      "network": "ethereum",
+      "name": "L2GasPriceOracle",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xa13BAF47339d63B743e7Da8741db5456DAc1E556",
+      "network": "ethereum",
+      "name": "L1ScrollChain",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x7F2b8C31F88B6006c382775eea88297Ec1e3E905",
+      "network": "ethereum",
+      "name": "L1ETHGateway",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x7AC440cAe8EB6328de4fA621163a792c1EA9D4fE",
+      "network": "ethereum",
+      "name": "L1WETHGateway",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xD8A791fE2bE73eb6E6cF1eb0cb3F36adC9B3F8f9",
+      "network": "ethereum",
+      "name": "L1StandardERC20Gateway",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xF8B1378579659D8F7EE5f3C929c2f3E332E41Fd6",
+      "network": "ethereum",
+      "name": "L1GatewayRouter",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x6774Bcbd5ceCeF1336b5300fb5186a12DDD8b367",
+      "network": "ethereum",
+      "name": "L1ScrollMessenger",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x72CAcBcfDe2d1e19122F8A36a4d6676cd39d7A5d",
+      "network": "ethereum",
+      "name": "EnforcedTxGateway",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xb2b10a289A229415a124EFDeF310C10cb004B6ff",
+      "network": "ethereum",
+      "name": "L1CustomERC20Gateway",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x6260aF48e8948617b8FA17F4e5CEa2d21D21554B",
+      "network": "ethereum",
+      "name": "L1ERC721Gateway",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xb94f7F6ABcb811c5Ac709dE14E37590fcCd975B6",
+      "network": "ethereum",
+      "name": "L1ERC1155Gateway",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x798576400F7D662961BA15C6b3F3d813447a26a6",
+      "network": "ethereum",
+      "name": "L1ScrollOwner",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x5300000000000000000000000000000000000002",
+      "network": "scroll",
+      "name": "L1GasPriceOracle",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x5300000000000000000000000000000000000000",
+      "network": "scroll",
+      "name": "L2MessageQueue",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x5300000000000000000000000000000000000005",
+      "network": "scroll",
+      "name": "L2TxFeeVault",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x5300000000000000000000000000000000000003",
+      "network": "scroll",
+      "name": "L2Whitelist",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x781e90f1c8Fc4611c9b7497C3B47F99Ef6969CbC",
+      "network": "scroll",
+      "name": "L2ScrollMessenger",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x6EA73e05AdC79974B931123675ea8F78FfdacDF0",
+      "network": "scroll",
+      "name": "L2ETHGateway",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x7003E7B7186f0E6601203b99F7B8DECBfA391cf9",
+      "network": "scroll",
+      "name": "L2WETHGateway",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xE2b4795039517653c5Ae8C2A9BFdd783b48f447A",
+      "network": "scroll",
+      "name": "L2StandardERC20Gateway",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x4C0926FF5252A435FD19e10ED15e5a249Ba19d79",
+      "network": "scroll",
+      "name": "L2GatewayRouter",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xC7d86908ccf644Db7C69437D5852CedBC1aD3f69",
+      "network": "scroll",
+      "name": "ScrollStandardERC20",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x66e5312EDeEAef6e80759A0F789e7914Fb401484",
+      "network": "scroll",
+      "name": "ScrollStandardERC20Factory",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x64CCBE37c9A82D85A1F2E74649b7A42923067988",
+      "network": "scroll",
+      "name": "L2CustomERC20Gateway",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x62597Cc19703aF10B58feF87B0d5D29eFE263bcc",
+      "network": "scroll",
+      "name": "L2ERC1155Gateway",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x13D24a7Ff6F5ec5ff0e9C40Fc3B8C9c01c65437B",
+      "network": "scroll",
+      "name": "L2ScrollOwner",
+      "type": "Bounty Scope"
     }
   ],
   "source": "whiteclaws",
@@ -89,7 +269,7 @@
   "program_rules": [
     "Proof of Concept is required for all submissions. Reports without a working PoC demonstrating the vulnerability will not be considered.",
     "KYC verification is required before bounty payout. Researchers must complete identity verification to receive rewards.",
-    "This program follows Primacy of Impact \u2014 valid findings are rewarded based on demonstrated impact regardless of whether the specific attack vector was previously known.",
+    "This program follows Primacy of Impact — valid findings are rewarded based on demonstrated impact regardless of whether the specific attack vector was previously known.",
     "Only previously unreported vulnerabilities are eligible. Duplicate submissions will be closed.",
     "Vulnerabilities must be reported through the WhiteClaws platform. Public disclosure before resolution disqualifies the submission.",
     "Testing must not disrupt live protocol operations. Use mainnet forks or testnets for Proof of Concept execution.",
@@ -115,6 +295,6 @@
     "KYC verification required before payout",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
   ]
 }

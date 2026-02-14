@@ -31,7 +31,170 @@
     }
   },
   "source": "whiteclaws",
-  "contracts": [],
+  "contracts": [
+    {
+      "address": "0xDbc52cd5b8EdA1A7BCBABb838ca927d23E3673e5",
+      "network": "polygon",
+      "name": "ASSET (Polygon)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x58E0e4b0C6D99bEbC95a2be635a677D947b5C912",
+      "network": "polygon",
+      "name": "ASSETCreate",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x1f980CFDf257792f2D85523094cD6B7210CAb509",
+      "network": "polygon",
+      "name": "CATALYST",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x687B573233791b96b51a47B6FCB8D7D9eceF118e",
+      "network": "polygon",
+      "name": "Marketplace",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x4063c6Ccd3D9541E53A514E83fba3843A7848E2F",
+      "network": "polygon",
+      "name": "RoyaltyManager",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xafd5f5c6e72f0f6441e4abf2ae8ff23dee21a87a",
+      "network": "polygon",
+      "name": "RoyaltySplitter",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x5CC5B05a8A13E3fBDB0BB9FcCd98D38e50F90c38",
+      "network": "ethereum",
+      "name": "LAND",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x6cE82874EAf6E7602fD21Cf8bBDEd82705680A99",
+      "network": "ethereum",
+      "name": "LAND Tunnel",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x3845badade8e6dff049820680d1f14bd3903a5d0",
+      "network": "ethereum",
+      "name": "SAND",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x942DaEbbec2ab2307223E58E2C4360d4EBf88FA4",
+      "network": "ethereum",
+      "name": "EstateSalesWithAuth",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xa6e383bda26e4c52a3a3a3463552c42494669abd",
+      "network": "polygon",
+      "name": "SAND Staking Pool",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x7695b9ac52e49f1a8c4c554a072edb225eebfe70",
+      "network": "polygon",
+      "name": "SAND Staking Pool Contribution Calculator",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xbbba073c31bf03b8acf7c28ef0738decf3695683",
+      "network": "polygon",
+      "name": "SAND",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x9d305a42a3975ee4c1c57555bed5919889dce63f",
+      "network": "polygon",
+      "name": "LAND",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x21B083e128fa7BcC31214a0c000B56Fd4372EEa8",
+      "network": "polygon",
+      "name": "LAND Tunnel",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xc3f3ef3929392fdc697c5800d6cd18af73377a8f",
+      "network": "polygon",
+      "name": "Avatar collections",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x5cd67Daa17F708d6489E7Bb7648b7D0B823eA7bF",
+      "network": "polygon",
+      "name": "Staking v4 - SAND Staking pool Rewards Calculator",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x6b4831e24F0cd73d4150EF4694aA87d6c104A774",
+      "network": "polygon",
+      "name": "Staking v4 - SAND Staking pool Contribution Rules",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xD3A9CAa25393765c05ce9f332B5E33b5E33D8B8F",
+      "network": "polygon",
+      "name": "Staking v4 - SAND Staking pool",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x3eF580A4A6B862183558625126bcC186436bfF4a",
+      "network": "polygon",
+      "name": "Collection Factory",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x90262e888bbf1f5f375a9286da324f2aeeeebec2",
+      "network": "polygon",
+      "name": "Avatar collections v2",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xa342f5d851e866e18ff98f351f2c6637f4478db5",
+      "network": "ethereum",
+      "name": "ASSET (Ethereum) ",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xac531Eb26Ca1d21b85126De8FB87E80E09002DcF",
+      "network": "bsc",
+      "name": "SAND on BSC",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xac531Eb26Ca1d21b85126De8FB87E80E09002DcF",
+      "network": "base",
+      "name": "SAND on BASE",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xac531Eb26Ca1d21b85126De8FB87E80E09002DcF",
+      "network": "ethereum",
+      "name": "OFTAdapterForSand",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x214d52880b1e4E17d020908cd8EAa988FfDD4020",
+      "network": "polygon",
+      "name": "MultiGiveaway",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x3d49b60783dB5FA4341355f31e4D9CBa63E53035",
+      "network": "polygon",
+      "name": "InstantGiveaway",
+      "type": "Bounty Scope"
+    }
+  ],
   "scope": {
     "in_scope": [
       "Core protocol smart contracts",
@@ -85,6 +248,6 @@
     "KYC verification required before payout",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
   ]
 }

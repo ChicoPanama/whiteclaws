@@ -31,7 +31,188 @@
     }
   },
   "source": "whiteclaws",
-  "contracts": [],
+  "contracts": [
+    {
+      "address": "0xa2091116649b070D2a27Fc5C85c9820302114c63",
+      "network": "ethereum",
+      "name": "LiquidatorFactory",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xe6a03Ba967172a1FF218FEE686445f444258021A",
+      "network": "ethereum",
+      "name": "LiquidatorImplementation (v200)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xED9D14F83eddd08572c403175FFf41c42a35a149",
+      "network": "ethereum",
+      "name": "LiquidatorInitializer (v200)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x1551717AE4FdCB65ed028F7fB7abA39908f6A7A6",
+      "network": "ethereum",
+      "name": "LoanManagerFactory (Fixed Term)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x5b97c9DccE2693844b90Cea40ba1fD15Bf99Eb01",
+      "network": "ethereum",
+      "name": "LoanManagerImplementation (v301 Fixed Term)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xcbe920B1931DA57069b12A19Bc6d11Ad7B5adaBD",
+      "network": "ethereum",
+      "name": " LoanManagerInitializer (v300 Fixed Term)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x90b14505221a24039a2d11ad5862339db97cc160",
+      "network": "ethereum",
+      "name": "LoanManagerFactory (Open-Term)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xbad003da1e107f537ae2f687f5fe7a7affe9b241",
+      "network": "ethereum",
+      "name": "LoanManagerImplementation (v100 - Open-Term)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x20d0b31c2620c28d22489babfef9445c7d952921",
+      "network": "ethereum",
+      "name": "LoanManagerInitializer (v100 - Open-Term)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x9BeAbb1B6F3ad1DdB87b65148BA5Eb6102334956",
+      "network": "ethereum",
+      "name": "MapleGlobalsImplementation (v301)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x804a6F5F667170F545Bf14e5DDB48C70B788390C",
+      "network": "ethereum",
+      "name": "MapleGlobalsProxy (v2)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xea067db5b32ce036ee5d8607dbb02f544768dbc6",
+      "network": "ethereum",
+      "name": "MapleLoanFactory (Fixed-Term)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xe1714CEEB10683448E40bFE73c9F493662ff5b7e",
+      "network": "ethereum",
+      "name": "MapleLoanImplementation (v602 - Fixed Term)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xC43e722A0F9432609a96Df0cF1aFA99556532F18",
+      "network": "ethereum",
+      "name": "MapleLoanInitializer (v602 Fixed Term)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x6fad515fc046dd17166453a79725f50b917b7cf6",
+      "network": "ethereum",
+      "name": "MapleLoanFactory (Open-Term)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xEeaDb66693d63cFCF3E4D942D2812D4aE9443Fc1",
+      "network": "ethereum",
+      "name": "MapleLoanImplementation (v201 - Open-Term)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x9385A0F681c3D4b39c2780cD69777Dd97a681485",
+      "network": "ethereum",
+      "name": "MapleLoanInitializer (v201 - Open-Term)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x12fB5dbBDB06ab973f047cC46D6bB33ba4d03b96",
+      "network": "ethereum",
+      "name": "PoolDeployer",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xE463cD473EcC1d1A4ecF20b62624D84DD20a8339",
+      "network": "ethereum",
+      "name": "PoolManagerFactory",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xfE02Be1aD28EdFd8e3dD6F29C402B244C2A258B8",
+      "network": "ethereum",
+      "name": "PoolManagerImplementation (v400)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xB33Bfa00E1d92fDaC5AeCB2976d6998C2ecca759",
+      "network": "ethereum",
+      "name": "PoolManagerInitializer (v400)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x27ea6e67FB62AB2A603d4ACBc9377D7a9A0fd5e3",
+      "network": "ethereum",
+      "name": "Refinancer (Fixed term)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x653D4947620B73a433cAbBc9DFb068c3e9c18984",
+      "network": "ethereum",
+      "name": "MapleRefinancer (Open-Term)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xbe10adce8b6e3e02db384e7fada5395dd113d8b3",
+      "network": "ethereum",
+      "name": "MaplePoolPermissionManagerProxy (v100)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xc3530358e54bc81efce4a2e12a898e996b091753",
+      "network": "ethereum",
+      "name": "MaplePoolPermissionManagerImplementation (v100)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xb9e25B584dc4a7C9d47aEF577f111fBE5705773B",
+      "network": "ethereum",
+      "name": "WithdrawalManagerFactory (Cyclical)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xcc4e684916aa7fa0e4faef2359b49a755f89c75b",
+      "network": "ethereum",
+      "name": "WithdrawalManagerImplementation (v110) (Cyclical)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x485ba3f5235f150bf8e4afbd3a25c266cdadd9dd",
+      "network": "ethereum",
+      "name": "WithdrawalManagerInitializer (v110) (Cyclical)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0xca33105902e8d232ddfb9f71ff3d79c7e7f2c4e5",
+      "network": "ethereum",
+      "name": "WithdrawalManagerFactory (Queue)",
+      "type": "Bounty Scope"
+    },
+    {
+      "address": "0x899b57bbd8597aa2d1898476504f479c982c5c2c",
+      "network": "ethereum",
+      "name": "WithdrawalManagerImplementation (v100) (Queue)",
+      "type": "Bounty Scope"
+    }
+  ],
   "scope": {
     "in_scope": [
       "Lending and borrowing smart contracts",
@@ -85,6 +266,6 @@
     "KYC verification required before payout",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
   ]
 }
