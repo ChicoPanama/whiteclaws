@@ -1,5 +1,11 @@
 {
   "framework": "nextjs",
   "buildCommand": "npm run build",
-  "cleanUrls": false
+  "cleanUrls": false,
+  "crons": [
+    {
+      "path": "/api/admin/points/recalculate",
+      "schedule": "0 */6 * * *"
+    }
+  ]
 }
