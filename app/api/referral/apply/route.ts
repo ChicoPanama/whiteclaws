@@ -3,27 +3,13 @@ import { z } from 'zod'
 import { extractApiKey, verifyApiKey } from '@/lib/auth/api-key'
 import { applyReferralCode } from '@/lib/referral/engine'
 import { createClient as createServerClient } from '@/lib/supabase/server'
+import { checkRateLimit } from '@/lib/rate-limit'
 
 export const dynamic = 'force-dynamic'
 
 const BodySchema = z.object({
   referral_code: z.string().min(3).max(64),
 }).strict()
-
-type RateEntry = { count: number; resetAt: number }
-const rateLimitState = new Map<string, RateEntry>()
-
-function rateLimit(key: string, limit: number, windowMs: number): boolean {
-  const now = Date.now()
-  const entry = rateLimitState.get(key)
-  if (!entry || now > entry.resetAt) {
-    rateLimitState.set(key, { count: 1, resetAt: now + windowMs })
-    return true
-  }
-  if (entry.count >= limit) return false
-  entry.count += 1
-  return true
-}
 
 export async function POST(req: NextRequest) {
   try {
@@ -43,7 +29,8 @@ export async function POST(req: NextRequest) {
 
     if (!userId) return NextResponse.json({ error: 'Authentication required' }, { status: 401 })
 
-    if (!rateLimit(`ref-apply:${userId}`, 10, 60 * 60_000)) {
+    const rl = await checkRateLimit({ key: `ref-apply:${userId}`, limit: 10, windowSeconds: 60 * 60 })
+    if (!rl.ok) {
       return NextResponse.json({ error: 'Too many requests' }, { status: 429 })
     }
 

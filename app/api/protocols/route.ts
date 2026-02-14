@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { createClient } from "@/lib/supabase/admin";
 import { createClient as createServerClient } from "@/lib/supabase/server";
 import { z } from "zod";
+import { checkRateLimit } from "@/lib/rate-limit";
 export const dynamic = 'force-dynamic';
 
 const protocolCreateSchema = z.object({
@@ -104,6 +105,14 @@ export async function POST(request: NextRequest) {
   try {
     const session = await requireAuthenticatedSession();
     if (!session.ok) return session.res;
+
+    // Shared limiter (Vercel-safe): admin protocol creation is still a write surface.
+    const rl = await checkRateLimit({
+      key: `protocol_create:${session.userId}`,
+      limit: 30,
+      windowSeconds: 60 * 60,
+    });
+    if (!rl.ok) return NextResponse.json({ error: "Too many requests" }, { status: 429 });
 
     const admin = requireAdminKey(request);
     if (!admin.ok) return admin.res;

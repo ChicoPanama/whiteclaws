@@ -4,6 +4,8 @@ import { createClient as createAdminClient } from '@/lib/supabase/admin'
 import { mintSBT } from '@/lib/web3/contracts/access-sbt'
 import { fireEvent } from '@/lib/points/hooks'
 import { z } from 'zod'
+import { checkRateLimit } from '@/lib/rate-limit'
+import { getRequestIp, hashKey } from '@/lib/rate-limit/keys'
 
 export const dynamic = 'force-dynamic'
 
@@ -12,28 +14,6 @@ const mintRequestSchema = z.object({
   payment_token: z.enum(['USDC', 'ETH', 'WC']).optional(),
   tx_hash: z.string().min(1).optional(),
 })
-
-type RateEntry = { windowStartMs: number; count: number }
-const rateLimitState = new Map<string, RateEntry>()
-
-function rateLimitOrNull(req: NextRequest, limit: number, windowMs: number): NextResponse | null {
-  const forwardedFor = req.headers.get('x-forwarded-for') || ''
-  const ip = forwardedFor.split(',')[0]?.trim() || 'unknown'
-  const key = `access_mint:${ip}`
-
-  const now = Date.now()
-  const entry = rateLimitState.get(key)
-  if (!entry || now - entry.windowStartMs >= windowMs) {
-    rateLimitState.set(key, { windowStartMs: now, count: 1 })
-    return null
-  }
-
-  entry.count += 1
-  if (entry.count > limit) {
-    return NextResponse.json({ error: 'Too many requests' }, { status: 429 })
-  }
-  return null
-}
 
 async function requireAuthenticatedSession(): Promise<
   { ok: true; userId: string } | { ok: false; res: NextResponse }
@@ -57,8 +37,10 @@ function requireAdminKey(req: NextRequest): { ok: true } | { ok: false; res: Nex
 
 export async function POST(req: NextRequest) {
   try {
-    const rl = rateLimitOrNull(req, 10, 60_000)
-    if (rl) return rl
+    // Shared limiter (Vercel-safe): 10/min per IP.
+    const ip = getRequestIp(req)
+    const rl = await checkRateLimit({ key: `access_mint:${hashKey(ip)}`, limit: 10, windowSeconds: 60 })
+    if (!rl.ok) return NextResponse.json({ error: 'Too many requests' }, { status: 429 })
 
     const session = await requireAuthenticatedSession()
     if (!session.ok) return session.res

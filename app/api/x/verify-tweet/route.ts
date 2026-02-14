@@ -4,6 +4,7 @@ import { resolveIdentity } from '@/lib/auth/resolve'
 import { verifyTweet } from '@/lib/x/verification'
 import { fireEvent } from '@/lib/points/hooks'
 import { createClient as createServerClient } from '@/lib/supabase/server'
+import { checkRateLimit } from '@/lib/rate-limit'
 
 export const dynamic = 'force-dynamic'
 
@@ -11,21 +12,6 @@ const BodySchema = z.object({
   tweet_id: z.string().regex(/^\d+$/).optional(),
   tweet_url: z.string().url().optional(),
 }).strict()
-
-type RateEntry = { count: number; resetAt: number }
-const rateLimitState = new Map<string, RateEntry>()
-
-function rateLimit(key: string, limit: number, windowMs: number): boolean {
-  const now = Date.now()
-  const entry = rateLimitState.get(key)
-  if (!entry || now > entry.resetAt) {
-    rateLimitState.set(key, { count: 1, resetAt: now + windowMs })
-    return true
-  }
-  if (entry.count >= limit) return false
-  entry.count += 1
-  return true
-}
 
 export async function POST(req: NextRequest) {
   try {
@@ -42,7 +28,8 @@ export async function POST(req: NextRequest) {
 
     if (!userId) return NextResponse.json({ error: 'Authentication required' }, { status: 401 })
 
-    if (!rateLimit(`x-verify:${userId}`, 5, 60 * 60_000)) {
+    const rl = await checkRateLimit({ key: `x-verify:${userId}`, limit: 5, windowSeconds: 60 * 60 })
+    if (!rl.ok) {
       return NextResponse.json({ error: 'Too many requests' }, { status: 429 })
     }
 

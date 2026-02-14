@@ -6,6 +6,7 @@ import { createClient as createServerClient } from '@/lib/supabase/server'
 import { resolveIdentity } from '@/lib/auth/resolve'
 import { emitParticipationEvent } from '@/lib/services/points-engine'
 import { getXStatus } from '@/lib/x/verification'
+import { checkRateLimit } from '@/lib/rate-limit'
 
 export const dynamic = 'force-dynamic'
 
@@ -22,21 +23,6 @@ const BodySchema = z.object({
     bountySlug: z.string().max(120).optional(),
   }).strict().optional(),
 }).strict()
-
-type RateEntry = { count: number; resetAt: number }
-const rateLimitState = new Map<string, RateEntry>()
-
-function rateLimit(key: string, limit: number, windowMs: number): boolean {
-  const now = Date.now()
-  const entry = rateLimitState.get(key)
-  if (!entry || now > entry.resetAt) {
-    rateLimitState.set(key, { count: 1, resetAt: now + windowMs })
-    return true
-  }
-  if (entry.count >= limit) return false
-  entry.count += 1
-  return true
-}
 
 /**
  * POST /api/points/record-share
@@ -68,8 +54,13 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Invalid request body', details: parsed.error.flatten() }, { status: 400 })
     }
 
-    // Abuse control: per-user+variant (in-memory; swap to Redis on Vercel later).
-    if (!rateLimit(`${userId}:${parsed.data.variant}`, 3, 10 * 60_000)) {
+    // Abuse control: per-user+variant (Vercel-safe).
+    const rl = await checkRateLimit({
+      key: `x-share:${userId}:${parsed.data.variant}`,
+      limit: 3,
+      windowSeconds: 10 * 60,
+    })
+    if (!rl.ok) {
       return NextResponse.json({ error: 'Too many requests' }, { status: 429 })
     }
 
@@ -111,4 +102,3 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
   }
 }
-
