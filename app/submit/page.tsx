@@ -117,6 +117,15 @@ export default function SubmitPage() {
         throw new Error('This protocol has no encryption key configured. Cannot submit encrypted report.')
       }
 
+      // Require an authenticated session. Submissions are routed through the server
+      // handler (/api/findings) which enforces session auth + RLS-safe writes.
+      const supa2 = getSupabase();
+      if (!supa2) throw new Error("Supabase not configured");
+      const { data: { user: authUser } } = await supa2.auth.getUser()
+      if (!authUser) {
+        throw new Error('You must be signed in to submit a finding.')
+      }
+
       const report = {
         title: formData.title,
         description: formData.description,
@@ -139,46 +148,28 @@ export default function SubmitPage() {
       setIsEncrypting(false)
       setIsSubmitting(true)
 
-      const supa2 = getSupabase();
-      if (!supa2) throw new Error("Supabase not configured");
-
-      // Get authenticated user
-      const { data: { user: authUser } } = await supa2.auth.getUser()
-
-      const { data: finding, error: insertError } = await supa2
-        .from('findings')
-        .insert({
-          protocol_id: protocol?.id || null,
-          researcher_id: authUser?.id || 'anonymous',
+      const res = await fetch('/api/agents/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          protocol_slug: protocolSlug,
           title: `[ENCRYPTED] ${formData.title}`,
           severity: formData.severity,
-          encrypted_report_url: 'supabase://encrypted-reports/' + Date.now(),
-          status: 'submitted',
-          submission_source: 'whiteclaws',
+          description: formData.description,
           encrypted_report: {
-            protocol_slug: protocolSlug,
-            encrypted_nonce: encrypted.nonce,
-            sender_public_key: senderPublicKey,
-            encryption_version: 'tweetnacl-box',
-            original_title_length: formData.title.length
-          }
-        })
-        .select()
-        .returns<Row<'findings'>[]>()
-        .single()
+            ciphertext: encrypted.ciphertext,
+            nonce: encrypted.nonce,
+            sender_pubkey: senderPublicKey,
+          },
+        }),
+      })
 
-      if (insertError) throw insertError
+      const data = await res.json().catch(() => ({} as any))
+      if (!res.ok) {
+        throw new Error(data.error || 'Submission failed. Please try again.')
+      }
 
-      const encryptedBlob = new Blob([JSON.stringify(encrypted)], { type: 'application/json' })
-      const filePath = `encrypted-reports/${finding.id}.json`
-
-      const { error: uploadError } = await (getSupabase() ?? { storage: { from: () => ({ upload: async () => ({ error: new Error("Supabase not configured") }) }) } }).storage
-        .from('findings')
-        .upload(filePath, encryptedBlob, { contentType: 'application/json', upsert: true })
-
-      if (uploadError) throw uploadError
-
-      setSubmittedId(finding.id)
+      setSubmittedId(data.finding?.id || data.findingId || null)
       setIsSubmitting(false)
     } catch (err: any) {
       console.error('Submission failed:', err)
