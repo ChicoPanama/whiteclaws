@@ -53,8 +53,9 @@ export default function LoginForm() {
         throw new Error('Wallet verified, but no agent is registered for this wallet yet.')
       }
 
-      // Wallet-based login issues an API key (not a cookie session). Store it for agent endpoints.
-      localStorage.setItem('wc_agent_api_key', verified.api_key);
+      // /api/auth/verify sets an httpOnly cookie for browser sessions.
+      // Do not persist long-lived credentials in localStorage.
+      localStorage.removeItem('wc_agent_api_key');
       localStorage.setItem('wc_wallet_address', verified.address || address);
 
       router.push(callbackUrl);

@@ -118,6 +118,18 @@ export function extractApiKey(request: Request): string | null {
     return apiKeyHeader
   }
 
+  // Also check httpOnly cookie set by /api/auth/verify
+  const cookie = request.headers.get('cookie') || ''
+  // Simple parse: look for `wc_agent_api_key=...`
+  const match = cookie.match(/(?:^|;\s*)wc_agent_api_key=([^;]+)/)
+  if (match?.[1]) {
+    try {
+      return decodeURIComponent(match[1])
+    } catch {
+      return match[1]
+    }
+  }
+
   return null
 }
 

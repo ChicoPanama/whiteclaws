@@ -50,17 +50,12 @@ export default function AgentsPage() {
         if (!cancelled) setError('Failed to load agents')
       }
 
-      // Optional: if user has an agent API key stored, show their agent profile.
+      // Optional: if user has an agent API key cookie (httpOnly), show their agent profile.
       try {
-        const storedKey = typeof window !== 'undefined' ? localStorage.getItem('wc_agent_api_key') : null
-        if (storedKey) {
-          const res = await fetch('/api/agents/me', {
-            headers: { 'Authorization': `Bearer ${storedKey}` },
-          })
-          const json = await res.json().catch(() => ({}))
-          if (!cancelled) {
-            if (res.ok && json?.agent) setMyAgent((json as MyAgentResponse).agent)
-          }
+        const res = await fetch('/api/agents/me')
+        const json = await res.json().catch(() => ({}))
+        if (!cancelled) {
+          if (res.ok && json?.agent) setMyAgent((json as MyAgentResponse).agent)
         }
       } catch {
         // ignore
