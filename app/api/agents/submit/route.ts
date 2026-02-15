@@ -4,6 +4,8 @@ import { createClient as createServerClient } from '@/lib/supabase/server'
 import { extractApiKey, verifyApiKey } from '@/lib/auth/api-key'
 import { emitParticipationEvent, checkSubmissionQuality, checkAndAwardStreak } from '@/lib/services/points-engine'
 import { notifyProtocolAboutFinding } from '@/lib/services/notifications'
+import { checkSubmissionQuality as checkQualityGates } from '@/lib/services/quality-gates'
+import { rateLimitMiddleware, getRequestIP, getRequestWallet, checkProtocolCooldown } from '@/lib/services/rate-limiting'
 import { z } from 'zod'
 
 export const dynamic = 'force-dynamic'
@@ -84,6 +86,72 @@ export async function POST(req: NextRequest) {
     if (!userId) return NextResponse.json({ error: 'Authentication required' }, { status: 401 })
 
     const supabase = createClient()
+
+    // ── Get user wallet for rate limiting & quality checks ──
+    const { data: userData } = await supabase
+      .from('users')
+      .select('wallet_address')
+      .eq('id', userId)
+      .single()
+    
+    const userWallet = userData?.wallet_address?.toLowerCase()
+    
+    // ── Rate Limiting ──
+    // Rate limit: 10 submissions per wallet per day
+    if (userWallet) {
+      const walletRateLimit = await rateLimitMiddleware(req, 'submission_wallet', () => userWallet)
+      if (walletRateLimit) return walletRateLimit
+    }
+    
+    // Rate limit: 20 submissions per IP per day
+    const ip = getRequestIP(req)
+    if (ip) {
+      const ipRateLimit = await rateLimitMiddleware(req, 'submission_ip', () => ip)
+      if (ipRateLimit) return ipRateLimit
+    }
+    
+    // ── Protocol Cooldown Check ──
+    if (userWallet) {
+      const cooldownCheck = await checkProtocolCooldown(userWallet, protocol_slug, 24)
+      if (!cooldownCheck.allowed) {
+        return NextResponse.json({
+          error: 'Protocol cooldown active',
+          last_submission: cooldownCheck.last_submission,
+          retry_after_seconds: cooldownCheck.retry_after_seconds,
+          message: `You submitted to ${protocol_slug} ${Math.floor((Date.now() - cooldownCheck.last_submission!.getTime()) / 3600000)}h ago. Please wait 24h between submissions to the same protocol.`,
+        }, { status: 429 })
+      }
+    }
+    
+    // ── Comprehensive Quality Gates ──
+    if (userWallet) {
+      const qualityResult = await checkQualityGates({
+        researcher_id: userId,
+        wallet_address: userWallet,
+        protocol_slug,
+        title,
+        description: description || '',
+        severity,
+        has_poc: !!poc_url || !!normalizedEncryptedReport,
+        encrypted: !!normalizedEncryptedReport,
+      })
+      
+      if (!qualityResult.passed) {
+        return NextResponse.json({
+          error: 'Quality check failed',
+          quality_score: qualityResult.score,
+          recommendation: qualityResult.recommendation,
+          checks: qualityResult.checks.filter(c => !c.passed).map(c => ({
+            check: c.name,
+            message: c.message,
+          })),
+          message: 'Your submission did not meet quality requirements. Please review the checks and try again.',
+        }, { status: 400 })
+      }
+      
+      // Log quality score for monitoring
+      console.log(`[Submission] Quality score: ${qualityResult.score.toFixed(2)} for ${userWallet}`)
+    }
 
     // ── 1. Quality check (anti-spam) ──
     const quality = await checkSubmissionQuality({

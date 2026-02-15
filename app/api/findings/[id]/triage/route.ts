@@ -3,6 +3,8 @@ import type { Row } from '@/lib/supabase/helpers'
 import { createClient } from '@/lib/supabase/admin'
 import { emitParticipationEvent, flagSpam } from '@/lib/services/points-engine'
 import { requireProtocolAdmin, requireSessionUserId } from '@/lib/auth/protocol-guards'
+import { qualifyReferralTree } from '@/lib/services/referral-tree'
+import { distributeReferralBonuses } from '@/lib/services/referral-bonuses'
 import { z } from 'zod'
 
 export const dynamic = 'force-dynamic'
@@ -79,6 +81,38 @@ export async function PATCH(req: NextRequest, { params }: { params: { id: string
           finding_id: finding.id,
         })
         if (critResult.success) pointsImpact.push({ event: 'critical_finding', points: critResult.points })
+      }
+
+      // ── Multi-Level Referral Bonuses ──
+      // Qualify researcher's referral tree (first accepted finding)
+      const { data: researcherData } = await supabase
+        .from('users')
+        .select('wallet_address')
+        .eq('id', finding.researcher_id)
+        .single()
+
+      if (researcherData?.wallet_address) {
+        // Qualify the referral relationships
+        await qualifyReferralTree(researcherData.wallet_address, 'finding_accepted')
+
+        // Distribute bonuses to upline (Tier 1 + Tier 2 points only)
+        const tier1Points = acceptResult.points || 0
+        const tier2Points = 0 // Findings are Tier 1, no Tier 2 here
+        
+        const bonusResult = await distributeReferralBonuses(
+          researcherData.wallet_address,
+          'finding_accepted',
+          tier1Points,
+          tier2Points,
+          1 // current season
+        )
+
+        if (bonusResult.success && bonusResult.bonuses_awarded > 0) {
+          pointsImpact.push({
+            event: 'referral_bonuses_distributed',
+            points: bonusResult.total_bonus_points,
+          })
+        }
       }
 
     } else if (parsed.data.status === 'rejected') {
