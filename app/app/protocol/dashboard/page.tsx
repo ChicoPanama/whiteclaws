@@ -5,6 +5,15 @@ import Link from 'next/link'
 import PointsBreakdown from '@/components/dashboard/PointsBreakdown'
 import ActivityFeed from '@/components/dashboard/ActivityFeed'
 
+interface Protocol {
+  id: string
+  slug: string
+  name: string
+  status: string
+  max_bounty: number
+  role: string
+}
+
 interface DashboardData {
   protocol: { slug: string; name: string } | null
   program_status: string
@@ -22,11 +31,38 @@ export default function ProtocolDashboardPage() {
   const [data, setData] = useState<DashboardData | null>(null)
   const [loading, setLoading] = useState(true)
   const [slug, setSlug] = useState('')
+  const [myProtocols, setMyProtocols] = useState<Protocol[]>([])
+  const [authChecked, setAuthChecked] = useState(false)
 
+  // First: try to discover protocol from Supabase via session
   useEffect(() => {
-    const stored = localStorage.getItem('wc_protocol_slug')
-    if (stored) setSlug(stored)
+    async function discoverProtocol() {
+      try {
+        const res = await fetch('/api/me/protocol')
+        if (res.ok) {
+          const json = await res.json()
+          if (json.protocols && json.protocols.length > 0) {
+            setMyProtocols(json.protocols)
+            // Auto-select first protocol
+            setSlug(json.protocols[0].slug)
+          }
+        }
+      } catch {
+        // Silent fail - will fall back to localStorage
+      } finally {
+        setAuthChecked(true)
+      }
+    }
+    discoverProtocol()
   }, [])
+
+  // Second: fall back to localStorage for backwards compatibility
+  useEffect(() => {
+    if (authChecked && myProtocols.length === 0) {
+      const stored = localStorage.getItem('wc_protocol_slug')
+      if (stored) setSlug(stored)
+    }
+  }, [authChecked, myProtocols.length])
 
   const loadDashboard = async () => {
     if (!slug) return
@@ -49,6 +85,19 @@ export default function ProtocolDashboardPage() {
     if (slug) loadDashboard()
   }, [slug])
 
+  // Show loading while checking auth
+  if (!authChecked) {
+    return (
+      <div className="ap-content">
+        <div className="ap-page-header">
+          <h1 className="ap-page-title">Protocol Dashboard</h1>
+          <p className="ap-page-desc">Loading...</p>
+        </div>
+      </div>
+    )
+  }
+
+  // No protocol found - show entry form
   if (!slug) {
     return (
       <div className="ap-content">
@@ -73,6 +122,9 @@ export default function ProtocolDashboardPage() {
     )
   }
 
+  // Protocol selector (if user has multiple)
+  const showSelector = myProtocols.length > 1
+
   return (
     <div className="ap-content">
       <div className="ap-page-header">
@@ -81,6 +133,21 @@ export default function ProtocolDashboardPage() {
           Program status: <strong>{data?.program_status || 'loading...'}</strong>
         </p>
       </div>
+
+      {showSelector && (
+        <div className="ap-card" style={{ marginBottom: '16px' }}>
+          <label className="ap-field-label">Select Protocol</label>
+          <select 
+            className="ap-field-input" 
+            value={slug} 
+            onChange={(e) => setSlug(e.target.value)}
+          >
+            {myProtocols.map((p) => (
+              <option key={p.id} value={p.slug}>{p.name} ({p.role})</option>
+            ))}
+          </select>
+        </div>
+      )}
 
       <div className="ap-stat-grid">
         <div className="ap-stat-card">

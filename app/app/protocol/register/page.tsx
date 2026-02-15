@@ -45,6 +45,11 @@ export default function ProtocolRegisterPage() {
       const data = await res.json()
       if (!res.ok) throw new Error(data.error || 'Registration failed')
 
+      // Persist slug so dashboard auto-loads without manual entry (W3 wiring fix)
+      if (data.protocol?.slug) {
+        localStorage.setItem('wc_protocol_slug', data.protocol.slug)
+      }
+
       setApiKey(data.api_key)
     } catch (err: unknown) {
       setError(err instanceof Error ? err.message : 'Registration failed')
