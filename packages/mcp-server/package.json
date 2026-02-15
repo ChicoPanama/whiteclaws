@@ -1,0 +1,20 @@
+{
+  "name": "@whiteclaws/mcp-server",
+  "version": "0.1.0",
+  "description": "MCP server for WhiteClaws bug bounty platform",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5",
+    "@types/node": "^20"
+  }
+}

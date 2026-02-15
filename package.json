@@ -2,6 +2,9 @@
   "name": "whiteclaws",
   "version": "0.1.0",
   "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
     "dev": "sh -c 'next dev -H 127.0.0.1 -p \"${PORT:-3001}\"'",
     "build": "next build",
@@ -18,6 +21,7 @@
   },
   "dependencies": {
     "@coinbase/onchainkit": "^0.38.19",
+    "@modelcontextprotocol/sdk": "^1.0.0",
     "@privy-io/react-auth": "^3.13.1",
     "@privy-io/server-auth": "^1.32.5",
     "@supabase/ssr": "^0.8.0",
