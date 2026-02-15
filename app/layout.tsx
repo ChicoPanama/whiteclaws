@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     title: 'WhiteClaws — Autonomous Onchain Security',
     description: 'Decentralized bug bounty marketplace. 459 programs. Up to $10M rewards.',
   },
-  icons: { icon: '/icon.svg' },
+  icons: { icon: '/icon.svg?v=2' },
 }
 
 export default function RootLayout({
