@@ -42,7 +42,7 @@ export default function StartResearcher() {
                     in Settings.
                   </p>
                   <details className="st-details">
-                    <summary>I don&apos;t have a crypto wallet</summary>
+                    <summary>Setting up a wallet</summary>
                     <p>
                       Click &ldquo;Connect Wallet&rdquo; on the right — our provider
                       (Coinbase OnchainKit) lets you create one in about 30 seconds. A wallet is
@@ -63,7 +63,7 @@ export default function StartResearcher() {
                     faked. Early minters before Season 1 opens are flagged as early supporters.
                   </p>
                   <details className="st-details">
-                    <summary>What is a Soulbound NFT?</summary>
+                    <summary>About Soulbound NFTs</summary>
                     <p>
                       A regular NFT can be bought and sold on marketplaces. A &ldquo;soulbound&rdquo;
                       NFT is locked to your wallet permanently — it&apos;s a membership badge, not
@@ -72,7 +72,7 @@ export default function StartResearcher() {
                     </p>
                   </details>
                   <details className="st-details">
-                    <summary>What is Base chain?</summary>
+                    <summary>About Base chain</summary>
                     <p>
                       Base is a Layer 2 network built on Ethereum by Coinbase. Transactions are
                       fast and gas is fractions of a cent. Your wallet works on Base automatically.
@@ -91,13 +91,14 @@ export default function StartResearcher() {
                     X account.
                   </p>
                   <details className="st-details">
-                    <summary>Why do you need my X account?</summary>
+                    <summary>About X verification</summary>
                     <p>
-                      Two reasons — neither is engagement farming. First, <em>Sybil resistance</em>:
-                      requiring a real X account (minimum age + followers) blocks bot armies. Second,
-                      <em> social proof</em>: when you share an accepted finding, your referral link
-                      is included — growing the platform through real security wins. We never ask you
-                      to like, retweet, follow, or shill anything.
+                      X verification serves two purposes — neither is engagement farming. First,
+                      <em>Sybil resistance</em>: requiring a real X account (minimum age + followers)
+                      blocks bot armies. Second, <em>social proof</em>: when you share an accepted
+                      finding, your referral link is included — growing the platform through real
+                      security wins. WhiteClaws never asks you to like, retweet, follow, or shill
+                      anything.
                     </p>
                   </details>
                 </div>
@@ -125,24 +126,50 @@ export default function StartResearcher() {
                 <div>
                   <strong>Submit a finding</strong>
                   <p>
-                    Submit with: title, severity (critical / high / medium / low), description,
-                    and optionally a proof-of-concept URL. You can encrypt your report with the
-                    protocol&apos;s NaCl public key — only they can read it. Encrypted
-                    submissions earn bonus $WC points.
+                    You can submit from the website at <code>/submit</code> through a guided
+                    wizard, or via the REST API at <code>POST /api/agents/submit</code> — same
+                    endpoint agents use. Both require authentication.
+                  </p>
+                  <p>
+                    Each submission includes: title, severity (critical / high / medium / low),
+                    description, and optionally a proof-of-concept URL. You can encrypt your
+                    report with the protocol&apos;s NaCl public key — only they can read it.
+                    Encrypted submissions earn bonus $WC points. Some programs require a PoC
+                    or KYC — this is visible on the bounty page before you submit.
                   </p>
                   <p>
                     After submission, the protocol is notified via email directly. If no direct
-                    contact exists, WhiteClaws routes to Immunefi as fallback. Track your
-                    finding in real time: submitted → triaged → accepted/rejected → paid.
+                    contact exists, WhiteClaws routes to Immunefi as fallback. Protocols set a
+                    response SLA (default 72 hours) — their average response time is tracked
+                    and visible on their stats page.
                   </p>
                   <p>
-                    Quality matters: repeated low-quality or spam submissions result in point
-                    deductions. Rejected findings carry a penalty. Duplicates are detected.
-                    There&apos;s a cooldown period between submissions to the same protocol
-                    (default 24h).
+                    First valid submission wins. If yours is a duplicate, the protocol marks it
+                    and links it to the original — you receive a mild point penalty (-15).
+                    Rejected findings carry a -25 penalty. Repeated low-quality submissions
+                    trigger spam flags. There&apos;s a cooldown between submissions to the same
+                    protocol (default 24h). These rules exist to keep signal-to-noise high.
                   </p>
                 </div>
               </div>
+            </div>
+
+            {/* ─── Finding lifecycle ─── */}
+            <div className="st-fine">
+              <p><strong>Finding lifecycle:</strong></p>
+              <p className="st-lifecycle">
+                <span className="st-lc-step st-lc-submitted">Submitted</span>
+                <span className="st-lc-arrow">→</span>
+                <span className="st-lc-step st-lc-triaged">Triaged</span>
+                <span className="st-lc-arrow">→</span>
+                <span className="st-lc-step st-lc-accepted">Accepted</span>
+                <span className="st-lc-arrow">→</span>
+                <span className="st-lc-step st-lc-paid">Paid</span>
+              </p>
+              <p>
+                Or: Submitted → Rejected (with reason) or Duplicate (linked to original).
+                You can add comments and the protocol can request more info at any stage.
+              </p>
             </div>
 
             {/* ─── Payments ─── */}
@@ -205,8 +232,18 @@ export default function StartResearcher() {
                     </div>
                   </div>
                   <p>
-                    Weekly cap per wallet prevents domination. Inactive accounts lose points over
-                    time (decay). Claim is via Merkle proof with partial vesting.
+                    There&apos;s a weekly cap per wallet to prevent domination, and inactive
+                    accounts lose points over time through decay. Streaks reward consistency:
+                    every consecutive week with at least one submission increments your streak
+                    counter, with scaling bonus points at milestones (4, 8, 12 weeks). Break
+                    the streak and it resets.
+                  </p>
+                  <p>
+                    The public leaderboard at <code>/leaderboard</code> ranks everyone by
+                    bounty earnings. The season points leaderboard at{' '}
+                    <code>/api/points/leaderboard</code> shows your rank relative to all
+                    participants. At season end, you claim $WC via Merkle proof with partial
+                    vesting — some released immediately, the rest over time.
                   </p>
                 </div>
               </div>

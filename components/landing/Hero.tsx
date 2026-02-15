@@ -1,26 +1,83 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useCallback } from 'react'
 import Link from 'next/link'
+import type { LiveStats } from '@/lib/data/types'
 
-const messages = [
-  'Scanning: 0xaB5801a7D398351b8bE11C439e05C5B3259aeC9B',
-  'Analyzing: RewardDistributor.sol — 847 lines',
-  'Flagged: Potential reentrancy pattern detected',
-  'Verifying: Cross-function state mutation in Vault.sol',
-  'Scanning: 0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984',
-  'Clear: AccessControl checks verified on 3 contracts',
-  'Queued: Finding submitted for human verification',
-  'Scanning: 0x7Fc66500c84A76Ad7e9c93437bFc5Ac33E2DDaE9',
-  'Analyzing: FlashLoan callback — oracle dependency check',
-  'Monitoring: 12 protocols · 3 chains · 0 active threats',
+function buildMessages(s: LiveStats): string[] {
+  const msgs: string[] = []
+
+  // Core platform stats — always show
+  msgs.push(`${s.protocols} protocols indexed · ${s.chains} EVM chains · ${s.programs} active programs`)
+
+  if (s.agents > 0) {
+    msgs.push(`${s.agents} ${s.agents === 1 ? 'agent' : 'agents'} registered and scanning`)
+  }
+
+  if (s.findings > 0) {
+    msgs.push(`${s.findings} ${s.findings === 1 ? 'finding' : 'findings'} submitted · ${s.accepted} accepted · ${s.paid} paid`)
+  }
+
+  if (s.totalEarned > 0) {
+    const earned = s.totalEarned >= 1_000_000
+      ? `$${(s.totalEarned / 1e6).toFixed(1)}M`
+      : s.totalEarned >= 1_000
+        ? `$${(s.totalEarned / 1e3).toFixed(0)}K`
+        : `$${s.totalEarned}`
+    msgs.push(`${earned} earned by researchers and agents`)
+  }
+
+  if (s.latestFinding) {
+    msgs.push(`Latest: ${s.latestFinding.severity} finding on ${s.latestFinding.protocol} · ${s.latestFinding.ago}`)
+  }
+
+  if (s.latestAgent) {
+    msgs.push(`New agent: ${s.latestAgent.name} joined ${s.latestAgent.ago}`)
+  }
+
+  // If we have very little data (early days), add context
+  if (s.findings === 0) {
+    msgs.push('Season 1 — open for submissions')
+  }
+
+  return msgs
+}
+
+// Fallback until API responds
+const fallbackMessages = [
+  'Loading live platform data...',
 ]
 
 export default function Hero() {
+  const [stats, setStats] = useState<LiveStats | null>(null)
+  const [messages, setMessages] = useState<string[]>(fallbackMessages)
   const [index, setIndex] = useState(0)
   const [visible, setVisible] = useState(true)
 
+  // Fetch live stats
+  const fetchStats = useCallback(async () => {
+    try {
+      const res = await fetch('/api/stats/live')
+      if (!res.ok) return
+      const data: LiveStats = await res.json()
+      setStats(data)
+      setMessages(buildMessages(data))
+    } catch {
+      // Keep fallback messages
+    }
+  }, [])
+
   useEffect(() => {
+    fetchStats()
+    // Refresh every 2 minutes
+    const refresh = setInterval(fetchStats, 120_000)
+    return () => clearInterval(refresh)
+  }, [fetchStats])
+
+  // Cycle through messages
+  useEffect(() => {
+    if (messages.length <= 1) return
+
     let timeout: ReturnType<typeof setTimeout> | undefined
     const interval = setInterval(() => {
       setVisible(false)
@@ -34,7 +91,7 @@ export default function Hero() {
       clearInterval(interval)
       if (timeout) clearTimeout(timeout)
     }
-  }, [])
+  }, [messages])
 
   return (
     <section className="hero">
@@ -73,9 +130,13 @@ export default function Hero() {
               I&apos;m a Protocol <span className="arr">→</span>
             </Link>
           </div>
-          <div className="scanner">
-            <span className="pd"></span>
-            <span id="scanText" style={{ opacity: visible ? 1 : 0 }}>
+          <div className="scanner scanner-live" aria-live="polite" aria-atomic="true">
+            <span className="scanner-dot" />
+            <span className="scanner-label">live</span>
+            <span
+              className="scanner-text"
+              style={{ opacity: visible ? 1 : 0 }}
+            >
               {messages[index]}
             </span>
           </div>
