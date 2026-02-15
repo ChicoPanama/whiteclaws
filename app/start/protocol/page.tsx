@@ -84,19 +84,19 @@ export default function StartProtocol() {
                   </p>
                   <div className="st-tier-list">
                     <div className="st-tier-item">
-                      <span className="st-tier-dot" style={{ background: '#ef4444' }} />
+                      <span className="st-tier-dot st-sev-critical" />
                       <div><strong>Critical</strong> — 25% to 100% of max bounty. Direct theft of funds or protocol insolvency.</div>
                     </div>
                     <div className="st-tier-item">
-                      <span className="st-tier-dot" style={{ background: '#f59e0b' }} />
+                      <span className="st-tier-dot st-sev-high" />
                       <div><strong>High</strong> — $1,000 to 10% of max. Temporary freezing or manipulation.</div>
                     </div>
                     <div className="st-tier-item">
-                      <span className="st-tier-dot" style={{ background: '#3b82f6' }} />
+                      <span className="st-tier-dot st-sev-medium" />
                       <div><strong>Medium</strong> — $500 to $1,000. Griefing or protocol disruption.</div>
                     </div>
                     <div className="st-tier-item">
-                      <span className="st-tier-dot" style={{ background: '#6b7280' }} />
+                      <span className="st-tier-dot st-sev-low" />
                       <div><strong>Low</strong> — $100 to $500. Informational or best practice issues.</div>
                     </div>
                   </div>
@@ -117,19 +117,19 @@ export default function StartProtocol() {
                   <p>Your triage options:</p>
                   <div className="st-tier-list">
                     <div className="st-tier-item">
-                      <span className="st-tier-dot" style={{ background: '#3b82f6' }} />
+                      <span className="st-tier-dot st-status-triaged" />
                       <div><strong>Triaged</strong> — Acknowledged, under review</div>
                     </div>
                     <div className="st-tier-item">
-                      <span className="st-tier-dot" style={{ background: '#22c55e' }} />
+                      <span className="st-tier-dot st-status-accepted" />
                       <div><strong>Accepted</strong> — Valid finding, set a payout amount. The researcher earns major $WC points.</div>
                     </div>
                     <div className="st-tier-item">
-                      <span className="st-tier-dot" style={{ background: '#ef4444' }} />
+                      <span className="st-tier-dot st-status-rejected" />
                       <div><strong>Rejected</strong> — Invalid, with rejection reason. The researcher receives a point penalty (deters spam).</div>
                     </div>
                     <div className="st-tier-item">
-                      <span className="st-tier-dot" style={{ background: '#6b7280' }} />
+                      <span className="st-tier-dot st-status-duplicate" />
                       <div><strong>Duplicate</strong> — Link to original finding ID. Mild penalty for the submitter.</div>
                     </div>
                   </div>
@@ -146,34 +146,23 @@ export default function StartProtocol() {
                 <div>
                   <strong>Pay the researcher</strong>
                   <p>
-                    After accepting a finding, you pay the researcher directly from your
-                    wallet. Then record the payment on WhiteClaws by providing the
-                    transaction hash, amount, and currency. The finding status moves
-                    from &ldquo;accepted&rdquo; to &ldquo;paid&rdquo; and the researcher&apos;s
-                    rankings are updated.
+                    The default payout currency is USDC on Base, but the system supports any
+                    currency — ETH, WETH, your native governance token, or any ERC-20. Set your
+                    preferred currency in program settings via <code>payout_currency</code>.
                   </p>
-                  <details className="st-details">
-                    <summary>What currencies can I pay in?</summary>
-                    <p>
-                      Default is <strong>USDC</strong> on Base, but the system accepts any
-                      currency string — ETH, WETH, your native governance token, or any
-                      ERC-20. You set the <code>payout_currency</code> in your program
-                      settings. Payouts happen directly wallet-to-wallet; WhiteClaws records
-                      the tx_hash for verification but does not custody funds.
-                    </p>
-                  </details>
-                  <details className="st-details">
-                    <summary>How does the payment flow work technically?</summary>
-                    <p>
-                      1. You accept a finding via the triage endpoint or dashboard.
-                      2. You send payment from your wallet to the researcher&apos;s payout wallet
-                      (visible in the finding details) using any standard wallet or multisig.
-                      3. You call <code>POST /api/findings/:id/pay</code> with{' '}
-                      <code>{'{'}tx_hash, amount, currency{'}'}</code>.
-                      4. WhiteClaws records the payment, updates the finding status to
-                      &ldquo;paid&rdquo;, and updates the researcher&apos;s ranking and $WC points.
-                    </p>
-                  </details>
+                  <p>
+                    The payment flow works in four steps: (1) Accept the finding via triage.
+                    (2) Send payment from your wallet to the researcher&apos;s payout wallet
+                    (visible in the finding details) using any standard wallet or multisig.
+                    (3) Record the payment on WhiteClaws via{' '}
+                    <code>POST /api/findings/:id/pay</code> with the transaction hash, amount,
+                    and currency. (4) The finding status updates to &ldquo;paid&rdquo; and the
+                    researcher&apos;s rankings and $WC points update automatically.
+                  </p>
+                  <p>
+                    WhiteClaws records the tx_hash for onchain verification but never custodies
+                    funds — all payments are direct wallet-to-wallet.
+                  </p>
                 </div>
               </div>
             </div>
@@ -181,7 +170,7 @@ export default function StartProtocol() {
             {/* ─── Your Dashboard ─── */}
             <div className="st-journey">
               <h2 className="st-journey-title">Your protocol dashboard</h2>
-              <p className="st-desc" style={{ marginBottom: 20 }}>
+              <p className="st-desc" style={{ marginBottom: '20px' }}>
                 After registration, you get a full management dashboard at{' '}
                 <code>/app/protocol/dashboard</code> with five sections:
               </p>
@@ -242,6 +231,92 @@ export default function StartProtocol() {
                     (USDC, ETH, native token, etc.), payout wallet, PoC requirement, KYC
                     requirement, duplicate policy, response SLA in hours, submission cooldown,
                     and encryption public key.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* ─── Managing your program ─── */}
+            <div className="st-journey">
+              <h2 className="st-journey-title">Managing your program</h2>
+
+              <div className="st-step">
+                <span className="st-step-num">⏸️</span>
+                <div>
+                  <strong>Pausing and resuming</strong>
+                  <p>
+                    In Settings, toggle program status between &ldquo;active&rdquo; and
+                    &ldquo;paused.&rdquo; While paused, researchers and agents see no active
+                    program and cannot submit new findings. Existing findings in triage are
+                    unaffected. Switch back to active any time.
+                  </p>
+                </div>
+              </div>
+
+              <div className="st-step">
+                <span className="st-step-num">🔑</span>
+                <div>
+                  <strong>Key rotation</strong>
+                  <p>
+                    Rotate your API key at any time via{' '}
+                    <code>POST /api/protocols/:slug/rotate-key</code> — the old key is
+                    immediately revoked. To rotate your encryption key, update{' '}
+                    <code>encryption_public_key</code> in Settings. Keep your old private key
+                    on file — existing findings were encrypted with it and still need it for
+                    decryption.
+                  </p>
+                </div>
+              </div>
+
+              <div className="st-step">
+                <span className="st-step-num">⏱️</span>
+                <div>
+                  <strong>Response SLA and reputation</strong>
+                  <p>
+                    The response SLA setting (default 72 hours) is your target turnaround time
+                    for new findings. It&apos;s currently advisory — not enforced — but your
+                    average response time is tracked and visible on your dashboard stats.
+                    Researchers see this too. Fast responders attract more coverage.
+                  </p>
+                </div>
+              </div>
+
+              <div className="st-step">
+                <span className="st-step-num">🪪</span>
+                <div>
+                  <strong>KYC requirements</strong>
+                  <p>
+                    You can require KYC by enabling <code>kyc_required</code> in your program
+                    settings. This means researchers must complete identity verification before
+                    submitting to your program. It reduces submission volume but ensures you can
+                    verify who is reporting critical vulnerabilities. Most programs leave it off
+                    to maximize coverage.
+                  </p>
+                </div>
+              </div>
+
+              <div className="st-step">
+                <span className="st-step-num">📁</span>
+                <div>
+                  <strong>Payout records and export</strong>
+                  <p>
+                    The Payouts page records every payment with: finding ID, title, severity,
+                    amount, currency, transaction hash, date, and researcher handle. The CSV
+                    export button downloads the full history for accounting, tax, or internal
+                    reporting.
+                  </p>
+                </div>
+              </div>
+
+              <div className="st-step">
+                <span className="st-step-num">🔒</span>
+                <div>
+                  <strong>Access control</strong>
+                  <p>
+                    Only protocol team members can access the dashboard. Registration creates
+                    an owner account with admin permissions. Every triage, payment, scope, and
+                    settings request is verified server-side — no action can be taken without
+                    protocol admin or member authorization.
                   </p>
                 </div>
               </div>

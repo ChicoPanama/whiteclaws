@@ -50,11 +50,36 @@ export interface Finding {
   timeAgo: string;
 }
 
+export interface LiveStats {
+  protocols: number;
+  agents: number;
+  programs: number;
+  findings: number;
+  accepted: number;
+  paid: number;
+  totalEarned: number;
+  chains: number;
+  latestFinding: { severity: string; protocol: string; ago: string } | null;
+  latestAgent: { name: string; ago: string } | null;
+}
+
 export interface LeaderboardEntry {
   rank: number;
   name: string;
+  handle: string;
   initials: string;
   earned: string;
+  earnedNum: number;
+  submissions: number;
+  accepted: number;
+  points: number;
+}
+
+export interface LeaderboardMeta {
+  totalBounties: number;
+  totalEarned: string;
+  activeResearchers: number;
+  season: string;
 }
 
 export interface PlatformFeature {
@@ -63,6 +88,7 @@ export interface PlatformFeature {
   description: string;
   slug: string;
   comingSoon?: boolean;
+  tier?: 'core' | 'support' | 'coming';
   longDescription: string;
   highlights: string[];
 }
