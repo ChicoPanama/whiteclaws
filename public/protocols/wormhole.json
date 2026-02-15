@@ -109,6 +109,56 @@
     "KYC verification required before payout",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "wormhole-trail-of-bits-2023-03",
+      "title": "2023-03-wormhole-securityreview.pdf",
+      "auditor": "Trail of Bits",
+      "date": "2023-03",
+      "pdf_url": "https://raw.githubusercontent.com/trailofbits/publications/master/reviews/2023-03-wormhole-securityreview.pdf"
+    },
+    {
+      "id": "wormhole-cyfrin-2024-01",
+      "title": "2024-01-10-cyfrin-wormhole-thermae-v2.1.pdf",
+      "auditor": "Cyfrin",
+      "date": "2024-01",
+      "pdf_url": "https://raw.githubusercontent.com/Cyfrin/cyfrin-audit-reports/main/reports/2024-01-10-cyfrin-wormhole-thermae-v2.1.pdf"
+    },
+    {
+      "id": "wormhole-cyfrin-2024-04",
+      "title": "2024-04-11-cyfrin-wormhole-evm-ntt-v2.pdf",
+      "auditor": "Cyfrin",
+      "date": "2024-04",
+      "pdf_url": "https://raw.githubusercontent.com/Cyfrin/cyfrin-audit-reports/main/reports/2024-04-11-cyfrin-wormhole-evm-ntt-v2.pdf"
+    },
+    {
+      "id": "wormhole-cyfrin-2024-07",
+      "title": "2024-07-23-cyfrin-wormhole-NTT-Diff-v1.0.pdf",
+      "auditor": "Cyfrin",
+      "date": "2024-07",
+      "pdf_url": "https://raw.githubusercontent.com/Cyfrin/cyfrin-audit-reports/main/reports/2024-07-23-cyfrin-wormhole-NTT-Diff-v1.0.pdf"
+    },
+    {
+      "id": "wormhole-cyfrin-2024-10",
+      "title": "2024-10-04-cyfrin-wormhole-multigov-v2.0.pdf",
+      "auditor": "Cyfrin",
+      "date": "2024-10",
+      "pdf_url": "https://raw.githubusercontent.com/Cyfrin/cyfrin-audit-reports/main/reports/2024-10-04-cyfrin-wormhole-multigov-v2.0.pdf"
+    },
+    {
+      "id": "wormhole-cyfrin-2026-02",
+      "title": "2026-02-10-cyfrin-securitize-bridge-wormhole-executor-v2.0.pdf",
+      "auditor": "Cyfrin",
+      "date": "2026-02",
+      "pdf_url": "https://raw.githubusercontent.com/Cyfrin/cyfrin-audit-reports/main/reports/2026-02-10-cyfrin-securitize-bridge-wormhole-executor-v2.0.pdf"
+    }
+  ],
+  "audit_count": 6,
+  "last_audited": "2026-02",
+  "auditors": [
+    "Cyfrin",
+    "Trail of Bits"
   ]
 }

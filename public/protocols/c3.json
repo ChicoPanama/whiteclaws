@@ -69,8 +69,22 @@
     }
   },
   "eligibility": [
-    "Open to all researchers \u2014 pseudonymous submissions accepted",
+    "Open to all researchers — pseudonymous submissions accepted",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "c3-halborn-c3-pyteal-executive-summary-report-halborn-pdf",
+      "title": "C3_PyTeal_Executive_Summary_Report_Halborn.pdf",
+      "auditor": "Halborn",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/HalbornSecurity/PublicReports/master/Algorand%20Smart%20Contract%20Audit/C3_PyTeal_Executive_Summary_Report_Halborn.pdf"
+    }
+  ],
+  "audit_count": 1,
+  "last_audited": "",
+  "auditors": [
+    "Halborn"
   ]
 }

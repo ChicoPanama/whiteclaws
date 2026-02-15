@@ -254,5 +254,62 @@
     "Open to all researchers — pseudonymous submissions accepted",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
     "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "morpho-spearbit-morpho-av3-spearbit-security-review-pdf",
+      "title": "Morpho-Av3-Spearbit-Security-Review.pdf",
+      "auditor": "Spearbit",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/spearbit/portfolio/master/pdfs/Morpho-Av3-Spearbit-Security-Review.pdf"
+    },
+    {
+      "id": "morpho-spearbit-morpho-spearbit-security-review-pdf",
+      "title": "Morpho-Spearbit-Security-Review.pdf",
+      "auditor": "Spearbit",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/spearbit/portfolio/master/pdfs/Morpho-Spearbit-Security-Review.pdf"
+    },
+    {
+      "id": "morpho-cantina-2023-sep",
+      "title": "Morpho Blue IRM Smart Contract Audit Morpho 28 September 2023 - 16 October 2023",
+      "auditor": "Cantina",
+      "date": "2023-Sep",
+      "pdf_url": "https://cantina.xyz/portfolio/2c9a9dc9-d39d-4018-a61b-d7b43619180e"
+    },
+    {
+      "id": "morpho-spearbit-2024",
+      "title": "Morpho-Spearbit-Security-Review-October-2024.pdf",
+      "auditor": "Spearbit",
+      "date": "2024",
+      "pdf_url": "https://raw.githubusercontent.com/spearbit/portfolio/master/pdfs/Morpho-Spearbit-Security-Review-October-2024.pdf"
+    },
+    {
+      "id": "morpho-cantina-2024-feb",
+      "title": "Interest Rate Module Audit for Morpho Blue Morpho 19 February 2024 - 23 February 2024",
+      "auditor": "Cantina",
+      "date": "2024-Feb",
+      "pdf_url": "https://cantina.xyz/portfolio/7acb12f1-b9f5-4a9e-9e5d-104cea948ae5"
+    },
+    {
+      "id": "morpho-spearbit-2025",
+      "title": "Morpho-Vaults-v2-fixes-Spearbit-Security-Review-August-2025.pdf",
+      "auditor": "Spearbit",
+      "date": "2025",
+      "pdf_url": "https://raw.githubusercontent.com/spearbit/portfolio/master/pdfs/Morpho-Vaults-v2-fixes-Spearbit-Security-Review-August-2025.pdf"
+    },
+    {
+      "id": "morpho-cantina-2025-feb",
+      "title": "DeFi Security Review: Morpho v1.1 Audit Morpho 07 February 2025 - 08 February 2025",
+      "auditor": "Cantina",
+      "date": "2025-Feb",
+      "pdf_url": "https://cantina.xyz/portfolio/cdbba9c7-d8d2-4368-8ff1-30202c0d2568"
+    }
+  ],
+  "audit_count": 7,
+  "last_audited": "2025",
+  "auditors": [
+    "Cantina",
+    "Spearbit"
   ]
 }

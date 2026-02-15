@@ -134,5 +134,27 @@
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
     "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "renzoprotocol-halborn-renzo-protocol-evm-contracts-smart-contract-security-assessm",
+      "title": "Renzo_Protocol_EVM_Contracts_Smart_Contract_Security_Assessment_Report_Halborn_Final.pdf",
+      "auditor": "Halborn",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/HalbornSecurity/PublicReports/master/Solidity%20Smart%20Contract%20Audits/Renzo_Protocol_EVM_Contracts_Smart_Contract_Security_Assessment_Report_Halborn_Final.pdf"
+    },
+    {
+      "id": "renzoprotocol-code4rena-2024-04",
+      "title": "2024-04-renzo-findings",
+      "auditor": "Code4rena",
+      "date": "2024-04",
+      "pdf_url": "https://github.com/code-423n4/2024-04-renzo-findings"
+    }
+  ],
+  "audit_count": 2,
+  "last_audited": "2024-04",
+  "auditors": [
+    "Code4rena",
+    "Halborn"
   ]
 }

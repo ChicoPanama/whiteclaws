@@ -287,5 +287,27 @@
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
     "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "hyperlane-external-audits",
+      "title": "audits",
+      "auditor": "External",
+      "date": "",
+      "pdf_url": "https://docs.hyperlane.xyz/docs/resources/audits"
+    },
+    {
+      "id": "hyperlane-trail-of-bits-2023-09",
+      "title": "2023-09-hyperlane-securityreview.pdf",
+      "auditor": "Trail of Bits",
+      "date": "2023-09",
+      "pdf_url": "https://raw.githubusercontent.com/trailofbits/publications/master/reviews/2023-09-hyperlane-securityreview.pdf"
+    }
+  ],
+  "audit_count": 2,
+  "last_audited": "2023-09",
+  "auditors": [
+    "External",
+    "Trail of Bits"
   ]
 }

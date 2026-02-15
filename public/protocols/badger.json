@@ -75,8 +75,36 @@
     }
   },
   "eligibility": [
-    "Open to all researchers \u2014 pseudonymous submissions accepted",
+    "Open to all researchers — pseudonymous submissions accepted",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "badger-code4rena-2022-06",
+      "title": "2022-06-badger-findings",
+      "auditor": "Code4rena",
+      "date": "2022-06",
+      "pdf_url": "https://github.com/code-423n4/2022-06-badger-findings"
+    },
+    {
+      "id": "badger-code4rena-2023-10",
+      "title": "2023-10-badger-findings",
+      "auditor": "Code4rena",
+      "date": "2023-10",
+      "pdf_url": "https://github.com/code-423n4/2023-10-badger-findings"
+    },
+    {
+      "id": "badger-code4rena-2024-06",
+      "title": "2024-06-badger-findings",
+      "auditor": "Code4rena",
+      "date": "2024-06",
+      "pdf_url": "https://github.com/code-423n4/2024-06-badger-findings"
+    }
+  ],
+  "audit_count": 3,
+  "last_audited": "2024-06",
+  "auditors": [
+    "Code4rena"
   ]
 }

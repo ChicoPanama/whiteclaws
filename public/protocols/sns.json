@@ -62,7 +62,7 @@
   "program_rules": [
     "Proof of Concept is required for all submissions. Reports without a working PoC demonstrating the vulnerability will not be considered.",
     "KYC verification is required before bounty payout. Researchers must complete identity verification to receive rewards.",
-    "This program follows Primacy of Impact \u2014 valid findings are rewarded based on demonstrated impact regardless of whether the specific attack vector was previously known.",
+    "This program follows Primacy of Impact — valid findings are rewarded based on demonstrated impact regardless of whether the specific attack vector was previously known.",
     "Only previously unreported vulnerabilities are eligible. Duplicate submissions will be closed.",
     "Vulnerabilities must be reported through the WhiteClaws platform. Public disclosure before resolution disqualifies the submission.",
     "Testing must not disrupt live protocol operations. Use mainnet forks or testnets for Proof of Concept execution."
@@ -87,6 +87,35 @@
     "KYC verification required before payout",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "sns-halborn-bonfida-sns-solana-program-security-assessment-report-halbor",
+      "title": "Bonfida_SNS_Solana_Program_Security_Assessment_Report_Halborn_Final.pdf",
+      "auditor": "Halborn",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/HalbornSecurity/PublicReports/master/Solana%20Program%20Audit/Bonfida_SNS_Solana_Program_Security_Assessment_Report_Halborn_Final.pdf"
+    },
+    {
+      "id": "sns-trail-of-bits-2022-09",
+      "title": "2022-09-dfinity-sns-securityreview.pdf",
+      "auditor": "Trail of Bits",
+      "date": "2022-09",
+      "pdf_url": "https://raw.githubusercontent.com/trailofbits/publications/master/reviews/2022-09-dfinity-sns-securityreview.pdf"
+    },
+    {
+      "id": "sns-trail-of-bits-2023-06",
+      "title": "2023-06-dfinity-sns-securityreview.pdf",
+      "auditor": "Trail of Bits",
+      "date": "2023-06",
+      "pdf_url": "https://raw.githubusercontent.com/trailofbits/publications/master/reviews/2023-06-dfinity-sns-securityreview.pdf"
+    }
+  ],
+  "audit_count": 3,
+  "last_audited": "2023-06",
+  "auditors": [
+    "Halborn",
+    "Trail of Bits"
   ]
 }

@@ -74,8 +74,30 @@
     }
   },
   "eligibility": [
-    "Open to all researchers \u2014 pseudonymous submissions accepted",
+    "Open to all researchers — pseudonymous submissions accepted",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "tidal-halborn-tidal-finance-smart-contracts-security-audit-halborn-v1-1-pd",
+      "title": "Tidal_Finance_Smart_Contracts_Security_Audit_Halborn_v1_1.pdf",
+      "auditor": "Halborn",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/HalbornSecurity/PublicReports/master/Solidity%20Smart%20Contract%20Audits/Tidal_Finance_Smart_Contracts_Security_Audit_Halborn_v1_1.pdf"
+    },
+    {
+      "id": "tidal-consensys-diligence-2023-05",
+      "title": "Tidal",
+      "auditor": "Consensys Diligence",
+      "date": "2023-05",
+      "pdf_url": "https://consensys.io/audits/2023/05/tidal/"
+    }
+  ],
+  "audit_count": 2,
+  "last_audited": "2023-05",
+  "auditors": [
+    "Consensys Diligence",
+    "Halborn"
   ]
 }

@@ -84,9 +84,38 @@
     }
   },
   "eligibility": [
-    "Open to all researchers \u2014 pseudonymous submissions accepted",
+    "Open to all researchers — pseudonymous submissions accepted",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "instadapp-peckshield-instadapp-audit-report-2020-04-en-1-0-pdf",
+      "title": "InstaDApp_audit_report_2020_04_en_1_0.pdf",
+      "auditor": "PeckShield",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/peckshield/publications/master/audit_reports/InstaDApp_audit_report_2020_04_en_1_0.pdf"
+    },
+    {
+      "id": "instadapp-mixbytes-it-has-been-great-we-are-quite-satisfied-with-the-audits-ove",
+      "title": "It has been great. We are quite satisfied with the audits. Overall, I will suggest MixBytes to any other team I come across!",
+      "auditor": "MixBytes",
+      "date": "",
+      "pdf_url": "https://github.com/mixbytes/audits_public/tree/master/Instadapp"
+    },
+    {
+      "id": "instadapp-mixbytes-readme-md",
+      "title": "README.md",
+      "auditor": "MixBytes",
+      "date": "",
+      "pdf_url": "https://github.com/mixbytes/audits_public/blob/master/Instadapp/Fluid%20DEX/README.md"
+    }
+  ],
+  "audit_count": 3,
+  "last_audited": "",
+  "auditors": [
+    "MixBytes",
+    "PeckShield"
   ]
 }

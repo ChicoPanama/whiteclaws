@@ -171,5 +171,27 @@
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
     "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "thala-protocol-spearbit-2024",
+      "title": "Thala-Spearbit-vCISO-December-2024.pdf",
+      "auditor": "Spearbit",
+      "date": "2024",
+      "pdf_url": "https://raw.githubusercontent.com/spearbit/portfolio/master/pdfs/Thala-Spearbit-vCISO-December-2024.pdf"
+    },
+    {
+      "id": "thala-protocol-cantina-2025-jan",
+      "title": "Thala Modules Security Audit Thala 15 January 2025 - 23 January 2025 +1",
+      "auditor": "Cantina",
+      "date": "2025-Jan",
+      "pdf_url": "https://cantina.xyz/portfolio/83bafb97-234f-4678-935e-a35434b78482"
+    }
+  ],
+  "audit_count": 2,
+  "last_audited": "2025",
+  "auditors": [
+    "Cantina",
+    "Spearbit"
   ]
 }

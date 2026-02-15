@@ -109,6 +109,49 @@
     "KYC verification required before payout",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "reserve-trail-of-bits-2022-08",
+      "title": "2022-08-reserve-protocol-securityreview.pdf",
+      "auditor": "Trail of Bits",
+      "date": "2022-08",
+      "pdf_url": "https://raw.githubusercontent.com/trailofbits/publications/master/reviews/2022-08-reserve-protocol-securityreview.pdf"
+    },
+    {
+      "id": "reserve-code4rena-2023-01",
+      "title": "2023-01-reserve-findings",
+      "auditor": "Code4rena",
+      "date": "2023-01",
+      "pdf_url": "https://github.com/code-423n4/2023-01-reserve-findings"
+    },
+    {
+      "id": "reserve-code4rena-2023-06",
+      "title": "2023-06-reserve-findings",
+      "auditor": "Code4rena",
+      "date": "2023-06",
+      "pdf_url": "https://github.com/code-423n4/2023-06-reserve-findings"
+    },
+    {
+      "id": "reserve-code4rena-2023-07",
+      "title": "2023-07-reserve-findings",
+      "auditor": "Code4rena",
+      "date": "2023-07",
+      "pdf_url": "https://github.com/code-423n4/2023-07-reserve-findings"
+    },
+    {
+      "id": "reserve-code4rena-2024-07",
+      "title": "2024-07-reserve-findings",
+      "auditor": "Code4rena",
+      "date": "2024-07",
+      "pdf_url": "https://github.com/code-423n4/2024-07-reserve-findings"
+    }
+  ],
+  "audit_count": 5,
+  "last_audited": "2024-07",
+  "auditors": [
+    "Code4rena",
+    "Trail of Bits"
   ]
 }

@@ -69,8 +69,22 @@
     }
   },
   "eligibility": [
-    "Open to all researchers \u2014 pseudonymous submissions accepted",
+    "Open to all researchers — pseudonymous submissions accepted",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "betafinance-code4rena-2023-11",
+      "title": "2023-11-betafinance-findings",
+      "auditor": "Code4rena",
+      "date": "2023-11",
+      "pdf_url": "https://github.com/code-423n4/2023-11-betafinance-findings"
+    }
+  ],
+  "audit_count": 1,
+  "last_audited": "2023-11",
+  "auditors": [
+    "Code4rena"
   ]
 }

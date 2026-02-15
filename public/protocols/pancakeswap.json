@@ -108,9 +108,75 @@
     }
   },
   "eligibility": [
-    "Open to all researchers \u2014 pseudonymous submissions accepted",
+    "Open to all researchers — pseudonymous submissions accepted",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "pancakeswap-peckshield-peckshield-audit-report-pancakeswap-cakepool-v1-0-pdf",
+      "title": "PeckShield-Audit-Report-PancakeSwap-CakePool-v1.0.pdf",
+      "auditor": "PeckShield",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/peckshield/publications/master/audit_reports/PeckShield-Audit-Report-PancakeSwap-CakePool-v1.0.pdf"
+    },
+    {
+      "id": "pancakeswap-peckshield-peckshield-audit-report-pancakeswap-crossfarming-v1-0-pdf",
+      "title": "PeckShield-Audit-Report-PancakeSwap-CrossFarming-v1.0.pdf",
+      "auditor": "PeckShield",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/peckshield/publications/master/audit_reports/PeckShield-Audit-Report-PancakeSwap-CrossFarming-v1.0.pdf"
+    },
+    {
+      "id": "pancakeswap-peckshield-peckshield-audit-report-pancakeswap-farmbooster-v1-0-pdf",
+      "title": "PeckShield-Audit-Report-PancakeSwap-FarmBooster-v1.0.pdf",
+      "auditor": "PeckShield",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/peckshield/publications/master/audit_reports/PeckShield-Audit-Report-PancakeSwap-FarmBooster-v1.0.pdf"
+    },
+    {
+      "id": "pancakeswap-peckshield-peckshield-audit-report-pancakeswap-masterchefv2-v1-0-pdf",
+      "title": "PeckShield-Audit-Report-PancakeSwap-MasterChefV2-v1.0.pdf",
+      "auditor": "PeckShield",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/peckshield/publications/master/audit_reports/PeckShield-Audit-Report-PancakeSwap-MasterChefV2-v1.0.pdf"
+    },
+    {
+      "id": "pancakeswap-peckshield-peckshield-audit-report-pancakeswap-predictionv2-v1-0-pdf",
+      "title": "PeckShield-Audit-Report-PancakeSwap-PredictionV2-v1.0.pdf",
+      "auditor": "PeckShield",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/peckshield/publications/master/audit_reports/PeckShield-Audit-Report-PancakeSwap-PredictionV2-v1.0.pdf"
+    },
+    {
+      "id": "pancakeswap-halborn-pancakeswap-aptos-dex-move-smart-contract-security-audit-rep",
+      "title": "PancakeSwap_Aptos_DEX_Move_Smart_Contract_Security_Audit_Report_Halborn_Final.pdf",
+      "auditor": "Halborn",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/HalbornSecurity/PublicReports/master/Move%20Smart%20Contract%20Audits/PancakeSwap_Aptos_DEX_Move_Smart_Contract_Security_Audit_Report_Halborn_Final.pdf"
+    },
+    {
+      "id": "pancakeswap-hexens-show-details",
+      "title": "Show details",
+      "auditor": "Hexens",
+      "date": "",
+      "pdf_url": "https://github.com/Hexens/Smart-Contract-Review-Public-Reports/blob/main/pancakeswap_infinity_combined_Periphery.pdf"
+    },
+    {
+      "id": "pancakeswap-cyfrin-2025-03",
+      "title": "2025-03-10-cyfrin-pancakeswap-v3.0.pdf",
+      "auditor": "Cyfrin",
+      "date": "2025-03",
+      "pdf_url": "https://raw.githubusercontent.com/Cyfrin/cyfrin-audit-reports/main/reports/2025-03-10-cyfrin-pancakeswap-v3.0.pdf"
+    }
+  ],
+  "audit_count": 8,
+  "last_audited": "2025-03",
+  "auditors": [
+    "Cyfrin",
+    "Halborn",
+    "Hexens",
+    "PeckShield"
   ]
 }

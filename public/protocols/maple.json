@@ -267,5 +267,41 @@
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
     "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "maple-dedaub-maple",
+      "title": "Maple",
+      "auditor": "Dedaub",
+      "date": "",
+      "pdf_url": "https://dedaub.com/audits/maple/"
+    },
+    {
+      "id": "maple-code4rena-2021-04",
+      "title": "2021-04-maple-findings",
+      "auditor": "Code4rena",
+      "date": "2021-04",
+      "pdf_url": "https://github.com/code-423n4/2021-04-maple-findings"
+    },
+    {
+      "id": "maple-code4rena-2021-12",
+      "title": "2021-12-maple-findings",
+      "auditor": "Code4rena",
+      "date": "2021-12",
+      "pdf_url": "https://github.com/code-423n4/2021-12-maple-findings"
+    },
+    {
+      "id": "maple-code4rena-2022-03",
+      "title": "2022-03-maple-findings",
+      "auditor": "Code4rena",
+      "date": "2022-03",
+      "pdf_url": "https://github.com/code-423n4/2022-03-maple-findings"
+    }
+  ],
+  "audit_count": 4,
+  "last_audited": "2022-03",
+  "auditors": [
+    "Code4rena",
+    "Dedaub"
   ]
 }

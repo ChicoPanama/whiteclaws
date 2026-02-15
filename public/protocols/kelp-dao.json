@@ -143,5 +143,34 @@
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
     "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "kelp-dao-external-audits-png",
+      "title": "audits.png",
+      "auditor": "External",
+      "date": "",
+      "pdf_url": "https://kelpdao.xyz/kelp/assets/hero/audits.png"
+    },
+    {
+      "id": "kelp-dao-external-audited-png",
+      "title": "audited.png",
+      "auditor": "External",
+      "date": "",
+      "pdf_url": "https://kelpdao.xyz/kelp/assets/hero/audited.png"
+    },
+    {
+      "id": "kelp-dao-code4rena-2023-11",
+      "title": "2023-11-kelp-findings",
+      "auditor": "Code4rena",
+      "date": "2023-11",
+      "pdf_url": "https://github.com/code-423n4/2023-11-kelp-findings"
+    }
+  ],
+  "audit_count": 3,
+  "last_audited": "2023-11",
+  "auditors": [
+    "Code4rena",
+    "External"
   ]
 }

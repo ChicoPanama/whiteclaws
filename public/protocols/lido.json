@@ -108,9 +108,78 @@
     }
   },
   "eligibility": [
-    "Open to all researchers \u2014 pseudonymous submissions accepted",
+    "Open to all researchers — pseudonymous submissions accepted",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "lido-external-audits",
+      "title": "audits",
+      "auditor": "External",
+      "date": "",
+      "pdf_url": "https://github.com/lidofinance/audits"
+    },
+    {
+      "id": "lido-mixbytes-the-mixbytes-team-was-highly-engaged-throughout-the-audit-co",
+      "title": "The MixBytes team was highly engaged throughout the audit, consistently available and proactive with insightful questions that demonstrated a deep understanding of the protocol. Their commitment to a thorough review, high level of expertise, adherence to deadlines, and professional approach made the audit process smooth and effective.",
+      "auditor": "MixBytes",
+      "date": "",
+      "pdf_url": "https://github.com/mixbytes/audits_public/tree/master/Lido"
+    },
+    {
+      "id": "lido-mixbytes-readme-md",
+      "title": "README.md",
+      "auditor": "MixBytes",
+      "date": "",
+      "pdf_url": "https://github.com/mixbytes/audits_public/blob/master/Lido/Easy%20Track%20(2)/README.md"
+    },
+    {
+      "id": "lido-dedaub-lido",
+      "title": "Lido",
+      "auditor": "Dedaub",
+      "date": "",
+      "pdf_url": "https://dedaub.com/audits/lido/"
+    },
+    {
+      "id": "lido-hexens-show-details",
+      "title": "Show details",
+      "auditor": "Hexens",
+      "date": "",
+      "pdf_url": "https://github.com/Hexens/Smart-Contract-Review-Public-Reports/blob/main/Lido_February23_Public_upd18.04.pdf"
+    },
+    {
+      "id": "lido-nethermind-2025",
+      "title": "Security ZK Audit of Lido&#x27;s Accounting zk-Oracle Built on SP1 September 16, 2025",
+      "auditor": "Nethermind",
+      "date": "2025",
+      "pdf_url": "https://www.nethermind.io/blog/zk-audit-of-lidos-accounting-zk-oracle-built-on-sp1"
+    },
+    {
+      "id": "lido-consensys-diligence-2025-08",
+      "title": "Lido V3",
+      "auditor": "Consensys Diligence",
+      "date": "2025-08",
+      "pdf_url": "https://consensys.io/audits/2025/08/lido-v3/"
+    },
+    {
+      "id": "lido-cyfrin-2025-12",
+      "title": "2025-12-19-cyfrin-lido-earn-v2.0.pdf",
+      "auditor": "Cyfrin",
+      "date": "2025-12",
+      "pdf_url": "https://raw.githubusercontent.com/Cyfrin/cyfrin-audit-reports/main/reports/2025-12-19-cyfrin-lido-earn-v2.0.pdf"
+    }
+  ],
+  "audit_count": 8,
+  "last_audited": "2025-12",
+  "auditors": [
+    "Consensys Diligence",
+    "Cyfrin",
+    "Dedaub",
+    "External",
+    "Hexens",
+    "MixBytes",
+    "Nethermind"
   ]
 }

@@ -8,7 +8,26 @@
     "ethereum"
   ],
   "audits": [
-    { "id": "imm-vaults", "auditor": "Immunefi Internal", "date": "2023-02", "title": "Immunefi Vaults System Audit" }
+    {
+      "id": "immunefi-external-audits",
+      "title": "audits",
+      "auditor": "External",
+      "date": "",
+      "pdf_url": "https://immunefi.com/audits/"
+    },
+    {
+      "id": "immunefi-external-audit-competitions",
+      "title": "audit competitions",
+      "auditor": "External",
+      "date": "",
+      "pdf_url": "https://immunefi.com/audit-competitions/"
+    },
+    {
+      "id": "imm-vaults",
+      "auditor": "Immunefi Internal",
+      "date": "2023-02",
+      "title": "Immunefi Vaults System Audit"
+    }
   ],
   "bounty": {
     "max": 100000,
@@ -108,5 +127,11 @@
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
     "Findings must be original work — no re-submission of known issues"
+  ],
+  "audit_count": 3,
+  "last_audited": "2023-02",
+  "auditors": [
+    "External",
+    "Immunefi Internal"
   ]
 }

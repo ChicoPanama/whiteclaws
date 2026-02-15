@@ -7,3 +7,5 @@ node_modules/
 .vercel
 dist/
 .vercel/
+data/.audit_checkpoint.json
+data/.firm_index_checkpoint.json

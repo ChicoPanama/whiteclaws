@@ -65,7 +65,7 @@
   "program_rules": [
     "Proof of Concept is required for all submissions. Reports without a working PoC demonstrating the vulnerability will not be considered.",
     "KYC verification is required before bounty payout. Researchers must complete identity verification to receive rewards.",
-    "This program follows Primacy of Impact \u2014 valid findings are rewarded based on demonstrated impact regardless of whether the specific attack vector was previously known.",
+    "This program follows Primacy of Impact — valid findings are rewarded based on demonstrated impact regardless of whether the specific attack vector was previously known.",
     "Submissions are triaged by the security team. Expect initial response within 48 hours of submission.",
     "Only previously unreported vulnerabilities are eligible. Duplicate submissions will be closed.",
     "Vulnerabilities must be reported through the WhiteClaws platform. Public disclosure before resolution disqualifies the submission.",
@@ -91,6 +91,44 @@
     "KYC verification required before payout",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "babylon-labs-external-coinspect-phase1-audit",
+      "title": "coinspect phase1 audit",
+      "auditor": "External",
+      "date": "",
+      "pdf_url": "https://docs.babylonlabs.io/assets/files/coinspect-phase1-audit.pdf"
+    },
+    {
+      "id": "babylon-labs-zellic-zellic-phase1-audit",
+      "title": "zellic phase1 audit",
+      "auditor": "Zellic",
+      "date": "",
+      "pdf_url": "https://docs.babylonlabs.io/assets/files/zellic-phase1-audit.pdf"
+    },
+    {
+      "id": "babylon-labs-hexens-2023",
+      "title": "Show details",
+      "auditor": "Hexens",
+      "date": "2023",
+      "pdf_url": "https://github.com/Hexens/Smart-Contract-Review-Public-Reports/blob/main/Babylon-jan-2023.pdf"
+    },
+    {
+      "id": "babylon-labs-sherlock-2024-12",
+      "title": "2024-12-babylon-judging",
+      "auditor": "Sherlock",
+      "date": "2024-12",
+      "pdf_url": "https://github.com/sherlock-audit/2024-12-babylon-judging"
+    }
+  ],
+  "audit_count": 4,
+  "last_audited": "2024-12",
+  "auditors": [
+    "External",
+    "Hexens",
+    "Sherlock",
+    "Zellic"
   ]
 }

@@ -159,5 +159,34 @@
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
     "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "drips-code4rena-2023-01",
+      "title": "2023-01-drips-findings",
+      "auditor": "Code4rena",
+      "date": "2023-01",
+      "pdf_url": "https://github.com/code-423n4/2023-01-drips-findings"
+    },
+    {
+      "id": "drips-cantina-2024-aug",
+      "title": "Cross-Chain Governance Audit for Drips Drips 31 August 2024 - 04 September 2024",
+      "auditor": "Cantina",
+      "date": "2024-Aug",
+      "pdf_url": "https://cantina.xyz/portfolio/cab2fa57-938a-4e56-97b0-3936203df77a"
+    },
+    {
+      "id": "drips-cantina-2025-mar",
+      "title": "Ethereum Smart Contract Audit for Drips Drips 28 March 2025 - 29 March 2025",
+      "auditor": "Cantina",
+      "date": "2025-Mar",
+      "pdf_url": "https://cantina.xyz/portfolio/47ff4361-233a-42c4-bb83-6a0beab255c8"
+    }
+  ],
+  "audit_count": 3,
+  "last_audited": "2025",
+  "auditors": [
+    "Cantina",
+    "Code4rena"
   ]
 }

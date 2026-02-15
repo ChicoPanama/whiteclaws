@@ -272,5 +272,27 @@
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
     "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "etherfi-external-audits",
+      "title": "audits",
+      "auditor": "External",
+      "date": "",
+      "pdf_url": "https://github.com/etherfi-protocol/smart-contracts/tree/master/audits"
+    },
+    {
+      "id": "etherfi-nethermind-2023",
+      "title": "2023.07.05%20-%20Nethermind.pdf",
+      "auditor": "Nethermind",
+      "date": "2023",
+      "pdf_url": "https://github.com/etherfi-protocol/smart-contracts/blob/master/audits/2023.07.05%20-%20Nethermind.pdf"
+    }
+  ],
+  "audit_count": 2,
+  "last_audited": "2023",
+  "auditors": [
+    "External",
+    "Nethermind"
   ]
 }

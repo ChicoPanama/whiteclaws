@@ -69,8 +69,30 @@
     }
   },
   "eligibility": [
-    "Open to all researchers \u2014 pseudonymous submissions accepted",
+    "Open to all researchers — pseudonymous submissions accepted",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "overlay-spearbit-overlay-spearbit-security-review-pdf",
+      "title": "Overlay-Spearbit-Security-Review.pdf",
+      "auditor": "Spearbit",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/spearbit/portfolio/master/pdfs/Overlay-Spearbit-Security-Review.pdf"
+    },
+    {
+      "id": "overlay-code4rena-2021-11",
+      "title": "2021-11-overlay-findings",
+      "auditor": "Code4rena",
+      "date": "2021-11",
+      "pdf_url": "https://github.com/code-423n4/2021-11-overlay-findings"
+    }
+  ],
+  "audit_count": 2,
+  "last_audited": "2021-11",
+  "auditors": [
+    "Code4rena",
+    "Spearbit"
   ]
 }

@@ -266,5 +266,50 @@
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
     "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "connext-external-audits",
+      "title": "audits",
+      "auditor": "External",
+      "date": "",
+      "pdf_url": "https://github.com/connext/audits"
+    },
+    {
+      "id": "connext-spearbit-connext-spearbit-security-review-pdf",
+      "title": "Connext-Spearbit-Security-Review.pdf",
+      "auditor": "Spearbit",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/spearbit/portfolio/master/pdfs/Connext-Spearbit-Security-Review.pdf"
+    },
+    {
+      "id": "connext-code4rena-2021-07",
+      "title": "2021-07-connext-findings",
+      "auditor": "Code4rena",
+      "date": "2021-07",
+      "pdf_url": "https://github.com/code-423n4/2021-07-connext-findings"
+    },
+    {
+      "id": "connext-consensys-diligence-2021-07",
+      "title": "Connext NXTP — Noncustodial Xchain Transfer Protocol",
+      "auditor": "Consensys Diligence",
+      "date": "2021-07",
+      "pdf_url": "https://consensys.io/audits/2021/07/connext-nxtp-noncustodial-xchain-transfer-protocol/"
+    },
+    {
+      "id": "connext-code4rena-2022-06",
+      "title": "2022-06-connext-findings",
+      "auditor": "Code4rena",
+      "date": "2022-06",
+      "pdf_url": "https://github.com/code-423n4/2022-06-connext-findings"
+    }
+  ],
+  "audit_count": 5,
+  "last_audited": "2022-06",
+  "auditors": [
+    "Code4rena",
+    "Consensys Diligence",
+    "External",
+    "Spearbit"
   ]
 }

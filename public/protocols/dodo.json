@@ -82,9 +82,60 @@
     }
   },
   "eligibility": [
-    "Open to all researchers \u2014 pseudonymous submissions accepted",
+    "Open to all researchers — pseudonymous submissions accepted",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "dodo-trail-of-bits-dodo-pdf",
+      "title": "dodo.pdf",
+      "auditor": "Trail of Bits",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/trailofbits/publications/master/reviews/dodo.pdf"
+    },
+    {
+      "id": "dodo-peckshield-dodo-audit-report-2020-16-en-1-0-pdf",
+      "title": "dodo_audit_report_2020_16_en_1_0.pdf",
+      "auditor": "PeckShield",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/peckshield/publications/master/audit_reports/dodo_audit_report_2020_16_en_1_0.pdf"
+    },
+    {
+      "id": "dodo-sherlock-2022-11",
+      "title": "2022-11-dodo-judging",
+      "auditor": "Sherlock",
+      "date": "2022-11",
+      "pdf_url": "https://github.com/sherlock-audit/2022-11-dodo-judging"
+    },
+    {
+      "id": "dodo-sherlock-2023-05",
+      "title": "2023-05-dodo-judging",
+      "auditor": "Sherlock",
+      "date": "2023-05",
+      "pdf_url": "https://github.com/sherlock-audit/2023-05-dodo-judging"
+    },
+    {
+      "id": "dodo-sherlock-2023-06",
+      "title": "2023-06-dodo-judging",
+      "auditor": "Sherlock",
+      "date": "2023-06",
+      "pdf_url": "https://github.com/sherlock-audit/2023-06-dodo-judging"
+    },
+    {
+      "id": "dodo-sherlock-2023-12",
+      "title": "2023-12-dodo-judging",
+      "auditor": "Sherlock",
+      "date": "2023-12",
+      "pdf_url": "https://github.com/sherlock-audit/2023-12-dodo-judging"
+    }
+  ],
+  "audit_count": 6,
+  "last_audited": "2023-12",
+  "auditors": [
+    "PeckShield",
+    "Sherlock",
+    "Trail of Bits"
   ]
 }

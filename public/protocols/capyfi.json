@@ -145,5 +145,19 @@
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
     "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "capyfi-external-coinspect-20-20smart-20contract-20audit-20-20capyfi-20-20v25",
+      "title": "Coinspect%20 %20Smart%20Contract%20Audit%20 %20Capyfi%20 %20v250711",
+      "auditor": "External",
+      "date": "",
+      "pdf_url": "https://www.coinspect.com/doc/Coinspect%20-%20Smart%20Contract%20Audit%20-%20Capyfi%20-%20v250711.pdf"
+    }
+  ],
+  "audit_count": 1,
+  "last_audited": "",
+  "auditors": [
+    "External"
   ]
 }

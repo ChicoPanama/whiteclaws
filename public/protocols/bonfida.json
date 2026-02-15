@@ -74,8 +74,22 @@
     }
   },
   "eligibility": [
-    "Open to all researchers \u2014 pseudonymous submissions accepted",
+    "Open to all researchers — pseudonymous submissions accepted",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "bonfida-halborn-bonfida-sns-solana-program-security-assessment-report-halbor",
+      "title": "Bonfida_SNS_Solana_Program_Security_Assessment_Report_Halborn_Final.pdf",
+      "auditor": "Halborn",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/HalbornSecurity/PublicReports/master/Solana%20Program%20Audit/Bonfida_SNS_Solana_Program_Security_Assessment_Report_Halborn_Final.pdf"
+    }
+  ],
+  "audit_count": 1,
+  "last_audited": "",
+  "auditors": [
+    "Halborn"
   ]
 }

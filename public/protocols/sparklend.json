@@ -255,5 +255,40 @@
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
     "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "sparklend-cantina-2024-oct",
+      "title": "MakerDAO Spark ALM Init Script Audit MakerDAO 16 October 2024 - 18 October 2024",
+      "auditor": "Cantina",
+      "date": "2024-Oct",
+      "pdf_url": "https://cantina.xyz/portfolio/ba3e40ff-baf9-4def-8ae0-21f4a9473184"
+    },
+    {
+      "id": "sparklend-cantina-2024-sep",
+      "title": "Spark ALM CCTP &amp; Swap Logic Audit MakerDAO 18 September 2024 - 19 September 2024",
+      "auditor": "Cantina",
+      "date": "2024-Sep",
+      "pdf_url": "https://cantina.xyz/portfolio/6e9c7968-9565-4b05-a8f2-f41ddc64ec27"
+    },
+    {
+      "id": "sparklend-cantina-2024-aug",
+      "title": "Spark PSM3 Contract Security Audit MakerDAO 21 August 2024 - 22 August 2024",
+      "auditor": "Cantina",
+      "date": "2024-Aug",
+      "pdf_url": "https://cantina.xyz/portfolio/18bed847-07eb-421d-99c5-9571f2885dba"
+    },
+    {
+      "id": "sparklend-cantina-2025-mar",
+      "title": "Spark ALM Curve Controller Audit for MakerDAO Sky 10 March 2025 - 21 March 2025",
+      "auditor": "Cantina",
+      "date": "2025-Mar",
+      "pdf_url": "https://cantina.xyz/portfolio/c5408301-e8d5-4d84-b758-ac8d1f4d987f"
+    }
+  ],
+  "audit_count": 4,
+  "last_audited": "2025",
+  "auditors": [
+    "Cantina"
   ]
 }

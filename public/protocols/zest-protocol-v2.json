@@ -8,11 +8,50 @@
     "stacks"
   ],
   "audits": [
-    { "id": "zest-v2", "auditor": "Clarity Alliance", "date": "2024", "title": "Zest Protocol v2 Audit" },
-    { "id": "zest-v2-upgrade", "auditor": "Clarity Alliance", "date": "2024", "title": "Zest Protocol v2 Upgrade Audit" },
-    { "id": "zest-v2-upgrade2", "auditor": "Clarity Alliance", "date": "2024", "title": "Zest Protocol v2 Upgrade V2 Audit" },
-    { "id": "zest-ca-2024", "auditor": "Clarity Alliance", "date": "2024-11", "title": "Zest ClarityAlliance Audit" },
-    { "id": "zest-cf-2023", "auditor": "CoinFabrik", "date": "2023-11", "title": "Zest CoinFabrik Audit" }
+    {
+      "id": "zest-protocol-v2-external-clarity-20alliance-20-20zest-20protocol",
+      "title": "Clarity%20Alliance%20 %20Zest%20Protocol",
+      "auditor": "External",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/Clarity-Alliance/audits/main/Clarity%20Alliance%20-%20Zest%20Protocol.pdf"
+    },
+    {
+      "id": "zest-protocol-v2-external-240509-thesis-defense-zest-protocol-smart-contracts-security",
+      "title": "240509 Thesis Defense Zest Protocol Smart Contracts Security Audit Report",
+      "auditor": "External",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/Thesis-Defense/Security-Audit-Reports/main/PDFs/240509_Thesis_Defense-Zest_Protocol_Smart_Contracts_Security_Audit_Report.pdf"
+    },
+    {
+      "id": "zest-cf-2023",
+      "auditor": "CoinFabrik",
+      "date": "2023-11",
+      "title": "Zest CoinFabrik Audit"
+    },
+    {
+      "id": "zest-v2",
+      "auditor": "Clarity Alliance",
+      "date": "2024",
+      "title": "Zest Protocol v2 Audit"
+    },
+    {
+      "id": "zest-v2-upgrade",
+      "auditor": "Clarity Alliance",
+      "date": "2024",
+      "title": "Zest Protocol v2 Upgrade Audit"
+    },
+    {
+      "id": "zest-v2-upgrade2",
+      "auditor": "Clarity Alliance",
+      "date": "2024",
+      "title": "Zest Protocol v2 Upgrade V2 Audit"
+    },
+    {
+      "id": "zest-ca-2024",
+      "auditor": "Clarity Alliance",
+      "date": "2024-11",
+      "title": "Zest ClarityAlliance Audit"
+    }
   ],
   "bounty": {
     "max": 100000,
@@ -88,8 +127,15 @@
     }
   },
   "eligibility": [
-    "Open to all researchers \u2014 pseudonymous submissions accepted",
+    "Open to all researchers — pseudonymous submissions accepted",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
+  ],
+  "audit_count": 7,
+  "last_audited": "2024-11",
+  "auditors": [
+    "Clarity Alliance",
+    "CoinFabrik",
+    "External"
   ]
 }

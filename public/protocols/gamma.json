@@ -100,5 +100,27 @@
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
     "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "gamma-trail-of-bits-opyn-gamma-protocol-pdf",
+      "title": "Opyn-Gamma-Protocol.pdf",
+      "auditor": "Trail of Bits",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/trailofbits/publications/master/reviews/Opyn-Gamma-Protocol.pdf"
+    },
+    {
+      "id": "gamma-consensys-diligence-2022-02",
+      "title": "Gamma",
+      "auditor": "Consensys Diligence",
+      "date": "2022-02",
+      "pdf_url": "https://consensys.io/audits/2022/02/gamma/"
+    }
+  ],
+  "audit_count": 2,
+  "last_audited": "2022-02",
+  "auditors": [
+    "Consensys Diligence",
+    "Trail of Bits"
   ]
 }

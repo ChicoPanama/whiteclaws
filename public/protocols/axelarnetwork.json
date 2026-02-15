@@ -192,5 +192,62 @@
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
     "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "axelarnetwork-least-authority-audit-of-axelar-smart-contracts",
+      "title": "audit-of-axelar-smart-contracts",
+      "auditor": "Least Authority",
+      "date": "",
+      "pdf_url": "https://leastauthority.com/blog/audit-of-axelar-smart-contracts/"
+    },
+    {
+      "id": "axelarnetwork-least-authority-axelar-and-8211-smart-contracts",
+      "title": "Axelar &#8211; Smart Contracts",
+      "auditor": "Least Authority",
+      "date": "",
+      "pdf_url": "https://leastauthority.com/blog/audit-of-axelar-smart-contracts/"
+    },
+    {
+      "id": "axelarnetwork-least-authority-read-more",
+      "title": "Read More »",
+      "auditor": "Least Authority",
+      "date": "",
+      "pdf_url": "https://leastauthority.com/blog/audit-of-axelar-smart-contracts/"
+    },
+    {
+      "id": "axelarnetwork-code4rena-2022-04",
+      "title": "2022-04-axelar-findings",
+      "auditor": "Code4rena",
+      "date": "2022-04",
+      "pdf_url": "https://github.com/code-423n4/2022-04-axelar-findings"
+    },
+    {
+      "id": "axelarnetwork-code4rena-2022-07",
+      "title": "2022-07-axelar-findings",
+      "auditor": "Code4rena",
+      "date": "2022-07",
+      "pdf_url": "https://github.com/code-423n4/2022-07-axelar-findings"
+    },
+    {
+      "id": "axelarnetwork-code4rena-2023-07",
+      "title": "2023-07-axelar-findings",
+      "auditor": "Code4rena",
+      "date": "2023-07",
+      "pdf_url": "https://github.com/code-423n4/2023-07-axelar-findings"
+    },
+    {
+      "id": "axelarnetwork-code4rena-2024-08",
+      "title": "2024-08-axelar-network-findings",
+      "auditor": "Code4rena",
+      "date": "2024-08",
+      "pdf_url": "https://github.com/code-423n4/2024-08-axelar-network-findings"
+    }
+  ],
+  "audit_count": 7,
+  "last_audited": "2024-08",
+  "auditors": [
+    "Code4rena",
+    "Least Authority"
   ]
 }

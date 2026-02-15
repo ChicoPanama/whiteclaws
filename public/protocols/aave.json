@@ -133,5 +133,122 @@
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
     "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "aave-mixbytes-readme-md",
+      "title": "README.md",
+      "auditor": "MixBytes",
+      "date": "",
+      "pdf_url": "https://github.com/mixbytes/audits_public/blob/master/AAVE/Stata%20Token%20(watoken)/README.md"
+    },
+    {
+      "id": "aave-consensys-diligence-2020-05",
+      "title": "Aave CPM Price Provider",
+      "auditor": "Consensys Diligence",
+      "date": "2020-05",
+      "pdf_url": "https://consensys.io/audits/2020/05/aave-cpm-price-provider/"
+    },
+    {
+      "id": "aave-consensys-diligence-2020-07",
+      "title": "Aave Token",
+      "auditor": "Consensys Diligence",
+      "date": "2020-07",
+      "pdf_url": "https://consensys.io/audits/2020/07/aave-token/"
+    },
+    {
+      "id": "aave-consensys-diligence-2020-08",
+      "title": "Aave Balancer and Uniswap v2 Price Providers",
+      "auditor": "Consensys Diligence",
+      "date": "2020-08",
+      "pdf_url": "https://consensys.io/audits/2020/08/aave-balancer-and-uniswap-v2-price-providers/"
+    },
+    {
+      "id": "aave-consensys-diligence-2020-09",
+      "title": "Aave Safety Module",
+      "auditor": "Consensys Diligence",
+      "date": "2020-09",
+      "pdf_url": "https://consensys.io/audits/2020/09/aave-safety-module/"
+    },
+    {
+      "id": "aave-trail-of-bits-2021-11",
+      "title": "2021-11-aave-v3-securityreview.pdf",
+      "auditor": "Trail of Bits",
+      "date": "2021-11",
+      "pdf_url": "https://raw.githubusercontent.com/trailofbits/publications/master/reviews/2021-11-aave-v3-securityreview.pdf"
+    },
+    {
+      "id": "aave-code4rena-2025-06",
+      "title": "2025 06 12 Blackthorn v3.4 Report",
+      "auditor": "Code4rena",
+      "date": "2025-06",
+      "pdf_url": "https://raw.githubusercontent.com/aave-dao/aave-v3-origin/74412e2b6e0b1973fac6837b6a488f8eaaeac4b1/audits/2025-06-12_Blackthorn-v3.4_Report.pdf"
+    },
+    {
+      "id": "aave-certora-2025-06",
+      "title": "2025 06 11 Certora Aave v3.4 Report",
+      "auditor": "Certora",
+      "date": "2025-06",
+      "pdf_url": "https://raw.githubusercontent.com/aave-dao/aave-v3-origin/74412e2b6e0b1973fac6837b6a488f8eaaeac4b1/audits/2025-06-11_Certora_Aave-v3.4_Report.pdf"
+    },
+    {
+      "id": "aave-mixbytes-2025-07",
+      "title": "2025 07 18 MixBytes AaveV3.5",
+      "auditor": "MixBytes",
+      "date": "2025-07",
+      "pdf_url": "https://raw.githubusercontent.com/aave-dao/aave-v3-origin/main/audits/2025-07-18_MixBytes_AaveV3.5.pdf"
+    },
+    {
+      "id": "aave-external-2025-07",
+      "title": "2025 07 17 ABDK Aave v3.5",
+      "auditor": "External",
+      "date": "2025-07",
+      "pdf_url": "https://raw.githubusercontent.com/aave-dao/aave-v3-origin/main/audits/2025-07-17_ABDK_Aave-v3.5.pdf"
+    },
+    {
+      "id": "aave-certora-2025-07",
+      "title": "2025 07 14 Certora AaveV3.5",
+      "auditor": "Certora",
+      "date": "2025-07",
+      "pdf_url": "https://raw.githubusercontent.com/aave-dao/aave-v3-origin/main/audits/2025-07-14_Certora_AaveV3.5.pdf"
+    },
+    {
+      "id": "aave-external-2025-11",
+      "title": "2025 11 16 Blackthorn Aave v3.6",
+      "auditor": "External",
+      "date": "2025-11",
+      "pdf_url": "https://raw.githubusercontent.com/aave-dao/aave-v3-origin/9f69c714350635787439608b52fb6064ce991bba/audits/2025-11-16_Blackthorn_Aave-v3.6.pdf"
+    },
+    {
+      "id": "aave-certora-2025-11",
+      "title": "2025 11 18 Certora Aave v3.6",
+      "auditor": "Certora",
+      "date": "2025-11",
+      "pdf_url": "https://raw.githubusercontent.com/aave-dao/aave-v3-origin/9f69c714350635787439608b52fb6064ce991bba/audits/2025-11-18_Certora_Aave-v3.6.pdf"
+    },
+    {
+      "id": "aave-mixbytes-2025-11",
+      "title": "2025 11 18 MixBytes Aave v3.6",
+      "auditor": "MixBytes",
+      "date": "2025-11",
+      "pdf_url": "https://raw.githubusercontent.com/aave-dao/aave-v3-origin/9f69c714350635787439608b52fb6064ce991bba/audits/2025-11-18_MixBytes_Aave-v3.6.pdf"
+    },
+    {
+      "id": "aave-trail-of-bits-2026-02",
+      "title": "2026-02-aave-v4-securityreview.pdf",
+      "auditor": "Trail of Bits",
+      "date": "2026-02",
+      "pdf_url": "https://raw.githubusercontent.com/trailofbits/publications/master/reviews/2026-02-aave-v4-securityreview.pdf"
+    }
+  ],
+  "audit_count": 15,
+  "last_audited": "2026-02",
+  "auditors": [
+    "Certora",
+    "Code4rena",
+    "Consensys Diligence",
+    "External",
+    "MixBytes",
+    "Trail of Bits"
   ]
 }

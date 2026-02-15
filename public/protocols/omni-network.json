@@ -74,8 +74,22 @@
     }
   },
   "eligibility": [
-    "Open to all researchers \u2014 pseudonymous submissions accepted",
+    "Open to all researchers — pseudonymous submissions accepted",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "omni-network-spearbit-2024",
+      "title": "Omni-Solidity-Spearbit-Security-Review-September-2024.pdf",
+      "auditor": "Spearbit",
+      "date": "2024",
+      "pdf_url": "https://raw.githubusercontent.com/spearbit/portfolio/master/pdfs/Omni-Solidity-Spearbit-Security-Review-September-2024.pdf"
+    }
+  ],
+  "audit_count": 1,
+  "last_audited": "2024",
+  "auditors": [
+    "Spearbit"
   ]
 }

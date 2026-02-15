@@ -81,6 +81,65 @@
     "KYC verification required before payout",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "zksync-halborn-matterlabs-zksync-era-circuits-zero-knowledge-security-audit",
+      "title": "MatterLabs_zkSync_Era_Circuits_Zero_Knowledge_Security_Audit_Report_Halborn_Final..pdf",
+      "auditor": "Halborn",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/HalbornSecurity/PublicReports/master/ZK%20Audits/MatterLabs_zkSync_Era_Circuits_Zero_Knowledge_Security_Audit_Report_Halborn_Final..pdf"
+    },
+    {
+      "id": "zksync-hacken-zksync",
+      "title": "zkSync",
+      "auditor": "Hacken",
+      "date": "",
+      "pdf_url": "https://hacken.io/services/blockchain-security/zksync-smart-contract-audit/"
+    },
+    {
+      "id": "zksync-hexens-show-details",
+      "title": "Show details",
+      "auditor": "Hexens",
+      "date": "",
+      "pdf_url": "https://github.com/Hexens/Smart-Contract-Review-Public-Reports/blob/main/zksync-audit-aug25(Final).pdf"
+    },
+    {
+      "id": "zksync-code4rena-2022-10",
+      "title": "2022-10-zksync-findings",
+      "auditor": "Code4rena",
+      "date": "2022-10",
+      "pdf_url": "https://github.com/code-423n4/2022-10-zksync-findings"
+    },
+    {
+      "id": "zksync-code4rena-2023-03",
+      "title": "2023-03-zksync-findings",
+      "auditor": "Code4rena",
+      "date": "2023-03",
+      "pdf_url": "https://github.com/code-423n4/2023-03-zksync-findings"
+    },
+    {
+      "id": "zksync-code4rena-2023-10",
+      "title": "2023-10-zksync-findings",
+      "auditor": "Code4rena",
+      "date": "2023-10",
+      "pdf_url": "https://github.com/code-423n4/2023-10-zksync-findings"
+    },
+    {
+      "id": "zksync-code4rena-2024-03",
+      "title": "2024-03-zksync-findings",
+      "auditor": "Code4rena",
+      "date": "2024-03",
+      "pdf_url": "https://github.com/code-423n4/2024-03-zksync-findings"
+    }
+  ],
+  "audit_count": 7,
+  "last_audited": "2024-03",
+  "auditors": [
+    "Code4rena",
+    "Hacken",
+    "Halborn",
+    "Hexens"
   ]
 }

@@ -208,5 +208,42 @@
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
     "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "ethena-code4rena-2023-10",
+      "title": "2023-10-ethena-findings",
+      "auditor": "Code4rena",
+      "date": "2023-10",
+      "pdf_url": "https://github.com/code-423n4/2023-10-ethena-findings"
+    },
+    {
+      "id": "ethena-hexens-2024",
+      "title": "Show details",
+      "auditor": "Hexens",
+      "date": "2024",
+      "pdf_url": "https://github.com/Hexens/Smart-Contract-Review-Public-Reports/blob/main/spool-june-2024-ethena-strat-and-svb(Public).pdf"
+    },
+    {
+      "id": "ethena-code4rena-2024-11",
+      "title": "2024-11-ethena-labs-findings",
+      "auditor": "Code4rena",
+      "date": "2024-11",
+      "pdf_url": "https://github.com/code-423n4/2024-11-ethena-labs-findings"
+    },
+    {
+      "id": "ethena-cyfrin-2025-05",
+      "title": "2025-05-16-cyfrin-ethena-timelock-v2.0.pdf",
+      "auditor": "Cyfrin",
+      "date": "2025-05",
+      "pdf_url": "https://raw.githubusercontent.com/Cyfrin/cyfrin-audit-reports/main/reports/2025-05-16-cyfrin-ethena-timelock-v2.0.pdf"
+    }
+  ],
+  "audit_count": 4,
+  "last_audited": "2025-05",
+  "auditors": [
+    "Code4rena",
+    "Cyfrin",
+    "Hexens"
   ]
 }

@@ -8,18 +8,218 @@
     "ethereum"
   ],
   "audits": [
-    { "id": "oz-2018", "auditor": "External", "date": "2018-10", "title": "OpenZeppelin Contracts Audit (2018)" },
-    { "id": "oz-checkpoints", "auditor": "External", "date": "2022-10", "title": "OpenZeppelin Checkpoints Audit" },
-    { "id": "oz-erc4626", "auditor": "External", "date": "2022-10", "title": "OpenZeppelin ERC-4626 Audit" },
-    { "id": "oz-v49", "auditor": "External", "date": "2023-05", "title": "OpenZeppelin v4.9 Audit" },
-    { "id": "oz-v50", "auditor": "External", "date": "2023-10", "title": "OpenZeppelin v5.0 Audit" },
-    { "id": "oz-v51", "auditor": "External", "date": "2024-10", "title": "OpenZeppelin v5.1 Audit" },
-    { "id": "oz-v52", "auditor": "External", "date": "2024-12", "title": "OpenZeppelin v5.2 Audit" },
-    { "id": "oz-v53", "auditor": "External", "date": "2025-04", "title": "OpenZeppelin v5.3 Audit" },
-    { "id": "oz-v54", "auditor": "External", "date": "2025-07", "title": "OpenZeppelin v5.4 Audit" },
-    { "id": "oz-v55", "auditor": "External", "date": "2025-10", "title": "OpenZeppelin v5.5 Audit" },
-    { "id": "oz-rlp", "auditor": "External", "date": "2025-11", "title": "OpenZeppelin RLP Audit" },
-    { "id": "oz-oif", "auditor": "OpenZeppelin", "date": "2025", "title": "OIF Broadcaster Audit" }
+    {
+      "id": "openzeppelin-openzeppelin-developers",
+      "title": "Developers",
+      "auditor": "OpenZeppelin",
+      "date": "",
+      "pdf_url": "https://blog.openzeppelin.com/tag/security-audits#"
+    },
+    {
+      "id": "openzeppelin-openzeppelin-services",
+      "title": "Services",
+      "auditor": "OpenZeppelin",
+      "date": "",
+      "pdf_url": "https://blog.openzeppelin.com/tag/security-audits#"
+    },
+    {
+      "id": "openzeppelin-openzeppelin-smart-contract-security-audit-the-standard-for-smart-contrac",
+      "title": "Smart Contract Security Audit The standard for smart contract security",
+      "auditor": "OpenZeppelin",
+      "date": "",
+      "pdf_url": "https://www.openzeppelin.com/security-audits"
+    },
+    {
+      "id": "openzeppelin-openzeppelin-blockchain-infrastructure-audit-secure-offchain-infrastructu",
+      "title": "Blockchain Infrastructure Audit Secure offchain infrastructure components",
+      "auditor": "OpenZeppelin",
+      "date": "",
+      "pdf_url": "https://www.openzeppelin.com/blockchain-infrastructure"
+    },
+    {
+      "id": "openzeppelin-openzeppelin-zkp-audit-secure-zero-knowledge-and-amp-privacy-systems",
+      "title": "ZKP Audit Secure zero-knowledge &amp; privacy systems",
+      "auditor": "OpenZeppelin",
+      "date": "",
+      "pdf_url": "https://www.openzeppelin.com/zkp"
+    },
+    {
+      "id": "openzeppelin-openzeppelin-related-content",
+      "title": "Related Content",
+      "auditor": "OpenZeppelin",
+      "date": "",
+      "pdf_url": "https://blog.openzeppelin.com/tag/www.openzeppelin.com/research#security-audits"
+    },
+    {
+      "id": "openzeppelin-openzeppelin-oif-broadcaster-audit",
+      "title": "OIF Broadcaster Audit →",
+      "auditor": "OpenZeppelin",
+      "date": "",
+      "pdf_url": "https://www.openzeppelin.com/news/oif-broadcaster-audit"
+    },
+    {
+      "id": "openzeppelin-openzeppelin-explore-all-security-services",
+      "title": "Explore all Security Services →",
+      "auditor": "OpenZeppelin",
+      "date": "",
+      "pdf_url": "https://blog.openzeppelin.com/security-services"
+    },
+    {
+      "id": "openzeppelin-openzeppelin-solutions",
+      "title": "Solutions",
+      "auditor": "OpenZeppelin",
+      "date": "",
+      "pdf_url": "https://blog.openzeppelin.com/tag/security-audits#"
+    },
+    {
+      "id": "openzeppelin-openzeppelin-financial-institutions-stack-minimize-blockchain-security-ri",
+      "title": "Financial Institutions Stack Minimize blockchain security risks",
+      "auditor": "OpenZeppelin",
+      "date": "",
+      "pdf_url": "https://www.openzeppelin.com/financial-institutions"
+    },
+    {
+      "id": "openzeppelin-openzeppelin-institutions",
+      "title": "Institutions",
+      "auditor": "OpenZeppelin",
+      "date": "",
+      "pdf_url": "https://blog.openzeppelin.com/tag/security-audits#"
+    },
+    {
+      "id": "openzeppelin-openzeppelin-research",
+      "title": "Research",
+      "auditor": "OpenZeppelin",
+      "date": "",
+      "pdf_url": "https://blog.openzeppelin.com/tag/security-audits#"
+    },
+    {
+      "id": "openzeppelin-openzeppelin-company",
+      "title": "Company",
+      "auditor": "OpenZeppelin",
+      "date": "",
+      "pdf_url": "https://blog.openzeppelin.com/tag/security-audits#"
+    },
+    {
+      "id": "openzeppelin-openzeppelin-security-services",
+      "title": "Security Services",
+      "auditor": "OpenZeppelin",
+      "date": "",
+      "pdf_url": "https://www.openzeppelin.com/security-services"
+    },
+    {
+      "id": "openzeppelin-openzeppelin-smart-contract-security-audit",
+      "title": "Smart Contract Security Audit",
+      "auditor": "OpenZeppelin",
+      "date": "",
+      "pdf_url": "https://www.openzeppelin.com/security-audits"
+    },
+    {
+      "id": "openzeppelin-openzeppelin-blockchain-infrastructure-audit",
+      "title": "Blockchain Infrastructure Audit",
+      "auditor": "OpenZeppelin",
+      "date": "",
+      "pdf_url": "https://www.openzeppelin.com/blockchain-infrastructure"
+    },
+    {
+      "id": "openzeppelin-openzeppelin-zkp-audit",
+      "title": "ZKP Audit",
+      "auditor": "OpenZeppelin",
+      "date": "",
+      "pdf_url": "https://www.openzeppelin.com/zkp"
+    },
+    {
+      "id": "openzeppelin-openzeppelin-security-audits",
+      "title": "Security Audits",
+      "auditor": "OpenZeppelin",
+      "date": "",
+      "pdf_url": "https://www.openzeppelin.com/research#security-audits"
+    },
+    {
+      "id": "openzeppelin-openzeppelin-news",
+      "title": "News",
+      "auditor": "OpenZeppelin",
+      "date": "",
+      "pdf_url": "https://blog.openzeppelin.com/tag/security-audits#"
+    },
+    {
+      "id": "oz-2018",
+      "auditor": "External",
+      "date": "2018-10",
+      "title": "OpenZeppelin Contracts Audit (2018)"
+    },
+    {
+      "id": "oz-checkpoints",
+      "auditor": "External",
+      "date": "2022-10",
+      "title": "OpenZeppelin Checkpoints Audit"
+    },
+    {
+      "id": "oz-erc4626",
+      "auditor": "External",
+      "date": "2022-10",
+      "title": "OpenZeppelin ERC-4626 Audit"
+    },
+    {
+      "id": "oz-v49",
+      "auditor": "External",
+      "date": "2023-05",
+      "title": "OpenZeppelin v4.9 Audit"
+    },
+    {
+      "id": "oz-v50",
+      "auditor": "External",
+      "date": "2023-10",
+      "title": "OpenZeppelin v5.0 Audit"
+    },
+    {
+      "id": "oz-v51",
+      "auditor": "External",
+      "date": "2024-10",
+      "title": "OpenZeppelin v5.1 Audit"
+    },
+    {
+      "id": "oz-v52",
+      "auditor": "External",
+      "date": "2024-12",
+      "title": "OpenZeppelin v5.2 Audit"
+    },
+    {
+      "id": "oz-oif",
+      "auditor": "OpenZeppelin",
+      "date": "2025",
+      "title": "OIF Broadcaster Audit"
+    },
+    {
+      "id": "openzeppelin-openzeppelin-2025",
+      "title": "Web3 Security Auditor's 2025 Rewind →",
+      "auditor": "OpenZeppelin",
+      "date": "2025",
+      "pdf_url": "https://www.openzeppelin.com/news/web3-security-auditors-2025-rewind"
+    },
+    {
+      "id": "oz-v53",
+      "auditor": "External",
+      "date": "2025-04",
+      "title": "OpenZeppelin v5.3 Audit"
+    },
+    {
+      "id": "oz-v54",
+      "auditor": "External",
+      "date": "2025-07",
+      "title": "OpenZeppelin v5.4 Audit"
+    },
+    {
+      "id": "oz-v55",
+      "auditor": "External",
+      "date": "2025-10",
+      "title": "OpenZeppelin v5.5 Audit"
+    },
+    {
+      "id": "oz-rlp",
+      "auditor": "External",
+      "date": "2025-11",
+      "title": "OpenZeppelin RLP Audit"
+    }
   ],
   "bounty": {
     "max": 100000,
@@ -94,6 +294,12 @@
     "KYC verification required before payout",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
+  ],
+  "audit_count": 32,
+  "last_audited": "2025-11",
+  "auditors": [
+    "External",
+    "OpenZeppelin"
   ]
 }

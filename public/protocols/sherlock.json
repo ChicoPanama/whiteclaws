@@ -177,5 +177,62 @@
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
     "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "sherlock-sherlock-audit-contests",
+      "title": "audit contests",
+      "auditor": "Sherlock",
+      "date": "",
+      "pdf_url": "https://sherlock.xyz/solutions/audit-contests"
+    },
+    {
+      "id": "sherlock-sherlock-leaderboards",
+      "title": "leaderboards",
+      "auditor": "Sherlock",
+      "date": "",
+      "pdf_url": "https://audits.sherlock.xyz/leaderboards"
+    },
+    {
+      "id": "sherlock-sherlock-contests",
+      "title": "contests",
+      "auditor": "Sherlock",
+      "date": "",
+      "pdf_url": "https://audits.sherlock.xyz/contests"
+    },
+    {
+      "id": "sherlock-sherlock-bug-bounties",
+      "title": "bug bounties",
+      "auditor": "Sherlock",
+      "date": "",
+      "pdf_url": "https://audits.sherlock.xyz/bug-bounties"
+    },
+    {
+      "id": "sherlock-code4rena-2021-07",
+      "title": "2021-07-sherlock-findings",
+      "auditor": "Code4rena",
+      "date": "2021-07",
+      "pdf_url": "https://github.com/code-423n4/2021-07-sherlock-findings"
+    },
+    {
+      "id": "sherlock-code4rena-2022-01",
+      "title": "2022-01-sherlock-findings",
+      "auditor": "Code4rena",
+      "date": "2022-01",
+      "pdf_url": "https://github.com/code-423n4/2022-01-sherlock-findings"
+    },
+    {
+      "id": "sherlock-sherlock-2022-09",
+      "title": "2022-09-sherlock-judging",
+      "auditor": "Sherlock",
+      "date": "2022-09",
+      "pdf_url": "https://github.com/sherlock-audit/2022-09-sherlock-judging"
+    }
+  ],
+  "audit_count": 7,
+  "last_audited": "2022-09",
+  "auditors": [
+    "Code4rena",
+    "Sherlock"
   ]
 }

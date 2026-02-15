@@ -149,5 +149,26 @@
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
     "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "segmentfinance-external-verichains-20public-20audit-20report-20-20segment-20finance-",
+      "title": "Verichains%20Public%20Audit%20Report%20 %20Segment%20Finance%20Pool%20Register%20 %20v1.0",
+      "auditor": "External",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/verichains/public-audit-reports/main/Verichains%20Public%20Audit%20Report%20-%20Segment%20Finance%20Pool%20Register%20-%20v1.0.pdf"
+    },
+    {
+      "id": "segmentfinance-external-audits",
+      "title": "audits",
+      "auditor": "External",
+      "date": "",
+      "pdf_url": "https://docs.segment.finance/protocol/audits"
+    }
+  ],
+  "audit_count": 2,
+  "last_audited": "",
+  "auditors": [
+    "External"
   ]
 }

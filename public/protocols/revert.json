@@ -74,8 +74,50 @@
     }
   },
   "eligibility": [
-    "Open to all researchers \u2014 pseudonymous submissions accepted",
+    "Open to all researchers — pseudonymous submissions accepted",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "revert-peckshield-peckshield-audit-report-revert-compoundor-v1-0-pdf",
+      "title": "PeckShield-Audit-Report-Revert-Compoundor-v1.0.pdf",
+      "auditor": "PeckShield",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/peckshield/publications/master/audit_reports/PeckShield-Audit-Report-Revert-Compoundor-v1.0.pdf"
+    },
+    {
+      "id": "revert-peckshield-peckshield-audit-report-revert-lend-v1-0-pdf",
+      "title": "PeckShield-Audit-Report-Revert-Lend-v1.0.pdf",
+      "auditor": "PeckShield",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/peckshield/publications/master/audit_reports/PeckShield-Audit-Report-Revert-Lend-v1.0.pdf"
+    },
+    {
+      "id": "revert-peckshield-peckshield-audit-report-revert-v3utils-v1-0-pdf",
+      "title": "PeckShield-Audit-Report-Revert-V3utils-v1.0.pdf",
+      "auditor": "PeckShield",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/peckshield/publications/master/audit_reports/PeckShield-Audit-Report-Revert-V3utils-v1.0.pdf"
+    },
+    {
+      "id": "revert-peckshield-peckshield-audit-report-revert-v1-0-pdf",
+      "title": "PeckShield-Audit-Report-Revert-v1.0.pdf",
+      "auditor": "PeckShield",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/peckshield/publications/master/audit_reports/PeckShield-Audit-Report-Revert-v1.0.pdf"
+    },
+    {
+      "id": "revert-peckshield-peckshield-audit-report-revert-v4utils-v1-0-pdf",
+      "title": "PeckShield-Audit-Report-Revert-v4Utils-v1.0.pdf",
+      "auditor": "PeckShield",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/peckshield/publications/master/audit_reports/PeckShield-Audit-Report-Revert-v4Utils-v1.0.pdf"
+    }
+  ],
+  "audit_count": 5,
+  "last_audited": "",
+  "auditors": [
+    "PeckShield"
   ]
 }

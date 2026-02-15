@@ -108,6 +108,27 @@
     "KYC verification required before payout",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "starknet-consensys-diligence-2023-06",
+      "title": "Argent Account &amp; Multisig for StarkNet",
+      "auditor": "Consensys Diligence",
+      "date": "2023-06",
+      "pdf_url": "https://consensys.io/audits/2023/06/argent-account-multisig-for-starknet/"
+    },
+    {
+      "id": "starknet-consensys-diligence-2024-01",
+      "title": "Argent Account &amp; Argent Multisig Starknet Transaction V3 Updates",
+      "auditor": "Consensys Diligence",
+      "date": "2024-01",
+      "pdf_url": "https://consensys.io/audits/2024/01/argent-account-argent-multisig-starknet-transaction-v3-updates/"
+    }
+  ],
+  "audit_count": 2,
+  "last_audited": "2024-01",
+  "auditors": [
+    "Consensys Diligence"
   ]
 }

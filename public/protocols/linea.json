@@ -57,7 +57,7 @@
   "program_rules": [
     "Proof of Concept is required for all submissions. Reports without a working PoC demonstrating the vulnerability will not be considered.",
     "KYC verification is required before bounty payout. Researchers must complete identity verification to receive rewards.",
-    "This program follows Primacy of Impact \u2014 valid findings are rewarded based on demonstrated impact regardless of whether the specific attack vector was previously known.",
+    "This program follows Primacy of Impact — valid findings are rewarded based on demonstrated impact regardless of whether the specific attack vector was previously known.",
     "Only previously unreported vulnerabilities are eligible. Duplicate submissions will be closed.",
     "Vulnerabilities must be reported through the WhiteClaws platform. Public disclosure before resolution disqualifies the submission.",
     "Testing must not disrupt live protocol operations. Use mainnet forks or testnets for Proof of Concept execution."
@@ -82,6 +82,155 @@
     "KYC verification required before payout",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "linea-least-authority-audit-of-linea-limitless-prover",
+      "title": "audit-of-linea-limitless-prover",
+      "auditor": "Least Authority",
+      "date": "",
+      "pdf_url": "https://leastauthority.com/blog/audit-of-linea-limitless-prover/"
+    },
+    {
+      "id": "linea-least-authority-linea-and-8211-limitless-prover",
+      "title": "Linea &#8211; Limitless Prover",
+      "auditor": "Least Authority",
+      "date": "",
+      "pdf_url": "https://leastauthority.com/blog/audit-of-linea-limitless-prover/"
+    },
+    {
+      "id": "linea-least-authority-read-more",
+      "title": "Read More »",
+      "auditor": "Least Authority",
+      "date": "",
+      "pdf_url": "https://leastauthority.com/blog/audit-of-linea-limitless-prover/"
+    },
+    {
+      "id": "linea-consensys-diligence-2023-06",
+      "title": "Linea Plonk Verifier",
+      "auditor": "Consensys Diligence",
+      "date": "2023-06",
+      "pdf_url": "https://consensys.io/audits/2023/06/linea-plonk-verifier/"
+    },
+    {
+      "id": "linea-consensys-diligence-2023-10",
+      "title": "Linea Cross-Chain Governance Executor",
+      "auditor": "Consensys Diligence",
+      "date": "2023-10",
+      "pdf_url": "https://consensys.io/audits/2023/10/linea-cross-chain-governance-executor/"
+    },
+    {
+      "id": "linea-consensys-diligence-2023-12",
+      "title": "Linea Custom Bridged Token",
+      "auditor": "Consensys Diligence",
+      "date": "2023-12",
+      "pdf_url": "https://consensys.io/audits/2023/12/linea-custom-bridged-token/"
+    },
+    {
+      "id": "linea-consensys-diligence-2024-01",
+      "title": "Linea Contracts Update",
+      "auditor": "Consensys Diligence",
+      "date": "2024-01",
+      "pdf_url": "https://consensys.io/audits/2024/01/linea-contracts-update/"
+    },
+    {
+      "id": "linea-cyfrin-2024-05",
+      "title": "2024-05-24-cyfrin-linea-v2.0.pdf",
+      "auditor": "Cyfrin",
+      "date": "2024-05",
+      "pdf_url": "https://raw.githubusercontent.com/Cyfrin/cyfrin-audit-reports/main/reports/2024-05-24-cyfrin-linea-v2.0.pdf"
+    },
+    {
+      "id": "linea-consensys-diligence-2024-06",
+      "title": "Linea ENS",
+      "auditor": "Consensys Diligence",
+      "date": "2024-06",
+      "pdf_url": "https://consensys.io/audits/2024/06/linea-ens/"
+    },
+    {
+      "id": "linea-consensys-diligence-2024-07",
+      "title": "Linea Rollup Update",
+      "auditor": "Consensys Diligence",
+      "date": "2024-07",
+      "pdf_url": "https://consensys.io/audits/2024/07/linea-rollup-update/"
+    },
+    {
+      "id": "linea-consensys-diligence-2024-12",
+      "title": "Linea Rollup Update",
+      "auditor": "Consensys Diligence",
+      "date": "2024-12",
+      "pdf_url": "https://consensys.io/audits/2024/12/linea-rollup-update/"
+    },
+    {
+      "id": "linea-cyfrin-2025-01",
+      "title": "2025-01-06-cyfrin-linea-v2.2.pdf",
+      "auditor": "Cyfrin",
+      "date": "2025-01",
+      "pdf_url": "https://raw.githubusercontent.com/Cyfrin/cyfrin-audit-reports/main/reports/2025-01-06-cyfrin-linea-v2.2.pdf"
+    },
+    {
+      "id": "linea-cyfrin-2025-03",
+      "title": "2025-03-19-cyfrin-linea-spingame-v2.0.pdf",
+      "auditor": "Cyfrin",
+      "date": "2025-03",
+      "pdf_url": "https://raw.githubusercontent.com/Cyfrin/cyfrin-audit-reports/main/reports/2025-03-19-cyfrin-linea-spingame-v2.0.pdf"
+    },
+    {
+      "id": "linea-cyfrin-2025-06",
+      "title": "2025-06-30-cyfrin-linea-spingame-v2-v2.1.pdf",
+      "auditor": "Cyfrin",
+      "date": "2025-06",
+      "pdf_url": "https://raw.githubusercontent.com/Cyfrin/cyfrin-audit-reports/main/reports/2025-06-30-cyfrin-linea-spingame-v2-v2.1.pdf"
+    },
+    {
+      "id": "linea-consensys-diligence-2025-07",
+      "title": "Linea Token and Airdrop Contracts",
+      "auditor": "Consensys Diligence",
+      "date": "2025-07",
+      "pdf_url": "https://consensys.io/audits/2025/07/linea-token-and-airdrop-contracts/"
+    },
+    {
+      "id": "linea-cyfrin-2025-09",
+      "title": "2025-09-10-cyfrin-linea-tokens-v2.5.pdf",
+      "auditor": "Cyfrin",
+      "date": "2025-09",
+      "pdf_url": "https://raw.githubusercontent.com/Cyfrin/cyfrin-audit-reports/main/reports/2025-09-10-cyfrin-linea-tokens-v2.5.pdf"
+    },
+    {
+      "id": "linea-consensys-diligence-2025-10",
+      "title": "Linea - Burn Mechanism",
+      "auditor": "Consensys Diligence",
+      "date": "2025-10",
+      "pdf_url": "https://consensys.io/audits/2025/10/linea-burn-mechanism/"
+    },
+    {
+      "id": "linea-cyfrin-2025-11",
+      "title": "2025-11-03-cyfrin-linea-burn-v2.2.pdf",
+      "auditor": "Cyfrin",
+      "date": "2025-11",
+      "pdf_url": "https://raw.githubusercontent.com/Cyfrin/cyfrin-audit-reports/main/reports/2025-11-03-cyfrin-linea-burn-v2.2.pdf"
+    },
+    {
+      "id": "linea-consensys-diligence-2025-12",
+      "title": "Linea - Yield Manager",
+      "auditor": "Consensys Diligence",
+      "date": "2025-12",
+      "pdf_url": "https://consensys.io/audits/2025/12/linea-yield-manager/"
+    },
+    {
+      "id": "linea-cyfrin-2026-02",
+      "title": "2026-02-12-cyfrin-linea-yield-manager-v2.0.pdf",
+      "auditor": "Cyfrin",
+      "date": "2026-02",
+      "pdf_url": "https://raw.githubusercontent.com/Cyfrin/cyfrin-audit-reports/main/reports/2026-02-12-cyfrin-linea-yield-manager-v2.0.pdf"
+    }
+  ],
+  "audit_count": 20,
+  "last_audited": "2026-02",
+  "auditors": [
+    "Consensys Diligence",
+    "Cyfrin",
+    "Least Authority"
   ]
 }

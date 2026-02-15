@@ -9,7 +9,19 @@
     "base"
   ],
   "audits": [
-    { "id": "wc-005", "auditor": "WhiteClaws", "date": "2025", "title": "Plaza Finance Security Audit" }
+    {
+      "id": "plaza-finance-sherlock-2024-12",
+      "title": "2024-12-plaza-finance-judging",
+      "auditor": "Sherlock",
+      "date": "2024-12",
+      "pdf_url": "https://github.com/sherlock-audit/2024-12-plaza-finance-judging"
+    },
+    {
+      "id": "wc-005",
+      "auditor": "WhiteClaws",
+      "date": "2025",
+      "title": "Plaza Finance Security Audit"
+    }
   ],
   "bounty": {
     "max": 100000,
@@ -94,6 +106,12 @@
   "eligibility": [
     "KYC verification required before payout",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
+  ],
+  "audit_count": 2,
+  "last_audited": "2025",
+  "auditors": [
+    "Sherlock",
+    "WhiteClaws"
   ]
 }

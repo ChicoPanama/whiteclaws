@@ -267,5 +267,41 @@
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
     "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "benqi-halborn-benqi-smart-contract-security-audit-halborn-v1-1-pdf",
+      "title": "Benqi_Smart_Contract_Security_Audit_Halborn_v1_1.pdf",
+      "auditor": "Halborn",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/HalbornSecurity/PublicReports/master/Solidity%20Smart%20Contract%20Audits/Benqi_Smart_Contract_Security_Audit_Halborn_v1_1.pdf"
+    },
+    {
+      "id": "benqi-cyfrin-2024-12",
+      "title": "2024-12-11-cyfrin-benqi-ignite-v2.0.pdf",
+      "auditor": "Cyfrin",
+      "date": "2024-12",
+      "pdf_url": "https://raw.githubusercontent.com/Cyfrin/cyfrin-audit-reports/main/reports/2024-12-11-cyfrin-benqi-ignite-v2.0.pdf"
+    },
+    {
+      "id": "benqi-cyfrin-2025-04",
+      "title": "2025-04-06-cyfrin-benqi-collateral-migrator-v2.0.pdf",
+      "auditor": "Cyfrin",
+      "date": "2025-04",
+      "pdf_url": "https://raw.githubusercontent.com/Cyfrin/cyfrin-audit-reports/main/reports/2025-04-06-cyfrin-benqi-collateral-migrator-v2.0.pdf"
+    },
+    {
+      "id": "benqi-cyfrin-2025-11",
+      "title": "2025-11-10-cyfrin-benqi-governance-v2.0.pdf",
+      "auditor": "Cyfrin",
+      "date": "2025-11",
+      "pdf_url": "https://raw.githubusercontent.com/Cyfrin/cyfrin-audit-reports/main/reports/2025-11-10-cyfrin-benqi-governance-v2.0.pdf"
+    }
+  ],
+  "audit_count": 4,
+  "last_audited": "2025-11",
+  "auditors": [
+    "Cyfrin",
+    "Halborn"
   ]
 }

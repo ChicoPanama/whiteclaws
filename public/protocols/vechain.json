@@ -85,6 +85,28 @@
     "KYC verification required before payout",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "vechain-peckshield-peckshield-audit-report-vechain-v1-0-pdf",
+      "title": "PeckShield-Audit-Report-VeChain-v1.0.pdf",
+      "auditor": "PeckShield",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/peckshield/publications/master/audit_reports/PeckShield-Audit-Report-VeChain-v1.0.pdf"
+    },
+    {
+      "id": "vechain-trail-of-bits-2025-10",
+      "title": "2025-10-vechain-vechainthorhayabusaupgrade-securityreview.pdf",
+      "auditor": "Trail of Bits",
+      "date": "2025-10",
+      "pdf_url": "https://raw.githubusercontent.com/trailofbits/publications/master/reviews/2025-10-vechain-vechainthorhayabusaupgrade-securityreview.pdf"
+    }
+  ],
+  "audit_count": 2,
+  "last_audited": "2025-10",
+  "auditors": [
+    "PeckShield",
+    "Trail of Bits"
   ]
 }

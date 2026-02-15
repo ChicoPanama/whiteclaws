@@ -69,8 +69,66 @@
     }
   },
   "eligibility": [
-    "Open to all researchers \u2014 pseudonymous submissions accepted",
+    "Open to all researchers — pseudonymous submissions accepted",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "primitive-trail-of-bits-primitive-pdf",
+      "title": "Primitive.pdf",
+      "auditor": "Trail of Bits",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/trailofbits/publications/master/reviews/Primitive.pdf"
+    },
+    {
+      "id": "primitive-spearbit-primitive-spearbit-security-review-july-pdf",
+      "title": "Primitive-Spearbit-Security-Review-July.pdf",
+      "auditor": "Spearbit",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/spearbit/portfolio/master/pdfs/Primitive-Spearbit-Security-Review-July.pdf"
+    },
+    {
+      "id": "primitive-spearbit-primitive-spearbit-security-review-pdf",
+      "title": "Primitive-Spearbit-Security-Review.pdf",
+      "auditor": "Spearbit",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/spearbit/portfolio/master/pdfs/Primitive-Spearbit-Security-Review.pdf"
+    },
+    {
+      "id": "primitive-least-authority-audit-of-chia-network-offers-primitive",
+      "title": "audit-of-chia-network-offers-primitive",
+      "auditor": "Least Authority",
+      "date": "",
+      "pdf_url": "https://leastauthority.com/blog/audit-of-chia-network-offers-primitive/"
+    },
+    {
+      "id": "primitive-least-authority-chia-network-and-8211-offers-primitive",
+      "title": "Chia Network &#8211; Offers Primitive",
+      "auditor": "Least Authority",
+      "date": "",
+      "pdf_url": "https://leastauthority.com/blog/audit-of-chia-network-offers-primitive/"
+    },
+    {
+      "id": "primitive-least-authority-read-more",
+      "title": "Read More »",
+      "auditor": "Least Authority",
+      "date": "",
+      "pdf_url": "https://leastauthority.com/blog/audit-of-chia-network-offers-primitive/"
+    },
+    {
+      "id": "primitive-trail-of-bits-2023-03",
+      "title": "2023-03-primitive-securityreview.pdf",
+      "auditor": "Trail of Bits",
+      "date": "2023-03",
+      "pdf_url": "https://raw.githubusercontent.com/trailofbits/publications/master/reviews/2023-03-primitive-securityreview.pdf"
+    }
+  ],
+  "audit_count": 7,
+  "last_audited": "2023-03",
+  "auditors": [
+    "Least Authority",
+    "Spearbit",
+    "Trail of Bits"
   ]
 }

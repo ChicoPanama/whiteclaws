@@ -82,9 +82,23 @@
     }
   },
   "eligibility": [
-    "Open to all researchers \u2014 pseudonymous submissions accepted",
+    "Open to all researchers — pseudonymous submissions accepted",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "defisaver-consensys-diligence-2021-03",
+      "title": "DeFi Saver",
+      "auditor": "Consensys Diligence",
+      "date": "2021-03",
+      "pdf_url": "https://consensys.io/audits/2021/03/defi-saver/"
+    }
+  ],
+  "audit_count": 1,
+  "last_audited": "2021-03",
+  "auditors": [
+    "Consensys Diligence"
   ]
 }

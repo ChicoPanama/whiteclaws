@@ -166,5 +166,42 @@
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
     "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "stakewise-external-audits",
+      "title": "audits",
+      "auditor": "External",
+      "date": "",
+      "pdf_url": "https://github.com/stakewise/v3-core/tree/main/audits"
+    },
+    {
+      "id": "stakewise-hexens-show-details",
+      "title": "Show details",
+      "auditor": "Hexens",
+      "date": "",
+      "pdf_url": "https://github.com/Hexens/Smart-Contract-Review-Public-Reports/blob/main/stakewise-aug-25(Final).pdf"
+    },
+    {
+      "id": "stakewise-hexens-2024",
+      "title": "Show details",
+      "auditor": "Hexens",
+      "date": "2024",
+      "pdf_url": "https://github.com/Hexens/Smart-Contract-Review-Public-Reports/blob/main/stakewise-audit-sept-2024(Public)%20_.pdf"
+    },
+    {
+      "id": "stakewise-consensys-diligence-2024-03",
+      "title": "Stakewise - v3 Vaults / EthFoxVault",
+      "auditor": "Consensys Diligence",
+      "date": "2024-03",
+      "pdf_url": "https://consensys.io/audits/2024/03/stakewise-v3-vaults-/-ethfoxvault/"
+    }
+  ],
+  "audit_count": 4,
+  "last_audited": "2024-03",
+  "auditors": [
+    "Consensys Diligence",
+    "External",
+    "Hexens"
   ]
 }

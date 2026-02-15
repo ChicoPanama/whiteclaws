@@ -253,5 +253,27 @@
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
     "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "zksyncera-external-audits",
+      "title": "audits",
+      "auditor": "External",
+      "date": "",
+      "pdf_url": "https://docs.zksync.io/zksync-protocol/security/audits"
+    },
+    {
+      "id": "zksyncera-halborn-matterlabs-zksync-era-circuits-zero-knowledge-security-audit",
+      "title": "MatterLabs_zkSync_Era_Circuits_Zero_Knowledge_Security_Audit_Report_Halborn_Final..pdf",
+      "auditor": "Halborn",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/HalbornSecurity/PublicReports/master/ZK%20Audits/MatterLabs_zkSync_Era_Circuits_Zero_Knowledge_Security_Audit_Report_Halborn_Final..pdf"
+    }
+  ],
+  "audit_count": 2,
+  "last_audited": "",
+  "auditors": [
+    "External",
+    "Halborn"
   ]
 }

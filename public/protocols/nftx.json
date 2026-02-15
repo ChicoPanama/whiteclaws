@@ -69,8 +69,37 @@
     }
   },
   "eligibility": [
-    "Open to all researchers \u2014 pseudonymous submissions accepted",
+    "Open to all researchers — pseudonymous submissions accepted",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "nftx-trail-of-bits-nftx-pdf",
+      "title": "NFTX.pdf",
+      "auditor": "Trail of Bits",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/trailofbits/publications/master/reviews/NFTX.pdf"
+    },
+    {
+      "id": "nftx-code4rena-2021-05",
+      "title": "2021-05-nftx-findings",
+      "auditor": "Code4rena",
+      "date": "2021-05",
+      "pdf_url": "https://github.com/code-423n4/2021-05-nftx-findings"
+    },
+    {
+      "id": "nftx-code4rena-2021-12",
+      "title": "2021-12-nftx-findings",
+      "auditor": "Code4rena",
+      "date": "2021-12",
+      "pdf_url": "https://github.com/code-423n4/2021-12-nftx-findings"
+    }
+  ],
+  "audit_count": 3,
+  "last_audited": "2021-12",
+  "auditors": [
+    "Code4rena",
+    "Trail of Bits"
   ]
 }

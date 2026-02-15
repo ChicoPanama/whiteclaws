@@ -74,8 +74,52 @@
     }
   },
   "eligibility": [
-    "Open to all researchers \u2014 pseudonymous submissions accepted",
+    "Open to all researchers — pseudonymous submissions accepted",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "spool-peckshield-peckshield-audit-report-spool-arbitrum-v1-0-pdf",
+      "title": "PeckShield-Audit-Report-Spool-Arbitrum-v1.0.pdf",
+      "auditor": "PeckShield",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/peckshield/publications/master/audit_reports/PeckShield-Audit-Report-Spool-Arbitrum-v1.0.pdf"
+    },
+    {
+      "id": "spool-peckshield-peckshield-audit-report-spool-v1-0-pdf",
+      "title": "PeckShield-Audit-Report-Spool-v1.0.pdf",
+      "auditor": "PeckShield",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/peckshield/publications/master/audit_reports/PeckShield-Audit-Report-Spool-v1.0.pdf"
+    },
+    {
+      "id": "spool-hexens-show-details",
+      "title": "Show details",
+      "auditor": "Hexens",
+      "date": "",
+      "pdf_url": "https://github.com/Hexens/Smart-Contract-Review-Public-Reports/blob/main/spool-strats-audit-may24(Public).pdf"
+    },
+    {
+      "id": "spool-trail-of-bits-2023-03",
+      "title": "2023-03-spool-platformv2-securityreview.pdf",
+      "auditor": "Trail of Bits",
+      "date": "2023-03",
+      "pdf_url": "https://raw.githubusercontent.com/trailofbits/publications/master/reviews/2023-03-spool-platformv2-securityreview.pdf"
+    },
+    {
+      "id": "spool-hexens-2024",
+      "title": "Show details",
+      "auditor": "Hexens",
+      "date": "2024",
+      "pdf_url": "https://github.com/Hexens/Smart-Contract-Review-Public-Reports/blob/main/Spool-audit-aug-2024(Public).pdf"
+    }
+  ],
+  "audit_count": 5,
+  "last_audited": "2024",
+  "auditors": [
+    "Hexens",
+    "PeckShield",
+    "Trail of Bits"
   ]
 }

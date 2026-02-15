@@ -208,5 +208,63 @@
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
     "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "beanstalk-halborn-beanstalk-smart-contract-security-audit-report-halborn-final",
+      "title": "Beanstalk_Smart_Contract_Security_Audit_Report_Halborn_Final.pdf",
+      "auditor": "Halborn",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/HalbornSecurity/PublicReports/master/Solidity%20Smart%20Contract%20Audits/Beanstalk_Smart_Contract_Security_Audit_Report_Halborn_Final.pdf"
+    },
+    {
+      "id": "beanstalk-trail-of-bits-2022-07",
+      "title": "2022-07-beanstalk-securityreview.pdf",
+      "auditor": "Trail of Bits",
+      "date": "2022-07",
+      "pdf_url": "https://raw.githubusercontent.com/trailofbits/publications/master/reviews/2022-07-beanstalk-securityreview.pdf"
+    },
+    {
+      "id": "beanstalk-cyfrin-2023-03",
+      "title": "2023-03-13-beanstalk_wells_v0.1.pdf",
+      "auditor": "Cyfrin",
+      "date": "2023-03",
+      "pdf_url": "https://raw.githubusercontent.com/Cyfrin/cyfrin-audit-reports/main/reports/2023-03-13-beanstalk_wells_v0.1.pdf"
+    },
+    {
+      "id": "beanstalk-cyfrin-2023-06",
+      "title": "2023-06-16-cyfrin-beanstalk-wells.pdf",
+      "auditor": "Cyfrin",
+      "date": "2023-06",
+      "pdf_url": "https://raw.githubusercontent.com/Cyfrin/cyfrin-audit-reports/main/reports/2023-06-16-cyfrin-beanstalk-wells.pdf"
+    },
+    {
+      "id": "beanstalk-cyfrin-2023-09",
+      "title": "2023-09-12-cyfrin-beanstalk.pdf",
+      "auditor": "Cyfrin",
+      "date": "2023-09",
+      "pdf_url": "https://raw.githubusercontent.com/Cyfrin/cyfrin-audit-reports/main/reports/2023-09-12-cyfrin-beanstalk.pdf"
+    },
+    {
+      "id": "beanstalk-cyfrin-2023-10",
+      "title": "2023-10-13-cyfrin-beanstalk-bip-38.pdf",
+      "auditor": "Cyfrin",
+      "date": "2023-10",
+      "pdf_url": "https://raw.githubusercontent.com/Cyfrin/cyfrin-audit-reports/main/reports/2023-10-13-cyfrin-beanstalk-bip-38.pdf"
+    },
+    {
+      "id": "beanstalk-cyfrin-2024-05",
+      "title": "2024-05-02-cyfrin-beanstalk-bip-39-v1-2.pdf",
+      "auditor": "Cyfrin",
+      "date": "2024-05",
+      "pdf_url": "https://raw.githubusercontent.com/Cyfrin/cyfrin-audit-reports/main/reports/2024-05-02-cyfrin-beanstalk-bip-39-v1-2.pdf"
+    }
+  ],
+  "audit_count": 7,
+  "last_audited": "2024-05",
+  "auditors": [
+    "Cyfrin",
+    "Halborn",
+    "Trail of Bits"
   ]
 }

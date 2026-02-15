@@ -74,8 +74,44 @@
     }
   },
   "eligibility": [
-    "Open to all researchers \u2014 pseudonymous submissions accepted",
+    "Open to all researchers — pseudonymous submissions accepted",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "axiom-spearbit-2023",
+      "title": "Axiom-contracts-Spearbit-Security-Review-October-2023.pdf",
+      "auditor": "Spearbit",
+      "date": "2023",
+      "pdf_url": "https://raw.githubusercontent.com/spearbit/portfolio/master/pdfs/Axiom-contracts-Spearbit-Security-Review-October-2023.pdf"
+    },
+    {
+      "id": "axiom-trail-of-bits-2023-06",
+      "title": "2023-06-axiom-halo2libraries-securityreview.pdf",
+      "auditor": "Trail of Bits",
+      "date": "2023-06",
+      "pdf_url": "https://raw.githubusercontent.com/trailofbits/publications/master/reviews/2023-06-axiom-halo2libraries-securityreview.pdf"
+    },
+    {
+      "id": "axiom-trail-of-bits-2023-10",
+      "title": "2023-10-axiom-halo2libraryupgrades-securityreview.pdf",
+      "auditor": "Trail of Bits",
+      "date": "2023-10",
+      "pdf_url": "https://raw.githubusercontent.com/trailofbits/publications/master/reviews/2023-10-axiom-halo2libraryupgrades-securityreview.pdf"
+    },
+    {
+      "id": "axiom-spearbit-2024",
+      "title": "Axiom-contracts-Spearbit-Security-Review-January-2024.pdf",
+      "auditor": "Spearbit",
+      "date": "2024",
+      "pdf_url": "https://raw.githubusercontent.com/spearbit/portfolio/master/pdfs/Axiom-contracts-Spearbit-Security-Review-January-2024.pdf"
+    }
+  ],
+  "audit_count": 4,
+  "last_audited": "2024",
+  "auditors": [
+    "Spearbit",
+    "Trail of Bits"
   ]
 }

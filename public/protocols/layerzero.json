@@ -193,5 +193,27 @@
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
     "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "layerzero-dedaub-layerzero",
+      "title": "LayerZero",
+      "auditor": "Dedaub",
+      "date": "",
+      "pdf_url": "https://dedaub.com/audits/layerzero/"
+    },
+    {
+      "id": "layerzero-hexens-2024",
+      "title": "Show details",
+      "auditor": "Hexens",
+      "date": "2024",
+      "pdf_url": "https://github.com/Hexens/Smart-Contract-Review-Public-Reports/blob/main/layerzero-zro-claim-contract-june-2024(Public)%20(c1101c1).pdf"
+    }
+  ],
+  "audit_count": 2,
+  "last_audited": "2024",
+  "auditors": [
+    "Dedaub",
+    "Hexens"
   ]
 }

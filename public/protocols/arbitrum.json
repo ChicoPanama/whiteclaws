@@ -109,6 +109,88 @@
     "KYC verification required before payout",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "arbitrum-peckshield-peckshield-audit-report-spool-arbitrum-v1-0-pdf",
+      "title": "PeckShield-Audit-Report-Spool-Arbitrum-v1.0.pdf",
+      "auditor": "PeckShield",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/peckshield/publications/master/audit_reports/PeckShield-Audit-Report-Spool-Arbitrum-v1.0.pdf"
+    },
+    {
+      "id": "arbitrum-hacken-arbitrum",
+      "title": "Arbitrum",
+      "auditor": "Hacken",
+      "date": "",
+      "pdf_url": "https://hacken.io/services/blockchain-security/arbitrum-smart-contract-audit/"
+    },
+    {
+      "id": "arbitrum-code4rena-2023-08",
+      "title": "2023-08-arbitrum-findings",
+      "auditor": "Code4rena",
+      "date": "2023-08",
+      "pdf_url": "https://github.com/code-423n4/2023-08-arbitrum-findings"
+    },
+    {
+      "id": "arbitrum-trail-of-bits-2023-12",
+      "title": "2023-12-offchain-labs-arbitrum-token-bridge-creator-securityreview.pdf",
+      "auditor": "Trail of Bits",
+      "date": "2023-12",
+      "pdf_url": "https://raw.githubusercontent.com/trailofbits/publications/master/reviews/2023-12-offchain-labs-arbitrum-token-bridge-creator-securityreview.pdf"
+    },
+    {
+      "id": "arbitrum-hexens-2024",
+      "title": "Show details",
+      "auditor": "Hexens",
+      "date": "2024",
+      "pdf_url": "https://github.com/Hexens/Smart-Contract-Review-Public-Reports/blob/main/spool-arbitrum-audit-april-2024(Public).pdf"
+    },
+    {
+      "id": "arbitrum-cantina-2024-oct",
+      "title": "MakerDAO Arbitrum Token Bridge Audit MakerDAO 14 October 2024 - 15 October 2024",
+      "auditor": "Cantina",
+      "date": "2024-Oct",
+      "pdf_url": "https://cantina.xyz/portfolio/9c94d251-1034-44f3-8c82-7d34a10b11d0"
+    },
+    {
+      "id": "arbitrum-code4rena-2024-05",
+      "title": "2024-05-arbitrum-foundation-findings",
+      "auditor": "Code4rena",
+      "date": "2024-05",
+      "pdf_url": "https://github.com/code-423n4/2024-05-arbitrum-foundation-findings"
+    },
+    {
+      "id": "arbitrum-trail-of-bits-2025-06",
+      "title": "2025-06-offchain-arbitrum-mint-burn-precompile-securityreview.pdf",
+      "auditor": "Trail of Bits",
+      "date": "2025-06",
+      "pdf_url": "https://raw.githubusercontent.com/trailofbits/publications/master/reviews/2025-06-offchain-arbitrum-mint-burn-precompile-securityreview.pdf"
+    },
+    {
+      "id": "arbitrum-trail-of-bits-2025-12",
+      "title": "2025-12-offchain-arbitrum-chains-genesis-generator-securityreview.pdf",
+      "auditor": "Trail of Bits",
+      "date": "2025-12",
+      "pdf_url": "https://raw.githubusercontent.com/trailofbits/publications/master/reviews/2025-12-offchain-arbitrum-chains-genesis-generator-securityreview.pdf"
+    },
+    {
+      "id": "arbitrum-trail-of-bits-2026",
+      "title": "2026-1-offchain-arbitrum-quorum-changes-securityreview.pdf",
+      "auditor": "Trail of Bits",
+      "date": "2026",
+      "pdf_url": "https://raw.githubusercontent.com/trailofbits/publications/master/reviews/2026-1-offchain-arbitrum-quorum-changes-securityreview.pdf"
+    }
+  ],
+  "audit_count": 10,
+  "last_audited": "2026",
+  "auditors": [
+    "Cantina",
+    "Code4rena",
+    "Hacken",
+    "Hexens",
+    "PeckShield",
+    "Trail of Bits"
   ]
 }
