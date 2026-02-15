@@ -89,12 +89,36 @@ a { color: inherit; text-decoration: none; }
   justify-content: center;
   opacity: 0;
   transform: scale(0.6);
-  animation: lobsterReveal 0.6s cubic-bezier(.34,1.56,.64,1) forwards;
-  animation-delay: 1s;
+  animation: 
+    lobsterReveal 0.6s cubic-bezier(.34,1.56,.64,1) forwards,
+    lobsterFloat 4s ease-in-out 1.6s infinite,
+    holoGlitch 8s 1.6s infinite;
+  animation-delay: 1s, 1.6s, 1.6s;
 }
 
 @keyframes lobsterReveal {
   to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes lobsterFloat {
+  0%, 100% { 
+    transform: translateY(0) rotate(0deg) scale(1); 
+  }
+  50% { 
+    transform: translateY(-4px) rotate(1deg) scale(1); 
+  }
+}
+
+@keyframes holoGlitch {
+  0%, 97%, 100% { 
+    filter: grayscale(100%) brightness(2);
+  }
+  98% { 
+    filter: grayscale(100%) brightness(2.2) drop-shadow(1px 0 rgba(137,224,109,0.5));
+  }
+  99% { 
+    filter: grayscale(100%) brightness(2);
+  }
 }
 
 .logo-lobster svg {
@@ -133,7 +157,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 .hero-logo-wrap .logo-lobster {
-  animation-delay: 1.6s;
+  animation-delay: 1.6s, 2.2s, 2.2s;
 }
 
 /* Continuous subtle pulse on circle */
@@ -6438,67 +6462,6 @@ a { color: inherit; text-decoration: none; }
   --severity-low: #60A5FA;
 }
 
-/* =============================================
-   LOBSTER ANIMATION — Classy Mix (Option 2 + 5)
-   ============================================= */
-
-/* Base Lobster Enhancement */
-.logo-lobster {
-  position: relative;
-  animation: lobsterFloat 4s ease-in-out infinite;
-}
-
-/* Gentle Float */
-@keyframes lobsterFloat {
-  0%, 100% { 
-    transform: translateY(0) rotate(0deg); 
-  }
-  50% { 
-    transform: translateY(-4px) rotate(1deg); 
-  }
-}
-
-/* Occasional Claw Snap */
-.logo-lobster::after {
-  content: '🦞';
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  animation: clawSnap 6s ease-in-out infinite;
-  transform-origin: bottom center;
-}
-
-@keyframes clawSnap {
-  0%, 92%, 100% { 
-    transform: scaleX(1) scaleY(1); 
-  }
-  94% { 
-    transform: scaleX(1.08) scaleY(0.95); 
-  }
-  96% { 
-    transform: scaleX(1) scaleY(1); 
-  }
-}
-
-/* Subtle Holographic Glitch (Rare, Classy) */
-.logo-lobster {
-  animation: lobsterFloat 4s ease-in-out infinite,
-             holoGlitch 8s infinite;
-}
-
-@keyframes holoGlitch {
-  0%, 97%, 100% { 
-    filter: grayscale(100%) brightness(2);
-  }
-  98% { 
-    filter: grayscale(100%) brightness(2.2) drop-shadow(1px 0 rgba(137,224,109,0.5));
-  }
-  99% { 
-    filter: grayscale(100%) brightness(2);
-  }
-}
 
 /* =============================================
    HERO ENHANCEMENTS — Grid + Glow
