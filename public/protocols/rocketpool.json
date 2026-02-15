@@ -82,9 +82,45 @@
     }
   },
   "eligibility": [
-    "Open to all researchers \u2014 pseudonymous submissions accepted",
+    "Open to all researchers — pseudonymous submissions accepted",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "rocketpool-trail-of-bits-rocketpool-pdf",
+      "title": "RocketPool.pdf",
+      "auditor": "Trail of Bits",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/trailofbits/publications/master/reviews/RocketPool.pdf"
+    },
+    {
+      "id": "rocketpool-consensys-diligence-2021-04",
+      "title": "Rocketpool",
+      "auditor": "Consensys Diligence",
+      "date": "2021-04",
+      "pdf_url": "https://consensys.io/audits/2021/04/rocketpool/"
+    },
+    {
+      "id": "rocketpool-consensys-diligence-2023-01",
+      "title": "Rocket Pool Atlas (v1.2)",
+      "auditor": "Consensys Diligence",
+      "date": "2023-01",
+      "pdf_url": "https://consensys.io/audits/2023/01/rocket-pool-atlas-v1.2/"
+    },
+    {
+      "id": "rocketpool-consensys-diligence-2023-12",
+      "title": "Rocket Pool (Houston)",
+      "auditor": "Consensys Diligence",
+      "date": "2023-12",
+      "pdf_url": "https://consensys.io/audits/2023/12/rocket-pool-houston/"
+    }
+  ],
+  "audit_count": 4,
+  "last_audited": "2023-12",
+  "auditors": [
+    "Consensys Diligence",
+    "Trail of Bits"
   ]
 }

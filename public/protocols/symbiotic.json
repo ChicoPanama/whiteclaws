@@ -271,5 +271,26 @@
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
     "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "symbiotic-cyfrin-2025-09",
+      "title": "2025-09-04-cyfrin-symbiotic-v2.1.pdf",
+      "auditor": "Cyfrin",
+      "date": "2025-09",
+      "pdf_url": "https://raw.githubusercontent.com/Cyfrin/cyfrin-audit-reports/main/reports/2025-09-04-cyfrin-symbiotic-v2.1.pdf"
+    },
+    {
+      "id": "symbiotic-cyfrin-2025-12",
+      "title": "2025-12-03-cyfrin-symbiotic-key-registry-v2.0.pdf",
+      "auditor": "Cyfrin",
+      "date": "2025-12",
+      "pdf_url": "https://raw.githubusercontent.com/Cyfrin/cyfrin-audit-reports/main/reports/2025-12-03-cyfrin-symbiotic-key-registry-v2.0.pdf"
+    }
+  ],
+  "audit_count": 2,
+  "last_audited": "2025-12",
+  "auditors": [
+    "Cyfrin"
   ]
 }

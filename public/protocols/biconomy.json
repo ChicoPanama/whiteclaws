@@ -79,8 +79,101 @@
     }
   },
   "eligibility": [
-    "Open to all researchers \u2014 pseudonymous submissions accepted",
+    "Open to all researchers — pseudonymous submissions accepted",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "biconomy-halborn-biconomy-cross-chain-messaging-protocol-smart-contract-secur",
+      "title": "Biconomy_Cross_Chain_Messaging_Protocol_Smart_Contract_Security_Audit_Report_Halborn_Final.pdf",
+      "auditor": "Halborn",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/HalbornSecurity/PublicReports/master/Solidity%20Smart%20Contract%20Audits/Biconomy_Cross_Chain_Messaging_Protocol_Smart_Contract_Security_Audit_Report_Halborn_Final.pdf"
+    },
+    {
+      "id": "biconomy-halborn-biconomy-forwarder-smart-contract-solidity-audit-report-halb",
+      "title": "Biconomy_Forwarder_Smart_Contract_Solidity_Audit_Report_Halborn_Final.pdf",
+      "auditor": "Halborn",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/HalbornSecurity/PublicReports/master/Solidity%20Smart%20Contract%20Audits/Biconomy_Forwarder_Smart_Contract_Solidity_Audit_Report_Halborn_Final.pdf"
+    },
+    {
+      "id": "biconomy-halborn-biconomy-gastank-smart-contract-security-audit-report-halbor",
+      "title": "Biconomy_GasTank_Smart_Contract_Security_Audit_Report_Halborn_Final.pdf",
+      "auditor": "Halborn",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/HalbornSecurity/PublicReports/master/Solidity%20Smart%20Contract%20Audits/Biconomy_GasTank_Smart_Contract_Security_Audit_Report_Halborn_Final.pdf"
+    },
+    {
+      "id": "biconomy-halborn-biconomy-hyphen-v2-smart-contract-security-audit-report-halb",
+      "title": "Biconomy_Hyphen_V2_Smart_Contract_Security_Audit_Report_Halborn_Final.pdf",
+      "auditor": "Halborn",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/HalbornSecurity/PublicReports/master/Solidity%20Smart%20Contract%20Audits/Biconomy_Hyphen_V2_Smart_Contract_Security_Audit_Report_Halborn_Final.pdf"
+    },
+    {
+      "id": "biconomy-halborn-biconomy-liquiditypoolmanager-smart-contract-security-audit-",
+      "title": "Biconomy_LiquidityPoolManager_Smart_Contract_Security_Audit_Report_Halborn_v1_1.pdf",
+      "auditor": "Halborn",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/HalbornSecurity/PublicReports/master/Solidity%20Smart%20Contract%20Audits/Biconomy_LiquidityPoolManager_Smart_Contract_Security_Audit_Report_Halborn_v1_1.pdf"
+    },
+    {
+      "id": "biconomy-halborn-biconomy-smart-wallet-contracts-v2-smart-contract-security-a",
+      "title": "Biconomy_Smart_Wallet_Contracts_V2_Smart_Contract_Security_Audit_Report_Halborn_Final.pdf",
+      "auditor": "Halborn",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/HalbornSecurity/PublicReports/master/Solidity%20Smart%20Contract%20Audits/Biconomy_Smart_Wallet_Contracts_V2_Smart_Contract_Security_Audit_Report_Halborn_Final.pdf"
+    },
+    {
+      "id": "biconomy-halborn-biconomy-token-smart-contract-security-audit-report-halborn-",
+      "title": "Biconomy_Token_Smart_Contract_Security_Audit_Report_Halborn_v1_1.pdf",
+      "auditor": "Halborn",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/HalbornSecurity/PublicReports/master/Solidity%20Smart%20Contract%20Audits/Biconomy_Token_Smart_Contract_Security_Audit_Report_Halborn_v1_1.pdf"
+    },
+    {
+      "id": "biconomy-halborn-biconomy-transferhandler-smart-contract-security-audit-repor",
+      "title": "Biconomy_TransferHandler_Smart_Contract_Security_Audit_Report_Halborn_v1_1.pdf",
+      "auditor": "Halborn",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/HalbornSecurity/PublicReports/master/Solidity%20Smart%20Contract%20Audits/Biconomy_TransferHandler_Smart_Contract_Security_Audit_Report_Halborn_v1_1.pdf"
+    },
+    {
+      "id": "biconomy-halborn-biconomy-vesting-smart-contract-security-audit-report-halbor",
+      "title": "Biconomy_Vesting_Smart_Contract_Security_Audit_Report_Halborn_Final.pdf",
+      "auditor": "Halborn",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/HalbornSecurity/PublicReports/master/Solidity%20Smart%20Contract%20Audits/Biconomy_Vesting_Smart_Contract_Security_Audit_Report_Halborn_Final.pdf"
+    },
+    {
+      "id": "biconomy-code4rena-2022-03",
+      "title": "2022-03-biconomy-findings",
+      "auditor": "Code4rena",
+      "date": "2022-03",
+      "pdf_url": "https://github.com/code-423n4/2022-03-biconomy-findings"
+    },
+    {
+      "id": "biconomy-code4rena-2023-01",
+      "title": "2023-01-biconomy-findings",
+      "auditor": "Code4rena",
+      "date": "2023-01",
+      "pdf_url": "https://github.com/code-423n4/2023-01-biconomy-findings"
+    },
+    {
+      "id": "biconomy-spearbit-2024",
+      "title": "Biconomy-Spearbit-Security-Review-October-2024.pdf",
+      "auditor": "Spearbit",
+      "date": "2024",
+      "pdf_url": "https://raw.githubusercontent.com/spearbit/portfolio/master/pdfs/Biconomy-Spearbit-Security-Review-October-2024.pdf"
+    }
+  ],
+  "audit_count": 12,
+  "last_audited": "2024",
+  "auditors": [
+    "Code4rena",
+    "Halborn",
+    "Spearbit"
   ]
 }

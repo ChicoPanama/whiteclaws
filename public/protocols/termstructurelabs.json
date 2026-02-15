@@ -65,7 +65,7 @@
   "program_rules": [
     "Proof of Concept is required for all submissions. Reports without a working PoC demonstrating the vulnerability will not be considered.",
     "KYC is not required for this program. Pseudonymous submissions are accepted.",
-    "This program follows Primacy of Impact \u2014 valid findings are rewarded based on demonstrated impact regardless of whether the specific attack vector was previously known.",
+    "This program follows Primacy of Impact — valid findings are rewarded based on demonstrated impact regardless of whether the specific attack vector was previously known.",
     "Submissions are triaged by the security team. Expect initial response within 48 hours of submission.",
     "Only previously unreported vulnerabilities are eligible. Duplicate submissions will be closed.",
     "Vulnerabilities must be reported through the WhiteClaws platform. Public disclosure before resolution disqualifies the submission.",
@@ -88,9 +88,23 @@
     }
   },
   "eligibility": [
-    "Open to all researchers \u2014 pseudonymous submissions accepted",
+    "Open to all researchers — pseudonymous submissions accepted",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "termstructurelabs-external-audits",
+      "title": "audits",
+      "auditor": "External",
+      "date": "",
+      "pdf_url": "https://github.com/term-structure/audits"
+    }
+  ],
+  "audit_count": 1,
+  "last_audited": "",
+  "auditors": [
+    "External"
   ]
 }

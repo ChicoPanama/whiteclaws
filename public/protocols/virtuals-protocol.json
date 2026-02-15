@@ -69,8 +69,22 @@
     }
   },
   "eligibility": [
-    "Open to all researchers \u2014 pseudonymous submissions accepted",
+    "Open to all researchers — pseudonymous submissions accepted",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "virtuals-protocol-cantina-2025-may",
+      "title": "Virtuals Protocol Security Audit Overview | Cantina Virtuals Systems Global Limited 22 May 2025 - 24 May 2025",
+      "auditor": "Cantina",
+      "date": "2025-May",
+      "pdf_url": "https://cantina.xyz/portfolio/45ea09fa-a4bc-4044-9185-1a8e891ef2db"
+    }
+  ],
+  "audit_count": 1,
+  "last_audited": "2025",
+  "auditors": [
+    "Cantina"
   ]
 }

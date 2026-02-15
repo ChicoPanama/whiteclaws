@@ -75,8 +75,22 @@
     }
   },
   "eligibility": [
-    "Open to all researchers \u2014 pseudonymous submissions accepted",
+    "Open to all researchers — pseudonymous submissions accepted",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "radiant-peckshield-peckshield-audit-report-radiant-v1-0-pdf",
+      "title": "PeckShield-Audit-Report-Radiant-v1.0.pdf",
+      "auditor": "PeckShield",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/peckshield/publications/master/audit_reports/PeckShield-Audit-Report-Radiant-v1.0.pdf"
+    }
+  ],
+  "audit_count": 1,
+  "last_audited": "",
+  "auditors": [
+    "PeckShield"
   ]
 }

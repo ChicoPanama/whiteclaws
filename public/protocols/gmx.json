@@ -287,5 +287,26 @@
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
     "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "gmx-sherlock-2023-02",
+      "title": "2023-02-gmx-judging",
+      "auditor": "Sherlock",
+      "date": "2023-02",
+      "pdf_url": "https://github.com/sherlock-audit/2023-02-gmx-judging"
+    },
+    {
+      "id": "gmx-sherlock-2023-04",
+      "title": "2023-04-gmx-judging",
+      "auditor": "Sherlock",
+      "date": "2023-04",
+      "pdf_url": "https://github.com/sherlock-audit/2023-04-gmx-judging"
+    }
+  ],
+  "audit_count": 2,
+  "last_audited": "2023-04",
+  "auditors": [
+    "Sherlock"
   ]
 }

@@ -80,6 +80,28 @@
     "KYC verification required before payout",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "berachain-spearbit-2024",
+      "title": "Berachain-Pol-Spearbit-Security-Review-October-2024.pdf",
+      "auditor": "Spearbit",
+      "date": "2024",
+      "pdf_url": "https://raw.githubusercontent.com/spearbit/portfolio/master/pdfs/Berachain-Pol-Spearbit-Security-Review-October-2024.pdf"
+    },
+    {
+      "id": "berachain-cantina-2025-feb",
+      "title": "Berachain Staking Audit: fatBera 0xhoneyjar 06 February 2025 - 07 February 2025",
+      "auditor": "Cantina",
+      "date": "2025-Feb",
+      "pdf_url": "https://cantina.xyz/portfolio/1fce4414-74e9-490b-ac89-cf65755563d2"
+    }
+  ],
+  "audit_count": 2,
+  "last_audited": "2025",
+  "auditors": [
+    "Cantina",
+    "Spearbit"
   ]
 }

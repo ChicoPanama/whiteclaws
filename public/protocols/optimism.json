@@ -211,5 +211,88 @@
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
     "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "optimism-hacken-optimism",
+      "title": "Optimism",
+      "auditor": "Hacken",
+      "date": "",
+      "pdf_url": "https://hacken.io/services/blockchain-security/optimism-smart-contract-security-audit/"
+    },
+    {
+      "id": "optimism-consensys-diligence-2021-03",
+      "title": "Optimism SafetyChecker",
+      "auditor": "Consensys Diligence",
+      "date": "2021-03",
+      "pdf_url": "https://consensys.io/audits/2021/03/optimism-safetychecker/"
+    },
+    {
+      "id": "optimism-trail-of-bits-2022-11",
+      "title": "2022-11-optimism-securityreview.pdf",
+      "auditor": "Trail of Bits",
+      "date": "2022-11",
+      "pdf_url": "https://raw.githubusercontent.com/trailofbits/publications/master/reviews/2022-11-optimism-securityreview.pdf"
+    },
+    {
+      "id": "optimism-sherlock-2023-01",
+      "title": "2023-01-optimism-judging",
+      "auditor": "Sherlock",
+      "date": "2023-01",
+      "pdf_url": "https://github.com/sherlock-audit/2023-01-optimism-judging"
+    },
+    {
+      "id": "optimism-sherlock-2023-03",
+      "title": "2023-03-optimism-judging",
+      "auditor": "Sherlock",
+      "date": "2023-03",
+      "pdf_url": "https://github.com/sherlock-audit/2023-03-optimism-judging"
+    },
+    {
+      "id": "optimism-spearbit-2024",
+      "title": "Optimism-MtCannon-Spearbit-Security-Review-December-2024.pdf",
+      "auditor": "Spearbit",
+      "date": "2024",
+      "pdf_url": "https://raw.githubusercontent.com/spearbit/portfolio/master/pdfs/Optimism-MtCannon-Spearbit-Security-Review-December-2024.pdf"
+    },
+    {
+      "id": "optimism-cantina-2024-jan",
+      "title": "Optimism Cycle 19 Security Review Optimism 22 January 2024 - 05 February 2024",
+      "auditor": "Cantina",
+      "date": "2024-Jan",
+      "pdf_url": "https://cantina.xyz/portfolio/c185d7eb-d80b-49d4-8141-44e122c6fee4"
+    },
+    {
+      "id": "optimism-code4rena-2024-07",
+      "title": "2024-07-optimism-findings",
+      "auditor": "Code4rena",
+      "date": "2024-07",
+      "pdf_url": "https://github.com/code-423n4/2024-07-optimism-findings"
+    },
+    {
+      "id": "optimism-spearbit-2025",
+      "title": "Optimism-Verify-Upgrade16-Spearbit-Security-Review-September-2025.pdf",
+      "auditor": "Spearbit",
+      "date": "2025",
+      "pdf_url": "https://raw.githubusercontent.com/spearbit/portfolio/master/pdfs/Optimism-Verify-Upgrade16-Spearbit-Security-Review-September-2025.pdf"
+    },
+    {
+      "id": "optimism-cantina-2025-feb",
+      "title": "Optimism Layer 2 Security Audit OP Labs 27 February 2025 - 01 March 2025",
+      "auditor": "Cantina",
+      "date": "2025-Feb",
+      "pdf_url": "https://cantina.xyz/portfolio/0cfa9684-6bf5-4191-a25e-29af19d67185"
+    }
+  ],
+  "audit_count": 10,
+  "last_audited": "2025",
+  "auditors": [
+    "Cantina",
+    "Code4rena",
+    "Consensys Diligence",
+    "Hacken",
+    "Sherlock",
+    "Spearbit",
+    "Trail of Bits"
   ]
 }

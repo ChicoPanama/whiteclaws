@@ -278,5 +278,49 @@
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
     "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "olympus-external-audits",
+      "title": "audits",
+      "auditor": "External",
+      "date": "",
+      "pdf_url": "https://docs.olympusdao.finance/main/security/audits"
+    },
+    {
+      "id": "olympus-code4rena-2022-08",
+      "title": "2022-08-olympus-findings",
+      "auditor": "Code4rena",
+      "date": "2022-08",
+      "pdf_url": "https://github.com/code-423n4/2022-08-olympus-findings"
+    },
+    {
+      "id": "olympus-sherlock-2023-02",
+      "title": "2023-02-olympus-judging",
+      "auditor": "Sherlock",
+      "date": "2023-02",
+      "pdf_url": "https://github.com/sherlock-audit/2023-02-olympus-judging"
+    },
+    {
+      "id": "olympus-sherlock-2023-03",
+      "title": "2023-03-olympus-judging",
+      "auditor": "Sherlock",
+      "date": "2023-03",
+      "pdf_url": "https://github.com/sherlock-audit/2023-03-olympus-judging"
+    },
+    {
+      "id": "olympus-sherlock-2023-11",
+      "title": "2023-11-olympus-judging",
+      "auditor": "Sherlock",
+      "date": "2023-11",
+      "pdf_url": "https://github.com/sherlock-audit/2023-11-olympus-judging"
+    }
+  ],
+  "audit_count": 5,
+  "last_audited": "2023-11",
+  "auditors": [
+    "Code4rena",
+    "External",
+    "Sherlock"
   ]
 }

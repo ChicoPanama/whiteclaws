@@ -79,8 +79,130 @@
     }
   },
   "eligibility": [
-    "Open to all researchers \u2014 pseudonymous submissions accepted",
+    "Open to all researchers — pseudonymous submissions accepted",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "pooltogether-external-audits",
+      "title": "audits",
+      "auditor": "External",
+      "date": "",
+      "pdf_url": "https://docs.pooltogether.com/security/audits"
+    },
+    {
+      "id": "pooltogether-consensys-diligence-2020-11",
+      "title": "PoolTogether - LootBox and MultipleWinners Strategy",
+      "auditor": "Consensys Diligence",
+      "date": "2020-11",
+      "pdf_url": "https://consensys.io/audits/2020/11/pooltogether-lootbox-and-multiplewinners-strategy/"
+    },
+    {
+      "id": "pooltogether-consensys-diligence-2021-02",
+      "title": "PoolTogether",
+      "auditor": "Consensys Diligence",
+      "date": "2021-02",
+      "pdf_url": "https://consensys.io/audits/2021/02/pooltogether/"
+    },
+    {
+      "id": "pooltogether-consensys-diligence-2021-03",
+      "title": "PoolTogether - Pods",
+      "auditor": "Consensys Diligence",
+      "date": "2021-03",
+      "pdf_url": "https://consensys.io/audits/2021/03/pooltogether-pods/"
+    },
+    {
+      "id": "pooltogether-consensys-diligence-2021-05",
+      "title": "PoolTogether — Sushi and Yearn V2 Yield Sources",
+      "auditor": "Consensys Diligence",
+      "date": "2021-05",
+      "pdf_url": "https://consensys.io/audits/2021/05/pooltogether-sushi-and-yearn-v2-yield-sources/"
+    },
+    {
+      "id": "pooltogether-code4rena-2021-06",
+      "title": "2021-06-pooltogether-findings",
+      "auditor": "Code4rena",
+      "date": "2021-06",
+      "pdf_url": "https://github.com/code-423n4/2021-06-pooltogether-findings"
+    },
+    {
+      "id": "pooltogether-code4rena-2021-07",
+      "title": "2021-07-pooltogether-findings",
+      "auditor": "Code4rena",
+      "date": "2021-07",
+      "pdf_url": "https://github.com/code-423n4/2021-07-pooltogether-findings"
+    },
+    {
+      "id": "pooltogether-code4rena-2021-10",
+      "title": "2021-10-pooltogether-findings",
+      "auditor": "Code4rena",
+      "date": "2021-10",
+      "pdf_url": "https://github.com/code-423n4/2021-10-pooltogether-findings"
+    },
+    {
+      "id": "pooltogether-code4rena-2021-12",
+      "title": "2021-12-pooltogether-findings",
+      "auditor": "Code4rena",
+      "date": "2021-12",
+      "pdf_url": "https://github.com/code-423n4/2021-12-pooltogether-findings"
+    },
+    {
+      "id": "pooltogether-code4rena-2022-02",
+      "title": "2022-02-pooltogether-findings",
+      "auditor": "Code4rena",
+      "date": "2022-02",
+      "pdf_url": "https://github.com/code-423n4/2022-02-pooltogether-findings"
+    },
+    {
+      "id": "pooltogether-code4rena-2022-04",
+      "title": "2022-04-pooltogether-findings",
+      "auditor": "Code4rena",
+      "date": "2022-04",
+      "pdf_url": "https://github.com/code-423n4/2022-04-pooltogether-findings"
+    },
+    {
+      "id": "pooltogether-code4rena-2022-12",
+      "title": "2022-12-pooltogether-findings",
+      "auditor": "Code4rena",
+      "date": "2022-12",
+      "pdf_url": "https://github.com/code-423n4/2022-12-pooltogether-findings"
+    },
+    {
+      "id": "pooltogether-code4rena-2023-07",
+      "title": "2023-07-pooltogether-findings",
+      "auditor": "Code4rena",
+      "date": "2023-07",
+      "pdf_url": "https://github.com/code-423n4/2023-07-pooltogether-findings"
+    },
+    {
+      "id": "pooltogether-code4rena-2023-08",
+      "title": "2023-08-pooltogether-findings",
+      "auditor": "Code4rena",
+      "date": "2023-08",
+      "pdf_url": "https://github.com/code-423n4/2023-08-pooltogether-findings"
+    },
+    {
+      "id": "pooltogether-code4rena-2024-03",
+      "title": "2024-03-pooltogether-findings",
+      "auditor": "Code4rena",
+      "date": "2024-03",
+      "pdf_url": "https://github.com/code-423n4/2024-03-pooltogether-findings"
+    },
+    {
+      "id": "pooltogether-sherlock-2024-05",
+      "title": "2024-05-pooltogether-judging",
+      "auditor": "Sherlock",
+      "date": "2024-05",
+      "pdf_url": "https://github.com/sherlock-audit/2024-05-pooltogether-judging"
+    }
+  ],
+  "audit_count": 16,
+  "last_audited": "2024-05",
+  "auditors": [
+    "Code4rena",
+    "Consensys Diligence",
+    "External",
+    "Sherlock"
   ]
 }

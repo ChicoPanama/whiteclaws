@@ -108,9 +108,30 @@
     }
   },
   "eligibility": [
-    "Open to all researchers \u2014 pseudonymous submissions accepted",
+    "Open to all researchers — pseudonymous submissions accepted",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "sky-cantina-2025-apr",
+      "title": "Sky Vote Delegate Smart Contract Audit Sky 16 April 2025 - 16 April 2025",
+      "auditor": "Cantina",
+      "date": "2025-Apr",
+      "pdf_url": "https://cantina.xyz/portfolio/4a1d31e0-c429-4349-8aa0-2b38c4430acc"
+    },
+    {
+      "id": "sky-cantina-2025-mar",
+      "title": "Spark ALM Curve Controller Audit for MakerDAO Sky 10 March 2025 - 21 March 2025",
+      "auditor": "Cantina",
+      "date": "2025-Mar",
+      "pdf_url": "https://cantina.xyz/portfolio/c5408301-e8d5-4d84-b758-ac8d1f4d987f"
+    }
+  ],
+  "audit_count": 2,
+  "last_audited": "2025",
+  "auditors": [
+    "Cantina"
   ]
 }

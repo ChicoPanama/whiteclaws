@@ -74,8 +74,38 @@
     }
   },
   "eligibility": [
-    "Open to all researchers \u2014 pseudonymous submissions accepted",
+    "Open to all researchers — pseudonymous submissions accepted",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "arcade-least-authority-arcade-previously-pawn-finance-and-8211-pawn-smart-contracts",
+      "title": "Arcade (previously Pawn Finance) &#8211; Pawn Smart Contracts",
+      "auditor": "Least Authority",
+      "date": "",
+      "pdf_url": "https://leastauthority.com/blog/audit-of-pawn-smart-contracts-for-pawn-finance/"
+    },
+    {
+      "id": "arcade-trail-of-bits-2023-07",
+      "title": "2023-07-arcade-securityreview.pdf",
+      "auditor": "Trail of Bits",
+      "date": "2023-07",
+      "pdf_url": "https://raw.githubusercontent.com/trailofbits/publications/master/reviews/2023-07-arcade-securityreview.pdf"
+    },
+    {
+      "id": "arcade-code4rena-2023-07",
+      "title": "2023-07-arcade-findings",
+      "auditor": "Code4rena",
+      "date": "2023-07",
+      "pdf_url": "https://github.com/code-423n4/2023-07-arcade-findings"
+    }
+  ],
+  "audit_count": 3,
+  "last_audited": "2023-07",
+  "auditors": [
+    "Code4rena",
+    "Least Authority",
+    "Trail of Bits"
   ]
 }

@@ -74,8 +74,36 @@
     }
   },
   "eligibility": [
-    "Open to all researchers \u2014 pseudonymous submissions accepted",
+    "Open to all researchers — pseudonymous submissions accepted",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "polygonzkevm-spearbit-zkevm-engagement-1-spearbit-27-march-pdf",
+      "title": "zkEVM-engagement-1-Spearbit-27-March.pdf",
+      "auditor": "Spearbit",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/spearbit/portfolio/master/pdfs/PolygonzkEVM-Protocol/zkEVM-engagement-1-Spearbit-27-March.pdf"
+    },
+    {
+      "id": "polygonzkevm-spearbit-zkevm-engagement-2-spearbit-27-march-pdf",
+      "title": "zkEVM-engagement-2-Spearbit-27-March.pdf",
+      "auditor": "Spearbit",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/spearbit/portfolio/master/pdfs/PolygonzkEVM-Protocol/zkEVM-engagement-2-Spearbit-27-March.pdf"
+    },
+    {
+      "id": "polygonzkevm-spearbit-zkevm-engagement-3-spearbit-6-april-pdf",
+      "title": "zkEVM-engagement-3-Spearbit-6-April.pdf",
+      "auditor": "Spearbit",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/spearbit/portfolio/master/pdfs/PolygonzkEVM-Protocol/zkEVM-engagement-3-Spearbit-6-April.pdf"
+    }
+  ],
+  "audit_count": 3,
+  "last_audited": "",
+  "auditors": [
+    "Spearbit"
   ]
 }

@@ -77,9 +77,47 @@
     }
   },
   "eligibility": [
-    "Open to all researchers \u2014 pseudonymous submissions accepted",
+    "Open to all researchers — pseudonymous submissions accepted",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "harvest-least-authority-leastauthority-harvest",
+      "title": "LeastAuthority Harvest",
+      "auditor": "Least Authority",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/harvestfi/audits/main/LeastAuthority-Harvest.pdf"
+    },
+    {
+      "id": "harvest-external-haechi-harvest",
+      "title": "Haechi Harvest",
+      "auditor": "External",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/harvestfi/audits/main/Haechi-Harvest.pdf"
+    },
+    {
+      "id": "harvest-peckshield-peckshield-harvest",
+      "title": "PeckShield Harvest",
+      "auditor": "PeckShield",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/harvestfi/audits/main/PeckShield-Harvest.pdf"
+    },
+    {
+      "id": "harvest-certik-certik-harvest",
+      "title": "CertiK Harvest",
+      "auditor": "CertiK",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/harvestfi/audits/main/CertiK-Harvest.pdf"
+    }
+  ],
+  "audit_count": 4,
+  "last_audited": "",
+  "auditors": [
+    "CertiK",
+    "External",
+    "Least Authority",
+    "PeckShield"
   ]
 }

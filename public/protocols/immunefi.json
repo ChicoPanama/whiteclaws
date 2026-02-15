@@ -105,5 +105,26 @@
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
     "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "immunefi-external-audits",
+      "title": "audits",
+      "auditor": "External",
+      "date": "",
+      "pdf_url": "https://immunefi.com/audits/"
+    },
+    {
+      "id": "immunefi-external-audit-competitions",
+      "title": "audit competitions",
+      "auditor": "External",
+      "date": "",
+      "pdf_url": "https://immunefi.com/audit-competitions/"
+    }
+  ],
+  "audit_count": 2,
+  "last_audited": "",
+  "auditors": [
+    "External"
   ]
 }

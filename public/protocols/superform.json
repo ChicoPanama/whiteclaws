@@ -106,5 +106,19 @@
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
     "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "superform-spearbit-2025",
+      "title": "Superform-v2-periphery-Spearbit-Security-Review-June-2025.pdf",
+      "auditor": "Spearbit",
+      "date": "2025",
+      "pdf_url": "https://raw.githubusercontent.com/spearbit/portfolio/master/pdfs/Superform-v2-periphery-Spearbit-Security-Review-June-2025.pdf"
+    }
+  ],
+  "audit_count": 1,
+  "last_audited": "2025",
+  "auditors": [
+    "Spearbit"
   ]
 }

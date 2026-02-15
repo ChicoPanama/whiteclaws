@@ -226,5 +226,19 @@
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
     "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "integral-external-audit-report",
+      "title": "audit report",
+      "auditor": "External",
+      "date": "",
+      "pdf_url": "https://docs.integral.link/size/library/audit-report"
+    }
+  ],
+  "audit_count": 1,
+  "last_audited": "",
+  "auditors": [
+    "External"
   ]
 }

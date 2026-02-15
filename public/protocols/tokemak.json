@@ -69,8 +69,37 @@
     }
   },
   "eligibility": [
-    "Open to all researchers \u2014 pseudonymous submissions accepted",
+    "Open to all researchers — pseudonymous submissions accepted",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "tokemak-hexens-show-details",
+      "title": "Show details",
+      "auditor": "Hexens",
+      "date": "",
+      "pdf_url": "https://github.com/Hexens/Smart-Contract-Review-Public-Reports/blob/main/Tokemak-audit-mar25(Final).pdf"
+    },
+    {
+      "id": "tokemak-sherlock-2023-06",
+      "title": "2023-06-tokemak-judging",
+      "auditor": "Sherlock",
+      "date": "2023-06",
+      "pdf_url": "https://github.com/sherlock-audit/2023-06-tokemak-judging"
+    },
+    {
+      "id": "tokemak-hexens-2024",
+      "title": "Show details",
+      "auditor": "Hexens",
+      "date": "2024",
+      "pdf_url": "https://github.com/Hexens/Smart-Contract-Review-Public-Reports/blob/main/tokemak-mainnet-follow-up-audit-july-2024(Public).pdf"
+    }
+  ],
+  "audit_count": 3,
+  "last_audited": "2024",
+  "auditors": [
+    "Hexens",
+    "Sherlock"
   ]
 }

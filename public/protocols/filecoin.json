@@ -85,6 +85,35 @@
     "KYC verification required before payout",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "filecoin-least-authority-filecoin-and-8211-lotus-implementation-subcomponents",
+      "title": "Filecoin &#8211; Lotus Implementation + Subcomponents",
+      "auditor": "Least Authority",
+      "date": "",
+      "pdf_url": "https://leastauthority.com/blog/audit-of-lotus-implementation-subcomponents-for-protocol-labs/"
+    },
+    {
+      "id": "filecoin-consensys-diligence-2020-09",
+      "title": "Filecoin Actors",
+      "auditor": "Consensys Diligence",
+      "date": "2020-09",
+      "pdf_url": "https://consensys.io/audits/2020/09/filecoin-actors/"
+    },
+    {
+      "id": "filecoin-consensys-diligence-2023-04",
+      "title": "Glif Filecoin InfinityPool",
+      "auditor": "Consensys Diligence",
+      "date": "2023-04",
+      "pdf_url": "https://consensys.io/audits/2023/04/glif-filecoin-infinitypool/"
+    }
+  ],
+  "audit_count": 3,
+  "last_audited": "2023-04",
+  "auditors": [
+    "Consensys Diligence",
+    "Least Authority"
   ]
 }

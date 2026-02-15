@@ -234,5 +234,48 @@
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
     "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "avalanche-least-authority-audit-of-avalanche-browser-extension-sdk",
+      "title": "audit-of-avalanche-browser-extension-sdk",
+      "auditor": "Least Authority",
+      "date": "",
+      "pdf_url": "https://leastauthority.com/blog/audit-of-avalanche-browser-extension-sdk/"
+    },
+    {
+      "id": "avalanche-least-authority-avalanche-and-8211-browser-extension-sdk",
+      "title": "Avalanche &#8211; Browser Extension + SDK",
+      "auditor": "Least Authority",
+      "date": "",
+      "pdf_url": "https://leastauthority.com/blog/audit-of-avalanche-browser-extension-sdk/"
+    },
+    {
+      "id": "avalanche-least-authority-read-more",
+      "title": "Read More »",
+      "auditor": "Least Authority",
+      "date": "",
+      "pdf_url": "https://leastauthority.com/blog/audit-of-avalanche-browser-extension-sdk/"
+    },
+    {
+      "id": "avalanche-least-authority-avalanche-and-8211-subnet-evm",
+      "title": "Avalanche &#8211; Subnet EVM",
+      "auditor": "Least Authority",
+      "date": "",
+      "pdf_url": "https://leastauthority.com/blog/audit-of-subnet-evm/"
+    },
+    {
+      "id": "avalanche-hacken-avalanche",
+      "title": "Avalanche",
+      "auditor": "Hacken",
+      "date": "",
+      "pdf_url": "https://hacken.io/services/blockchain-security/avalanche-smart-contract-security-audit/"
+    }
+  ],
+  "audit_count": 5,
+  "last_audited": "",
+  "auditors": [
+    "Hacken",
+    "Least Authority"
   ]
 }

@@ -74,8 +74,22 @@
     }
   },
   "eligibility": [
-    "Open to all researchers \u2014 pseudonymous submissions accepted",
+    "Open to all researchers — pseudonymous submissions accepted",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "ceres-external-smart-contract-audit",
+      "title": "smart contract audit",
+      "auditor": "External",
+      "date": "",
+      "pdf_url": "https://audits.quillhash.com/smart-contract-audit"
+    }
+  ],
+  "audit_count": 1,
+  "last_audited": "",
+  "auditors": [
+    "External"
   ]
 }

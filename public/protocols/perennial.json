@@ -251,5 +251,48 @@
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
     "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "perennial-code4rena-2021-12",
+      "title": "2021-12-perennial-findings",
+      "auditor": "Code4rena",
+      "date": "2021-12",
+      "pdf_url": "https://github.com/code-423n4/2021-12-perennial-findings"
+    },
+    {
+      "id": "perennial-sherlock-2023-05",
+      "title": "2023-05-perennial-judging",
+      "auditor": "Sherlock",
+      "date": "2023-05",
+      "pdf_url": "https://github.com/sherlock-audit/2023-05-perennial-judging"
+    },
+    {
+      "id": "perennial-sherlock-2023-07",
+      "title": "2023-07-perennial-judging",
+      "auditor": "Sherlock",
+      "date": "2023-07",
+      "pdf_url": "https://github.com/sherlock-audit/2023-07-perennial-judging"
+    },
+    {
+      "id": "perennial-sherlock-2023-09",
+      "title": "2023-09-perennial-judging",
+      "auditor": "Sherlock",
+      "date": "2023-09",
+      "pdf_url": "https://github.com/sherlock-audit/2023-09-perennial-judging"
+    },
+    {
+      "id": "perennial-sherlock-2023-10",
+      "title": "2023-10-perennial-judging",
+      "auditor": "Sherlock",
+      "date": "2023-10",
+      "pdf_url": "https://github.com/sherlock-audit/2023-10-perennial-judging"
+    }
+  ],
+  "audit_count": 5,
+  "last_audited": "2023-10",
+  "auditors": [
+    "Code4rena",
+    "Sherlock"
   ]
 }

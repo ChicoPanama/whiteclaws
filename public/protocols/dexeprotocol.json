@@ -145,5 +145,27 @@
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
     "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "dexeprotocol-external-audits",
+      "title": "audits",
+      "auditor": "External",
+      "date": "",
+      "pdf_url": "https://github.com/dexe-network/investment-contracts/tree/master/audits"
+    },
+    {
+      "id": "dexeprotocol-cyfrin-2023-11",
+      "title": "2023-11-10-cyfrin-dexe-v2.0.pdf",
+      "auditor": "Cyfrin",
+      "date": "2023-11",
+      "pdf_url": "https://raw.githubusercontent.com/Cyfrin/cyfrin-audit-reports/main/reports/2023-11-10-cyfrin-dexe-v2.0.pdf"
+    }
+  ],
+  "audit_count": 2,
+  "last_audited": "2023-11",
+  "auditors": [
+    "Cyfrin",
+    "External"
   ]
 }

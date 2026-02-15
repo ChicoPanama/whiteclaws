@@ -255,5 +255,19 @@
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
     "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "yearnfinance-consensys-diligence-2021-05",
+      "title": "PoolTogether — Sushi and Yearn V2 Yield Sources",
+      "auditor": "Consensys Diligence",
+      "date": "2021-05",
+      "pdf_url": "https://consensys.io/audits/2021/05/pooltogether-sushi-and-yearn-v2-yield-sources/"
+    }
+  ],
+  "audit_count": 1,
+  "last_audited": "2021-05",
+  "auditors": [
+    "Consensys Diligence"
   ]
 }

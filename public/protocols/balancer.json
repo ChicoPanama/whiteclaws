@@ -288,5 +288,65 @@
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
     "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "balancer-halborn-sifchain-balancer-smart-contract-audit-halborn-v1-pdf",
+      "title": "Sifchain_Balancer_Smart_Contract_Audit_Halborn_v1.pdf",
+      "auditor": "Halborn",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/HalbornSecurity/PublicReports/master/Solidity%20Smart%20Contract%20Audits/Sifchain_Balancer_Smart_Contract_Audit_Halborn_v1.pdf"
+    },
+    {
+      "id": "balancer-consensys-diligence-2020-05",
+      "title": "Balancer Finance",
+      "auditor": "Consensys Diligence",
+      "date": "2020-05",
+      "pdf_url": "https://consensys.io/audits/2020/05/balancer-finance/"
+    },
+    {
+      "id": "balancer-consensys-diligence-2020-08",
+      "title": "Aave Balancer and Uniswap v2 Price Providers",
+      "auditor": "Consensys Diligence",
+      "date": "2020-08",
+      "pdf_url": "https://consensys.io/audits/2020/08/aave-balancer-and-uniswap-v2-price-providers/"
+    },
+    {
+      "id": "balancer-trail-of-bits-2021-04",
+      "title": "2021-04-balancer-balancerv2-securityreview.pdf",
+      "auditor": "Trail of Bits",
+      "date": "2021-04",
+      "pdf_url": "https://raw.githubusercontent.com/trailofbits/publications/master/reviews/2021-04-balancer-balancerv2-securityreview.pdf"
+    },
+    {
+      "id": "balancer-spearbit-2024",
+      "title": "Balancer-Spearbit-Security-Review-September-2024.pdf",
+      "auditor": "Spearbit",
+      "date": "2024",
+      "pdf_url": "https://raw.githubusercontent.com/spearbit/portfolio/master/pdfs/Balancer-Spearbit-Security-Review-September-2024.pdf"
+    },
+    {
+      "id": "balancer-trail-of-bits-2024-12",
+      "title": "2024-12-balancer-v3-securityreview.pdf",
+      "auditor": "Trail of Bits",
+      "date": "2024-12",
+      "pdf_url": "https://raw.githubusercontent.com/trailofbits/publications/master/reviews/2024-12-balancer-v3-securityreview.pdf"
+    },
+    {
+      "id": "balancer-cyfrin-2025-10",
+      "title": "2025-10-10-cyfrin-suzaku-balancer-validator-v2.0.pdf",
+      "auditor": "Cyfrin",
+      "date": "2025-10",
+      "pdf_url": "https://raw.githubusercontent.com/Cyfrin/cyfrin-audit-reports/main/reports/2025-10-10-cyfrin-suzaku-balancer-validator-v2.0.pdf"
+    }
+  ],
+  "audit_count": 7,
+  "last_audited": "2025-10",
+  "auditors": [
+    "Consensys Diligence",
+    "Cyfrin",
+    "Halborn",
+    "Spearbit",
+    "Trail of Bits"
   ]
 }

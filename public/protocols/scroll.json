@@ -296,5 +296,75 @@
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
     "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "scroll-trail-of-bits-2023-04",
+      "title": "2023-04-scroll-zkEVM-wave1-securityreview.pdf",
+      "auditor": "Trail of Bits",
+      "date": "2023-04",
+      "pdf_url": "https://raw.githubusercontent.com/trailofbits/publications/master/reviews/2023-04-scroll-zkEVM-wave1-securityreview.pdf"
+    },
+    {
+      "id": "scroll-trail-of-bits-2023-07",
+      "title": "2023-07-scroll-zktrie-securityreview.pdf",
+      "auditor": "Trail of Bits",
+      "date": "2023-07",
+      "pdf_url": "https://raw.githubusercontent.com/trailofbits/publications/master/reviews/2023-07-scroll-zktrie-securityreview.pdf"
+    },
+    {
+      "id": "scroll-trail-of-bits-2023-08",
+      "title": "2023-08-scroll-zkEVM-wave2-securityreview.pdf",
+      "auditor": "Trail of Bits",
+      "date": "2023-08",
+      "pdf_url": "https://raw.githubusercontent.com/trailofbits/publications/master/reviews/2023-08-scroll-zkEVM-wave2-securityreview.pdf"
+    },
+    {
+      "id": "scroll-trail-of-bits-2023-09",
+      "title": "2023-09-scroll-zkEVM-wave3-securityreview.pdf",
+      "auditor": "Trail of Bits",
+      "date": "2023-09",
+      "pdf_url": "https://raw.githubusercontent.com/trailofbits/publications/master/reviews/2023-09-scroll-zkEVM-wave3-securityreview.pdf"
+    },
+    {
+      "id": "scroll-trail-of-bits-2024-04",
+      "title": "2024-04-scroll-4844-blob-securityreview.pdf",
+      "auditor": "Trail of Bits",
+      "date": "2024-04",
+      "pdf_url": "https://raw.githubusercontent.com/trailofbits/publications/master/reviews/2024-04-scroll-4844-blob-securityreview.pdf"
+    },
+    {
+      "id": "scroll-trail-of-bits-2024-06",
+      "title": "2024-06-scroll-zstd-compression-securityreview.pdf",
+      "auditor": "Trail of Bits",
+      "date": "2024-06",
+      "pdf_url": "https://raw.githubusercontent.com/trailofbits/publications/master/reviews/2024-06-scroll-zstd-compression-securityreview.pdf"
+    },
+    {
+      "id": "scroll-trail-of-bits-2025-03",
+      "title": "2025-03-scroll-euclidphase2-loa.pdf",
+      "auditor": "Trail of Bits",
+      "date": "2025-03",
+      "pdf_url": "https://raw.githubusercontent.com/trailofbits/publications/master/reviews/2025-03-scroll-euclidphase2-loa.pdf"
+    },
+    {
+      "id": "scroll-trail-of-bits-2025-04",
+      "title": "2025-04-scroll-euclid-phase2-securityreview.pdf",
+      "auditor": "Trail of Bits",
+      "date": "2025-04",
+      "pdf_url": "https://raw.githubusercontent.com/trailofbits/publications/master/reviews/2025-04-scroll-euclid-phase2-securityreview.pdf"
+    },
+    {
+      "id": "scroll-trail-of-bits-2025-07",
+      "title": "2025-07-scroll-feynmanupgradesmartcontractchanges-securityreview.pdf",
+      "auditor": "Trail of Bits",
+      "date": "2025-07",
+      "pdf_url": "https://raw.githubusercontent.com/trailofbits/publications/master/reviews/2025-07-scroll-feynmanupgradesmartcontractchanges-securityreview.pdf"
+    }
+  ],
+  "audit_count": 9,
+  "last_audited": "2025-07",
+  "auditors": [
+    "Trail of Bits"
   ]
 }

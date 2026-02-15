@@ -148,5 +148,40 @@
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
     "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "astroport-halborn-astroport-fi-amm-protocol-cosmwasm-smart-contract-security-a",
+      "title": "Astroport_fi_AMM_Protocol_CosmWasm_Smart_Contract_Security_Audit_Report_Halborn_Final.pdf",
+      "auditor": "Halborn",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/HalbornSecurity/PublicReports/master/CosmWasm%20Smart%20Contract%20Audits/Astroport_fi_AMM_Protocol_CosmWasm_Smart_Contract_Security_Audit_Report_Halborn_Final.pdf"
+    },
+    {
+      "id": "astroport-halborn-astroport-fi-astral-assembly-cosmwasm-smart-contract-securit",
+      "title": "Astroport_fi_Astral_Assembly_CosmWasm_Smart_Contract_Security_Audit_Report_Halborn_Final.pdf",
+      "auditor": "Halborn",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/HalbornSecurity/PublicReports/master/CosmWasm%20Smart%20Contract%20Audits/Astroport_fi_Astral_Assembly_CosmWasm_Smart_Contract_Security_Audit_Report_Halborn_Final.pdf"
+    },
+    {
+      "id": "astroport-halborn-astroport-fi-maker-contract-cosmwasm-smart-contract-security",
+      "title": "Astroport_fi_Maker_Contract_CosmWasm_Smart_Contract_Security_Audit_Report_Halborn_Final.pdf",
+      "auditor": "Halborn",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/HalbornSecurity/PublicReports/master/CosmWasm%20Smart%20Contract%20Audits/Astroport_fi_Maker_Contract_CosmWasm_Smart_Contract_Security_Audit_Report_Halborn_Final.pdf"
+    },
+    {
+      "id": "astroport-halborn-astroport-fi-periphery-contracts-cosmwasm-smart-contract-sec",
+      "title": "Astroport_fi_Periphery_Contracts_CosmWasm_Smart_Contract_Security_Audit_Report_Halborn_Final.pdf",
+      "auditor": "Halborn",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/HalbornSecurity/PublicReports/master/CosmWasm%20Smart%20Contract%20Audits/Astroport_fi_Periphery_Contracts_CosmWasm_Smart_Contract_Security_Audit_Report_Halborn_Final.pdf"
+    }
+  ],
+  "audit_count": 4,
+  "last_audited": "",
+  "auditors": [
+    "Halborn"
   ]
 }

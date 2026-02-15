@@ -134,5 +134,73 @@
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
     "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "polygon-halborn-yieldly-finance-polygon-nft-marketplace-smart-contract-secur",
+      "title": "Yieldly_Finance_Polygon_NFT_MarketPlace_Smart_Contract_Security_Audit_Report_Halborn_Final.pdf",
+      "auditor": "Halborn",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/HalbornSecurity/PublicReports/master/Solidity%20Smart%20Contract%20Audits/Yieldly_Finance_Polygon_NFT_MarketPlace_Smart_Contract_Security_Audit_Report_Halborn_Final.pdf"
+    },
+    {
+      "id": "polygon-halborn-polygon-avail-substrate-pallet-security-audit-report-halborn",
+      "title": "Polygon_Avail_Substrate_Pallet_Security_Audit_Report_Halborn_Final.pdf",
+      "auditor": "Halborn",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/HalbornSecurity/PublicReports/master/Substrate%20Audits/Polygon_Avail_Substrate_Pallet_Security_Audit_Report_Halborn_Final.pdf"
+    },
+    {
+      "id": "polygon-least-authority-polygon-and-8211-plonky3",
+      "title": "Polygon &#8211; Plonky3",
+      "auditor": "Least Authority",
+      "date": "",
+      "pdf_url": "https://leastauthority.com/blog/audit-of-plonky3/"
+    },
+    {
+      "id": "polygon-least-authority-polygon-and-8211-plonky2",
+      "title": "Polygon &#8211; Plonky2",
+      "auditor": "Least Authority",
+      "date": "",
+      "pdf_url": "https://leastauthority.com/blog/audit-of-audit-of-plonky2/"
+    },
+    {
+      "id": "polygon-hacken-polygon",
+      "title": "Polygon",
+      "auditor": "Hacken",
+      "date": "",
+      "pdf_url": "https://hacken.io/services/blockchain-security/polygon-smart-contract-security-audit/"
+    },
+    {
+      "id": "polygon-nethermind-nm0069-final-polygon-id-pdf",
+      "title": "NM0069-FINAL_POLYGON_ID.pdf",
+      "auditor": "Nethermind",
+      "date": "",
+      "pdf_url": "https://github.com/NethermindEth/PublicAuditReports/blob/main/NM0069-FINAL_POLYGON_ID.pdf"
+    },
+    {
+      "id": "polygon-hexens-show-details",
+      "title": "Show details",
+      "auditor": "Hexens",
+      "date": "",
+      "pdf_url": "https://github.com/Hexens/Smart-Contract-Review-Public-Reports/blob/main/Polygon_Technology__Aug23Public.pdf"
+    },
+    {
+      "id": "polygon-cyfrin-2025-05",
+      "title": "2025-05-19-cyfrin-stakedotlink-polygon-staking-v2.0.pdf",
+      "auditor": "Cyfrin",
+      "date": "2025-05",
+      "pdf_url": "https://raw.githubusercontent.com/Cyfrin/cyfrin-audit-reports/main/reports/2025-05-19-cyfrin-stakedotlink-polygon-staking-v2.0.pdf"
+    }
+  ],
+  "audit_count": 8,
+  "last_audited": "2025-05",
+  "auditors": [
+    "Cyfrin",
+    "Hacken",
+    "Halborn",
+    "Hexens",
+    "Least Authority",
+    "Nethermind"
   ]
 }

@@ -112,5 +112,19 @@
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
     "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "staderforpolygon-external-auditors",
+      "title": "auditors",
+      "auditor": "External",
+      "date": "",
+      "pdf_url": "https://www.staderlabs.com/docs-v1/category/auditors"
+    }
+  ],
+  "audit_count": 1,
+  "last_audited": "",
+  "auditors": [
+    "External"
   ]
 }

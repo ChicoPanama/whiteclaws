@@ -263,5 +263,64 @@
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
     "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "ondofinance-trail-of-bits-2022-10",
+      "title": "2022-10-shimacapital-ondo-securityreview.pdf",
+      "auditor": "Trail of Bits",
+      "date": "2022-10",
+      "pdf_url": "https://raw.githubusercontent.com/trailofbits/publications/master/reviews/2022-10-shimacapital-ondo-securityreview.pdf"
+    },
+    {
+      "id": "ondofinance-code4rena-2023-01",
+      "title": "2023-01-ondo-findings",
+      "auditor": "Code4rena",
+      "date": "2023-01",
+      "pdf_url": "https://github.com/code-423n4/2023-01-ondo-findings"
+    },
+    {
+      "id": "ondofinance-code4rena-2023-09",
+      "title": "2023-09-ondo-findings",
+      "auditor": "Code4rena",
+      "date": "2023-09",
+      "pdf_url": "https://github.com/code-423n4/2023-09-ondo-findings"
+    },
+    {
+      "id": "ondofinance-code4rena-2024-03",
+      "title": "2024-03-ondo-finance-findings",
+      "auditor": "Code4rena",
+      "date": "2024-03",
+      "pdf_url": "https://github.com/code-423n4/2024-03-ondo-finance-findings"
+    },
+    {
+      "id": "ondofinance-cyfrin-2024-04",
+      "title": "2024-04-18-cyfrin-ondo-finance-v2.0.pdf",
+      "auditor": "Cyfrin",
+      "date": "2024-04",
+      "pdf_url": "https://raw.githubusercontent.com/Cyfrin/cyfrin-audit-reports/main/reports/2024-04-18-cyfrin-ondo-finance-v2.0.pdf"
+    },
+    {
+      "id": "ondofinance-spearbit-2025",
+      "title": "Ondo-Spearbit-Security-Review-May-2025.pdf",
+      "auditor": "Spearbit",
+      "date": "2025",
+      "pdf_url": "https://raw.githubusercontent.com/spearbit/portfolio/master/pdfs/Ondo-Spearbit-Security-Review-May-2025.pdf"
+    },
+    {
+      "id": "ondofinance-cyfrin-2025-07",
+      "title": "2025-07-14-cyfrin-ondo-global-markets-v2.0.pdf",
+      "auditor": "Cyfrin",
+      "date": "2025-07",
+      "pdf_url": "https://raw.githubusercontent.com/Cyfrin/cyfrin-audit-reports/main/reports/2025-07-14-cyfrin-ondo-global-markets-v2.0.pdf"
+    }
+  ],
+  "audit_count": 7,
+  "last_audited": "2025-07",
+  "auditors": [
+    "Code4rena",
+    "Cyfrin",
+    "Spearbit",
+    "Trail of Bits"
   ]
 }

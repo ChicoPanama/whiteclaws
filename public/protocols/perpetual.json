@@ -184,5 +184,27 @@
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
     "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "perpetual-cantina-2023-aug",
+      "title": "Perpetual DEX Audit for HMXv2 Protocol HMX 14 August 2023 - 08 September 2023",
+      "auditor": "Cantina",
+      "date": "2023-Aug",
+      "pdf_url": "https://cantina.xyz/portfolio/5977ae92-9528-4871-9968-4ef0508ce9b9"
+    },
+    {
+      "id": "perpetual-sherlock-2024-02",
+      "title": "2024-02-perpetual-judging",
+      "auditor": "Sherlock",
+      "date": "2024-02",
+      "pdf_url": "https://github.com/sherlock-audit/2024-02-perpetual-judging"
+    }
+  ],
+  "audit_count": 2,
+  "last_audited": "2024-02",
+  "auditors": [
+    "Cantina",
+    "Sherlock"
   ]
 }

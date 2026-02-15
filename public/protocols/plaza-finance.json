@@ -91,6 +91,20 @@
   "eligibility": [
     "KYC verification required before payout",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "plaza-finance-sherlock-2024-12",
+      "title": "2024-12-plaza-finance-judging",
+      "auditor": "Sherlock",
+      "date": "2024-12",
+      "pdf_url": "https://github.com/sherlock-audit/2024-12-plaza-finance-judging"
+    }
+  ],
+  "audit_count": 1,
+  "last_audited": "2024-12",
+  "auditors": [
+    "Sherlock"
   ]
 }

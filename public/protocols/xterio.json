@@ -148,5 +148,54 @@
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
     "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "xterio-peckshield-peckshield-audit-report-erc20-xterio-v1-0-pdf",
+      "title": "PeckShield-Audit-Report-ERC20-XTERIO-v1.0.pdf",
+      "auditor": "PeckShield",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/peckshield/publications/master/audit_reports/PeckShield-Audit-Report-ERC20-XTERIO-v1.0.pdf"
+    },
+    {
+      "id": "xterio-peckshield-peckshield-audit-report-xterio-launchpool-v1-0-pdf",
+      "title": "PeckShield-Audit-Report-Xterio-Launchpool-v1.0.pdf",
+      "auditor": "PeckShield",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/peckshield/publications/master/audit_reports/PeckShield-Audit-Report-Xterio-Launchpool-v1.0.pdf"
+    },
+    {
+      "id": "xterio-peckshield-peckshield-audit-report-xterio-onchainiap-v1-0-pdf",
+      "title": "PeckShield-Audit-Report-Xterio-OnchainIAP-v1.0.pdf",
+      "auditor": "PeckShield",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/peckshield/publications/master/audit_reports/PeckShield-Audit-Report-Xterio-OnchainIAP-v1.0.pdf"
+    },
+    {
+      "id": "xterio-peckshield-peckshield-audit-report-xterio-staking-v1-0-pdf",
+      "title": "PeckShield-Audit-Report-Xterio-Staking-v1.0.pdf",
+      "auditor": "PeckShield",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/peckshield/publications/master/audit_reports/PeckShield-Audit-Report-Xterio-Staking-v1.0.pdf"
+    },
+    {
+      "id": "xterio-peckshield-peckshield-audit-report-xterio-v1-0-pdf",
+      "title": "PeckShield-Audit-Report-Xterio-v1.0.pdf",
+      "auditor": "PeckShield",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/peckshield/publications/master/audit_reports/PeckShield-Audit-Report-Xterio-v1.0.pdf"
+    },
+    {
+      "id": "xterio-peckshield-peckshield-audit-report-xterio-airdrop-v1-0-pdf",
+      "title": "PeckShield-Audit-Report-Xterio_Airdrop-v1.0.pdf",
+      "auditor": "PeckShield",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/peckshield/publications/master/audit_reports/PeckShield-Audit-Report-Xterio_Airdrop-v1.0.pdf"
+    }
+  ],
+  "audit_count": 6,
+  "last_audited": "",
+  "auditors": [
+    "PeckShield"
   ]
 }

@@ -82,9 +82,80 @@
     }
   },
   "eligibility": [
-    "Open to all researchers \u2014 pseudonymous submissions accepted",
+    "Open to all researchers — pseudonymous submissions accepted",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "bifrostfinance-external-bifrost-20xcm-20actions-20audit",
+      "title": "Bifrost%20XCM%20Actions%20Audit",
+      "auditor": "External",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/bifrost-io/slpx-contracts/main/audit/Bifrost%20XCM%20Actions%20Audit.pdf"
+    },
+    {
+      "id": "bifrostfinance-external-bifrost-20-veth-3-0-20-26-26slpx-v2",
+      "title": "Bifrost%20(veth 3.0%20%26%26slpx v2)",
+      "auditor": "External",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/bifrost-io/bifrost-wiki/gitbook/audit/Bifrost%20(veth-3.0%20%26%26slpx-v2).pdf"
+    },
+    {
+      "id": "bifrostfinance-external-common-prefix-svg",
+      "title": "common prefix.svg",
+      "auditor": "External",
+      "date": "",
+      "pdf_url": "https://bifrost.io/images/v4/audit/common_prefix.svg"
+    },
+    {
+      "id": "bifrostfinance-certik-certik-svg",
+      "title": "certik.svg",
+      "auditor": "CertiK",
+      "date": "",
+      "pdf_url": "https://bifrost.io/images/v4/audit/certik.svg"
+    },
+    {
+      "id": "bifrostfinance-external-oak-svg",
+      "title": "oak.svg",
+      "auditor": "External",
+      "date": "",
+      "pdf_url": "https://bifrost.io/images/v4/audit/oak.svg"
+    },
+    {
+      "id": "bifrostfinance-external-beosin-svg",
+      "title": "beosin.svg",
+      "auditor": "External",
+      "date": "",
+      "pdf_url": "https://bifrost.io/images/v4/audit/beosin.svg"
+    },
+    {
+      "id": "bifrostfinance-external-slowmist-svg",
+      "title": "slowmist.svg",
+      "auditor": "External",
+      "date": "",
+      "pdf_url": "https://bifrost.io/images/v4/audit/slowmist.svg"
+    },
+    {
+      "id": "bifrostfinance-external-tokeninsight-svg",
+      "title": "tokeninsight.svg",
+      "auditor": "External",
+      "date": "",
+      "pdf_url": "https://bifrost.io/images/v4/audit/tokeninsight.svg"
+    },
+    {
+      "id": "bifrostfinance-external-2024-03",
+      "title": "2024 03 11%20Audit%20Report%20 %20Bifrost%20Finance%20Leveraged%20Staking%20v1.0",
+      "auditor": "External",
+      "date": "2024-03",
+      "pdf_url": "https://raw.githubusercontent.com/oak-security/audit-reports/main/Bifrost/2024-03-11%20Audit%20Report%20-%20Bifrost%20Finance%20Leveraged%20Staking%20v1.0.pdf"
+    }
+  ],
+  "audit_count": 9,
+  "last_audited": "2024-03",
+  "auditors": [
+    "CertiK",
+    "External"
   ]
 }

@@ -262,5 +262,19 @@
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
     "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "autonolas-code4rena-2023-12",
+      "title": "2023-12-autonolas-findings",
+      "auditor": "Code4rena",
+      "date": "2023-12",
+      "pdf_url": "https://github.com/code-423n4/2023-12-autonolas-findings"
+    }
+  ],
+  "audit_count": 1,
+  "last_audited": "2023-12",
+  "auditors": [
+    "Code4rena"
   ]
 }

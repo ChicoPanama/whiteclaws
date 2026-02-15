@@ -121,5 +121,19 @@
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
     "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "aera-spearbit-652fe9fa1c0d6f6c0e0876d6-aera-spearbit-security-review-aug20",
+      "title": "652fe9fa1c0d6f6c0e0876d6 Aera Spearbit Security Review Aug2023",
+      "auditor": "Spearbit",
+      "date": "",
+      "pdf_url": "https://cdn.prod.website-files.com/62cd150e5e9efc960319c44d/652fe9fa1c0d6f6c0e0876d6_Aera-Spearbit-Security-Review-Aug2023.pdf"
+    }
+  ],
+  "audit_count": 1,
+  "last_audited": "",
+  "auditors": [
+    "Spearbit"
   ]
 }

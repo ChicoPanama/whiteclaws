@@ -113,9 +113,31 @@
     }
   },
   "eligibility": [
-    "Open to all researchers \u2014 pseudonymous submissions accepted",
+    "Open to all researchers — pseudonymous submissions accepted",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "alchemix-code4rena-2022-05",
+      "title": "2022-05-alchemix-findings",
+      "auditor": "Code4rena",
+      "date": "2022-05",
+      "pdf_url": "https://github.com/code-423n4/2022-05-alchemix-findings"
+    },
+    {
+      "id": "alchemix-sherlock-2024-04",
+      "title": "2024-04-alchemix-judging",
+      "auditor": "Sherlock",
+      "date": "2024-04",
+      "pdf_url": "https://github.com/sherlock-audit/2024-04-alchemix-judging"
+    }
+  ],
+  "audit_count": 2,
+  "last_audited": "2024-04",
+  "auditors": [
+    "Code4rena",
+    "Sherlock"
   ]
 }

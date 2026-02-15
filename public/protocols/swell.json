@@ -256,5 +256,34 @@
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
     "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "swell-hexens-show-details",
+      "title": "Show details",
+      "auditor": "Hexens",
+      "date": "",
+      "pdf_url": "https://github.com/Hexens/Smart-Contract-Review-Public-Reports/blob/main/swell-mar24(Public).pdf"
+    },
+    {
+      "id": "swell-hexens-2024",
+      "title": "Show details",
+      "auditor": "Hexens",
+      "date": "2024",
+      "pdf_url": "https://github.com/Hexens/Smart-Contract-Review-Public-Reports/blob/main/swell-l2-pre-deposit-audit-april-2024%20(Public).pdf"
+    },
+    {
+      "id": "swell-cyfrin-2024-02",
+      "title": "2024-02-23-cyfrin-swell-barracuda-v2.0.pdf",
+      "auditor": "Cyfrin",
+      "date": "2024-02",
+      "pdf_url": "https://raw.githubusercontent.com/Cyfrin/cyfrin-audit-reports/main/reports/2024-02-23-cyfrin-swell-barracuda-v2.0.pdf"
+    }
+  ],
+  "audit_count": 3,
+  "last_audited": "2024-02",
+  "auditors": [
+    "Cyfrin",
+    "Hexens"
   ]
 }

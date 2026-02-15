@@ -263,5 +263,41 @@
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
     "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "yelay-external-audits",
+      "title": "audits",
+      "auditor": "External",
+      "date": "",
+      "pdf_url": "https://github.com/YieldLayer/yelay-lite/tree/main/audits"
+    },
+    {
+      "id": "yelay-hexens-show-details",
+      "title": "Show details",
+      "auditor": "Hexens",
+      "date": "",
+      "pdf_url": "https://github.com/Hexens/Smart-Contract-Review-Public-Reports/blob/main/yelay-oct-25(Final).pdf"
+    },
+    {
+      "id": "yelay-hexens-2024",
+      "title": "Show details",
+      "auditor": "Hexens",
+      "date": "2024",
+      "pdf_url": "https://github.com/Hexens/Smart-Contract-Review-Public-Reports/blob/main/yelay-audit-sept-2024(Public).pdf"
+    },
+    {
+      "id": "yelay-hexens-2025",
+      "title": "Show details",
+      "auditor": "Hexens",
+      "date": "2025",
+      "pdf_url": "https://github.com/Hexens/Smart-Contract-Review-Public-Reports/blob/main/yelay-nft-rewards-audit-jan-2025(Public).pdf"
+    }
+  ],
+  "audit_count": 4,
+  "last_audited": "2025",
+  "auditors": [
+    "External",
+    "Hexens"
   ]
 }

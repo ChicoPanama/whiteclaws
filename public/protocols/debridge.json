@@ -268,5 +268,33 @@
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
     "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "debridge-halborn-debridge-solana-contracts-solana-program-security-audit-repo",
+      "title": "deBridge_Solana_Contracts_Solana_Program_Security_Audit_Report_Halborn.pdf",
+      "auditor": "Halborn",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/HalbornSecurity/PublicReports/master/Solana%20Program%20Audit/deBridge_Solana_Contracts_Solana_Program_Security_Audit_Report_Halborn.pdf"
+    },
+    {
+      "id": "debridge-halborn-debridge-cross-chain-swap-smart-contract-security-audit-repo",
+      "title": "deBridge_Cross_Chain_Swap_Smart_Contract_Security_Audit_Report_Halborn.pdf",
+      "auditor": "Halborn",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/HalbornSecurity/PublicReports/master/Solidity%20Smart%20Contract%20Audits/deBridge_Cross_Chain_Swap_Smart_Contract_Security_Audit_Report_Halborn.pdf"
+    },
+    {
+      "id": "debridge-halborn-debridge-solana-tx-parser-whitebox-pentest-report-halborn-fi",
+      "title": "Debridge_solana_tx_parser_Whitebox_Pentest_Report_Halborn_Final.pdf",
+      "auditor": "Halborn",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/HalbornSecurity/PublicReports/master/Web%20Pentest/Debridge_solana_tx_parser_Whitebox_Pentest_Report_Halborn_Final.pdf"
+    }
+  ],
+  "audit_count": 3,
+  "last_audited": "",
+  "auditors": [
+    "Halborn"
   ]
 }

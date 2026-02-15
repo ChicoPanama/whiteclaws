@@ -263,5 +263,34 @@
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
     "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "livepeer-trail-of-bits-livepeer-pdf",
+      "title": "livepeer.pdf",
+      "auditor": "Trail of Bits",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/trailofbits/publications/master/reviews/livepeer.pdf"
+    },
+    {
+      "id": "livepeer-code4rena-2022-01",
+      "title": "2022-01-livepeer-findings",
+      "auditor": "Code4rena",
+      "date": "2022-01",
+      "pdf_url": "https://github.com/code-423n4/2022-01-livepeer-findings"
+    },
+    {
+      "id": "livepeer-code4rena-2023-08",
+      "title": "2023-08-livepeer-findings",
+      "auditor": "Code4rena",
+      "date": "2023-08",
+      "pdf_url": "https://github.com/code-423n4/2023-08-livepeer-findings"
+    }
+  ],
+  "audit_count": 3,
+  "last_audited": "2023-08",
+  "auditors": [
+    "Code4rena",
+    "Trail of Bits"
   ]
 }

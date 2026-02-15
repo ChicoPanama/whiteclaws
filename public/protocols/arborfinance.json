@@ -74,8 +74,30 @@
     }
   },
   "eligibility": [
-    "Open to all researchers \u2014 pseudonymous submissions accepted",
+    "Open to all researchers — pseudonymous submissions accepted",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "arborfinance-spearbit-previously-porter-finance-spearbit-audit",
+      "title": "previously porter finance spearbit audit",
+      "auditor": "Spearbit",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/alwaysbegrowing/arbor-contracts/main/audits/previously-porter-finance-spearbit-audit.pdf"
+    },
+    {
+      "id": "arborfinance-zellic-previously-porter-finance-zellic-audit",
+      "title": "previously porter finance zellic audit",
+      "auditor": "Zellic",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/alwaysbegrowing/arbor-contracts/main/audits/previously-porter-finance-zellic-audit.pdf"
+    }
+  ],
+  "audit_count": 2,
+  "last_audited": "",
+  "auditors": [
+    "Spearbit",
+    "Zellic"
   ]
 }

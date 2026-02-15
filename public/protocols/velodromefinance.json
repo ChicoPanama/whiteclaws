@@ -264,5 +264,42 @@
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
     "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "velodromefinance-spearbit-velodrome-spearbit-security-review-nov23-pdf",
+      "title": "Velodrome-Spearbit-Security-Review-Nov23.pdf",
+      "auditor": "Spearbit",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/spearbit/portfolio/master/pdfs/Velodrome-Spearbit-Security-Review-Nov23.pdf"
+    },
+    {
+      "id": "velodromefinance-spearbit-velodrome-spearbit-security-review-pdf",
+      "title": "Velodrome-Spearbit-Security-Review.pdf",
+      "auditor": "Spearbit",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/spearbit/portfolio/master/pdfs/Velodrome-Spearbit-Security-Review.pdf"
+    },
+    {
+      "id": "velodromefinance-code4rena-2022-05",
+      "title": "2022-05-velodrome-findings",
+      "auditor": "Code4rena",
+      "date": "2022-05",
+      "pdf_url": "https://github.com/code-423n4/2022-05-velodrome-findings"
+    },
+    {
+      "id": "velodromefinance-cantina-2024-apr",
+      "title": "NFT Governance Contract Audit for Velodrome GovNFT 03 April 2024 - 08 April 2024",
+      "auditor": "Cantina",
+      "date": "2024-Apr",
+      "pdf_url": "https://cantina.xyz/portfolio/aa79aa69-8468-442d-bfbb-b403de36edec"
+    }
+  ],
+  "audit_count": 4,
+  "last_audited": "2024",
+  "auditors": [
+    "Cantina",
+    "Code4rena",
+    "Spearbit"
   ]
 }

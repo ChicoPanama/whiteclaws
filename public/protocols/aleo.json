@@ -82,6 +82,28 @@
     "KYC verification required before payout",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "aleo-trail-of-bits-2023-10",
+      "title": "2023-10-aleo-securityreview.pdf",
+      "auditor": "Trail of Bits",
+      "date": "2023-10",
+      "pdf_url": "https://raw.githubusercontent.com/trailofbits/publications/master/reviews/2023-10-aleo-securityreview.pdf"
+    },
+    {
+      "id": "aleo-sherlock-2024-05",
+      "title": "2024-05-aleo-judging",
+      "auditor": "Sherlock",
+      "date": "2024-05",
+      "pdf_url": "https://github.com/sherlock-audit/2024-05-aleo-judging"
+    }
+  ],
+  "audit_count": 2,
+  "last_audited": "2024-05",
+  "auditors": [
+    "Sherlock",
+    "Trail of Bits"
   ]
 }

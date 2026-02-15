@@ -147,5 +147,47 @@
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
     "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "nftfi-halborn-nftfi-ethereum-smart-contract-security-audit-report-halborn-",
+      "title": "NFTfi_Ethereum_Smart_Contract_Security_Audit_Report_Halborn_Final.pdf",
+      "auditor": "Halborn",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/HalbornSecurity/PublicReports/master/Solidity%20Smart%20Contract%20Audits/NFTfi_Ethereum_Smart_Contract_Security_Audit_Report_Halborn_Final.pdf"
+    },
+    {
+      "id": "nftfi-halborn-nftfi-eth-nftfi-collection-offer-smart-contract-security-aud",
+      "title": "NFTfi_eth_nftfi_Collection_Offer_Smart_Contract_Security_Audit_Report_Halborn_Final.pdf",
+      "auditor": "Halborn",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/HalbornSecurity/PublicReports/master/Solidity%20Smart%20Contract%20Audits/NFTfi_eth_nftfi_Collection_Offer_Smart_Contract_Security_Audit_Report_Halborn_Final.pdf"
+    },
+    {
+      "id": "nftfi-halborn-nftfi-directloanfixedoffer-redeployment-smart-contract-secur",
+      "title": "NFTfi_DirectLoanFixedOffer_Redeployment_Smart_Contract_Security_Audit_Report_Halborn_Final.pdf",
+      "auditor": "Halborn",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/HalbornSecurity/PublicReports/master/Solidity%20Smart%20Contract%20Audits/NFTfi_DirectLoanFixedOffer_Redeployment_Smart_Contract_Security_Audit_Report_Halborn_Final.pdf"
+    },
+    {
+      "id": "nftfi-halborn-nftfi-bundles-airdrop-smart-contract-security-audit-report-h",
+      "title": "NFTfi_Bundles_Airdrop_Smart_Contract_Security_Audit_Report_Halborn_Final.pdf",
+      "auditor": "Halborn",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/HalbornSecurity/PublicReports/master/Solidity%20Smart%20Contract%20Audits/NFTfi_Bundles_Airdrop_Smart_Contract_Security_Audit_Report_Halborn_Final.pdf"
+    },
+    {
+      "id": "nftfi-halborn-nftfi-native-punk-wrapper-smart-contract-security-audit-repo",
+      "title": "NFTfi_Native_Punk_Wrapper_Smart_Contract_Security_Audit_Report_Halborn_Final.pdf",
+      "auditor": "Halborn",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/HalbornSecurity/PublicReports/master/Solidity%20Smart%20Contract%20Audits/NFTfi_Native_Punk_Wrapper_Smart_Contract_Security_Audit_Report_Halborn_Final.pdf"
+    }
+  ],
+  "audit_count": 5,
+  "last_audited": "",
+  "auditors": [
+    "Halborn"
   ]
 }

@@ -113,5 +113,40 @@
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
     "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "eclipse-trail-of-bits-2023-02",
+      "title": "2023-02-eclipse-mosquitto-lightweight-threatmodel.pdf",
+      "auditor": "Trail of Bits",
+      "date": "2023-02",
+      "pdf_url": "https://raw.githubusercontent.com/trailofbits/publications/master/reviews/2023-02-eclipse-mosquitto-lightweight-threatmodel.pdf"
+    },
+    {
+      "id": "eclipse-trail-of-bits-2023-03",
+      "title": "2023-03-eclipse-mosquitto-securityreview.pdf",
+      "auditor": "Trail of Bits",
+      "date": "2023-03",
+      "pdf_url": "https://raw.githubusercontent.com/trailofbits/publications/master/reviews/2023-03-eclipse-mosquitto-securityreview.pdf"
+    },
+    {
+      "id": "eclipse-trail-of-bits-2023-05",
+      "title": "2023-05-eclipse-jkube-securityreview.pdf",
+      "auditor": "Trail of Bits",
+      "date": "2023-05",
+      "pdf_url": "https://raw.githubusercontent.com/trailofbits/publications/master/reviews/2023-05-eclipse-jkube-securityreview.pdf"
+    },
+    {
+      "id": "eclipse-trail-of-bits-2023-12",
+      "title": "2023-12-eclipse-temurin-securityreview.pdf",
+      "auditor": "Trail of Bits",
+      "date": "2023-12",
+      "pdf_url": "https://raw.githubusercontent.com/trailofbits/publications/master/reviews/2023-12-eclipse-temurin-securityreview.pdf"
+    }
+  ],
+  "audit_count": 4,
+  "last_audited": "2023-12",
+  "auditors": [
+    "Trail of Bits"
   ]
 }

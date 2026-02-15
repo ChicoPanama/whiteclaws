@@ -70,8 +70,86 @@
     }
   },
   "eligibility": [
-    "Open to all researchers \u2014 pseudonymous submissions accepted",
+    "Open to all researchers — pseudonymous submissions accepted",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "moonwell-halborn-moonwell-cloud-security-assesment-report-halborn-final-pdf",
+      "title": "Moonwell_Cloud_Security_Assesment_Report_Halborn_Final.pdf",
+      "auditor": "Halborn",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/HalbornSecurity/PublicReports/master/Cloud%20Security/Moonwell_Cloud_Security_Assesment_Report_Halborn_Final.pdf"
+    },
+    {
+      "id": "moonwell-halborn-moonwell-finance-compound-vault-smart-contract-security-asse",
+      "title": "Moonwell_Finance_Compound_Vault_Smart_Contract_Security_Assessment_Report_Halborn_Final.pdf",
+      "auditor": "Halborn",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/HalbornSecurity/PublicReports/master/Solidity%20Smart%20Contract%20Audits/Moonwell_Finance_Compound_Vault_Smart_Contract_Security_Assessment_Report_Halborn_Final.pdf"
+    },
+    {
+      "id": "moonwell-halborn-moonwell-finance-contracts-v2-smart-contract-security-assess",
+      "title": "Moonwell_Finance_Contracts_V2_Smart_Contract_Security_Assessment_Report_Halborn_Final.pdf",
+      "auditor": "Halborn",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/HalbornSecurity/PublicReports/master/Solidity%20Smart%20Contract%20Audits/Moonwell_Finance_Contracts_V2_Smart_Contract_Security_Assessment_Report_Halborn_Final.pdf"
+    },
+    {
+      "id": "moonwell-halborn-moonwell-finance-governance-dynamic-quorum-smart-contract-se",
+      "title": "Moonwell_Finance_Governance_Dynamic_Quorum_Smart_Contract_Security_Audit_Report_Halborn_Final.pdf",
+      "auditor": "Halborn",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/HalbornSecurity/PublicReports/master/Solidity%20Smart%20Contract%20Audits/Moonwell_Finance_Governance_Dynamic_Quorum_Smart_Contract_Security_Audit_Report_Halborn_Final.pdf"
+    },
+    {
+      "id": "moonwell-halborn-moonwell-finance-governance-and-timelock-updates-smart-contr",
+      "title": "Moonwell_Finance_Governance_and_Timelock_Updates_Smart_Contract_Security_Audit_Report_Halborn_Final.pdf",
+      "auditor": "Halborn",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/HalbornSecurity/PublicReports/master/Solidity%20Smart%20Contract%20Audits/Moonwell_Finance_Governance_and_Timelock_Updates_Smart_Contract_Security_Audit_Report_Halborn_Final.pdf"
+    },
+    {
+      "id": "moonwell-halborn-moonwell-finance-safety-module-smart-contract-security-audit",
+      "title": "Moonwell_Finance_Safety_Module_Smart_Contract_Security_Audit_Report_Halborn_Final.pdf",
+      "auditor": "Halborn",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/HalbornSecurity/PublicReports/master/Solidity%20Smart%20Contract%20Audits/Moonwell_Finance_Safety_Module_Smart_Contract_Security_Audit_Report_Halborn_Final.pdf"
+    },
+    {
+      "id": "moonwell-halborn-moonwell-finance-smart-contract-security-audit-report-halbor",
+      "title": "Moonwell_Finance_Smart_Contract_Security_Audit_Report_Halborn_Final.pdf",
+      "auditor": "Halborn",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/HalbornSecurity/PublicReports/master/Solidity%20Smart%20Contract%20Audits/Moonwell_Finance_Smart_Contract_Security_Audit_Report_Halborn_Final.pdf"
+    },
+    {
+      "id": "moonwell-halborn-moonwell-finance-token-sale-and-comptroller-updates-report-h",
+      "title": "Moonwell_Finance_Token_Sale_and_Comptroller_Updates_Report_Halborn_Final.pdf",
+      "auditor": "Halborn",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/HalbornSecurity/PublicReports/master/Solidity%20Smart%20Contract%20Audits/Moonwell_Finance_Token_Sale_and_Comptroller_Updates_Report_Halborn_Final.pdf"
+    },
+    {
+      "id": "moonwell-halborn-moonwell-finance-xwell-token-rate-limiting-smart-contract-se",
+      "title": "Moonwell_Finance_XWell_Token_Rate-Limiting_Smart_Contract_Security_Assessment_Report_Halborn_Final.pdf",
+      "auditor": "Halborn",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/HalbornSecurity/PublicReports/master/Solidity%20Smart%20Contract%20Audits/Moonwell_Finance_XWell_Token_Rate-Limiting_Smart_Contract_Security_Assessment_Report_Halborn_Final.pdf"
+    },
+    {
+      "id": "moonwell-code4rena-2023-07",
+      "title": "2023-07-moonwell-findings",
+      "auditor": "Code4rena",
+      "date": "2023-07",
+      "pdf_url": "https://github.com/code-423n4/2023-07-moonwell-findings"
+    }
+  ],
+  "audit_count": 10,
+  "last_audited": "2023-07",
+  "auditors": [
+    "Code4rena",
+    "Halborn"
   ]
 }

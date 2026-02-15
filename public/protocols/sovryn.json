@@ -69,8 +69,36 @@
     }
   },
   "eligibility": [
-    "Open to all researchers \u2014 pseudonymous submissions accepted",
+    "Open to all researchers — pseudonymous submissions accepted",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "sovryn-least-authority-audit-of-sovryn-bi-directional-fastbtc",
+      "title": "audit-of-sovryn-bi-directional-fastbtc",
+      "auditor": "Least Authority",
+      "date": "",
+      "pdf_url": "https://leastauthority.com/blog/audit-of-sovryn-bi-directional-fastbtc/"
+    },
+    {
+      "id": "sovryn-least-authority-sovryn-and-8211-bi-directional-fastbtc",
+      "title": "Sovryn &#8211; Bi-directional FastBTC",
+      "auditor": "Least Authority",
+      "date": "",
+      "pdf_url": "https://leastauthority.com/blog/audit-of-sovryn-bi-directional-fastbtc/"
+    },
+    {
+      "id": "sovryn-least-authority-read-more",
+      "title": "Read More »",
+      "auditor": "Least Authority",
+      "date": "",
+      "pdf_url": "https://leastauthority.com/blog/audit-of-sovryn-bi-directional-fastbtc/"
+    }
+  ],
+  "audit_count": 3,
+  "last_audited": "",
+  "auditors": [
+    "Least Authority"
   ]
 }

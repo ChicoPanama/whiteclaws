@@ -268,5 +268,19 @@
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
     "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "fbtc-mixbytes-readme-md",
+      "title": "README.md",
+      "auditor": "MixBytes",
+      "date": "",
+      "pdf_url": "https://github.com/mixbytes/audits_public/blob/master/Mantle%20Network/FBTC%20Timelock/README.md"
+    }
+  ],
+  "audit_count": 1,
+  "last_audited": "",
+  "auditors": [
+    "MixBytes"
   ]
 }

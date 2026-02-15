@@ -241,5 +241,27 @@
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
     "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "starkex-peckshield-starkex-audit-report-2019-29-en-1-0-pdf",
+      "title": "starkex_audit_report_2019_29_en_1_0.pdf",
+      "auditor": "PeckShield",
+      "date": "",
+      "pdf_url": "https://raw.githubusercontent.com/peckshield/publications/master/audit_reports/starkex_audit_report_2019_29_en_1_0.pdf"
+    },
+    {
+      "id": "starkex-trail-of-bits-2025-08",
+      "title": "2025-08-starkware-starkex-diff-review-securityreview.pdf",
+      "auditor": "Trail of Bits",
+      "date": "2025-08",
+      "pdf_url": "https://raw.githubusercontent.com/trailofbits/publications/master/reviews/2025-08-starkware-starkex-diff-review-securityreview.pdf"
+    }
+  ],
+  "audit_count": 2,
+  "last_audited": "2025-08",
+  "auditors": [
+    "PeckShield",
+    "Trail of Bits"
   ]
 }

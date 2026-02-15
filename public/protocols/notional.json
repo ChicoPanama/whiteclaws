@@ -100,5 +100,77 @@
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
     "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "notional-code4rena-2021-08",
+      "title": "2021-08-notional-findings",
+      "auditor": "Code4rena",
+      "date": "2021-08",
+      "pdf_url": "https://github.com/code-423n4/2021-08-notional-findings"
+    },
+    {
+      "id": "notional-code4rena-2022-01",
+      "title": "2022-01-notional-findings",
+      "auditor": "Code4rena",
+      "date": "2022-01",
+      "pdf_url": "https://github.com/code-423n4/2022-01-notional-findings"
+    },
+    {
+      "id": "notional-consensys-diligence-2022-03",
+      "title": "Notional Protocol V2.1",
+      "auditor": "Consensys Diligence",
+      "date": "2022-03",
+      "pdf_url": "https://consensys.io/audits/2022/03/notional-protocol-v2.1/"
+    },
+    {
+      "id": "notional-consensys-diligence-2022-07",
+      "title": "Notional Finance",
+      "auditor": "Consensys Diligence",
+      "date": "2022-07",
+      "pdf_url": "https://consensys.io/audits/2022/07/notional-finance/"
+    },
+    {
+      "id": "notional-sherlock-2022-09",
+      "title": "2022-09-notional-judging",
+      "auditor": "Sherlock",
+      "date": "2022-09",
+      "pdf_url": "https://github.com/sherlock-audit/2022-09-notional-judging"
+    },
+    {
+      "id": "notional-sherlock-2022-12",
+      "title": "2022-12-notional-judging",
+      "auditor": "Sherlock",
+      "date": "2022-12",
+      "pdf_url": "https://github.com/sherlock-audit/2022-12-notional-judging"
+    },
+    {
+      "id": "notional-sherlock-2023-02",
+      "title": "2023-02-notional-judging",
+      "auditor": "Sherlock",
+      "date": "2023-02",
+      "pdf_url": "https://github.com/sherlock-audit/2023-02-notional-judging"
+    },
+    {
+      "id": "notional-sherlock-2023-03",
+      "title": "2023-03-notional-judging",
+      "auditor": "Sherlock",
+      "date": "2023-03",
+      "pdf_url": "https://github.com/sherlock-audit/2023-03-notional-judging"
+    },
+    {
+      "id": "notional-sherlock-2023-10",
+      "title": "2023-10-notional-judging",
+      "auditor": "Sherlock",
+      "date": "2023-10",
+      "pdf_url": "https://github.com/sherlock-audit/2023-10-notional-judging"
+    }
+  ],
+  "audit_count": 9,
+  "last_audited": "2023-10",
+  "auditors": [
+    "Code4rena",
+    "Consensys Diligence",
+    "Sherlock"
   ]
 }

@@ -59,7 +59,7 @@
   "program_rules": [
     "Proof of Concept is required for all submissions. Reports without a working PoC demonstrating the vulnerability will not be considered.",
     "KYC verification is required before bounty payout. Researchers must complete identity verification to receive rewards.",
-    "This program follows Primacy of Impact \u2014 valid findings are rewarded based on demonstrated impact regardless of whether the specific attack vector was previously known.",
+    "This program follows Primacy of Impact — valid findings are rewarded based on demonstrated impact regardless of whether the specific attack vector was previously known.",
     "Submissions are triaged by the security team. Expect initial response within 48 hours of submission.",
     "Only previously unreported vulnerabilities are eligible. Duplicate submissions will be closed.",
     "Vulnerabilities must be reported through the WhiteClaws platform. Public disclosure before resolution disqualifies the submission.",
@@ -85,6 +85,20 @@
     "KYC verification required before payout",
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "farcaster-cyfrin-2023-11",
+      "title": "2023-11-05-cyfrin-farcaster-v1.0.pdf",
+      "auditor": "Cyfrin",
+      "date": "2023-11",
+      "pdf_url": "https://raw.githubusercontent.com/Cyfrin/cyfrin-audit-reports/main/reports/2023-11-05-cyfrin-farcaster-v1.0.pdf"
+    }
+  ],
+  "audit_count": 1,
+  "last_audited": "2023-11",
+  "auditors": [
+    "Cyfrin"
   ]
 }

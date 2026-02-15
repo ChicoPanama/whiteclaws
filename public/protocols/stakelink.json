@@ -174,5 +174,26 @@
     "Proof of Concept demonstrating exploitability is mandatory",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
     "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "stakelink-cyfrin-2025-06",
+      "title": "2025-06-04-cyfrin-stakelink-pr152-linkmigrator-v2.0.pdf",
+      "auditor": "Cyfrin",
+      "date": "2025-06",
+      "pdf_url": "https://raw.githubusercontent.com/Cyfrin/cyfrin-audit-reports/main/reports/2025-06-04-cyfrin-stakelink-pr152-linkmigrator-v2.0.pdf"
+    },
+    {
+      "id": "stakelink-cyfrin-2025-08",
+      "title": "2025-08-02-cyfrin-stakelink-vesting-v2.0.pdf",
+      "auditor": "Cyfrin",
+      "date": "2025-08",
+      "pdf_url": "https://raw.githubusercontent.com/Cyfrin/cyfrin-audit-reports/main/reports/2025-08-02-cyfrin-stakelink-vesting-v2.0.pdf"
+    }
+  ],
+  "audit_count": 2,
+  "last_audited": "2025-08",
+  "auditors": [
+    "Cyfrin"
   ]
 }

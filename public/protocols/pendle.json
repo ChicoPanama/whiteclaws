@@ -75,8 +75,37 @@
     }
   },
   "eligibility": [
-    "Open to all researchers \u2014 pseudonymous submissions accepted",
+    "Open to all researchers — pseudonymous submissions accepted",
     "Submissions from current or former employees/contractors of the protocol team are not eligible",
-    "Findings must be original work \u2014 no re-submission of known issues"
+    "Findings must be original work — no re-submission of known issues"
+  ],
+  "audits": [
+    {
+      "id": "pendle-dedaub-pendle",
+      "title": "Pendle",
+      "auditor": "Dedaub",
+      "date": "",
+      "pdf_url": "https://dedaub.com/audits/pendle/"
+    },
+    {
+      "id": "pendle-spearbit-2024",
+      "title": "Pendle-Spearbit-Security-Review-July-2024.pdf",
+      "auditor": "Spearbit",
+      "date": "2024",
+      "pdf_url": "https://raw.githubusercontent.com/spearbit/portfolio/master/pdfs/Pendle-Spearbit-Security-Review-July-2024.pdf"
+    },
+    {
+      "id": "pendle-spearbit-2025",
+      "title": "Pendle-Spearbit-Security-Review-August-2025.pdf",
+      "auditor": "Spearbit",
+      "date": "2025",
+      "pdf_url": "https://raw.githubusercontent.com/spearbit/portfolio/master/pdfs/Pendle-Spearbit-Security-Review-August-2025.pdf"
+    }
+  ],
+  "audit_count": 3,
+  "last_audited": "2025",
+  "auditors": [
+    "Dedaub",
+    "Spearbit"
   ]
 }
