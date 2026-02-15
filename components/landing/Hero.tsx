@@ -106,7 +106,7 @@ export default function Hero() {
             <span className="line">
               <span className="line-inner">Autonomous</span>
             </span>
-            <span className="line">
+            <span className="line line-break">
               <span className="line-inner">Agents.</span>
             </span>
             <span className="line">
