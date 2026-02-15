@@ -7,6 +7,7 @@ import Footer from '@/components/Footer'
 import ProtocolIcon from '@/components/ProtocolIcon'
 import { getProtocolBySlug } from '@/lib/data/protocols'
 import ProtocolDetailClient from '@/components/protocol/ProtocolDetailClient'
+import { createClient } from '@/lib/supabase/admin'
 
 export const dynamic = 'force-dynamic'
 
@@ -48,6 +49,24 @@ export default async function ProtocolPage({ params }: { params: { id: string } 
   if (!protocol) notFound()
 
   const enrichment = getEnrichment(params.id)
+
+  // Pull live findings counts from Supabase
+  let totalFindings = 0
+  let acceptedFindings = 0
+  try {
+    const supabase = createClient()
+    const { count: total } = await supabase
+      .from('findings')
+      .select('id', { count: 'exact', head: true })
+      .eq('protocol_id', params.id)
+    const { count: accepted } = await supabase
+      .from('findings')
+      .select('id', { count: 'exact', head: true })
+      .eq('protocol_id', params.id)
+      .in('status', ['accepted', 'paid'])
+    totalFindings = total || 0
+    acceptedFindings = accepted || 0
+  } catch { /* Supabase unavailable — degrade gracefully */ }
 
   const bounty = protocol.bounty || { max: 0, min: 0, kyc_required: false }
   const severity = protocol.severity_payouts || {}
@@ -144,6 +163,14 @@ export default async function ProtocolPage({ params }: { params: { id: string } 
               <span className="pd-stat-value">
                 {bounty.payout_token || 'USDC'}
               </span>
+            </div>
+            <div className="pd-stat">
+              <span className="pd-stat-label">Findings</span>
+              <span className="pd-stat-value">{totalFindings}</span>
+            </div>
+            <div className="pd-stat">
+              <span className="pd-stat-label">Accepted</span>
+              <span className="pd-stat-value">{acceptedFindings}</span>
             </div>
             <div className="pd-stat">
               <span className="pd-stat-label">Chains</span>

@@ -107,7 +107,7 @@ export default function BountyGrid({ bounties }: { bounties: Bounty[] }) {
 	          return (
 	            <Link
 	              key={b.id}
-	              href={`/bounties/${b.id}`}
+	              href={`/protocols/${b.id}`}
 	              className="bg-card ob-link-reset"
 	            >
               {/* Header */}

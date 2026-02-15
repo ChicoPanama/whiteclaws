@@ -267,7 +267,7 @@ export default function DashboardContent() {
                     </div>
                     <span className="sf-protocol-bounty">${Number(b.max_bounty).toLocaleString()}</span>
                   </div>
-                  <Link href={`/bounties/${b.slug}`} className="pr-ext-link" style={{ marginTop: 12, display: 'inline-block' }}>
+                  <Link href={`/protocols/${b.slug}`} className="pr-ext-link" style={{ marginTop: 12, display: 'inline-block' }}>
                     View Details →
                   </Link>
                 </div>
