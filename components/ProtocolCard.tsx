@@ -22,7 +22,7 @@ export default function ProtocolCard({ bounty }: ProtocolCardProps) {
 
   return (
     <Link
-      href={`/bounties/${bounty.id}`}
+      href={`/protocols/${bounty.id}`}
       className="block bg-[var(--surface)] border border-[var(--border)] rounded-xl p-6 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg group relative overflow-hidden"
     >
       {/* Scan line effect on hover */}
@@ -65,15 +65,55 @@ export default function ProtocolCard({ bounty }: ProtocolCardProps) {
       {/* Description */}
       {bounty.description && (
         <p className="text-sm text-[var(--ink-2)] line-clamp-2 mb-4">
-          {bounty.description}
+          {bounty.description.length > 120
+            ? bounty.description.slice(0, 120) + '…'
+            : bounty.description}
         </p>
       )}
 
+      {/* Severity mini-bar */}
+      {(bounty.severityMax || bounty.severityHigh) ? (
+        <div className="mb-4 space-y-1">
+          <div className="flex items-center gap-2 text-xs">
+            <span className="w-2 h-2 rounded-full bg-[#FF4747]" />
+            <span className="text-[var(--muted)]">Critical</span>
+            <span className="ml-auto font-mono text-[var(--green)]">{formatReward(bounty.severityMax || 0)}</span>
+          </div>
+          {bounty.severityHigh ? (
+            <div className="flex items-center gap-2 text-xs">
+              <span className="w-2 h-2 rounded-full bg-[#FF8C42]" />
+              <span className="text-[var(--muted)]">High</span>
+              <span className="ml-auto font-mono text-[var(--green)]">{formatReward(bounty.severityHigh || 0)}</span>
+            </div>
+          ) : null}
+        </div>
+      ) : null}
+
+      {/* Badges */}
+      <div className="flex flex-wrap gap-2 mb-4">
+        {bounty.kycRequired && (
+          <span className="px-2 py-0.5 bg-[var(--surface-2)] rounded text-xs text-[var(--muted)] font-mono border border-[var(--border)]">KYC</span>
+        )}
+        {bounty.pocRequired && (
+          <span className="px-2 py-0.5 bg-[var(--surface-2)] rounded text-xs text-[var(--muted)] font-mono border border-[var(--border)]">PoC</span>
+        )}
+        {bounty.triaged && (
+          <span className="px-2 py-0.5 bg-[rgba(137,224,109,0.1)] rounded text-xs text-[var(--green)] font-mono border border-[rgba(137,224,109,0.3)]">Triaged</span>
+        )}
+        <span className="px-2 py-0.5 bg-[var(--surface-2)] rounded text-xs text-[var(--muted)] font-mono border border-[var(--border)]">{bounty.payoutToken || 'USDC'}</span>
+      </div>
+
       {/* Footer */}
       <div className="flex items-center justify-between pt-4 border-t border-[var(--border)]">
-        <span className="text-xs text-[var(--muted)] font-mono">
-          {bounty.scopeCount || 0} contracts
-        </span>
+        <div className="flex items-center gap-3 text-xs text-[var(--muted)] font-mono">
+          {bounty.scopeCount ? (
+            <span>{bounty.scopeCount} scope</span>
+          ) : null}
+          {bounty.contractCount ? (
+            <span>{bounty.contractCount} contracts</span>
+          ) : null}
+          <span>{bounty.liveSince}</span>
+        </div>
         <span className="text-sm font-semibold text-[var(--green)] flex items-center gap-1 group-hover:gap-2 transition-all">
           Hunt →
         </span>
