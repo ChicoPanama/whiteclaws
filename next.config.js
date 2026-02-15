@@ -15,6 +15,15 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  async redirects() {
+    return [
+      {
+        source: '/bounties/:slug/',
+        destination: '/protocols/:slug/',
+        permanent: true,
+      },
+    ]
+  },
   async rewrites() {
     return [
       {
