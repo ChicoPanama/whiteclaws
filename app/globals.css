@@ -330,30 +330,7 @@ a { color: inherit; text-decoration: none; }
   justify-content: center;
 }
 
-/* Subtle grid background */
-.hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(255,255,255,.015) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,.015) 1px, transparent 1px);
-  background-size: 80px 80px;
-  pointer-events: none;
-  z-index: 0;
-}
 
-/* Radial glow */
-.hero::after {
-  content: '';
-  position: absolute;
-  top: -200px;
-  right: -200px;
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(255,255,255,.02) 0%, transparent 70%);
-  pointer-events: none;
-}
 
 .hero-content {
   position: relative;
@@ -6471,11 +6448,6 @@ a { color: inherit; text-decoration: none; }
 /* =============================================
    HERO ENHANCEMENTS — Grid + Glow
    ============================================= */
-
-/* Animated Grid Background */
-.hero {
-  position: relative;
-}
 
 .hero::before {
   content: '';

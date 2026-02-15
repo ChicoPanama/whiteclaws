@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
+import SeverityBadge from '@/components/SeverityBadge'
 
 interface Finding {
   id: string
@@ -10,13 +11,6 @@ interface Finding {
   status: string
   created_at: string
   researcher?: { handle: string; display_name: string }
-}
-
-const severityColors: Record<string, string> = {
-  critical: '#ef4444',
-  high: '#f59e0b',
-  medium: '#3b82f6',
-  low: '#6b7280',
 }
 
 const statusColors: Record<string, string> = {
@@ -119,7 +113,7 @@ export default function ProtocolFindingsPage() {
                 <div>
                   <strong>{f.title}</strong>
                   <div style={{ display: 'flex', gap: '8px', marginTop: '4px' }}>
-                    <span style={{ color: severityColors[f.severity] || '#888', fontSize: '13px', textTransform: 'uppercase', fontWeight: 600 }}>{f.severity}</span>
+                    <SeverityBadge level={f.severity as any} />
                     <span style={{ color: statusColors[f.status] || '#888', fontSize: '13px', textTransform: 'uppercase' }}>{f.status}</span>
                   </div>
                   {f.researcher && (
