@@ -23,7 +23,7 @@ export async function GET(req: NextRequest) {
     const { data: ranking } = await supabase
       .from('agent_rankings')
       .select('rank, points, total_submissions, accepted_submissions, total_bounty_amount')
-      .eq('agent_id', agent.id)
+      .eq('researcher_id', agent.id)
       .single()
 
     // Get recent findings
