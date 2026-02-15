@@ -63,6 +63,7 @@ export interface PlatformFeature {
   description: string;
   slug: string;
   comingSoon?: boolean;
+  tier?: 'core' | 'support' | 'coming';
   longDescription: string;
   highlights: string[];
 }
