@@ -8,6 +8,9 @@
     "ethereum",
     "polygon"
   ],
+  "audits": [
+    { "id": "wc-006", "auditor": "WhiteClaws", "date": "2025", "title": "Hoenn Security Audit" }
+  ],
   "bounty": {
     "max": 50000,
     "min": 500,

@@ -7,6 +7,17 @@
   "chains": [
     "ethereum"
   ],
+  "audits": [
+    { "id": "scroll-zktrie", "auditor": "Trail of Bits", "date": "2023-07", "title": "Scroll zkTrie Security Review" },
+    { "id": "scroll-l2geth-init", "auditor": "Trail of Bits", "date": "2023-08", "title": "Scroll L2geth Initial Review" },
+    { "id": "scroll-l2geth", "auditor": "Trail of Bits", "date": "2023-08", "title": "Scroll L2geth Security Review" },
+    { "id": "scroll-4844", "auditor": "Trail of Bits", "date": "2024-04", "title": "Scroll 4844 Blob Security Review" },
+    { "id": "scroll-euclid1", "auditor": "Trail of Bits", "date": "2025-04", "title": "Scroll Euclid Phase 1 Review" },
+    { "id": "scroll-euclid2", "auditor": "Trail of Bits", "date": "2025-04", "title": "Scroll Euclid Phase 2 Review" },
+    { "id": "scroll-zellic1", "auditor": "Zellic", "date": "2023-05", "title": "Scroll Zellic Audit (May 2023)" },
+    { "id": "scroll-zellic2", "auditor": "Zellic", "date": "2023-09", "title": "Scroll Zellic Audit (Sep 2023)" },
+    { "id": "scroll-lido", "auditor": "Zellic", "date": "2023", "title": "Scroll Lido Gateway Audit" }
+  ],
   "bounty": {
     "max": 1000000,
     "min": 500,

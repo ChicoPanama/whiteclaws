@@ -7,6 +7,9 @@
   "chains": [
     "cosmos"
   ],
+  "audits": [
+    { "id": "xion-passkeys", "auditor": "Zellic", "date": "2024", "title": "Xion Passkeys Zellic Audit" }
+  ],
   "bounty": {
     "max": 500000,
     "min": 500,

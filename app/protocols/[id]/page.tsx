@@ -8,6 +8,7 @@ import ProtocolIcon from '@/components/ProtocolIcon'
 import { getProtocolBySlug } from '@/lib/data/protocols'
 import ProtocolDetailClient from '@/components/protocol/ProtocolDetailClient'
 import { createClient } from '@/lib/supabase/admin'
+import { getAuditsByProtocolSlug } from '@/lib/data/audits'
 
 export const dynamic = 'force-dynamic'
 
@@ -194,6 +195,7 @@ export default async function ProtocolPage({ params }: { params: { id: string } 
             submission_requirements={protocol.submission_requirements}
             eligibility={protocol.eligibility}
             enrichment={enrichment}
+            audits={getAuditsByProtocolSlug(protocol.slug)}
           />
 
         </div>

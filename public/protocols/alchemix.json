@@ -7,6 +7,9 @@
   "chains": [
     "ethereum"
   ],
+  "audits": [
+    { "id": "alchemix-v2", "auditor": "External", "date": "2022", "title": "Alchemix v2 Audit" }
+  ],
   "bounty": {
     "max": 500000,
     "min": 500,

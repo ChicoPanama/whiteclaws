@@ -7,6 +7,9 @@
   "chains": [
     "ethereum"
   ],
+  "audits": [
+    { "id": "imm-vaults", "auditor": "Immunefi Internal", "date": "2023-02", "title": "Immunefi Vaults System Audit" }
+  ],
   "bounty": {
     "max": 100000,
     "min": 500,

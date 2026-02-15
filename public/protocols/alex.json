@@ -7,6 +7,15 @@
   "chains": [
     "ethereum"
   ],
+  "audits": [
+    { "id": "alex-bridge", "auditor": "External", "date": "2023-04", "title": "ALEX Bridge Audit" },
+    { "id": "alex-bridge-cf", "auditor": "CoinFabrik", "date": "2022-12", "title": "ALEX Bridge Audit (CoinFabrik)" },
+    { "id": "alex-pool", "auditor": "External", "date": "2021-11", "title": "ALEX Pool Equation Audit" },
+    { "id": "alex-launchpad", "auditor": "External", "date": "2022-01", "title": "ALEX Launchpad & Vault Audit" },
+    { "id": "alex-dao", "auditor": "External", "date": "2022-02", "title": "ALEX DAO Audit" },
+    { "id": "alex-crp", "auditor": "External", "date": "2022-04", "title": "ALEX Launchpad v1.1 & AutoALEX Audit" },
+    { "id": "alex-la", "auditor": "Least Authority", "date": "2022", "title": "ALEX Least Authority Audit" }
+  ],
   "bounty": {
     "max": 100000,
     "min": 500,

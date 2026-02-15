@@ -7,6 +7,9 @@
   "chains": [
     "ethereum"
   ],
+  "audits": [
+    { "id": "wc-004", "auditor": "WhiteClaws", "date": "2025", "title": "Plume Network Security Audit" }
+  ],
   "bounty": {
     "max": 500000,
     "min": 500,

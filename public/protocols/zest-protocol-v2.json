@@ -7,6 +7,13 @@
   "chains": [
     "stacks"
   ],
+  "audits": [
+    { "id": "zest-v2", "auditor": "Clarity Alliance", "date": "2024", "title": "Zest Protocol v2 Audit" },
+    { "id": "zest-v2-upgrade", "auditor": "Clarity Alliance", "date": "2024", "title": "Zest Protocol v2 Upgrade Audit" },
+    { "id": "zest-v2-upgrade2", "auditor": "Clarity Alliance", "date": "2024", "title": "Zest Protocol v2 Upgrade V2 Audit" },
+    { "id": "zest-ca-2024", "auditor": "Clarity Alliance", "date": "2024-11", "title": "Zest ClarityAlliance Audit" },
+    { "id": "zest-cf-2023", "auditor": "CoinFabrik", "date": "2023-11", "title": "Zest CoinFabrik Audit" }
+  ],
   "bounty": {
     "max": 100000,
     "min": 500,

@@ -59,6 +59,17 @@ interface EnrichmentData {
   [key: string]: unknown
 }
 
+interface AuditRef {
+  id: string
+  title: string
+  auditor: string
+  date: string
+  pdfPath: string
+  category: string
+  chains: string[]
+  primitive: string
+}
+
 interface Props {
   severity: Record<string, SevData>
   contracts: ContractData[]
@@ -68,10 +79,11 @@ interface Props {
   submission_requirements?: SubmissionReqs
   eligibility?: string[]
   enrichment?: EnrichmentData | null
+  audits?: AuditRef[]
 }
 
 export default function ProtocolDetailClient({
-  severity, contracts, scope, slug, program_rules, submission_requirements, eligibility, enrichment
+  severity, contracts, scope, slug, program_rules, submission_requirements, eligibility, enrichment, audits
 }: Props) {
   const [expanded, setExpanded] = useState<string | null>('critical')
   const [tab, setTab] = useState<'scope' | 'contracts' | 'submission'>('scope')
@@ -416,6 +428,38 @@ export default function ProtocolDetailClient({
           </section>
         )
       })()}
+
+      {/* ─── AUDIT REPORTS ─── */}
+      {audits && audits.length > 0 && (
+        <section className="pd-section">
+          <h2 className="pd-heading"><span className="pd-num">◆</span>Audit Reports ({audits.length})</h2>
+          <div className="pd-audit-list">
+            {audits.map(a => (
+              <a
+                key={a.id}
+                href={a.pdfPath}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="pd-audit-row ob-link-reset"
+              >
+                <div className="pd-audit-row-main">
+                  <div className="pd-audit-row-left">
+                    <span className="pd-audit-row-title">{a.title}</span>
+                    <span className="pd-audit-row-sub">{a.auditor} &middot; {a.date}</span>
+                  </div>
+                  <div className="pd-audit-row-badges">
+                    {a.chains.map(c => (
+                      <span key={c} className="bg-badge chain">{c}</span>
+                    ))}
+                    <span className="bg-badge token">{a.primitive}</span>
+                  </div>
+                </div>
+                <span className="pd-audit-row-dl">PDF ↗</span>
+              </a>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* ─── CTA ─── */}
       <div className="pd-cta">

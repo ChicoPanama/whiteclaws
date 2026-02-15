@@ -66,3 +66,10 @@ export interface PlatformFeature {
   longDescription: string;
   highlights: string[];
 }
+
+export interface ProtocolAuditRef {
+  id: string;
+  auditor: string;
+  date: string;
+  title: string;
+}

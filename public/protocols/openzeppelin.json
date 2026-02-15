@@ -7,6 +7,20 @@
   "chains": [
     "ethereum"
   ],
+  "audits": [
+    { "id": "oz-2018", "auditor": "External", "date": "2018-10", "title": "OpenZeppelin Contracts Audit (2018)" },
+    { "id": "oz-checkpoints", "auditor": "External", "date": "2022-10", "title": "OpenZeppelin Checkpoints Audit" },
+    { "id": "oz-erc4626", "auditor": "External", "date": "2022-10", "title": "OpenZeppelin ERC-4626 Audit" },
+    { "id": "oz-v49", "auditor": "External", "date": "2023-05", "title": "OpenZeppelin v4.9 Audit" },
+    { "id": "oz-v50", "auditor": "External", "date": "2023-10", "title": "OpenZeppelin v5.0 Audit" },
+    { "id": "oz-v51", "auditor": "External", "date": "2024-10", "title": "OpenZeppelin v5.1 Audit" },
+    { "id": "oz-v52", "auditor": "External", "date": "2024-12", "title": "OpenZeppelin v5.2 Audit" },
+    { "id": "oz-v53", "auditor": "External", "date": "2025-04", "title": "OpenZeppelin v5.3 Audit" },
+    { "id": "oz-v54", "auditor": "External", "date": "2025-07", "title": "OpenZeppelin v5.4 Audit" },
+    { "id": "oz-v55", "auditor": "External", "date": "2025-10", "title": "OpenZeppelin v5.5 Audit" },
+    { "id": "oz-rlp", "auditor": "External", "date": "2025-11", "title": "OpenZeppelin RLP Audit" },
+    { "id": "oz-oif", "auditor": "OpenZeppelin", "date": "2025", "title": "OIF Broadcaster Audit" }
+  ],
   "bounty": {
     "max": 100000,
     "min": 500,

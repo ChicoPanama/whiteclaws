@@ -7,6 +7,9 @@
   "chains": [
     "ethereum"
   ],
+  "audits": [
+    { "id": "wc-003", "auditor": "WhiteClaws", "date": "2025", "title": "CC Protocol Security Audit" }
+  ],
   "bounty": {
     "max": 100000,
     "min": 500,

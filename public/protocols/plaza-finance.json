@@ -8,6 +8,9 @@
     "ethereum",
     "base"
   ],
+  "audits": [
+    { "id": "wc-005", "auditor": "WhiteClaws", "date": "2025", "title": "Plaza Finance Security Audit" }
+  ],
   "bounty": {
     "max": 100000,
     "min": 500,

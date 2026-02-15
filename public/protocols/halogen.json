@@ -7,6 +7,9 @@
   "chains": [
     "ethereum"
   ],
+  "audits": [
+    { "id": "wc-008", "auditor": "WhiteClaws", "date": "2025", "title": "Halogen Security Audit" }
+  ],
   "bounty": {
     "max": 50000,
     "min": 500,

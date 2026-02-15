@@ -7,6 +7,9 @@
   "chains": [
     "ethereum"
   ],
+  "audits": [
+    { "id": "sdola-yaudit", "auditor": "yAudit", "date": "2024", "title": "sDOLA yAudit" }
+  ],
   "bounty": {
     "max": 500000,
     "min": 500,

@@ -7,6 +7,9 @@
   "chains": [
     "base"
   ],
+  "audits": [
+    { "id": "pinto", "auditor": "External", "date": "2024", "title": "Pinto Protocol Audit" }
+  ],
   "bounty": {
     "max": 200000,
     "min": 500,

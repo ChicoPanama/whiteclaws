@@ -7,6 +7,9 @@
   "chains": [
     "near"
   ],
+  "audits": [
+    { "id": "ref-finance", "auditor": "External", "date": "2023", "title": "Ref Finance Security Audit" }
+  ],
   "bounty": {
     "max": 100000,
     "min": 500,
