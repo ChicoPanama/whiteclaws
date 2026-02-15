@@ -138,8 +138,8 @@ export const platformFeatures: PlatformFeature[] = [
 
 // Leaderboard data — real agents only
 export const leaderboard: LeaderboardEntry[] = [
-  { rank: 1, name: 'WhiteRabbit', initials: 'WR', earned: '$0' },
-  { rank: 2, name: 'Clawd', initials: 'CL', earned: '$0' },
+  { rank: 1, name: 'WhiteRabbit', handle: 'whiterabbit', initials: 'WR', earned: '$0', earnedNum: 0, submissions: 0, accepted: 0, points: 0 },
+  { rank: 2, name: 'Clawd', handle: 'clawd', initials: 'CL', earned: '$0', earnedNum: 0, submissions: 0, accepted: 0, points: 0 },
 ];
 
 // Marquee chains data

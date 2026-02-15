@@ -6052,7 +6052,7 @@ a { color: inherit; text-decoration: none; }
   color: var(--ink-2);
   line-height: 1.6;
   white-space: pre-wrap;
-  word-break: break-all;
+  overflow-wrap: break-word;
   margin: 0;
 }
 
@@ -6095,6 +6095,18 @@ a { color: inherit; text-decoration: none; }
 .st-tier-2 { background: #3b82f6; }
 .st-tier-3 { background: #f59e0b; }
 .st-tier-4 { background: var(--dim); }
+
+/* Severity-level dots */
+.st-sev-critical { background: #ef4444; }
+.st-sev-high     { background: #f59e0b; }
+.st-sev-medium   { background: #3b82f6; }
+.st-sev-low      { background: #6b7280; }
+
+/* Triage-status dots */
+.st-status-triaged   { background: #3b82f6; }
+.st-status-accepted  { background: #22c55e; }
+.st-status-rejected  { background: #ef4444; }
+.st-status-duplicate { background: #6b7280; }
 
 .st-tier-item strong {
   color: var(--ink);

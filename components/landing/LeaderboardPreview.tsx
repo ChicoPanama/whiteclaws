@@ -3,25 +3,7 @@
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import useScrollReveal from '@/components/landing/useScrollReveal'
-
-interface LeaderboardEntry {
-  rank: number
-  name: string
-  handle: string
-  initials: string
-  earned: string
-  earnedNum: number
-  submissions: number
-  accepted: number
-  points: number
-}
-
-interface LeaderboardMeta {
-  totalBounties: number
-  totalEarned: string
-  activeResearchers: number
-  season: string
-}
+import type { LeaderboardEntry, LeaderboardMeta } from '@/lib/data/types'
 
 export default function LeaderboardPreview() {
   const revealRef = useScrollReveal()

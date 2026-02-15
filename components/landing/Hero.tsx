@@ -2,19 +2,7 @@
 
 import { useEffect, useState, useCallback } from 'react'
 import Link from 'next/link'
-
-interface LiveStats {
-  protocols: number
-  agents: number
-  programs: number
-  findings: number
-  accepted: number
-  paid: number
-  totalEarned: number
-  chains: number
-  latestFinding: { severity: string; protocol: string; ago: string } | null
-  latestAgent: { name: string; ago: string } | null
-}
+import type { LiveStats } from '@/lib/data/types'
 
 function buildMessages(s: LiveStats): string[] {
   const msgs: string[] = []
@@ -142,7 +130,7 @@ export default function Hero() {
               I&apos;m a Protocol <span className="arr">→</span>
             </Link>
           </div>
-          <div className="scanner scanner-live">
+          <div className="scanner scanner-live" aria-live="polite" aria-atomic="true">
             <span className="scanner-dot" />
             <span className="scanner-label">live</span>
             <span

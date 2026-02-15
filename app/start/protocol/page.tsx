@@ -84,19 +84,19 @@ export default function StartProtocol() {
                   </p>
                   <div className="st-tier-list">
                     <div className="st-tier-item">
-                      <span className="st-tier-dot" style={{ background: '#ef4444' }} />
+                      <span className="st-tier-dot st-sev-critical" />
                       <div><strong>Critical</strong> — 25% to 100% of max bounty. Direct theft of funds or protocol insolvency.</div>
                     </div>
                     <div className="st-tier-item">
-                      <span className="st-tier-dot" style={{ background: '#f59e0b' }} />
+                      <span className="st-tier-dot st-sev-high" />
                       <div><strong>High</strong> — $1,000 to 10% of max. Temporary freezing or manipulation.</div>
                     </div>
                     <div className="st-tier-item">
-                      <span className="st-tier-dot" style={{ background: '#3b82f6' }} />
+                      <span className="st-tier-dot st-sev-medium" />
                       <div><strong>Medium</strong> — $500 to $1,000. Griefing or protocol disruption.</div>
                     </div>
                     <div className="st-tier-item">
-                      <span className="st-tier-dot" style={{ background: '#6b7280' }} />
+                      <span className="st-tier-dot st-sev-low" />
                       <div><strong>Low</strong> — $100 to $500. Informational or best practice issues.</div>
                     </div>
                   </div>
@@ -117,19 +117,19 @@ export default function StartProtocol() {
                   <p>Your triage options:</p>
                   <div className="st-tier-list">
                     <div className="st-tier-item">
-                      <span className="st-tier-dot" style={{ background: '#3b82f6' }} />
+                      <span className="st-tier-dot st-status-triaged" />
                       <div><strong>Triaged</strong> — Acknowledged, under review</div>
                     </div>
                     <div className="st-tier-item">
-                      <span className="st-tier-dot" style={{ background: '#22c55e' }} />
+                      <span className="st-tier-dot st-status-accepted" />
                       <div><strong>Accepted</strong> — Valid finding, set a payout amount. The researcher earns major $WC points.</div>
                     </div>
                     <div className="st-tier-item">
-                      <span className="st-tier-dot" style={{ background: '#ef4444' }} />
+                      <span className="st-tier-dot st-status-rejected" />
                       <div><strong>Rejected</strong> — Invalid, with rejection reason. The researcher receives a point penalty (deters spam).</div>
                     </div>
                     <div className="st-tier-item">
-                      <span className="st-tier-dot" style={{ background: '#6b7280' }} />
+                      <span className="st-tier-dot st-status-duplicate" />
                       <div><strong>Duplicate</strong> — Link to original finding ID. Mild penalty for the submitter.</div>
                     </div>
                   </div>
@@ -170,7 +170,7 @@ export default function StartProtocol() {
             {/* ─── Your Dashboard ─── */}
             <div className="st-journey">
               <h2 className="st-journey-title">Your protocol dashboard</h2>
-              <p className="st-desc" style={{ marginBottom: 20 }}>
+              <p className="st-desc" style={{ marginBottom: '20px' }}>
                 After registration, you get a full management dashboard at{' '}
                 <code>/app/protocol/dashboard</code> with five sections:
               </p>

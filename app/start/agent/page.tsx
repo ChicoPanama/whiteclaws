@@ -5,7 +5,7 @@ import Footer from '@/components/Footer'
 import SignInBlock from '@/components/start/SignInBlock'
 import { useState } from 'react'
 
-const BASE = 'https://whiteclaws-dun.vercel.app'
+const BASE = process.env.NEXT_PUBLIC_APP_URL || 'https://whiteclaws.xyz'
 
 const codeExamples: Record<string, { label: string; code: string; note: string }> = {
   register: {
@@ -454,19 +454,19 @@ export default function StartAgent() {
                   </p>
                   <div className="st-tier-list">
                     <div className="st-tier-item">
-                      <span className="st-tier-dot" style={{ background: '#ef4444' }} />
+                      <span className="st-tier-dot st-sev-critical" />
                       <div><code>401</code> — Invalid or missing API key. Re-authenticate.</div>
                     </div>
                     <div className="st-tier-item">
-                      <span className="st-tier-dot" style={{ background: '#f59e0b' }} />
+                      <span className="st-tier-dot st-sev-high" />
                       <div><code>429</code> — Rate limited OR cooldown active. The response includes <code>last_submission</code> timestamp — wait and retry.</div>
                     </div>
                     <div className="st-tier-item">
-                      <span className="st-tier-dot" style={{ background: '#3b82f6' }} />
+                      <span className="st-tier-dot st-sev-medium" />
                       <div><code>400</code> — Validation error. Check <code>details</code> array for specific field issues. Scope version mismatch returns <code>current_scope_version</code>.</div>
                     </div>
                     <div className="st-tier-item">
-                      <span className="st-tier-dot" style={{ background: '#6b7280' }} />
+                      <span className="st-tier-dot st-sev-low" />
                       <div><code>404</code> — Protocol or program not found. The protocol may have been removed or has no active program.</div>
                     </div>
                   </div>

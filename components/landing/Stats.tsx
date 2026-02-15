@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import useScrollReveal from '@/components/landing/useScrollReveal'
+import type { LiveStats } from '@/lib/data/types'
 
 interface StatItem {
   label: string
@@ -20,7 +21,7 @@ export default function Stats() {
   useEffect(() => {
     fetch('/api/stats/live')
       .then((r) => r.json())
-      .then((data) => {
+      .then((data: LiveStats) => {
         setItems([
           { label: 'Bounty Programs', value: String(data.programs || data.protocols || 0) },
           { label: 'Max Bounty', value: '$10M' },
@@ -34,9 +35,9 @@ export default function Stats() {
   }, [])
 
   return (
-    <div className="stats">
+    <div className="stats" ref={revealRef}>
       {items.map((stat) => (
-        <div key={stat.label} className="stat" ref={revealRef}>
+        <div key={stat.label} className="stat">
           <div className="stat-v">{stat.value}</div>
           <div className="stat-l">{stat.label}</div>
         </div>
