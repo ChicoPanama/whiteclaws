@@ -36,6 +36,23 @@
   --fm: var(--font-mono), monospace;
 }
 
+/* Fallback font classes for when Google Fonts are unavailable */
+.font-display-fallback {
+  --font-display: 'Space Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+.font-body-fallback {
+  --font-body: system-ui, -apple-system, 'Segoe UI', 'Inter', sans-serif;
+}
+
+.font-mono-fallback {
+  --font-mono: ui-monospace, 'SF Mono', 'Cascadia Code', 'Consolas', monospace;
+}
+
+.font-space-fallback {
+  --font-space: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+}
+
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {

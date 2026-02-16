@@ -1,33 +1,17 @@
 import type { Metadata } from 'next'
-import { Syne, Instrument_Sans, JetBrains_Mono, Space_Grotesk } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import './globals.css'
 import Providers from './Providers'
 
-const syne = Syne({
-  subsets: ['latin'],
-  variable: '--font-display',
-  display: 'swap',
-})
-
-const instrumentSans = Instrument_Sans({
-  subsets: ['latin'],
-  variable: '--font-body',
-  display: 'swap',
-})
-
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ['latin'],
-  variable: '--font-mono',
-  display: 'swap',
-})
-
-const spaceGrotesk = Space_Grotesk({
-  subsets: ['latin'],
-  variable: '--font-space',
-  display: 'swap',
-})
+// Use system fonts with proper fallbacks
+// Google Fonts will be loaded by the browser directly via CSS if needed
+const fontClasses = [
+  'font-display-fallback',
+  'font-body-fallback', 
+  'font-mono-fallback',
+  'font-space-fallback'
+].join(' ')
 
 export const metadata: Metadata = {
   title: 'WhiteClaws — Autonomous Onchain Security',
@@ -53,7 +37,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${syne.variable} ${instrumentSans.variable} ${jetbrainsMono.variable} ${spaceGrotesk.variable}`}>
+    <html lang="en" className={fontClasses}>
       <body className="font-sans antialiased">
         <Providers>
           {children}
