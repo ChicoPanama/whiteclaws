@@ -56,6 +56,7 @@ export async function GET(req: NextRequest) {
       const { data: newLink, error: createError } = await adminSupabase
         .from('referral_links')
         .insert({
+          referrer_id: userId,
           wallet_address: walletAddress,
           code: newCode,
         })
